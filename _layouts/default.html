@@ -10,9 +10,9 @@ paginate_first_page_path -%}
 <article class="page-content">
 {{ first_page_path }}
 	{%- if page.title and first_page_path -%}
-	<h1 id="{{ page.title | slugify }}" class="page-title">{{ page.title }}</h1>
-	{%- elsif page.title -%}
 	<h2 id="{{ page.title | slugify }}" class="page-title">{{ page.title }}</h2>
+	{%- elsif page.title -%}
+	<h1 id="{{ page.title | slugify }}" class="page-title">{{ page.title }}</h1>
 	{%- endif -%}
 	{%- if page.subtitle -%}
 	<p class="page-subtitle">{{ page.subtitle }}</p>
