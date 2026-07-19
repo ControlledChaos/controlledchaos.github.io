@@ -18,6 +18,7 @@ paginate_first_page_path %}
 {{ content }}
 {%- endif %}
 
+{{ site.static_files }}
 
 {%- assign front_page = site.pages | where: "path", "front.md" | first -%}
 {{ front_page.content }}
