@@ -5,7 +5,7 @@
 {%- capture post_thumb -%}
 	{%- if post.page_thumb -%}
 		{{ post.page_thumb }}
-	{%- elseif site.cover_img -%}
+	{%- elsif site.cover_img -%}
 		{{ site.cover_img }}
 	{%- else -%}
 		transparent-thumb.png
