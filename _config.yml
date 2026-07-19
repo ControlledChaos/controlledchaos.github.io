@@ -63,3 +63,13 @@ collections:
 
 sidebar_modules:
   latest-posts
+
+plugins:
+  - file_exists
+  - jekyll-feed
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-target-blank
+  - jekyll-gist
+  - jekyll-toc
+  - jemoji
