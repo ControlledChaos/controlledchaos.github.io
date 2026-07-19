@@ -47,7 +47,7 @@
 		</button>
 	</div>
 	<ul id="site-menu" class="site-menu">
-		{% for nav_item in nav %}
+		{% for nav_item in site_nav %}
 			{%- if nav_item.url == best_match_url -%}
 				{%- assign aria = "aria-current='page'" -%}
 			{%- else -%}
