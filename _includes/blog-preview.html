@@ -1,7 +1,14 @@
 {%- assign post = include.post %}
 {%- assign date_format = site.date_format | default: "%B %-d, %Y" -%}
 
- {%- assign post_thumb = false -%} {%- capture post_thumb -%} {%- if post.page_thumb -%} {{ post.page_thumb }} {%- else -%} transparent-thumb.png {%- endif -%}
+{%- assign post_thumb = false -%}
+{%- capture post_thumb -%}
+	{%- if post.page_thumb -%}
+		{{ post.page_thumb }}
+	{%- else -%}
+		transparent-thumb.png
+	{%- endif -%}
+{%- endcapture -%}
 <li>
 	<article id='{{ post.name | slugify | remove_last: "-md" }}' class="posts-entry">
 
