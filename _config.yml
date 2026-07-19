@@ -14,6 +14,7 @@ share_img: zen-garden.jpg
 
 timezone: "America/Los Angeles"
 markdown: kramdown
+permalink: pretty
 
 defaults:
   - scope:
