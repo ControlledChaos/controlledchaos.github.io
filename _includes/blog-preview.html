@@ -1,3 +1,4 @@
+{%- assign date_format = site.date_format | default: "%B %-d, %Y" -%}
 <li>
 	<article id='{{ post.name | slugify | remove_last: "-md" }}' class="posts-entry">
 
