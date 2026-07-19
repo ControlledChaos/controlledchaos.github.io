@@ -6,9 +6,9 @@
 		<h3>Latest Posts</h3>
 		{%- if posts.size > 0 -%}
 
-		<ul>
+		<ul class="latest-list">
 		{%- for post in posts limit: latest_limit -%}
-			<li><a href="{{ post.url }}">{{ post.title }}</a> <time class="post-date">{{ post.date | date: date_format }}</time></li>
+			<li class="latest-item"><a href="{{ post.url }}" class="latest-link">{{ post.title }}</a> <time class="latest-date">{{ post.date | date: date_format }}</time></li>
 		{%- endfor -%}
 		</ul>
 
