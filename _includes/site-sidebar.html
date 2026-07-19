@@ -1,5 +1,6 @@
 {%- assign latest_limit = site.latest_limit | default: 5 -%}
 {%- assign posts = site.posts -%}
+{%- assign date_format = site.date_format | default: "%B %-d, %Y" -%}
 <aside class="page-sidebar">
 	<div class="sidebar-block sidebar-latest-posts">
 		<h3>Latest Posts</h3>
