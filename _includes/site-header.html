@@ -9,19 +9,19 @@
 		<div class="site-identity">
 			{%- if site.avatar -%}
 			<figure class="site-avatar">
-				{%- unless is_front -%}
+				{%- unless first_page_path -%}
 				<a href="{{ site.github.url }}">
 				{%- endunless -%}
 					<img src="{{ '/assets/img/' | append: site.avatar | relative_url }}" alt="Yin-yang symbol" class="avatar" />
 					<figcaption class="screen-reader-text">
 						<span>Yin-yang symbol used as the Controlled Chaos Design avatar. Not a logo!</span>
 					</figcaption>
-				{%- unless is_front -%}
+				{%- unless first_page_path -%}
 				</a>
 				{%- endunless -%}
 			</figure>
 			{%- endif -%}
-			{%- if is_front -%}
+			{%- if first_page_path -%}
 			<h1 class="site-title">{{ site.title }}</h1>
 			{%- else -%}
 			<p class="site-title">
