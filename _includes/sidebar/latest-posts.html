@@ -1,0 +1,18 @@
+{%- assign latest_limit = site.latest_limit | default: 5 -%}
+{%- assign posts = site.posts -%}
+{%- assign date_format = site.date_format | default: "%B %-d, %Y" -%}
+
+<div class="sidebar-block sidebar-latest-posts">
+	<h3>Latest Posts</h3>
+	{%- if posts.size > 0 -%}
+
+	<ul class="latest-list">
+	{%- for post in posts limit: latest_limit -%}
+		<li class="latest-item"><a href="{{ post.url }}" class="latest-link">{{ post.title }}</a> <time class="latest-date">{{ post.date | date: date_format }}</time></li>
+	{%- endfor -%}
+	</ul>
+
+	{%- else -%}
+	<p>No posts found</p>
+	{%- endif -%}
+</div>
