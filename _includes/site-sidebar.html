@@ -1,7 +1,16 @@
 {%- if site.sidebar_modules -%}
 <aside class="page-sidebar">
-	{% for module in site.sidebar_modules %}
-	{% include sidebar/{{ module }}.html -%}
-	{% endfor %}
+	{%- for module in site.sidebar_modules -%}
+
+	{%- assign file_exists = false -%}
+	{%- capture get_module -%}
+		{%- file_exists _includes/sidebar/{{ module }}.html -%}
+	{%- endcapture -%}
+
+	{%- if file_exists -%}
+	{% include sidebar/{{ module }}.html %}
+	{%- endif -%}
+
+	{%- endfor -%}
 </aside>
 {%- endif -%}
