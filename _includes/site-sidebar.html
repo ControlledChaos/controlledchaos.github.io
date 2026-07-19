@@ -1,3 +1,7 @@
+{%- if site.sidebar_modules -%}
 <aside class="page-sidebar">
-	{% include sidebar/latest-posts.html -%}
+	{% for module in site.sidebar_modules %}
+	{% include sidebar/{{ module }}.html -%}
+	{% endfor %}
 </aside>
+{%- endif -%}

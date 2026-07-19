@@ -61,8 +61,5 @@ collections:
     output: true
     permalink: /projects/:name/
 
-# layout: page
-# title: Results
-# pagination:
-#   enabled: true
-#   collection: results
+sidebar_modules:
+  latest-posts
