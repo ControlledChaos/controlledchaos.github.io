@@ -1,21 +1,27 @@
+{%- assign is_front = false -%}
+{%- capture is_front -%}
+	{%- if page.url == "/" -%}
+		{{ is_front = true }}
+	{%- endif -%}
+{%- endcapture -%}
 <header id="masthead" class="site-header" role="banner" itemscope="itemscope" itemtype="http://schema.org/Organization">
 	<div class="general-wrap">
 		<div class="site-identity">
 			{%- if site.avatar -%}
 			<figure class="site-avatar">
-				{%- if paginator.page != 1 -%}
+				{%- unless is_front -%}
 				<a href="{{ site.github.url }}">
-				{%- endif -%}
+				{%- endunless -%}
 					<img src="{{ '/assets/img/' | append: site.avatar | relative_url }}" alt="Yin-yang symbol" class="avatar" />
 					<figcaption class="screen-reader-text">
 						<span>Yin-yang symbol used as the Controlled Chaos Design avatar. Not a logo!</span>
 					</figcaption>
-				{%- if paginator.page != 1 -%}
+				{%- unless is_front -%}
 				</a>
-				{%- endif -%}
+				{%- endunless -%}
 			</figure>
 			{%- endif -%}
-			{%- if paginator.page == 1 -%}
+			{%- if is_front -%}
 			<h1 class="site-title">{{ site.title }}</h1>
 			{%- else -%}
 			<p class="site-title">
