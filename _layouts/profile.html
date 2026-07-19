@@ -19,6 +19,6 @@ paginate_first_page_path %}
 {%- endif %}
 
 {%- if posts.size > 0 %}
-<h2>Latest posts</h2>
-{%- include post-timeline.html posts=posts limit=posts_limit index=first_page_path %}
+<h2>Latest post</h2>
+{%- include post-timeline.html posts = posts limit = 1 index = first_page_path %}
 {%- endif %}
