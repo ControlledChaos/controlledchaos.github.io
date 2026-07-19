@@ -20,5 +20,5 @@ paginate_first_page_path %}
 
 {%- if posts.size > 0 and page.url == "/" %}
 <h2>Latest post</h2>
-{%- include post-timeline.html posts = posts limit = 1 index = first_page_path %}
+{%- include blog-preview.html posts = posts limit = 1 index = first_page_path %}
 {%- endif %}
