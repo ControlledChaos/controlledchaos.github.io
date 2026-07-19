@@ -18,7 +18,7 @@ paginate_first_page_path %}
 {{ content }}
 {%- endif %}
 
-{%- if posts.size > 0 %}
+{%- if posts.size > 0 and page.url == "/index.html" %}
 <h2>Latest post</h2>
 {%- include post-timeline.html posts = posts limit = 1 index = first_page_path %}
 {%- endif %}
