@@ -1,6 +1,12 @@
 ---
 layout: common
 ---
+{%- assign paginate_path = page.pagination.permalink | default: site.pagination.permalink | default: site.paginate_path
+-%}
+{%- assign paginate_first_page_path = paginate_path | replace: 'page:num', '' -%}
+{%- assign first_page_path = page.first_page_path | default: paginator.first_page_path | default:
+paginate_first_page_path -%}
+
 <article class="page-content">
 	{%- if page.title and first_page_path -%}
 	<h1 id="{{ page.title | slugify }}" class="page-title">{{ page.title }}</h1>
