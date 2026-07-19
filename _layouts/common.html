@@ -19,8 +19,6 @@
 {%- else -%}
 	{%- assign sidebar = true -%}
 {%- endif -%}
-
- {%- assign post_thumb = false -%} {%- capture post_thumb -%} {%- if post.page_thumb -%} {{ post.page_thumb }} {%- else -%} transparent-thumb.png {%- endif -%} {%- endcapture %} {%- assign date_format = site.date_format | default: "%B %-d, %Y" -%} {%- if site.blog_view == "full" -%} {% include blog-full.html -%} {%- else -%} {%- include blog-preview.html -%} {%- endif -%} {%- endfor -%}
 <!doctype html>
 <html xmlns:og="http://opengraphprotocol.org/schema/" class="no-js" lang="en_US" dir="ltr">
 {% include head.html -%}
