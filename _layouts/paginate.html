@@ -2,15 +2,9 @@
 layout: default
 ---
 {{ content }}
-<div class="d-flex flex-wrap gutter">
 
 {%- for post in paginator.posts -%}
-	{%- if post.feature or post == site.posts[0] %}
-	{%- include post-feature-card.html -%}
-	{%- else %}
 	{%- include blog-preview.html -%}
-	{%- endif -%}
 {%- endfor %}
-</div>
 
- {% include paginator_nav.html %}
+{% include paginator_nav.html %}

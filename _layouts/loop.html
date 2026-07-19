@@ -15,3 +15,8 @@ paginate_first_page_path %}
 
 {%- assign front_page = site.pages | where: "path", "front.md" | first -%}
 {{ front_page.content }}
+
+{%- if posts.size > 0 and page.url == "/" %}
+<h2>Latest post</h2>
+{%- include post-timeline.html posts = posts limit = 1 index = first_page_path %}
+{%- endif %}
