@@ -20,8 +20,7 @@ paginate_first_page_path %}
 
 
 {%- assign front_page = site.pages | where: "path", "front.md" | first -%}
-	{{ front_page.content }}
-{%- endif -%}
+{{ front_page.content }}
 
 {%- if posts.size > 0 and page.url == "/" %}
 <h2>Latest post</h2>
