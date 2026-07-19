@@ -101,11 +101,14 @@ links:
 # Post settings
 related_by: "tags or categories"
 
-# ########### Plugin settings ###############
 plugins:
+  - jekyll-feed
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-target-blank
+  - jekyll-gist
   - jekyll-github-metadata
   - jekyll-meta
-  - jekyll-octicons
   - jekyll-toc
   - jemoji
 
