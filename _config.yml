@@ -14,7 +14,6 @@ share_img: zen-garden.jpg
 
 timezone: "America/Los Angeles"
 markdown: kramdown
-permalink: pretty
 
 defaults:
   - scope:
@@ -34,17 +33,17 @@ defaults:
 
 site_nav:
   - name: Services
-    url: /services/
+    url: /services
   - name: Projects
-    url: /projects/
+    url: /projects
   - name: Products
-    url: /products/
+    url: /products
   - name: Posts
-    url: /posts/
+    url: /posts
   - name: About
-    url: /about/
+    url: /about
   - name: Contact
-    url: /contact/
+    url: /contact
 
 blog_view: preview
 paginate: 3
