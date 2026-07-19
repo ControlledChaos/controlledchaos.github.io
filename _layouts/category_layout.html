@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: default
 subtype: Category
 ---
 {% if page.paginator %}
@@ -16,9 +16,9 @@ subtype: Category
   <!-- Show post excerpts for the current page -->
   {% for post in posts limit: limit %}
   {%- if post.feature or post == site.categories[page.category][0] %}
-  {%- include post-feature-card.html %}
+  <!-- {%- include post-feature-card.html %} -->
   {%- else %}
-  {%- include post-card.html border="border-top" %}
+  <!-- {%- include post-card.html border="border-top" %} -->
   {%- endif %}
   {% endfor %}
 </div>
