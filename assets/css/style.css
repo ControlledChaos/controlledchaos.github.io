@@ -836,20 +836,17 @@ h6 {
   grid-area: thumb;
   position: relative;
   overflow: hidden;
-  width: 100%;
-  height: 100%;
-  max-width: 180px;
-  max-height: 180px;
+  width: 180px;
+  height: 180px;
 }
 .entry-image img {
   display: block;
   width: 100%;
-  height: 100%;
   max-inline-size: 100%;
-  max-width: 180px;
-  max-height: 180px;
   -o-object-fit: cover;
      object-fit: cover;
+  -o-object-position: center center;
+     object-position: center center;
   border: 0;
 }
 

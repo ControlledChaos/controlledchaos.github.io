@@ -785,6 +785,34 @@ h6 {
   margin-top: 1rem;
 }
 
+.pagination-nav {
+  width: 100%;
+  margin: 0;
+  padding: var(--ccd-spacing--vert, 2rem) var(--ccd-spacing--horz, 2rem);
+  display: flex;
+  justify-content: center;
+  gap: 0 0.5em;
+}
+.pagination-nav svg {
+  display: inline-block;
+  height: 1em;
+  vertical-align: middle;
+  vertical-align: center;
+}
+
+.post .post-image {
+  margin-top: var(--ccd-spacing--vert, 2rem);
+  max-height: 600px;
+  overflow: hidden;
+}
+.post .post-image img {
+  display: block;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center center;
+     object-position: center center;
+}
+
 .posts-list {
   list-style: none;
   margin: 0;
@@ -808,20 +836,17 @@ h6 {
   grid-area: thumb;
   position: relative;
   overflow: hidden;
-  width: 100%;
-  height: 100%;
-  max-width: 180px;
-  max-height: 180px;
+  width: 180px;
+  height: 180px;
 }
 .entry-image img {
   display: block;
   width: 100%;
-  height: 100%;
   max-inline-size: 100%;
-  max-width: 180px;
-  max-height: 180px;
   -o-object-fit: cover;
      object-fit: cover;
+  -o-object-position: center center;
+     object-position: center center;
   border: 0;
 }
 
