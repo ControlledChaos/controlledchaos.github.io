@@ -18,7 +18,7 @@ permalink: pretty
 # Layout
 body_class: "default-page"
 page_type: "WebPage"
-sidebar: true
+page_sidebar: true
 
 # Specific defaults
 defaults:
