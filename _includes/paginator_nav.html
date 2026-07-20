@@ -5,11 +5,11 @@
 {%- if paginator.total_pages > 1 -%}
 
 <nav role="navigation" aria-label="Pagination" class="post-pagination">
-	<ol>
 	{%- if paginator.previous_page -%}
-		<li><a class="previous_page" rel="prev" href="{{ previous_page_path | relative_url }}" aria-disabled="false">Newer</a></li>
+	<li><a class="previous_page" rel="prev" href="{{ previous_page_path | relative_url }}" aria-disabled="false">Newer</a></li>
 	{%- endif -%}
 
+	<ol>
 	{%- for paginator_nav_page in (1..paginator.total_pages) -%}
 	{%- if paginator_nav_page == paginator.page -%}
 		<li><a href="{{ page.url | relative_url }}" aria-label="{{ paginator_nav_page }}" aria-current="page">{{ paginator_nav_page }}</a></li>
@@ -21,11 +21,11 @@
 		<li><a href="{{ paginate_path | relative_url | replace: ':num', paginator_nav_page }}" aria-label="{{ paginator_nav_page }}">{{ paginator_nav_page }}</a></li>
 	{%- endif %}
 	{%- endfor %}
+	</ol>
 
 	{%- if paginator.next_page -%}
-		<li><a class="next_page" rel="next" href="{{ next_page_path | relative_url }}"
+	<li><a class="next_page" rel="next" href="{{ next_page_path | relative_url }}"
 		aria-disabled="false">Older</a></li>
 	{%- endif -%}
-	</ol>
 </nav>
 {%- endif -%}
