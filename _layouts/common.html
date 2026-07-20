@@ -20,9 +20,7 @@
 	{%- endif -%}
 {%- endcapture -%}
 
-{%- if page.sidebar == false and paginator.page == 1 -%}
-	{%- assign sidebar = false -%}
-{%- elsif page.sidebar == false and paginator.page > 1 -%}
+{%- if page.sidebar == false and paginator.page > 1 -%}
 	{%- assign sidebar = true -%}
 {%- elsif page.sidebar == false -%}
 	{%- assign sidebar = false -%}
