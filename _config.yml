@@ -24,14 +24,14 @@ defaults:
       permalink: /posts/:title/
       layout: "post"
       comments: true
-      image: /assets/img/default.png
+      image: /assets/img/default-cover.jpg
       toc: true
   - scope:
       path: "" # an empty string here means all files in the project
       type: "pages"
     values:
       layout: "page"
-      image: /assets/img/default.png
+      image: /assets/img/default-cover.jpg
 
 site_nav:
   - name: Services
