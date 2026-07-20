@@ -1,9 +1,11 @@
 {%- assign body_class = "default-page" -%}
+{%- capture body_class %}
 {%- if page.url == "/" -%}
-	{%- capture body_class %}front-page{% endcapture -%}
+	{{ body_class = "front-page" }}
 {%- elsif page.url == "/posts/" and page.url != "/" -%}
-	{%- capture body_class %}blog-page{% endcapture -%}
+	{{ body_class = blog-page }}
 {%- endif -%}
+{% endcapture -%}
 
 {%- assign page_type = "WebPage" -%}
 {%- if page.page_type -%}
