@@ -21,10 +21,10 @@
 {%- endcapture -%}
 
 {%- capture sidebar -%}
-	{%- if page.url == "/" -%}
-		{{ false }}
-	{%- elsif page.url contains "/posts/" -%}
+	{%- if page.url contains "/posts/" -%}
 		{{ true }}
+	{%- elsif page.url == "/" -%}
+		{{ false }}
 	{%- elsif page.sidebar == false -%}
 		{{ false }}
 	{%- else -%}
