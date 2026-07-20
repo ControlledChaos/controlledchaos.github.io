@@ -1,11 +1,12 @@
 {%
+ ###############################
  # Body class
  #
  # String
  #
  # This is a CSS class added to the body element.
  # Default class is "default-page"
- #
+ ###############################
 %}
 {%- capture body_class -%}
 	{%- if page.url == "/" -%}
@@ -18,6 +19,7 @@
 {%- endcapture -%}
 
 {%
+ ###############################
  # Page type
  #
  # String
@@ -25,7 +27,7 @@
  # This is the Schema itemType attribute in the
  # "page-container" div containing page content.
  # Default class is "default-page".
- #
+ ###############################
 %}
 {%- capture page_type -%}
 	{%- if page.url == "/posts/" and page.url != "/" -%}
@@ -40,13 +42,14 @@
 {%- endcapture -%}
 
 {%
+ ###############################
  # Site sidebar
  #
  # Boolean
  #
  # Conditionally display the aside element on the page.
  # Default is true.
- #
+ ###############################
 %}
 {%- if page.sidebar == false and paginator.page == 1 -%}
 	{%- assign sidebar = false -%}
