@@ -1,27 +1,29 @@
+
+# Website settings
 url: "https://controlledchaos.github.io"
 is_user_page: true
 is_project_page: false
 remote_theme: theme-ccdzine
-
 title: Controlled Chaos Design
 description: Custom website design and build. Free products to build your own.
 author: Controlled Chaos Design
 email: gregsweet4@yahoo.com
-
 avatar: "site-icon.png"
 cover_img: zen-garden.jpg
 share_img: zen-garden.jpg
-
 timezone: "America/Los Angeles"
 markdown: kramdown
 permalink: pretty
 
+# Layout
 body_class: "default-page"
 page_type: "WebPage"
+sidebar: true
 
+# Specific defaults
 defaults:
   - scope:
-      path: "" # an empty string here means all files in the project
+      path: "" # empty string == all files in project
       type: "posts"
     values:
       permalink: /posts/:title/
@@ -30,12 +32,13 @@ defaults:
       image: /assets/img/default-cover.jpg
       toc: true
   - scope:
-      path: "" # an empty string here means all files in the project
+      path: "" # empty string == all files in project
       type: "pages"
     values:
       layout: "page"
       image: /assets/img/default-cover.jpg
 
+# Primary navigation entries
 site_nav:
   - name: Services
     url: /services
@@ -50,6 +53,7 @@ site_nav:
   - name: Contact
     url: /contact
 
+# Blog pages
 blog_view: preview
 paginate: 3
 paginate_path: "/posts/page:num/"
@@ -59,15 +63,18 @@ tag_page_layout: tags
 tag_page_dir: tags
 related_by: "tags or categories"
 
+# Collections
 collections:
   projects:
     paginate: 3
     output: true
     permalink: /projects/:name/
 
+# Sidebar content
 sidebar_modules:
   latest-posts
 
+# Additional functionality
 plugins:
   - jekyll-feed
   - jekyll-paginate
