@@ -835,7 +835,7 @@ h6 {
 }
 .entry-header .post-subtitle {
   margin: 0;
-  font-size: 1.125em;
+  font-size: 1.0625rem;
   font-weight: 550;
   line-height: 1.2;
 }
@@ -1050,6 +1050,7 @@ h6 {
   font-size: 1.125rem;
   font-weight: 650;
   text-decoration: none;
+  line-height: 1.2;
 }
 .sidebar-block.sidebar-latest-posts .latest-date {
   display: block;
