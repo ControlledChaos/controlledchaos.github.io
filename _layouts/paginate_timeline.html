@@ -1,17 +1,20 @@
 ---
 layout: default
 ---
-{% comment %} For post timeline {% endcomment %}
-{% assign limit = page.posts_limit | default: site.paginate %}
-{% assign posts = paginator.posts | default: site.posts %}
-{% comment %} For controls below timeline {% endcomment %}
-{% assign paginate_path = page.pagination.permalink | default: site.pagination.permalink | default: site.paginate_path %}
-{% assign paginate_first_page_path = paginate_path | relative_url | replace: 'page:num', '' %}
-{% assign first_page_path = page.first_page_path | default: paginator.first_page_path | default: paginate_first_page_path%}
+{%- comment %} For post timeline {% endcomment -%}
+
+{%- assign limit = page.posts_limit | default: site.paginate -%}
+{%- assign posts = paginator.posts | default: site.posts -%}
+
+{%- comment %} For controls below timeline {% endcomment -%}
+
+{%- assign paginate_path = page.pagination.permalink | default: site.pagination.permalink | default: site.paginate_path -%}
+{%- assign paginate_first_page_path = paginate_path | relative_url | replace: 'page:num', '' -%}
+{%- assign first_page_path = page.first_page_path | default: paginator.first_page_path | default: paginate_first_page_path -%}
 
 {{ content }}
 
 <!-- This loops through the paginated posts -->
-{% include post-timeline.html posts=posts limit=limit %}
+{%- include blog-full.html posts=posts limit=limit -%}
 <!-- Pagination links -->
-{% include paginator_nav.html %}
+{%- include paginator_nav.html -%}
