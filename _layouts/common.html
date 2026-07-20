@@ -20,17 +20,15 @@
 	{%- endif -%}
 {%- endcapture -%}
 
-{%- capture sidebar -%}
-	{%- if page.url == "/" -%}
-		{{ sidebar = false }}
-	{%- elsif page.url contains "/posts/" -%}
-		{{ true }}
-	{%- elsif page.sidebar == false -%}
-		{{ false }}
-	{%- else -%}
-		{{ site.sidebar }}
-	{%- endif -%}
-{%- endcapture -%}
+{%- if page.url == "/" -%}
+	{{ assign sidebar = false }}
+{%- elsif page.url contains "/posts/" -%}
+	{{ assign sidebar = true }}
+{%- elsif page.sidebar == false -%}
+	{{ assign sidebar = false }}
+{%- else -%}
+	{{ assign sidebar = site.sidebar }}
+{%- endif -%}
 <!doctype html>
 <html xmlns:og="http://opengraphprotocol.org/schema/" class="no-js" lang="en_US" dir="ltr">
 {% include head.html -%}
