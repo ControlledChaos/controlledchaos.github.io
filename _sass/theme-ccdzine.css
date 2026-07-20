@@ -1043,13 +1043,17 @@ h6 {
   padding: var(--ccd-sidebar--ol--padding, var(--ccd-sidebar--list--padding, 0 0 0 1em));
 }
 
+.sidebar-block.sidebar-latest-posts .latest-list li {
+  margin-top: 0.625rem;
+}
 .sidebar-block.sidebar-latest-posts .latest-link {
   font-size: 1.125rem;
   font-weight: 650;
+  text-decoration: none;
 }
 .sidebar-block.sidebar-latest-posts .latest-date {
   display: block;
-  font-size: 0.875rem;
+  font-size: 0.8125rem;
 }
 
 .site-footer {
