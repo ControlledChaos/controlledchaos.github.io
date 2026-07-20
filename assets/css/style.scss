@@ -363,7 +363,7 @@ h6 {
 .pagination-nav {
 	width: 100%;
 	margin: 0;
-	padding: var( --ccd-spacing--vert ) var( --ccd-spacing--horz );
+	padding: var( --ccd-spacing--vert, 2rem ) var( --ccd-spacing--horz, 2rem );
 	display: flex;
 	justify-content: center;
 	gap: 0 0.5em;
@@ -373,6 +373,18 @@ h6 {
 		height: 1em;
 		vertical-align: middle;
 		vertical-align: center;
+	}
+}
+
+.post-image {
+	margin-top: var( --ccd-spacing--vert, 2rem );
+	max-height: 600px;
+	overflow: hidden;
+
+	img {
+		display: block;
+		object-fit: cover;
+		object-position: center center;
 	}
 }
 
