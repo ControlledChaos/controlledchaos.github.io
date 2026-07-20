@@ -9,7 +9,9 @@
 {%- endcapture -%}
 
 {%- capture page_type -%}
-	{%- if page.page_type -%}
+	{%- if page.url == "/posts/" and page.url != "/" -%}
+		{{- "Blog" -}}
+	{%- elsif page.page_type -%}
 		{{- page.page_type -}}
 	{%- else -%}
 		{{- site.page_type -}}
