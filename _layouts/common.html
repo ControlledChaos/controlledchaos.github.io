@@ -4,6 +4,8 @@
 	{{ "front-page" }}
 {%- elsif page.url == "/posts/" and page.url != "/" -%}
 	{{ "blog-page" }}
+{%- else -%}
+	{{ "default-page" }}
 {%- endif -%}
 {% endcapture -%}
 
