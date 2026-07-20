@@ -1,7 +1,7 @@
 {%- assign body_class = "default-page" -%}
-{%- if page.layout == "index" -%}
+{%- if page.url == "/" -%}
 	{%- capture body_class %}front-page{% endcapture -%}
-{%- elsif page.layout == "blog" -%}
+{%- elsif page.id == "posts" -%}
 	{%- capture body_class %}blog-page{% endcapture -%}
 {%- endif -%}
 
@@ -28,6 +28,7 @@
 	<div class="page-container" itemscope="itemscope" itemtype="{{ page_type }}">
 		<div id='{{ page.name | slugify | remove_last: "-md" }}' class="page-wrap">
 			<main class="page-main" role="main" itemscope itemprop="mainContentOfPage">
+			{{ page.id }}
 				{{ content }}
 			</main>
 			{%- if sidebar -%}
