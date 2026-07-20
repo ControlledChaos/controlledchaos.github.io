@@ -15,6 +15,9 @@ layout: default
 {{ content }}
 
 <!-- This loops through the paginated posts -->
-{%- include blog-full.html posts=posts limit=limit -%}
+{%- for post in paginator.posts -%}
+	{%- include blog-full.html posts=posts limit=limit -%}
+{%- endfor -%}
+
 <!-- Pagination links -->
 {%- include paginator_nav.html -%}
