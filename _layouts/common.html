@@ -42,7 +42,7 @@
 			<main class="page-main" role="main" itemscope itemprop="mainContentOfPage">
 				{{ content }}
 			</main>
-			{%- if sidebar -%}
+			{%- if sidebar == true -%}
 			{% include site-sidebar.html -%}
 			{%- endif -%}
 		</div>
