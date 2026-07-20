@@ -21,9 +21,9 @@
 {%- endcapture -%}
 
 {%- capture sidebar -%}
-	{%- if paginator.page == 1 -%}
+	{%- if page.url == "/" -%}
 		{{ false }}
-	{%- elsif page.url contains "/posts/" and paginator.page > 1 -%}
+	{%- elsif page.url contains "/posts/" -%}
 		{{ true }}
 	{%- elsif page.sidebar == false -%}
 		{{ false }}
@@ -40,7 +40,6 @@
 	<div class="page-container" itemscope="itemscope" itemtype="{{ page_type }}">
 		<div id='{{ page.name | slugify | remove_last: "-md" }}' class="page-wrap">
 			<main class="page-main" role="main" itemscope itemprop="mainContentOfPage">
-			{{ paginator.page }} <br> {{ page.url }}
 				{{ content }}
 			</main>
 			{%- if sidebar == true -%}
