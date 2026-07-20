@@ -1,3 +1,10 @@
+{%
+ # Body class
+ #
+ # This is a CSS class added to the `<body>` element.
+ # Default class is 'default-page'
+ #
+%}
 {%- capture body_class -%}
 	{%- if page.url == "/" -%}
 		{{- "front-page" -}}
@@ -8,6 +15,13 @@
 	{%- endif -%}
 {%- endcapture -%}
 
+{%
+ # Body class
+ #
+ # This is a CSS class added to the `<body>` element.
+ # Default class is 'default-page'
+ #
+%}
 {%- capture page_type -%}
 	{%- if page.url == "/posts/" and page.url != "/" -%}
 		{{- "Blog" -}}
