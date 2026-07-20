@@ -22,7 +22,7 @@
 
 {%- capture sidebar -%}
 	{%- if page.url == "/" -%}
-		{{ false }}
+		{{ sidebar = false }}
 	{%- elsif page.url contains "/posts/" -%}
 		{{ true }}
 	{%- elsif page.sidebar == false -%}
