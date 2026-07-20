@@ -7,9 +7,9 @@
 
 {%- assign body_class = "default-page" -%}
 {%- capture body_class -%}
-	{%- if front_page = true -%}
+	{%- if front_page == true -%}
 		{{- "front-page" -}}
-	{%- elsif page.url == "/posts/" and front_page = false -%}
+	{%- elsif page.url == "/posts/" and front_page == false -%}
 		{{- "blog-page" -}}
 	{%- endif -%}
 {%- endcapture -%}
@@ -23,7 +23,7 @@
 
 {%- assign sidebar = true -%}
 {%- capture sidebar -%}
-	{%- if front_page = true -%}
+	{%- if front_page == true -%}
 		{{- sidebar = false -}}
 	{%- elsif page.sidebar == false -%}
 		{{- sidebar = false -}}
