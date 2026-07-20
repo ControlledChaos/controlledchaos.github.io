@@ -21,10 +21,10 @@
 {%- endcapture -%}
 
 {%- capture sidebar -%}
-	{%- if page.url contains "/posts/" -%}
-		{{ true }}
-	{%- elsif page.url == "/" -%}
+	{%- if page.url == "/" -%}
 		{{ false }}
+	{%- elsif page.url contains "/posts/" -%}
+		{{ true }}
 	{%- elsif page.sidebar == false -%}
 		{{ false }}
 	{%- else -%}
@@ -42,7 +42,7 @@
 			<main class="page-main" role="main" itemscope itemprop="mainContentOfPage">
 				{{ content }}
 			</main>
-			{%- if sidebar == true -%}
+			{%- if sidebar -%}
 			{% include site-sidebar.html -%}
 			{%- endif -%}
 		</div>
