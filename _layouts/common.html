@@ -1,22 +1,29 @@
-{%- assign front_page = page.url != "/" -%}
+{%- assign front_page = false -%}
+{%- capture front_page -%}
+	{%- if page.url == "/" -%}
+		{{- front_page = true -}}
+	{%- endif -%}
+{%- endcapture -%}
 
 {%- assign body_class = "default-page" -%}
 {%- capture body_class -%}
-	{%- if front_page -%}
+	{%- if front_page = true -%}
 		{{- "front-page" -}}
-	{%- elsif page.url == "/posts/" and page.url != "/" -%}
+	{%- elsif page.url == "/posts/" and front_page = false -%}
 		{{- "blog-page" -}}
 	{%- endif -%}
 {%- endcapture -%}
 
 {%- assign page_type = "WebPage" -%}
-{%- if page.page_type -%}
-	{%- capture page_type %}{{ page.page_type }}{% endcapture -%}
-{%- endif -%}
+{%- capture page_type -%}
+	{%- if page.page_type -%}
+		{{- page.page_type -}}
+	{%- endif -%}
+{%- endcapture -%}
 
 {%- assign sidebar = true -%}
-{%- capture sidebar %}
-	{%- if front_page -%}
+{%- capture sidebar -%}
+	{%- if front_page = true -%}
 		{{- sidebar = false -}}
 	{%- elsif page.sidebar == false -%}
 		{{- sidebar = false -}}
