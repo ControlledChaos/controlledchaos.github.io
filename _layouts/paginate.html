@@ -3,7 +3,7 @@ layout: default
 ---
 {{ content }}
 
-<ul class="posts-list" role="list"></ul>
+<ul class="posts-list" role="list">
 {%- for post in paginator.posts -%}
 	{%- include blog-preview.html -%}
 {%- endfor -%}
