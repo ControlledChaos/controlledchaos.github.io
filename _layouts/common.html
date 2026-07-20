@@ -1,7 +1,7 @@
 {%- assign body_class = "default-page" -%}
-{%- if page.layout == "index" -%}
+{%- if page.url == "/" -%}
 	{%- capture body_class %}front-page{% endcapture -%}
-{%- elsif page.layout == "blog" -%}
+{%- elsif page.url == "/posts/" and page.url != "/" -%}
 	{%- capture body_class %}blog-page{% endcapture -%}
 {%- endif -%}
 
