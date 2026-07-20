@@ -800,12 +800,12 @@ h6 {
   vertical-align: center;
 }
 
-.post-image {
+.post .post-image {
   margin-top: var(--ccd-spacing--vert, 2rem);
   max-height: 600px;
   overflow: hidden;
 }
-.post-image img {
+.post .post-image img {
   display: block;
   -o-object-fit: cover;
      object-fit: cover;

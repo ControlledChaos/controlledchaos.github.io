@@ -376,15 +376,17 @@ h6 {
 	}
 }
 
-.post-image {
-	margin-top: var( --ccd-spacing--vert, 2rem );
-	max-height: 600px;
-	overflow: hidden;
+.post {
+	.post-image {
+		margin-top: var( --ccd-spacing--vert, 2rem );
+		max-height: 600px;
+		overflow: hidden;
 
-	img {
-		display: block;
-		object-fit: cover;
-		object-position: center center;
+		img {
+			display: block;
+			object-fit: cover;
+			object-position: center center;
+		}
 	}
 }
 

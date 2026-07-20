@@ -18,32 +18,33 @@ layout: common
 </div>
 {% endif %}
 
-{%- if page.title %}
-<h2 class="page-title">{{ page.title }}</h2>
-{% endif -%}
+<article class="post">
 
-{%- if page.subtitle %}
-<p class="page-subtitle">{{ page.subtitle }}</p>
-{% endif -%}
+	{%- if page.title %}
+	<h2 class="page-title">{{ page.title }}</h2>
+	{% endif -%}
 
-<figure class="post-image">
-	<img src="{{ '/posts/images/' | append: post_image | absolute_url }}" alt="">
-</figure>
+	{%- if page.subtitle %}
+	<p class="page-subtitle">{{ page.subtitle }}</p>
+	{% endif -%}
 
-<article class="blog-post">
+	<figure class="post-image">
+		<img src="{{ '/posts/images/' | append: post_image | absolute_url }}" alt="">
+	</figure>
+
 	{{ content }}
+
+	{%- if page.tags.size > 0 -%}
+	<div class="blog-tags">
+		<span>Tags:</span>
+
+		{%- for tag in page.tags -%}
+		<a href="{{ '/tags' | relative_url }}#{{- tag -}}">{{- tag -}}</a>
+		{%- endfor -%}
+
+	</div>
+	{%- endif -%}
 </article>
-
-{%- if page.tags.size > 0 -%}
-<div class="blog-tags">
-	<span>Tags:</span>
-
-	{%- for tag in page.tags -%}
-	<a href="{{ '/tags' | relative_url }}#{{- tag -}}">{{- tag -}}</a>
-	{%- endfor -%}
-
-</div>
-{%- endif -%}
 
 {%- if page.after-content -%}
 <div class="after-content">
