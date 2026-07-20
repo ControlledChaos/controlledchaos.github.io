@@ -21,16 +21,17 @@ defaults:
       path: "" # an empty string here means all files in the project
       type: "posts"
     values:
-      image: /assets/img/default.png # The default image used for social and posts.
-      layout: "post"
       permalink: /posts/:title/
+      layout: "post"
+      comments: true
+      image: /assets/img/default.png
       toc: true
   - scope:
       path: "" # an empty string here means all files in the project
       type: "pages"
     values:
       layout: "page"
-      image: /assets/img/default.png # The default image used for social and posts.
+      image: /assets/img/default.png
 
 site_nav:
   - name: Services
