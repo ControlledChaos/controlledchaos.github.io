@@ -2,11 +2,14 @@
 {%- assign previous_page_path = include.previous_page_path | default: paginator.previous_page_path -%}
 {%- assign next_page_path = include.next_page_path | default: paginator.next_page_path -%}
 
+{%- assign prev_icon = include svg/arrow-left.svg -%}
+{%- assign next_icon = include svg/arrow-right.svg -%}
+
 {%- if paginator.total_pages > 1 -%}
 
 <nav role="navigation" aria-label="Pagination" class="pagination-nav">
 	{%- if paginator.previous_page -%}
-	<a class="previous_page" rel="prev" href="{{ previous_page_path | relative_url }}" aria-disabled="false">Newer</a>
+	<a class="previous_page" rel="prev" href="{{ previous_page_path | relative_url }}" aria-disabled="false">{{ prev_icon }} Newer</a>
 	{%- endif -%}
 
 	{%- for paginator_nav_page in (1..paginator.total_pages) -%}
@@ -23,7 +26,7 @@
 
 	{%- if paginator.next_page -%}
 	<a class="next_page" rel="next" href="{{ next_page_path | relative_url }}"
-		aria-disabled="false">Older</a>
+		aria-disabled="false">Older {{ next_icon }}</a>
 	{%- endif -%}
 </nav>
 {%- endif -%}
