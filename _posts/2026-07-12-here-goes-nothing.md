@@ -2,7 +2,7 @@
 title: Here Goes Nothing
 subtitle: Gonna finally build a website for myself.
 page_img: static.jpg
-page_thumb: static-thumb.jpg
+post_thumb: static-thumb.jpg
 tags: [websites, portfolio, stories]
 ---
 

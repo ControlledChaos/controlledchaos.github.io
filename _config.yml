@@ -29,7 +29,8 @@ defaults:
       permalink: /posts/:title/
       layout: "post"
       comments: true
-      image: /assets/img/default-cover.jpg
+      post_image: /_posts/images/default-cover.jpg
+      post_thumb: /_posts/images/transparent.png
       toc: true
   - scope:
       path: "" # empty string == all files in project

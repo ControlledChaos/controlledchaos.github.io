@@ -3,7 +3,7 @@ layout: post
 title: Room for Dessert?
 subtitle: Let's sweeten up this blog.
 page_img: cupcakes.jpg
-page_thumb: cupcakes-thumb.jpg
+post_thumb: cupcakes-thumb.jpg
 tags: [pastry, test]
 ---
 

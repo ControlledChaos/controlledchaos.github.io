@@ -3,12 +3,12 @@
 
 {%- assign post_thumb = false -%}
 {%- capture post_thumb -%}
-	{%- if post.page_thumb -%}
-		{{ post.page_thumb }}
+	{%- if post.post_thumb -%}
+		{{ post.post_thumb }}
 	{%- elsif site.cover_img -%}
 		{{ site.cover_img }}
 	{%- else -%}
-		transparent-thumb.png
+		transparent.png
 	{%- endif -%}
 {%- endcapture -%}
 <li>
@@ -16,7 +16,7 @@
 
 		<figure class="entry-image" role="presentation">
 			<a href="{{ post.url | absolute_url }}">
-				<img src="{{ '/assets/img/' | append: post_thumb | absolute_url }}" class="post-image" width="180" height="180" />
+				<img src="{{ '/_posts/images/' | append: post_thumb | absolute_url }}" class="post-image" width="180" height="180" />
 			</a>
 		</figure>
 
