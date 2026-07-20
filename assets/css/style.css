@@ -773,10 +773,9 @@ h6 {
 
 .page-subtitle {
   margin: var(--ccd-page-subtitle--margin, 0);
-  font-family: var(--ccd-page-subtitle--font-description, var(--ccd-display--font-family));
-  font-size: var(--ccd-page-subtitle--font-size, 1.625rem);
+  font-family: var(--ccd-page-subtitle--font-family);
+  font-size: var(--ccd-page-subtitle--font-size, 1.1875rem);
   font-weight: var(--ccd-page-subtitle--font-weight, 500);
-  letter-spacing: var(--ccd-page-subtitle--letter-spacing, -0.0125em);
   line-height: 1.2;
   color: var(--ccd-color--theme--primary--dark);
 }
