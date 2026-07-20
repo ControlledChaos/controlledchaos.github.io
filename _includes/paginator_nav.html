@@ -15,7 +15,7 @@
 
 <nav role="navigation" aria-label="Pagination" class="pagination-nav">
 	{%- if paginator.previous_page -%}
-	<a class="previous_page" rel="prev" href="{{ previous_page_path | relative_url }}" aria-disabled="false">{{ prev_icon }} <span class="screen-reader-text">Newer Posts</span></a>
+	<a class="previous_page" rel="prev" href="{{ previous_page_path | relative_url }}" aria-disabled="false" title="Newer Posts" data-tooltip>{{ prev_icon }} <span class="screen-reader-text">Newer Posts</span></a>
 	{%- endif -%}
 
 	{%- for paginator_nav_page in (1..paginator.total_pages) -%}
@@ -32,7 +32,7 @@
 
 	{%- if paginator.next_page -%}
 	<a class="next_page" rel="next" href="{{ next_page_path | relative_url }}"
-		aria-disabled="false"><span class="screen-reader-text">Older Posts</span> {{ next_icon }}</a>
+		aria-disabled="false" title="Older Posts" data-tooltip><span class="screen-reader-text">Older Posts</span> {{ next_icon }}</a>
 	{%- endif -%}
 </nav>
 {%- endif -%}
