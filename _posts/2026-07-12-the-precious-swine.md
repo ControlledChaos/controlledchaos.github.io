@@ -2,7 +2,7 @@
 layout: post
 title: Behold the Succulent Pig
 subtitle: There's always room for bacon.
-page_img: bacon.jpg
+post_image: bacon.jpg
 post_thumb: bacon-thumb.jpg
 tags: [meat, test]
 comments: true
