@@ -1,16 +1,20 @@
-{%- capture body_class %}
-{%- if page.url == "/" -%}
-	{{ "front-page" }}
-{%- elsif page.url == "/posts/" and page.url != "/" -%}
-	{{ "blog-page" }}
-{%- else -%}
-	{{ "default-page" }}
-{%- endif -%}
-{% endcapture -%}
+{%- capture body_class -%}
+	{%- if page.url == "/" -%}
+		{{- "front-page" -}}
+	{%- elsif page.url == "/posts/" and page.url != "/" -%}
+		{{- "blog-page" -}}
+	{%- else -%}
+		{{- site.body_class -}}
+	{%- endif -%}
+{%- endcapture -%}
 
-{%- if page.page_type -%}
-	{%- capture page_type %}{{ page.page_type }}{% endcapture -%}
-{%- endif -%}
+{%- capture page_type -%}
+	{%- if page.page_type -%}
+		{{- page.page_type -}}
+	{%- else -%}
+		{{- site.page_type -}}
+	{%- endif -%}
+{%- endcapture -%}
 
 {%- if page.sidebar == false and paginator.page == 1 -%}
 	{%- assign sidebar = false -%}
