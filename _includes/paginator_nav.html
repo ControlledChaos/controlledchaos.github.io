@@ -2,8 +2,14 @@
 {%- assign previous_page_path = include.previous_page_path | default: paginator.previous_page_path -%}
 {%- assign next_page_path = include.next_page_path | default: paginator.next_page_path -%}
 
-{%- assign prev_icon = include.svg/arrow-left.svg -%}
-{%- assign next_icon = include.svg/arrow-right.svg -%}
+{%- assign prev_icon = "" -%}
+{%- capture prev_icon -%}
+	{{ include.svg/arrow-left.svg }}
+{%- endcapture -%}
+{%- assign next_icon = "" -%}
+{%- capture next_icon -%}
+	{{ include.svg/arrow-right.svg }}
+{%- endcapture -%}
 
 {%- if paginator.total_pages > 1 -%}
 
