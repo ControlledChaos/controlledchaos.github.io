@@ -23,7 +23,7 @@
 {%- capture sidebar -%}
 	{%- if paginator.page == 1 -%}
 		{{ false }}
-	{%- elsif page.url == "/posts/" and paginator.page > 1 -%}
+	{%- elsif page.url contains "/posts/" and paginator.page > 1 -%}
 		{{ true }}
 	{%- elsif page.sidebar == false -%}
 		{{ false }}
