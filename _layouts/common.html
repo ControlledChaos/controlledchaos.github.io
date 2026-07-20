@@ -21,9 +21,9 @@
 {%- endcapture -%}
 
 {%- capture sidebar -%}
-	{%- if page.url == "/" -%}
+	{%- if paginator.page == 1 -%}
 		{{ false }}
-	{%- elsif page.url == "/posts/" and page.url != "/" -%}
+	{%- elsif page.url == "/posts/" and paginator.page > 1 -%}
 		{{ true }}
 	{%- elsif page.sidebar == false -%}
 		{{ false }}
