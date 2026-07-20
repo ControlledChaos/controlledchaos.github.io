@@ -28,7 +28,7 @@
 	<div class="page-container" itemscope="itemscope" itemtype="{{ page_type }}">
 		<div id='{{ page.name | slugify | remove_last: "-md" }}' class="page-wrap">
 			<main class="page-main" role="main" itemscope itemprop="mainContentOfPage">
-			{{ page.id }}
+			{{ page }}
 				{{ content }}
 			</main>
 			{%- if sidebar -%}
