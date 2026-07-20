@@ -11,6 +11,8 @@
 {%- capture page_type -%}
 	{%- if page.url == "/posts/" and page.url != "/" -%}
 		{{- "Blog" -}}
+	{%- elsif page.layout == "post" -%}
+		{{- "BlogPosting" -}}
 	{%- elsif page.page_type -%}
 		{{- page.page_type -}}
 	{%- else -%}
