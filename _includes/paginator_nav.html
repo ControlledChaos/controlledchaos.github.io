@@ -4,11 +4,11 @@
 
 {%- assign prev_icon = "" -%}
 {%- capture prev_icon -%}
-	{% include.svg/arrow-left.svg %}
+	{% include svg/arrow-left.svg %}
 {%- endcapture -%}
 {%- assign next_icon = "" -%}
 {%- capture next_icon -%}
-	{% include.svg/arrow-right.svg %}
+	{% include svg/arrow-right.svg %}
 {%- endcapture -%}
 
 {%- if paginator.total_pages > 1 -%}
