@@ -8,16 +8,16 @@
 {%- assign body_class = "default-page" -%}
 {%- capture body_class -%}
 	{%- if front_page == true -%}
-		{{- "front-page" -}}
+		{{- body_class = "front-page" -}}
 	{%- elsif page.url == "/posts/" and front_page == false -%}
-		{{- "blog-page" -}}
+		{{- body_class = "blog-page" -}}
 	{%- endif -%}
 {%- endcapture -%}
 
 {%- assign page_type = "WebPage" -%}
 {%- capture page_type -%}
 	{%- if page.page_type -%}
-		{{- page.page_type -}}
+		{{- page_type = page.page_type -}}
 	{%- endif -%}
 {%- endcapture -%}
 
