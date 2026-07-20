@@ -173,3 +173,19 @@
 		padding: var( --ccd-sidebar--ol--padding, var( --ccd-sidebar--list--padding, 0 0 0 1em ) );
 	}
 }
+
+.sidebar-block {
+
+	&.sidebar-latest-posts {
+
+		.latest-link {
+			font-size: 1.125rem;
+			font-weight: 650;
+		}
+
+		.latest-date {
+			display: block;
+			font-size: 0.875rem;
+		}
+	}
+}
