@@ -1,6 +1,14 @@
 ---
 layout: common
 ---
+{%- assign post_image = "" -%}
+{%- capture post_image -%}
+	{%- if page.post_image -%}
+		{{ page.post_image }}
+	{%- else -%}
+		{{ site.post_image }}
+	{%- endif -%}
+{%- endcapture -%}
 
 {% if page.before-content %}
 <div class="before-content">
@@ -18,11 +26,9 @@ layout: common
 <p class="page-subtitle">{{ page.subtitle }}</p>
 {% endif -%}
 
-{%- if page.subtitle %}
 <figure>
-	<img src="{{ '/assets/img/' | append: page.page_img | absolute_url }}" alt="">
+	<img src="{{ '/posts/images/' | append: post_image | absolute_url }}" alt="">
 </figure>
-{% endif -%}
 
 <article class="blog-post">
 	{{ content }}
