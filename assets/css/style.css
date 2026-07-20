@@ -793,6 +793,10 @@ h6 {
   justify-content: center;
   gap: 0 0.5em;
 }
+.pagination-nav svg {
+  display: inline-block;
+  height: 1em;
+}
 
 .posts-list {
   list-style: none;

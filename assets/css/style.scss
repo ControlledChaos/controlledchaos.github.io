@@ -367,6 +367,11 @@ h6 {
 	display: flex;
 	justify-content: center;
 	gap: 0 0.5em;
+
+	svg {
+		display: inline-block;
+		height: 1em;
+	}
 }
 
 // Get loop styles.
