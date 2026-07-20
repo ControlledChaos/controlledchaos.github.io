@@ -16,6 +16,9 @@ timezone: "America/Los Angeles"
 markdown: kramdown
 permalink: pretty
 
+body_class: "default-page"
+page_type: "WebPage"
+
 defaults:
   - scope:
       path: "" # an empty string here means all files in the project
