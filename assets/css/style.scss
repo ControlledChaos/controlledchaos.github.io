@@ -362,8 +362,8 @@ h6 {
 
 .pagination-nav {
 	width: 100%;
-	margin: var( --ccd-spacing--vert ) 0 0 0;
-	padding: 0 var( --ccd-spacing--horz );
+	margin: 0;
+	padding: var( --ccd-spacing--vert ) var( --ccd-spacing--horz );
 	display: flex;
 	justify-content: center;
 	gap: 0 0.5em;
