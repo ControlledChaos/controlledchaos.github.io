@@ -34,6 +34,14 @@ defaults:
       toc: true
   - scope:
       path: "" # empty string == all files in project
+      type: "projects"
+    values:
+      permalink: /projects/:title/
+      layout: "default"
+      post_image: default-cover.jpg
+      post_thumb: transparent.png
+  - scope:
+      path: "" # empty string == all files in project
       type: "pages"
     values:
       layout: "page"
