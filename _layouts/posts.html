@@ -22,12 +22,15 @@ paginate_first_page_path %}
 </section>
 
 <section id="front-page-projects" class="front-page-section">
-	{{ front_intro.content }}
+	{{ front_projects.content }}
 </section>
 
 {%- if posts.size > 0 and page.url == "/" -%}
 
 <section id="front-page-posts" class="front-page-section">
+
+	{{- front_projects.content -}}
+
 	<h2>Latest Posts</h2>
 	{% include featured-posts-grid.html posts = site.posts limit = 3 index = first_page_path %}
 </section>
