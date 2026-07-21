@@ -773,10 +773,9 @@ h6 {
 
 .page-subtitle {
   margin: var(--ccd-page-subtitle--margin, 0);
-  font-family: var(--ccd-page-subtitle--font-description, var(--ccd-display--font-family));
-  font-size: var(--ccd-page-subtitle--font-size, 1.625rem);
+  font-family: var(--ccd-page-subtitle--font-family);
+  font-size: var(--ccd-page-subtitle--font-size, 1.1875rem);
   font-weight: var(--ccd-page-subtitle--font-weight, 500);
-  letter-spacing: var(--ccd-page-subtitle--letter-spacing, -0.0125em);
   line-height: 1.2;
   color: var(--ccd-color--theme--primary--dark);
 }
@@ -798,19 +797,6 @@ h6 {
   height: 1em;
   vertical-align: middle;
   vertical-align: center;
-}
-
-.post .post-image {
-  margin-top: var(--ccd-spacing--vert, 2rem);
-  max-height: 600px;
-  overflow: hidden;
-}
-.post .post-image img {
-  display: block;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: center center;
-     object-position: center center;
 }
 
 .posts-list {
@@ -880,6 +866,19 @@ h6 {
 }
 .entry-summary .post-tags-list a:not(:last-of-type):after {
   content: ",";
+}
+
+.post .post-image {
+  margin-top: var(--ccd-spacing--vert, 2rem);
+  max-height: 600px;
+  overflow: hidden;
+}
+.post .post-image img {
+  display: block;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center center;
+     object-position: center center;
 }
 
 .page-sidebar {

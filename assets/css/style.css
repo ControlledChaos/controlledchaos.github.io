@@ -799,19 +799,6 @@ h6 {
   vertical-align: center;
 }
 
-.post .post-image {
-  margin-top: var(--ccd-spacing--vert, 2rem);
-  max-height: 600px;
-  overflow: hidden;
-}
-.post .post-image img {
-  display: block;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: center center;
-     object-position: center center;
-}
-
 .posts-list {
   list-style: none;
   margin: 0;
@@ -879,6 +866,19 @@ h6 {
 }
 .entry-summary .post-tags-list a:not(:last-of-type):after {
   content: ",";
+}
+
+.post .post-image {
+  margin-top: var(--ccd-spacing--vert, 2rem);
+  max-height: 600px;
+  overflow: hidden;
+}
+.post .post-image img {
+  display: block;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center center;
+     object-position: center center;
 }
 
 .page-sidebar {

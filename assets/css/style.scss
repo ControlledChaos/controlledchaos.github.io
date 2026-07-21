@@ -375,22 +375,11 @@ h6 {
 	}
 }
 
-.post {
-	.post-image {
-		margin-top: var( --ccd-spacing--vert, 2rem );
-		max-height: 600px;
-		overflow: hidden;
+// Get front page styles.
+@import 'partials/_front-page';
 
-		img {
-			display: block;
-			object-fit: cover;
-			object-position: center center;
-		}
-	}
-}
-
-// Get loop styles.
-@import 'partials/_loop';
+// Get posts loop & post styles.
+@import 'partials/_posts';
 
 // Get sidebar styles.
 @import 'partials/_aside';
