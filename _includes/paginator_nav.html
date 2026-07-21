@@ -21,8 +21,7 @@
 	{%- for paginator_nav_page in (1..paginator.total_pages) -%}
 
 	{%- if paginator_nav_page == paginator.page -%}
-		Hello.
-		<a href="{{ page.url | relative_url }}" aria-label="{{ paginator_nav_page }}" aria-current="page">{{ paginator_nav_page }}</a>
+		{{ paginator_nav_page }}
 
 	{%- elsif paginator_nav_page == 1 -%}
 		<a href="{{ paginate_path | relative_url | replace: 'page:num', '' }}" aria-label="{{ paginator_nav_page }}">{{ paginator_nav_page }}</a>
