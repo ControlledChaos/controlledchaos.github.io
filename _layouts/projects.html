@@ -9,7 +9,7 @@ layout: common
 {%- assign projects = paginator.projects %}
 <ul class="posts-list" role="list">
 {% for project in site.projects -%}
-	<li>{{ project.title }}</li>
+	<li><a href="{{ project.url | relative_url }}">{{ project.title }}</a></li>
 {%- endfor -%}
 </ul>
 
