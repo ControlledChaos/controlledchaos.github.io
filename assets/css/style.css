@@ -860,6 +860,9 @@ h6 {
 .entry-summary {
   grid-area: summary;
 }
+.entry-summary .post-meta {
+  font-size: 0.875rem;
+}
 .entry-summary .post-meta p {
   margin: 0;
 }
