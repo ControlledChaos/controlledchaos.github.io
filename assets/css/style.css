@@ -802,6 +802,7 @@ h6 {
 .pagination-nav ul .current-page {
   cursor: default;
   font-weight: 625;
+  text-decoration: underline;
   opacity: 0.7;
 }
 
