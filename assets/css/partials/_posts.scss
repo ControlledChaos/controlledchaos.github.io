@@ -122,8 +122,16 @@
 
 	.featured-post {
 		padding: 1rem;
+		display: flex;
+		align-items: center;
+		justify-content: center;
 		background-repeat: no-repeat;
 		background-position: center center;
 		background-size: cover;
+
+		h3,
+		p {
+			margin: 0;
+		}
 	}
 }

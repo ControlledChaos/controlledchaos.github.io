@@ -908,9 +908,16 @@ h6 {
 }
 .featured-posts-grid .featured-post {
   padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
+}
+.featured-posts-grid .featured-post h3,
+.featured-posts-grid .featured-post p {
+  margin: 0;
 }
 
 .page-sidebar {
