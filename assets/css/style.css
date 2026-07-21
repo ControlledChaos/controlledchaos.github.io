@@ -784,6 +784,10 @@ h6 {
   margin-top: 1rem;
 }
 
+.front-page-section {
+  margin-top: var(--ccd-spacing--vert, 2rem);
+}
+
 .pagination-nav ul {
   list-style: none;
   width: 100%;
