@@ -27,6 +27,7 @@ defaults:
       type: "posts"
     values:
       permalink: /posts/:title/
+      paginate_path: "/posts/page:num/"
       layout: "post"
       comments: true
       post_image: default-cover.jpg
@@ -37,6 +38,7 @@ defaults:
       type: "projects"
     values:
       permalink: /projects/:title/
+      paginate_path: "/projects/page:num/"
       layout: "post"
       comments: true
       post_image: default-cover.jpg
