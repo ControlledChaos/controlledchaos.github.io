@@ -34,6 +34,16 @@ defaults:
       toc: true
   - scope:
       path: "" # empty string == all files in project
+      type: "projects"
+    values:
+      permalink: /projects/:title/
+      layout: "post"
+      comments: true
+      post_image: default-cover.jpg
+      post_thumb: transparent.png
+      toc: true
+  - scope:
+      path: "" # empty string == all files in project
       type: "pages"
     values:
       layout: "page"
@@ -66,10 +76,7 @@ related_by: "tags or categories"
 
 # Collections
 collections:
-  projects:
-    paginate: 3
-    output: true
-    permalink: /projects/:name/
+  - projects
 
 # Sidebar content
 sidebar_modules:
