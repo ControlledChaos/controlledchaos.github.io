@@ -360,11 +360,10 @@ h6 {
 }
 
 .front-page {
-	margin-top: var( --ccd-spacing--vert, 2rem );
-
 	.front-page-section {
+		margin-top: var( --ccd-spacing--vert, 2rem );
+
 		&:not( :first-of-type ) {
-			padding-top: var( --ccd-spacing--vert, 2rem );
 			border-top: var( --ccd-box--border-style ) var( --ccd-box--border-width ) var( --ccd-box--border-color );
 		}
 	}
