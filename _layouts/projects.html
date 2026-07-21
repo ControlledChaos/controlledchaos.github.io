@@ -5,8 +5,7 @@ pagination:
   permalink: /projects/:name/
 ---
 <ul class="posts-list" role="list">
-{% for project in site.projects -%}
-	{{ project.pagination }}
+{% for project in site.projects limit: 3 -%}
 	<li><a href="{{ project.url | relative_url }}">{{ project.title }}</a></li>
 {%- endfor -%}
 </ul>
