@@ -835,6 +835,7 @@ h6 {
   overflow: hidden;
   width: 180px;
   height: 180px;
+  transform: translateY(0.5rem);
 }
 .entry-image img {
   display: block;
@@ -849,7 +850,6 @@ h6 {
 
 .entry-header {
   grid-area: header;
-  transform: translateY(-0.5rem);
 }
 .entry-header .post-title {
   margin: 0;

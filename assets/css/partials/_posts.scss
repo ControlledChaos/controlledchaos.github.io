@@ -29,6 +29,7 @@
 	overflow: hidden;
 	width: 180px;
 	height: 180px;
+	transform: translateY( 0.5rem );
 
 	img {
 		display: block;
@@ -42,7 +43,6 @@
 
 .entry-header {
 	grid-area: header;
-	transform: translateY( -0.5rem );
 
 	.post-title {
 		margin: 0;
