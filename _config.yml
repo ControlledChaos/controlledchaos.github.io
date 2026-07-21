@@ -70,7 +70,7 @@ collections:
     pagination:
       enabled: true
       permalink: /projects/:name/
-    paginate: 3
+      paginate: 3
     output: true
     post_image: default-cover.jpg
     post_thumb: transparent.png
