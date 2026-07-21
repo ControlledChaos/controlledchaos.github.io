@@ -120,6 +120,10 @@
 	grid-template-columns: repeat( 3, 1fr );
 	gap: 0.25rem;
 
+	@media screen and ( max-width: 640px ) {
+		grid-template-columns: repeat( 1, 1fr );
+	}
+
 	.featured-post {
 		figure {
 			position: relative;
@@ -161,6 +165,7 @@
 		}
 
 		h3 {
+			font-size: clamp( 1.125rem, 2.75vw, 1.5rem );
 			line-height: 1;
 		}
 
@@ -168,6 +173,10 @@
 			margin-top: 0.5rem;
 			line-height: 1.2;
 			font-size: 0.9375rem;
+
+			@media screen and ( max-width: 960px ) {
+				display: none;
+			}
 		}
 	}
 }
