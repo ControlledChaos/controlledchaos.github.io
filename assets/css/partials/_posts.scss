@@ -110,3 +110,20 @@
 		}
 	}
 }
+
+///
+/// Featured posts
+///
+.featured-posts-grid {
+	margin-top: var( --ccd-spacing--horz );
+	display: grid;
+	grid-template-columns: repeat( 3, 1fr );
+	gap: 0.25rem;
+
+	.featured-post {
+		padding: 1rem;
+		background-repeat: no-repeat;
+		background-position: center center;
+		background-size: cover;
+	}
+}
