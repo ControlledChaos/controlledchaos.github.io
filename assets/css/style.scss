@@ -359,7 +359,8 @@ h6 {
 	}
 }
 
-.pagination-nav {
+.pagination-nav ul {
+	list-style: none;
 	width: 100%;
 	margin: 0;
 	padding: var( --ccd-spacing--vert, 2rem ) var( --ccd-spacing--horz, 2rem );
@@ -372,6 +373,12 @@ h6 {
 		height: 1em;
 		vertical-align: middle;
 		vertical-align: center;
+	}
+
+	.current-page {
+		cursor: default;
+		font-weight: 625;
+		opacity: 0.7;
 	}
 }
 
