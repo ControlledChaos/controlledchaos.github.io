@@ -24,7 +24,7 @@
 		<li class="current-page">{{ paginator_nav_page }}</li>
 
 		{%- elsif paginator_nav_page == 1 -%}
-		<li><a href="{{ paginate_path | relative_url | replace: 'page:num', '' }}" aria-label="{{ paginator_nav_page }}">{{ paginator_nav_page }}</a></li>
+		<li><a href="{{ paginate_path | relative_url | replace: '/page:num', '' }}" aria-label="{{ paginator_nav_page }}">{{ paginator_nav_page }}</a></li>
 
 		{%- else -%}
 		<li><a href="{{ paginate_path | relative_url | replace: ':num', paginator_nav_page }}" aria-label="{{ paginator_nav_page }}">{{ paginator_nav_page }}</a></li>
