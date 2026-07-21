@@ -4,6 +4,7 @@ pagination:
   enabled: true
   permalink: /projects/:name/
 ---
+{%- assign projects = paginator.posts %}
 {% for project in site.projects %}
 {% if project.title == page.title %}
   {% assign thisPost = project %}
