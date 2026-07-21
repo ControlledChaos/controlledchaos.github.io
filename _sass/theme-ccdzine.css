@@ -862,6 +862,7 @@ h6 {
 }
 .entry-summary .post-meta {
   font-size: 0.875em;
+  line-height: 1.35;
 }
 .entry-summary .post-meta p {
   margin: 0;
