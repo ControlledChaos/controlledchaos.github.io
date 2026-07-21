@@ -66,8 +66,8 @@ site_nav:
 blog_view: preview
 paginate: 3
 paginate_path: "/posts/page:num/"
-category_path: category
-category_layout: category_layout.html
+category_path: /category/
+category_layout: category_index.html
 tag_page_layout: tags
 tag_page_dir: tags
 related_by: "tags or categories"
