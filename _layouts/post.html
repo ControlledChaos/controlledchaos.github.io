@@ -34,11 +34,11 @@ layout: common
 
 	{{ content }}
 
-	{%- if post.category %}
+	{%- if page.category %}
 	<p class="post-cats">
 		<span class="post-cats-label">Category:</span>
 		<span class="post-cats-list">
-		{% for cat in post.category %}
+		{% for cat in page.category %}
 		<a href="{{ '/category' | absolute_url }}{{- cat -}}"> {{- cat | capitalize -}} </a>
 		{%- endfor -%}
 		</span>
