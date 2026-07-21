@@ -123,18 +123,17 @@
 	.featured-post {
 		figure {
 			position: relative;
-			min-height: 240px;
+			overflow: hidden;
 
 			img {
 				display: block;
 				object-fit: cover;
 				object-position: center center;
-				transition: all .15s;
+				transition: all .25s;
 			}
 
 			figcaption {
 				position: absolute;
-				overflow: hidden;
 				top: 0;
 				left: 0;
 				width: 100%;
