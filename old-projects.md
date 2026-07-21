@@ -1,5 +1,5 @@
 ---
-permalink: /projects/
+# permalink: /projects/
 layout: projects
 page_type: WebPage
 title: What I've Done
