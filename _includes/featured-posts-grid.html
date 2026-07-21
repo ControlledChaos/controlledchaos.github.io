@@ -32,11 +32,14 @@ index (string, optional) - Index page for the collection.
 	{%- assign excerpt = post.subtitle | default: post.excerpt | truncatewords: 15, "…" -%}
 	{%- assign img_src = "posts/images/" | append: post_image -%}
 
-	<article class="featured-post" style="background-image: url( '{{ img_src | relative_url }}' );">
-		<header class="featured-post-header">
-			<h3>{{ post.title }}</h3>
-			<p>{{ excerpt }}</p>
-		</header>
+	<article class="featured-post">
+		<figure>
+			<img src="{{ img_src | relative_url }}" />
+			<figcaption>
+				<h3>{{ post.title }}</h3>
+				<p>{{ excerpt }}</p>
+			</figcaption>
+		</figure>
 	</article>
 	{%- endfor %}
 

@@ -115,7 +115,7 @@
 /// Featured posts
 ///
 .featured-posts-grid {
-	margin-top: var( --ccd-spacing--horz );
+	margin-top: calc( var( --ccd-spacing--horz ) / 2 );
 	display: grid;
 	grid-template-columns: repeat( 3, 1fr );
 	gap: 0.25rem;
@@ -127,19 +127,33 @@
 		background-position: center center;
 		background-size: cover;
 
-		.featured-post-header {
+		figure {
 			position: absolute;
+			overflow: hidden;
 			top: 0;
 			left: 0;
 			width: 100%;
 			height: 100%;
-			padding: 1rem;
+			padding: 1.5rem;
 			display: flex;
 			flex-direction: column;
 			align-items: center;
 			justify-content: center;
 			background-color: rgba( $color: black, $alpha: 0.625 );
 			color: #ffffff;
+
+			img {
+				display: block;
+				object-fit: cover;
+				object-position: center center;
+				transition: all .15s;
+			}
+
+			&:hover {
+				img {
+					transform: scale( 110% );
+				}
+			}
 		}
 
 		h3, p {
