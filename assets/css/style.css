@@ -784,8 +784,12 @@ h6 {
   margin-top: 1rem;
 }
 
-.front-page-section {
+.front-page {
   margin-top: var(--ccd-spacing--vert, 2rem);
+}
+.front-page .front-page-section:not(:first-of-type) {
+  padding-top: var(--ccd-spacing--vert, 2rem);
+  border-top: var(--ccd-box--border-style) var(--ccd-box--border-width) var(--ccd-box--border-color);
 }
 
 .pagination-nav ul {
