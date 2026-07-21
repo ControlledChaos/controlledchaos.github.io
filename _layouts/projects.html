@@ -4,10 +4,9 @@ pagination:
   enabled: true
   permalink: /projects/:name/
 ---
-{%- assign projects = paginator.posts %}
+{{ pagination }}
 <ul class="posts-list" role="list">
-{% for project in projects -%}
+{% for project in site.projects -%}
 	<li><a href="{{ project.url | relative_url }}">{{ project.title }}</a></li>
 {%- endfor -%}
 </ul>
-
