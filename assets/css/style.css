@@ -884,7 +884,7 @@ h6 {
   vertical-align: center;
   padding-left: 1em;
   transform: translateX(-1em);
-  background-image: linear-gradient(to right, transparent 0%, var(--ccd-body--bg-color) 50%, var(--ccd-body--bg-color) 100%);
+  background-image: linear-gradient(to right, transparent 0%, rgba(255, 255, 255, 0.5) 25%, #ffffff 100%);
 }
 
 .post .post-image {
