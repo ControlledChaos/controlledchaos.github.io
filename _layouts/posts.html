@@ -14,11 +14,14 @@ paginate_first_page_path %}
 {%- endif %}
 
 {%- assign front_intro = site.pages | where: "path", "front-page/intro.md" | first -%}
-{{ front_intro.content }}
+
+<section id="front-page-intro" class="front-page-section">
+	{{ front_intro.content }}
+</section>
 
 {%- if posts.size > 0 and page.url == "/" -%}
 
-<section id="front-page-posts">
+<section id="front-page-posts" class="front-page-section">
 	<h2>Latest Posts</h2>
 	{% include featured-posts-grid.html posts = site.posts limit = 3 index = first_page_path %}
 </section>
