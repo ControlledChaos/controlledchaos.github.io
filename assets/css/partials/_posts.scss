@@ -89,7 +89,7 @@
 			vertical-align: center;
 			padding-left: 1em;
 			transform: translateX( -1em );
-			background-image: linear-gradient( to right, transparent 0%, rgba( $color: $body_color, $alpha: 0.5 ) 25%, $body_color 100% );
+			background-image: linear-gradient( to right, transparent 0%, rgba( $color: $body_color, $alpha: 0.85 ) 25%, $body_color 100% );
 		}
 	}
 }
