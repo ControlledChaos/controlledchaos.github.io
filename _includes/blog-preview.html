@@ -46,7 +46,7 @@
 					<span class="post-cats-label">Category:</span>
 					<span class="post-cats-list">
 					{% for cat in post.category %}
-					<a href="{{ '/category' | absolute_url }}{{- cat -}}"> {{- cat | capitalize -}} </a>
+					<a href="{{ '/category/' | absolute_url }}{{- cat -}}"> {{- cat -}} </a>
 					{%- endfor -%}
 					</span>
 				</p>
