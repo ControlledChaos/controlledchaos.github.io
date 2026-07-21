@@ -1,2 +1,7 @@
-@import "../../index";
-@import "./syntax";
+
+.btn-primary.disabled, .btn-primary:disabled, .btn-primary[aria-disabled="true"] {
+  background-color: #ff0000;
+  border: none;
+  box-shadow: none;
+  color: #ffffff;
+}
