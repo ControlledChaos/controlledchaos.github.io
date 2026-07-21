@@ -10,9 +10,8 @@
 {%- capture next_icon -%}
 	{% include svg/arrow-right.svg %}
 {%- endcapture -%}
-{{ page.url }}
+
 {%- if paginator.total_pages > 1 -%}
-{{ paginator.page }}
 <nav role="navigation" aria-label="Pagination" class="pagination-nav">
 	<ul>
 		{%- if paginator.previous_page -%}
@@ -22,7 +21,7 @@
 		{%- for paginator_nav_page in (1..paginator.total_pages) -%}
 
 		{%- if paginator_nav_page == paginator.page -%}
-		<li>{{ paginator_nav_page }}</li>
+		<li class="current-page">{{ paginator_nav_page }}</li>
 
 		{%- elsif paginator_nav_page == 1 -%}
 		<li><a href="{{ paginate_path | relative_url | replace: 'page:num', '' }}" aria-label="{{ paginator_nav_page }}">{{ paginator_nav_page }}</a></li>
