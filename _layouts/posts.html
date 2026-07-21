@@ -13,9 +13,9 @@ paginate_first_page_path %}
 {{ content }}
 {%- endif %}
 
-{%- assign front_intro = site.pages | where: "path", "front-page/intro.md" | first -%}
-{%- assign front_projects = site.pages | where: "path", "front-page/projects.md" | first -%}
-{%- assign front_posts = site.pages | where: "path", "front-page/posts.md" | first -%}
+{%- assign front_intro = site.pages | where: "path", "front-page/intro.md" -%}
+{%- assign front_projects = site.pages | where: "path", "front-page/projects.md" -%}
+{%- assign front_posts = site.pages | where: "path", "front-page/posts.md" -%}
 
 <section id="front-page-intro" class="front-page-section">
 	{{ front_intro.content }}
