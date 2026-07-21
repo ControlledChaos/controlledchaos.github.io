@@ -17,7 +17,6 @@ paginate_first_page_path %}
 {{ front_page.content }}
 
 {%- if posts.size > 0 and page.url == "/" %}
-{{ site.posts }}
 <h2>Latest Posts</h2>
-{%- include post-timeline.html posts = posts limit = 3 index = first_page_path %}
+{%- include post-timeline.html posts = site.posts limit = 3 index = first_page_path %}
 {%- endif %}
