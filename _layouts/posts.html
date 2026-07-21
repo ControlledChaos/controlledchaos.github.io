@@ -13,8 +13,8 @@ paginate_first_page_path %}
 {{ content }}
 {%- endif %}
 
-{%- assign front_page = site.pages | where: "path", "front.md" | first -%}
-{{ front_page.content }}
+{%- assign front_intro = site.pages | where: "path", "front-page/intro.md" | first -%}
+{{ front_intro.content }}
 
 {%- if posts.size > 0 and page.url == "/" -%}
 
