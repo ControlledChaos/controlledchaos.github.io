@@ -927,14 +927,16 @@ h6 {
   background-color: rgba(0, 0, 0, 0.625);
   color: #ffffff;
 }
-.featured-posts-grid .featured-post h3 {
+.featured-posts-grid .featured-post h3, .featured-posts-grid .featured-post p {
   margin: 0;
+  text-align: center;
+  color: inherit;
+}
+.featured-posts-grid .featured-post h3 {
   line-height: 1;
-  color: #ffffff;
 }
 .featured-posts-grid .featured-post p {
-  margin: 0;
-  margin-top: 0.75rem;
+  margin-top: 0.5rem;
   line-height: 1.2;
   font-size: 0.9375rem;
 }
