@@ -167,6 +167,10 @@
 		h3 {
 			font-size: clamp( 1.125rem, 2.75vw, 1.5rem );
 			line-height: 1;
+
+			@media screen and ( max-width: 640px ) {
+				font-size: clamp( 1.125rem, 5vw, 1.5rem );
+			}
 		}
 
 		p {
