@@ -14,8 +14,14 @@ paginate_first_page_path %}
 {%- endif %}
 
 {%- assign front_intro = site.pages | where: "path", "front-page/intro.md" | first -%}
+{%- assign front_projects = site.pages | where: "path", "front-page/projects.md" | first -%}
+{%- assign front_posts = site.pages | where: "path", "front-page/posts.md" | first -%}
 
 <section id="front-page-intro" class="front-page-section">
+	{{ front_intro.content }}
+</section>
+
+<section id="front-page-projects" class="front-page-section">
 	{{ front_intro.content }}
 </section>
 
