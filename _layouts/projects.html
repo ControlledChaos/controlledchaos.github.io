@@ -1,31 +1,11 @@
 ---
-layout: common
+layout: default
+pagination:
+  enabled: true
+  collection: projects
 ---
-
-<h2 class="page-title">{{ page.title }}</h2>
-
-<p class="page-subtitle">{{ page.subtitle }}</p>
-
-{%- assign projects = paginator.projects %}
 <ul class="posts-list" role="list">
-{% for project in site.projects -%}
+{% for project in paginator.posts %}
 	<li><a href="{{ project.url | relative_url }}">{{ project.title }}</a></li>
-{%- endfor -%}
+{% endfor %}
 </ul>
-
-{% if paginator.total_pages > 1 %}
-<nav class="page-pagination">
-	<ul>
-		{% if paginator.previous_page %}
-		<li class="page-nav page-prev">
-			<a href="{{ paginator.previous_page_path | absolute_url }}">Newer Posts</a>
-		</li>
-		{% endif %}
-		{% if paginator.next_page %}
-		<li class="page-nav page-next">
-			<a href="{{ paginator.next_page_path | absolute_url }}">Older Posts</a>
-		</li>
-		{% endif %}
-	</ul>
-</nav>
-{% endif %}
