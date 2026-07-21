@@ -41,6 +41,16 @@
 					Modified {{ post.modified | date: date_format }}
 					{%- endif -%}
 				</p>
+				{%- if post.category %}
+				<p class="post-cats">
+					<span class="post-cats-label">Category:</span>
+					<span class="post-cats-list">
+					{% for cat in post.category %}
+					<a href="{{ '/category' | absolute_url }}{{- cat -}}"> {{- cat | capitalize -}} </a>
+					{%- endfor -%}
+					</span>
+				</p>
+				{%- endif %}
 				{%- if post.tags.size > 0 %}
 				<p class="post-tags">
 					<span class="post-tags-label">Posted in</span>
