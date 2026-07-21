@@ -27,18 +27,6 @@ defaults:
       type: "posts"
     values:
       permalink: /posts/:title/
-      paginate_path: "/posts/page:num/"
-      layout: "post"
-      comments: true
-      post_image: default-cover.jpg
-      post_thumb: transparent.png
-      toc: true
-  - scope:
-      path: "" # empty string == all files in project
-      type: "projects"
-    values:
-      permalink: /projects/:title/
-      paginate_path: "/projects/page:num/"
       layout: "post"
       comments: true
       post_image: default-cover.jpg
@@ -69,7 +57,7 @@ site_nav:
 # Blog pages
 blog_view: preview
 paginate: 3
-# paginate_path: "/posts/page:num/"
+paginate_path: "/posts/page:num/"
 category_path: category
 category_layout: category_layout.html
 tag_page_layout: tags
@@ -78,7 +66,12 @@ related_by: "tags or categories"
 
 # Collections
 collections:
-  - projects
+  projects:
+    paginate: 3
+    output: true
+    permalink: /projects/:name/
+    post_image: default-cover.jpg
+    post_thumb: transparent.png
 
 # Sidebar content
 sidebar_modules:
