@@ -877,6 +877,12 @@ h6 {
 .entry-summary .post-tags-list a:not(:last-of-type):after {
   content: ",";
 }
+.entry-summary .post-excerpt svg {
+  display: inline-block;
+  height: 1em;
+  vertical-align: middle;
+  vertical-align: center;
+}
 
 .post .post-image {
   margin-top: var(--ccd-spacing--vert, 2rem);
