@@ -67,7 +67,7 @@ site_nav:
 # Blog pages
 blog_view: preview
 paginate: 3
-paginate_path: "/posts/page:num/"
+# paginate_path: "/posts/page:num/"
 category_path: category
 category_layout: category_layout.html
 tag_page_layout: tags
