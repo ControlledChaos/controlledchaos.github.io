@@ -33,8 +33,10 @@ index (string, optional) - Index page for the collection.
 	{%- assign img_src = "posts/images/" | append: post_image -%}
 
 	<article class="featured-post" style="background-image: url( '{{ img_src | relative_url }}' );">
-		<h3>{{ post.title }}</h3>
-		<p>{{ excerpt }}</p>
+		<header class="featured-post-header">
+			<h3>{{ post.title }}</h3>
+			<p>{{ excerpt }}</p>
+		</header>
 	</article>
 	{%- endfor %}
 
