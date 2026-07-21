@@ -906,14 +906,19 @@ h6 {
   grid-template-columns: repeat(3, 1fr);
   gap: 0.25rem;
 }
-.featured-posts-grid .featured-post {
+.featured-posts-grid .featured-post figure {
   position: relative;
   min-height: 240px;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
 }
-.featured-posts-grid .featured-post figure {
+.featured-posts-grid .featured-post figure img {
+  display: block;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center center;
+     object-position: center center;
+  transition: all 0.15s;
+}
+.featured-posts-grid .featured-post figure figcaption {
   position: absolute;
   overflow: hidden;
   top: 0;
@@ -927,14 +932,6 @@ h6 {
   justify-content: center;
   background-color: rgba(0, 0, 0, 0.625);
   color: #ffffff;
-}
-.featured-posts-grid .featured-post figure img {
-  display: block;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: center center;
-     object-position: center center;
-  transition: all 0.15s;
 }
 .featured-posts-grid .featured-post figure:hover img {
   transform: scale(110%);
