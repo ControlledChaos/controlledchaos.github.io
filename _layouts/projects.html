@@ -4,17 +4,18 @@ pagination:
   enabled: true
   permalink: /projects/:name/
 ---
-{%- assign post_image = "" -%}
-{%- capture post_image -%}
-	{%- if page.post_image -%}
-		{{ page.post_image }}
-	{%- else -%}
-		{{ site.post_image }}
-	{%- endif -%}
-{%- endcapture -%}
-
 <ul class="posts-list" role="list">
 {% for project in site.projects limit: 9 -%}
+
+	{%- assign post_image = "" -%}
+	{%- capture post_image -%}
+		{%- if project.post_image -%}
+			{{ project.post_image }}
+		{%- else -%}
+			{{ site.post_image }}
+		{%- endif -%}
+	{%- endcapture -%}
+
 	<li>
 		<img src="{{ '/posts/images/' | append: post_image | absolute_url }}" alt="" />
 		<a href="{{ project.url | relative_url }}">{{ project.title }}</a>
