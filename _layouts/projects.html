@@ -6,66 +6,8 @@ pagination:
 ---
 {%- assign projects = paginator.projects %}
 <ul class="posts-list" role="list">
-{% for project in site.projects -%}
+{% for project in projects -%}
 	<li><a href="{{ project.url | relative_url }}">{{ project.title }}</a></li>
 {%- endfor -%}
 </ul>
-
-{% for project in site.projects %}
-{% if project.title == page.title %}
-  {% assign thisPost = project %}
-  {% if forloop.index == 1 %}
-    {% assign prevflag = 0 %}
-    {% assign nextflag = 1 %}
-  {% elsif forloop.index == forloop.length %}
-    {% assign prevflag = 1 %}
-    {% assign nextflag = 0 %}
-  {% else %}
-    {% assign prevflag = 1 %}
-    {% assign nextflag = 1 %}
-  {% endif %}
-{% endif %}
-{% endfor %}
-
-{% for project in site.projects %}
-  {% if project.title == page.title %}
-    {% assign prevflag = 0 %}
-  {% endif %}
-  {% if prevflag == 1 %}
-    {% assign prevPost = project %}
-    {% assign page.previous = project %}
-  {% endif %}
-{% endfor %}
-
-{% if nextflag == 1 %}
-  {% for project in site.projects %}
-    {% if foundPost == 1 %}
-      {% assign getNext = 1 %}
-    {% endif %}
-    {% if project.title == page.title %}
-      {% assign foundPost = 1 %}
-    {% endif %}
-    {% if getNext == 1%}
-      {% assign nextPost = project %}
-      {% assign page.next = project %}
-      {% assign foundPost = 0 %}
-      {% assign getNext = 0 %}
-    {% endif %}
-  {% endfor %}
-{% endif %}
-
-<div id="post-nav">
-    <div >
-        {% if prevPost.url %}
-        <a class="prev" href="{{prevPost.url}}">
-            <span>&lt; {{prevPost.title}}</span>
-        </a>
-        {% endif %}
-        {% if nextPost.url %}
-        <a class="next" href="{{nextPost.url}}">
-            <span>{{nextPost.title}} &gt;</span>
-        </a>
-        {% endif %}
-    </div>
-</div>
 
