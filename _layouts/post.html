@@ -68,7 +68,12 @@ layout: common
 </ul>
 
 {%- if page.comments %}
-    <div class="commentbox"></div>
-    <script src="https://unpkg.com/commentbox.io/dist/commentBox.min.js"></script>
-    <script>commentBox( '{{ site.commentbox }}' )</script>
+<script src="https://utteranc.es/client.js"
+	repo="ControlledChaos/controlledchaos.github.io"
+	issue-term="title"
+	label="blogpost-comment"
+	theme="github-light"
+	crossorigin="anonymous"
+	async>
+</script>
 {% endif -%}
