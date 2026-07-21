@@ -66,14 +66,7 @@ related_by: "tags or categories"
 
 # Collections
 collections:
-  projects:
-    pagination:
-      enabled: true
-      permalink: /projects/:name/
-      paginate: 3
-    output: true
-    post_image: default-cover.jpg
-    post_thumb: transparent.png
+  - projects
 
 # Sidebar content
 sidebar_modules:
