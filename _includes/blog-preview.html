@@ -3,11 +3,13 @@
 
 {%- capture image_dir -%}{{- post.date | date: "posts/images/%Y/%m/" -}}{%- endcapture -%}
 
-{%- if post.post_thumb -%}
-	{%- capture image_src -%}{{- image_dir | append: post.post_thumb -}}{%- endcapture -%}
-{%- else -%}
-	{%- capture image_src -%}{{- "posts/images/" | append: "transparent.png" -}}{%- endcapture -%}
-{%- endif -%}
+{%- capture image_src -%}
+	{%- if post.post_thumb -%}
+		{{- image_dir | append: post.post_thumb -}}
+	{%- else -%}
+		{{- "posts/images/" | append: "transparent.png" -}}
+	{%- endif -%}
+{%- endcapture -%}
 
 <li>
 	<article id='{{ post.name | slugify | remove_last: "-md" }}' class="posts-entry">
