@@ -31,7 +31,7 @@ layout: common
 	{% endif -%}
 
 	<figure class="post-image">
-		<img src="{{ {{ img_dir }} | append: post_image | absolute_url }}" alt="">
+		<img src="{{ img_dir | append: post_image | absolute_url }}" alt="">
 	</figure>
 
 	{{ content }}
