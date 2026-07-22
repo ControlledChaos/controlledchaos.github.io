@@ -20,7 +20,8 @@ layout: common
 
 <article class="post">
 
-	{{ page.date }}
+	{%- assign img_dir | date: "posts/images/%Y/%m/" -%}
+	{{ img_dir }}
 
 	{%- if page.title %}
 	<h2 class="page-title">{{ page.title }}</h2>
