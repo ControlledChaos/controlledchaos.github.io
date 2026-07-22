@@ -30,6 +30,7 @@ defaults:
       layout: "post"
       comments: true
       post_image: default-cover.jpg
+      post_thumb: transparent.png
       toc: true
   - scope:
       path: "" # empty string == all files in project
