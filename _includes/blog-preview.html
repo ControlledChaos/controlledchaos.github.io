@@ -1,15 +1,12 @@
-
+{%- assign post = include.post %}
 {%- assign date_format = site.date_format | default: "%B %-d, %Y" -%}
-{%- assign image_dir = post.date | date: "posts/images/%Y/%m/" -%}
 
-{%- assign thumb_src = "" -%}
-{%- capture thumb_src -%}
-	{%- if post.post_thumb -%}
-		{{- image_dir | append: post.post_thumb -}}
-	{%- else -%}
-		{{- "assets/img/" | append: site.post_thumb -}}
-	{%- endif -%}
-{%- endcapture -%}
+{%- if post.post_thumb -%}
+	{%- assign thumb_src = post.date | date: "posts/images/%Y/%m/" -%}
+	{%- assign image_src = thumb_src | append: post.post_thumb -%}
+{%- else -%}
+	{%- assign image_src = "assets/img/" | append: site.post_thumb -%}
+{%- endif -%}
 
 <li>
 	<article id='{{ post.name | slugify | remove_last: "-md" }}' class="posts-entry">
