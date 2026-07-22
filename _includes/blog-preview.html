@@ -5,7 +5,7 @@
 
 {%- capture post_thumb -%}
 	{%- if page.post_thumb -%}
-		{%- capture image_src -%}{{- image_dir | append: page.thumb -}}{%- endcapture -%}
+		{%- capture image_src -%}{{- image_dir | append: page.post_thumb -}}{%- endcapture -%}
 	{%- else -%}
 		{%- capture image_src -%}{{- "posts/images/" | append: "transparent.png" -}}{%- endcapture -%}
 	{%- endif -%}
