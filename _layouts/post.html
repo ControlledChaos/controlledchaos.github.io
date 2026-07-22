@@ -3,13 +3,11 @@ layout: common
 ---
 {%- capture image_dir -%}{{- page.date | date: "posts/images/%Y/%m/" -}}{%- endcapture -%}
 
-{%- capture post_image -%}
-	{%- if page.post_image -%}
-		{%- capture image_src -%}{{- image_dir | append: page.post_image -}}{%- endcapture -%}
-	{%- else -%}
-		{%- capture image_src -%}{{- "assets/img/" | append: site.post_image -}}{%- endcapture -%}
-	{%- endif -%}
-{%- endcapture -%}
+{%- if page.post_image -%}
+	{%- capture image_src -%}{{- image_dir | append: page.post_image -}}{%- endcapture -%}
+{%- else -%}
+	{%- capture image_src -%}{{- "assets/img/" | append: site.post_image -}}{%- endcapture -%}
+{%- endif -%}
 
 {% if page.before-content %}
 <div class="before-content">
