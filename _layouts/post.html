@@ -1,9 +1,9 @@
 ---
 layout: common
 ---
-{%- capture image_dir -%}{{- page.date | date: "posts/images/%Y/%m/" -}}{%- endcapture -%}
 
 {%- if page.post_image -%}
+	{%- capture image_dir -%}{{- page.date | date: "posts/images/%Y/%m/" -}}{%- endcapture -%}
 	{%- capture image_src -%}{{- image_dir | append: page.post_image -}}{%- endcapture -%}
 {%- else -%}
 	{%- capture image_src -%}{{- "assets/img/" | append: site.post_image -}}{%- endcapture -%}
