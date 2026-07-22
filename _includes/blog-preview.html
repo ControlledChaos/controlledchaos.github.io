@@ -1,10 +1,10 @@
 {%- assign post = include.post %}
 {%- assign date_format = site.date_format | default: "%B %-d, %Y" -%}
 
-{%- capture image_dir -%}{{- page.date | date: "posts/images/%Y/%m/" -}}{%- endcapture -%}
+{%- capture image_dir -%}{{- post.date | date: "posts/images/%Y/%m/" -}}{%- endcapture -%}
 
-{%- if page.post_thumb -%}
-	{%- capture image_src -%}{{- image_dir | append: page.post_thumb -}}{%- endcapture -%}
+{%- if post.post_thumb -%}
+	{%- capture image_src -%}{{- image_dir | append: post.post_thumb -}}{%- endcapture -%}
 {%- else -%}
 	{%- capture image_src -%}{{- "posts/images/" | append: "transparent.png" -}}{%- endcapture -%}
 {%- endif -%}
