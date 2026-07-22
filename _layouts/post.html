@@ -1,6 +1,8 @@
 ---
 layout: common
 ---
+{%- capture img_dir -%}{{- page.date | date: "posts/images/%Y/%m/" -}}{%- endcapture -%}
+
 {%- assign post_image = "" -%}
 {%- capture post_image -%}
 	{%- if page.post_image -%}
@@ -20,10 +22,6 @@ layout: common
 
 <article class="post">
 
-	{%- capture img_dir -%}{{- page.date | date: "posts/images/%Y/%m/" -}}{%- endcapture -%}
-
-	{{ img_dir }}
-
 	{%- if page.title %}
 	<h2 class="page-title">{{ page.title }}</h2>
 	{% endif -%}
@@ -33,7 +31,7 @@ layout: common
 	{% endif -%}
 
 	<figure class="post-image">
-		<img src="{{ '/posts/images/' | append: post_image | absolute_url }}" alt="">
+		<img src="{{ {{ img_dir }} | append: post_image | absolute_url }}" alt="">
 	</figure>
 
 	{{ content }}
