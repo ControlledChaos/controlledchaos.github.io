@@ -20,7 +20,10 @@ layout: common
 
 <article class="post">
 
-	{%- assign img_dir | date: "posts/images/%Y/%m/" -%}
+	{% capture year %}{{post.date | date: "%Y"}}{% endcapture %}
+
+	{%- capture img_dir -%}{{- post.date | date: "posts/images/%Y/%m/" -}}{%- endcapture -%}
+
 	{{ img_dir }}
 
 	{%- if page.title %}
