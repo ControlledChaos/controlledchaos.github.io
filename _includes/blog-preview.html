@@ -2,10 +2,10 @@
 {%- assign date_format = site.date_format | default: "%B %-d, %Y" -%}
 
 {%- if post.post_thumb -%}
-	{%- assign image_dir = post.date | date: "posts/images/%Y/%m/" -%}
-	{%- assign image_src = image_dir | append: post.post_thumb -%}
+	{%- assign thumb_dir = post.date | date: "posts/images/%Y/%m/" -%}
+	{%- assign thumb_src = thumb_dir | append: post.post_thumb -%}
 {%- else -%}
-	{%- assign image_src = "assets/img/" | append: site.post_thumb -%}
+	{%- assign thumb_src = "assets/img/" | append: site.post_thumb -%}
 {%- endif -%}
 
 <li>
