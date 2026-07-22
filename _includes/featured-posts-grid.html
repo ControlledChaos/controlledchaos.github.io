@@ -28,9 +28,14 @@ index (string, optional) - Index page for the collection.
 
 	{%- for post in featured_posts | limit: timeline_post_limit -%}
 
-	{%- assign post_image = post.post_image | default: site.post_image -%}
 	{%- assign excerpt = post.subtitle | default: post.excerpt | truncatewords: 15, "…" -%}
-	{%- assign img_src = "posts/images/" | append: post_image -%}
+
+	{%- if post.post_image -%}
+		{%- assign image_dir = post.date | date: "posts/images/%Y/%m/" -%}
+		{%- assign image_src = image_dir | append: post.post_image -%}
+	{%- else -%}
+		{%- assign image_src = "assets/img/" | append: site.post_image -%}
+	{%- endif -%}
 
 	<article class="featured-post">
 		<a href="{{ post.url | relative_url }}">
