@@ -2,8 +2,8 @@
 {%- assign date_format = site.date_format | default: "%B %-d, %Y" -%}
 {%- assign image_dir = post.date | date: "posts/images/%Y/%m/" -%}
 
-{%- assign image_src = "" -%}
-{%- capture image_src -%}
+{%- assign thumb_src = "" -%}
+{%- capture thumb_src -%}
 	{%- if post.post_thumb -%}
 		{{- image_dir | append: post.post_thumb -}}
 	{%- else -%}
@@ -16,7 +16,7 @@
 
 		<figure class="entry-image" role="presentation">
 			<a href="{{ post.url | absolute_url }}">
-				<img src="{{ image_src | absolute_url }}" class="post-image" width="180" height="180" />
+				<img src="{{ thumb_src | absolute_url }}" class="post-image" width="180" height="180" />
 			</a>
 		</figure>
 
