@@ -29,10 +29,10 @@
 
 {%- assign meta_img = false -%}
 {%- capture meta_img -%}
-	{%- if page.share_img -%}
-		{{ page.share_img }}
-	{%- elsif site.share_img -%}
-		{{ site.share_img }}
+	{%- if page.site_image -%}
+		{{ page.site_image }}
+	{%- elsif site.site_image -%}
+		{{ site.site_image }}
 	{%- else -%}
 		""
 	{%- endif -%}
@@ -61,12 +61,12 @@
 
 	<link rel="stylesheet" href="{{ '/assets/css/style.min.css?v=' | append: site.github.build_revision | relative_url }}" />
 
-	{% if site.avatar -%}
+	{% if site.site_icon -%}
 	<!-- Site icon -->
-	<link rel="icon" href="{{ '/assets/img/' | append: site.avatar | relative_url }}" sizes="32x32" />
-	<link rel="icon" href="{{ '/assets/img/' | append: site.avatar | relative_url }}" sizes="192x192" />
-	<link rel="apple-touch-icon" href="{{ '/assets/img/' | append: site.avatar | relative_url }}" />
-	<meta name="msapplication-TileImage" content="{{ '/assets/img/' | append: site.avatar | relative_url }}" />
+	<link rel="icon" href="{{ '/assets/img/' | append: site.site_icon | relative_url }}" sizes="32x32" />
+	<link rel="icon" href="{{ '/assets/img/' | append: site.site_icon | relative_url }}" sizes="192x192" />
+	<link rel="apple-touch-icon" href="{{ '/assets/img/' | append: site.site_icon | relative_url }}" />
+	<meta name="msapplication-TileImage" content="{{ '/assets/img/' | append: site.site_icon | relative_url }}" />
 	{%- endif %}
 
 	<!-- Standard meta tags -->

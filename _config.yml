@@ -8,9 +8,9 @@ title: Controlled Chaos Design
 description: Custom website design and build. Free products to build your own.
 author: Controlled Chaos Design
 email: gregsweet4@yahoo.com
-avatar: "site-icon.png"
-cover_img: zen-garden.jpg
-share_img: zen-garden.jpg
+site_icon: "site-icon.png"
+site_image: site-image.jpg
+site_thumb: site-thumb.jpg
 timezone: "America/Los Angeles"
 markdown: kramdown
 permalink: pretty

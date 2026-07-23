@@ -7,12 +7,12 @@
 <header id="masthead" class="site-header" role="banner" itemscope="itemscope" itemtype="http://schema.org/Organization">
 	<div class="general-wrap">
 		<div class="site-identity">
-			{%- if site.avatar -%}
+			{%- if site.site_icon -%}
 			<figure class="site-avatar">
 				{%- unless first_page_path -%}
 				<a href="{{ site.github.url }}">
 				{%- endunless -%}
-					<img src="{{ '/assets/img/' | append: site.avatar | relative_url }}" alt="Yin-yang symbol" class="avatar" />
+					<img src="{{ '/assets/img/' | append: site.site_icon | relative_url }}" alt="Yin-yang symbol" class="avatar" />
 					<figcaption class="screen-reader-text">
 						<span>Yin-yang symbol used as the Controlled Chaos Design avatar. Not a logo!</span>
 					</figcaption>
