@@ -18,7 +18,7 @@
 		<li><a class="previous_page" rel="prev" href="{{ previous_page_path | relative_url }}" aria-disabled="false" title="Newer Posts" data-tooltip>{{ prev_icon }} <span class="screen-reader-text">Newer Posts</span></a></li>
 		{%- endif -%}
 
-		{%- for paginator_nav_page in (1..paginator.total_pages) | slice: -1, 1 -%}
+		{%- for paginator_nav_page in (1..paginator.total_pages) -%}
 
 		{%- if paginator_nav_page == paginator.page -%}
 		<li class="current-page">{{ paginator_nav_page }}</li>
