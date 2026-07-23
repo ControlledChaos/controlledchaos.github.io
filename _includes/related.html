@@ -89,7 +89,16 @@
 			{% continue %}
 		{% endif %}
 
-		{% include {{ related_template }} %}
+		{%- if post.post_image -%}
+			{%- assign image_dir = post.date | date: "posts/images/%Y/%m/" -%}
+			{%- assign image_src = image_dir | append: post.post_image -%}
+		{%- else -%}
+			{%- assign image_src = "assets/img/site-image.jpg" -%}
+		{%- endif -%}
+
+		<a href="{{ post.url | relative_url }}">
+			<img class="rounded-2" src="{{ image_src | absolute_url }}" width="377" height="200" alt="{{ post.title }}">
+		</a>
 	{% endfor %}
 	</div>
 </section>
