@@ -18,6 +18,18 @@ paginate_first_page_path %}
 {%- assign front_posts = site.pages | where: "path", "front-page/posts.md" | first -%}
 
 <section id="front-page-intro" class="front-page-section">
+
+	{%- if page.title -%}
+	<header class="page-header">
+		<h2 id="{{ page.title | slugify }}" class="page-title">{{ page.title }}</h2>
+
+		{%- if page.subtitle -%}
+		<p class="page-subtitle">{{ page.subtitle }}</p>
+		{%- endif -%}
+
+	</header>
+	{%- endif -%}
+
 	<div class="front-page-content">
 		{{ front_intro.content }}
 	</div>
