@@ -911,7 +911,7 @@ h6 {
      object-position: center center;
 }
 .post .post-navigation {
-  list-style: 0;
+  list-style: none;
   display: flex;
   justify-content: space-between;
 }
