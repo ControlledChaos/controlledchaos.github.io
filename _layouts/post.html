@@ -18,9 +18,8 @@ layout: common
 
 {% assign split_content = content | split: " " %}
 
-{% for word in split_content %}
-	{{ word }}
-{% endfor %}
+{% assign words = split_content | sum: "quantity" %}
+{{ words }}
 
 <article class="post">
 
