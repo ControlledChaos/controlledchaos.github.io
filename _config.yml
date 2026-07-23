@@ -68,10 +68,7 @@ site_nav:
 featured_projects: [
   configure-8,
   bloomosphere,
-  totem-website,
-  new-acf,
-  sitecore,
-  monica-mixes
+  totem-website
 ]
 
 # Blog pages

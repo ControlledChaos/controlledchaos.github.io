@@ -11,6 +11,10 @@
 
 	{%- for post in featured_posts -%}
 
+	{%- unless site.featured_projects contains post.slug -%}
+
+	{%- endunless -%}
+
 	{%- assign excerpt = post.subtitle | default: post.excerpt | truncatewords: 15, "…" -%}
 
 	{%- if post.post_image -%}
