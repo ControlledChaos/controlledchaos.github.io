@@ -80,14 +80,16 @@
 {%- if related_limit > 0 and related_posts.size > 0 -%}
 
 <section class="related-posts">
+
 	<h2>Related Posts</h2>
+
 	<div>
 	{% for post in related_posts limit:related_limit %}
-	{% if post.id == page.id %}
-		{% continue %}
-	{% endif %}
+		{% if post.id == page.id %}
+			{% continue %}
+		{% endif %}
 
-	{% include {{ related_template }} %}
+		{% include {{ related_template }} %}
 	{% endfor %}
 	</div>
 </section>
