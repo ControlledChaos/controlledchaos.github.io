@@ -1,10 +1,5 @@
 {%- assign featured_posts = include.projects | default: nil -%}
-
 {%- assign post_limit = include.limit -%}
-
-{%- if featured_posts and post_limit < 0 -%}
-	{%- assign post_limit = featured_posts.size -%}
-{%- endif -%}
 
 {%- if featured_posts and featured_posts.size > 0 %}
 <div class="featured-posts-grid">
