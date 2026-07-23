@@ -38,7 +38,7 @@ paginate_first_page_path %}
 <section id="front-page-projects" class="front-page-section">
 	<h2>Featured Projects</h2>
 	<div class="front-page-content">
-		{{ front_projects.content -}}
+		{{ front_projects.content | markdownify -}}
 	</div>
 </section>
 
@@ -48,7 +48,7 @@ paginate_first_page_path %}
 
 	<h2>Latest Posts</h2>
 	<div class="front-page-content">
-		{{ front_posts.content -}}
+		{{ front_posts.content | markdownify -}}
 	</div>
 
 	{%- include featured-posts-grid.html posts = site.posts limit = 3 index = first_page_path -%}
