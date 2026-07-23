@@ -10,7 +10,7 @@
 {%- endif -%}
 
 <li>
-	<article id='{{ post.name | slugify | remove_last: "-md" }}' class="posts-entry">
+	<article id='{{ post.name | slugify | remove_last: "-md" }}' class="posts-entry">{{ post.post_thumb }}
 
 		<figure class="entry-image" role="presentation">
 			<a href="{{ post.url | absolute_url }}">
