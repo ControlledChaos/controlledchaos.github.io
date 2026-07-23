@@ -16,8 +16,10 @@ layout: common
 	{% include svg/arrow-right.svg %}
 {%- endcapture -%}
 
-<article class="post">
+{% capture page_toc %}{{ content | toc_only }}{% endcapture %}
 
+<article class="post">
+{{ page_toc }}
 	{%- if page.title %}
 	<h2 class="page-title">{{ page.title }}</h2>
 	{% endif -%}
@@ -33,24 +35,24 @@ layout: common
 	{{ content }}
 
 	{%- if page.category %}
-	<p class="post-cats">
+	<div class="post-cats">
 		<span class="post-cats-label">Category:</span>
 		<span class="post-cats-list">
 		{% for cat in page.category %}
 		<a href="{{ '/category' | absolute_url }}{{- cat | slugify -}}"> {{- cat -}} </a>
 		{%- endfor -%}
 		</span>
-	</p>
+	</div>
 	{%- endif %}
 
 	{%- if page.tags.size > 0 -%}
-	<div class="blog-tags">
-		<span>Tags:</span>
-
+	<div class="post-tags">
+		<span class="post-tags-label">Tags:</span>
+		<span class="post-tags-list">
 		{%- for tag in page.tags -%}
 		<a href="{{ '/tags' | relative_url }}#{{- tag -}}">{{- tag | capitalize -}}</a>
 		{%- endfor -%}
-
+		</span>
 	</div>
 	{%- endif -%}
 </article>
