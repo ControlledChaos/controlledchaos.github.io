@@ -4,7 +4,7 @@
 {%- if featured_posts and featured_posts.size > 0 %}
 <div class="featured-posts-grid">
 
-	{%- for post in featured_posts -%}
+	{%- for post in featured_posts | site.featured_projects -%}
 
 	{%- unless site.featured_projects contains post.slug -%}
 		{%- continue -%}
