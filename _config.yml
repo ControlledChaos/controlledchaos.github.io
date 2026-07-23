@@ -31,7 +31,8 @@ defaults:
       comments: true
       post_image: false # Fallback in templates.
       post_thumb: false # Fallback in templates.
-      post_gallery: false # Gallery heading to return true.
+      post_gallery: false # Heading to return true.
+      related_posts: Related Posts # Heading to return true.
       toc: true
   - scope:
       path: "" # empty string == all files in project.
