@@ -23,7 +23,7 @@ page_sidebar: true
 # Specific defaults
 defaults:
   - scope:
-      path: "" # empty string == all files in project
+      path: "" # empty string == all files in project.
       type: "posts"
     values:
       permalink: /posts/:title/
@@ -31,9 +31,10 @@ defaults:
       comments: true
       post_image: false # Fallback in templates.
       post_thumb: false # Fallback in templates.
+      post_gallery: false # Gallery heading to return true.
       toc: true
   - scope:
-      path: "" # empty string == all files in project
+      path: "" # empty string == all files in project.
       type: "projects"
     values:
       permalink: /projects/:title/
@@ -41,7 +42,7 @@ defaults:
       post_image: false # Fallback in templates.
       post_thumb: false # Fallback in templates.
   - scope:
-      path: "" # empty string == all files in project
+      path: "" # empty string == all files in project.
       type: "pages"
     values:
       layout: "page"

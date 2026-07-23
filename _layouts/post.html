@@ -55,7 +55,15 @@ layout: common
 	{%- endif -%}
 </article>
 
-{% include image-gallery.html folder = image_dir %}
+{%- if page.post_gallery -%}
+<section id="post-gallery">
+
+	<h2>{{ post_gallery }}</h2>
+
+	{%- include image-gallery.html folder = image_dir -%}
+
+</section>
+{%- endif -%}
 
 {%- include related-posts.html -%}
 

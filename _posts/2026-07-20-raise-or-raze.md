@@ -3,6 +3,7 @@ title: To Raise or Not to Raze
 subtitle: Difficulties and advancements in building this website.
 post_image: amish-barn.jpg
 post_thumb: amish-barn-thumb.jpg
+post_gallery: Image Gallery
 category: This Website
 tags: [learning, jekyll, liquid, GitHub]
 ---
