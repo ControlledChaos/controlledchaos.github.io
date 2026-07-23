@@ -27,7 +27,9 @@ layout: common
 	{% endif -%}
 
 	<figure class="post-image">
-		<img src="{{ image_src | absolute_url }}" alt="">
+		<a href="{{ image_src | absolute_url }}" data-fancybox>
+			<img src="{{ image_src | absolute_url }}" />
+		</a>
 	</figure>
 
 	{{ content }}
