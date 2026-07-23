@@ -1,32 +1,15 @@
-{%- comment -%}
-featured-projects-grid.html
-Usage example:
-{% include featured-posts-grid.html posts=site.posts limit=5 index='/posts/index.html' %}
+{%- assign featured_posts = include.projects | default: nil -%}
 
-Expects:
-posts (array, required) - A list of posts or other objects to display.
-limit (integer, optional) - Number of posts to display (default: all).
-index (string, optional) - Index page for the collection.
-{%- endcomment -%}
+{%- assign post_limit = include.limit -%}
 
-{%- assign featured_posts = include.posts | default: nil -%}
-
-{%- if featured_posts -%}
-	{%- assign featured_posts = featured_posts | sort: "date" | reverse %}
+{%- if featured_posts and post_limit < 0 -%}
+	{%- assign post_limit = featured_posts.size -%}
 {%- endif -%}
-
-{%- assign timeline_post_limit = include.limit | default: page.posts_limit | default: site.paginate | default: -1 -%}
-
-{%- if featured_posts and timeline_post_limit < 0 -%}
-	{%- assign timeline_post_limit = featured_posts.size -%}
-{%- endif -%}
-
-{%- assign timeline_index = include.index | default: page.first_page_path -%}
 
 {%- if featured_posts and featured_posts.size > 0 %}
 <div class="featured-posts-grid">
 
-	{%- for post in featured_posts | limit: timeline_post_limit -%}
+	{%- for post in featured_posts | limit: post_limit -%}
 
 	{%- assign excerpt = post.subtitle | default: post.excerpt | truncatewords: 15, "…" -%}
 
