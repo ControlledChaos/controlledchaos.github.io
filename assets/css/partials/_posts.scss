@@ -109,18 +109,18 @@
 			object-position: center center;
 		}
 	}
+}
 
-	.post-navigation {
-		list-style: none;
-		display: flex;
-		justify-content: space-between;
+.post-navigation {
+	list-style: none;
+	display: flex;
+	justify-content: space-between;
 
-		svg {
-			display: inline-block;
-			height: 1em;
-			vertical-align: middle;
-			vertical-align: center;
-		}
+	svg {
+		display: inline-block;
+		height: 1em;
+		vertical-align: middle;
+		vertical-align: center;
 	}
 }
 
