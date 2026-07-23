@@ -68,9 +68,9 @@ layout: common
 {%- endif -%}
 
 {%- assign related = page.related_posts -%}
-{%- if related_posts -%}
+{%- unless related_posts != false -%}
 {%- include related-posts.html heading = related_posts -%}
-{%- endif -%}
+{%- endunless -%}
 
 <section id="post-navigation">
 	<nav>
