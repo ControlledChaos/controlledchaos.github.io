@@ -1,6 +1,6 @@
 
-{%- assign projects = site.featured_projects -%}
-{%- assign featured_posts = include.projects | group_by: projects -%}
+{%- assign featured_projects = site.featured_projects -%}
+{%- assign featured_posts = include.projects -%}
 {%- assign post_limit = include.limit -%}
 
 {%- if featured_posts and featured_posts.size > 0 %}
@@ -8,7 +8,7 @@
 
 	{%- for post in featured_posts -%}
 
-	{%- unless site.featured_projects contains post.slug -%}
+	{%- unless featured_projects contains post.slug -%}
 		{%- continue -%}
 	{%- endunless -%}
 
