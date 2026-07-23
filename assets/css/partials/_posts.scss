@@ -109,8 +109,21 @@
 			object-position: center center;
 		}
 	}
+
+	.post-cats-list,
+	.post-tags-list {
+		display: inline-flex;
+		flex-wrap: wrap;
+		gap: 0.5em;
+	}
 }
 
+// Section
+#post-navigation {
+	margin-top: var( --ccd-spacing--vert );
+}
+
+// Unordered list
 .post-navigation {
 	list-style: none;
 	display: flex;
