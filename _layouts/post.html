@@ -9,6 +9,13 @@ layout: common
 	{%- assign image_src = "assets/img/site-image.jpg" -%}
 {%- endif -%}
 
+{%- capture next_icon -%}
+	{% include svg/arrow-left.svg %}
+{%- endcapture -%}
+{%- capture prev_icon -%}
+	{% include svg/arrow-right.svg %}
+{%- endcapture -%}
+
 {% if page.before-content %}
 <div class="before-content">
 	{% for file in page.before-content %}
@@ -64,17 +71,17 @@ layout: common
 </div>
 {%- endif -%}
 
-<ul class="pagination blog-pager">
-	{%- if page.previous.url %}
-	<li class="page-item previous">
-		<a class="page-link" href="{{ page.previous.url | relative_url }}" data-toggle="tooltip" data-placement="top" title="{{page.previous.title | strip_html | xml_escape}}">&larr; Previous Post</a>
-	</li>
-	{%- endif -%}
+<ul class="post-navigation">
 	{%- if page.next.url %}
-	<li class="page-item next">
-		<a class="page-link" href="{{ page.next.url | relative_url }}" data-toggle="tooltip" data-placement="top" title="{{page.next.title | strip_html | xml_escape}}">Next Post &rarr;</a>
+	<li class="post-next">
+		<a class="post-next-link" href="{{ page.next.url | relative_url }}" data-toggle="tooltip" data-placement="top" title="{{page.next.title | strip_html | xml_escape}}">{{ next_icon }} Next Post</a>
 	</li>
 	{%- endif %}
+	{%- if page.previous.url %}
+	<li class="post-prev">
+		<a class="post-prev-link" href="{{ page.previous.url | relative_url }}" data-toggle="tooltip" data-placement="top" title="{{page.previous.title | strip_html | xml_escape}}">Previous Post {{ prev_icon }}</a>
+	</li>
+	{%- endif -%}
 </ul>
 
 {%- if page.comments %}

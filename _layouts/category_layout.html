@@ -29,5 +29,5 @@ subtype: Category
  {% capture previous_page_path %}{{ site.category_path }}/{{ page.category }}/{{ paginator.previous_page_path }}{% endcapture %}
  {% capture next_page_path %}{{ site.category_path }}/{{ page.category }}/{{ paginator.next_page_path }}{% endcapture %}
  {% capture paginate_path %}{{ site.category_path }}/{{ page.category }}/page:num{% endcapture %}
- {% include paginator_nav.html previous_page_path=previous_page_path next_page_path=next_page_path paginate_path=paginate_path %}
+ {% include pagination.html previous_page_path=previous_page_path next_page_path=next_page_path paginate_path=paginate_path %}
 {% endif %}
