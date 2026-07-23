@@ -109,6 +109,17 @@
 			object-position: center center;
 		}
 	}
+
+	.post-navigation {
+		list-style: 0;
+		display: flex;
+		justify-content: space-between;
+
+		svg {
+			display: inline-block;
+			height: 1em;
+		}
+	}
 }
 
 ///
