@@ -1,4 +1,6 @@
-{%- assign featured_posts = include.projects | default: nil -%}
+
+{%- assign projects = site.featured_projects -%}
+{%- assign featured_posts = include.projects | group_by: projects -%}
 {%- assign post_limit = include.limit -%}
 
 {%- if featured_posts and featured_posts.size > 0 %}
