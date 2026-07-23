@@ -28,9 +28,9 @@
 
 		{%- else -%}
 		<li><a href="{{ paginate_path | relative_url | replace: ':num', paginator_nav_page }}" aria-label="{{ paginator_nav_page }}">{{ paginator_nav_page }}</a></li>
-		{%- endif %-}
+		{%- endif -%}
 
-		{%- endfor %-}
+		{%- endfor -%}
 
 		{%- if paginator.next_page -%}
 		<li><a class="next_page" rel="next" href="{{ next_page_path | relative_url }}" aria-disabled="false" title="Older Posts" data-tooltip><span class="screen-reader-text">Older Posts</span> {{ next_icon }}</a></li>
