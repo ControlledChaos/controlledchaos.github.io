@@ -41,7 +41,7 @@ paginate_first_page_path %}
 		{{ front_projects.content | markdownify -}}
 	</div>
 
-	{%- include featured-projects-grid.html posts = site.projects limit = 3 index = first_page_path -%}
+	{%- include featured-projects-grid.html posts = site.featured_projects -%}
 
 </section>
 
