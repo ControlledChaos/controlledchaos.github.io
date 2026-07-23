@@ -16,6 +16,9 @@ layout: common
 	{% include svg/arrow-right.svg %}
 {%- endcapture -%}
 
+{% assign split_content = content | split: " " | split: ", " | split: "; " | split: ". " | split: "! " | split: "? " %}
+{{ split_content }}
+
 <article class="post">
 
 	{%- if page.title %}
