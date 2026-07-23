@@ -51,7 +51,3 @@ index (string, optional) - Index page for the collection.
 	{%- endfor %}
 </div>
 {%- endif -%}
-
-{%- if featured_posts.size > timeline_post_limit and timeline_index != blank -%}
-<p class="featured-all"><a href="{{ timeline_index | relative_url }}" class="featured-all-link">All Posts</a></p>
-{%- endif -%}
