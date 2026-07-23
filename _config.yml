@@ -65,14 +65,13 @@ site_nav:
     url: /contact
 
 # Featured projects
-featured_projects: [
-  configure-8,
-  bloomosphere,
-  totem-website,
-  new-acf,
-  sitecore,
-  monica-mixes
-]
+featured_projects:
+  - slug: configure-8
+  - slug: bloomosphere
+  - slug: totem-website
+  - slug: new-acf
+  - slug: sitecore
+  - slug: monica-mixes
 
 # Blog pages
 blog_view: preview # preview, grid, or full
