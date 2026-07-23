@@ -18,7 +18,7 @@
 		<li><a class="previous_page" rel="prev" href="{{ previous_page_path | relative_url }}" aria-disabled="false" title="Newer Posts" data-tooltip>{{ prev_icon }} <span class="screen-reader-text">Newer Posts</span></a></li>
 		{%- endif -%}
 
-		{%- for paginator_nav_page in (1..paginator.total_pages) -%}
+		{%- for paginator_nav_page in (1..paginator.total_pages) slice: -1, 1 -%}
 
 		{%- if paginator_nav_page == paginator.page -%}
 		<li class="current-page">{{ paginator_nav_page }}</li>
@@ -28,12 +28,12 @@
 
 		{%- else -%}
 		<li><a href="{{ paginate_path | relative_url | replace: ':num', paginator_nav_page }}" aria-label="{{ paginator_nav_page }}">{{ paginator_nav_page }}</a></li>
-		{%- endif %}
-		{%- endfor %}
+		{%- endif %-}
+
+		{%- endfor %-}
 
 		{%- if paginator.next_page -%}
-		<li><a class="next_page" rel="next" href="{{ next_page_path | relative_url }}"
-			aria-disabled="false" title="Older Posts" data-tooltip><span class="screen-reader-text">Older Posts</span> {{ next_icon }}</a></li>
+		<li><a class="next_page" rel="next" href="{{ next_page_path | relative_url }}" aria-disabled="false" title="Older Posts" data-tooltip><span class="screen-reader-text">Older Posts</span> {{ next_icon }}</a></li>
 		{%- endif -%}
 	</ul>
 </nav>
