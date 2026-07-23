@@ -5,7 +5,7 @@
 	.image-gallery li a span {display: block; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; padding: 3px 0;}
 	.image-gallery li a img {width: 100%; display: block;}
 </style>
-
+{{ include.folder }}
 <ul class="image-gallery">
 {% for file in site.static_files %}
 {% if file.path contains include.folder %}
