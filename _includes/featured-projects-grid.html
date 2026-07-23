@@ -9,7 +9,7 @@
 {%- if featured_posts and featured_posts.size > 0 %}
 <div class="featured-posts-grid">
 
-	{%- for post in featured_posts | limit: post_limit | sort: false -%}
+	{%- for post in featured_posts -%}
 
 	{%- assign excerpt = post.subtitle | default: post.excerpt | truncatewords: 15, "…" -%}
 
