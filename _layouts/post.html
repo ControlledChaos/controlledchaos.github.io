@@ -58,7 +58,7 @@ layout: common
 </article>
 
 {%- if page.post_gallery -%}
-<section id="post-gallery">
+<section id="post-gallery" class="post-section">
 
 	<h2>{{ page.post_gallery }}</h2>
 
@@ -68,10 +68,16 @@ layout: common
 {%- endif -%}
 
 {%- unless page.related_posts == false -%}
-{%- include related-posts.html -%}
+<section id="related-posts" class="post-section">
+
+	<h2>Related Posts</h2>
+
+	{%- include related-posts.html -%}
+
+</section>
 {%- endunless -%}
 
-<section id="post-navigation">
+<section id="post-navigation" class="post-section">
 	<nav>
 		<ul class="post-navigation">
 			{%- if page.next.url %}
@@ -90,7 +96,7 @@ layout: common
 </section>
 
 {%- if page.comments %}
-<section id="post-comments">
+<section id="post-comments" class="post-section">
 
 	<h2>Post Comments</h2>
 
