@@ -1,5 +1,5 @@
 ---
-title: To Raise or to Raze
+title: To Raise or Not to Raze
 subtitle: Difficulties and advancements in building this website.
 post_image: amish-barn.jpg
 post_thumb: amish-barn-thumb.jpg
