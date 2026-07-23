@@ -12,9 +12,9 @@
   {% comment %}<!-- We might sample current page so select one more just in case -->{% endcomment %}
   {% assign related_limit = related_limit | plus: 1 %}
   {% if related_from == "posts" %}
-    {% assign related_posts = site.posts | sample: related_limit %}
+	{% assign related_posts = site.posts | sample: related_limit %}
   {% else %}
-    {% assign related_posts = site.documents | sample: related_limit %}
+	{% assign related_posts = site.documents | sample: related_limit %}
   {% endif %}
   {% assign related_limit = related_limit | minus: 1 %}
 
@@ -23,47 +23,47 @@
   {% assign related_posts = "" | split: " " %}
 
   {% for doc in site.documents %}
-    {% if doc.id == page.id %}
-      {% continue %}
-    {% elsif related_from == "posts" and doc.collection != "posts" %}
-      {% continue %}
-    {% elsif related_from == "collection" and doc.collection != page.collection %}
-      {% continue %}
-    {% endif %}
+	{% if doc.id == page.id %}
+	  {% continue %}
+	{% elsif related_from == "posts" and doc.collection != "posts" %}
+	  {% continue %}
+	{% elsif related_from == "collection" and doc.collection != page.collection %}
+	  {% continue %}
+	{% endif %}
 
-    {% assign related_category_count = 0 %}
-    {% if related_by contains "categories" %}
-      {% for cat in doc.categories %}
-        {% if page.categories contains cat %}
-          {% assign related_category_count = related_category_count | plus: 1 %}
-        {% endif %}
-      {% endfor %}
-    {% endif %}
+	{% assign related_category_count = 0 %}
+	{% if related_by contains "categories" %}
+	  {% for cat in doc.categories %}
+		{% if page.categories contains cat %}
+		  {% assign related_category_count = related_category_count | plus: 1 %}
+		{% endif %}
+	  {% endfor %}
+	{% endif %}
 
-    {% assign related_tag_count = 0 %}
-    {% if related_by contains "tags" %}
-      {% for tag in doc.tags %}
-        {% if page.tags contains tag %}
-          {% assign related_tag_count = related_tag_count | plus: 1 %}
-        {% endif %}
-      {% endfor %}
-    {% endif %}
+	{% assign related_tag_count = 0 %}
+	{% if related_by contains "tags" %}
+	  {% for tag in doc.tags %}
+		{% if page.tags contains tag %}
+		  {% assign related_tag_count = related_tag_count | plus: 1 %}
+		{% endif %}
+	  {% endfor %}
+	{% endif %}
 
-    {% if related_by contains "categories" and related_by contains "tags" %}
-      {% if related_by contains "or" %}
-        {% if related_category_count >= related_categories or related_tag_count >= related_tags %}
-          {% assign related_posts = related_posts | push: doc %}
-        {% endif %}
-      {% else %}
-        {% if related_category_count >= related_categories and related_tag_count >= related_tags %}
-          {% assign related_posts = related_posts | push: doc %}
-        {% endif %}
-      {% endif %}
-    {% elsif related_by contains "categories" and related_category_count >= related_categories %}
-      {% assign related_posts = related_posts | push: doc %}
-    {% elsif related_by contains "tags" and related_tag_count >= related_tags %}
-      {% assign related_posts = related_posts | push: doc %}
-    {% endif %}
+	{% if related_by contains "categories" and related_by contains "tags" %}
+	  {% if related_by contains "or" %}
+		{% if related_category_count >= related_categories or related_tag_count >= related_tags %}
+		  {% assign related_posts = related_posts | push: doc %}
+		{% endif %}
+	  {% else %}
+		{% if related_category_count >= related_categories and related_tag_count >= related_tags %}
+		  {% assign related_posts = related_posts | push: doc %}
+		{% endif %}
+	  {% endif %}
+	{% elsif related_by contains "categories" and related_category_count >= related_categories %}
+	  {% assign related_posts = related_posts | push: doc %}
+	{% elsif related_by contains "tags" and related_tag_count >= related_tags %}
+	  {% assign related_posts = related_posts | push: doc %}
+	{% endif %}
   {% endfor %}
 
   {% assign related_posts = related_posts | sample: related_limit %}
@@ -77,15 +77,22 @@
   {% assign related_posts = site.posts %}
 {% endif %}
 
-{%- if related_limit > 0 and related_posts.size > 0 %}
-<h2>Related posts</h2>
-<div>
-{% for post in related_posts limit:related_limit %}
-  {% if post.id == page.id %}
-    {% continue %}
-  {% endif %}
+{%- if related_limit > 0 and related_posts.size > 0 -%}
 
-  {% include {{ related_template }} %}
-{% endfor %}
-</div>
-{%- endif %}
+<section class="related-posts">
+
+	<h2>Related Posts</h2>
+
+	<div>
+	{%- for post in related_posts limit:related_limit -%}
+	{%- if post.id == page.id -%}
+		{%- continue -%}
+	{%- endif -%}
+
+	{%- include featured-posts-grid.html -%}
+	{%- endfor -%}
+
+	</div>
+</section>
+
+{%- endif -%}
