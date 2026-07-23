@@ -34,7 +34,7 @@ index (string, optional) - Index page for the collection.
 		{%- assign image_dir = post.date | date: "posts/images/%Y/%m/" -%}
 		{%- assign image_src = image_dir | append: post.post_image -%}
 	{%- else -%}
-		{%- assign image_src = "assets/img/" | append: site.post_image -%}
+		{%- assign image_src = "assets/img/default-cover.jpg" -%}
 	{%- endif -%}
 
 	<article class="featured-post">
