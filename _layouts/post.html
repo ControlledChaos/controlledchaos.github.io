@@ -16,10 +16,8 @@ layout: common
 	{% include svg/arrow-right.svg %}
 {%- endcapture -%}
 
-{% assign split_content = content | split: " " %}
-
-{% assign words = split_content | sum: "quantity" %}
-{{ words }}
+{% assign split_content = content | jsonify %}
+{{ split_content }}
 
 <article class="post">
 
