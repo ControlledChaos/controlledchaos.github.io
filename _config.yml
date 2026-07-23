@@ -29,7 +29,8 @@ defaults:
       permalink: /posts/:title/
       layout: "post"
       comments: true
-      post_image: default-cover.jpg
+      post_image: false # Fallback in templates.
+      post_thumb: false # Fallback in templates.
       toc: true
   - scope:
       path: "" # empty string == all files in project
@@ -37,14 +38,15 @@ defaults:
     values:
       permalink: /projects/:title/
       layout: "default"
-      post_image: default-cover.jpg
-      post_thumb: transparent.png
+      post_image: false # Fallback in templates.
+      post_thumb: false # Fallback in templates.
   - scope:
       path: "" # empty string == all files in project
       type: "pages"
     values:
       layout: "page"
-      image: /assets/img/default-cover.jpg
+      page_image: false # Fallback in templates.
+      page_thumb: false # Fallback in templates.
 
 # Primary navigation entries
 site_nav:
