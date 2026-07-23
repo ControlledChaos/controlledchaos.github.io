@@ -16,10 +16,8 @@ layout: common
 	{% include svg/arrow-right.svg %}
 {%- endcapture -%}
 
-{% capture page_toc %}{{ content | toc_only }}{% endcapture %}
-
 <article class="post">
-{{ page_toc }}
+
 	{%- if page.title %}
 	<h2 class="page-title">{{ page.title }}</h2>
 	{% endif -%}
