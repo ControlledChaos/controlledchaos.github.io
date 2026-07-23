@@ -311,7 +311,7 @@ b, strong, optgroup {
   --ccd-box--border: var( --ccd-box--border-style ) var( --ccd-box--border-width ) var( --ccd-box--border-color );
   --ccd-box--border--dark: var( --ccd-box--border-style ) var( --ccd-box--border-width ) var( --ccd-box--border-color--dark );
   --ccd-fonts--general-stack: Red Hat Display, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen-Sans, Ubuntu, Cantarell, Helvetica Neue, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
-  --ccd-fonts--display-stack: Crimson Pro, Georgia, Hoefler Text, Baskerville Old Face, Garamond, Times, Times New Roman, serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  --ccd-fonts--display-stack: Crimson Pro, Georgia, Times, Times New Roman, serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
   --ccd-body--font-family: Red Hat Display, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen-Sans, Ubuntu, Cantarell, Helvetica Neue, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
   --ccd-body--font-size: 1.0625rem;
   --ccd-body--line-height: 1.525;
@@ -320,7 +320,7 @@ b, strong, optgroup {
   --ccd-body--bg-color--dark: #1e1e1e;
   --ccd-body--text-color: rgb(95.375, 76.125, 102.375);
   --ccd-body--text-color--dark: #e8e8e8;
-  --ccd-display--font-family: Crimson Pro, Georgia, Hoefler Text, Baskerville Old Face, Garamond, Times, Times New Roman, serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  --ccd-display--font-family: Crimson Pro, Georgia, Times, Times New Roman, serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
   --ccd-display--font-weight: 600;
   --ccd-display--letter-spacing: normal;
   --ccd-text-shadow: 0.05em 0.05em 0.05em rgba(0, 0, 0, 0.625);
