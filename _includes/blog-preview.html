@@ -5,7 +5,7 @@
 	{%- assign image_dir = post.date | date: "posts/images/%Y/%m/" -%}
 	{%- assign thumb_src = image_dir | append: post.post_thumb -%}
 {%- else -%}
-	{%- assign thumb_src = "assets/img/transparent.png" -%}
+	{%- assign thumb_src = "posts/images/transparent.png" -%}
 {%- endif -%}
 
 <li>
