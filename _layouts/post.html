@@ -68,7 +68,7 @@ layout: common
 {%- endif -%}
 
 {%- assign related = page.related_posts -%}
-{%- unless related_posts != false -%}
+{%- unless related_posts == false -%}
 {%- include related-posts.html heading = related_posts -%}
 {%- endunless -%}
 
