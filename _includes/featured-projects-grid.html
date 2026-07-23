@@ -7,7 +7,11 @@
 
 	{%- for post in featured_posts -%}
 
-	{%- forloop project in projects -%}
+	{% increment count %}
+
+	{%- unless post.slug == projects[{{count}}] -%}
+		{%- continue -%}
+	{%- endunless -%}
 
 	{%- assign excerpt = post.subtitle | default: post.excerpt | truncatewords: 15, "…" -%}
 
@@ -29,7 +33,6 @@
 			</figure>
 		</a>
 	</article>
-	{%- endforloop %}
 	{%- endfor %}
 </div>
 {%- endif -%}
