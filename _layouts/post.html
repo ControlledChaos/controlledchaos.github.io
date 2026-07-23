@@ -16,14 +16,6 @@ layout: common
 	{% include svg/arrow-right.svg %}
 {%- endcapture -%}
 
-{% if page.before-content %}
-<div class="before-content">
-	{% for file in page.before-content %}
-	{% include {{ file }} %}
-	{% endfor %}
-</div>
-{% endif %}
-
 <article class="post">
 
 	{%- if page.title %}
@@ -63,39 +55,40 @@ layout: common
 	{%- endif -%}
 </article>
 
-{%- if page.after-content -%}
-<div class="after-content">
-	{%- for file in page.after-content -%}
-		{%- include {{ file }} -%}
-	{%- endfor -%}
-</div>
-{%- endif -%}
+{%- include related-posts.html -%}
 
-{%- include related.html -%}
-
-<ul class="post-navigation">
-	{%- if page.next.url %}
-	<li class="post-next">
-		<a class="post-next-link" href="{{ page.next.url | relative_url }}" data-toggle="tooltip" data-placement="top" title="{{page.next.title | strip_html | xml_escape}}">{{ next_icon }} Next Post</a>
-	</li>
-	{%- endif %}
-	<li><a href="{{ site.posts_permalink | relative_url }}">All Posts</a></li>
-	{%- if page.previous.url %}
-	<li class="post-prev">
-		<a class="post-prev-link" href="{{ page.previous.url | relative_url }}" data-toggle="tooltip" data-placement="top" title="{{page.previous.title | strip_html | xml_escape}}">Previous Post {{ prev_icon }}</a>
-	</li>
-	{%- endif -%}
-</ul>
+<section id="post-navigation">
+	<nav>
+		<ul class="post-navigation">
+			{%- if page.next.url %}
+			<li class="post-next">
+				<a class="post-next-link" href="{{ page.next.url | relative_url }}" data-toggle="tooltip" data-placement="top" title="{{page.next.title | strip_html | xml_escape}}">{{ next_icon }} Next Post</a>
+			</li>
+			{%- endif %}
+			<li><a href="{{ site.posts_permalink | relative_url }}">All Posts</a></li>
+			{%- if page.previous.url %}
+			<li class="post-prev">
+				<a class="post-prev-link" href="{{ page.previous.url | relative_url }}" data-toggle="tooltip" data-placement="top" title="{{page.previous.title | strip_html | xml_escape}}">Previous Post {{ prev_icon }}</a>
+			</li>
+			{%- endif -%}
+		</ul>
+	</nav>
+</section>
 
 {%- if page.comments %}
-<section class="post-comments">
-<script src="https://utteranc.es/client.js"
-	repo="ControlledChaos/controlledchaos.github.io"
-	issue-term="title"
-	label="Comments"
-	theme="boxy-light"
-	crossorigin="anonymous"
-	async>
-</script>
+<section id="post-comments">
+
+	<h2>Post Comments</h2>
+
+	<!-- Comments form inserted by Utterances script. -->
+	<script
+		src="https://utteranc.es/client.js"
+		repo="ControlledChaos/controlledchaos.github.io"
+		issue-term="title"
+		label="Comments"
+		theme="boxy-light"
+		crossorigin="anonymous"
+		async>
+	</script>
 </section>
 {% endif -%}
