@@ -36,12 +36,10 @@ paginate_first_page_path %}
 </section>
 
 <section id="front-page-projects" class="front-page-section">
-
 	<h2>Featured Projects</h2>
 	<div class="front-page-content">
 		{{ front_projects.content -}}
 	</div>
-
 </section>
 
 {%- if posts.size > 0 and page.url == "/" -%}
@@ -53,7 +51,12 @@ paginate_first_page_path %}
 		{{ front_posts.content -}}
 	</div>
 
-	{% include featured-posts-grid.html posts = site.posts limit = 3 index = first_page_path %}
+	{%- include featured-posts-grid.html posts = site.posts limit = 3 index = first_page_path -%}
+
+	{%- if featured_posts.size > timeline_post_limit and timeline_index != blank -%}
+	<p class="featured-all"><a href="{{ timeline_index | relative_url }}" class="featured-all-link">All Posts</a></p>
+	{%- endif -%}
+
 </section>
 
 {%- endif -%}
