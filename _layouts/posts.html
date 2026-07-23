@@ -18,13 +18,17 @@ paginate_first_page_path %}
 {%- assign front_posts = site.pages | where: "path", "front-page/posts.md" | first -%}
 
 <section id="front-page-intro" class="front-page-section">
-	{{ front_intro.content }}
+	<div class="front-page-content">
+		{{ front_intro.content }}
+	</div>
 </section>
 
 <section id="front-page-projects" class="front-page-section">
 
 	<h2>Featured Projects</h2>
-	{{ front_projects.content -}}
+	<div class="front-page-content">
+		{{ front_projects.content -}}
+	</div>
 
 </section>
 
@@ -33,7 +37,9 @@ paginate_first_page_path %}
 <section id="front-page-posts" class="front-page-section">
 
 	<h2>Latest Posts</h2>
-	{{ front_posts.content -}}
+	<div class="front-page-content">
+		{{ front_posts.content -}}
+	</div>
 
 	{% include featured-posts-grid.html posts = site.posts limit = 3 index = first_page_path %}
 </section>

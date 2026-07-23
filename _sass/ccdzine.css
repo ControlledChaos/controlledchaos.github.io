@@ -790,6 +790,9 @@ h6 {
 .front-page .front-page-section:not(:first-of-type) {
   border-top: var(--ccd-box--border-style) var(--ccd-box--border-width) var(--ccd-box--border-color);
 }
+.front-page .front-page-content {
+  max-width: 960px;
+}
 
 .pagination-nav ul {
   list-style: none;

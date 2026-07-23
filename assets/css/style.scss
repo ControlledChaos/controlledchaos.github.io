@@ -367,6 +367,10 @@ h6 {
 			border-top: var( --ccd-box--border-style ) var( --ccd-box--border-width ) var( --ccd-box--border-color );
 		}
 	}
+
+	.front-page-content {
+		max-width: 960px;
+	}
 }
 
 .pagination-nav ul {
