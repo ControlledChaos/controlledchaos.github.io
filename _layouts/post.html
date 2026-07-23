@@ -6,7 +6,7 @@ layout: common
 	{%- assign image_dir = page.date | date: "posts/images/%Y/%m/" -%}
 	{%- assign image_src = image_dir | append: page.post_image -%}
 {%- else -%}
-	{%- assign image_src = "assets/img/default-cover.jpg" -%}
+	{%- assign image_src = "assets/img/site-image.jpg" -%}
 {%- endif -%}
 
 {% if page.before-content %}
