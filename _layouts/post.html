@@ -66,10 +66,12 @@ layout: common
 {%- if page.after-content -%}
 <div class="after-content">
 	{%- for file in page.after-content -%}
-		{% include {{ file }} %}
+		{%- include {{ file }} -%}
 	{%- endfor -%}
 </div>
 {%- endif -%}
+
+{%- include related.html -%}
 
 <ul class="post-navigation">
 	{%- if page.next.url %}
