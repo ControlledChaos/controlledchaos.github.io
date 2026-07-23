@@ -31,7 +31,7 @@ index (string, optional) - Index page for the collection.
 	{%- assign excerpt = post.subtitle | default: post.excerpt | truncatewords: 15, "…" -%}
 
 	{%- if post.post_image -%}
-		{%- assign image_dir = post.date | date: "posts/images/%Y/%m/" -%}
+		{%- assign image_dir = page.date | date: "posts/images/%Y/%m/" | append: page.slug | append: "/" -%}
 		{%- assign image_src = image_dir | append: post.post_image -%}
 	{%- else -%}
 		{%- assign image_src = "assets/img/site-image.jpg" -%}

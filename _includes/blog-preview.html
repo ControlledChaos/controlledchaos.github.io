@@ -2,7 +2,7 @@
 {%- assign date_format = site.date_format | default: "%B %-d, %Y" -%}
 
 {%- if post.post_thumb -%}
-	{%- assign image_dir = post.date | date: "posts/images/%Y/%m/" -%}
+	{%- assign image_dir = page.date | date: "posts/images/%Y/%m/" | append: page.slug | append: "/" -%}
 	{%- assign thumb_src = image_dir | append: post.post_thumb -%}
 {%- else -%}
 	{%- assign thumb_src = "posts/images/default-thumb.jpg" -%}
