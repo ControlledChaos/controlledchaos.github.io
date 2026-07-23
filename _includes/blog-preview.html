@@ -1,11 +1,11 @@
 {%- assign post = include.post %}
 {%- assign date_format = site.date_format | default: "%B %-d, %Y" -%}
 
-{%- if post.post_image -%}
+{%- if post.post_thumb -%}
 	{%- assign image_dir = post.date | date: "posts/images/%Y/%m/" -%}
-	{%- assign image_src = image_dir | append: post.post_image -%}
+	{%- assign thumb_src = image_dir | append: post.post_thumb -%}
 {%- else -%}
-	{%- assign image_src = "assets/img/transparent.png" -%}
+	{%- assign thumb_src = "assets/img/transparent.png" -%}
 {%- endif -%}
 
 <li>
