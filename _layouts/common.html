@@ -2,7 +2,7 @@
 	{%- if page.url == "/" -%}
 		{{- "front-page" -}}
 	{%- elsif page.url == "/posts/" and page.url != "/" -%}
-		{{- site.body_class | " blog-page" -}}
+		{{- site.body_class | append: " blog-page" -}}
 	{%- elsif page.layout == "post" -%}
 		{{- site.body_class | append: " post-page" -}}
 	{%- elsif page.layout == "project" -%}
