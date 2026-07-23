@@ -31,7 +31,7 @@ paginate_first_page_path %}
 	{%- endif -%}
 
 	<div class="front-page-content">
-		{{ front_intro.content }}
+		{{ front_intro.content | markdownify }}
 	</div>
 </section>
 
