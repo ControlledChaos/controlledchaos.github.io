@@ -1,4 +1,5 @@
 ---
+layout: project
 title: Monica Mixes
 subtitle: Website for craft cocktail recipes.
 featured: 5

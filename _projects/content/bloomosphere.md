@@ -1,4 +1,5 @@
 ---
+layout: project
 title: Bloomosphere
 subtitle: Website for a Hollywood costume designer.
 featured: 1

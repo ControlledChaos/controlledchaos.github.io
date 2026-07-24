@@ -1,4 +1,5 @@
 ---
+layout: project
 title: A New Old ACF
 subtitle: Reworking and improving an older version of Advanced Custom Fields.
 featured: 3

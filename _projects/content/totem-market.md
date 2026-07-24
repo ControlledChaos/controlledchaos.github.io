@@ -1,4 +1,5 @@
 ---
+layout: project
 title: Totem Market
 subtitle: Website for a little country market & restaurant.
 featured: 2
