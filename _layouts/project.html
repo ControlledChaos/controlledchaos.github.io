@@ -1,0 +1,87 @@
+---
+layout: common
+---
+
+{%- assign image_src = "projects/images/" | append: project.slug | append: "/cover.jpg" -%}
+
+{%- capture next_icon -%}
+	{% include svg/arrow-left.svg %}
+{%- endcapture -%}
+{%- capture prev_icon -%}
+	{% include svg/arrow-right.svg %}
+{%- endcapture -%}
+
+<article class="post">
+
+	{%- if page.title %}
+	<h2 class="page-title">{{ page.title }}</h2>
+	{% endif -%}
+
+	{%- if page.subtitle %}
+	<p class="page-subtitle">{{ page.subtitle }}</p>
+	{% endif -%}
+
+	<figure class="post-image">
+		<a href="{{ image_src | absolute_url }}" data-fancybox>
+			<img src="{{ image_src | absolute_url }}" />
+		</a>
+	</figure>
+
+	{{ content }}
+</article>
+
+{%- if page.post_gallery -%}
+<section id="post-gallery" class="post-section">
+
+	<h2>{{ page.post_gallery }}</h2>
+
+	{%- include post-gallery.html folder = image_dir -%}
+
+</section>
+{%- endif -%}
+
+{%- unless page.related_posts == false -%}
+<section id="related-posts" class="post-section">
+
+	<h2>Related Posts</h2>
+
+	{%- include related-posts.html -%}
+
+</section>
+{%- endunless -%}
+
+<section id="post-navigation" class="post-section">
+	<nav>
+		<ul class="post-navigation">
+			{%- if page.next.url %}
+			<li class="post-next">
+				<a class="post-nav-link post-next-link" href="{{ page.next.url | relative_url }}" data-toggle="tooltip" data-placement="top" title="{{page.next.title | strip_html | xml_escape}}"><span class="post-nav-icon">{{ next_icon }}</span> <span class="post-nav-text">Next Post</span></a>
+			</li>
+			{%- endif %}
+			<li><a href="{{ site.posts_permalink | relative_url }}">All Posts</a></li>
+			{%- if page.previous.url %}
+			<li class="post-prev">
+				<a class="post-nav-link post-prev-link" href="{{ page.previous.url | relative_url }}" data-toggle="tooltip" data-placement="top" title="{{page.previous.title | strip_html | xml_escape}}"><span class="post-nav-text">Previous Post</span> <span class="post-nav-icon">{{ prev_icon }}</span></a>
+			</li>
+			{%- endif -%}
+		</ul>
+	</nav>
+</section>
+
+{%- if page.comments %}
+<section id="post-comments" class="post-section">
+
+	<h2>Post Comments</h2>
+
+	<!-- Comments form inserted by Utterances script. -->
+	<script
+		src="https://utteranc.es/client.js"
+		repo="ControlledChaos/controlledchaos.github.io"
+		issue-term="title"
+		label="Comments"
+		theme="boxy-light"
+		crossorigin="anonymous"
+		async>
+	</script>
+</section>
+{% endif -%}
