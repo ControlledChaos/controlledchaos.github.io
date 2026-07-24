@@ -46,8 +46,10 @@
 	<!-- Swap `no-js` class with `js` class in html element. -->
 	<script>(function(html){html.className = html.className.replace(/\bno-js\b/,'js')})(document.documentElement);</script>
 
-	<script>var language = window.navigator.userLanguage || window.navigator.language;
-alert(language); //works IE/SAFARI/CHROME/FF</script>
+	<script>
+	var language = window.navigator.userLanguage || window.navigator.language;
+	var z = document.body;
+	document.body.classList.add(language);</script>
 
 	<link rel="profile" href="https://gmpg.org/xfn/11" />
 	<link href="{{ site.url }}{{ page.url }}" rel="canonical" />
