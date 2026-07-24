@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Site Core Tools
 subtitle: Boilerplates for building site-specific ClassicPress/WordPress plugins & themes.
 featured: 4

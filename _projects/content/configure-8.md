@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Configure 8
 subtitle: Theme & suite of plugins for the Bludit CMS.
 featured: 0
