@@ -8,8 +8,6 @@
 
 	{%- for project in featured -%}
 
-	{{ project.image_dir }}
-
 	{%- unless config contains project.slug -%}
 		{%- continue -%}
 	{%- endunless -%}
