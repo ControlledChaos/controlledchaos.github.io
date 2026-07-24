@@ -1,6 +1,6 @@
 
 # Website settings
-url: "https://controlledchaos.github.io"
+# url: "https://controlledchaos.github.io"
 is_user_page: true
 is_project_page: false
 remote_theme: theme-ccdzine
