@@ -176,6 +176,7 @@
 	.sidebar-block {
 		&:not( :first-of-type ) {
 			margin-top: var( --ccd-spacing--vert, 2rem );
+			padding-top: calc( var( --ccd-spacing--vert, 2rem ) / 2 );
 			border-top: var( --ccd-box--border );
 		}
 	}
