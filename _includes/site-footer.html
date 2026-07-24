@@ -4,19 +4,4 @@
 	</div>
 </footer>
 
-<script>
-var lang = window.navigator.userLanguage || window.navigator.language,
-	rtl  = [ 'ar','dv','fa','he','ku','ps','sd','ug','ur','yi' ],
-	html = document.querySelector( 'html' ),
-	body = document.querySelector( 'body' ),
-	code = lang.replace( '-', '_' ),
-	base = lang.split( '-' )[0];
-
-	html.setAttribute( 'lang', code );
-	body.classList.add( code );
-
-	if ( ! rtl.includes( base ) ) {
-		html.classList.add( 'is-rtl' );
-	}
-</script>
 <script src="{{ '/assets/js/lightbox.min.js' | relative_url }}"></script>
