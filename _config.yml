@@ -25,12 +25,12 @@ collections:
   projects:
     directory: _projects/content
     permalink: /projects/:title/
-    layout: "default"
+    layout: "project"
     output: true
   snippets:
     directory: _snippets
     permalink: /snippets/:title/
-    layout: "default"
+    layout: "snippet"
     output: true
 
 # Specific defaults
