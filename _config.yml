@@ -80,7 +80,7 @@ featured_projects: [
 
 # Blog pages
 blog_view: preview # preview, grid, or full
-paginate: 3
+paginate: 9
 paginate_path: "/posts/page:num/"
 category_path: /category/
 category_layout: category_index.html
