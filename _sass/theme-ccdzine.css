@@ -923,7 +923,7 @@ h6 {
   gap: 0 0.5em;
 }
 
-.rtl .post-page .post-nav-link {
+.rtl .post-page .post-nav-icon {
   transform: scaleX(-1);
 }
 
