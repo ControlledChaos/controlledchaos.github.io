@@ -38,15 +38,18 @@
 	{%- endif -%}
 {%- endcapture -%}
 <head>
+	<!-- Always keep a cool head. -->
 	<meta charset='utf-8' />
 	<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
+	<!-- Swap `no-js` class with `js` class in html element. -->
 	<script>(function(html){html.className = html.className.replace(/\bno-js\b/,'js')})(document.documentElement);</script>
 
 	<link rel="profile" href="https://gmpg.org/xfn/11" />
 	<link href="{{ site.url }}{{ page.url }}" rel="canonical" />
 
+	<!-- Browser title -->
 	<title>{{ title }}</title>
 
 	<!-- Remote fonts -->
