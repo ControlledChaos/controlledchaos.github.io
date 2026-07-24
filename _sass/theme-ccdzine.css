@@ -898,25 +898,25 @@ h6 {
   background-image: linear-gradient(to right, transparent 0%, rgba(255, 255, 255, 0.85) 25%, #ffffff 100%);
 }
 
-.post .post-image {
+.post-page .post-image {
   margin-top: var(--ccd-spacing--vert, 2rem);
   max-height: 600px;
   overflow: hidden;
 }
-.post .post-image img {
+.post-page .post-image img {
   display: block;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: center center;
      object-position: center center;
 }
-.post .post-cats-list,
-.post .post-tags-list {
+.post-page .post-cats-list,
+.post-page .post-tags-list {
   display: inline-flex;
   flex-wrap: wrap;
   gap: 0.5em;
 }
-.post .post-nav-link {
+.post-page .post-nav-link {
   display: flex;
   flex-wrap: nowrap;
   gap: 0 0.25em;
