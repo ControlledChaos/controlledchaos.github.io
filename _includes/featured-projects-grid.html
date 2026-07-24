@@ -13,7 +13,7 @@
 
 	{%- assign excerpt = project.subtitle | default: project.excerpt | truncatewords: 15, "…" -%}
 
-	{%- assign image_dir = project.image_dir -%}
+	{%- assign image_dir = "_projects/images/" -%}
 	{%- assign image_src = image_dir | append: project.slug | append: "/cover.jpg" -%}
 
 	<article class="featured-post">
