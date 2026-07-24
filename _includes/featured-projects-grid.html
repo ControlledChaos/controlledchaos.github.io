@@ -13,9 +13,11 @@
 
 	{%- assign excerpt = project.subtitle | default: project.excerpt | truncatewords: 15, "…" -%}
 
-	{%- if project.post_image -%}
-		{%- assign image_dir = project.date | date: "posts/images/%Y/%m/" | append: project.slug | append: "/" -%}
-		{%- assign image_src = image_dir | append: project.post_image -%}
+	{%- assign image_dir = project.image_dir -%}
+	{%- assign cover_image = image_dir | append: "cover.jpg" -%}
+
+	{%- if cover_image -%}
+		{%- assign image_src = cover_image -%}
 	{%- else -%}
 		{%- assign image_src = "assets/img/site-image.jpg" -%}
 	{%- endif -%}
