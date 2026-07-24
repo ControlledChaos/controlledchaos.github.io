@@ -40,28 +40,18 @@ layout: common
 </section>
 {%- endif -%}
 
-{%- unless page.related_posts == false -%}
-<section id="related-posts" class="post-section">
-
-	<h2>Related Posts</h2>
-
-	{%- include related-posts.html -%}
-
-</section>
-{%- endunless -%}
-
 <section id="post-navigation" class="post-section">
 	<nav>
 		<ul class="post-navigation">
 			{%- if page.next.url %}
 			<li class="post-next">
-				<a class="post-nav-link post-next-link" href="{{ page.next.url | relative_url }}" data-toggle="tooltip" data-placement="top" title="{{page.next.title | strip_html | xml_escape}}"><span class="post-nav-icon">{{ next_icon }}</span> <span class="post-nav-text">Next Post</span></a>
+				<a class="post-nav-link post-next-link" href="{{ page.next.url | relative_url }}" data-toggle="tooltip" data-placement="top" title="{{page.next.title | strip_html | xml_escape}}"><span class="post-nav-icon">{{ next_icon }}</span> <span class="post-nav-text">Next Project</span></a>
 			</li>
 			{%- endif %}
-			<li><a href="{{ site.posts_permalink | relative_url }}">All Posts</a></li>
+			<li><a href="{{ site.posts_permalink | relative_url }}">All Projects</a></li>
 			{%- if page.previous.url %}
 			<li class="post-prev">
-				<a class="post-nav-link post-prev-link" href="{{ page.previous.url | relative_url }}" data-toggle="tooltip" data-placement="top" title="{{page.previous.title | strip_html | xml_escape}}"><span class="post-nav-text">Previous Post</span> <span class="post-nav-icon">{{ prev_icon }}</span></a>
+				<a class="post-nav-link post-prev-link" href="{{ page.previous.url | relative_url }}" data-toggle="tooltip" data-placement="top" title="{{page.previous.title | strip_html | xml_escape}}"><span class="post-nav-text">Previous Project</span> <span class="post-nav-icon">{{ prev_icon }}</span></a>
 			</li>
 			{%- endif -%}
 		</ul>
