@@ -1229,7 +1229,7 @@ h6 {
 }
 .page-sidebar .sidebar-block:not(:first-of-type) {
   margin-top: var(--ccd-spacing--vert, 2rem);
-  border: var(--ccd-box--border);
+  border-top: var(--ccd-box--border);
 }
 
 .sidebar-block.sidebar-latest-posts .latest-list li {
