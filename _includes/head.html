@@ -46,6 +46,24 @@
 	<!-- Swap `no-js` class with `js` class in html element. -->
 	<script>(function(html){html.className = html.className.replace(/\bno-js\b/,'js')})(document.documentElement);</script>
 
+	<script>
+	/**
+	 * RTL languages
+	 *
+	 * Checks the browser language code against an array of RTL
+	 * language codes. If the user has an RTL language set then
+	 * this adds the `rtl` class to the `<html>` element.
+	 */
+	var lang = window.navigator.userLanguage || window.navigator.language,
+		rtl  = [ 'ar','dv','fa','he','ku','ps','sd','ug','ur','yi' ],
+		html = document.querySelector( 'html' ),
+		base = lang.split( '-' )[0];
+
+		if ( rtl.includes( base ) ) {
+			html.classList.add( 'rtl' );
+		}
+	</script>
+
 	<link rel="profile" href="https://gmpg.org/xfn/11" />
 	<link href="{{ site.url }}{{ page.url }}" rel="canonical" />
 
