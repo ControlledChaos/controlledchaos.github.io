@@ -91,12 +91,9 @@
 				bottom: 0;
 				width: 100%;
 				height: 2px;
-				-webkit-transition: -webkit-transform .15s ease;
-				transition: -webkit-transform .15s ease;
-				transition: transform .15s ease;
-				transition: transform .15s ease,-webkit-transform .15s ease;
-				background: #ffffff;
+				background: rgba( $color: white, $alpha: 0.85 );
 				transform: scale(0);
+				transition: transform .15s ease;
 			}
 			&:hover,
 			&:focus {
