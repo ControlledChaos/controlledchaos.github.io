@@ -14,7 +14,7 @@
 	{%- assign excerpt = project.subtitle | default: project.excerpt | truncatewords: 15, "…" -%}
 
 	{%- assign image_dir = project.image_dir -%}
-	{%- assign cover_image = image_dir | append: "cover.jpg" -%}
+	{%- assign cover_image = image_dir | append: project.slug | append: "/cover.jpg" -%}
 
 	{%- if cover_image -%}
 		{%- assign image_src = cover_image -%}
