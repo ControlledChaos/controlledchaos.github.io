@@ -4,4 +4,9 @@
 	</div>
 </footer>
 
+<script>
+var lang = window.navigator.userLanguage || window.navigator.language;
+var body = document.querySelector('body');
+body.addClass(lang);
+</script>
 <script src="{{ '/assets/js/lightbox.min.js' | relative_url }}"></script>
