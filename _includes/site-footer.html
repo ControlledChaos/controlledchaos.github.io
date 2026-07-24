@@ -6,8 +6,8 @@
 
 <script>
 var lang = window.navigator.userLanguage || window.navigator.language;
-var body = document.querySelector( 'body' );
-var base = lang.replace( '-', '_' );
-	body.classList.add( base );
+var html = document.querySelector( 'html' );
+var code = lang.replace( '-', '_' );
+	html.setAttribute( 'lang', code );
 </script>
 <script src="{{ '/assets/js/lightbox.min.js' | relative_url }}"></script>
