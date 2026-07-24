@@ -12,6 +12,9 @@
 		{%- continue -%}
 	{%- endunless -%}
 
+	{% assign position = forloop.index0 %}
+	{{ position }}
+
 	{%- assign excerpt = post.subtitle | default: post.excerpt | truncatewords: 15, "…" -%}
 
 	{%- if post.post_image -%}
