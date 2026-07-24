@@ -397,6 +397,12 @@ h6 {
 	}
 }
 
+.rtl {
+	.pagi-nav-icon {
+		transform: scaleX(-1);
+	}
+}
+
 // Get front page styles.
 @import 'partials/_front-page';
 
