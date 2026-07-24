@@ -2,11 +2,13 @@
 {%- assign config = site.featured_projects | sort: "featured" -%}
 {%- assign featured = include.projects -%}
 {{ featured["configure-8"] }}
-{%- if featured and featured.size > 0 %}
-{{ site.image_dir }}
+{%- if featured and featured.size > 0 -%}
+
 <div class="featured-posts-grid">
 
 	{%- for project in featured -%}
+
+	{{ project.image_dir }}
 
 	{%- unless config contains project.slug -%}
 		{%- continue -%}
