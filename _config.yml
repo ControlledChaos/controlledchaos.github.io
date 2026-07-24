@@ -27,6 +27,11 @@ collections:
     permalink: /projects/:title/
     layout: "default"
     output: true
+  snippets:
+    directory: _snippets
+    permalink: /snippets/:title/
+    layout: "default"
+    output: true
 
 # Specific defaults
 defaults:
