@@ -11,9 +11,13 @@
 	{%- for config in featured_projects -%}
 		{%- assign position = forloop.index0 -%}
 		{%- if featured_projects[position] != post.slug -%}
-			{%- continue -%}
+			{%- assign continue = true -%}
 		{%- endif -%}
 	{%- endfor %}
+
+	{%- if continue -%}
+		{%- continue -%}
+	{%- endif -%}
 
 	{%- assign excerpt = post.subtitle | default: post.excerpt | truncatewords: 15, "…" -%}
 
