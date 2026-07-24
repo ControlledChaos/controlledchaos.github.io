@@ -44,7 +44,7 @@ defaults:
       permalink: /projects/:title/
       layout: "default"
       output: true
-      image_dir: _projects/images/:slug/
+      image_dir: _projects/images/:title/
       post_image: false # Fallback in templates.
       post_thumb: false # Fallback in templates.
   - scope:
