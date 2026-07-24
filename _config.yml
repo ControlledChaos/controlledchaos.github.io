@@ -11,7 +11,7 @@ email: gregsweet4@yahoo.com
 site_icon: "site-icon.png"
 site_image: site-image.jpg
 site_thumb: site-thumb.jpg
-timezone: "America/Los Angeles"
+timezone: "America/Los_Angeles"
 markdown: kramdown
 permalink: pretty
 
