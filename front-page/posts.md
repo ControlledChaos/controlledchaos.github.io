@@ -1,1 +1,1 @@
-Sometimes I write about website stuff. Perhaps you could read some if you are hard-up for reading material. The following, obligitory grid of three are the most recent posts.
+Sometimes I write about website stuff, solutions to problems that I have found, amd my experience in doing this stuff. Perhaps you could peruse my posts if you are hard-up for reading material. The following, obligitory grid of three are the most recent posts.
