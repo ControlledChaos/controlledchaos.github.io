@@ -15,7 +15,7 @@ var lang = window.navigator.userLanguage || window.navigator.language,
 	html.setAttribute( 'lang', code );
 	body.classList.add( code );
 
-	if ( rtl.includes( base ) ) {
+	if ( ! rtl.includes( base ) ) {
 		html.classList.add( 'is-rtl' );
 	}
 </script>
