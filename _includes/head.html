@@ -56,12 +56,14 @@
 	<link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet" />
 	<link href="https://fonts.googleapis.com/css2?family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
 
+	<!-- jQuery from CDN -->
 	<script src="https://code.jquery.com/jquery-4.0.0.min.js"></script>
 	<script src="https://code.jquery.com/jquery-migrate-4.0.2.min.js"></script>
 	<script src="https://code.jquery.com/ui/1.14.1/jquery-ui.min.js"></script>
 
+	<!-- Theme stylesheets -->
 	<link rel="stylesheet" href="{{ '/assets/css/style.min.css?v=' | append: site.github.build_revision | relative_url }}" />
-	<link rel="stylesheet" href="{{ '/assets/css/lightbox.min.css' | absolute_url }}" />
+	<link rel="stylesheet" href="{{ '/assets/css/lightbox.min.css' | append: site.github.build_revision | relative_url }}" />
 
 	{% if site.site_icon -%}
 	<!-- Site icon -->
