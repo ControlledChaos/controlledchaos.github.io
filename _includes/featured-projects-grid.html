@@ -13,8 +13,7 @@
 
 	{%- assign excerpt = project.subtitle | default: project.excerpt | truncatewords: 15, "…" -%}
 
-	{%- assign image_dir = "_projects/images/" -%}
-	{%- assign image_src = image_dir | append: project.slug | append: "/cover.jpg" -%}
+	{%- assign image_src = "projects/images/" | append: project.slug | append: "/cover.jpg" -%}
 
 	<article class="featured-post">
 		<a href="{{ project.url | absolute_url }}">
