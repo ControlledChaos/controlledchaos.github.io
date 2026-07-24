@@ -20,6 +20,10 @@ body_class: "default-page"
 page_type: "WebPage"
 page_sidebar: true
 
+# Collections
+collections:
+  - projects
+
 # Specific defaults
 defaults:
   - scope:
@@ -36,8 +40,10 @@ defaults:
       path: "" # empty string == all files in project.
       type: "projects"
     values:
+      directory: _projects/content
       permalink: /projects/:title/
       layout: "default"
+      output: true
       post_image: false # Fallback in templates.
       post_thumb: false # Fallback in templates.
   - scope:
@@ -83,10 +89,6 @@ category_layout: category_index.html
 tag_page_layout: tags
 tag_page_dir: tags
 related_by: "tags or categories"
-
-# Collections
-collections:
-  - projects
 
 # Sidebar content
 sidebar_modules:
