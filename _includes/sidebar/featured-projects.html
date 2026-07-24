@@ -1,0 +1,22 @@
+{%- assign featured_limit = site.sidebar_projects_limit | default: 6 -%}
+{%- assign projects = site.projects -%}
+
+<div class="sidebar-block sidebar-featured-projects">
+	<h3>Latest projects</h3>
+	{%- if projects.size > 0 -%}
+
+	<ul class="sidebar-featured-list">
+	{%- for project in projects limit: featured_limit -%}
+		<li class="sidebar-featured-item">
+			<a href="{{ project.url }}" class="sidebar-featured-link">{{ project.title }}</a>
+			{%- if project.subtitle %}
+			<span class="sidebar-featured-subtitle">{{ project.subtitle }}</span>
+			{% endif -%}
+		</li>
+	{%- endfor -%}
+	</ul>
+
+	{%- else -%}
+	<p>No projects found</p>
+	{%- endif -%}
+</div>
