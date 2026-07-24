@@ -2,7 +2,7 @@
 layout: common
 ---
 
-{%- assign image_src = "projects/images/" | append: project.slug | append: "/cover.jpg" -%}
+{%- assign image_src = "projects/images/" | append: page.slug | append: "/cover.jpg" -%}
 
 {%- capture next_icon -%}
 	{% include svg/arrow-left.svg %}
