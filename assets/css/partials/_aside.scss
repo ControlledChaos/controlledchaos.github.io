@@ -172,6 +172,13 @@
 		margin: var( --ccd-sidebar--ol--margin, var( --ccd-sidebar--list--margin, 1rem 0 0 0 ) );
 		padding: var( --ccd-sidebar--ol--padding, var( --ccd-sidebar--list--padding, 0 0 0 1em ) );
 	}
+
+	.sidebar-block {
+		&:not( :first-of-type ) {
+			margin-top: var( --ccd-spacing--vert, 2rem );
+			border: var( --ccd-box--border );
+		}
+	}
 }
 
 .sidebar-block {
