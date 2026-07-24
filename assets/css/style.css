@@ -701,13 +701,13 @@ h6 {
   margin: 0;
   font-size: 0.9375rem;
   font-weight: 650;
-  line-height: 3;
+  line-height: 2;
 }
 .site-menu li a {
   display: inline-block;
   position: relative;
   overflow: hidden;
-  color: inherit;
+  color: #ffffff;
 }
 .site-menu li a:before {
   content: "";
@@ -715,9 +715,9 @@ h6 {
   left: 0;
   bottom: 0;
   width: 100%;
-  height: 1px;
+  height: 2px;
   transition: transform 0.15s ease;
-  background: rgba(255, 255, 255, 0.7);
+  background: #ffffff;
   transform: scale(0);
 }
 .site-menu li a:hover, .site-menu li a:focus {
