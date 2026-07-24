@@ -7,6 +7,7 @@
 <script>
 var lang = window.navigator.userLanguage || window.navigator.language;
 var body = document.querySelector('body');
+lang.split('-')[0];
 body.classList.add(lang);
 </script>
 <script src="{{ '/assets/js/lightbox.min.js' | relative_url }}"></script>
