@@ -96,11 +96,11 @@
 			}
 			&:before {
 				bottom: 1px;
-				background-color: rgba( $color: white, $alpha: 0.85 );
+				background-color: rgba( $color: white, $alpha: 0.75 );
 			}
 			&:after {
 				bottom: 0;
-				background-color: rgba( $color: white, $alpha: 0.7 );
+				background-color: rgba( $color: white, $alpha: 0.25 );
 			}
 			&:hover,
 			&:focus {
