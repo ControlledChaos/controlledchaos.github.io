@@ -93,7 +93,7 @@ related_by: "tags or categories"
 
 # Sidebar content
 sidebar_modules:
-  - featured projects
+  - featured-projects
   - latest-posts
 
 # Additional functionality
