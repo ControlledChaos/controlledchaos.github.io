@@ -17,7 +17,7 @@
 	{%- assign image_src = image_dir | append: project.slug | append: "/cover.jpg" -%}
 
 	<article class="featured-post">
-		<a href="{{ project.url | relative_url }}">
+		<a href="{{ project.url | absolute_url }}">
 			<figure>
 				<img src="{{ image_src | absolute_url }}" />
 				<figcaption>
