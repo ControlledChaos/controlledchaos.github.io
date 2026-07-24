@@ -2,16 +2,15 @@
 {%- assign featured_projects = site.featured_projects | split: "," -%}
 {%- assign featured_posts = include.projects -%}
 {%- assign post_limit = include.limit -%}
-{{ featured_projects }}
+
 {%- if featured_posts and featured_posts.size > 0 %}
 <div class="featured-posts-grid">
 
-	{%- for project in featured_projects -%}
 	{%- for post in featured_posts -%}
 
-	{%- if project != post.slug -%}
+	{%- unless featured_projects contains post.slug -%}
 		{%- continue -%}
-	{%- endif -%}
+	{%- endunless -%}
 
 	{%- assign excerpt = post.subtitle | default: post.excerpt | truncatewords: 15, "…" -%}
 
@@ -33,7 +32,6 @@
 			</figure>
 		</a>
 	</article>
-	{%- endfor %}
 	{%- endfor %}
 </div>
 {%- endif -%}
