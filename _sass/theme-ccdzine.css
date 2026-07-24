@@ -1268,7 +1268,8 @@ h6 {
   text-decoration: none;
   line-height: 1.2;
 }
-.sidebar-block.sidebar-latest-posts .latest-date {
+.sidebar-block.sidebar-latest-posts .latest-date,
+.sidebar-block.sidebar-latest-posts .latest-cats {
   display: block;
   font-family: var(--ccd-fonts--secondary-stack);
   font-size: 0.8125rem;

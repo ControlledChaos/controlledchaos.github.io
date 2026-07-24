@@ -8,7 +8,13 @@
 
 	<ul class="latest-list">
 	{%- for post in posts limit: latest_limit -%}
-		<li class="latest-item"><a href="{{ post.url }}" class="latest-link">{{ post.title }}</a> <time class="latest-date">{{ post.date | date: date_format }}</time></li>
+		<li class="latest-item">
+			<a href="{{ post.url }}" class="latest-link">{{ post.title }}</a>
+			<time class="latest-date">{{ post.date | date: date_format }}</time>
+			{% for cat in post.category %}
+			<span class="latest-cats">{{ cat }}</span>
+			{%- endfor -%}
+		</li>
 	{%- endfor -%}
 	</ul>
 
