@@ -41,7 +41,6 @@ defaults:
       type: "projects"
     values:
       directory: _projects/content
-      permalink: /projects/:title/
       layout: "default"
       output: true
       image_dir: projects/images/
