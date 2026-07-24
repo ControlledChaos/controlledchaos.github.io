@@ -5,7 +5,7 @@
 {%- if featured and featured.size > 0 %}
 <div class="featured-posts-grid">
 
-	{%- for project in featured -%}
+	{%- for project in featured | sort: "featured" -%}
 
 	{%- unless config contains project.slug -%}
 		{%- continue -%}
