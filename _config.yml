@@ -82,7 +82,6 @@ featured_projects: [
 
 # Blog pages
 blog_view: preview # preview, grid, or full
-posts_permalink: /posts
 paginate: 3
 paginate_path: "/posts/page:num/"
 category_path: /category/
