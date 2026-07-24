@@ -27,9 +27,6 @@ collections:
     permalink: /projects/:title/
     layout: "default"
     output: true
-    image_dir: projects/images/
-    post_image: false # Fallback in templates.
-    post_thumb: false # Fallback in templates.
 
 # Specific defaults
 defaults:
