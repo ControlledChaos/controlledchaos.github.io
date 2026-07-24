@@ -196,4 +196,25 @@
 			font-size: 0.8125rem;
 		}
 	}
+
+	&.sidebar-featured-projects {
+
+		.sidebar-featured-list {
+			li {
+				margin-top: 0.625rem;
+			}
+		}
+
+		.sidebar-featured-link {
+			font-size: 1.125rem;
+			font-weight: 650;
+			text-decoration: none;
+			line-height: 1.2;
+		}
+
+		.sidebar-featured-subtitle {
+			display: block;
+			font-size: 0.8125rem;
+		}
+	}
 }

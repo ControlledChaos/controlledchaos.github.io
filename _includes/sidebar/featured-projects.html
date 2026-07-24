@@ -1,12 +1,17 @@
-{%- assign featured_limit = site.sidebar_projects_limit | default: 6 -%}
+{%- assign config = site.featured_projects -%}
 {%- assign projects = site.projects -%}
 
 <div class="sidebar-block sidebar-featured-projects">
-	<h3>Latest projects</h3>
+	<h3>Featured Projects</h3>
 	{%- if projects.size > 0 -%}
 
 	<ul class="sidebar-featured-list">
-	{%- for project in projects limit: featured_limit -%}
+	{%- for project in projects | sort: "featured" -%}
+
+		{%- unless config contains project.slug -%}
+			{%- continue -%}
+		{%- endunless -%}
+
 		<li class="sidebar-featured-item">
 			<a href="{{ project.url }}" class="sidebar-featured-link">{{ project.title }}</a>
 			{%- if project.subtitle %}

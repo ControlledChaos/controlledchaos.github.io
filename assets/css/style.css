@@ -1241,6 +1241,19 @@ h6 {
   display: block;
   font-size: 0.8125rem;
 }
+.sidebar-block.sidebar-featured-projects .sidebar-featured-list li {
+  margin-top: 0.625rem;
+}
+.sidebar-block.sidebar-featured-projects .sidebar-featured-link {
+  font-size: 1.125rem;
+  font-weight: 650;
+  text-decoration: none;
+  line-height: 1.2;
+}
+.sidebar-block.sidebar-featured-projects .sidebar-featured-subtitle {
+  display: block;
+  font-size: 0.8125rem;
+}
 
 .site-footer {
   margin: var(--ccd-site-footer--margin, 0);
