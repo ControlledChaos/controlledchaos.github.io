@@ -1,7 +1,7 @@
 ---
 layout: post
 title: A New Old ACF
-subtitle: Reworking an older version of Advanced Custom Fields.
+subtitle: Reworking and improving an older version of Advanced Custom Fields.
 featured: 3
 ---
 
