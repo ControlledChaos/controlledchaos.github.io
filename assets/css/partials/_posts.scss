@@ -122,7 +122,14 @@
 		align-items: center;
 		flex-wrap: nowrap;
 		gap: 0 0.5em;
-		// transform: scaleX(-1);
+	}
+}
+
+.rtl {
+	.post-page {
+		.post-nav-link {
+			transform: scaleX(-1);
+		}
 	}
 }
 

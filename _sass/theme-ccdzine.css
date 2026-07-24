@@ -923,6 +923,10 @@ h6 {
   gap: 0 0.5em;
 }
 
+.rtl .post-page .post-nav-link {
+  transform: scaleX(-1);
+}
+
 #post-navigation {
   margin-top: var(--ccd-spacing--vert);
 }
