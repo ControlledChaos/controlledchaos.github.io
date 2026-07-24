@@ -62,9 +62,9 @@
 	<script src="https://code.jquery.com/ui/1.14.1/jquery-ui.min.js"></script>
 
 	<!-- Theme stylesheets -->
-	{%- assign css_ver = date: "%Y-%m-%d-%H-%M" -%}
-	<link rel="stylesheet" href="{{ '/assets/css/style.min.css?v=' | append: css_ver | relative_url }}" />
-	<link rel="stylesheet" href="{{ '/assets/css/lightbox.min.css?v=' | append: css_ver | relative_url }}" />
+	{%- assign css_ver = 'now' | date: "%Y-%m-%d-%H-%M" | prepend: "?v=" %}
+	<link rel="stylesheet" href="{{ '/assets/css/style.min.css' | append: css_ver | relative_url }}" />
+	<link rel="stylesheet" href="{{ '/assets/css/lightbox.min.css' | append: css_ver | relative_url }}" />
 
 	{% if site.site_icon -%}
 	<!-- Site icon -->
