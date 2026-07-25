@@ -1,8 +1,10 @@
 {%- capture body_class -%}
 	{%- if page.url == "/" -%}
 		{{- "front-page" -}}
-	{%- elsif page.url == "/posts/" and page.url != "/" -%}
-		{{- site.body_class | append: " blog-page" -}}
+	{%- elsif page.url == site.blog_path and page.url != "/" -%}
+		{{- site.body_class | append: " posts-loop" -}}
+	{%- elsif page.url == site.projects_path -%}
+		{{- site.body_class | append: " projects-loop" -}}
 	{%- elsif page.layout == "post" -%}
 		{{- site.body_class | append: " post-page" -}}
 	{%- elsif page.layout == "project" -%}
