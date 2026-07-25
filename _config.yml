@@ -36,6 +36,8 @@ collections:
     layout: "snippet"
     output: true
 
+projects_path: "/projects/"
+
 # Specific defaults
 defaults:
   - scope:
