@@ -66,6 +66,8 @@ site_nav:
     url: /products
   - name: Posts
     url: /posts
+  - name: Snippets
+    url: /snippets
   - name: About
     url: /about
   - name: Contact
@@ -83,8 +85,9 @@ featured_projects: [
 
 # Blog pages
 blog_view: preview # preview, grid, or full
-paginate: 9
+blog_path: "/posts/"
 paginate_path: "/posts/page:num/"
+paginate: 9
 category_path: /category/
 category_layout: category_index.html
 tag_page_layout: tags
