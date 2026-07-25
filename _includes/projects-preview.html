@@ -1,0 +1,36 @@
+{%- assign project = include.project %}
+{%- assign date_format = site.date_format | default: "%B %-d, %Y" -%}
+
+{%- assign image_src = "projects/images/" | append: project.slug | append: "/cover.jpg" -%}
+
+<li>
+	<article id='{{ project.name | slugify | remove_last: "-md" }}' class="projects-entry">
+
+		<figure class="entry-image" role="presentation">
+			<a href="{{ project.url | absolute_url }}">
+				<img src="{{ thumb_src | absolute_url }}" class="project-image" width="180" height="180" />
+			</a>
+		</figure>
+
+		<header class="entry-header">
+			<h2 class="project-title">
+				<a href="{{ project.url | absolute_url }}">
+					{{ project.title | strip_html }}
+				</a>
+			</h2>
+			{%- if project.subtitle %}
+			<p class="project-subtitle">
+				{{ project.subtitle | strip_html }}
+			</p>
+			{%- endif -%}
+		</header>
+		<div class="entry-summary">
+			{%- assign length = site.length | default: 35 -%}
+			{%- assign word_count = project.excerpt | number_of_words -%}
+
+			<div class="project-excerpt">
+				<p>{{- project.excerpt | strip_html | truncatewords: length, "…" -}}<a href="{{ project.url | absolute_url }}" title="Read More" data-tooltip><span class="screen-reader-text">Read More</span> {% include svg/arrow-right.svg %}</a></p>
+			</div>
+		</div>
+	</article>
+</li>
