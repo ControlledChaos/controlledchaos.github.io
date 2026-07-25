@@ -874,7 +874,7 @@ h6 {
 .entry-image img {
   display: block;
   width: 100%;
-  max-inline-size: 100%;
+  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: center center;
