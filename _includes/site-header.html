@@ -1,28 +1,21 @@
-
-{%- if page.url == "/" -%}
-	{{ assign is_front = true }}
-{%- else -%}
-	{{ assign is_front = false }}
-{%- endif -%}
-
 <header id="masthead" class="site-header" role="banner" itemscope="itemscope" itemtype="http://schema.org/Organization">
 	<div class="general-wrap">{{ page.url }}
 		<div class="site-identity">
 			{%- if site.site_icon -%}
 			<figure class="site-avatar">
-				{%- unless is_front == false -%}
+				{%- unless page.url == "/" -%}
 				<a href="{{ site.github.url }}">
 				{%- endunless -%}
 					<img src="{{ '/assets/img/' | append: site.site_icon | relative_url }}" alt="Yin-yang symbol" class="avatar" />
 					<figcaption class="screen-reader-text">
 						<span>Yin-yang symbol used as the Controlled Chaos Design avatar. Not a logo!</span>
 					</figcaption>
-				{%- unless is_front == false -%}
+				{%- unless page.url == "/" -%}
 				</a>
 				{%- endunless -%}
 			</figure>
 			{%- endif -%}
-			{%- if is_front == true -%}
+			{%- if page.url == "/" -%}
 			<h1 class="site-title">{{ site.title }}</h1>
 			{%- else -%}
 			<p class="site-title">
