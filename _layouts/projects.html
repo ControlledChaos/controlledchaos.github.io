@@ -7,7 +7,7 @@ pagination:
 {{ content }}
 
 <ul class="posts-list" role="list">
-{%- for project in paginator.projects -%}
+{%- for project in collection.projects -%}
 	{%- include projects-preview.html -%}
 {%- endfor -%}
 </ul>
