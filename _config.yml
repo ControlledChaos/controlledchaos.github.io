@@ -27,6 +27,9 @@ collections:
     permalink: /projects/:title/
     layout: "project"
     output: true
+    pagination:
+      enabled: true
+    paginate: 3
   snippets:
     directory: _snippets
     permalink: /snippets/:title/
