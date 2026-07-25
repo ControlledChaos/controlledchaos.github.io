@@ -6,7 +6,7 @@
 	{%- elsif page.layout == "post" -%}
 		{{- site.body_class | append: " post-page" -}}
 	{%- elsif page.layout == "project" -%}
-		{{- site.body_class | append: " project-post" -}}
+		{{- site.body_class | append: " project-page" -}}
 	{%- else -%}
 		{{- site.body_class -}}
 	{%- endif -%}
