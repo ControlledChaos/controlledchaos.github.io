@@ -4,7 +4,9 @@
 ///
 
 @use 'sass:color';
-@import '../modules/_variables';
+@use '../modules/variables';
+
+@use 'variables' as *;
 
 // Local fonts.
 @font-face {

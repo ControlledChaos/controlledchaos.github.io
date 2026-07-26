@@ -2,7 +2,8 @@
 /// Lightbox (modal) styles
 ///
 
-@import 'modules/_variables';
+@use 'modules/variables';
+@use 'variables' as *;
 
 body.compensate-for-scrollbar {
     overflow: hidden;
