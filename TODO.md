@@ -13,3 +13,4 @@
 - Snippets/Gists
 - Search form
 - Dark mode
+- Separate :root into subdirectory
