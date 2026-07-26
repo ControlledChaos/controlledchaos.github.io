@@ -30,14 +30,14 @@ paginate_first_page_path %}
 	</header>
 	{%- endif -%}
 
-	<figure class="align-right captioned-image front-intro-avatar">
-		<a href="assets/img/avatar-greg.jpg" data-fancybox data-caption="Artist's rendition of Greg">
-			<img src="assets/img/avatar-greg.jpg" alt="Greg's avatar" class="avatar" />
-		</a>
-		<figcaption>Artist's rendition of Greg</figcaption>
-	</figure>
-
 	<div class="front-page-content">
+		<figure class="align-right captioned-image front-intro-avatar">
+			<a href="assets/img/avatar-greg.jpg" data-fancybox data-caption="Artist's rendition of Greg">
+				<img src="assets/img/avatar-greg.jpg" alt="Greg's avatar" class="avatar" />
+			</a>
+			<figcaption>Artist's rendition of Greg</figcaption>
+		</figure>
+
 		{{ front_intro.content | markdownify }}
 	</div>
 </section>
