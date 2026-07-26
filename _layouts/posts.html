@@ -31,7 +31,7 @@ paginate_first_page_path %}
 	{%- endif -%}
 
 	<div class="front-page-content">
-		{{ front_intro.content }}
+		{{ front_intro }}
 	</div>
 </section>
 
@@ -39,7 +39,7 @@ paginate_first_page_path %}
 
 	<h2>Featured Projects</h2>
 	<div class="front-page-content">
-		{{ front_projects.content -}}
+		{{ front_projects -}}
 	</div>
 
 	{%- include featured-projects-grid.html projects = site.projects -%}
@@ -52,7 +52,7 @@ paginate_first_page_path %}
 
 	<h2>Latest Posts</h2>
 	<div class="front-page-content">
-		{{ front_posts.content -}}
+		{{ front_posts -}}
 	</div>
 
 	{%- include featured-posts-grid.html posts = site.posts limit = 3 index = first_page_path -%}
