@@ -671,18 +671,30 @@ figcaption {
   align-items: center;
   gap: 1rem 2rem;
 }
+@media screen and (max-width: 768px) {
+  .site-header .general-wrap {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .site-navigation {
+    transform: translateX(calc(var(--ccd-site-avatar--max-width, 80px) + var(--ccd-site-identity--gap--x, 1rem)));
+  }
+}
 
 .site-identity {
   display: flex;
   align-items: center;
-  gap: 0 1rem;
+  gap: var(--ccd-site-identity--gap--y, 0) var(--ccd-site-identity--gap--x, 1rem);
 }
 
 .site-avatar {
   margin: 0;
   padding: 0;
   display: inline-block;
-  max-width: 80px;
+  max-width: var(--ccd-site-avatar--max-width, 80px);
 }
 .site-avatar img {
   display: block;
