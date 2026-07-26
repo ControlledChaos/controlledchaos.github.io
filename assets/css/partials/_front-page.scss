@@ -12,7 +12,7 @@
 }
 
 .columns {
-	.front-intro-columns {
+	&.front-intro-columns {
 		flex-direction: row-reverse;
 		align-items: center;
 
