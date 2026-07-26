@@ -630,13 +630,13 @@ figcaption {
   padding: var(--ccd-wrap--general--padding);
 }
 
-.layout .columns {
+.layout.columns {
   display: flex;
   flex-wrap: wrap;
   gap: var(--ccd-spacing--vert) var(--ccd-spacing--horz);
 }
 @media screen and (max-width: 768px) {
-  .layout .columns .responsive {
+  .layout.columns.responsive {
     flex-direction: column;
   }
 }

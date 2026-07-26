@@ -282,12 +282,12 @@ figcaption {
 }
 
 .layout {
-	.columns {
+	&.columns {
 		display: flex;
 		flex-wrap: wrap;
 		gap: var( --ccd-spacing--vert ) var( --ccd-spacing--horz );
 
-		.responsive {
+		&.responsive {
 			@media screen and ( max-width: 768px ) {
 				flex-direction: column;
 			}
