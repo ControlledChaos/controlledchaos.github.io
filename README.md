@@ -1,7 +1,7 @@
 # Controlled Chaos Design
 
 ![GitHub Pages](https://img.shields.io/badge/GitHub-Pages-0969da.svg?logo=github&logoColor=white&logoSize=auto&style=flat-square)
-![Jekyll Website](https://img.shields.io/badge/Jekyll-v3.10.0-ffcc00.svg?logo=jekyll&logoColor=white&logoSize=auto&style=flat-square)
+![Jekyll Website](https://img.shields.io/badge/Jekyll-Engine-ffcc00.svg?logo=jekyll&logoColor=white&logoSize=auto&style=flat-square)
 ![Liquid Templates](https://img.shields.io/badge/Liquid-Templates-3399cc.svg?logo=shopify&logoColor=white&logoSize=auto&style=flat-square)
 ![SCSS Stylesheets](https://img.shields.io/badge/SCSS-Stylesheets-bf4080.svg?logo=sass&logoColor=white&logoSize=auto&style=flat-square)
 ![jQuery Enhancements](https://img.shields.io/badge/jQuery-Extras-0769ad.svg?logo=jquery&logoColor=white&logoSize=auto&style=flat-square)
