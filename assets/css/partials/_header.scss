@@ -25,6 +25,8 @@
 .site-avatar {
 	margin: 0;
 	padding: 0;
+	display: inline-block;
+	max-width: 80px;
 
 	img {
 		display: block;
