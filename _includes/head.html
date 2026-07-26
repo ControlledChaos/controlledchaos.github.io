@@ -45,9 +45,9 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-	{% for preload in fonts %}
+	{%- for preload in fonts %}
 		<link rel="preload" href='{{ "assets/fonts/" | append: preload | append: ".woff2" | relative_url }}' as="font" type="font/woff2" crossorigin />
-	{% endfor %}
+	{% endfor -%}
 
 	<!-- Swap `no-js` class with `js` class in html element. -->
 	<script>(function(html){html.className = html.className.replace(/\bno-js\b/,'js')})(document.documentElement);</script>
