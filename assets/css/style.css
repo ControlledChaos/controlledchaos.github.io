@@ -293,9 +293,9 @@ b, strong, optgroup {
   --ccd-color--green: #00aa00;
   --ccd-color--blue: #0044aa;
   --ccd-color--violet: #551188;
-  --ccd-color--theme--primary: #917a99;
-  --ccd-color--theme--primary--light: #a794ac;
-  --ccd-color--theme--primary--dark: #6d5775;
+  --ccd-color--theme--primary: #846f8b;
+  --ccd-color--theme--primary--light: #927b98;
+  --ccd-color--theme--primary--dark: #72577a;
   --ccd-color--theme--secondary: #9fb653;
   --ccd-color--theme--secondary--light: #b1cd48;
   --ccd-color--theme--secondary--dark: #7c9419;
@@ -382,7 +382,7 @@ b, strong, optgroup {
   --ccd-body--letter-spacing: 0.025em;
   --ccd-body--bg-color: #ffffff;
   --ccd-body--bg-color--dark: #1e1e1e;
-  --ccd-body--text-color: rgb(95.375, 76.125, 102.375);
+  --ccd-body--text-color: rgb(100.0909090909, 76.3851674641, 107.1148325359);
   --ccd-body--text-color--dark: #e8e8e8;
   --ccd-display--font-family: Crimson Pro, Georgia, Times, Times New Roman, serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
   --ccd-display--font-weight: 600;
@@ -396,15 +396,15 @@ b, strong, optgroup {
   --ccd-heading-primary--font-weight: 500;
   --ccd-heading-secondary--font-size: 1.5rem;
   --ccd-heading-secondary--font-weight: 600;
-  --ccd-heading-primary--text-color: #6d5775;
-  --ccd-heading-secondary--text-color: #6d5775;
+  --ccd-heading-primary--text-color: #72577a;
+  --ccd-heading-secondary--text-color: #72577a;
   --ccd-body--font-family: Red Hat Display, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen-Sans, Ubuntu, Cantarell, Helvetica Neue, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
   --ccd-body--font-size: 1rem;
   --ccd-body--line-height: 1.5;
   --ccd-site-header--padding:
   	calc( var( --ccd-spacing--vert ) / 2 )
   	var( --ccd-spacing--horz );
-  --ccd-site-header--bg-color: #917a99;
+  --ccd-site-header--bg-color: #846f8b;
   --ccd-site-header--text-color: #ffffff;
   --ccd-site-title--font-weight: 470;
   --ccd-site-title--text-color: #ffffff;
