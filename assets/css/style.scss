@@ -271,7 +271,7 @@ h6 {
 figcaption {
 	font-family: var( --ccd-fonts--secondary-stack );
 	font-size: 0.875em;
-	line-height: 1.25;
+	line-height: 1.2;
 	text-align: center;
 }
 
@@ -279,6 +279,20 @@ figcaption {
 	max-width: var( --ccd-wrap--general--max-width );
 	margin: var( --ccd-wrap--general--margin );
 	padding: var( --ccd-wrap--general--padding );
+}
+
+.layout {
+	.columns {
+		display: flex;
+		flex-wrap: wrap;
+		gap: var( --ccd-spacing--vert ) var( --ccd-spacing--horz );
+
+		.responsive {
+			@media screen and ( max-width: 768px ) {
+				flex-direction: column;
+			}
+		}
+	}
 }
 
 .button {
