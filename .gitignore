@@ -4,5 +4,4 @@ Gemfile.lock
 *.gem
 .jekyll-cache
 /dev/
-/example/
-/example/*
+/assets/css/modules/*.css
