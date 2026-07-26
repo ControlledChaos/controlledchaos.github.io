@@ -4,6 +4,7 @@
 
 .front-page-section {
 	margin-top: var( --ccd-spacing--vert, 2rem );
+	clear: both;
 
 	&:not( :first-of-type ) {
 		border-top: var( --ccd-box--border-style ) var( --ccd-box--border-width ) var( --ccd-box--border-color );
