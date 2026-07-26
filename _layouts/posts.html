@@ -13,9 +13,9 @@ paginate_first_page_path %}
 {{ content }}
 {%- endif %}
 
-{%- assign front_intro = site.pages | where: "path", "front-page/intro.md" | first -%}
-{%- assign front_projects = site.pages | where: "path", "front-page/projects.md" | first -%}
-{%- assign front_posts = site.pages | where: "path", "front-page/posts.md" | first -%}
+{%- assign front_intro = site.pages | where: "path", "front-page/intro.html" | first -%}
+{%- assign front_projects = site.pages | where: "path", "front-page/projects.html" | first -%}
+{%- assign front_posts = site.pages | where: "path", "front-page/posts.html" | first -%}
 
 <section id="front-page-intro" class="front-page-section">
 
@@ -31,7 +31,7 @@ paginate_first_page_path %}
 	{%- endif -%}
 
 	<div class="front-page-content">
-		{{ front_intro.content | markdownify }}
+		{{ front_intro.content }}
 	</div>
 </section>
 
@@ -39,7 +39,7 @@ paginate_first_page_path %}
 
 	<h2>Featured Projects</h2>
 	<div class="front-page-content">
-		{{ front_projects.content | markdownify -}}
+		{{ front_projects.content -}}
 	</div>
 
 	{%- include featured-projects-grid.html projects = site.projects -%}
@@ -52,7 +52,7 @@ paginate_first_page_path %}
 
 	<h2>Latest Posts</h2>
 	<div class="front-page-content">
-		{{ front_posts.content | markdownify -}}
+		{{ front_posts.content -}}
 	</div>
 
 	{%- include featured-posts-grid.html posts = site.posts limit = 3 index = first_page_path -%}
