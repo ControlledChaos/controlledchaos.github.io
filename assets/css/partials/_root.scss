@@ -41,11 +41,72 @@ $body_color_dark: $near_black !default;
 $text_color:      color.adjust($color: $theme_primary_dark, $lightness: -5%) !default;
 $text_color_dark: $off_white !default;
 
+// Local fonts.
+@font-face {
+	font-family: 'Crimson Pro';
+	font-weight: 200 900;
+	font-style: normal;
+	font-display: swap;
+	src: url( ../fonts/serif/crimson-pro.woff2 ) format( 'woff2' );
+}
+@font-face {
+	font-family: 'Crimson Pro';
+	font-weight: 200 900;
+	font-style: italic;
+	font-display: swap;
+	src: url( ../fonts/serif/crimson-pro-italic.woff2 ) format( 'woff2' );
+}
+@font-face {
+	font-family: 'Red Hat Display';
+	font-weight: 300 900;
+	font-style: normal;
+	font-display: swap;
+	src: url( ../fonts/serif/crimson-pro.woff2 ) format( 'woff2' );
+}
+@font-face {
+	font-family: 'Red Hat Display';
+	font-weight: 300 900;
+	font-style: italic;
+	font-display: swap;
+	src: url( ../fonts/serif/crimson-pro-italic.woff2 ) format( 'woff2' );
+}
+@font-face {
+	font-family: 'Red Hat Text';
+	font-weight: 300 700;
+	font-style: normal;
+	font-display: swap;
+	src: url( ../fonts/serif/crimson-pro.woff2 ) format( 'woff2' );
+}
+@font-face {
+	font-family: 'Red Hat Text';
+	font-weight: 300 700;
+	font-style: italic;
+	font-display: swap;
+	src: url( ../fonts/serif/crimson-pro-italic.woff2 ) format( 'woff2' );
+}
+@font-face {
+	font-family: 'Red Hat Mono';
+	font-weight: 300 700;
+	font-style: normal;
+	font-display: swap;
+	src: url( ../fonts/serif/crimson-pro.woff2 ) format( 'woff2' );
+}
+@font-face {
+	font-family: 'Red Hat Mono';
+	font-weight: 300 700;
+	font-style: italic;
+	font-display: swap;
+	src: url( ../fonts/serif/crimson-pro-italic.woff2 ) format( 'woff2' );
+}
+
+// Font stacks.
+$stack_display: 'Crimson Pro', Georgia, Times, 'Times New Roman', serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+
 $stack_general: 'Red Hat Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 
 $stack_secondary: 'Red Hat Text', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 
-$stack_display: 'Crimson Pro', Georgia, Times, 'Times New Roman', serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+$stack_monospace: 'Red Hat Mono', 'Roboto Mono', 'Fira Code', 'Liberation Mono', Inconsolata, Menlo, Monaco, Consolas, 'Cascadia Mono', 'Segoe UI Mono', 'Oxygen Mono', 'Ubuntu Monospace', 'Fira Mono', 'Droid Sans Mono', 'Courier New', Courier, ui-monospace, monospace, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 
 :root {
 
@@ -91,6 +152,7 @@ $stack_display: 'Crimson Pro', Georgia, Times, 'Times New Roman', serif, 'Apple 
 	--ccd-fonts--general-stack: #{$stack_general};
 	--ccd-fonts--secondary-stack: #{$stack_secondary};
 	--ccd-fonts--display-stack: #{$stack_display};
+	--ccd-fonts--monospace-stack: #{$stack_monospace};
 	--ccd-body--font-family: #{$stack_general};
 	--ccd-body--font-size: 1.0625rem;
 	--ccd-body--line-height: 1.525;
