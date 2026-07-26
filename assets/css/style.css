@@ -660,6 +660,11 @@ h6 {
   }
 }
 
+pre, code, kbd, samp {
+  font-family: var(--ccd-fonts--monospace-stack, "Courier New", Courier, monospace);
+  letter-spacing: unset !important;
+}
+
 .align-left {
   float: left;
   margin: 0 calc(var(--ccd-spacing--horz) / 2) calc(var(--ccd-spacing--vert) / 2) 0;
