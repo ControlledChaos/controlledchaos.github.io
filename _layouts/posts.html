@@ -32,8 +32,8 @@ paginate_first_page_path %}
 	<div class="front-page-content">
 		<div class="layout columns responsive front-intro-columns">
 			<figure class="captioned-image front-intro-avatar">
-				<a href='{{ page.avatar_image | prepend: "assets/img/" }}' data-fancybox data-caption="{{ page.avatar_caption }}">
-					<img src='{{ page.avatar_image | prepend: "assets/img/" }}' alt="{{ page.avatar_alt }}" class="avatar" />
+				<a href='{{ page.avatar_image | prepend: "assets/img/" | absolute_url }}' data-fancybox data-caption="{{ page.avatar_caption }}">
+					<img src='{{ page.avatar_image | prepend: "assets/img/" | absolute_url }}' alt="{{ page.avatar_alt }}" class="avatar" />
 				</a>
 				<figcaption>{{ page.avatar_caption }}</figcaption>
 			</figure>
