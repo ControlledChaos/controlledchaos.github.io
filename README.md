@@ -6,6 +6,7 @@
 ![HTML 5 Markup](https://img.shields.io/badge/HTML5-Markup-e44d26.svg?logo=html5&logoColor=white&logoSize=auto&style=flat-square)
 ![SCSS Stylesheets](https://img.shields.io/badge/SCSS-Stylesheets-bf4080.svg?logo=sass&logoColor=white&logoSize=auto&style=flat-square)
 ![jQuery Enhancements](https://img.shields.io/badge/jQuery-Extras-0769ad.svg?logo=jquery&logoColor=white&logoSize=auto&style=flat-square)
+![Google Free](https://img.shields.io/badge/Google-Free-ea4335.svg?logo=google&logoColor=white&logoSize=auto&style=flat-square)
 
 This is where all of the files live for the Controlled Chaos Design website the, web design & development site for Greg Sweet.
 
