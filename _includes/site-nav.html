@@ -3,49 +3,43 @@
 {%- assign best_match_len = 0 %}
 {%- assign site_nav = include.site-nav | default: site.site_nav | default: nil %}
 {%- if site_nav == nil %}
-  {%- assign site_nav = "" | split: " " %}
+	{%- assign site_nav = "" | split: " " %}
 {%- endif %}
 
 {%- for nav_item in site_nav %}
-  {%- assign nav_url = nav_item.url | default: '/' %}
-  {%- assign is_match = false %}
+	{%- assign nav_url = nav_item.url | default: '/' %}
+	{%- assign is_match = false %}
 
-  {%- if nav_url == '/' %}
-    {%- if current_url == '/' %}
-      {%- assign is_match = true %}
-    {%- endif %}
-  {%- else %}
-    {%- assign nav_last_char = nav_url | slice: -1, 1 %}
-    {%- if nav_last_char == '/' %}
-      {%- assign nav_prefix = nav_url %}
-    {%- else %}
-      {%- assign nav_prefix = nav_url | append: '/' %}
-    {%- endif %}
+	{%- if nav_url == '/' %}
+		{%- if current_url == '/' %}
+			{%- assign is_match = true %}
+		{%- endif %}
+	{%- else %}
+	{%- assign nav_last_char = nav_url | slice: -1, 1 %}
+		{%- if nav_last_char == '/' %}
+			{%- assign nav_prefix = nav_url %}
+		{%- else %}
+			{%- assign nav_prefix = nav_url | append: '/' %}
+		{%- endif %}
 
-    {%- assign nav_prefix_len = nav_prefix | size %}
-    {%- assign current_prefix = current_url | slice: 0, nav_prefix_len %}
+		{%- assign nav_prefix_len = nav_prefix | size %}
+		{%- assign current_prefix = current_url | slice: 0, nav_prefix_len %}
 
-    {%- if current_url == nav_url or current_prefix == nav_prefix %}
-      {%- assign is_match = true %}
-    {%- endif %}
-  {%- endif %}
+		{%- if current_url == nav_url or current_prefix == nav_prefix %}
+			{%- assign is_match = true %}
+		{%- endif %}
+	{%- endif %}
 
-  {%- if is_match %}
-    {%- assign nav_len = nav_url | size %}
-    {%- if nav_len > best_match_len -%}
-      {%- assign best_match_url = nav_url -%}
-      {%- assign best_match_len = nav_len -%}
-    {%- endif -%}
-  {%- endif -%}
+	{%- if is_match %}
+		{%- assign nav_len = nav_url | size %}
+		{%- if nav_len > best_match_len -%}
+			{%- assign best_match_url = nav_url -%}
+			{%- assign best_match_len = nav_len -%}
+		{%- endif -%}
+	{%- endif -%}
 {%- endfor -%}
+
 <nav id="site-navigation" class="site-navigation" role="directory" itemscope itemtype="http://schema.org/SiteNavigationElement">
-	<div class="menu-toggle">
-		<button class="menu-toggle-button" aria-controls="site-menu" aria-expanded="false">
-			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="theme-icon menu-icon menu-open"><path d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"/></svg>
-			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="theme-icon menu-icon menu-close"><path d="M207.6 256l107.72-107.72c6.23-6.23 6.23-16.34 0-22.58l-25.03-25.03c-6.23-6.23-16.34-6.23-22.58 0L160 208.4 52.28 100.68c-6.23-6.23-16.34-6.23-22.58 0L4.68 125.7c-6.23 6.23-6.23 16.34 0 22.58L112.4 256 4.68 363.72c-6.23 6.23-6.23 16.34 0 22.58l25.03 25.03c6.23 6.23 16.34 6.23 22.58 0L160 303.6l107.72 107.72c6.23 6.23 16.34 6.23 22.58 0l25.03-25.03c6.23-6.23 6.23-16.34 0-22.58L207.6 256z"/></svg>
-			Menu
-		</button>
-	</div>
 	<ul id="site-menu" class="site-menu">
 		{% for nav_item in site_nav %}
 			{%- if nav_item.url == best_match_url -%}

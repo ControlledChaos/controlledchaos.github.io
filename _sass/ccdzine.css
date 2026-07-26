@@ -851,9 +851,6 @@ figcaption {
   transform: scale(1);
 }
 
-.menu-toggle {
-  display: none;
-}
 .page-container {
   flex-grow: 1;
   container-type: inline-size;
