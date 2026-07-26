@@ -13,6 +13,10 @@ paginate_first_page_path %}
 {{ content }}
 {%- endif %}
 
+{%- assign front_intro = site.pages | where: "path", "front-page/intro.md" | first -%}
+{%- assign front_projects = site.pages | where: "path", "front-page/projects.md" | first -%}
+{%- assign front_posts = site.pages | where: "path", "front-page/posts.md" | first -%}
+
 <section id="front-page-intro" class="front-page-section">
 
 	{%- if page.title -%}
@@ -26,10 +30,15 @@ paginate_first_page_path %}
 	</header>
 	{%- endif -%}
 
+	<figure class="align-right captioned-image front-intro-avatar">
+		<a href="assets/img/avatar-greg.jpg" data-fancybox data-caption="Artist's rendition of Greg">
+			<img src="assets/img/avatar-greg.jpg" alt="Greg's avatar" class="avatar" />
+		</a>
+		<figcaption>Artist's rendition of Greg</figcaption>
+	</figure>
+
 	<div class="front-page-content">
-
-		{%- include front-page/intro.html -%}
-
+		{{ front_intro.content | markdownify }}
 	</div>
 </section>
 
@@ -37,7 +46,7 @@ paginate_first_page_path %}
 
 	<h2>Featured Projects</h2>
 	<div class="front-page-content">
-		{%- include front-page/projects.html -%}
+		{{ front_projects.content | markdownify -}}
 	</div>
 
 	{%- include featured-projects-grid.html projects = site.projects -%}
@@ -50,7 +59,7 @@ paginate_first_page_path %}
 
 	<h2>Latest Posts</h2>
 	<div class="front-page-content">
-		{%- include front-page/posts.html -%}
+		{{ front_posts.content | markdownify -}}
 	</div>
 
 	{%- include featured-posts-grid.html posts = site.posts limit = 3 index = first_page_path -%}
