@@ -258,12 +258,14 @@ h6 {
 	}
 }
 
-.inline-align-left {
+.align-left {
 	float: left;
+	margin: 0 calc( var( --ccd-spacing--horz ) / 2 ) calc( var( --ccd-spacing--vert ) / 2 ) 0;
 }
 
-.inline-align-right {
+.align-right {
 	float: right;
+	margin: 0 0 calc( var( --ccd-spacing--vert ) / 2 ) calc( var( --ccd-spacing--horz ) / 2 );
 }
 
 .general-wrap {
