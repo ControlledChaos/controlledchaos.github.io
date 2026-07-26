@@ -46,7 +46,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
 	{%- for preload in fonts %}
-		<link rel="preload" href='{{ "assets/fonts/" | append: preload | append: ".woff2" | absolute_url }}' as="font" type="font/woff2" crossorigin />
+		<link rel="preload" href='{{ "assets/fonts/" | append: preload | append: ".woff2" | relative_url }}' as="font" type="font/woff2" crossorigin />
 	{% endfor -%}
 
 	<!-- Swap `no-js` class with `js` class in html element. -->
