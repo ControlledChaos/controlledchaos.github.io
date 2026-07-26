@@ -709,6 +709,11 @@ figcaption {
   word-spacing: var(--ccd-site-title--word-spacing, var(--ccd-heading-primary--word-spacing, -0.0325em));
   color: var(--ccd-site-title--text-color, inherit);
 }
+@media screen and (max-width: 960px) {
+  .site-title {
+    text-align: center;
+  }
+}
 .site-title a {
   color: inherit;
 }
@@ -732,8 +737,14 @@ figcaption {
   margin: 0;
   padding: 0;
   display: flex;
-  gap: 0.5rem 0.75rem;
+  flex-wrap: wrap;
+  gap: 0 0.75rem;
   color: #ffffff;
+}
+@media screen and (max-width: 960px) {
+  .site-menu {
+    justify-content: center;
+  }
 }
 .site-menu li {
   display: inherit;
@@ -885,7 +896,7 @@ figcaption {
 }
 @media screen and (max-width: 768px) {
   .layout.columns.responsive.front-intro-columns {
-    flex-direction: column;
+    flex-direction: column-reverse;
     align-items: center;
   }
 }

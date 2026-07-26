@@ -53,6 +53,10 @@
 	word-spacing: var( --ccd-site-title--word-spacing, var( --ccd-heading-primary--word-spacing, -0.0325em ) );
 	color: var( --ccd-site-title--text-color, inherit );
 
+	@media screen and ( max-width: 960px ) {
+		text-align: center;
+	}
+
 	a {
 		color: inherit;
 
@@ -79,8 +83,13 @@
 	margin: 0;
 	padding: 0;
 	display: flex;
-	gap: 0.5rem 0.75rem;
+	flex-wrap: wrap;
+	gap: 0 0.75rem;
 	color: #ffffff;
+
+	@media screen and ( max-width: 960px ) {
+		justify-content: center;
+	}
 
 	li {
 		display: inherit;
