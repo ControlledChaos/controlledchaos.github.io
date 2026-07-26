@@ -880,11 +880,11 @@ figcaption {
   border-top: var(--ccd-box--border-style) var(--ccd-box--border-width) var(--ccd-box--border-color);
 }
 
-.front-intro-columns {
+.layout.columns.responsive.front-intro-columns {
   flex-direction: row-reverse;
 }
 @media screen and (max-width: 768px) {
-  .front-intro-columns {
+  .layout.columns.responsive.front-intro-columns {
     flex-direction: column;
     align-items: center;
   }
@@ -901,6 +901,8 @@ figcaption {
 @media screen and (max-width: 768px) {
   .front-intro-avatar {
     width: 320px;
+  }
+  .front-intro-avatar img {
     border-radius: unset;
   }
 }

@@ -11,12 +11,18 @@
 	}
 }
 
-.front-intro-columns {
-	flex-direction: row-reverse;
+.layout {
+	&.columns {
+		&.responsive {
+			&.front-intro-columns {
+				flex-direction: row-reverse;
 
-	@media screen and ( max-width: 768px ) {
-		flex-direction: column;
-		align-items: center;
+				@media screen and ( max-width: 768px ) {
+					flex-direction: column;
+					align-items: center;
+				}
+			}
+		}
 	}
 }
 
@@ -30,6 +36,9 @@
 
 	@media screen and ( max-width: 768px ) {
 		width: 320px;
-		border-radius: unset;
+
+		img {
+			border-radius: unset;
+		}
 	}
 }
