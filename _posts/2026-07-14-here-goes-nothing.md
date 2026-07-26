@@ -6,4 +6,10 @@ post_thumb: static-thumb.jpg
 tags: [websites, portfolio, stories]
 ---
 
-Bacon ipsum dolor amet filet mignon rump ball tip flank burgdoggen picanha pastrami chuck jerky turkey andouille short ribs pig cupim. Rump burgdoggen chicken picanha flank biltong. Tail pork loin short ribs filet mignon, shank landjaeger tongue cow bacon shankle pork chop alcatra porchetta chislic beef ribs. Cow pork chop strip steak beef ribs, buffalo bacon hamburger pastrami. Doner flank capicola, bacon pig leberkas salami tongue sausage pork chop ham hock short loin jowl cow. Swine ground round ham shank tail porchetta beef sausage cow filet mignon.
+I built my first complete website in 2006 while living in a donkey barn. The site was for the my employers, the folks that owned the donkeys, and the business that we operated. My first website client hired me in 2010. Since then I have built many websites as a subcontractor, and many more for my own clients. In all that time I have not had a website dedicated to my coding shenanigans, nor have I had any sort of portfolio.
+
+Sure, I have started websites for myself, but I have never finished one. I have had domain names, hosting accounts, color schemes imagined, graphic concocted, and a string of incomplete GitHub repositories. Now that I am a geezer, I feel the need to put up a website for the Controlled Chaos Design name that I have used since 1994, even if nobody reads it or if it doesn't attract a single client.
+
+So here goes nothing. On July 14th, 2026, I have spun up yet another GitHub repository. This time not for a WordPress theme and a companion plugin, it will be an adventure in learning how to use GitHub to host a website, and learn the platforms that it uses.
+
+If you are reading this I suppose I had some degree of success.
