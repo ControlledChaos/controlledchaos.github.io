@@ -632,7 +632,6 @@ figcaption {
 
 .layout.columns {
   display: flex;
-  flex-wrap: wrap;
   gap: var(--ccd-spacing--vert) var(--ccd-spacing--horz);
 }
 @media screen and (max-width: 768px) {
@@ -879,6 +878,15 @@ figcaption {
 }
 .front-page-section:not(:first-of-type) {
   border-top: var(--ccd-box--border-style) var(--ccd-box--border-width) var(--ccd-box--border-color);
+}
+
+.front-intro-columns {
+  flex-direction: row-reverse;
+}
+@media screen and (max-width: 768px) {
+  .front-intro-columns {
+    flex-direction: column;
+  }
 }
 
 .front-page-content {

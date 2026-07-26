@@ -284,7 +284,6 @@ figcaption {
 .layout {
 	&.columns {
 		display: flex;
-		flex-wrap: wrap;
 		gap: var( --ccd-spacing--vert ) var( --ccd-spacing--horz );
 
 		&.responsive {

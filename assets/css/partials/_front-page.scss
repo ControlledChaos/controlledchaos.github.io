@@ -11,6 +11,14 @@
 	}
 }
 
+.front-intro-columns {
+	flex-direction: row-reverse;
+
+	@media screen and ( max-width: 768px ) {
+		flex-direction: column;
+	}
+}
+
 .front-page-content {
 	max-width: 960px;
 }
