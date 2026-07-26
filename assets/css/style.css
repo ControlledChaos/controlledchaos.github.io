@@ -632,7 +632,7 @@ figcaption {
 
 .layout.columns {
   display: flex;
-  gap: 0 var(--ccd-spacing--horz);
+  gap: calc(var(--ccd-spacing--vert) / 2) calc(var(--ccd-spacing--horz) / 2);
 }
 @media screen and (max-width: 768px) {
   .layout.columns.responsive {
@@ -886,7 +886,7 @@ figcaption {
 @media screen and (max-width: 768px) {
   .front-intro-columns {
     flex-direction: column;
-    justify-content: center;
+    align-items: center;
   }
 }
 
@@ -896,6 +896,13 @@ figcaption {
 
 .front-intro-avatar {
   width: 160px;
+  min-width: 160px;
+}
+@media screen and (max-width: 768px) {
+  .front-intro-avatar {
+    width: 320px;
+    border-radius: unset;
+  }
 }
 
 .posts-list {

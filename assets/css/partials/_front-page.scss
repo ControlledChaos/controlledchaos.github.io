@@ -16,7 +16,7 @@
 
 	@media screen and ( max-width: 768px ) {
 		flex-direction: column;
-		justify-content: center;
+		align-items: center;
 	}
 }
 
@@ -26,4 +26,10 @@
 
 .front-intro-avatar {
 	width: 160px;
+	min-width: 160px;
+
+	@media screen and ( max-width: 768px ) {
+		width: 320px;
+		border-radius: unset;
+	}
 }
