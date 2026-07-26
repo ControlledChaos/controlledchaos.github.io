@@ -2,6 +2,8 @@
 /// General styles
 ///
 
+@use '../modules/layout';
+
 body {
 	display: var( --ccd-body--display, flex );
 	flex-direction: var( --ccd-body--flex-direction, column );
@@ -285,7 +287,7 @@ pre, code, kbd, samp {
 	gap: calc( var( --ccd-spacing--vert ) / 2 ) calc( var( --ccd-spacing--horz ) / 2 );
 
 	&.responsive {
-		@media screen and ( max-width: 768px ) {
+		@media screen and ( max-width: layout.$bp_med ) {
 			flex-direction: column;
 		}
 	}

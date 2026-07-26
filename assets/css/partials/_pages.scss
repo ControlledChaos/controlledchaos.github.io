@@ -2,6 +2,8 @@
 ///  Pages styles
 ///
 
+@use '../modules/layout';
+
 .page-container {
 	flex-grow: 1;
 	container-type: inline-size;
@@ -19,7 +21,7 @@
 	margin: var( --cfe-page-container--page--margin, 0 auto );
 	padding: var( --cfe-page-container--page--padding );
 
-	@container page-wrap ( max-width: 960px ) {
+	@container page-wrap ( max-width: layout.$bp_med ) {
 		flex-direction: column;
 	}
 }
@@ -38,11 +40,11 @@
 	justify-content: var( --cfe-page-wrap--justify-content );
 	gap: var( --cfe-page-wrap--gap, var( --cfe-spacing--vert, 2rem ) var( --cfe-spacing--horz, 2rem ) );
 
-	@container page-wrap ( max-width: 960px ) {
+	@container page-wrap ( max-width: layout.$bp_med ) {
 		flex-direction: column;
 	}
 
-	@media screen and ( max-width: 960px ) {
+	@media screen and ( max-width: layout.$bp_med ) {
 		flex-direction: column;
 	}
 }

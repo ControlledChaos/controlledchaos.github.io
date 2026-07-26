@@ -2,6 +2,8 @@
 /// Front page styles
 ///
 
+@use '../modules/layout';
+
 .front-page-section {
 	margin-top: var( --ccd-spacing--vert, 2rem );
 	clear: both;
@@ -16,7 +18,7 @@
 		flex-direction: row-reverse;
 		align-items: center;
 
-		@media screen and ( max-width: 768px ) {
+		@media screen and ( max-width: layout.$bp_med ) {
 			flex-direction: column-reverse;
 			align-items: center;
 		}
@@ -24,14 +26,14 @@
 }
 
 .front-page-content {
-	max-width: 960px;
+	max-width: layout.$bp_med;
 }
 
 .front-intro-avatar {
 	width: 160px;
 	min-width: 160px;
 
-	@media screen and ( max-width: 768px ) {
+	@media screen and ( max-width: layout.$bp_med ) {
 		width: 320px;
 
 		img {

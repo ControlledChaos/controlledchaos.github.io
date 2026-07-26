@@ -2,6 +2,8 @@
 /// Site header styles
 ///
 
+@use '../modules/layout';
+
 .site-header {
 	margin: var( --ccd-site-header--margin, 0 );
 	padding: var( --ccd-site-header--padding, 2rem );
@@ -14,7 +16,7 @@
 		align-items: center;
 		gap: calc( var( --ccd-spacing--vert ) / 4 ) var( --ccd-spacing--horz );
 
-		@media screen and ( max-width: 960px ) {
+		@media screen and ( max-width: layout.$bp_med ) {
 			flex-direction: column;
 		}
 	}
@@ -25,7 +27,7 @@
 	align-items: center;
 	gap: calc( var( --ccd-spacing--vert ) / 4 ) calc( var( --ccd-spacing--horz ) / 2 );
 
-	@media screen and ( max-width: 960px ) {
+	@media screen and ( max-width: layout.$bp_med ) {
 		flex-direction: column;
 	}
 }
@@ -53,7 +55,7 @@
 	word-spacing: var( --ccd-site-title--word-spacing, var( --ccd-heading-primary--word-spacing, -0.0325em ) );
 	color: var( --ccd-site-title--text-color, inherit );
 
-	@media screen and ( max-width: 960px ) {
+	@media screen and ( max-width: layout.$bp_med ) {
 		text-align: center;
 	}
 
@@ -87,7 +89,7 @@
 	gap: 0 0.75rem;
 	color: #ffffff;
 
-	@media screen and ( max-width: 960px ) {
+	@media screen and ( max-width: layout.$bp_med ) {
 		justify-content: center;
 	}
 

@@ -2,6 +2,8 @@
 /// Aside/sidebar content
 ///
 
+@use '../modules/layout';
+
 .page-sidebar {
 	position: var( --ccd-sidebar--position );
 	display: var( --ccd-sidebar--display, flex );
@@ -33,7 +35,7 @@
 		color: var( --ccd-sidebar--text-color--dark, inherit );
 	}
 
-	@container page-wrap ( max-width: 960px ) {
+	@container page-wrap ( max-width: layout.$bp_med ) {
 		display: var( --ccd-sidebar--bottom--display, var( --ccd-sidebar--display, grid ) );
 		grid-template-columns: var( --ccd-sidebar--bottom--grid-template-columns, var( --ccd-sidebar--grid-template-columns, repeat( 2, 1fr ) ) );
 		gap:  var( --ccd-sidebar--bottom--gap, var( --ccd-spacing--vert, 2rem ) var( --ccd-spacing--horz, 2rem ) );
@@ -44,7 +46,7 @@
 		color: var( --ccd-sidebar--bottom--text-color, var( --ccd-sidebar--text-color, inherit ) );
 	}
 
-	@media screen and ( max-width: 960px ) {
+	@media screen and ( max-width: layout.$bp_med ) {
 		display: var( --ccd-sidebar--bottom--display, var( --ccd-sidebar--display, grid ) );
 		grid-template-columns: var( --ccd-sidebar--bottom--grid-template-columns, var( --ccd-sidebar--grid-template-columns, repeat( 2, 1fr ) ) );
 		gap:  var( --ccd-sidebar--bottom--gap, var( --ccd-spacing--vert, 2rem ) var( --ccd-spacing--horz, 2rem ) );
@@ -80,10 +82,10 @@
 		&:not( :first-of-type ) {
 			margin-top: var( --ccd-sidebar--plugin--margin-top, calc( var( --ccd-spacing--vert ) * .75 ) );
 
-			@container page-wrap ( max-width: 960px ) {
+			@container page-wrap ( max-width: layout.$bp_med ) {
 				margin-top: 0;
 			}
-			@media screen and ( max-width: 960px ) {
+			@media screen and ( max-width: layout.$bp_med ) {
 				margin-top: 0;
 			}
 			@container page-wrap ( max-width: 640px ) {
