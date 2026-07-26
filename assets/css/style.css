@@ -707,6 +707,7 @@ pre, code, kbd, samp {
 
 .main-article a {
   text-decoration: underline;
+  text-underline-offset: 0.375em;
 }
 
 .align-left {
@@ -1204,6 +1205,9 @@ figcaption {
   list-style: none;
   display: flex;
   justify-content: space-between;
+}
+.post-navigation li {
+  font-weight: 600;
 }
 .post-navigation svg {
   display: inline-block;

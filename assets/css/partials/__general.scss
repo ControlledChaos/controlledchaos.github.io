@@ -296,6 +296,7 @@ pre, code, kbd, samp {
 .main-article {
 	a {
 		text-decoration: underline;
+		text-underline-offset: 0.375em; // 6px at 16px font size.
 	}
 }
 

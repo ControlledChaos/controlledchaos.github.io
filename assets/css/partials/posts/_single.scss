@@ -74,6 +74,10 @@
 	display: flex;
 	justify-content: space-between;
 
+	li {
+		font-weight: 600;
+	}
+
 	svg {
 		display: inline-block;
 		height: 1em;
