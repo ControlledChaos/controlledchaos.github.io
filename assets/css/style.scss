@@ -2,16 +2,16 @@
 /// Compile SCSS partials
 ///
 
-@import 'partials/_reset';
-@import 'partials/_colors';
-@import 'partials/_typography';
-@import 'partials/_root';
-@import 'partials/_general';
+@use 'partials/_reset';
+@use 'partials/_colors';
+@use 'partials/_typography';
+@use 'partials/_root';
+@use 'partials/_general';
 
-@import 'partials/_header';
-@import 'partials/_pages';
-@import 'partials/_front-page';
-@import 'partials/_posts';
-@import 'partials/_projects';
-@import 'partials/_aside';
-@import 'partials/_footer';
+@use 'partials/_header';
+@use 'partials/_pages';
+@use 'partials/_front-page';
+@use 'partials/_posts';
+@use 'partials/_projects';
+@use 'partials/_aside';
+@use 'partials/_footer';

@@ -4,7 +4,7 @@
 /// Easier to find what you are looking for.
 ///
 
-@import 'posts/_loop-list';
-@import 'posts/_loop-grid';
-@import 'posts/_loop-full';
-@import 'posts/_single';
+@use 'posts/_loop-list';
+@use 'posts/_loop-grid';
+@use 'posts/_loop-full';
+@use 'posts/_single';
