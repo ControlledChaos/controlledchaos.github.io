@@ -260,6 +260,14 @@ h6 {
 	}
 }
 
+.inline-align-left {
+	float: left;
+}
+
+.inline-align-right {
+	float: right;
+}
+
 .general-wrap {
 	max-width: var( --ccd-wrap--general--max-width );
 	margin: var( --ccd-wrap--general--margin );
