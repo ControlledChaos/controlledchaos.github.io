@@ -1,0 +1,103 @@
+///
+///  Pages styles
+///
+
+.page-container {
+	flex-grow: 1;
+	container-type: inline-size;
+	container-name: page-wrap;
+	display: var( --cfe-page-container--page--display, block );
+	position: var( --cfe-page-container--page--position );
+	overflow-x: var( --cfe-page-container--page--overflow-x );
+	overflow-y: var( --cfe-page-container--page--overflow-y );
+	width: var( --cfe-page-container--page--width, 100% );
+	max-width: var( --cfe-page-container--page--max-width, 100% );
+	min-width: var( --cfe-page-container--page--min-width );
+	height: var( --cfe-page-container--page--height );
+	max-height: var( --cfe-page-container--page--max-height );
+	min-height: var( --cfe-page-container--page--min-height );
+	margin: var( --cfe-page-container--page--margin, 0 auto );
+	padding: var( --cfe-page-container--page--padding );
+
+	@container page-wrap ( max-width: 960px ) {
+		flex-direction: column;
+	}
+}
+
+.page-wrap {
+	position: var( --cfe-page-wrap--position );
+	width: var( --cfe-page-wrap--width, 100% );
+	max-width: var( --cfe-page-wrap--max-width, 100% );
+	height: var( --cfe-page-wrap--height );
+	margin: var( --cfe-page-wrap--margin, var( --cfe-spacing--vert, 2rem ) auto );
+	padding: var( --cfe-page-wrap--padding, 0 var( --cfe-spacing--horz, 2rem ) );
+	display: var( --cfe-page-wrap--display, flex );
+	flex-direction: var( --cfe-page-wrap--flex-direction, row );
+	flex-wrap: var( --cfe-page-wrap--flex-wrap, nowrap );
+	align-items: var( --cfe-page-wrap--align-items );
+	justify-content: var( --cfe-page-wrap--justify-content );
+	gap: var( --cfe-page-wrap--gap, var( --cfe-spacing--vert, 2rem ) var( --cfe-spacing--horz, 2rem ) );
+
+	@container page-wrap ( max-width: 960px ) {
+		flex-direction: column;
+	}
+
+	@media screen and ( max-width: 960px ) {
+		flex-direction: column;
+	}
+}
+
+.page-main {
+	width: 100%;
+}
+
+.page-title {
+	font-size: var( --ccd-page-title--font-size, var( --ccd-heading-primary--font-size, 2rem ) );
+	font-weight: var( --ccd-page-title--font-weight, var( --ccd-heading-primary--font-weight, 700 ) );
+	line-height: 1.2;
+}
+
+.page-subtitle {
+	margin: var( --ccd-page-subtitle--margin, 0 );
+	font-family: var( --ccd-page-subtitle--font-family );
+	font-size: var( --ccd-page-subtitle--font-size, 1.1875rem );
+	font-weight: var( --ccd-page-subtitle--font-weight, 500 );
+	line-height: 1.2;
+	color: var( --ccd-color--theme--primary--dark );
+}
+
+.article {
+	h1, h2, h3, h4, h5, h6, p, ul, ol, table {
+		margin-top: 1rem;
+	}
+}
+
+.pagination-nav ul {
+	list-style: none;
+	width: 100%;
+	margin: 0;
+	padding: var( --ccd-spacing--vert, 2rem ) var( --ccd-spacing--horz, 2rem );
+	display: flex;
+	justify-content: center;
+	gap: 0 0.5em;
+
+	svg {
+		display: inline-block;
+		height: 1em;
+		vertical-align: middle;
+		vertical-align: center;
+	}
+
+	.current-page {
+		cursor: default;
+		font-weight: 625;
+		text-decoration: underline;
+		opacity: 0.7;
+	}
+}
+
+.rtl {
+	.pagi-nav-icon {
+		transform: scaleX(-1);
+	}
+}

@@ -671,6 +671,40 @@ pre, code, kbd, samp {
   letter-spacing: unset !important;
 }
 
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: calc(var(--ccd-body--font-size, 1rem) / 2);
+  font-family: var(--ccd-fonts--display-stack);
+  font-size: var(--ccd-button--font-size, 1.125rem);
+  font-weight: var(--ccd-button--font-weight, 500);
+  line-height: var(--ccd-button--line-height, 1);
+  background-color: var(--ccd-button--bg-color, var(--ccd-color--theme--secondary));
+  color: var(--ccd-button--text-color, #ffffff);
+  transition: all 0.25s;
+}
+.button:hover, .button:focus {
+  background-color: var(--ccd-button--bg-color--action, var(--ccd-color--theme--secondary--light));
+  color: var(--ccd-button--text-color--action, #ffffff);
+}
+
+.general-wrap {
+  max-width: var(--ccd-wrap--general--max-width);
+  margin: var(--ccd-wrap--general--margin);
+  padding: var(--ccd-wrap--general--padding);
+}
+
+.layout.columns {
+  display: flex;
+  gap: calc(var(--ccd-spacing--vert) / 2) calc(var(--ccd-spacing--horz) / 2);
+}
+@media screen and (max-width: 768px) {
+  .layout.columns.responsive {
+    flex-direction: column;
+  }
+}
+
 .align-left {
   float: left;
   margin: 0 calc(var(--ccd-spacing--horz) / 2) calc(var(--ccd-spacing--vert) / 2) 0;
@@ -690,40 +724,6 @@ figcaption {
   font-size: 0.875em;
   line-height: 1.2;
   text-align: center;
-}
-
-.general-wrap {
-  max-width: var(--ccd-wrap--general--max-width);
-  margin: var(--ccd-wrap--general--margin);
-  padding: var(--ccd-wrap--general--padding);
-}
-
-.layout.columns {
-  display: flex;
-  gap: calc(var(--ccd-spacing--vert) / 2) calc(var(--ccd-spacing--horz) / 2);
-}
-@media screen and (max-width: 768px) {
-  .layout.columns.responsive {
-    flex-direction: column;
-  }
-}
-
-.button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: calc(var(--ccd-body--font-size, 1rem) / 2);
-  font-family: var(--ccd-fonts--display-stack);
-  font-size: var(--ccd-button--font-size, 1.125rem);
-  font-weight: var(--ccd-button--font-weight, 500);
-  line-height: var(--ccd-button--line-height, 1);
-  background-color: var(--ccd-button--bg-color, var(--ccd-color--theme--secondary));
-  color: var(--ccd-button--text-color, #ffffff);
-  transition: all 0.25s;
-}
-.button:hover, .button:focus {
-  background-color: var(--ccd-button--bg-color--action, var(--ccd-color--theme--secondary--light));
-  color: var(--ccd-button--text-color--action, #ffffff);
 }
 
 .site-header {

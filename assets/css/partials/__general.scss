@@ -1,0 +1,315 @@
+///
+/// General styles
+///
+
+body {
+	display: var( --ccd-body--display, flex );
+	flex-direction: var( --ccd-body--flex-direction, column );
+	overflow-x: var( --ccd-body--overflow-x, hidden );
+	overflow-y: var( --ccd-body--overflow-y );
+	position: var( --ccd-body--position, relative );
+	width: var( --ccd-body--width, 100% );
+	height: var( --ccd-body--height, 100% );
+	max-width: var( --ccd-body--max-width, 2048px );
+	max-height: var( --ccd-body--max-height );
+	min-height: var( --ccd-body--min-height, 100vh );
+	margin: var( --ccd-body--margin, 0 auto );
+	padding: var( --ccd-body--padding, 0 );
+	font-family: var( --ccd-body--font-family, var( --ccd-fonts--sans-stack, sans-serif ) );
+	font-size: var( --ccd-body--font-size, 1rem );
+	font-weight: var( --ccd-body--font-weight, normal );
+	font-style: var( --ccd-body--font-style, normal );
+	font-variant: var( --ccd-body--font-variant, normal );
+	font-stretch: var( --ccd-body--font-stretch, normal );
+	text-decoration: var( --ccd-body--text-decoration );
+	text-transform: var( --ccd-body--text-transform );
+	letter-spacing: var( --ccd-body--letter-spacing, normal );
+	word-spacing: var( --ccd-body--word-spacing, normal );
+	line-height: var( --ccd-body--line-height, 1.5 );
+	background-color: var( --ccd-body--bg-color );
+	background-image: var( --ccd-body--bg-image );
+	background-repeat: var( --ccd-body--bg-repeat );
+	background-position: var( --ccd-body--bg-position );
+	background-size: var( --ccd-body--bg-size );
+	background-attachment: var( --ccd-body--bg-attachment );
+	color: var( --ccd-body--text-color );
+
+	@media ( prefers-color-scheme: dark ) {
+		background-color: var( --ccd-body--bg-color--dark );
+		color: var( --ccd-body--text-color--dark );
+	}
+}
+
+///
+/// Screen reader text
+///
+/// Use when text needs to be hidden for
+/// display purposes but needs to be in
+/// the DOM for visually impaired/blind
+/// people and for search engines.
+///
+/// No variables because this class does
+/// not need to/ought not change.
+.screen-reader-text {
+	border: 0;
+	clip: rect( 1px, 1px, 1px, 1px );
+	-webkit-clip-path: inset(50%);
+	        clip-path: inset(50%);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute !important;
+	width: 1px;
+	word-wrap: normal !important;
+}
+
+// JavaScript helper classes.
+.no-js {
+	.hide-if-no-js {
+		display: none !important;
+	}
+}
+.js {
+	.hide-if-js {
+		display: none !important;
+	}
+}
+
+// General block text elements.
+h1, h2, h3, h4, h5, h6, p, ul, ol, blockquote, fieldset, table, pre {
+	margin: var( --ccd-element--margin, calc( var( --ccd-spacing--vert ) / 2 ) 0 0 0 );
+	padding: var( --ccd-element--padding );
+}
+
+a {
+	display: var( --ccd-link--display );
+	position: var( --ccd-link--position );
+	font-size: var( --ccd-link--font-size, inherit );
+	font-weight: var( --ccd-link--font-weight, inherit );
+	font-style: var( --ccd-link--font-style, inherit );
+	font-variant: var( --ccd-link--font-variant, inherit );
+	font-stretch: var( --ccd-link--font-stretch, inherit );
+	text-decoration: var( --ccd-link--text-decoration );
+	text-underline-offset: var( --ccd-link--text-underline-offset );
+	text-transform: var( --ccd-link--text-transform, inherit );
+	letter-spacing: var( --ccd-link--letter-spacing, inherit );
+	word-spacing: var( --ccd-link--word-spacing, inherit );
+	color: var( --ccd-link--text-color );
+	transition: var( --ccd-link--transition, all 0.15s );
+
+	@media ( prefers-color-scheme: dark ) {
+		color: var( --ccd-link--text-color--dark );
+	}
+
+	&:hover,
+	&:focus {
+		color: var( --ccd-link--action--text-color );
+
+		@media ( prefers-color-scheme: dark ) {
+			color: var( --ccd-link--action--text-color--dark );
+		}
+	}
+
+	// Pseudo elements for custom hover effects.
+	&:before {
+		content: var( --ccd-link--before--content );
+		display: var( --ccd-link--before--display );
+		position: var( --ccd-link--before--position );
+		width: var( --ccd-link--before--width );
+		height: var( --ccd-link--before--height );
+		background-color: var( --ccd-link--before--bg-color );
+
+		@media ( prefers-color-scheme: dark ) {
+			background-color: var( --ccd-link--before--bg-color--dark );
+		}
+	}
+
+	&:after {
+		content: var( --ccd-link--after--content );
+		display: var( --ccd-link--after--display );
+		position: var( --ccd-link--after--position );
+		width: var( --ccd-link--after--width );
+		height: var( --ccd-link--after--height );
+		background-color: var( --ccd-link--after--bg-color );
+
+		@media ( prefers-color-scheme: dark ) {
+			background-color: var( --ccd-link--after--bg-color--dark );
+		}
+	}
+}
+
+h1,
+h2 {
+	font-family: var( --ccd-heading-primary--font-family, var( --ccd-fonts--display-stack, inherit ) );
+	font-size: var( --ccd-heading-primary--font-size, 2rem );
+	font-weight: var( --ccd-heading-primary--font-weight, 700 );
+	font-style: var( --ccd-heading-primary--font-style, inherit );
+	font-variant: var( --ccd-heading-primary--font-variant, inherit );
+	font-stretch: var( --ccd-heading-primary--font-stretch, normal );
+	line-height: var( --ccd-heading-primary--line-height, inherit );
+	letter-spacing: var( --ccd-heading-primary--letter-spacing, -0.015em );
+	word-spacing: var( --ccd-heading-primary--word-spacing, 0.05em );
+	text-decoration: var( --ccd-heading-primary--text-decoration );
+	text-transform: var( --ccd-heading-primary--text-transform );
+	color: var( --ccd-heading-primary--text-color, var( --ccd-body--text-color ) );
+
+	@media ( prefers-color-scheme: dark ) {
+		color: var( --ccd-heading-primary--text-color--dark, var( --ccd-body--text-color--dark ) );
+	}
+
+	a {
+		font-family: var( --ccd-heading-primary--link--font-family, inherit );
+		font-size: var( --ccd-heading-primary--link--font-size, inherit );
+		font-weight: var( --ccd-heading-primary--link--font-weight, inherit );
+		font-style: var( --ccd-heading-primary--link--font-style, inherit );
+		font-variant: var( --ccd-heading-primary--link--font-variant, inherit );
+		font-stretch: var( --ccd-heading-primary--link--font-stretch, inherit );
+		text-decoration: var( --ccd-heading-primary--link--text-decoration, none );
+		text-transform: var( --ccd-heading-primary--link--text-transform );
+		color: var( --ccd-heading-primary--link--text-color, var( --ccd-link--text-color ) );
+
+		@media ( prefers-color-scheme: dark ) {
+			color: var( --ccd-heading-primary--link--text-color--dark, var( --ccd-link--text-color--dark ) );
+		}
+
+		&:hover,
+		&:focus {
+			color: var( --ccd-heading-primary--link--action--text-color, var( --ccd-link--action--text-color ) );
+
+			@media ( prefers-color-scheme: dark ) {
+				color: var( --ccd-heading-primary--link--action--text-color--dark, var( --ccd-link--action--text-color--dark ) );
+			}
+		}
+	}
+}
+
+h3,
+h4 {
+	font-family: var( --ccd-heading-secondary--font-family, var( --ccd-fonts--display-stack, inherit ) );
+	font-size: var( --ccd-heading-secondary--font-size, 1.375rem );
+	font-weight: var( --ccd-heading-secondary--font-weight, 700 );
+	font-style: var( --ccd-heading-secondary--font-style, inherit );
+	font-variant: var( --ccd-heading-secondary--font-variant, inherit );
+	font-stretch: var( --ccd-heading-secondary--font-stretch, inherit );
+	line-height: var( --ccd-heading-secondary--line-height, inherit );
+	letter-spacing: var( --ccd-heading-secondary--letter-spacing, normal );
+	word-spacing: var( --ccd-heading-secondary--word-spacing, normal );
+	text-decoration: var( --ccd-heading-secondary--text-decoration );
+	text-transform: var( --ccd-heading-secondary--text-transform );
+	color: var( --ccd-heading-secondary--text-color, var( --ccd-body--text-color ) );
+
+	@media ( prefers-color-scheme: dark ) {
+		color: var( --ccd-heading-secondary--text-color--dark, var( --ccd-body--text-color--dark ) );
+	}
+
+	a {
+		font-family: var( --ccd-heading-secondary--link--font-family, inherit );
+		font-size: var( --ccd-heading-secondary--link--font-size, inherit );
+		font-weight: var( --ccd-heading-secondary--link--font-weight, inherit );
+		font-style: var( --ccd-heading-secondary--link--font-style, inherit );
+		font-variant: var( --ccd-heading-secondary--link--font-variant, inherit );
+		font-stretch: var( --ccd-heading-secondary--link--font-stretch, normal );
+		text-decoration: var( --ccd-heading-secondary--link--text-decoration, inherit );
+		text-transform: var( --ccd-heading-secondary--link--text-transform, inherit );
+		color: var( --ccd-heading-secondary--link--text-color, var( --ccd-link--text-color ) );
+
+		@media ( prefers-color-scheme: dark ) {
+			color: var( --ccd-heading-secondary--link--text-color--dark, var( --ccd-link--text-color--dark ) );
+		}
+
+		&:hover,
+		&:focus {
+			color: var( --ccd-heading-secondary--link--action--text-color, var( --ccd-link--action--text-color ) );
+
+			@media ( prefers-color-scheme: dark ) {
+				color: var( --ccd-heading-secondary--link--action--text-color--dark, var( --ccd-link--action--text-color--dark ) );
+			}
+		}
+	}
+}
+
+h5,
+h6 {
+	font-family: var( --ccd-heading-tertiary--font-family, inherit );
+	font-size: var( --ccd-heading-tertiary--font-size, 1.375rem );
+	font-weight: var( --ccd-heading-tertiary--font-weight, 700 );
+	font-style: var( --ccd-heading-tertiary--font-style, inherit );
+	font-variant: var( --ccd-heading-tertiary--font-variant, inherit );
+	font-stretch: var( --ccd-heading-tertiary--font-stretch, inherit );
+	line-height: var( --ccd-heading-tertiary--line-height, inherit );
+	letter-spacing: var( --ccd-heading-tertiary--letter-spacing, normal );
+	word-spacing: var( --ccd-heading-tertiary--word-spacing, -0.0325em );
+	text-decoration: var( --ccd-heading-tertiary--text-decoration );
+	text-transform: var( --ccd-heading-tertiary--text-transform );
+	color: var( --ccd-heading-tertiary--text-color, var( --ccd-body--text-color ) );
+
+	@media ( prefers-color-scheme: dark ) {
+		color: var( --ccd-heading-tertiary--text-color--dark, var( --ccd-body--text-color--dark ) );
+	}
+}
+
+pre, code, kbd, samp {
+	font-family: var( --ccd-fonts--monospace-stack, 'Courier New', Courier, monospace );
+	letter-spacing: unset !important;
+}
+
+.button {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding: calc( var( --ccd-body--font-size, 1rem ) / 2 );
+	font-family: var( --ccd-fonts--display-stack );
+	font-size: var( --ccd-button--font-size, 1.125rem );
+	font-weight: var( --ccd-button--font-weight, 500 );
+	line-height: var( --ccd-button--line-height, 1 );
+	background-color: var( --ccd-button--bg-color, var( --ccd-color--theme--secondary ) );
+	color: var( --ccd-button--text-color, #ffffff );
+	transition: all 0.25s;
+
+	&:hover,
+	&:focus {
+		background-color: var( --ccd-button--bg-color--action, var( --ccd-color--theme--secondary--light ) );
+		color: var( --ccd-button--text-color--action, #ffffff );
+	}
+}
+
+.general-wrap {
+	max-width: var( --ccd-wrap--general--max-width );
+	margin: var( --ccd-wrap--general--margin );
+	padding: var( --ccd-wrap--general--padding );
+}
+
+.layout {
+	&.columns {
+		display: flex;
+		gap: calc( var( --ccd-spacing--vert ) / 2 ) calc( var( --ccd-spacing--horz ) / 2 );
+
+		&.responsive {
+			@media screen and ( max-width: 768px ) {
+				flex-direction: column;
+			}
+		}
+	}
+}
+
+.align-left {
+	float: left;
+	margin: 0 calc( var( --ccd-spacing--horz ) / 2 ) calc( var( --ccd-spacing--vert ) / 2 ) 0;
+}
+
+.align-right {
+	float: right;
+	margin: 0 0 calc( var( --ccd-spacing--vert ) / 2 ) calc( var( --ccd-spacing--horz ) / 2 );
+}
+
+.avatar {
+	border-radius: 50%;
+}
+
+figcaption {
+	font-family: var( --ccd-fonts--secondary-stack );
+	font-size: 0.875em;
+	line-height: 1.2;
+	text-align: center;
+}
