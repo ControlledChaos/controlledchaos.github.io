@@ -956,11 +956,12 @@ figcaption {
   border-top: var(--ccd-box--border-style) var(--ccd-box--border-width) var(--ccd-box--border-color);
 }
 
-.layout.columns.responsive.front-intro-columns {
+.front-intro-columns {
   flex-direction: row-reverse;
+  align-items: center;
 }
 @media screen and (max-width: 768px) {
-  .layout.columns.responsive.front-intro-columns {
+  .front-intro-columns {
     flex-direction: column-reverse;
     align-items: center;
   }

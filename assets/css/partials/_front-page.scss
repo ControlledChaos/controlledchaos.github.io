@@ -11,18 +11,13 @@
 	}
 }
 
-.layout {
-	&.columns {
-		&.responsive {
-			&.front-intro-columns {
-				flex-direction: row-reverse;
+.front-intro-columns {
+	flex-direction: row-reverse;
+	align-items: center;
 
-				@media screen and ( max-width: 768px ) {
-					flex-direction: column-reverse;
-					align-items: center;
-				}
-			}
-		}
+	@media screen and ( max-width: 768px ) {
+		flex-direction: column-reverse;
+		align-items: center;
 	}
 }
 
