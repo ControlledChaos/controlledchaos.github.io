@@ -279,16 +279,14 @@ pre, code, kbd, samp {
 	margin: var( --ccd-wrap--general--margin );
 	padding: var( --ccd-wrap--general--padding );
 }
-$test: 768px;
-.layout {
-	&.columns {
-		display: flex;
-		gap: calc( var( --ccd-spacing--vert ) / 2 ) calc( var( --ccd-spacing--horz ) / 2 );
 
-		&.responsive {
-			@media screen and ( max-width: $test ) {
-				flex-direction: column;
-			}
+.columns {
+	display: flex;
+	gap: calc( var( --ccd-spacing--vert ) / 2 ) calc( var( --ccd-spacing--horz ) / 2 );
+
+	&.responsive {
+		@media screen and ( max-width: 768px ) {
+			flex-direction: column;
 		}
 	}
 }

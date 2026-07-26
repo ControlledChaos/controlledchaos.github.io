@@ -11,13 +11,15 @@
 	}
 }
 
-.front-intro-columns {
-	flex-direction: row-reverse;
-	align-items: center;
-
-	@media screen and ( max-width: 768px ) {
-		flex-direction: column-reverse;
+.columns {
+	.front-intro-columns {
+		flex-direction: row-reverse;
 		align-items: center;
+
+		@media screen and ( max-width: 768px ) {
+			flex-direction: column-reverse;
+			align-items: center;
+		}
 	}
 }
 
