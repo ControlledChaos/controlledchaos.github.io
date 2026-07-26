@@ -40,7 +40,7 @@
 <a class="skip-link screen-reader-text" href="#page-content">Skip to content</a>
 	{% include site-header.html -%}
 	<div class="page-container" itemscope="itemscope" itemtype="{{ page_type }}">
-		<div id='{{ page.name | slugify | remove_last: "-md" }}' class="page-wrap">
+		<div id='{{ page.name | slugify | remove_last: "-md" }}' class="page-wrap">{{ jekyll.version }}
 			<main class="page-main" role="main" itemscope itemprop="mainContentOfPage">
 				{{ content }}
 			</main>
