@@ -1,1 +1,1 @@
-Following are some web things that I have built and/or am currently building. These may or may not include websites for other people, or stuff that I have made just for the sake of it. Maybe you want to have a look.
+Following are some web things that I have built and/or that I am currently building. These may or may not include websites for other people, or stuff that I have made just for the sake of it. Maybe you want to have a look.

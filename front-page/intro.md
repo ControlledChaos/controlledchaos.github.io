@@ -1,1 +1,7 @@
-Bacon ipsum dolor amet **filet mignon** rump ball tip flank burgdoggen picanha pastrami chuck jerky turkey andouille short ribs pig cupim. Rump burgdoggen chicken picanha flank biltong. Tail pork loin short ribs filet mignon, shank landjaeger tongue cow bacon shankle pork chop alcatra porchetta chislic beef ribs. Cow pork chop strip steak beef ribs, buffalo bacon hamburger pastrami. Doner flank capicola, bacon pig leberkas salami tongue sausage pork chop ham hock short loin jowl cow. Swine ground round ham shank tail porchetta beef sausage cow filet mignon.
+Have you ever wanted to have a website built by a mule packer? Well today is your lucky day!
+
+Hello. My name is Greg Sweet and I really did work with mules. Donkeys, mostly, and I led the through the forest with supplies on their backs. At night, living in a converted portion of the barn, I began to study how websites work. Thus began the Controlled Chaos empire.
+
+Now I am quite good at building sites from scratch. I don't simply assemble from parts built by others. Some of my projects were built to make my custom work easier, and I hope that somebody may be helped by a thing that I made.
+
+Have a look around this website to learn more. You can even see [the code](https://github.com/ControlledChaos/controlledchaos.github.io) that makes it tick.
