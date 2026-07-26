@@ -87,10 +87,6 @@ h1, h2, h3, h4, h5, h6, p, ul, ol, blockquote, fieldset, table, pre {
 	padding: var( --ccd-element--padding );
 }
 
-.avatar {
-	border-radius: 50%;
-}
-
 a {
 	display: var( --ccd-link--display );
 	position: var( --ccd-link--position );
@@ -268,6 +264,17 @@ h6 {
 	margin: 0 0 calc( var( --ccd-spacing--vert ) / 2 ) calc( var( --ccd-spacing--horz ) / 2 );
 }
 
+.avatar {
+	border-radius: 50%;
+}
+
+figcaption {
+	font-family: var( --ccd-fonts--secondary-stack );
+	font-size: 0.875em;
+	line-height: 1.35;
+	text-align: center;
+}
+
 .general-wrap {
 	max-width: var( --ccd-wrap--general--max-width );
 	margin: var( --ccd-wrap--general--margin );
@@ -364,20 +371,6 @@ h6 {
 .article {
 	h1, h2, h3, h4, h5, h6, p, ul, ol, table {
 		margin-top: 1rem;
-	}
-}
-
-.front-page {
-	.front-page-section {
-		margin-top: var( --ccd-spacing--vert, 2rem );
-
-		&:not( :first-of-type ) {
-			border-top: var( --ccd-box--border-style ) var( --ccd-box--border-width ) var( --ccd-box--border-color );
-		}
-	}
-
-	.front-page-content {
-		max-width: 960px;
 	}
 }
 

@@ -1,3 +1,19 @@
 ///
 /// Front page styles
 ///
+
+.front-page-section {
+	margin-top: var( --ccd-spacing--vert, 2rem );
+
+	&:not( :first-of-type ) {
+		border-top: var( --ccd-box--border-style ) var( --ccd-box--border-width ) var( --ccd-box--border-color );
+	}
+}
+
+.front-page-content {
+	max-width: 960px;
+}
+
+.front-intro-avatar {
+	max-width: 160px;
+}
