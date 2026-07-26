@@ -632,7 +632,7 @@ figcaption {
 
 .layout.columns {
   display: flex;
-  gap: var(--ccd-spacing--vert) var(--ccd-spacing--horz);
+  gap: 0 var(--ccd-spacing--horz);
 }
 @media screen and (max-width: 768px) {
   .layout.columns.responsive {
@@ -886,6 +886,7 @@ figcaption {
 @media screen and (max-width: 768px) {
   .front-intro-columns {
     flex-direction: column;
+    justify-content: center;
   }
 }
 
