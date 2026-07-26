@@ -41,7 +41,7 @@
 	{% include site-header.html -%}
 	<div class="page-container" itemscope="itemscope" itemtype="{{ page_type }}">
 		<div id='{{ page.name | slugify | remove_last: "-md" }}' class="page-wrap">
-			<main class="page-main" role="main" itemscope itemprop="mainContentOfPage">
+			<main id="page-content" class="page-main" role="main" itemscope itemprop="mainContentOfPage">
 				{{ content }}
 			</main>
 			{%- if page_sidebar -%}
