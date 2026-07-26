@@ -337,24 +337,13 @@ b, strong, optgroup {
 				src: url(../fonts/red-hat-mono-italic.woff2) format("woff2");
 }
 :root {
-				--ccd-color--off-white: #e8e8e8;
-				--ccd-color--gray--pale: #cccccc;
-				--ccd-color--gray--light: #888888;
-				--ccd-color--gray--medium: #555555;
-				--ccd-color--gray--dark: #333333;
-				--ccd-color--near-black: #1e1e1e;
-				--ccd-color--red: #dd0000;
-				--ccd-color--orange: #ee6600;
-				--ccd-color--yellow: #ffdd00;
-				--ccd-color--green: #00aa00;
-				--ccd-color--blue: #0044aa;
-				--ccd-color--violet: #551188;
-				--ccd-color--theme--primary: #917a99;
-				--ccd-color--theme--primary--light: #a794ac;
-				--ccd-color--theme--primary--dark: #6d5775;
-				--ccd-color--theme--secondary: #9fb653;
-				--ccd-color--theme--secondary--light: #b1cd48;
-				--ccd-color--theme--secondary--dark: #7c9419;
+				--ccd-fonts--general-stack: Red Hat Display, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen-Sans, Ubuntu, Cantarell, Helvetica Neue, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+				--ccd-fonts--secondary-stack: Red Hat Text, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen-Sans, Ubuntu, Cantarell, Helvetica Neue, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+				--ccd-fonts--display-stack: Crimson Pro, Georgia, Times, Times New Roman, serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+				--ccd-fonts--monospace-stack: Red Hat Mono, Roboto Mono, Fira Code, Liberation Mono, Inconsolata, Menlo, Monaco, Consolas, Cascadia Mono, Segoe UI Mono, Oxygen Mono, Ubuntu Monospace, Fira Mono, Droid Sans Mono, Courier New, Courier, ui-monospace, monospace, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+}
+
+:root {
 				--ccd-spacing--horz: 2rem;
 				--ccd-spacing--vert: 2rem;
 				--ccd-wrap--general--max-width: 1280px;
@@ -366,10 +355,6 @@ b, strong, optgroup {
 				--ccd-box--border-color--dark: #555555;
 				--ccd-box--border: var( --ccd-box--border-style ) var( --ccd-box--border-width ) var( --ccd-box--border-color );
 				--ccd-box--border--dark: var( --ccd-box--border-style ) var( --ccd-box--border-width ) var( --ccd-box--border-color--dark );
-				--ccd-fonts--general-stack: Red Hat Display, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen-Sans, Ubuntu, Cantarell, Helvetica Neue, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
-				--ccd-fonts--secondary-stack: Red Hat Text, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen-Sans, Ubuntu, Cantarell, Helvetica Neue, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
-				--ccd-fonts--display-stack: Crimson Pro, Georgia, Times, Times New Roman, serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
-				--ccd-fonts--monospace-stack: Red Hat Mono, Roboto Mono, Fira Code, Liberation Mono, Inconsolata, Menlo, Monaco, Consolas, Cascadia Mono, Segoe UI Mono, Oxygen Mono, Ubuntu Monospace, Fira Mono, Droid Sans Mono, Courier New, Courier, ui-monospace, monospace, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
 				--ccd-body--font-family: Red Hat Display, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen-Sans, Ubuntu, Cantarell, Helvetica Neue, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
 				--ccd-body--font-size: 1.0625rem;
 				--ccd-body--line-height: 1.525;

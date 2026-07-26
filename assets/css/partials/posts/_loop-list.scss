@@ -2,6 +2,8 @@
 /// Posts loop with list display
 ///
 
+@use '../../modules/colors';
+
 .posts-list {
 	list-style: none;
 	margin: 0;
@@ -90,7 +92,7 @@
 			vertical-align: center;
 			padding-left: 1em;
 			transform: translateX( -1em );
-			background-image: linear-gradient( to right, transparent 0%, rgba( $color: $body_color, $alpha: 0.85 ) 25%, $body_color 100% );
+			background-image: linear-gradient( to right, transparent 0%, rgba( $color: colors.$body_color, $alpha: 0.85 ) 25%, colors.$body_color 100% );
 		}
 	}
 }
