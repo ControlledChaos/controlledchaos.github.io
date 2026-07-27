@@ -32,6 +32,18 @@
 .front-intro-avatar {
 	width: 160px;
 	min-width: 160px;
+	overflow: hidden;
+
+	img {
+		display: block;
+		object-fit: cover;
+		object-position: center center;
+	}
+
+	figcaption {
+		display: block;
+		padding: 0.5rem;
+	}
 
 	@media screen and ( max-width: layout.$bp_med ) {
 		width: 320px;

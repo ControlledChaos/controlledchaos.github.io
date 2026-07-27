@@ -979,6 +979,18 @@ figcaption {
 .front-intro-avatar {
   width: 160px;
   min-width: 160px;
+  overflow: hidden;
+}
+.front-intro-avatar img {
+  display: block;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center center;
+     object-position: center center;
+}
+.front-intro-avatar figcaption {
+  display: block;
+  padding: 0.5rem;
 }
 @media screen and (max-width: 768px) {
   .front-intro-avatar {
