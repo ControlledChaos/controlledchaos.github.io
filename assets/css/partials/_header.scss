@@ -14,7 +14,7 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		gap: calc( var( --ccd-spacing--vert ) / 4 ) var( --ccd-spacing--horz );
+		gap: calc( var( --ccd-spacing--y ) / 4 ) var( --ccd-spacing--x );
 
 		@media screen and ( max-width: layout.$bp_med ) {
 			flex-direction: column;
@@ -25,7 +25,7 @@
 .site-identity {
 	display: flex;
 	align-items: center;
-	gap: calc( var( --ccd-spacing--vert ) / 4 ) calc( var( --ccd-spacing--horz ) / 2 );
+	gap: calc( var( --ccd-spacing--y ) / 4 ) calc( var( --ccd-spacing--x ) / 2 );
 
 	@media screen and ( max-width: layout.$bp_med ) {
 		flex-direction: column;

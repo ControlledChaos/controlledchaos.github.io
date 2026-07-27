@@ -15,7 +15,7 @@
 	max-width: var( --ccd-sidebar--max-width );
 	min-width: var( --ccd-sidebar--min-width, 240px );
 	height: var( --ccd-sidebar--height );
-	margin: var( --ccd-sidebar--margin, var( --ccd-spacing--vert, 2rem ) 0 0 0 );
+	margin: var( --ccd-sidebar--margin, var( --ccd-spacing--y, 2rem ) 0 0 0 );
 	padding: var( --ccd-sidebar--padding );
 	font-family: var( --ccd-sidebar--font-family, inherit );
 	font-size: var( --ccd-sidebar--font-size, inherit );
@@ -38,7 +38,7 @@
 	@container page-wrap ( max-width: layout.$bp_med ) {
 		display: var( --ccd-sidebar--bottom--display, var( --ccd-sidebar--display, grid ) );
 		grid-template-columns: var( --ccd-sidebar--bottom--grid-template-columns, var( --ccd-sidebar--grid-template-columns, repeat( 2, 1fr ) ) );
-		gap:  var( --ccd-sidebar--bottom--gap, var( --ccd-spacing--vert, 2rem ) var( --ccd-spacing--horz, 2rem ) );
+		gap:  var( --ccd-sidebar--bottom--gap, var( --ccd-spacing--y, 2rem ) var( --ccd-spacing--x, 2rem ) );
 		width: var( --ccd-sidebar--bottom--width, var( --ccd-sidebar--width, 100% ) );
 		max-width: var( --ccd-sidebar--bottom--max-width, var( --ccd-sidebar--max-width ) );
 		margin: 0;
@@ -49,7 +49,7 @@
 	@media screen and ( max-width: layout.$bp_med ) {
 		display: var( --ccd-sidebar--bottom--display, var( --ccd-sidebar--display, grid ) );
 		grid-template-columns: var( --ccd-sidebar--bottom--grid-template-columns, var( --ccd-sidebar--grid-template-columns, repeat( 2, 1fr ) ) );
-		gap:  var( --ccd-sidebar--bottom--gap, var( --ccd-spacing--vert, 2rem ) var( --ccd-spacing--horz, 2rem ) );
+		gap:  var( --ccd-sidebar--bottom--gap, var( --ccd-spacing--y, 2rem ) var( --ccd-spacing--x, 2rem ) );
 		width: var( --ccd-sidebar--bottom--width, var( --ccd-sidebar--width, 100% ) );
 		max-width: var( --ccd-sidebar--bottom--max-width, var( --ccd-sidebar--max-width ) );
 		margin: 0;
@@ -80,7 +80,7 @@
 		position: var( --ccd-sidebar--plugin--position, static );
 
 		&:not( :first-of-type ) {
-			margin-top: var( --ccd-sidebar--plugin--margin-top, calc( var( --ccd-spacing--vert ) * .75 ) );
+			margin-top: var( --ccd-sidebar--plugin--margin-top, calc( var( --ccd-spacing--y ) * .75 ) );
 
 			@container page-wrap ( max-width: layout.$bp_med ) {
 				margin-top: 0;
@@ -89,16 +89,16 @@
 				margin-top: 0;
 			}
 			@container page-wrap ( max-width: 640px ) {
-				margin-top: var( --ccd-spacing--vert, 2rem );
+				margin-top: var( --ccd-spacing--y, 2rem );
 			}
 			@media screen and ( max-width: 640px ) {
-				margin-top: var( --ccd-spacing--vert, 2rem );
+				margin-top: var( --ccd-spacing--y, 2rem );
 			}
 		}
 
 		.plugin-content {
 			margin: var( --ccd-plugin-content--margin, 0 );
-			margin-top: var( --ccd-sidebar--plugin--margin-top, calc( var( --ccd-spacing--vert ) * .5 ) );
+			margin-top: var( --ccd-sidebar--plugin--margin-top, calc( var( --ccd-spacing--y ) * .5 ) );
 		}
 	}
 
@@ -177,8 +177,8 @@
 
 	.sidebar-block {
 		&:not( :first-of-type ) {
-			margin-top: var( --ccd-spacing--vert, 2rem );
-			padding-top: calc( var( --ccd-spacing--vert, 2rem ) / 2 );
+			margin-top: var( --ccd-spacing--y, 2rem );
+			padding-top: calc( var( --ccd-spacing--y, 2rem ) / 2 );
 			border-top: var( --ccd-box--border );
 		}
 	}

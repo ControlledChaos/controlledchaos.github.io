@@ -5,7 +5,7 @@
 @use '../modules/layout';
 
 .front-page-section {
-	margin-top: var( --ccd-spacing--vert, 2rem );
+	margin-top: var( --ccd-spacing--y, 2rem );
 	clear: both;
 
 	&:not( :first-of-type ) {

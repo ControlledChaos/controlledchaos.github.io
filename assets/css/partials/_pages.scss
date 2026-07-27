@@ -80,7 +80,7 @@
 	list-style: none;
 	width: 100%;
 	margin: 0;
-	padding: var( --ccd-spacing--vert, 2rem ) var( --ccd-spacing--horz, 2rem );
+	padding: var( --ccd-spacing--y, 2rem ) var( --ccd-spacing--x, 2rem );
 	display: flex;
 	justify-content: center;
 	gap: 0 0.5em;

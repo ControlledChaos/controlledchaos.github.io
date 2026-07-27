@@ -365,8 +365,8 @@ b, strong, optgroup {
 }
 
 :root {
-  --ccd-spacing--horz: 2rem;
-  --ccd-spacing--vert: 2rem;
+  --ccd-spacing--x: layout.$spacing_x;
+  --ccd-spacing--y: layout.$spacing_y;
   --ccd-wrap--general--max-width: 1280px;
   --ccd-wrap--general--margin: 0 auto;
   --ccd-wrap--general--padding: 0;
@@ -402,8 +402,8 @@ b, strong, optgroup {
   --ccd-body--font-size: 1rem;
   --ccd-body--line-height: 1.5;
   --ccd-site-header--padding:
-  	calc( var( --ccd-spacing--vert ) / 2 )
-  	var( --ccd-spacing--horz );
+  	calc( var( --ccd-spacing--y ) / 2 )
+  	var( --ccd-spacing--x );
   --ccd-site-header--bg-color: #846f8b;
   --ccd-site-header--text-color: #ffffff;
   --ccd-site-title--font-weight: 470;
@@ -474,7 +474,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6, p, ul, ol, blockquote, fieldset, table, pre {
-  margin: var(--ccd-element--margin, calc(var(--ccd-spacing--vert) / 2) 0 0 0);
+  margin: var(--ccd-element--margin, calc(var(--ccd-spacing--y) / 2) 0 0 0);
   padding: var(--ccd-element--padding);
 }
 
@@ -697,7 +697,7 @@ pre, code, kbd, samp {
 
 .columns {
   display: flex;
-  gap: calc(var(--ccd-spacing--vert) / 2) calc(var(--ccd-spacing--horz) / 2);
+  gap: calc(var(--ccd-spacing--y) / 2) calc(var(--ccd-spacing--x) / 2);
 }
 @media screen and (max-width: 768px) {
   .columns.responsive {
@@ -712,12 +712,12 @@ pre, code, kbd, samp {
 
 .align-left {
   float: left;
-  margin: 0 calc(var(--ccd-spacing--horz) / 2) calc(var(--ccd-spacing--vert) / 2) 0;
+  margin: 0 calc(var(--ccd-spacing--x) / 2) calc(var(--ccd-spacing--y) / 2) 0;
 }
 
 .align-right {
   float: right;
-  margin: 0 0 calc(var(--ccd-spacing--vert) / 2) calc(var(--ccd-spacing--horz) / 2);
+  margin: 0 0 calc(var(--ccd-spacing--y) / 2) calc(var(--ccd-spacing--x) / 2);
 }
 
 .avatar {
@@ -741,7 +741,7 @@ figcaption {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: calc(var(--ccd-spacing--vert) / 4) var(--ccd-spacing--horz);
+  gap: calc(var(--ccd-spacing--y) / 4) var(--ccd-spacing--x);
 }
 @media screen and (max-width: 768px) {
   .site-header .general-wrap {
@@ -752,7 +752,7 @@ figcaption {
 .site-identity {
   display: flex;
   align-items: center;
-  gap: calc(var(--ccd-spacing--vert) / 4) calc(var(--ccd-spacing--horz) / 2);
+  gap: calc(var(--ccd-spacing--y) / 4) calc(var(--ccd-spacing--x) / 2);
 }
 @media screen and (max-width: 768px) {
   .site-identity {
@@ -934,7 +934,7 @@ figcaption {
   list-style: none;
   width: 100%;
   margin: 0;
-  padding: var(--ccd-spacing--vert, 2rem) var(--ccd-spacing--horz, 2rem);
+  padding: var(--ccd-spacing--y, 2rem) var(--ccd-spacing--x, 2rem);
   display: flex;
   justify-content: center;
   gap: 0 0.5em;
@@ -957,7 +957,7 @@ figcaption {
 }
 
 .front-page-section {
-  margin-top: var(--ccd-spacing--vert, 2rem);
+  margin-top: var(--ccd-spacing--y, 2rem);
   clear: both;
 }
 .front-page-section:not(:first-of-type) {
@@ -1022,11 +1022,11 @@ figcaption {
   max-width: 100%;
   height: 100%;
   display: grid;
-  gap: 0 calc(var(--ccd-spacing--horz) * 0.75);
+  gap: 0 calc(var(--ccd-spacing--x) * 0.75);
   grid-template-columns: 180px calc(100% - 180px - 3rem);
   grid-template-areas: "thumb header  header" "thumb summary summary";
-  margin-top: var(--ccd-spacing--horz, 2rem);
-  padding-top: var(--ccd-spacing--horz, 2rem);
+  margin-top: var(--ccd-spacing--x, 2rem);
+  padding-top: var(--ccd-spacing--x, 2rem);
   border-top: var(--ccd-box--border, none);
 }
 
@@ -1095,7 +1095,7 @@ figcaption {
 }
 
 .featured-posts-grid {
-  margin-top: calc(var(--ccd-spacing--horz) / 2);
+  margin-top: calc(var(--ccd-spacing--x) / 2);
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 0.25rem;
@@ -1161,7 +1161,7 @@ figcaption {
 }
 
 .post-page .post-image {
-  margin-top: var(--ccd-spacing--vert, 2rem);
+  margin-top: var(--ccd-spacing--y, 2rem);
   max-height: 600px;
   overflow: hidden;
 }
@@ -1214,7 +1214,7 @@ figcaption {
 }
 
 #post-navigation {
-  margin-top: var(--ccd-spacing--vert);
+  margin-top: var(--ccd-spacing--y);
 }
 
 .post-navigation {
@@ -1249,7 +1249,7 @@ figcaption {
   max-width: var(--ccd-sidebar--max-width);
   min-width: var(--ccd-sidebar--min-width, 240px);
   height: var(--ccd-sidebar--height);
-  margin: var(--ccd-sidebar--margin, var(--ccd-spacing--vert, 2rem) 0 0 0);
+  margin: var(--ccd-sidebar--margin, var(--ccd-spacing--y, 2rem) 0 0 0);
   padding: var(--ccd-sidebar--padding);
   font-family: var(--ccd-sidebar--font-family, inherit);
   font-size: var(--ccd-sidebar--font-size, inherit);
@@ -1275,7 +1275,7 @@ figcaption {
   .page-sidebar {
     display: var(--ccd-sidebar--bottom--display, var(--ccd-sidebar--display, grid));
     grid-template-columns: var(--ccd-sidebar--bottom--grid-template-columns, var(--ccd-sidebar--grid-template-columns, repeat(2, 1fr)));
-    gap: var(--ccd-sidebar--bottom--gap, var(--ccd-spacing--vert, 2rem) var(--ccd-spacing--horz, 2rem));
+    gap: var(--ccd-sidebar--bottom--gap, var(--ccd-spacing--y, 2rem) var(--ccd-spacing--x, 2rem));
     width: var(--ccd-sidebar--bottom--width, var(--ccd-sidebar--width, 100%));
     max-width: var(--ccd-sidebar--bottom--max-width, var(--ccd-sidebar--max-width));
     margin: 0;
@@ -1287,7 +1287,7 @@ figcaption {
   .page-sidebar {
     display: var(--ccd-sidebar--bottom--display, var(--ccd-sidebar--display, grid));
     grid-template-columns: var(--ccd-sidebar--bottom--grid-template-columns, var(--ccd-sidebar--grid-template-columns, repeat(2, 1fr)));
-    gap: var(--ccd-sidebar--bottom--gap, var(--ccd-spacing--vert, 2rem) var(--ccd-spacing--horz, 2rem));
+    gap: var(--ccd-sidebar--bottom--gap, var(--ccd-spacing--y, 2rem) var(--ccd-spacing--x, 2rem));
     width: var(--ccd-sidebar--bottom--width, var(--ccd-sidebar--width, 100%));
     max-width: var(--ccd-sidebar--bottom--max-width, var(--ccd-sidebar--max-width));
     margin: 0;
@@ -1321,7 +1321,7 @@ figcaption {
   position: var(--ccd-sidebar--plugin--position, static);
 }
 .page-sidebar .plugin:not(:first-of-type) {
-  margin-top: var(--ccd-sidebar--plugin--margin-top, calc(var(--ccd-spacing--vert) * 0.75));
+  margin-top: var(--ccd-sidebar--plugin--margin-top, calc(var(--ccd-spacing--y) * 0.75));
 }
 @container page-wrap ( max-width: layout.$bp_med ) {
   .page-sidebar .plugin:not(:first-of-type) {
@@ -1335,17 +1335,17 @@ figcaption {
 }
 @container page-wrap ( max-width: 640px ) {
   .page-sidebar .plugin:not(:first-of-type) {
-    margin-top: var(--ccd-spacing--vert, 2rem);
+    margin-top: var(--ccd-spacing--y, 2rem);
   }
 }
 @media screen and (max-width: 640px) {
   .page-sidebar .plugin:not(:first-of-type) {
-    margin-top: var(--ccd-spacing--vert, 2rem);
+    margin-top: var(--ccd-spacing--y, 2rem);
   }
 }
 .page-sidebar .plugin .plugin-content {
   margin: var(--ccd-plugin-content--margin, 0);
-  margin-top: var(--ccd-sidebar--plugin--margin-top, calc(var(--ccd-spacing--vert) * 0.5));
+  margin-top: var(--ccd-sidebar--plugin--margin-top, calc(var(--ccd-spacing--y) * 0.5));
 }
 .page-sidebar h2,
 .page-sidebar h3 {
@@ -1424,8 +1424,8 @@ figcaption {
   padding: var(--ccd-sidebar--ol--padding, var(--ccd-sidebar--list--padding, 0 0 0 1em));
 }
 .page-sidebar .sidebar-block:not(:first-of-type) {
-  margin-top: var(--ccd-spacing--vert, 2rem);
-  padding-top: calc(var(--ccd-spacing--vert, 2rem) / 2);
+  margin-top: var(--ccd-spacing--y, 2rem);
+  padding-top: calc(var(--ccd-spacing--y, 2rem) / 2);
   border-top: var(--ccd-box--border);
 }
 
@@ -1461,7 +1461,7 @@ figcaption {
 
 .site-footer {
   margin: var(--ccd-site-footer--margin, 0);
-  padding: var(--ccd-site-footer--padding, calc(var(--ccd-spacing--vert) / 2)) var(--ccd-site-footer--padding, var(--ccd-spacing--vert));
+  padding: var(--ccd-site-footer--padding, calc(var(--ccd-spacing--y) / 2)) var(--ccd-site-footer--padding, var(--ccd-spacing--y));
   background-color: var(--ccd-site-footer--bg-color, var(--ccd-color--theme--secondary));
   color: var(--ccd-site-footer--text-color, #ffffff);
 }

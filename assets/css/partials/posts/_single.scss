@@ -4,7 +4,7 @@
 
 .post-page {
 	.post-image {
-		margin-top: var( --ccd-spacing--vert, 2rem );
+		margin-top: var( --ccd-spacing--y, 2rem );
 		max-height: 600px;
 		overflow: hidden;
 
@@ -66,7 +66,7 @@
 
 // Navigation
 #post-navigation {
-	margin-top: var( --ccd-spacing--vert );
+	margin-top: var( --ccd-spacing--y );
 }
 
 .post-navigation {
