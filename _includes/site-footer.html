@@ -10,3 +10,8 @@
 
 <script src="{{ '/assets/js/lightbox.min.js' | relative_url }}"></script>
 <script src="{{ '/assets/js/tooltips.min.js' | relative_url }}"></script>
+<script>
+	$(document).ready( function() {
+		$( 'a[data-tooltip]' ).tooltipster();
+	});
+</script>

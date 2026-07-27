@@ -29,7 +29,7 @@
 			{%- assign word_count = project.excerpt | number_of_words -%}
 
 			<div class="project-excerpt">
-				<p>{{- project.excerpt | strip_html | truncatewords: length, "…" -}}<a href="{{ project.url | absolute_url }}" title="Read More" data-tooltip-content><span class="screen-reader-text">Read More</span> {% include svg/arrow-right.svg %}</a></p>
+				<p>{{- project.excerpt | strip_html | truncatewords: length, "…" -}}<a href="{{ project.url | absolute_url }}" title="Read More" data-tooltip><span class="screen-reader-text">Read More</span> {% include svg/arrow-right.svg %}</a></p>
 			</div>
 		</div>
 	</article>
