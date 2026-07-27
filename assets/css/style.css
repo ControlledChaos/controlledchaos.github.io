@@ -923,7 +923,10 @@ figcaption {
   color: var(--ccd-color--theme--primary--dark);
 }
 
-.article h1, .article h2, .article h3, .article h4, .article h5, .article h6, .article p, .article ul, .article ol, .article table {
+.page-content {
+  margin-top: var(--cfe-spacing--vert, 2rem);
+}
+.page-content h1, .page-content h2, .page-content h3, .page-content h4, .page-content h5, .page-content h6, .page-content p, .page-content ul, .page-content ol, .page-content table {
   margin-top: 1rem;
 }
 
@@ -977,7 +980,7 @@ figcaption {
 }
 
 .front-intro-avatar {
-  width: 160px;
+  width: 100%;
   min-width: 160px;
   overflow: hidden;
 }
@@ -987,6 +990,7 @@ figcaption {
      object-fit: cover;
   -o-object-position: center center;
      object-position: center center;
+  height: 100%;
 }
 .front-intro-avatar figcaption {
   display: block;

@@ -30,7 +30,7 @@
 }
 
 .front-intro-avatar {
-	width: 160px;
+	width: 100%;
 	min-width: 160px;
 	overflow: hidden;
 
@@ -38,6 +38,7 @@
 		display: block;
 		object-fit: cover;
 		object-position: center center;
+		height: 100%;
 	}
 
 	figcaption {
