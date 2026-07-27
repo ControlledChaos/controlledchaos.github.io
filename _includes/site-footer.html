@@ -8,12 +8,18 @@
 	<p class="final-message">No copyright. No synths!</p>
 </footer>
 
+<script src="{{ '/assets/js/fitvids.min.js' | relative_url }}"></script>
 <script src="{{ '/assets/js/lightbox.min.js' | relative_url }}"></script>
 <script src="{{ '/assets/js/fullpage.min.js' | relative_url }}"></script>
 <script src="{{ '/assets/js/fullpage.extensions.min.js' | relative_url }}"></script>
 <script src="{{ '/assets/js/tooltips.min.js' | relative_url }}"></script>
 <script>
 jQuery(document).ready( function($) {
+
+	// Responsive video embeds.
+	$( '.main-article' ).fitVids();
+
+	// Custom tooltips
 	$( 'a[data-tooltip]' ).tooltipster({
 		distance: 5,
 		theme: 'ccdzen'
