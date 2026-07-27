@@ -8,18 +8,22 @@
 	<p class="final-message">No copyright. No synths!</p>
 </footer>
 
-<script src="{{ '/assets/js/fitvids.min.js' | relative_url }}"></script>
-<script src="{{ '/assets/js/lightbox.min.js' | relative_url }}"></script>
-<script src="{{ '/assets/js/fullpage.min.js' | relative_url }}"></script>
-<script src="{{ '/assets/js/fullpage.extensions.min.js' | relative_url }}"></script>
-<script src="{{ '/assets/js/tooltips.min.js' | relative_url }}"></script>
+<!-- Theme scripts. -->
+{%- assign js_ver = 'now' | date: "%Y-%m-%d-%H-%M" | prepend: "?v=" %}
+<script src="{{ '/assets/js/fitvids.min.js' | append: js_ver | relative_url }}"></script>
+<script src="{{ '/assets/js/lightbox.min.js' | append: js_ver | relative_url }}"></script>
+<script src="{{ '/assets/js/fullpage.min.js' | append: js_ver | relative_url }}"></script>
+<script src="{{ '/assets/js/fullpage.extensions.min.js' | append: js_ver | relative_url }}"></script>
+<script src="{{ '/assets/js/tooltips.min.js' | append: js_ver | relative_url }}"></script>
 <script>
+
+// Various jQuery scripts on document ready.
 jQuery(document).ready( function($) {
 
 	// Responsive video embeds.
 	$( '.main-article' ).fitVids();
 
-	// Custom tooltips
+	// Custom tooltips.
 	$( 'a[data-tooltip]' ).tooltipster({
 		distance: 5,
 		theme: 'ccdzen'
