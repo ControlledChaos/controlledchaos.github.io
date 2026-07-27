@@ -43,6 +43,8 @@ $text_color_dark: $off_white !default;
 ///
 /// Functions to fill SVG as background images.
 ///
+/// These require the variables to be hex colors.
+///
 /// @example background-image: url( "data:image/svg+xml;utf8,<svg ...>
 ///          <path fill='#{ colors.button_svg_color() }'...
 ///
