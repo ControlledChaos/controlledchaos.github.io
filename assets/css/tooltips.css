@@ -312,9 +312,9 @@ corresponds to the arrow we want to display */
 }
 
 .tooltipster-sidetip.tooltipster-ccdzen .tooltipster-content {
-  padding: 0.375em 0.75rem;
+  padding: 0.25em 0.625rem;
   font-family: var(--ccd-fonts--secondary-stack);
-  font-size: 0.875em;
+  font-size: 0.8125rem;
   font-weight: 500;
   color: #ffffff;
 }
