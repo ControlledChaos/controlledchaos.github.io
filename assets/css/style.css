@@ -705,7 +705,7 @@ pre, code, kbd, samp {
   }
 }
 
-.main-article a {
+.main-article p a {
   text-decoration: underline;
   text-underline-offset: 0.375em;
 }
