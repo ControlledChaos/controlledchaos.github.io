@@ -302,7 +302,7 @@ corresponds to the arrow we want to display */
 }
 
 .tooltipster-sidetip.tooltipster-ccdzen .tooltipster-box {
-  border-radius: 0px;
+  border-radius: 3px;
   border: none;
   background: #2a2a2a;
 }
