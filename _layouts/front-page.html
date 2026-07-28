@@ -59,9 +59,9 @@ layout: common
 		{{ front_posts.content | markdownify -}}
 	</div>
 
-	{%- include featured-posts-grid.html posts = site.posts limit = posts_limit -%}
+	{%- include featured-posts-grid.html limit = posts_limit -%}
 
-	{%- if posts.size > posts_limit -%}
+	{%- if site.posts.size > posts_limit -%}
 	<p class="featured-all"><a href="{{ site.blog_path | relative_url }}" class="featured-all-link">All Posts</a></p>
 	{%- endif -%}
 
