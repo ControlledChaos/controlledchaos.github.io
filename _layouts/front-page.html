@@ -20,12 +20,16 @@
 jQuery(document).ready( function($) {
 
 	$( '#front-page-sections' ).fullpage({
-		credits         : false,
+		licenseKey      : false,
+		credits         : '',
 		lockAnchors     : true,
+		navigation      : true,
 		dragAndMove     : true,
 		sectionSelector : '.front-page-section',
 		paddingTop      : 0,
 		paddingBottom   : 0,
+		// responsiveWidth     : 480,
+		// responsiveHeight    : 560,
 		scrollOverflow      : true,
 		scrollOverflowReset : true,
 		afterRender     : function() {
@@ -48,8 +52,8 @@ jQuery(document).ready( function($) {
 			if ( origin.index == 0 && direction =='down' ) {
 				$( '.site-header' ).addClass( 'header-scrolled' );
 			}
-			if ( origin.index == 4 ) {
-				$( '.site-header' ).addClass( 'header-light' );
+			if ( origin.index == 0 ) {
+				$( '.site-header' ).addClass( 'header-alt-01' );
 			}
 		},
 		onLeave : function( origin, destination, direction ) {
