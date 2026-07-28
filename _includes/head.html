@@ -1,5 +1,13 @@
 {%- assign fonts = "crimson-pro, crimson-pro-italic, red-hat-display, red-hat-display-italic, red-hat-text, red-hat-text-italic, red-hat-mono, red-hat-mono-italic" | split: ", " -%}
 
+{%- capture keywords -%}
+	{%- if page.keywords -%}
+		{{ page.keywords | append: ", " | append: site.keywords }}
+	{%- else -%}
+		{{ site.keywords }}
+	{%- endif -%}
+{%- endcapture -%}
+
 {%- capture title -%}
 	{%- if page.title -%}
 		{{ page.title | strip_html | xml_escape  }} | {{ site.title | strip_html | xml_escape }}
@@ -107,7 +115,7 @@
 	<meta name="owner" content="{{ site.owner }}" />
 	<meta name="designer" content="Controlled Chaos Design" />
 	<meta name="subject" content="Personal portfolio, code sharing, blog" />
-	<meta name="keywords" content="{{ page.keywords }}" />
+	<meta name="keywords" content='{{ keywords }}' />
 	<meta name="title" content="{{ title }}" />
 	<meta name="description" content="{{ meta_description }}" />
 	<meta name="author" content="{{ meta_author }}" />
