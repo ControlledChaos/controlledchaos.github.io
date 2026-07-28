@@ -43,6 +43,10 @@ jQuery(document).ready( function($) {
 				dots           : false
 			});
 		},
+		afterLoad : function( origin, destination, direction ) {
+			var leavingSection = this;
+			$( '.fp-watermark' ).remove();
+		},
 		onLeave : function( origin, destination, direction ) {
 			var leavingSection = this;
 			if ( origin.index == 0 && direction =='down' ) {

@@ -5712,7 +5712,7 @@
       return nullOrSlide(getState().activeSection.activeSlide);
     }
 
-    // EventEmitter.on(events.bindEvents, init$1);
+    EventEmitter.on(events.bindEvents, init$1);
 
     function init$1() {
       var position = getOptions().credits.position || 'right';
