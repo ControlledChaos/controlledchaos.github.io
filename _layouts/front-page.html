@@ -1,69 +1,88 @@
----
-layout: common
----
-
-{%- assign front_intro = site.pages | where: "path", "front-page/intro.md" | first -%}
-{%- assign front_projects = site.pages | where: "path", "front-page/projects.md" | first -%}
-{%- assign front_posts = site.pages | where: "path", "front-page/posts.md" | first -%}
-
-{%- if page.title -%}
-<header class="page-header">
-	<h2 id="{{ page.title | slugify }}" class="page-title">{{ page.title }}</h2>
-
-	{%- if page.subtitle -%}
-	<p class="page-subtitle">{{ page.subtitle }}</p>
-	{%- endif -%}
-
-</header>
-{%- endif -%}
-
-<section id="front-page-intro" class="front-page-section">
-
-	{%- assign avatar_width = page.avatar_width | default: "160px" -%}
-	{%- assign avatar_style = avatar_width | prepend: "style='min-width: " | append: "'" -%}
-
-	<div class="front-page-content">
-		<div class="layout columns responsive front-intro-columns">
-			<!-- Avatar from Jekyll variables in the site `index.html` file, defaults from Liquid variables in `posts.html` layout. -->
-			<figure class="captioned-image front-intro-avatar" {{ avatar_style }}>
-				<a href='{{ page.avatar_image | prepend: "assets/img/" | absolute_url }}' data-fancybox data-caption="{{ page.avatar_caption }}">
-					<img src='{{ page.avatar_image | prepend: "assets/img/" | absolute_url }}' alt="{{ page.avatar_alt }}" class="avatar" />
-				</a>
-				<figcaption>{{ page.avatar_caption }}</figcaption>
-			</figure>
-			<div>
-				{{ front_intro.content | markdownify }}
-			</div>
-		</div>
-	</div>
-</section>
-
-<section id="front-page-projects" class="front-page-section">
-
-	<h2>Featured Projects</h2>
-	<div class="front-page-content">
-		{{ front_projects.content | markdownify -}}
+<!doctype html>
+<html xmlns:og="http://opengraphprotocol.org/schema/" class="no-js" lang="en_US" dir="ltr">
+{% include head.html -%}
+<body class="front-page">
+	{% include site-header.html -%}
+	<div id="front-page-sections" class="page-container front-page-sections" itemscope="itemscope" itemtype="WebPage">
+		{{ content }}
 	</div>
 
-	{%- include featured-projects-grid.html projects = site.projects -%}
+<!-- Theme scripts. -->
+{%- assign js_ver = 'now' | date: "%Y-%m-%d-%H-%M" | prepend: "?v=" %}
+<script src="{{ '/assets/js/lightbox.min.js' | append: js_ver | relative_url }}"></script>
+<script src="{{ '/assets/js/fullpage.min.js' | append: js_ver | relative_url }}"></script>
+<script src="{{ '/assets/js/fullpage.extensions.min.js' | append: js_ver | relative_url }}"></script>
+<script src="{{ '/assets/js/tooltips.min.js' | append: js_ver | relative_url }}"></script>
+<script>
 
-</section>
+// Various jQuery scripts on document ready.
+jQuery(document).ready( function($) {
 
-{%- if site.posts.size > 0 and page.url == "/" -%}
-{%- assign posts_limit = 3 -%}
+	/*
+	$( '#front-page-sections' ).fullpage({
+		anchors         : [ 'header','intro','projects','posts', 'footer' ],
+		lockAnchors     : true,
+		menu            : '#site-navigation',
+		navigation      : true,
+		dragAndMove     : true,
+		sectionSelector : '.front-page-section',
+		paddingTop      : '72px',
+		paddingBottom   : '32px',
+		responsiveWidth     : 480,
+		responsiveHeight    : 560,
+		scrollOverflow      : true,
+		scrollOverflowReset : true,
+		afterRender     : function() {
+			$( '.intro-slides' ).slick({
+				slidesToShow   : 1,
+				slidesToScroll : 1,
+				autoplay       : true,
+				autoplaySpeed  : 4000,
+				speed          : 750,
+				fade           : true,
+				easing         : 'easeInOut',
+				adaptiveHeight : false,
+				pauseOnHover   : false,
+				arrows         : false,
+				dots           : false
+			});
+		},
+		afterLoad : function( origin, destination, direction ) {
+			var leavingSection = this;
+			if ( origin.index == 0 && direction =='down' ) {
+				$( '.site-header-wrap' ).addClass( 'header-wrap-scrolled' );
+			}
+		},
+		onLeave : function( origin, destination, direction ) {
+			var leavingSection = this;
+			if ( destination.index == 0 ) {
+				$( '.site-header-wrap' ).removeClass( 'header-wrap-scrolled' );
+			}
+		}
+	});
+	// Make FullPage work with id attributes for no JS navigation fallback.
+	$( '#site-navigation ul li a' ).click( function() {
+		let newSlide = $(this).closest( 'li' ).data( 'menuanchor' )
+		$.fn.fullpage.moveTo( newSlide, 1 );
+	});
+	$(document).on( 'click', '#intro-entry-link', function() {
+		fullpage_api.moveSectionDown();
+	});
+	$( '#site-navigation ul li a' ).click( function() {
+		$( '.main-navigation' ).removeClass( 'toggled' );
+	});
+	*/
 
-<section id="front-page-posts" class="front-page-section">
+	// Custom tooltips.
+	$( 'a[data-tooltip]' ).tooltipster({
+		distance: 5,
+		theme: 'ccdzen'
+	});
+});
+</script>
 
-	<h2>Latest Posts</h2>
-	<div class="front-page-content">
-		{{ front_posts.content | markdownify -}}
-	</div>
+<!-- Simple Analytics -->
+<script async src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
 
-	{%- include featured-posts-grid.html limit = posts_limit -%}
-
-	{%- if site.posts.size > posts_limit -%}
-	<p class="featured-all"><a href="{{ site.blog_path | relative_url }}" class="featured-all-link">All Posts</a></p>
-	{%- endif -%}
-
-</section>
-{%- endif -%}
+</body>
+</html>

@@ -12,8 +12,6 @@
 {%- assign js_ver = 'now' | date: "%Y-%m-%d-%H-%M" | prepend: "?v=" %}
 <script src="{{ '/assets/js/fitvids.min.js' | append: js_ver | relative_url }}"></script>
 <script src="{{ '/assets/js/lightbox.min.js' | append: js_ver | relative_url }}"></script>
-<script src="{{ '/assets/js/fullpage.min.js' | append: js_ver | relative_url }}"></script>
-<script src="{{ '/assets/js/fullpage.extensions.min.js' | append: js_ver | relative_url }}"></script>
 <script src="{{ '/assets/js/tooltips.min.js' | append: js_ver | relative_url }}"></script>
 <script>
 
@@ -22,62 +20,6 @@ jQuery(document).ready( function($) {
 
 	// Responsive video embeds.
 	$( '.main-article' ).fitVids();
-
-	/*
-	$( '.page-content' ).fullpage({
-		anchors         : [ 'slider','about','featured','contact' ],
-		lockAnchors     : true,
-		menu            : '#site-navigation',
-		navigation      : true,
-		dragAndMove     : true,
-		sectionSelector : '.front-page-section',
-		paddingTop      : '72px',
-		paddingBottom   : '32px',
-		responsiveWidth     : 480,
-		responsiveHeight    : 560,
-		scrollOverflow      : true,
-		scrollOverflowReset : true,
-		afterRender     : function() {
-			$( '.intro-slides' ).slick({
-				slidesToShow   : 1,
-				slidesToScroll : 1,
-				autoplay       : true,
-				autoplaySpeed  : 4000,
-				speed          : 750,
-				fade           : true,
-				easing         : 'easeInOut',
-				adaptiveHeight : false,
-				pauseOnHover   : false,
-				arrows         : false,
-				dots           : false
-			});
-		},
-		afterLoad : function( origin, destination, direction ) {
-			var leavingSection = this;
-			if ( origin.index == 0 && direction =='down' ) {
-				$( '.site-header-wrap' ).addClass( 'header-wrap-scrolled' );
-			}
-		},
-		onLeave : function( origin, destination, direction ) {
-			var leavingSection = this;
-			if ( destination.index == 0 ) {
-				$( '.site-header-wrap' ).removeClass( 'header-wrap-scrolled' );
-			}
-		}
-	});
-	// Make FullPage work with id attributes for no JS navigation fallback.
-	$( '#site-navigation ul li a' ).click( function() {
-		let newSlide = $(this).closest( 'li' ).data( 'menuanchor' )
-		$.fn.fullpage.moveTo( newSlide, 1 );
-	});
-	$(document).on( 'click', '#intro-entry-link', function() {
-		fullpage_api.moveSectionDown();
-	});
-	$( '#site-navigation ul li a' ).click( function() {
-		$( '.main-navigation' ).removeClass( 'toggled' );
-	});
-	*/
-
 	// Custom tooltips.
 	$( 'a[data-tooltip]' ).tooltipster({
 		distance: 5,
