@@ -17,7 +17,7 @@ paginate_first_page_path -%}
 {%- assign front_projects = site.pages | where: "path", "front-page/projects.md" | first -%}
 {%- assign front_posts = site.pages | where: "path", "front-page/posts.md" | first -%}
 
-{%- assign avatar_width = page.avatar_width | default: "200px" -%}
+{%- assign avatar_width = page.avatar_width | default: "160px" -%}
 {%- assign avatar_style = avatar_width | prepend: "style='min-width: " | append: "'" -%}
 
 {%- if page.title -%}
