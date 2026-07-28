@@ -1,7 +1,9 @@
 ---
 layout: default
 ---
+{%- if content != blank %}
 {{ content }}
+{%- endif %}
 
 <ul class="posts-list" role="list">
 {%- for post in paginator.posts -%}
