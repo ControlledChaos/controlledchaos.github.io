@@ -9,10 +9,6 @@ layout: default
 {%- assign first_page_path = page.first_page_path | default: paginator.first_page_path | default:
 paginate_first_page_path -%}
 
-{%- if content != blank %}
-{{ content }}
-{%- endif %}
-
 {%- assign front_intro = site.pages | where: "path", "front-page/intro.md" | first -%}
 {%- assign front_projects = site.pages | where: "path", "front-page/projects.md" | first -%}
 {%- assign front_posts = site.pages | where: "path", "front-page/posts.md" | first -%}
@@ -70,8 +66,8 @@ paginate_first_page_path -%}
 
 	{%- include featured-posts-grid.html posts = site.posts limit = 3 index = first_page_path -%}
 
-	{%- if featured_posts.size > timeline_post_limit and timeline_index != blank -%}
-	<p class="featured-all"><a href="{{ timeline_index | relative_url }}" class="featured-all-link">All Posts</a></p>
+	{%- if posts.size > 1 -%}
+	<p class="featured-all"><a href="{{ site.blog_path | relative_url }}" class="featured-all-link">All Posts</a></p>
 	{%- endif -%}
 
 </section>
