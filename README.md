@@ -1,3 +1,5 @@
+<style>img { display: inline-block !important; }</style>
+
 # Controlled Chaos Design
 
 ![GitHub Pages](https://img.shields.io/badge/GitHub-Pages-0969da.svg?logo=github&logoColor=white&logoSize=auto&style=flat-square)
@@ -12,5 +14,3 @@ This is where all of the files live for the [Controlled Chaos Design website](ht
 The repository contains a custom theme written for the site. Building the site was a lot for work but now I know how [Jekyll](https://jekyllrb.com/) and [Liquid](https://shopify.github.io/liquid/) work.
 
 ![Controlled Chaos Design Cover Image](https://github.com/ControlledChaos/controlledchaos.github.io/raw/main/assets/img/default-cover.jpg)
-
-<style>img['data-canonical-src'] { display: inline-block !important; }</style>
