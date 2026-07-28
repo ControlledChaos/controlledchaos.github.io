@@ -1,5 +1,4 @@
 ---
-title: 
 ---
 Have you ever wanted to have a website built by a mule packer? Well today is your lucky day!
 
