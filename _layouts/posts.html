@@ -1,13 +1,13 @@
 ---
 layout: default
 ---
-{%- assign posts = page.posts | default: site.posts %}
-{%- assign posts_limit = page.posts_limit | default: site.posts_limit | default: site.paginate %}
-{% assign paginate_path = page.pagination.permalink | default: site.pagination.permalink | default: site.paginate_path
-%}
-{% assign paginate_first_page_path = paginate_path | replace: 'page:num', '' %}
-{% assign first_page_path = page.first_page_path | default: paginator.first_page_path | default:
-paginate_first_page_path %}
+{%- assign posts = page.posts | default: site.posts -%}
+{%- assign posts_limit = page.posts_limit | default: site.posts_limit | default: site.paginate -%}
+{%- assign paginate_path = page.pagination.permalink | default: site.pagination.permalink | default: site.paginate_path
+-%}
+{%- assign paginate_first_page_path = paginate_path | replace: 'page:num', '' -%}
+{%- assign first_page_path = page.first_page_path | default: paginator.first_page_path | default:
+paginate_first_page_path -%}
 
 {%- if content != blank %}
 {{ content }}
@@ -16,6 +16,8 @@ paginate_first_page_path %}
 {%- assign front_intro = site.pages | where: "path", "front-page/intro.md" | first -%}
 {%- assign front_projects = site.pages | where: "path", "front-page/projects.md" | first -%}
 {%- assign front_posts = site.pages | where: "path", "front-page/posts.md" | first -%}
+
+{%- assign avatar_width = page.avatar_width | default: "200px" -%}
 
 {%- if page.title -%}
 <header class="page-header">
@@ -31,7 +33,7 @@ paginate_first_page_path %}
 <section id="front-page-intro" class="front-page-section">
 	<div class="front-page-content">
 		<div class="layout columns responsive front-intro-columns">
-			<figure class="captioned-image front-intro-avatar">
+			<figure class="captioned-image front-intro-avatar" style="min-width: {{ avatar_width }}">
 				<a href='{{ page.avatar_image | prepend: "assets/img/" | absolute_url }}' data-fancybox data-caption="{{ page.avatar_caption }}">
 					<img src='{{ page.avatar_image | prepend: "assets/img/" | absolute_url }}' alt="{{ page.avatar_alt }}" class="avatar" />
 				</a>
