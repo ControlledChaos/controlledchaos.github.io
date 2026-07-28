@@ -19,14 +19,14 @@
 jQuery(document).ready( function($) {
 
 	$( '#front-page-sections' ).fullpage({
-		anchors         : [ 'header','intro','projects','posts', 'footer' ],
+		anchors         : [ 'header', 'intro', 'projects', 'posts', 'footer' ],
 		lockAnchors     : true,
-		menu            : '#site-navigation',
+		// menu            : '#site-navigation',
 		navigation      : true,
 		dragAndMove     : true,
 		sectionSelector : '.front-page-section',
-		paddingTop      : '72px',
-		paddingBottom   : '32px',
+		paddingTop      : 0,
+		paddingBottom   : 0,
 		responsiveWidth     : 480,
 		responsiveHeight    : 560,
 		scrollOverflow      : true,
@@ -49,16 +49,17 @@ jQuery(document).ready( function($) {
 		afterLoad : function( origin, destination, direction ) {
 			var leavingSection = this;
 			if ( origin.index == 0 && direction =='down' ) {
-				$( '.site-header-wrap' ).addClass( 'header-wrap-scrolled' );
+				$( '.site-header' ).addClass( 'header-scrolled' );
 			}
 		},
 		onLeave : function( origin, destination, direction ) {
 			var leavingSection = this;
 			if ( destination.index == 0 ) {
-				$( '.site-header-wrap' ).removeClass( 'header-wrap-scrolled' );
+				$( '.site-header' ).removeClass( 'header-scrolled' );
 			}
 		}
 	});
+	/*
 	// Make FullPage work with id attributes for no JS navigation fallback.
 	$( '#site-navigation ul li a' ).click( function() {
 		let newSlide = $(this).closest( 'li' ).data( 'menuanchor' )
@@ -70,6 +71,7 @@ jQuery(document).ready( function($) {
 	$( '#site-navigation ul li a' ).click( function() {
 		$( '.main-navigation' ).removeClass( 'toggled' );
 	});
+	*/
 
 	// Custom tooltips.
 	$( 'a[data-tooltip]' ).tooltipster({
