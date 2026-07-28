@@ -34,7 +34,7 @@ paginate_first_page_path -%}
 <section id="front-page-intro" class="front-page-section">
 	<div class="front-page-content">
 		<div class="layout columns responsive front-intro-columns">
-			<!-- Minimum width from variable in site index file, default 160px in `posts` layout. -->
+			<!-- Avatar from Jekyll variables in the site `index.html` file, defaults from Liquid variables in `posts.html` layout. -->
 			<figure class="captioned-image front-intro-avatar" {{ avatar_style }}>
 				<a href='{{ page.avatar_image | prepend: "assets/img/" | absolute_url }}' data-fancybox data-caption="{{ page.avatar_caption }}">
 					<img src='{{ page.avatar_image | prepend: "assets/img/" | absolute_url }}' alt="{{ page.avatar_alt }}" class="avatar" />
