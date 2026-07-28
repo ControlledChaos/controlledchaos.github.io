@@ -5712,7 +5712,7 @@
       return nullOrSlide(getState().activeSection.activeSlide);
     }
 
-    EventEmitter.on(events.bindEvents, init$1);
+    // EventEmitter.on(events.bindEvents, init$1);
 
     function init$1() {
       var position = getOptions().credits.position || 'right';
@@ -5722,7 +5722,7 @@
       var shouldUseWaterMark = !state.isValid || getOptions().credits.enabled;
 
       if (lastSection && lastSection.item && shouldUseWaterMark) {
-        // lastSection.item.insertAdjacentHTML('beforeend', waterMark);
+        lastSection.item.insertAdjacentHTML('beforeend', waterMark);
       }
     }
 
