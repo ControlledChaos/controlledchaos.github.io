@@ -750,6 +750,14 @@ figcaption {
   }
 }
 
+.front-page .site-header {
+  width: 100% !important;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+}
+
 .site-identity {
   display: flex;
   align-items: center;
