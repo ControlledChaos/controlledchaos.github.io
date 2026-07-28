@@ -1,20 +1,10 @@
 ---
 layout: default
 ---
-{%- assign posts = page.posts | default: site.posts -%}
-{%- assign posts_limit = page.posts_limit | default: site.posts_limit | default: site.paginate -%}
-{%- assign paginate_path = page.pagination.permalink | default: site.pagination.permalink | default: site.paginate_path
--%}
-{%- assign paginate_first_page_path = paginate_path | replace: 'page:num', '' -%}
-{%- assign first_page_path = page.first_page_path | default: paginator.first_page_path | default:
-paginate_first_page_path -%}
 
 {%- assign front_intro = site.pages | where: "path", "front-page/intro.md" | first -%}
 {%- assign front_projects = site.pages | where: "path", "front-page/projects.md" | first -%}
 {%- assign front_posts = site.pages | where: "path", "front-page/posts.md" | first -%}
-
-{%- assign avatar_width = page.avatar_width | default: "160px" -%}
-{%- assign avatar_style = avatar_width | prepend: "style='min-width: " | append: "'" -%}
 
 {%- if page.title -%}
 <header class="page-header">
@@ -28,6 +18,10 @@ paginate_first_page_path -%}
 {%- endif -%}
 
 <section id="front-page-intro" class="front-page-section">
+
+	{%- assign avatar_width = page.avatar_width | default: "160px" -%}
+	{%- assign avatar_style = avatar_width | prepend: "style='min-width: " | append: "'" -%}
+
 	<div class="front-page-content">
 		<div class="layout columns responsive front-intro-columns">
 			<!-- Avatar from Jekyll variables in the site `index.html` file, defaults from Liquid variables in `posts.html` layout. -->
@@ -55,8 +49,8 @@ paginate_first_page_path -%}
 
 </section>
 
-{%- assign posts_limit = 3 -%}
 {%- if posts.size > 0 and page.url == "/" -%}
+{%- assign posts_limit = 3 -%}
 
 <section id="front-page-posts" class="front-page-section">
 
