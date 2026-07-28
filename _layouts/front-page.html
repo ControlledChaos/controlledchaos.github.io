@@ -20,7 +20,6 @@
 jQuery(document).ready( function($) {
 
 	$( '#front-page-sections' ).fullpage({
-		licenseKey      : false,
 		credits         : false,
 		anchors         : [ 'header', 'intro', 'projects', 'posts', 'footer' ],
 		lockAnchors     : true,
@@ -28,8 +27,6 @@ jQuery(document).ready( function($) {
 		sectionSelector : '.front-page-section',
 		paddingTop      : 0,
 		paddingBottom   : 0,
-		// responsiveWidth     : 480,
-		// responsiveHeight    : 560,
 		scrollOverflow      : true,
 		scrollOverflowReset : true,
 		afterRender     : function() {
