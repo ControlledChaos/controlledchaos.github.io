@@ -8,7 +8,6 @@
 - Full-screen page headers
 - Single project template
 - Project galleries
-- Custom tooltips
 - Site footer w/ links & contact
 - Snippets/Gists
 - Search form
