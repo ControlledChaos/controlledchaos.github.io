@@ -18,6 +18,7 @@ paginate_first_page_path -%}
 {%- assign front_posts = site.pages | where: "path", "front-page/posts.md" | first -%}
 
 {%- assign avatar_width = page.avatar_width | default: "200px" -%}
+{%- assign avatar_style = avatar_width | prepend: "style='min-width: " | append: "'" -%}
 
 {%- if page.title -%}
 <header class="page-header">
@@ -33,7 +34,7 @@ paginate_first_page_path -%}
 <section id="front-page-intro" class="front-page-section">
 	<div class="front-page-content">
 		<div class="layout columns responsive front-intro-columns">
-			<figure class="captioned-image front-intro-avatar" style="min-width: {{ avatar_width }}">
+			<figure class="captioned-image front-intro-avatar" {{ avatar_style }}>
 				<a href='{{ page.avatar_image | prepend: "assets/img/" | absolute_url }}' data-fancybox data-caption="{{ page.avatar_caption }}">
 					<img src='{{ page.avatar_image | prepend: "assets/img/" | absolute_url }}' alt="{{ page.avatar_alt }}" class="avatar" />
 				</a>
