@@ -46,19 +46,19 @@ jQuery(document).ready( function($) {
 				dots           : false
 			});
 		},
-		afterLoad : function( origin, destination, direction ) {
+		onLeave : function( origin, destination, direction ) {
 			var leavingSection = this;
 			if ( origin.index == 0 && direction =='down' ) {
 				$( '.site-header' ).addClass( 'header-scrolled' );
 			}
+			if ( destination.index == 0 ) {
+				$( '.site-header' ).removeClass( 'header-scrolled' );
+			}
 			if ( destination.index == 4 ) {
 				$( '.site-header' ).addClass( 'header-alt-01' );
 			}
-		},
-		onLeave : function( origin, destination, direction ) {
-			var leavingSection = this;
-			if ( destination.index == 0 ) {
-				$( '.site-header' ).removeClass( 'header-scrolled' );
+			if ( origin.index == 4 && direction =='up' ) {
+				$( '.site-header' ).removeClass( 'header-alt-01' );
 			}
 		}
 	});
