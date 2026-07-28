@@ -115,11 +115,19 @@
 
 	<!-- Schema meta tags -->
 	<meta itemprop="url" content="{{ page.url | absolute_url }}" />
+	<meta itemprop="owner" content="{{ site.owner }}" />
 	<meta itemprop="name" content="{{ title }}" />
 	<meta itemprop="description" content="{{ meta_description }}" />
 	<meta itemprop="author" content="{{ meta_author }}" />
-	<meta itemprop="datePublished" content='{{ page.published | default: {{ page.date | date: "%b %d, %Y" }} }}' />
+	<meta itemprop="datePublished" content='{{ page.date | date: "%b %d, %Y" }}' />
 	<meta itemprop="image" content="{{ '/assets/img/' | append: meta_img | absolute_url }}" />
+
+	<meta itemprop="email" content="{{ site.email }}" />
+	<meta itemprop="telephone" content="{{ site.phone }}" />
+	<meta itemprop="addressLocality" content="{{ site.locality }}" />
+	<meta itemprop="addressRegion" content="{{ site.region }}" />
+	<meta itemprop="postalCode" content="{{ site.postal }}" />
+	<meta itemprop="addressCountry" content="{{ site.overlords }}" />
 
 	<!-- Open Graph meta tags -->
 	<meta property="og:url" content="{{ page.url | absolute_url }}" />
