@@ -3,17 +3,7 @@ layout: front-page
 ---
 
 <header id="header" data-anchor="section-header" class="front-page-section page-header active">
-
 	<ul class="intro-slides"></ul>
-
-	{%- if page.title -%}
-	<h2 id="{{ page.title | slugify }}" class="page-title">{{ page.title }}</h2>
-	{%- endif -%}
-
-	{%- if page.subtitle -%}
-	<p class="page-subtitle">{{ page.subtitle }}</p>
-	{%- endif -%}
-
 </header>
 
 <section id="intro" data-anchor="section-intro" class="front-page-section">
@@ -32,6 +22,14 @@ layout: front-page
 				<figcaption>{{ page.avatar_caption }}</figcaption>
 			</figure>
 			<div>
+				{%- if page.title -%}
+				<h2 id="{{ page.title | slugify }}" class="page-title">{{ page.title }}</h2>
+				{%- endif -%}
+
+				{%- if page.subtitle -%}
+				<p class="page-subtitle">{{ page.subtitle }}</p>
+				{%- endif -%}
+
 				{{ front_intro.content | markdownify }}
 			</div>
 		</div>
@@ -42,7 +40,9 @@ layout: front-page
 
 	{%- assign front_projects = site.pages | where: "path", "front-page/projects.md" | first -%}
 
-	<h2>Featured Projects</h2>
+	{%- if front_projects.title and front_projects.title != blank %}
+	<h2>{{ front_projects.title }}</h2>
+	{% endif %}
 	<div class="front-page-content">
 		{{ front_projects.content | markdownify -}}
 	</div>
@@ -65,7 +65,6 @@ layout: front-page
 	<h2>{{ front_posts.title }}</h2>
 	{% endif %}
 	<div class="front-page-content">
-		{{ front_posts.title }}
 		{{ front_posts.content | markdownify -}}
 	</div>
 
