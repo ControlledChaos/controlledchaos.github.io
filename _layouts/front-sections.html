@@ -61,7 +61,9 @@ layout: front-page
 	{%- assign posts_limit = 3 -%}
 	{%- assign front_posts = site.pages | where: "path", "front-page/posts.md" | first -%}
 
-	<h2>Latest Posts</h2>
+	{%- if front_posts.title and front_posts.title != blank %}
+	<h2>{{ front_posts.title }}</h2>
+	{% endif %}
 	<div class="front-page-content">
 		{{ front_posts.title }}
 		{{ front_posts.content | markdownify -}}
