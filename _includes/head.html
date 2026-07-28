@@ -46,6 +46,8 @@
 	<meta charset='utf-8' />
 	<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="generator" content="Jekyll {{ jekyll.version }}" />
+	<meta name="language" content="{{ site.language }}" />
 
 	<!-- Preload local fonts -->
 	{%- for preload in fonts %}
@@ -100,28 +102,41 @@
 	{%- endif %}
 
 	<!-- Standard meta tags -->
+	<meta name="url" content="{{ page.url | absolute_url }}" />
+	<meta name="identifier-URL" content="{{ site.url }}" />
+	<meta name="owner" content="{{ site.owner }}" />
+	<meta name="designer" content="Controlled Chaos Design" />
+	<meta name="subject" content="Personal portfolio, code sharing, blog" />
 	<meta name="keywords" content="{{ page.keywords }}" />
 	<meta name="title" content="{{ title }}" />
 	<meta name="description" content="{{ meta_description }}" />
 	<meta name="author" content="{{ meta_author }}" />
-	<meta name="copyright" content="No copyright assertions." />
+	<meta name="copyright" content="No copyright claims" />
 
 	<!-- Schema meta tags -->
 	<meta itemprop="url" content="{{ page.url | absolute_url }}" />
 	<meta itemprop="name" content="{{ title }}" />
 	<meta itemprop="description" content="{{ meta_description }}" />
 	<meta itemprop="author" content="{{ meta_author }}" />
-	<meta itemprop="datePublished" content="{{ page.published }}" />
+	<meta itemprop="datePublished" content='{{ page.published | default: {{ page.date | date: "%b %d, %Y" }} }}' />
 	<meta itemprop="image" content="{{ '/assets/img/' | append: meta_img | absolute_url }}" />
 
 	<!-- Open Graph meta tags -->
 	<meta property="og:url" content="{{ page.url | absolute_url }}" />
-	<meta property="og:locale" content="en_US" />
+	<meta property="og:locale" content="{{ site.language }}" />
 	<meta property="og:type" content="website" />
+
 	<meta property="og:site_name" content="{{ site.title }}" />
 	<meta property="og:title" content="{{ title }}" />
 	<meta property="og:description" content="{{ meta_description }}" />
 	<meta property="og:image" content="{{ '/assets/img/' | append: meta_img | absolute_url }}" />
+
+	<meta property="og:email" content="{{ site.email }}" />
+	<meta property="og:phone_number" content="{{ site.phone }}" />
+	<meta property="og:locality" content="{{ site.locality }}" />
+	<meta property="og:region" content="{{ site.region }}" />
+	<meta property="og:postal-code" content="{{ site.postal }}" />
+	<meta property="og:country-name" content="{{ site.overlords }}" />
 
 	<!-- X/Twitter meta tags -->
 	<meta name="twitter:card" content="summary_large_image" />
@@ -131,4 +146,14 @@
 	<meta name="twitter:title" content="{{ title }}" />
 	<meta name="twitter:description" content="{{ meta_description }}" />
 	<meta name="twitter:image:src" content="{{ '/assets/img/' | append: meta_img | absolute_url }}" />
+
+	<!-- Dublin Core meta tags -->
+	<meta name="DC.Format" content="text/html" />
+	<meta name="DC.Language" content="{{ site.language }}" />
+	<meta name="DC.Subject" content="Personal portfolio, code sharing, blog" />
+	<meta name="DC.Description" content="{{ meta_description }}" />
+	<meta name="DC.Creator" content="{{ meta_author }}" />
+	<meta name="DC.Date" content='{{ page.date | date: "%b %d, %Y" }}' />
+	<meta name="DC.Publisher" content="{{ site.organization }}" />
+	<meta name="DC.Rights" content="No copyright claims" />
 </head>
