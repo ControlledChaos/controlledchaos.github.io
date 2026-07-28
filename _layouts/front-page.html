@@ -50,8 +50,10 @@ jQuery(document).ready( function($) {
 			var leavingSection = this;
 			if ( origin.index == 0 && direction =='down' ) {
 				$( '.site-header' ).addClass( 'header-scrolled' );
-			} else if ( origin.index == 4 && direction =='down' ) {
-				$( '.site-header' ).addClass( 'header-alt-01' );
+			}
+			if ( origin.index == 4 && direction =='down' ) {
+				$( '.site-header' ).removeClass( 'header-scrolled' );
+				$( '.site-header' ).addClass( 'header-scrolled header-alt-01' );
 			}
 		},
 		onLeave : function( origin, destination, direction ) {
