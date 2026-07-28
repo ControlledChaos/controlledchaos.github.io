@@ -20,15 +20,15 @@
 jQuery(document).ready( function($) {
 
 	$( '#front-page-sections' ).fullpage({
-		credits         : '',
+		credits         : {
+			'enabled': false
+		},
 		lockAnchors     : true,
 		navigation      : true,
 		dragAndMove     : true,
 		sectionSelector : '.front-page-section',
 		paddingTop      : 0,
 		paddingBottom   : 0,
-		// responsiveWidth     : 480,
-		// responsiveHeight    : 560,
 		scrollOverflow      : true,
 		scrollOverflowReset : true,
 		afterRender     : function() {
