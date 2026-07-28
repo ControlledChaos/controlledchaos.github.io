@@ -1,1 +1,4 @@
+---
+title: Posts
+---
 Sometimes I write about website stuff, solutions to problems that I have found, and my related experiences. Perhaps you could peruse my posts if you are hard-up for reading material. The following, obligitory grid of three are the most recent posts.
