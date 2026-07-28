@@ -2,23 +2,21 @@
 layout: front-page
 ---
 
-{%- assign front_intro = site.pages | where: "path", "front-page/intro.md" | first -%}
-{%- assign front_projects = site.pages | where: "path", "front-page/projects.md" | first -%}
-{%- assign front_posts = site.pages | where: "path", "front-page/posts.md" | first -%}
-
-{%- if page.title -%}
 <header id="header" class="front-page-section page-header">
+
+	{%- if page.title -%}
 	<h2 id="{{ page.title | slugify }}" class="page-title">{{ page.title }}</h2>
+	{%- endif -%}
 
 	{%- if page.subtitle -%}
 	<p class="page-subtitle">{{ page.subtitle }}</p>
 	{%- endif -%}
 
 </header>
-{%- endif -%}
 
 <section id="intro" class="front-page-section">
 
+	{%- assign front_intro = site.pages | where: "path", "front-page/intro.md" | first -%}
 	{%- assign avatar_width = page.avatar_width | default: "160px" -%}
 	{%- assign avatar_style = avatar_width | prepend: "style='min-width: " | append: "'" -%}
 
@@ -40,19 +38,26 @@ layout: front-page
 
 <section id="projects" class="front-page-section">
 
+	{%- assign front_projects = site.pages | where: "path", "front-page/projects.md" | first -%}
+
 	<h2>Featured Projects</h2>
 	<div class="front-page-content">
 		{{ front_projects.content | markdownify -}}
 	</div>
 
-	{%- include featured-projects-grid.html projects = site.projects -%}
+	{%- if site.projects.size > 0 -%}
+		{%- include featured-projects-grid.html projects = site.projects -%}
+	{%- else -%}
+		<p>No projects found.</p>
+	{%- endif -%}
 
 </section>
 
-{%- if site.posts.size > 0 and page.url == "/" -%}
-{%- assign posts_limit = 3 -%}
-
 <section id="posts" class="front-page-section">
+{%- if site.posts.size > 0 -%}
+
+	{%- assign posts_limit = 3 -%}
+	{%- assign front_posts = site.pages | where: "path", "front-page/posts.md" | first -%}
 
 	<h2>Latest Posts</h2>
 	<div class="front-page-content">
@@ -65,8 +70,8 @@ layout: front-page
 	<p class="featured-all"><a href="{{ site.blog_path | relative_url }}" class="featured-all-link">All Posts</a></p>
 	{%- endif -%}
 
-</section>
 {%- endif -%}
+</section>
 
 <footer id="footer" class="front-page-section site-footer">
 	<div class="site-info" style="min-height: 400px; background: #c0d86c; color: #fff;">

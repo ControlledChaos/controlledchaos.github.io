@@ -5,6 +5,7 @@
 @use '../modules/layout';
 
 .site-header {
+	width: var( --ccd-site-header--width, 100% );
 	margin: var( --ccd-site-header--margin, 0 );
 	padding: var( --ccd-site-header--padding, 2rem );
 	background-color: var( --ccd-site-header--bg-color, inherit );
