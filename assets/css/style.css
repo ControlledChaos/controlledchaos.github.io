@@ -483,6 +483,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: var(--ccd-body--bg-color);
 }
 
 h1, h2, h3, h4, h5, h6, p, ul, ol, blockquote, fieldset, table, pre {
@@ -768,7 +769,6 @@ figcaption {
   top: 0;
   left: 0;
   z-index: 5001;
-  background-color: var(--ccd-body--bg-color);
 }
 
 .site-identity {
