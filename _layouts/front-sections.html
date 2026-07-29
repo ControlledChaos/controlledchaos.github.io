@@ -8,8 +8,9 @@ layout: front-page
 {%- assign front_posts = site.pages | where: "path", "front-page/posts.md" | first -%}
 {%- assign front_footer = site.pages | where: "path", "front-page/footer.md" | first -%}
 
+{% assign collection = site.front-page | sort: "order" %}
 {% assign sections = "" | split: ',' %}
-{% for section in site.front-page | sort: "order" %}
+{% for section in collection %}
 	{% assign slug = section.id | remove: "/front-page/" %}
 	<!-- Push section into array -->
 	{% assign sections = sections | push: slug %}
