@@ -2,41 +2,38 @@
 layout: front-page
 ---
 
-{%- assign front_slides = site.pages | where: "path", "front-page/slides.md" | first -%}
-{%- assign front_intro = site.pages | where: "path", "front-page/intro.md" | first -%}
-{%- assign front_projects = site.pages | where: "path", "front-page/projects.md" | first -%}
-{%- assign front_posts = site.pages | where: "path", "front-page/posts.md" | first -%}
-{%- assign front_footer = site.pages | where: "path", "front-page/footer.md" | first -%}
+{%- assign slides = site.pages | where: "path", "front-page/slides.md" | first -%}
+{%- assign intro = site.pages | where: "path", "front-page/intro.md" | first -%}
+{%- assign projects = site.pages | where: "path", "front-page/projects.md" | first -%}
+{%- assign posts = site.pages | where: "path", "front-page/posts.md" | first -%}
+{%- assign footer = site.pages | where: "path", "front-page/footer.md" | first -%}
 
-{% assign collection = site.front-page | sort: "order" %}
-{% assign sections = "" | split: ',' %}
-{% for section in collection %}
-	{% assign slug = section.id | remove: "/front-page/" %}
-	<!-- Push section into array -->
-	{% assign sections = sections | push: slug %}
-{% endfor %}
+{%- assign page = site.front-page | sort: "order" -%}
+{%- assign sections   = "" | split: ',' -%}
+{%- for section in page -%}
+	{%- assign slug = section.id | remove: "/front-page/" -%}
+	{%- assign sections = sections | push: slug -%}
+{%- endfor -%}
+
+{%- for section in sections -%}
+	{%- assign section = site.pages | where: "path", section | prepend: "_front-page/" | append: ".md" | first -%}
+{%- endfor -%}
 
 <section id="section-slides" data-anchor="slides" class="page-header front-page-section active">
 	<ul id="intro-slides" class="intro-slides"></ul>
-{{ sections }}
-	<ul>
-	{%- for section in sections -%}
-	<li>{{ section }}</li>
-	{%- endfor -%}
-	</ul>
 
 	<div class="sections-nav fp-nav-y fp-nav-down">
-		<a href="#section-intro" class="scroll-down" title='{{ front_intro.title | default: "Introduction" }}' data-tooltip>{%- include svg/angle-down.svg -%}</a>
+		<a href="#section-intro" class="scroll-down" title='{{ intro.title | default: "Introduction" }}' data-tooltip>{%- include svg/angle-down.svg -%}</a>
 	</div>
 </section>
 
 <section id="section-intro" data-anchor="intro" class="front-page-section">
 
 	<div class="sections-nav fp-nav-y fp-nav-up">
-		<a href="#section-slides" class="scroll-up" title='{{ front_slides.title | default: "Slideshow" }}' data-tooltip>{%- include svg/angle-up.svg -%}</a>
+		<a href="#section-slides" class="scroll-up" title='{{ slides.title | default: "Slideshow" }}' data-tooltip>{%- include svg/angle-up.svg -%}</a>
 	</div>
 
-	{%- assign front_intro = site.pages | where: "path", "front-page/intro.md" | first -%}
+	{%- assign intro = site.pages | where: "path", "front-page/intro.md" | first -%}
 	{%- assign avatar_width = page.avatar_width | default: "160px" -%}
 	{%- assign avatar_style = avatar_width | prepend: "style='min-width: " | append: "'" -%}
 
@@ -58,26 +55,26 @@ layout: front-page
 				<p class="page-subtitle">{{ page.subtitle }}</p>
 				{%- endif -%}
 
-				{{ front_intro.content | markdownify }}
+				{{ intro.content | markdownify }}
 			</div>
 		</div>
 	</div>
 	<div class="sections-nav fp-nav-y fp-nav-down">
-		<a href="#section-projects" class="scroll-down" title='{{ front_projects.title | default: "Featured Projects" }}' data-tooltip>{%- include svg/angle-down.svg -%}</a>
+		<a href="#section-projects" class="scroll-down" title='{{ projects.title | default: "Featured Projects" }}' data-tooltip>{%- include svg/angle-down.svg -%}</a>
 	</div>
 </section>
 
 <section id="section-projects" data-anchor="projects" class="front-page-section">
 
 	<div class="sections-nav fp-nav-y fp-nav-up">
-		<a href="#section-intro" class="scroll-up" title='{{ front_intro.title | default: "Introduction" }}' data-tooltip>{%- include svg/angle-up.svg -%}</a>
+		<a href="#section-intro" class="scroll-up" title='{{ intro.title | default: "Introduction" }}' data-tooltip>{%- include svg/angle-up.svg -%}</a>
 	</div>
 
-	{%- if front_projects.title and front_projects.title != blank %}
-	<h2 class="section-heading">{{ front_projects.title }}</h2>
+	{%- if projects.title and projects.title != blank %}
+	<h2 class="section-heading">{{ projects.title }}</h2>
 	{% endif %}
 	<div class="front-page-content">
-		{{ front_projects.content | markdownify -}}
+		{{ projects.content | markdownify -}}
 	</div>
 
 	{%- if site.projects.size > 0 -%}
@@ -87,23 +84,23 @@ layout: front-page
 	{%- endif -%}
 
 	<div class="sections-nav fp-nav-y fp-nav-down">
-		<a href="#section-posts" class="scroll-down" title='{{ front_posts.title | default: "Latest Posts" }}' data-tooltip>{%- include svg/angle-down.svg -%}</a>
+		<a href="#section-posts" class="scroll-down" title='{{ posts.title | default: "Latest Posts" }}' data-tooltip>{%- include svg/angle-down.svg -%}</a>
 	</div>
 </section>
 
 <section id="section-posts" data-anchor="posts" class="front-page-section">
 	<div class="sections-nav fp-nav-y fp-nav-up">
-		<a href="#section-projects" class="scroll-up" title='{{ front_projects.title | default: "Featured Projects" }}' data-tooltip>{%- include svg/angle-up.svg -%}</a>
+		<a href="#section-projects" class="scroll-up" title='{{ projects.title | default: "Featured Projects" }}' data-tooltip>{%- include svg/angle-up.svg -%}</a>
 	</div>
 {%- if site.posts.size > 0 -%}
 
 	{%- assign posts_limit = 3 -%}
 
-	{%- if front_posts.title and front_posts.title != blank %}
-	<h2 class="section-heading">{{ front_posts.title }}</h2>
+	{%- if posts.title and posts.title != blank %}
+	<h2 class="section-heading">{{ posts.title }}</h2>
 	{% endif %}
 	<div class="front-page-content">
-		{{ front_posts.content | markdownify -}}
+		{{ posts.content | markdownify -}}
 	</div>
 
 	{%- include featured-posts-grid.html limit = posts_limit -%}
@@ -115,13 +112,13 @@ layout: front-page
 {%- endif -%}
 
 	<div class="sections-nav fp-nav-y fp-nav-down">
-		<a href="#section-footer" class="scroll-down" title='{{ front_footer.title | default: "More Information" }}' data-tooltip>{%- include svg/angle-down.svg -%}</a>
+		<a href="#section-footer" class="scroll-down" title='{{ footer.title | default: "More Information" }}' data-tooltip>{%- include svg/angle-down.svg -%}</a>
 	</div>
 </section>
 
 <footer id="section-footer" data-anchor="footer" class="front-page-section site-footer">
 	<div class="sections-nav fp-nav-y fp-nav-up">
-		<a href="#section-posts" class="scroll-up" title='{{ front_posts.title | default: "Latest Posts" }}' data-tooltip>{%- include svg/angle-up.svg -%}</a>
+		<a href="#section-posts" class="scroll-up" title='{{ posts.title | default: "Latest Posts" }}' data-tooltip>{%- include svg/angle-up.svg -%}</a>
 	</div>
 	<div class="site-info" style="min-height: 400px; background: #c0d86c; color: #fff;">
 		<div class="general-wrap">
