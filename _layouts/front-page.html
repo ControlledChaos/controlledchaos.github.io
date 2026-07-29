@@ -47,7 +47,6 @@ jQuery(document).ready( function($) {
 			});
 		},
 		afterLoad : function( origin, destination, direction ) {
-			var leavingSection = this;
 			$( '.fp-watermark' ).remove();
 		},
 		onLeave : function( origin, destination, direction ) {
@@ -60,8 +59,10 @@ jQuery(document).ready( function($) {
 			}
 			if ( destination.index == 4 ) {
 				$( '.site-header' ).addClass( 'header-alt-01' );
+				$fn.fullpage.setAutoScrolling( false );
 			}
 			if ( origin.index == 4 && direction =='up' ) {
+				$fn.fullpage.setAutoScrolling( true );
 				$( '.site-header' ).removeClass( 'header-alt-01' );
 			}
 		}
