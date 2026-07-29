@@ -15,7 +15,7 @@ layout: front-page
 	{%- for file in site.front-page -%}
 	<li>{{ file.name }}</li>
 	{%- endfor -%}
-	</ul>
+	</ul>{{ site.front-page }}
 
 	<div class="sections-nav fp-nav-y fp-nav-down">
 		<a href="#section-intro" class="scroll-down" title='{{ front_intro.title | default: "Introduction" }}' data-tooltip>{%- include svg/angle-down.svg -%}</a>
