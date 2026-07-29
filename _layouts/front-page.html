@@ -10,7 +10,9 @@
 {% include head.html -%}
 <body class="front-page">
 	{% include site-header.html -%}
-	{{ front_sections }}
+	{% for section in front_sections %}
+	{{ section.id }}
+	{% endfor %}
 	<div id="front-page-sections" class="page-container front-page-sections" itemscope="itemscope" itemtype="WebPage">
 		{{ content }}
 	</div>
