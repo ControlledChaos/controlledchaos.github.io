@@ -13,9 +13,7 @@ layout: front-page
 
 	<ul>
 	{%- for file in site.front-page -%}
-	<li><pre>
-{{ file | inspect }}
-</pre></li>
+	<li>{{ file.id | remove: "/front-page/" }}</li>
 	{%- endfor -%}
 	</ul>
 
