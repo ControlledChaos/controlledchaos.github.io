@@ -23,6 +23,7 @@
 jQuery(document).ready( function($) {
 
 	$( '#front-page-sections' ).fullpage({
+		anchors         : [ 'slides', 'intro', 'projects', 'posts', 'footer' ],
 		lockAnchors     : true,
 		navigation      : true,
 		dragAndMove     : true,
@@ -51,10 +52,10 @@ jQuery(document).ready( function($) {
 		},
 		beforeLeave :function( origin, destination, direction ) {
 			if ( destination.index == 4 ) {
-				$fn.fullpage.setAutoScrolling( true );
+				// $fn.fullpage.setAutoScrolling( false );
 			}
 			if ( origin.index == 4 && direction =='up' ) {
-				$fn.fullpage.setAutoScrolling( false );
+				// $fn.fullpage.setAutoScrolling( true );
 			}
 		},
 		onLeave : function( origin, destination, direction ) {

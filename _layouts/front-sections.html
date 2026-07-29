@@ -2,11 +2,11 @@
 layout: front-page
 ---
 
-<section id="header" data-anchor="section-header" class="page-header front-page-section active">
+<section id="section-slides" data-anchor="slides" class="page-header front-page-section active">
 	<ul class="intro-slides"></ul>
 </section>
 
-<section id="intro" data-anchor="section-intro" class="front-page-section">
+<section id="section-intro" data-anchor="intro" class="front-page-section">
 
 	{%- assign front_intro = site.pages | where: "path", "front-page/intro.md" | first -%}
 	{%- assign avatar_width = page.avatar_width | default: "160px" -%}
@@ -36,7 +36,7 @@ layout: front-page
 	</div>
 </section>
 
-<section id="projects" data-anchor="section-projects" class="front-page-section">
+<section id="section-projects" data-anchor="projects" class="front-page-section">
 
 	{%- assign front_projects = site.pages | where: "path", "front-page/projects.md" | first -%}
 
@@ -55,7 +55,7 @@ layout: front-page
 
 </section>
 
-<section id="posts" data-anchor="section-posts" class="front-page-section">
+<section id="section-posts" data-anchor="posts" class="front-page-section">
 {%- if site.posts.size > 0 -%}
 
 	{%- assign posts_limit = 3 -%}
@@ -77,7 +77,7 @@ layout: front-page
 {%- endif -%}
 </section>
 
-<footer id="footer" data-anchor="section-footer" class="front-page-section site-footer">
+<footer id="section-footer" data-anchor="footer" class="front-page-section site-footer">
 	<div class="site-info" style="min-height: 400px; background: #c0d86c; color: #fff;">
 		<div class="general-wrap">
 			<h3>Contact Me</h3>
