@@ -23,14 +23,14 @@ layout: front-page
 	<ul id="intro-slides" class="intro-slides"></ul>
 
 	<div class="sections-nav fp-nav-y fp-nav-down">
-		<a href="#section-intro" class="scroll-down" title='{{ intro.title | default: "Introduction" }}' data-tooltip>{%- include svg/angle-down.svg -%}</a>
+		<button class="scroll-down" title='{{ intro.title | default: "Introduction" }}' data-tooltip>{%- include svg/angle-down.svg -%}</button>
 	</div>
 </section>
 
 <section id="section-intro" data-anchor="intro" class="front-page-section">
 
 	<div class="sections-nav fp-nav-y fp-nav-up">
-		<a href="#section-slides" class="scroll-up" title='{{ slides.title | default: "Slideshow" }}' data-tooltip>{%- include svg/angle-up.svg -%}</a>
+		<button class="scroll-up" title='{{ slides.title | default: "Slideshow" }}' data-tooltip>{%- include svg/angle-up.svg -%}</button>
 	</div>
 
 	{%- assign avatar_width = page.avatar_width | default: "160px" -%}
@@ -59,14 +59,14 @@ layout: front-page
 		</div>
 	</div>
 	<div class="sections-nav fp-nav-y fp-nav-down">
-		<a href="#section-projects" class="scroll-down" title='{{ projects.title | default: "Featured Projects" }}' data-tooltip>{%- include svg/angle-down.svg -%}</a>
+		<button class="scroll-down" title='{{ projects.title | default: "Featured Projects" }}' data-tooltip>{%- include svg/angle-down.svg -%}</button>
 	</div>
 </section>
 
 <section id="section-projects" data-anchor="projects" class="front-page-section">
 
 	<div class="sections-nav fp-nav-y fp-nav-up">
-		<a href="#section-intro" class="scroll-up" title='{{ intro.title | default: "Introduction" }}' data-tooltip>{%- include svg/angle-up.svg -%}</a>
+		<button class="scroll-up" title='{{ intro.title | default: "Introduction" }}' data-tooltip>{%- include svg/angle-up.svg -%}</button>
 	</div>
 
 	{%- if projects.title and projects.title != blank %}
@@ -83,13 +83,13 @@ layout: front-page
 	{%- endif -%}
 
 	<div class="sections-nav fp-nav-y fp-nav-down">
-		<a href="#section-posts" class="scroll-down" title='{{ posts.title | default: "Latest Posts" }}' data-tooltip>{%- include svg/angle-down.svg -%}</a>
+		<button class="scroll-down" title='{{ posts.title | default: "Latest Posts" }}' data-tooltip>{%- include svg/angle-down.svg -%}</button>
 	</div>
 </section>
 
 <section id="section-posts" data-anchor="posts" class="front-page-section">
 	<div class="sections-nav fp-nav-y fp-nav-up">
-		<a href="#section-projects" class="scroll-up" title='{{ projects.title | default: "Featured Projects" }}' data-tooltip>{%- include svg/angle-up.svg -%}</a>
+		<button class="scroll-up" title='{{ projects.title | default: "Featured Projects" }}' data-tooltip>{%- include svg/angle-up.svg -%}</button>
 	</div>
 {%- if site.posts.size > 0 -%}
 
@@ -111,13 +111,13 @@ layout: front-page
 {%- endif -%}
 
 	<div class="sections-nav fp-nav-y fp-nav-down">
-		<a href="#section-footer" class="scroll-down" title='{{ footer.title | default: "More Information" }}' data-tooltip>{%- include svg/angle-down.svg -%}</a>
+		<button class="scroll-down" title='{{ footer.title | default: "More Information" }}' data-tooltip>{%- include svg/angle-down.svg -%}</button>
 	</div>
 </section>
 
 <footer id="section-footer" data-anchor="footer" class="front-page-section site-footer">
 	<div class="sections-nav fp-nav-y fp-nav-up">
-		<a href="#section-posts" class="scroll-up" title='{{ posts.title | default: "Latest Posts" }}' data-tooltip>{%- include svg/angle-up.svg -%}</a>
+		<button class="scroll-up" title='{{ posts.title | default: "Latest Posts" }}' data-tooltip>{%- include svg/angle-up.svg -%}</button>
 	</div>
 	<div class="site-info" style="min-height: 400px; background: #c0d86c; color: #fff;">
 		<div class="general-wrap">
