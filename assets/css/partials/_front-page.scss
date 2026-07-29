@@ -73,28 +73,3 @@
 		}
 	}
 }
-
-#fp-nav {
-	background-color: rgba( $color: colors.$theme_primary_dark, $alpha: 0.625 );
-	border-radius: 2px;
-
-	ul li {
-		.fp-tooltip {
-			padding: 0.25rem;
-			font-size: 0.75rem;
-			line-height: 1;
-			background-color: rgba( $color: colors.$theme_primary_dark, $alpha: 0.625 );
-			border-radius: 2px;
-
-			&.fp-right {
-				right: 21px;
-				border-radius: 0px 0px 2px 2px;
-			}
-		}
-		a,
-		a span {
-			background-color: #ffffff;
-			color: #ffffff;
-		}
-	}
-}
