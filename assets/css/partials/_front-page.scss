@@ -2,6 +2,7 @@
 /// Front page styles
 ///
 
+@use '../modules/colors';
 @use '../modules/layout';
 
 .front-page-section {
@@ -74,11 +75,18 @@
 
 // FullPageJS sections & scrolling.
 #fp-nav {
-	ul li .fp-tooltip {
-		padding: 0.25rem;
-		font-size: 0.75rem;
-		line-height: 1;
-		background-color: rgba( $color: black, $alpha: 0.5 );
-		border-radius: 2px;
+	background-color: colors.$theme_primary_dark;
+
+	ul li {
+		.fp-tooltip {
+			padding: 0.25rem;
+			font-size: 0.75rem;
+			line-height: 1;
+			background-color: rgba( $color: colors.$theme_primary_dark, $alpha: 0.5 );
+			border-radius: 2px;
+		}
+		a span {
+			background-color: colors.$theme_primary_dark;
+		}
 	}
 }
