@@ -5,11 +5,22 @@
 @use '../modules/layout';
 
 .front-page-section {
-	margin-top: var( --ccd-spacing--y, 2rem );
 	clear: both;
+}
 
-	&:not( :first-of-type ) {
-		border-top: var( --ccd-box--border-style ) var( --ccd-box--border-width ) var( --ccd-box--border-color );
+.js {
+	.front-page-section {
+		padding-top: calc( var( --ccd-spacing--y, 2rem ) * 3 );
+	}
+}
+
+.no-js {
+	.front-page-section {
+		margin-top: var( --ccd-spacing--y, 2rem );
+
+		&:not( :first-of-type ) {
+			border-top: var( --ccd-box--border );
+		}
 	}
 }
 
@@ -59,4 +70,15 @@
 	text-align: center;
 	font-size: 1.25rem;
 	font-weight: 550;
+}
+
+// FullPageJS sections & scrolling.
+#fp-nav {
+	ul li .fp-tooltip {
+		padding: 0.25rem;
+		font-size: 0.75rem;
+		line-height: 1;
+		background-color: rgba( $color: black, $alpha: 0.5 );
+		border-radius: 2px;
+	}
 }

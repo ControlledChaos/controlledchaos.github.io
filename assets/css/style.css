@@ -979,11 +979,18 @@ figcaption {
 }
 
 .front-page-section {
-  margin-top: var(--ccd-spacing--y, 2rem);
   clear: both;
 }
-.front-page-section:not(:first-of-type) {
-  border-top: var(--ccd-box--border-style) var(--ccd-box--border-width) var(--ccd-box--border-color);
+
+.js .front-page-section {
+  padding-top: calc(var(--ccd-spacing--y, 2rem) * 3);
+}
+
+.no-js .front-page-section {
+  margin-top: var(--ccd-spacing--y, 2rem);
+}
+.no-js .front-page-section:not(:first-of-type) {
+  border-top: var(--ccd-box--border);
 }
 
 .columns.front-intro-columns {
@@ -1031,6 +1038,14 @@ figcaption {
   text-align: center;
   font-size: 1.25rem;
   font-weight: 550;
+}
+
+#fp-nav ul li .fp-tooltip {
+  padding: 0.25rem;
+  font-size: 0.75rem;
+  line-height: 1;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 2px;
 }
 
 .posts-list {
