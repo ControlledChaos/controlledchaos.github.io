@@ -1058,6 +1058,7 @@ figcaption {
 }
 #fp-nav ul li a,
 #fp-nav ul li a span {
+  background-color: #ffffff;
   color: #ffffff;
 }
 
