@@ -11,14 +11,6 @@ layout: front-page
 <section id="section-slides" data-anchor="slides" class="page-header front-page-section active">
 	<ul id="intro-slides" class="intro-slides"></ul>
 
-	<ul class="post-gallery">
-	{%- for file in site.static_files -%}
-	<li>{{ file.path }}</li>
-	<li>{{ file.basename }}</li>
-	<li>{{ file.name }}</li>
-	{%- endfor -%}
-	</ul>
-
 	<div class="sections-nav fp-nav-y fp-nav-down">
 		<a href="#section-intro" class="scroll-down" title='{{ front_intro.title | default: "Introduction" }}' data-tooltip>{%- include svg/angle-down.svg -%}</a>
 	</div>
