@@ -5,9 +5,9 @@
 	{%- assign sections = sections | push: slug -%}
 {%- endfor -%}
 
-{%- assign slugs_array = "" | split: ',' -%}
+{%- assign slugs_array = "" | split: ", " -%}
 {%- for section in sections -%}
-	{%- assign slug = section | prepend: "'" | append: "'" -%}
+	{%- assign slug = section -%}
 	{%- assign slugs_array = slugs_array | push: slug -%}
 {%- endfor -%}
 
