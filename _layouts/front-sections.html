@@ -11,8 +11,9 @@ layout: front-page
 <section id="section-slides" data-anchor="slides" class="page-header front-page-section active">
 	<ul id="intro-slides" class="intro-slides"></ul>
 
+	{% assign sections = collection.front-page | sort: "title" %}
 	<ul>
-	{%- for file in site.front-page -%}
+	{%- for file in sections -%}
 	<li>{{ file.id | remove: "/front-page/" }}</li>
 	{%- endfor -%}
 	</ul>
