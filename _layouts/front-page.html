@@ -3,16 +3,12 @@
 {%- assign front_projects = site.pages | where: "path", "front-page/projects.md" | first -%}
 {%- assign front_posts = site.pages | where: "path", "front-page/posts.md" | first -%}
 {%- assign front_footer = site.pages | where: "path", "front-page/footer.md" | first -%}
-{%- assign front_sections = site.pages | where: "path", "front-page" | first -%}
 
 <!doctype html>
 <html xmlns:og="http://opengraphprotocol.org/schema/" class="no-js" lang="en_US" dir="ltr">
 {% include head.html -%}
 <body class="front-page">
 	{% include site-header.html -%}
-	{% for section in front_sections %}
-	{{ section.id }}
-	{% endfor %}
 	<div id="front-page-sections" class="page-container front-page-sections" itemscope="itemscope" itemtype="WebPage">
 		{{ content }}
 	</div>
