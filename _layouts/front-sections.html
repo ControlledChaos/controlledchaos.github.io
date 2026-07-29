@@ -2,12 +2,6 @@
 layout: front-page
 ---
 
-{%- assign slides = site.pages | where: "path", "front-page/slides.md" | first -%}
-{%- assign intro = site.pages | where: "path", "front-page/intro.md" | first -%}
-{%- assign projects = site.pages | where: "path", "front-page/projects.md" | first -%}
-{%- assign posts = site.pages | where: "path", "front-page/posts.md" | first -%}
-{%- assign footer = site.pages | where: "path", "front-page/footer.md" | first -%}
-
 {%- assign front_page = site.front-page | sort: "order" -%}
 {%- assign sections   = "" | split: ", " -%}
 {%- for section in front_page -%}
