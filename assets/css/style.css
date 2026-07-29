@@ -1052,6 +1052,11 @@ figcaption {
   background-color: rgba(114, 87, 122, 0.5);
   border-radius: 2px;
 }
+#fp-nav ul li .fp-tooltip.fp-right {
+  right: 21px;
+  border-radius: 0px 0px 2px 2px;
+}
+#fp-nav ul li a,
 #fp-nav ul li a span {
   background-color: #ffffff;
 }
