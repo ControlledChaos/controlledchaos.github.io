@@ -30,10 +30,9 @@ layout: front-page
 <section id="section-intro" data-anchor="intro" class="front-page-section">
 
 	<div class="sections-nav fp-nav-y fp-nav-up">
-		<a href="#section-slides" class="scroll-up" title='{{ slides.title | default: "Slideshow" }}' data-tooltip>{%- include svg/angle-up.svg -%}</a>
+		<a href="#section-slides" class="scroll-up" title='{{ slides.title | default: "xSlideshow" }}' data-tooltip>{%- include svg/angle-up.svg -%}</a>
 	</div>
 
-	{%- assign intro = site.pages | where: "path", "front-page/intro.md" | first -%}
 	{%- assign avatar_width = page.avatar_width | default: "160px" -%}
 	{%- assign avatar_style = avatar_width | prepend: "style='min-width: " | append: "'" -%}
 
