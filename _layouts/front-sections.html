@@ -13,7 +13,9 @@ layout: front-page
 
 	<ul class="post-gallery">
 	{%- for file in site.static_files -%}
-	<li>{{ file }}</li>
+	<li>{{ file.path }}</li>
+	<li>{{ file.basename }}</li>
+	<li>{{ file.name }}</li>
 	{%- endfor -%}
 	</ul>
 
