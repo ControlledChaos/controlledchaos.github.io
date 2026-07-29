@@ -13,3 +13,4 @@
 - Search form
 - Dark mode
 - Separate :root into subdirectory
+- Scan files for loop checks, variable defaults, etc.
