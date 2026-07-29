@@ -8,13 +8,18 @@ layout: front-page
 {%- assign front_posts = site.pages | where: "path", "front-page/posts.md" | first -%}
 {%- assign front_footer = site.pages | where: "path", "front-page/footer.md" | first -%}
 
+{% assign sections = "" | split: ',' %}
+{% for section in site.front-page | sort: "order" %}
+	<!-- Push section into array -->
+	{% assign sections = sections | push: section.id | remove: "/front-page/" %}
+{% endfor %}
+
 <section id="section-slides" data-anchor="slides" class="page-header front-page-section active">
 	<ul id="intro-slides" class="intro-slides"></ul>
 
-	{% assign sections = site.front-page | sort: "order" %}
 	<ul>
-	{%- for file in sections -%}
-	<li>{{ file.id | remove: "/front-page/" }}</li>
+	{%- for section in sections -%}
+	<li>{{ section }}</li>
 	{%- endfor -%}
 	</ul>
 
