@@ -1011,6 +1011,9 @@ figcaption {
     align-items: center;
   }
 }
+.columns.front-intro-columns .front-intro-content {
+  flex-grow: 1;
+}
 
 .front-page-content {
   max-width: 960px;
@@ -1050,6 +1053,7 @@ figcaption {
 
 .custom-scroll .front-page-section {
   margin: 0;
+  padding-top: calc(var(--ccd-spacing--y, 2rem) * 3);
 }
 .custom-scroll .front-page-section:not(:first-of-type) {
   border: none;
