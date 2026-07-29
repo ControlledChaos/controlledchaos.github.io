@@ -1044,6 +1044,7 @@ figcaption {
 .sections-nav {
   display: flex;
   justify-content: center;
+  padding: calc(var(--ccd-spacing--y, 2rem) / 2) 0;
 }
 .sections-nav svg {
   height: 2.5rem;
