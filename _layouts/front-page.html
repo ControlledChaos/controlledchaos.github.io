@@ -8,7 +8,7 @@
 {%- assign slugs_array = "" | split: ',' -%}
 {%- for section in sections -%}
 	{%- assign slug = section | prepend: "'" | append: "'" -%}
-	{%- assign slugs = slugs | push: slug -%}
+	{%- assign slugs_array = slugs_array | push: slug -%}
 {%- endfor -%}
 
 <!doctype html>
@@ -35,8 +35,10 @@
 // Various jQuery scripts on document ready.
 jQuery(document).ready( function($) {
 
+	var slugs = '{{ slugs_array }}';
+
 	$( '#front-page-sections' ).fullpage({
-		anchors     : [ "{{ slugs }}" ],
+		anchors     : [ slugs ],
 		lockAnchors : true,
 		navigation  : true,
 		showActiveTooltip  : true,
