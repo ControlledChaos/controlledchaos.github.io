@@ -1,3 +1,10 @@
+{%- assign front_page = site.front-page | sort: "order" -%}
+{%- assign sections   = "" | split: ',' -%}
+{%- for section in front_page -%}
+	{%- assign slug = section.id | remove: "/front-page/" -%}
+	{%- assign sections = sections | push: slug -%}
+{%- endfor -%}
+
 <!doctype html>
 <html xmlns:og="http://opengraphprotocol.org/schema/" class="no-js" lang="en_US" dir="ltr">
 {% include head.html -%}
@@ -23,7 +30,7 @@
 jQuery(document).ready( function($) {
 
 	$( '#front-page-sections' ).fullpage({
-		anchors     : [ 'slides', 'intro', 'projects', 'posts', 'footer' ],
+		anchors     : [ '{{ sections }}' ],
 		lockAnchors : true,
 		navigation  : true,
 		showActiveTooltip  : true,
