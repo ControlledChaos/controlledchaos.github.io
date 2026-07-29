@@ -80,7 +80,6 @@
 .custom-scroll {
 	.front-page-section {
 		margin: 0;
-		padding-top: calc( var( --ccd-spacing--y, 2rem ) * 3 );
 
 		&:not( :first-of-type ) {
 			border: none;
