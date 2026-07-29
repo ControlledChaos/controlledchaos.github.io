@@ -7,21 +7,10 @@
 
 .front-page-section {
 	clear: both;
-}
+	margin-top: var( --ccd-spacing--y, 2rem );
 
-.js {
-	.front-page-section {
-		padding-top: calc( var( --ccd-spacing--y, 2rem ) * 3 );
-	}
-}
-
-.no-js {
-	.front-page-section {
-		margin-top: var( --ccd-spacing--y, 2rem );
-
-		&:not( :first-of-type ) {
-			border-top: var( --ccd-box--border );
-		}
+	&:not( :first-of-type ) {
+		border-top: var( --ccd-box--border );
 	}
 }
 
@@ -74,8 +63,20 @@
 }
 
 // FullPageJS sections & scrolling.
+.custom-scroll {
+	.front-page-section {
+		margin: 0;
+		padding-top: calc( var( --ccd-spacing--y, 2rem ) * 3 );
+
+		&:not( :first-of-type ) {
+			border: none;
+		}
+	}
+}
+
 #fp-nav {
-	background-color: colors.$theme_primary_dark;
+	background-color: rgba( $color: colors.$theme_primary_dark, $alpha: 0.5 );
+	border-radius: 2px;
 
 	ul li {
 		.fp-tooltip {
@@ -86,7 +87,7 @@
 			border-radius: 2px;
 		}
 		a span {
-			background-color: colors.$theme_primary_dark;
+			background-color: #ffffff;
 		}
 	}
 }

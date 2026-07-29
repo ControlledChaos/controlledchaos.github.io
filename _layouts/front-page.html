@@ -34,8 +34,14 @@ jQuery(document).ready( function($) {
 		paddingBottom   : 0,
 		scrollOverflow      : true,
 		scrollOverflowReset : true,
-		afterRender     : function() {
-			$( '.intro-slides' ).slick({
+		afterLoad : function() {
+			var body = document.querySelector( 'body' );
+				body.classList.add( 'custom-scroll' );
+
+			$( '.fp-watermark' ).remove();
+		},
+		afterRender : function() {
+			$( '#intro-slides' ).slick({
 				slidesToShow   : 1,
 				slidesToScroll : 1,
 				autoplay       : true,
@@ -48,17 +54,6 @@ jQuery(document).ready( function($) {
 				arrows         : false,
 				dots           : false
 			});
-		},
-		afterLoad : function( origin, destination, direction ) {
-			$( '.fp-watermark' ).remove();
-		},
-		beforeLeave :function( origin, destination, direction ) {
-			if ( destination.index == 4 ) {
-				// $fn.fullpage.setAutoScrolling( false );
-			}
-			if ( origin.index == 4 && direction =='up' ) {
-				// $fn.fullpage.setAutoScrolling( true );
-			}
 		},
 		onLeave : function( origin, destination, direction ) {
 			var leavingSection = this;
@@ -76,19 +71,6 @@ jQuery(document).ready( function($) {
 			}
 		}
 	});
-	/*
-	// Make FullPage work with id attributes for no JS navigation fallback.
-	$( '#site-navigation ul li a' ).click( function() {
-		let newSlide = $(this).closest( 'li' ).data( 'menuanchor' )
-		$.fn.fullpage.moveTo( newSlide, 1 );
-	});
-	$(document).on( 'click', '#intro-entry-link', function() {
-		fullpage_api.moveSectionDown();
-	});
-	$( '#site-navigation ul li a' ).click( function() {
-		$( '.main-navigation' ).removeClass( 'toggled' );
-	});
-	*/
 
 	// Custom tooltips.
 	$( 'a[data-tooltip]' ).tooltipster({
