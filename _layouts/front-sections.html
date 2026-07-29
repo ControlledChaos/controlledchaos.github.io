@@ -17,7 +17,7 @@ layout: front-page
 {%- assign sections = sections | split: ", " -%}
 
 {%- for section in sections -%}
-	{%- assign section = site.pages | where: "path", section | prepend: "front-page/" | append: ".md" | first -%}
+	<!-- {%- assign section = site.pages | where: "path", section | prepend: "front-page/" | append: ".md" | first -%} -->
 {%- endfor -%}
 
 <section id="section-slides" data-anchor="slides" class="page-header front-page-section active">
