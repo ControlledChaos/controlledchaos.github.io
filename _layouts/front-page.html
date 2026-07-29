@@ -6,7 +6,9 @@
 	<div id="front-page-sections" class="page-container front-page-sections" itemscope="itemscope" itemtype="WebPage">
 		{{ content }}
 	</div>
-	<div class="page-loading">Loading...</div>
+	<div class="page-loading">
+		<p>Loading...</p>
+	</div>
 
 <!-- Theme scripts. -->
 {%- assign js_ver = 'now' | date: "%Y-%m-%d-%H-%M" | prepend: "?v=" %}
@@ -46,6 +48,7 @@ jQuery(document).ready( function($) {
 		},
 		afterLoad : function( origin, destination, direction ) {
 			var leavingSection = this;
+			$( '.page-loading' ).fadeOut( 250 );
 			$( '.fp-watermark' ).remove();
 		},
 		onLeave : function( origin, destination, direction ) {
