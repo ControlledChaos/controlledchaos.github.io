@@ -31,6 +31,9 @@ page_sidebar: true
 
 # Collections
 collections:
+  front-page:
+    directory: _front-page
+    output: true
   projects:
     directory: _projects/content
     permalink: /projects/:title/
