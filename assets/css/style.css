@@ -1042,14 +1042,14 @@ figcaption {
 }
 
 #fp-nav {
-  background-color: rgba(114, 87, 122, 0.5);
+  background-color: rgba(114, 87, 122, 0.625);
   border-radius: 2px;
 }
 #fp-nav ul li .fp-tooltip {
   padding: 0.25rem;
   font-size: 0.75rem;
   line-height: 1;
-  background-color: rgba(114, 87, 122, 0.5);
+  background-color: rgba(114, 87, 122, 0.625);
   border-radius: 2px;
 }
 #fp-nav ul li .fp-tooltip.fp-right {
