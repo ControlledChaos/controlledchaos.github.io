@@ -2,11 +2,11 @@
 layout: front-page
 ---
 
-{%- assign slides = site.pages | where: "path", "front-page/slides.md" | first -%}
-{%- assign intro = site.pages | where: "path", "front-page/intro.md" | first -%}
-{%- assign projects = site.pages | where: "path", "front-page/projects.md" | first -%}
-{%- assign posts = site.pages | where: "path", "front-page/posts.md" | first -%}
-{%- assign footer = site.pages | where: "path", "front-page/footer.md" | first -%}
+{%- assign slides = site.pages | where: "path", "_front-page/slides.md" | first -%}
+{%- assign intro = site.pages | where: "path", "_front-page/intro.md" | first -%}
+{%- assign projects = site.pages | where: "path", "_front-page/projects.md" | first -%}
+{%- assign posts = site.pages | where: "path", "_front-page/posts.md" | first -%}
+{%- assign footer = site.pages | where: "path", "_front-page/footer.md" | first -%}
 
 {%- assign front_page = site.front-page | sort: "order" -%}
 {%- assign sections   = "" | split: ", " -%}
@@ -22,7 +22,7 @@ layout: front-page
 
 <section id="section-slides" data-anchor="slides" class="page-header front-page-section active">
 	<ul id="intro-slides" class="intro-slides"></ul>
-	<pre>{{ front_page | inspect }}</pre>
+
 	<div class="sections-nav fp-nav-y fp-nav-down">
 		<button class="scroll-down" title='{{ intro.title | default: "Introduction" }}' data-tooltip>{%- include svg/angle-down.svg -%}</button>
 	</div>
