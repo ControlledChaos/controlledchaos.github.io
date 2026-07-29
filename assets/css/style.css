@@ -1041,10 +1041,24 @@ figcaption {
   border: none;
 }
 
+.fp-overflow {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
 .sections-nav {
   display: flex;
   justify-content: center;
   padding: calc(var(--ccd-spacing--y, 2rem) / 2) 0;
+}
+.sections-nav button {
+  padding: 0;
+  line-height: 100%;
+  border: none;
 }
 .sections-nav svg {
   height: 2.5rem;
