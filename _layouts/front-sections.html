@@ -2,18 +2,11 @@
 layout: front-page
 ---
 
-{%- assign front_page = site.front-page | sort: "order" -%}
-{%- assign sections   = "" | split: ", " -%}
-{%- for section in front_page -%}
-	{%- assign slug = section.id | remove: "/front-page/" -%}
-	{%- assign sections = sections | push: slug -%}
-{%- endfor -%}
-{%- assign sections = sections | split: ", " -%}
-
-{%- for section in sections -%}
-	{%- assign path = section | prepend: "front-page/" | append: ".md" -%}
-	{%- assign section = site.pages | where: "path", path | first -%}
-{%- endfor -%}
+{%- assign slides = site.pages | where: "path", "front-page/slides.md" | first -%}
+{%- assign intro = site.pages | where: "path", "front-page/intro.md" | first -%}
+{%- assign projects = site.pages | where: "path", "front-page/projects.md" | first -%}
+{%- assign posts = site.pages | where: "path", "front-page/posts.md" | first -%}
+{%- assign footer = site.pages | where: "path", "front-page/footer.md" | first -%}
 
 <section id="section-slides" data-anchor="slides" class="page-header front-page-section active">
 	<ul id="intro-slides" class="intro-slides"></ul>
