@@ -34,6 +34,7 @@ jQuery(document).ready( function($) {
 		paddingBottom   : 0,
 		scrollOverflow      : true,
 		scrollOverflowReset : true,
+		continuousVertical  : true,
 		afterLoad : function() {
 			var body = document.querySelector( 'body' );
 				body.classList.add( 'custom-scroll' );
@@ -70,6 +71,12 @@ jQuery(document).ready( function($) {
 				$( '.site-header' ).removeClass( 'header-alt-01' );
 			}
 		}
+	});
+	$( '.scroll-down' ).click( function() {
+		// $.fn.fullpage.moveSectionDown();
+	});
+	$( '.scroll-up' ).click( function() {
+		// $.fn.fullpage.moveSectionUp();
 	});
 
 	// Custom tooltips.
