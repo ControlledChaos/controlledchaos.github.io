@@ -32,7 +32,6 @@ jQuery(document).ready( function($) {
 		scrollOverflow      : true,
 		scrollOverflowReset : true,
 		afterRender     : function() {
-			$( '.page-loading' ).fadeOut( 250 );
 			$( '.intro-slides' ).slick({
 				slidesToShow   : 1,
 				slidesToScroll : 1,
@@ -86,6 +85,8 @@ jQuery(document).ready( function($) {
 		distance: 5,
 		theme: 'ccdzen'
 	});
+
+	$( '.page-loading' ).fadeOut( 250 );
 });
 </script>
 
