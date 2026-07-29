@@ -2,14 +2,22 @@
 layout: front-page
 ---
 
+{%- assign front_projects = site.pages | where: "path", "front-page/projects.md" | first -%}
+{%- assign front_posts = site.pages | where: "path", "front-page/posts.md" | first -%}
+{%- assign front_footer = site.pages | where: "path", "front-page/footer.md" | first -%}
+
 <section id="section-slides" data-anchor="slides" class="page-header front-page-section active">
 	<ul id="intro-slides" class="intro-slides"></ul>
-	<div>
-		<a href="#section-intro" class="scroll-down">{%- include svg/angle-down.svg -%}</a>
+	<div class="sections-nav fp-nav-y fp-nav-down">
+		<a href="#section-intro" class="scroll-down" title="Introduction" data-tooltip>{%- include svg/angle-down.svg -%}</a>
 	</div>
 </section>
 
 <section id="section-intro" data-anchor="intro" class="front-page-section">
+
+	<div class="sections-nav fp-nav-y fp-nav-up">
+		<a href="#section-slides" class="scroll-up" title="Slideshow" data-tooltip>{%- include svg/angle-up.svg -%}</a>
+	</div>
 
 	{%- assign front_intro = site.pages | where: "path", "front-page/intro.md" | first -%}
 	{%- assign avatar_width = page.avatar_width | default: "160px" -%}
@@ -26,7 +34,7 @@ layout: front-page
 			</figure>
 			<div>
 				{%- if page.title -%}
-				<h2 id="{{ page.title | slugify }}" class="page-title">{{ page.title }}</h2>
+				<h2 id="{{ page.title | slugify }}" class="section-heading">{{ page.title }}</h2>
 				{%- endif -%}
 
 				{%- if page.subtitle -%}
@@ -37,14 +45,19 @@ layout: front-page
 			</div>
 		</div>
 	</div>
+	<div class="sections-nav fp-nav-y fp-nav-down">
+		<a href="#section-projects" class="scroll-down" title="{{ front_projects.title }}" data-tooltip>{%- include svg/angle-down.svg -%}</a>
+	</div>
 </section>
 
 <section id="section-projects" data-anchor="projects" class="front-page-section">
 
-	{%- assign front_projects = site.pages | where: "path", "front-page/projects.md" | first -%}
+	<div class="sections-nav fp-nav-y fp-nav-up">
+		<a href="#section-intro" class="scroll-up" title="Introduction" data-tooltip>{%- include svg/angle-up.svg -%}</a>
+	</div>
 
 	{%- if front_projects.title and front_projects.title != blank %}
-	<h2>{{ front_projects.title }}</h2>
+	<h2 class="section-heading">{{ front_projects.title }}</h2>
 	{% endif %}
 	<div class="front-page-content">
 		{{ front_projects.content | markdownify -}}
@@ -56,16 +69,21 @@ layout: front-page
 		<p>No projects found.</p>
 	{%- endif -%}
 
+	<div class="sections-nav fp-nav-y fp-nav-down">
+		<a href="#section-posts" class="scroll-down" title="{{ front_posts.title }}" data-tooltip>{%- include svg/angle-down.svg -%}</a>
+	</div>
 </section>
 
 <section id="section-posts" data-anchor="posts" class="front-page-section">
+	<div class="sections-nav fp-nav-y fp-nav-up">
+		<a href="#section-projets" class="scroll-up" title="{{ front_projects.title }}" data-tooltip>{%- include svg/angle-up.svg -%}</a>
+	</div>
 {%- if site.posts.size > 0 -%}
 
 	{%- assign posts_limit = 3 -%}
-	{%- assign front_posts = site.pages | where: "path", "front-page/posts.md" | first -%}
 
 	{%- if front_posts.title and front_posts.title != blank %}
-	<h2>{{ front_posts.title }}</h2>
+	<h2 class="section-heading">{{ front_posts.title }}</h2>
 	{% endif %}
 	<div class="front-page-content">
 		{{ front_posts.content | markdownify -}}
@@ -78,12 +96,19 @@ layout: front-page
 	{%- endif -%}
 
 {%- endif -%}
+
+	<div class="sections-nav fp-nav-y fp-nav-down">
+		<a href="#section-footer" class="scroll-down" title="{{ front_footer.title }}" data-tooltip>{%- include svg/angle-down.svg -%}</a>
+	</div>
 </section>
 
 <footer id="section-footer" data-anchor="footer" class="front-page-section site-footer">
+	<div class="sections-nav fp-nav-y fp-nav-up">
+		<a href="#section-posts" class="scroll-up" title="{{ front_posts.title }}" data-tooltip>{%- include svg/angle-up.svg -%}</a>
+	</div>
 	<div class="site-info" style="min-height: 400px; background: #c0d86c; color: #fff;">
 		<div class="general-wrap">
-			<h3>Contact Me</h3>
+			<h2 class="section-heading">{{ front_footer.title }}</h2>
 			<p>Bacon ipsum dolor amet filet mignon rump ball tip flank burgdoggen picanha pastrami chuck jerky turkey andouille short ribs pig cupim.</p>
 		</div>
 	</div>

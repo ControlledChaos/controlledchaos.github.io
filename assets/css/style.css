@@ -1041,6 +1041,14 @@ figcaption {
   border: none;
 }
 
+.sections-nav {
+  display: flex;
+  justify-content: center;
+}
+.sections-nav svg {
+  height: 2.5rem;
+}
+
 .posts-list {
   list-style: none;
   margin: 0;
