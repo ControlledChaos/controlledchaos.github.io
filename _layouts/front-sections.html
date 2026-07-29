@@ -11,13 +11,12 @@ layout: front-page
 {%- assign sections = sections | split: ", " -%}
 
 {%- for section in sections -%}
-	{%- assign front_path = section | prepend: "_front-page/" | append: ".md" -%}
-	{%- assign section = site.pages | where: "path", front_path | first -%}
+	{%- assign section = site.pages | where: "path", section | prepend: "front-page/" | append: ".md" | first -%}
 {%- endfor -%}
 
 <section id="section-slides" data-anchor="slides" class="page-header front-page-section active">
 	<ul id="intro-slides" class="intro-slides"></ul>
-{{ intro }}
+
 	<div class="sections-nav fp-nav-y fp-nav-down">
 		<button class="scroll-down" title='{{ intro.title | default: "Introduction" }}' data-tooltip>{%- include svg/angle-down.svg -%}</button>
 	</div>
