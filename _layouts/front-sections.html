@@ -10,6 +10,19 @@ layout: front-page
 
 <section id="section-slides" data-anchor="slides" class="page-header front-page-section active">
 	<ul id="intro-slides" class="intro-slides"></ul>
+
+	<ul class="post-gallery">
+	{%- for file in site.static_files -%}
+	{%- if file.path contains "front-page" -%}
+		{%- if file.ext == '.md' -%}
+			{%- assign file_parts = file.path | split: "/" -%}
+			{%- assign filename = file_parts | last | replace: file.ext, "" -%}
+		<li>{{ filename }}</li>
+		{%- endif -%}
+	{%- endif -%}
+	{%- endfor -%}
+	</ul>
+
 	<div class="sections-nav fp-nav-y fp-nav-down">
 		<a href="#section-intro" class="scroll-down" title='{{ front_intro.title | default: "Introduction" }}' data-tooltip>{%- include svg/angle-down.svg -%}</a>
 	</div>
