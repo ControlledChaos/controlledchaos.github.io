@@ -1,16 +1,3 @@
-{%- assign front_page = site.front-page | sort: "order" -%}
-{%- assign sections   = "" | split: ',' -%}
-{%- for section in front_page -%}
-	{%- assign slug = section.id | remove: "/front-page/" -%}
-	{%- assign sections = sections | push: slug -%}
-{%- endfor -%}
-
-{%- assign slugs_array = "" | split: ", " -%}
-{%- for section in sections -%}
-	{%- assign slug = section -%}
-	{%- assign slugs_array = slugs_array | push: slug -%}
-{%- endfor -%}
-
 <!doctype html>
 <html xmlns:og="http://opengraphprotocol.org/schema/" class="no-js" lang="en_US" dir="ltr">
 {% include head.html -%}
@@ -35,10 +22,8 @@
 // Various jQuery scripts on document ready.
 jQuery(document).ready( function($) {
 
-	var slugs = '{{ slugs_array }}';
-
 	$( '#front-page-sections' ).fullpage({
-		anchors     : [ slugs ],
+		anchors     : [ 'slides', 'intro', 'projects', 'posts', 'footer' ],
 		lockAnchors : true,
 		navigation  : true,
 		showActiveTooltip  : true,
