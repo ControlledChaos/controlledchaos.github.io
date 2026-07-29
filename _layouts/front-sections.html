@@ -8,9 +8,21 @@ layout: front-page
 {%- assign posts = site.pages | where: "path", "front-page/posts.md" | first -%}
 {%- assign footer = site.pages | where: "path", "front-page/footer.md" | first -%}
 
+{%- assign front_page = site.front-page | sort: "order" -%}
+{%- assign sections   = "" | split: ", " -%}
+{%- for section in front_page -%}
+	{%- assign slug = section.id | remove: "/front-page/" -%}
+	{%- assign sections = sections | push: slug -%}
+{%- endfor -%}
+{%- assign sections = sections | split: ", " -%}
+
+{%- for section in sections -%}
+	<!-- {%- assign section = site.pages | where: "path", section | prepend: "front-page/" | append: ".md" | first -%} -->
+{%- endfor -%}
+
 <section id="section-slides" data-anchor="slides" class="page-header front-page-section active">
 	<ul id="intro-slides" class="intro-slides"></ul>
-
+	<pre>{{ front_page | inspect }}</pre>
 	<div class="sections-nav fp-nav-y fp-nav-down">
 		<button class="scroll-down" title='{{ intro.title | default: "Introduction" }}' data-tooltip>{%- include svg/angle-down.svg -%}</button>
 	</div>
