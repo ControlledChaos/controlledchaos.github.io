@@ -10,8 +10,9 @@ layout: front-page
 
 {% assign sections = "" | split: ',' %}
 {% for section in site.front-page | sort: "order" %}
+	{% assign slug = section.id | remove: "/front-page/" %}
 	<!-- Push section into array -->
-	{% assign sections = sections | push: section.id | remove: "/front-page/" %}
+	{% assign sections = sections | push: slug %}
 {% endfor %}
 
 <section id="section-slides" data-anchor="slides" class="page-header front-page-section active">
