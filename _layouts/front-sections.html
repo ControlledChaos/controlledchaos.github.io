@@ -13,7 +13,9 @@ layout: front-page
 
 	<ul>
 	{%- for file in site.front-page -%}
-	<li>{{ file.name }}</li>
+	<li><pre>
+{{ file | inspect }}
+</pre></li>
 	{%- endfor -%}
 	</ul>
 
