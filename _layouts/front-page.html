@@ -23,10 +23,11 @@
 jQuery(document).ready( function($) {
 
 	$( '#front-page-sections' ).fullpage({
-		anchors         : [ 'slides', 'intro', 'projects', 'posts', 'footer' ],
-		lockAnchors     : true,
-		navigation      : true,
-		showActiveTooltip : true,
+		anchors     : [ 'slides', 'intro', 'projects', 'posts', 'footer' ],
+		lockAnchors : true,
+		navigation  : true,
+		showActiveTooltip  : true,
+		navigationTooltips : [ 'Slideshow', 'Introduction', 'Featured Projects', 'Latest Posts', 'More Info' ],
 		dragAndMove     : true,
 		sectionSelector : '.front-page-section',
 		paddingTop      : 0,
