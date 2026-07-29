@@ -1,9 +1,3 @@
-{%- assign front_slides = site.pages | where: "path", "front-page/slides.md" | first -%}
-{%- assign front_intro = site.pages | where: "path", "front-page/intro.md" | first -%}
-{%- assign front_projects = site.pages | where: "path", "front-page/projects.md" | first -%}
-{%- assign front_posts = site.pages | where: "path", "front-page/posts.md" | first -%}
-{%- assign front_footer = site.pages | where: "path", "front-page/footer.md" | first -%}
-
 <!doctype html>
 <html xmlns:og="http://opengraphprotocol.org/schema/" class="no-js" lang="en_US" dir="ltr">
 {% include head.html -%}
@@ -31,21 +25,16 @@ jQuery(document).ready( function($) {
 	$( '#front-page-sections' ).fullpage({
 		anchors     : [ 'slides', 'intro', 'projects', 'posts', 'footer' ],
 		lockAnchors : true,
-		navigation  : false,
-		showActiveTooltip  : false,
-		navigationTooltips : [
-			'{{ front_slides.title | default: "Slideshow" }}',
-			'{{ front_intro.title | default: "Introduction" }}',
-			'{{ front_projects.title | default: "Featured Projects" }}',
-			'{{ front_posts.title | default: "Latest Posts" }}',
-			'{{ front_footer.title | default: "More Information" }}'
-		],
+		navigation  : true,
+		showActiveTooltip  : true,
+		navigationTooltips : [ 'Slideshow', 'Introduction', 'Featured Projects', 'Latest Posts', 'More Info' ],
 		dragAndMove     : true,
 		sectionSelector : '.front-page-section',
 		paddingTop      : 0,
 		paddingBottom   : 0,
 		scrollOverflow      : true,
 		scrollOverflowReset : true,
+		continuousVertical  : true,
 		afterLoad : function() {
 			var body = document.querySelector( 'body' );
 				body.classList.add( 'custom-scroll' );
