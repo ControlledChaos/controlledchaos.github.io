@@ -6,6 +6,6 @@ layout: front-page
 {%- assign slides_path = "/front-page/slides/" -%}
 
 {%- for section in sections -%}
-	{%- assign get_file = "front-page/" | append: section | append: ".html" -%}
+	{%- assign get_file = "front-sections/" | append: section | append: ".html" -%}
 	{%- include get_file loop = sections section = section -%}
 {%- endfor -%}
