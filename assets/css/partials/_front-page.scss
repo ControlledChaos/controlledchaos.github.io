@@ -103,6 +103,15 @@
 .sections-nav {
 	display: flex;
 	justify-content: center;
+	z-index: 10;
+
+	&.fp-nav-up {
+		padding-top: calc( var( --ccd-spacing--y, 2rem ) / 2 );
+	}
+
+	&.fp-nav-down {
+		padding-bottom: calc( var( --ccd-spacing--y, 2rem ) / 2 );
+	}
 
 	button {
 		padding: 0;
