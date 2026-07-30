@@ -1265,6 +1265,9 @@ figcaption {
   -o-object-position: center center;
      object-position: center center;
 }
+.post-page .post-tags {
+  margin-top: 1em;
+}
 .post-page .post-cats-list,
 .post-page .post-tags-list {
   display: inline-flex;
