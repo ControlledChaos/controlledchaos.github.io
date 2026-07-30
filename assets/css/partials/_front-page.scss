@@ -30,6 +30,9 @@
 
 .no-js {
 	.front-page-section {
+		&:first-of-type {
+			display: none;
+		}
 		&:nth-of-type(2) {
 			border: none;
 		}

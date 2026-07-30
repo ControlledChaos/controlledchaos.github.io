@@ -8,7 +8,7 @@
 	{%- assign avatar_width = page.avatar_width | default: "160px" -%}
 	{%- assign avatar_style = avatar_width | prepend: "style='min-width: " | append: "'" -%}
 
-	<div class="front-page-content">
+	<div class="front-page-content section-wrap">
 		<div class="layout columns responsive front-intro-columns">
 			<!-- Avatar from Jekyll variables in the site `index.html` file, defaults from Liquid variables in `posts.html` layout. -->
 			<figure class="captioned-image front-intro-avatar" {{ avatar_style }}>

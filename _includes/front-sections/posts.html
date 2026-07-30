@@ -8,18 +8,22 @@
 
 	{%- assign posts_limit = 3 -%}
 
-	{%- if posts.title and posts.title != blank %}
-	<h2 class="section-heading">{{ posts.title }}</h2>
-	{% endif %}
-	<div class="front-page-content">
-		{{ posts.content -}}
+	<div class="section-wrap">
+
+		{%- if posts.title and posts.title != blank %}
+		<h2 class="section-heading">{{ posts.title }}</h2>
+		{% endif %}
+		<div class="front-page-content">
+			{{ posts.content -}}
+		</div>
+
+		{%- include featured-posts-grid.html limit = posts_limit -%}
+
+		{%- if site.posts.size > posts_limit -%}
+		<p class="featured-all"><a href="{{ site.blog_path | relative_url }}" class="featured-all-link">All Posts</a></p>
+		{%- endif -%}
+
 	</div>
-
-	{%- include featured-posts-grid.html limit = posts_limit -%}
-
-	{%- if site.posts.size > posts_limit -%}
-	<p class="featured-all"><a href="{{ site.blog_path | relative_url }}" class="featured-all-link">All Posts</a></p>
-	{%- endif -%}
 
 {%- endif -%}
 
