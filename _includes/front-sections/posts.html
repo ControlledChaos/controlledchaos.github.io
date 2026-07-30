@@ -11,7 +11,7 @@
 	<h2 class="section-heading">{{ posts.title }}</h2>
 	{% endif %}
 	<div class="front-page-content">
-		{{ posts.content | markdownify -}}
+		{{ posts.content -}}
 	</div>
 
 	{%- include featured-posts-grid.html limit = posts_limit -%}

@@ -9,7 +9,7 @@
 	<h2 class="section-heading">{{ projects.title }}</h2>
 	{% endif %}
 	<div class="front-page-content">
-		{{ projects.content | markdownify -}}
+		{{ projects.content -}}
 	</div>
 
 	{%- if site.projects.size > 0 -%}
