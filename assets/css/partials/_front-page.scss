@@ -138,6 +138,12 @@
 		line-height: 100%;
 		border: none;
 		cursor: pointer;
+		opacity: 0.7;
+		transition: opacity .15s;
+
+		&:hover {
+			opacity: 1;
+		}
 	}
 	svg {
 		height: 2.5rem;
