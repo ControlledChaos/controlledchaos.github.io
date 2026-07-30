@@ -5,3 +5,11 @@ page_type:
 title: 404 - Page Not Found
 cover: banner
 ---
+
+{%- assign sections = site.front-page | sort: "order" -%}
+
+{%- for section in sections -%}
+	{%- assign slug = section.path | replace: "_front-page/", "front-sections/" | remove: section.ext -%}
+	{%- if slug != "projects" or slug != "posts" -%}
+	{%- include {{ slug }}.html section = section -%}
+{%- endfor -%}
