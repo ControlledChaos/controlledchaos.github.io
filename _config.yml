@@ -24,7 +24,7 @@ timezone: "America/Los_Angeles"
 markdown: kramdown
 permalink: pretty
 
-# Layout
+# General
 body_class: "default-page"
 page_type: "WebPage"
 page_sidebar: true
