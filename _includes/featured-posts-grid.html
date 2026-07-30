@@ -2,7 +2,7 @@
 {%- assign posts_limit = include.limit | default: 3 -%}
 
 {%- if featured.size > 0 %}
-<div class="featured-posts-grid">
+<div class="content-loop-grid featured-posts-grid">
 
 	{%- for post in featured | limit: posts_limit -%}
 

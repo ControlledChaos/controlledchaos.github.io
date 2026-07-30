@@ -4,8 +4,8 @@
 
 @use '../../modules/layout';
 
-.featured-posts-grid {
-	margin-top: calc( var( --ccd-spacing--x ) / 2 );
+.content-loop-grid {
+	margin: calc( var( --ccd-spacing--x ) / 2 ) 0;
 	display: grid;
 	grid-template-columns: repeat( 3, 1fr );
 	gap: 0.25rem;
