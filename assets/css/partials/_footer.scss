@@ -3,6 +3,7 @@
 ///
 
 .site-footer {
+	position: relative;
 	margin: var( --ccd-site-footer--margin, 0 );
 	padding: var( --ccd-site-footer--padding, calc( var( --ccd-spacing--y ) / 2 ) ) var( --ccd-site-footer--padding, var( --ccd-spacing--y ) );
 	background-color: var( --ccd-site-footer--bg-color, var( --ccd-color--theme--secondary ) );

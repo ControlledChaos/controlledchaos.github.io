@@ -28,6 +28,7 @@ permalink: pretty
 body_class: "default-page"
 page_type: "WebPage"
 page_sidebar: true
+footer_image: "bamboo.jpg"
 
 # Collections
 collections:
