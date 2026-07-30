@@ -786,7 +786,7 @@ figcaption {
   }
 }
 
-.front-page .site-header {
+.js .front-page .site-header {
   width: 100% !important;
   position: fixed;
   top: 0;
@@ -1022,6 +1022,10 @@ figcaption {
      object-position: center center;
   opacity: 20%;
   filter: grayscale(30%);
+}
+
+.no-js .front-page-section:nth-of-type(2) {
+  border: none;
 }
 
 .columns.front-intro-columns {

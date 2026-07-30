@@ -28,6 +28,14 @@
 	}
 }
 
+.no-js {
+	.front-page-section {
+		&:nth-of-type(2) {
+			border: none;
+		}
+	}
+}
+
 .columns {
 	&.front-intro-columns {
 		flex-direction: row-reverse;
