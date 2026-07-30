@@ -6,5 +6,5 @@ layout: front-page
 
 {%- for section in sections -%}
 	{%- assign get_file = "front-sections/" | append: section | append: ".html" -%}
-	{%- include get_file section = section -%}
+	{{ section | inspect }}
 {%- endfor -%}
