@@ -1010,9 +1010,6 @@ figcaption {
   max-width: var(--ccd-wrap--general--max-width);
   padding: 0 var(--ccd-spacing--x, 2rem);
 }
-.front-page-section .section-wrap:not(.front-page-content) {
-  border-top: var(--ccd-box--border);
-}
 .front-page-section .section-bg-image {
   display: block;
   position: absolute;
@@ -1033,6 +1030,9 @@ figcaption {
 }
 .no-js .front-page-section:nth-of-type(2) {
   border: none;
+}
+.no-js .front-page-section .section-wrap:not(.front-page-content) {
+  border-top: var(--ccd-box--border);
 }
 
 .columns.front-intro-columns {
