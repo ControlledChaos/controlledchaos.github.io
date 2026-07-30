@@ -13,5 +13,5 @@ cover: banner
 	{%- unless slug == "projects" or slug == "posts" -%}
 		{%- continue -%}
 	{%- endunless -%}
-	{%- include front-page/{{ slug }}.html section = section -%}
+	{%- include front-sections/{{ slug }}.html section = section -%}
 {%- endfor -%}
