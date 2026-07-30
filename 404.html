@@ -9,7 +9,7 @@ cover: banner
 {%- assign sections = site.front-page | sort: "order" -%}
 
 {%- for section in sections -%}
-	{%- assign slug = section.path | replace: "_front-page/", "front-sections/" | remove: section.ext -%}
+	{%- assign slug = section.path | remove: "_front-page/" | remove: section.ext -%}
 	{%- if slug != "projects" or slug != "posts" -%}
 		{%- continue -%}
 	{%- endif -%}
