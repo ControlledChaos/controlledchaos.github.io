@@ -14,6 +14,11 @@
 		border-top: var( --ccd-box--border );
 	}
 
+	.section-wrap {
+		max-width: var( --ccd-wrap--general--max-width );
+		padding: 0 var( --ccd-spacing--x, 2rem );
+	}
+
 	.section-bg-image {
 		display: block;
 		position: absolute;
