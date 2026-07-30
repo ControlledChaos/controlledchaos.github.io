@@ -22,6 +22,7 @@
 // Various jQuery scripts on document ready.
 jQuery(document).ready( function($) {
 
+	// FullPage navigation & presentation of sections.
 	$( '#front-page-sections' ).fullpage({
 		anchors     : [ 'slides', 'intro', 'projects', 'posts', 'footer' ],
 		lockAnchors : true,
@@ -35,12 +36,25 @@ jQuery(document).ready( function($) {
 		scrollOverflow      : true,
 		scrollOverflowReset : true,
 		afterLoad : function() {
+
+			// Add class to the body element.
 			var body = document.querySelector( 'body' );
 				body.classList.add( 'custom-scroll' );
 
+			// Section navigation buttons.
+			$( '.scroll-down' ).click( function() {
+				fullpage_api.moveSectionDown();
+			});
+			$( '.scroll-up' ).click( function() {
+				fullpage_api.moveSectionUp();
+			});
+
+			// Remove "made with" credit.
 			$( '.fp-watermark' ).remove();
 		},
 		afterRender : function() {
+
+			// Start Slick slideshow.
 			$( '#intro-slides' ).slick({
 				slidesToShow   : 1,
 				slidesToScroll : 1,
@@ -54,9 +68,13 @@ jQuery(document).ready( function($) {
 				arrows         : false,
 				dots           : false
 			});
+
+			// Remove loading panel.
+			$( '.page-loading' ).delay( 150 ).fadeOut( 250 );
 		},
 		onLeave : function( origin, destination, direction ) {
-			var leavingSection = this;
+
+			// Conditional header classes.
 			if ( origin.index == 0 && direction =='down' ) {
 				$( '.site-header' ).addClass( 'header-scrolled' );
 			}
@@ -71,21 +89,12 @@ jQuery(document).ready( function($) {
 			}
 		}
 	});
-	$( '.scroll-down' ).click( function() {
-		fullpage_api.moveSectionDown();
-	});
-	$( '.scroll-up' ).click( function() {
-		fullpage_api.moveSectionUp();
-	});
 
-	// Custom tooltips.
+	// Custom Tooltipster tooltips for `title` attribute content.
 	$( 'a[data-tooltip]', 'button[data-tooltip]' ).tooltipster({
 		distance: 5,
 		theme: 'ccdzen'
 	});
-
-	// Remove loading panel.
-	$( '.page-loading' ).delay( 150 ).fadeOut( 250 );
 });
 </script>
 
