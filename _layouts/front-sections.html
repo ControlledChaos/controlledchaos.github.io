@@ -7,7 +7,5 @@ layout: front-page
 {%- for section in sections -%}
 {%- assign file_slug = section.path | remove: "_front-page/" | remove: section.ext -%}
 {% assign file_path = file_slug | prepend: "front-sections/" | append: ".html" %}
-
-	<pre>{{ file_path | inspect }}</pre>
-
+	{%- include file_path id= file_slug -%}
 {%- endfor -%}
