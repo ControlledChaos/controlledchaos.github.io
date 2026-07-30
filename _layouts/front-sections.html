@@ -5,7 +5,7 @@ layout: front-page
 {%- assign sections = site.front-page | sort: "order" -%}
 
 {%- for section in sections -%}
-{%- assign file_path = section.path | remove: file.ext -%}
+{%- assign file_path = section.path | remove: section.ext -%}
 {% assign file = section.path | prepend: "front-sections/" | append: ".html" %}
 
 	<pre>{{ file_path | inspect }}</pre>
