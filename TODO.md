@@ -1,5 +1,6 @@
 # To Do List
 
+- Conditional URL for image meta tags
 - Category pages
 - Tag pages
 - Paginate taxonomies
