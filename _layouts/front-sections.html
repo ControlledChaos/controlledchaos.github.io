@@ -4,4 +4,7 @@ layout: front-page
 
 {%- assign sections = site.front-page | sort: "order" -%}
 
-{{ site.front-page }}
+{%- for section in sections -%}
+	{%- assign get_file = "front-sections/" | append: section | append: ".html" -%}
+	{%- include get_file section = section -%}
+{%- endfor -%}
