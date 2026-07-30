@@ -5,6 +5,5 @@ layout: front-page
 {%- assign sections = site.front-page | sort: "order" -%}
 
 {%- for section in sections -%}
-	{%- assign get_file = "front-sections/" | append: section | append: ".html" -%}
-	<pre>{{ section | inspect }}</pre>
+	{%- include section | prepend: "front-sections/" | append: ".html" id = section -%}
 {%- endfor -%}
