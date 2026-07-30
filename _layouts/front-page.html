@@ -41,14 +41,6 @@ jQuery(document).ready( function($) {
 			var body = document.querySelector( 'body' );
 				body.classList.add( 'custom-scroll' );
 
-			// Section navigation buttons.
-			$( '.scroll-down' ).click( function() {
-				this.moveSectionDown();
-			});
-			$( '.scroll-up' ).click( function() {
-				this.moveSectionUp();
-			});
-
 			// Remove "made with" credit.
 			$( '.fp-watermark' ).remove();
 		},
@@ -88,6 +80,14 @@ jQuery(document).ready( function($) {
 				$( '.site-header' ).removeClass( 'header-alt-01' );
 			}
 		}
+	});
+
+	// FullPage section navigation buttons.
+	$( '.scroll-down' ).click( function() {
+		fullpage_api.moveSectionDown();
+	});
+	$( '.scroll-up' ).click( function() {
+		fullpage_api.moveSectionUp();
 	});
 
 	// Custom Tooltipster tooltips for `title` attribute content.
