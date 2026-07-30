@@ -473,6 +473,14 @@ body {
   display: none !important;
 }
 
+@keyframes spinner {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
 .page-loading {
   position: fixed;
   top: 0;
@@ -484,6 +492,19 @@ body {
   align-items: center;
   justify-content: center;
   background-color: var(--ccd-body--bg-color);
+}
+.page-loading .loading-icon {
+  border: 2px solid rgba(146, 123, 152, 0.3);
+  border-top: 2px solid var(--ccd-color--theme--primary--dark);
+  border-radius: 100%;
+  height: 3rem;
+  width: 3rem;
+  animation: spinner 1.25s infinite linear;
+  background: transparent;
+}
+
+.no-js .page-loading {
+  display: none !important;
 }
 
 h1, h2, h3, h4, h5, h6, p, ul, ol, blockquote, fieldset, table, pre {

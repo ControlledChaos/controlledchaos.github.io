@@ -3,6 +3,7 @@
 ///
 
 @use '../modules/layout';
+@use '../modules/colors';
 
 body {
 	display: var( --ccd-body--display, flex );
@@ -55,8 +56,7 @@ body {
 .screen-reader-text {
 	border: 0;
 	clip: rect( 1px, 1px, 1px, 1px );
-	-webkit-clip-path: inset(50%);
-	        clip-path: inset(50%);
+	clip-path: inset( 50% );
 	height: 1px;
 	margin: -1px;
 	overflow: hidden;
@@ -79,6 +79,8 @@ body {
 }
 
 // Full-page "page loading" panel.
+@keyframes spinner{
+	from{ transform:rotate( 0deg ) } to { transform:rotate( 359deg ) } }
 .page-loading {
 	position: fixed;
 	top: 0;
@@ -90,6 +92,21 @@ body {
 	align-items: center;
 	justify-content: center;
 	background-color: var( --ccd-body--bg-color );
+
+	.loading-icon {
+		border: 2px solid rgba( $color: colors.$theme_primary_light, $alpha: 0.3 );
+		border-top: 2px solid var( --ccd-color--theme--primary--dark );
+		border-radius: 100%;
+		height: 3rem;
+		width: 3rem;
+		animation: spinner 1.25s infinite linear;
+		background: transparent;
+	}
+}
+.no-js {
+	.page-loading {
+		display: none !important;
+	}
 }
 
 // General block text elements.
