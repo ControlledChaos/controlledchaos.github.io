@@ -43,11 +43,16 @@ jQuery(document).ready( function($) {
 		paddingBottom   : 0,
 		scrollOverflow      : true,
 		scrollOverflowReset : true,
-		afterLoad : function() {
+		afterLoad : function( origin, destination, direction ) {
 
 			// Add class to the body element.
 			var body = document.querySelector( 'body' );
 				body.classList.add( 'custom-scroll' );
+
+			// Add header class for slider.
+			if ( origin.index == 0 ) {
+				$( '.site-header' ).addClass( 'header-alt-tp' );
+			}
 
 			// Remove "made with" credit.
 			$( '.fp-watermark' ).remove();
@@ -76,10 +81,10 @@ jQuery(document).ready( function($) {
 
 			// Conditional header classes.
 			if ( origin.index == 0 && direction =='down' ) {
-				$( '.site-header' ).addClass( 'header-scrolled' );
+				$( '.site-header' ).removeClass( 'header-alt-tp' ).addClass( 'header-scrolled' );
 			}
 			if ( destination.index == 0 ) {
-				$( '.site-header' ).removeClass( 'header-scrolled' );
+				$( '.site-header' ).removeClass( 'header-scrolled' ).addClass( 'header-alt-tp' );
 			}
 			if ( destination.index == 4 ) {
 				$( '.site-header' ).addClass( 'header-alt-01' );
