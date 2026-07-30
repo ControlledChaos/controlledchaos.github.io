@@ -11,7 +11,8 @@
 		{{ content }}
 	</div>
 	<div class="page-loading">
-		<p>Loading...</p>
+		<div class="loading-icon"></div>
+		<p class="loading-text">Loading...</p>
 	</div>
 
 {%- assign js_ver = 'now' | date: "%Y-%m-%d-%H-%M" | prepend: "?v=" -%}
