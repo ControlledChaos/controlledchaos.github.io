@@ -35,6 +35,9 @@ collections:
   front-page:
     directory: _front-page
     output: true
+  front-slides:
+    directory: _front-slides
+    output: true
   projects:
     directory: _projects/content
     permalink: /projects/:title/
