@@ -1,6 +1,7 @@
 {% assign posts = include.section %}
 <section id="section-posts" data-anchor="posts" class="front-page-section">
-	<div class="sections-nav fp-nav-y fp-nav-up">
+
+	<div class="sections-nav fp-nav-y fp-nav-up hide-if-no-js">
 		<button class="scroll-up" title='{{ projects.title | default: "Featured Projects" }}' data-tooltip>{%- include svg/angle-up.svg -%}</button>
 	</div>
 {%- if site.posts.size > 0 -%}
@@ -22,7 +23,7 @@
 
 {%- endif -%}
 
-	<div class="sections-nav fp-nav-y fp-nav-down">
+	<div class="sections-nav fp-nav-y fp-nav-down hide-if-no-js">
 		<button class="scroll-down" title='{{ footer.title | default: "More Information" }}' data-tooltip>{%- include svg/angle-down.svg -%}</button>
 	</div>
 </section>

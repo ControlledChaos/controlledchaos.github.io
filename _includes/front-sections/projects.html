@@ -1,7 +1,7 @@
 {% assign projects = include.section %}
 <section id="section-projects" data-anchor="projects" class="front-page-section">
 
-	<div class="sections-nav fp-nav-y fp-nav-up">
+	<div class="sections-nav fp-nav-y fp-nav-up hide-if-no-js">
 		<button class="scroll-up" title='{{ intro.title | default: "Introduction" }}' data-tooltip>{%- include svg/angle-up.svg -%}</button>
 	</div>
 
@@ -18,7 +18,7 @@
 		<p>No projects found.</p>
 	{%- endif -%}
 
-	<div class="sections-nav fp-nav-y fp-nav-down">
+	<div class="sections-nav fp-nav-y fp-nav-down hide-if-no-js">
 		<button class="scroll-down" title='{{ posts.title | default: "Latest Posts" }}' data-tooltip>{%- include svg/angle-down.svg -%}</button>
 	</div>
 </section>
