@@ -4,5 +4,6 @@ Gemfile.lock
 *.gem
 .jekyll-cache
 /dev/
+/_posts/drafts/
 /assets/css/modules/*.css
 /_sass/*.css
