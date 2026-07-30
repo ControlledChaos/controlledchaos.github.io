@@ -1,8 +1,12 @@
 <!doctype html>
 <html xmlns:og="http://opengraphprotocol.org/schema/" class="no-js" lang="en_US" dir="ltr">
-{% include head.html -%}
+
+{%- include head.html -%}
+
 <body class="front-page">
-	{% include site-header.html -%}
+
+	{%- include site-header.html -%}
+
 	<div id="front-page-sections" class="page-container front-page-sections" itemscope="itemscope" itemtype="WebPage">
 		{{ content }}
 	</div>
@@ -10,13 +14,16 @@
 		<p>Loading...</p>
 	</div>
 
-<!-- Theme scripts. -->
-{%- assign js_ver = 'now' | date: "%Y-%m-%d-%H-%M" | prepend: "?v=" %}
+{%- assign js_ver = 'now' | date: "%Y-%m-%d-%H-%M" | prepend: "?v=" -%}
+
+<!-- General theme scripts. -->
+<script src="{{ '/assets/js/lightbox.min.js' | append: js_ver | relative_url }}"></script>
+<script src="{{ '/assets/js/tooltips.min.js' | append: js_ver | relative_url }}"></script>
+
+<!-- Scripts specific to the front page. -->
 <script src="{{ '/assets/js/slider.min.js' | append: js_ver | relative_url }}"></script>
 <script src="{{ '/assets/js/fullpage.min.js' | append: js_ver | relative_url }}"></script>
 <script src="{{ '/assets/js/fullpage.extensions.min.js' | append: js_ver | relative_url }}"></script>
-<script src="{{ '/assets/js/lightbox.min.js' | append: js_ver | relative_url }}"></script>
-<script src="{{ '/assets/js/tooltips.min.js' | append: js_ver | relative_url }}"></script>
 <script>
 
 // Various jQuery scripts on document ready.
