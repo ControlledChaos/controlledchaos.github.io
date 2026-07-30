@@ -10,7 +10,7 @@ cover: banner
 
 {%- for section in sections -%}
 	{%- assign slug = section.path | remove: "_front-page/" | remove: section.ext -%}
-	{%- unless slug == "projects" or slug == "posts" -%}
+	{%- unless slug = "projects" or slug = "posts" -%}
 		{%- continue -%}
 	{%- endunless -%}
 	{%- include {{ slug }}.html section = section -%}
