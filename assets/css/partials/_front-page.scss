@@ -10,13 +10,13 @@
 	clear: both;
 	margin-top: var( --ccd-spacing--y, 2rem );
 
-	&:not( :first-of-type ) {
-		border-top: var( --ccd-box--border );
-	}
-
 	.section-wrap {
 		max-width: var( --ccd-wrap--general--max-width );
 		padding: 0 var( --ccd-spacing--x, 2rem );
+
+		&:not( .front-page-content ) {
+			border-top: var( --ccd-box--border );
+		}
 	}
 
 	.section-bg-image {
