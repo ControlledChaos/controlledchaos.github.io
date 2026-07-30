@@ -5,7 +5,6 @@ layout: front-page
 {%- assign sections = site.front-page | sort: "order" -%}
 
 {%- for section in sections -%}
-{%- assign file_slug = section.path | remove: "_front-page/" | remove: section.ext -%}
-{% assign file_path = file_slug | prepend: "front-sections/" | append: ".html" %}
-	{%- include file_path -%}
+	{%- assign slug = section.path | replace: "_front-page/", "front-sections/" | remove: section.ext -%}
+	{%- include {{ slug }}.html id = slug -%}
 {%- endfor -%}
