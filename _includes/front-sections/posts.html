@@ -1,0 +1,27 @@
+<section id="section-posts" data-anchor="posts" class="front-page-section">
+	<div class="sections-nav fp-nav-y fp-nav-up">
+		<button class="scroll-up" title='{{ projects.title | default: "Featured Projects" }}' data-tooltip>{%- include svg/angle-up.svg -%}</button>
+	</div>
+{%- if site.posts.size > 0 -%}
+
+	{%- assign posts_limit = 3 -%}
+
+	{%- if posts.title and posts.title != blank %}
+	<h2 class="section-heading">{{ posts.title }}</h2>
+	{% endif %}
+	<div class="front-page-content">
+		{{ posts.content | markdownify -}}
+	</div>
+
+	{%- include featured-posts-grid.html limit = posts_limit -%}
+
+	{%- if site.posts.size > posts_limit -%}
+	<p class="featured-all"><a href="{{ site.blog_path | relative_url }}" class="featured-all-link">All Posts</a></p>
+	{%- endif -%}
+
+{%- endif -%}
+
+	<div class="sections-nav fp-nav-y fp-nav-down">
+		<button class="scroll-down" title='{{ footer.title | default: "More Information" }}' data-tooltip>{%- include svg/angle-down.svg -%}</button>
+	</div>
+</section>

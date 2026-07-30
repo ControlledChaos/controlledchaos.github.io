@@ -1,0 +1,23 @@
+<section id="section-projects" data-anchor="projects" class="front-page-section">
+
+	<div class="sections-nav fp-nav-y fp-nav-up">
+		<button class="scroll-up" title='{{ intro.title | default: "Introduction" }}' data-tooltip>{%- include svg/angle-up.svg -%}</button>
+	</div>
+
+	{%- if projects.title and projects.title != blank %}
+	<h2 class="section-heading">{{ projects.title }}</h2>
+	{% endif %}
+	<div class="front-page-content">
+		{{ projects.content | markdownify -}}
+	</div>
+
+	{%- if site.projects.size > 0 -%}
+		{%- include featured-projects-grid.html projects = site.projects -%}
+	{%- else -%}
+		<p>No projects found.</p>
+	{%- endif -%}
+
+	<div class="sections-nav fp-nav-y fp-nav-down">
+		<button class="scroll-down" title='{{ posts.title | default: "Latest Posts" }}' data-tooltip>{%- include svg/angle-down.svg -%}</button>
+	</div>
+</section>
