@@ -26,12 +26,7 @@ layout: default
 	{%- endif -%}
 
 	{%- assign type = site.{{ slug }} -%}
-
-	{%- if slug == "projects" -%}
-	{%- include featured-{{ slug }}-grid.html projects = type -%}
-	{%- else -%}
-	{%- include featured-{{ slug }}-grid.html posts = type -%}
-	{%- endif -%}
+	{%- include featured-{{ slug }}-grid.html section = type -%}
 
 {%- endfor -%}
 {%- endif -%}
