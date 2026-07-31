@@ -8,7 +8,9 @@ layout: default
 
 {%- if site.projects.size > 0 -%}
 {%- for section in sections -%}
+
 	{%- assign slug = section.path | remove: "_front-page/" | remove: section.ext -%}
+
 	{%- unless slug == "projects" or slug == "posts" -%}
 		{%- continue -%}
 	{%- endunless -%}
@@ -22,6 +24,9 @@ layout: default
 		{{ section.content -}}
 	</div>
 	{%- endif -%}
+
+	{%- assign type = site.{{ slug }} -%}
+	{%- include featured-{{ slug }}-grid.html section = type -%}
 
 {%- endfor -%}
 {%- endif -%}
