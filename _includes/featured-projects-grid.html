@@ -1,6 +1,6 @@
 
 {%- assign config = site.featured_projects -%}
-{%- assign featured = include.projects -%}
+{%- assign featured = include.projects | default: site.projects -%}
 {%- if featured and featured.size > 0 -%}
 
 <div class="content-loop-grid featured-projets-grid">
