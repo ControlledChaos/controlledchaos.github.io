@@ -1,5 +1,4 @@
 ---
-permalink: /404.html
 layout: default
 page_type:
 title: 404 - Page Not Found
@@ -8,10 +7,24 @@ cover: banner
 
 {%- assign sections = site.front-page | sort: "order" -%}
 
+{%- if site.projects.size > 0 -%}
 {%- for section in sections -%}
 	{%- assign slug = section.path | remove: "_front-page/" | remove: section.ext -%}
 	{%- unless slug == "projects" or slug == "posts" -%}
 		{%- continue -%}
 	{%- endunless -%}
 	{%- include front-sections/{{ slug }}.html section = section -%}
+
+	{%- if section.title and section.title != blank %}
+	<h2 class="section-heading">{{ section.title }}</h2>
+	{%- endif -%}
+
+	{%- if section.title and section.title != blank %}
+	<div class="front-page-content">
+		{{ section.content -}}
+	</div>
+	{%- endif -%}
+
+	{%- include featured-{{ slug }}-grid.html {{ slug }} = site.{{ slug }} -%}
 {%- endfor -%}
+{%- endif -%}
