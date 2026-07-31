@@ -13,14 +13,13 @@ cover: banner
 	{%- unless slug == "projects" or slug == "posts" -%}
 		{%- continue -%}
 	{%- endunless -%}
-	{%- include front-sections/{{ slug }}.html section = section -%}
 
 	{%- if section.title and section.title != blank %}
 	<h2 class="section-heading">{{ section.title }}</h2>
 	{%- endif -%}
 
-	{%- if section.title and section.title != blank %}
-	<div class="front-page-content">
+	{%- if section.content and section.content != blank %}
+	<div class="section-content front-page-content">
 		{{ section.content -}}
 	</div>
 	{%- endif -%}
