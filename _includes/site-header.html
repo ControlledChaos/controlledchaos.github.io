@@ -2,13 +2,13 @@
 	<div class="general-wrap">
 		<div class="site-identity">
 			{%- if site.site_icon -%}
-			<figure class="site-avatar">
+			<figure class="site-avatar" role="presentation">
 				{%- unless page.url == "/" -%}
 				<a href="{{ site.github.url }}">
 				{%- endunless -%}
-					<img src="{{ '/assets/img/' | append: site.site_icon | relative_url }}" alt="Yin-yang symbol" class="avatar" />
+					<img src="{{ '/assets/img/' | append: site.site_icon | relative_url }}" alt="CCDzine avatar" class="avatar" />
 					<figcaption class="screen-reader-text">
-						<span>Yin-yang symbol used as the Controlled Chaos Design avatar. Not a logo!</span>
+						<span>Controlled Chaos Design avatar. Not a logo!</span>
 					</figcaption>
 				{%- unless page.url == "/" -%}
 				</a>
