@@ -35,10 +35,10 @@ footer_image: "bamboo.jpg"
 collections:
   front-page:
     directory: _front-page
-    output: true
+    output: false
   front-slides:
     directory: _front-slides
-    output: true
+    output: false
   projects:
     directory: _projects/content
     permalink: /projects/:title/
