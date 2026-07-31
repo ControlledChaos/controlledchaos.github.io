@@ -1,3 +1,3 @@
 # Not Applicable
 
-Fuck the nannies.
+No nannies here, snowflake.
