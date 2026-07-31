@@ -1585,6 +1585,26 @@ figcaption {
   background-color: var(--ccd-site-footer--bg-color, var(--ccd-color--theme--secondary));
   color: var(--ccd-site-footer--text-color, #ffffff);
 }
+.site-footer .footer-bg-image {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center center;
+     object-position: center center;
+  opacity: 20%;
+  filter: grayscale(30%);
+}
+.site-footer .site-info {
+  z-index: 100;
+}
+.site-footer .site-info * {
+  color: var(--ccd-site-footer--text-color, #ffffff);
+}
 .site-footer .final-message {
   margin: var(--ccd-site-footer--message--margin, 0);
   font-size: var(--ccd-site-footer--message--font-size, 0.8125rem);
