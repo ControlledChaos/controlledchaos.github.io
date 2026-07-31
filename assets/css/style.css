@@ -1599,13 +1599,16 @@ figcaption {
   filter: grayscale(30%);
 }
 .site-footer .site-info {
-  z-index: 100;
-  padding: var(--ccd-site-info--padding-y, calc(var(--ccd-spacing--y) / 2)) var(--ccd-site-info--padding-x, var(--ccd-spacing--x));
+  position: relative;
+  z-index: 10;
+  padding: var(--ccd-site-info--padding-y, calc(var(--ccd-spacing--y) / 2)) var(--ccd-site-info--padding-x, var(--ccd-spacing--x)) var(--ccd-site-info--padding-y, var(--ccd-spacing--y)) var(--ccd-site-info--padding-x, var(--ccd-spacing--x));
 }
 .site-footer .site-info * {
   color: var(--ccd-site-footer--text-color, #ffffff);
 }
 .site-footer .final-message {
+  position: relative;
+  z-index: 10;
   margin: var(--ccd-site-footer--message--margin, 0);
   padding: var(--ccd-site-footer--message--padding-y, calc(var(--ccd-spacing--y) / 2)) var(--ccd-site-footer--message--padding-x, var(--ccd-spacing--x));
   font-size: var(--ccd-site-footer--message--font-size, 0.8125rem);

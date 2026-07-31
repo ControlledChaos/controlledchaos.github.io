@@ -22,10 +22,13 @@
 	}
 
 	.site-info {
-		z-index: 100;
+		position: relative;
+		z-index: 10;
 		padding:
-		var( --ccd-site-info--padding-y, calc( var( --ccd-spacing--y ) / 2 ) )
-		var( --ccd-site-info--padding-x, var( --ccd-spacing--x ) );
+			var( --ccd-site-info--padding-y, calc( var( --ccd-spacing--y ) / 2 ) )
+			var( --ccd-site-info--padding-x, var( --ccd-spacing--x ) )
+			var( --ccd-site-info--padding-y, var( --ccd-spacing--y ) )
+			var( --ccd-site-info--padding-x, var( --ccd-spacing--x ) );
 
 		* {
 			color: var( --ccd-site-footer--text-color, #ffffff );
@@ -33,6 +36,8 @@
 	}
 
 	.final-message {
+		position: relative;
+		z-index: 10;
 		margin: var( --ccd-site-footer--message--margin, 0 );
 		padding:
 			var( --ccd-site-footer--message--padding-y, calc( var( --ccd-spacing--y ) / 2 ) )
