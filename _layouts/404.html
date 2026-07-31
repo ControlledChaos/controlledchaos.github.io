@@ -4,10 +4,6 @@ layout: default
 
 {{ content }}
 
-{%- for page in site.pages -%}
-	{{ page.title }}
-{%- endfor -%}
-
 {%- assign sections = site.front-page | sort: "order" -%}
 
 {%- if site.projects.size > 0 -%}
