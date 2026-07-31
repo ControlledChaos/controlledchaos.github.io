@@ -1581,7 +1581,6 @@ figcaption {
 .site-footer {
   position: relative;
   margin: var(--ccd-site-footer--margin, 0);
-  padding: var(--ccd-site-footer--padding, calc(var(--ccd-spacing--y) / 2)) var(--ccd-site-footer--padding, var(--ccd-spacing--y));
   background-color: var(--ccd-site-footer--bg-color, var(--ccd-color--theme--secondary));
   color: var(--ccd-site-footer--text-color, #ffffff);
 }
@@ -1601,13 +1600,16 @@ figcaption {
 }
 .site-footer .site-info {
   z-index: 100;
+  padding: var(--ccd-site-info--padding-y, calc(var(--ccd-spacing--y) / 2)) var(--ccd-site-info--padding-x, var(--ccd-spacing--x));
 }
 .site-footer .site-info * {
   color: var(--ccd-site-footer--text-color, #ffffff);
 }
 .site-footer .final-message {
   margin: var(--ccd-site-footer--message--margin, 0);
+  padding: var(--ccd-site-footer--message--padding-y, calc(var(--ccd-spacing--y) / 2)) var(--ccd-site-footer--message--padding-x, var(--ccd-spacing--x));
   font-size: var(--ccd-site-footer--message--font-size, 0.8125rem);
   font-weight: var(--ccd-site-footer--message--font-weight, 500);
   text-align: var(--ccd-site-footer--message--text-align, center);
+  background-color: var(--ccd-site-footer--message--bg-color, var(--ccd-color--theme--secondary));
 }
