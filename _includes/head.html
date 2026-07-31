@@ -102,12 +102,12 @@
 	<link rel="stylesheet" href="{{ '/assets/css/tooltips.min.css' | append: css_ver | relative_url }}" />
 	<link rel="stylesheet" href="{{ '/assets/css/style.min.css' | append: css_ver | relative_url }}" />
 
-	{% if site.site_icon -%}
+	{% if site.favicon -%}
 	<!-- Site icon -->
-	<link rel="icon" href="{{ '/assets/img/' | append: site.site_icon | relative_url }}" sizes="32x32" />
-	<link rel="icon" href="{{ '/assets/img/' | append: site.site_icon | relative_url }}" sizes="192x192" />
-	<link rel="apple-touch-icon" href="{{ '/assets/img/' | append: site.site_icon | relative_url }}" />
-	<meta name="msapplication-TileImage" content="{{ '/assets/img/' | append: site.site_icon | relative_url }}" />
+	<link rel="icon" href="{{ '/assets/img/' | append: site.favicon | relative_url }}" sizes="32x32" />
+	<link rel="icon" href="{{ '/assets/img/' | append: site.favicon | relative_url }}" sizes="192x192" />
+	<link rel="apple-touch-icon" href="{{ '/assets/img/' | append: site.favicon | relative_url }}" />
+	<meta name="msapplication-TileImage" content="{{ '/assets/img/' | append: site.favicon | relative_url }}" />
 	{%- endif %}
 
 	<!-- Standard meta tags -->
