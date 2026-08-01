@@ -1,7 +1,5 @@
 ---
 layout: void
 title: Featured Projects
-order: 2
+order: 1
 ---
-
-Projects worth viewing.
