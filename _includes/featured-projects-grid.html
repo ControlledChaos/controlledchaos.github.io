@@ -7,7 +7,7 @@
 
 	{%- for project in projects -%}
 
-	{%- unless config.slug contains project.slug -%}
+	{%- unless config contains project.slug -%}
 		{%- continue -%}
 	{%- endunless -%}
 
