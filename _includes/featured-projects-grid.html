@@ -5,7 +5,11 @@
 
 <div class="content-loop-grid featured-projets-grid">
 
-	{%- for project in projects | where: "order" -%}
+	{%- for project in projects -%}
+
+	{%- unless config contains project.slug -%}
+		{%- continue -%}
+	{%- endunless -%}
 
 	{%- assign excerpt = project.subtitle | default: project.excerpt | truncatewords: 15, "…" -%}
 
