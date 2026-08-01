@@ -2,7 +2,7 @@
 {%- assign modules = site.modules-aside | sort: "order" -%}
 
 <aside class="page-sidebar">
-	{%- for module in modules | where: "side", true -%}
+	{%- for module in modules | where: "side" -%}
 
 	{%- assign slug = module.path | remove: "_modules-aside/" | remove: module.ext -%}
 
