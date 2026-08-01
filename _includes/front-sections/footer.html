@@ -10,5 +10,5 @@
 		<div class="general-wrap">
 		</div>
 	</div>
-	<p class="final-message">{{ site.final_message | default: "No copyright claims." }}</p>
+	<p class="final-message">{{ "now" | date: "Y" }} {{ site.final_message | default: "No copyright claims." }}</p>
 </section>
