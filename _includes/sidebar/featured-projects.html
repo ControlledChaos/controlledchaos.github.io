@@ -1,5 +1,4 @@
-{%- assign config   = site.featured_projects -%}
-{%- assign projects = site.projects -%}
+{%- assign projects = site.projects | sort: "featured" -%}
 {%- assign module   = include.module -%}
 
 <div class="sidebar-block sidebar-featured-projects">
@@ -15,9 +14,9 @@
 	{%- if projects.size > 0 -%}
 
 	<ul class="sidebar-featured-list">
-	{%- for project in projects | sort: "featured" -%}
+	{%- for project in projects -%}
 
-		{%- unless config contains project.slug -%}
+		{%- unless project.featured and project.featured != blank -%}
 			{%- continue -%}
 		{%- endunless -%}
 
