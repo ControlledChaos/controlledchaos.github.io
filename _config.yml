@@ -106,11 +106,6 @@ tag_page_layout: tags
 tag_page_dir: tags
 related_by: "tags or categories"
 
-# Sidebar content
-sidebar_modules:
-  - featured-projects
-  - latest-posts
-
 # Footer content
 final_message: "CCDzine | No copyright. No synths!"
 
