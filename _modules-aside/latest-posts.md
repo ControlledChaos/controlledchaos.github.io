@@ -1,5 +1,5 @@
 ---
 title: Latest Posts
-footer: true
+side: true
 order: 1
 ---
