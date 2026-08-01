@@ -1548,6 +1548,12 @@ figcaption {
   border-top: var(--ccd-box--border);
 }
 
+.sidebar-block .module-content p {
+  font-size: 0.8125rem;
+}
+.sidebar-block .module-content p:first-of-type {
+  margin-top: 0;
+}
 .sidebar-block.sidebar-latest-posts .latest-list li {
   margin-top: 0.625rem;
 }

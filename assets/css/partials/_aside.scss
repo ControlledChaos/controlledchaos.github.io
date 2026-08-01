@@ -186,6 +186,16 @@
 
 .sidebar-block {
 
+	.module-content {
+		p {
+			font-size: 0.8125rem;
+
+			&:first-of-type {
+				margin-top: 0;
+			}
+		}
+	}
+
 	&.sidebar-latest-posts {
 
 		.latest-list {
