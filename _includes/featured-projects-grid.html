@@ -1,6 +1,6 @@
 
 {%- assign config = site.featured_projects -%}
-{%- assign featured = include.projects | sort: "featured" -%}
+{%- assign featured = include.projects | sort: "order" -%}
 {%- if featured and featured.size > 0 -%}
 
 <div class="content-loop-grid featured-projets-grid">
