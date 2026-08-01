@@ -1,9 +1,11 @@
 {%- assign latest_limit = site.latest_limit | default: 5 -%}
 {%- assign posts = site.posts -%}
 {%- assign date_format = site.date_format | default: "%B %-d, %Y" -%}
+{%- assign module = include.module -%}
 
 <div class="sidebar-block sidebar-latest-posts">
-	<h3>Latest Posts</h3>
+
+	<h3>{{ module.title }}</h3>
 	{%- if posts.size > 0 -%}
 
 	<ul class="latest-list">

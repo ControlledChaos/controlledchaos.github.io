@@ -39,6 +39,12 @@ collections:
   front-slides:
     directory: _front-slides
     output: false
+  modules-aside:
+    directory: _modules-aside
+    output: false
+  modules-footer:
+    directory: _modules-footer
+    output: false
   projects:
     directory: _projects/content
     permalink: /projects/:title/
