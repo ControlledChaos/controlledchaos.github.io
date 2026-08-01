@@ -1,6 +1,6 @@
 {%- if site.modules-aside -%}
 <aside class="page-sidebar">
-	{%- for module in site.modules-aside | sort: "order" -%}
+	{%- for module in site.modules-aside | sort: "title" -%}
 
 	{%- assign slug = module.path | remove: "_modules-aside/" | remove: module.ext -%}
 
