@@ -7,7 +7,7 @@
 
 	{%- for project in projects -%}
 
-	{%- unless config contains project.slug -%}
+	{%- unless project.order and project.order != blamk -%}
 		{%- continue -%}
 	{%- endunless -%}
 
