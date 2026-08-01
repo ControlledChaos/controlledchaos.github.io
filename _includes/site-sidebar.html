@@ -1,5 +1,5 @@
-{%- if site.modules-aside -%}
-{%- assign modules = site.modules-aside | sort: "order" -%}
+{%- if site.modules -%}
+{%- assign modules = site.modules | sort: "order" -%}
 
 <aside class="page-sidebar">
 	{%- for module in modules -%}
@@ -8,7 +8,7 @@
 		{%- continue -%}
 	{%- endunless -%}
 
-	{%- assign slug = module.path | remove: "_modules-aside/" | remove: module.ext -%}
+	{%- assign slug = module.path | remove: "_modules/" | remove: module.ext -%}
 
 	<div class="module module-aside module-{{ slug }}">
 		{%- include sidebar/{{ slug }}.html module = module -%}
