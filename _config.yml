@@ -41,7 +41,7 @@ collections:
     output: false
   modules-aside:
     directory: _modules-aside
-    output: true
+    output: false
   modules-footer:
     directory: _modules-footer
     output: false
