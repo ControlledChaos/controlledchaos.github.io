@@ -4,7 +4,7 @@
 
 	{%- assign slug = module.path | remove: "_modules-aside/" | remove: module.ext -%}
 
-	{% include sidebar/{{ module }}.html module = module %}
+	{% include sidebar/{{ slug }}.html module = module %}
 
 	{%- endfor -%}
 </aside>
