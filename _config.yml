@@ -95,16 +95,6 @@ site_nav:
   - name: Snippets
     url: /snippets
 
-# Featured projects
-featured_projects: [
-  configure-8,
-  bloomosphere,
-  sitecore,
-  totem-market,
-  new-acf,
-  monica-mixes
-]
-
 # Blog pages
 blog_view: preview # preview, grid, or full
 blog_path: "/posts/"
