@@ -1,5 +1,5 @@
 {%- if site.modules-aside -%}
-{%- assign sections = site.modules-aside | sort: "order" -%}
+{%- assign modules = site.modules-aside | sort: "order" -%}
 
 <aside class="page-sidebar">
 	{%- for module in modules -%}
