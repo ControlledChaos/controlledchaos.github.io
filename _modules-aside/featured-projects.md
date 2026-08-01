@@ -1,4 +1,4 @@
 ---
-title: zFeatured Projects
+title: Featured Projects
 order: 0
 ---
