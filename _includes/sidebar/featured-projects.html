@@ -4,7 +4,14 @@
 
 <div class="sidebar-block sidebar-featured-projects">
 
+	{%- if module.title and module.title != blank -%}
 	<h3>{{ module.title }}</h3>
+	{%- endif -%}
+
+	{%- if module.content and module.content != blank -%}
+	<div class="module-content">{{ module.content }}</div>
+	{%- endif -%}
+
 	{%- if projects.size > 0 -%}
 
 	<ul class="sidebar-featured-list">
