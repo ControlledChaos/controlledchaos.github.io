@@ -1,6 +1,13 @@
-{% assign slides = include.section %}
+
+{%- assign section = include.section -%}
+{%- assign slides  = site.front-sections | sort: "order" -%}
+
 <section id="section-slides" data-anchor="slides" class="page-header front-page-section active">
-	<ul id="intro-slides" class="intro-slides"></ul>
+	<ul id="intro-slides" class="intro-slides">
+	{%- for slide in slides -%}
+		<li>{{ slide.title }}</li>
+	{%- endfor -%}
+	</ul>
 	<div class="sections-nav fp-nav-y fp-nav-down hide-if-no-js">
 		<button class="scroll-down" title='{{ intro.title | default: "Introduction" }}' data-tooltip>{%- include svg/angle-down.svg -%}</button>
 	</div>
