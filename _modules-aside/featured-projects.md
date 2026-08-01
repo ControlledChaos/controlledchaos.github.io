@@ -1,4 +1,4 @@
 ---
 title: Featured Projects
-order: 1
+order: 0
 ---
