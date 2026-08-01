@@ -175,7 +175,7 @@
 		padding: var( --ccd-sidebar--ol--padding, var( --ccd-sidebar--list--padding, 0 0 0 1em ) );
 	}
 
-	.sidebar-block {
+	.module {
 		&:not( :first-of-type ) {
 			margin-top: var( --ccd-spacing--y, 2rem );
 			padding-top: calc( var( --ccd-spacing--y, 2rem ) / 2 );
@@ -184,7 +184,7 @@
 	}
 }
 
-.sidebar-block {
+.module {
 
 	.module-content {
 		p {
@@ -196,45 +196,45 @@
 		}
 	}
 
-	&.sidebar-latest-posts {
+	&.module-latest-posts {
 
-		.latest-list {
+		.module-latest-list {
 			li {
 				margin-top: 0.625rem;
 			}
 		}
 
-		.latest-link {
+		.module-latest-link {
 			font-size: 1.125rem;
 			font-weight: 650;
 			text-decoration: none;
 			line-height: 1.2;
 		}
 
-		.latest-date,
-		.latest-cats {
+		.module-latest-date,
+		.module-latest-cats {
 			display: block;
 			font-family: var( --ccd-fonts--secondary-stack );
 			font-size: 0.8125rem;
 		}
 	}
 
-	&.sidebar-featured-projects {
+	&.module-featured-projects {
 
-		.sidebar-featured-list {
+		.module-featured-list {
 			li {
 				margin-top: 0.625rem;
 			}
 		}
 
-		.sidebar-featured-link {
+		.module-featured-link {
 			font-size: 1.125rem;
 			font-weight: 650;
 			text-decoration: none;
 			line-height: 1.2;
 		}
 
-		.sidebar-featured-subtitle {
+		.module-featured-subtitle {
 			display: block;
 			font-family: var( --ccd-fonts--secondary-stack );
 			font-size: 0.8125rem;
