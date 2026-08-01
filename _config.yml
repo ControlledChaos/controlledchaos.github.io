@@ -97,12 +97,12 @@ site_nav:
 
 # Featured projects
 featured_projects: [
-  configure-8: 0,
-  bloomosphere: 1,
-  sitecore: 2,
-  totem-market: 3,
-  new-acf: 4,
-  monica-mixes: 5
+  configure-8,
+  bloomosphere,
+  sitecore,
+  totem-market,
+  new-acf,
+  monica-mixes
 ]
 
 # Blog pages
