@@ -10,3 +10,4 @@ published: July, 15, 2026
 cover: banner
 ---
 
+{{ jekyll.version }}
