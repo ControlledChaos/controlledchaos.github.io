@@ -111,6 +111,9 @@ sidebar_modules:
   - featured-projects
   - latest-posts
 
+# Footer content
+final_message: "CCDzine | No copyright. No synths!"
+
 # Additional functionality
 plugins:
   - jekyll-feed
