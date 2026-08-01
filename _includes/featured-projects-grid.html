@@ -3,6 +3,8 @@
 {%- assign projects = site.projects | sort: config.order -%}
 {%- if projects and projects.size > 0 -%}
 
+{{ config | inspect }}
+
 <div class="content-loop-grid featured-projets-grid">
 
 	{%- for project in projects -%}
