@@ -1,16 +1,9 @@
 
-{%- featured = site.featured_projects -%}
-{%- assign config = featured | sort: config -%}
-
-{%- assign tests = "" | split: ", " -%}
-{%- for test in config -%}
-	{%- assign tests = tests.slug | push: tests -%}
-{%- endfor -%}
-
+{%- assign config = site.featured_projects -%}
 {%- assign projects = site.projects | sort: config -%}
 {%- if projects and projects.size > 0 -%}
 
-{{ tests | inspect }}
+{{ config | inspect }}
 
 <div class="content-loop-grid featured-projets-grid">
 
