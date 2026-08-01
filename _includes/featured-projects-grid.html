@@ -1,15 +1,11 @@
 
 {%- assign config = site.featured_projects -%}
-{%- assign projects = site.projects | sort: config -%}
+{%- assign projects = site.projects | where: "order" | sort: "order" -%}
 {%- if projects and projects.size > 0 -%}
 
 <div class="content-loop-grid featured-projets-grid">
 
 	{%- for project in projects -%}
-
-	{%- unless config contains project.slug -%}
-		{%- continue -%}
-	{%- endunless -%}
 
 	{%- assign excerpt = project.subtitle | default: project.excerpt | truncatewords: 15, "…" -%}
 
