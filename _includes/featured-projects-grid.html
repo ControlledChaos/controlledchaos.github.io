@@ -4,7 +4,7 @@
 
 {%- assign tests = "" | split: ", " -%}
 {%- for test in config -%}
-	{%- assign tests = tests | push: test.slug -%}
+	{%- assign tests = tests.slug | push: tests -%}
 {%- endfor -%}
 
 {%- assign projects = site.projects | sort: config -%}
