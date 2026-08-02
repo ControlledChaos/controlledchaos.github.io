@@ -1,5 +1,5 @@
 ---
-order: 5
+order: 3
 active: true
 image: "contact.jpg"
 title: "Get In Touch"
