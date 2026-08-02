@@ -218,14 +218,14 @@
 		font-weight: 450;
 		letter-spacing: var( --ccd-heading-primary--letter-spacing, -0.015em );
 		line-height: 1.2;
-		color: inherit;
+		color: #ffffff;
 		transition: transform .15s;
 		transform: translateY(0);
 
 		&:hover,
 		&:focus {
-			color: inherit;
-			transform: translateY( -0.25em );
+			color: #ffffff;
+			transform: translateY( -0.125rem );
 		}
 	}
 
@@ -251,7 +251,7 @@
 
 		&:hover,
 		&:focus {
-			transform: translateX( 0.25em );
+			transform: translateX( 0.125rem );
 		}
 
 		span {
