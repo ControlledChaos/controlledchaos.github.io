@@ -222,6 +222,10 @@
 		font-weight: 500;
 		line-height: 1.2;
 	}
+
+	.fp-nav-down {
+		margin-top: 5%;
+	}
 }
 
 .slick-arrow {
@@ -233,6 +237,12 @@
 	line-height: 1;
 	border: none;
 	color: #ffffff;
+	transition: opacity .25s;
+	opacity: 0.5;
+
+	&:hover {
+		opacity: 1;
+	}
 
 	&.slick-prev {
 		left: 2rem;
