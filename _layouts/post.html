@@ -95,7 +95,7 @@ layout: common
 	</nav>
 </section>
 
-{%- if page.comments %}
+{%- unless page.comments == false %}
 <section id="post-comments" class="post-section">
 
 	<h2>Post Comments</h2>
@@ -111,4 +111,4 @@ layout: common
 		async>
 	</script>
 </section>
-{% endif -%}
+{% endunless -%}
