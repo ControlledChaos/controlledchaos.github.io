@@ -8,5 +8,3 @@ link_url: ""
 link_text: ""
 icon: ""
 ---
-
-This is some text added for testing the content option.
