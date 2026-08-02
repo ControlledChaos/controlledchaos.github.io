@@ -159,6 +159,8 @@
 .intro-slide {
 	position: relative;
 	overflow: hidden;
+	width: 100%;
+	height: 100%;
 	display: block !important; // Override Slick slider.
 
 	&:before {
