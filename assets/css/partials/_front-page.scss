@@ -209,10 +209,18 @@
 	padding: var( --ccd-spacing--y ) var( --ccd-spacing--x );
 	color: #ffffff;
 
-	h3 {
-		font-size: clamp( 2.5rem, 5.5vw, 3rem );
+	.intro-slide-heading {
+		font-size: clamp( 3rem, 5.5vw, 4.25rem );
 		font-weight: 500;
+		line-height: 1.2;
 		color: inherit;
+	}
+
+	.intro-slide-text {
+		margin: 0;
+		font-size: 1.1875rem;
+		font-weight: 500;
+		line-height: 1.2;
 	}
 }
 
