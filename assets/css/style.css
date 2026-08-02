@@ -1127,6 +1127,48 @@ figcaption {
   height: 2.5rem;
 }
 
+.intro-slides {
+  list-style: none;
+}
+
+.intro-slide {
+  position: relative;
+}
+.intro-slide:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.625);
+}
+
+.intro-slide-image {
+  display: block;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center center;
+     object-position: center center;
+}
+
+.intro-slide-content {
+  position: relative;
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--ccd-spacing--y) var(--ccd-spacing--x);
+  color: #ffffff;
+}
+.intro-slide-content h3 {
+  color: inherit;
+}
+
 .posts-list {
   list-style: none;
   margin: 0;

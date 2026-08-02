@@ -149,3 +149,46 @@
 		height: 2.5rem;
 	}
 }
+
+// Intro slides.
+.intro-slides {
+	list-style: none;
+}
+
+.intro-slide {
+	position: relative;
+
+	&:before {
+		content: '';
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba( $color: black, $alpha: 0.625 );
+	}
+}
+
+.intro-slide-image {
+	display: block;
+	width: 100%;
+	object-fit: cover;
+	object-position: center center;
+}
+
+.intro-slide-content {
+	position: relative;
+	z-index: 100;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: var( --ccd-spacing--y ) var( --ccd-spacing--x );
+	color: #ffffff;
+
+	h3 {
+		color: inherit;
+	}
+}
