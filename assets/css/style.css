@@ -1239,6 +1239,9 @@ figcaption {
 .slick-arrow:hover {
   opacity: 1;
 }
+.slick-arrow svg {
+  height: 1.5rem;
+}
 .slick-arrow.slick-prev {
   left: 2rem;
 }
