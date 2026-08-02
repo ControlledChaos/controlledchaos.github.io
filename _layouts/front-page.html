@@ -49,15 +49,15 @@ jQuery(document).ready( function($) {
 			var body = document.querySelector( 'body' );
 				body.classList.add( 'custom-scroll' );
 
-			// Add header class for slider.
-			if ( origin.index == 0 ) {
-				// $( '.site-header' ).addClass( 'header-alt-tp' );
-			}
-
 			// Remove "made with" credit.
 			$( '.fp-watermark' ).remove();
 		},
 		afterRender : function() {
+
+			// Add header class for slider.
+			if ( origin.index == 0 ) {
+				$( '.site-header' ).addClass( 'header-alt-tp' );
+			}
 
 			// Start Slick slideshow.
 			$( '#intro-slides' ).slick({
