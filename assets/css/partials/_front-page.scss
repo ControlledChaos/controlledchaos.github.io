@@ -224,12 +224,12 @@
 		letter-spacing: var( --ccd-heading-primary--letter-spacing, -0.015em );
 		line-height: 1.2;
 		color: inherit;
-		transition: transform .15s;
+		transition: transform .25s;
 		transform: translateY(0);
 
 		&:hover,
 		&:focus {
-			transform: translateY( -0.25rem );
+			transform: translateY( -0.175rem );
 		}
 	}
 
@@ -265,7 +265,7 @@
 
 		&:hover {
 			svg {
-				transform: translateX( 0.125rem );
+				transform: translateX( 0.25rem );
 			}
 		}
 	}
