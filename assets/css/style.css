@@ -1217,6 +1217,12 @@ figcaption {
   letter-spacing: var(--ccd-heading-primary--letter-spacing, -0.015em);
   line-height: 1.2;
   color: inherit;
+  transition: transform 0.15s;
+  transform: translateY(0);
+}
+.intro-slide-content .intro-slide-heading:hover, .intro-slide-content .intro-slide-heading:focus {
+  color: inherit;
+  transform: translateY(-0.25em);
 }
 .intro-slide-content .intro-slide-text {
   margin: 0;
@@ -1233,6 +1239,11 @@ figcaption {
 .intro-slide-content .intro-slide-link {
   display: inline-flex;
   gap: 0.5em;
+  transition: transform 0.15s;
+  transform: translateX(0);
+}
+.intro-slide-content .intro-slide-link:hover, .intro-slide-content .intro-slide-link:focus {
+  transform: translateX(0.25em);
 }
 .intro-slide-content .intro-slide-link span {
   display: inline-block;

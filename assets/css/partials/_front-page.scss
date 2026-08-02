@@ -219,6 +219,14 @@
 		letter-spacing: var( --ccd-heading-primary--letter-spacing, -0.015em );
 		line-height: 1.2;
 		color: inherit;
+		transition: transform .15s;
+		transform: translateY(0);
+
+		&:hover,
+		&:focus {
+			color: inherit;
+			transform: translateY( -0.25em );
+		}
 	}
 
 	.intro-slide-text {
@@ -238,6 +246,13 @@
 	.intro-slide-link {
 		display: inline-flex;
 		gap: 0.5em;
+		transition: transform .15s;
+		transform: translateX(0);
+
+		&:hover,
+		&:focus {
+			transform: translateX( 0.25em );
+		}
 
 		span {
 			display: inline-block;
