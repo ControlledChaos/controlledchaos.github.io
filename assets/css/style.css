@@ -1138,7 +1138,7 @@ figcaption {
 
 .sections-nav {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   z-index: 10;
 }
 .sections-nav.fp-nav-up {
@@ -1153,7 +1153,7 @@ figcaption {
   border: none;
   cursor: pointer;
   opacity: 0.5;
-  transition: opacity 0.25s;
+  transition: opacity 0.3625s;
 }
 .sections-nav button:hover {
   opacity: 1;
@@ -1275,7 +1275,7 @@ figcaption {
   border: none;
   color: #ffffff;
   transition: opacity 0.25s;
-  opacity: 0.5;
+  opacity: 0.3625;
 }
 .slick-arrow:hover {
   opacity: 1;
