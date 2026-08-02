@@ -773,7 +773,7 @@ figcaption {
   padding: var(--ccd-site-header--padding, 2rem);
   background-color: var(--ccd-site-header--bg-color, inherit);
   color: var(--ccd-site-header--text-color, inherit);
-  transition: all 0.25s;
+  transition: all 0.325s;
 }
 .site-header .general-wrap {
   display: flex;
