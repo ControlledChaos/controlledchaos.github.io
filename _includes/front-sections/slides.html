@@ -29,7 +29,7 @@
 				</div>
 				{% else -%}
 				<div class="intro-slide-action">
-					<a href="{{ slide.link_url | relative_url }}">{{ slide.link_text | default: "Read More" }} {%- include svg/{{ icon }}.svg -%}</a>
+					<a href="{{ slide.link_url | relative_url }}" class="intro-slide-link">{{ slide.link_text | default: "Read More" }} {%- include svg/{{ icon }}.svg -%}</a>
 				</div>
 				{% endif -%}
 
