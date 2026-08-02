@@ -242,10 +242,9 @@
 		svg {
 			transition: transform .15s;
 			transform: translateY(0);
-		}
-		&:hover {
-			svg {
-				transform: translateY( 0.125rem );
+
+			&:hover {
+				transform: translateY( 0.25rem );
 			}
 		}
 	}

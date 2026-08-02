@@ -1237,8 +1237,8 @@ figcaption {
   transition: transform 0.15s;
   transform: translateY(0);
 }
-.intro-slide-content .intro-slide-action:hover svg {
-  transform: translateY(0.125rem);
+.intro-slide-content .intro-slide-action svg:hover {
+  transform: translateY(0.25rem);
 }
 .intro-slide-content .intro-slide-link {
   display: inline-flex;
