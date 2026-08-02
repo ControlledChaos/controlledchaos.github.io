@@ -1169,6 +1169,8 @@ figcaption {
   color: #ffffff;
 }
 .intro-slide-content h3 {
+  font-size: clamp(2.5rem, 5.5vw, 3rem);
+  font-weight: 500;
   color: inherit;
 }
 

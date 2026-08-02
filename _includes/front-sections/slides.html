@@ -2,7 +2,7 @@
 {%- assign section = include.section -%}
 {%- assign slides  = site.front-slides | sort: "order" -%}
 
-<section id="section-slides" data-anchor="slides" class="front-page-section section-slides active">
+<section id="section-slides" data-anchor="slides" class="front-page-section section-slides hide-if-no-js active">
 	<ul id="intro-slides" class="intro-slides">
 	{%- for slide in slides -%}
 
@@ -10,16 +10,22 @@
 		<li class="intro-slide">
 			<img class="intro-slide-image" src='{{ src | relative_url }}' role="presentation" />
 			<div class="intro-slide-content">
-				<h3 class="intro-slide-heading">{{ slide.title }}</h3>
+
+				<h3 class="intro-slide-heading">{{ slide.title | default: "You Forgot the Title" }}</h3>
+
+				{%- if slide.subtitle and slide.subtitle != blank -%}
 				<p class="intro-slide-text">{{ slide.subtitle }}</p>
-				<div class="intro-slide-action">
-					<a href="{{ slide.url | relative_url }}"></a>
+				{%- endif -%}
+
+				{%- if slide.content and slide.content != blank -%}
+				{{ content }}
+				{%- endif -%}
+
+				<div class="sections-nav fp-nav-y fp-nav-down">
+					<button class="scroll-down" title='{{ intro.title | default: "Introduction" }}' data-tooltip>{%- include svg/angle-down.svg -%}</button>
 				</div>
 			</div>
 		</li>
 	{%- endfor -%}
 	</ul>
-	<div class="sections-nav fp-nav-y fp-nav-down hide-if-no-js">
-		<button class="scroll-down" title='{{ intro.title | default: "Introduction" }}' data-tooltip>{%- include svg/angle-down.svg -%}</button>
-	</div>
 </section>
