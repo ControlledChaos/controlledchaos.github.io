@@ -211,6 +211,11 @@
 
 	a {
 		color: inherit;
+
+		&:hover,
+		&:focus {
+			color: inherit;
+		}
 	}
 
 	.intro-slide-heading {
@@ -218,14 +223,13 @@
 		font-weight: 450;
 		letter-spacing: var( --ccd-heading-primary--letter-spacing, -0.015em );
 		line-height: 1.2;
-		color: #ffffff;
+		color: inherit;
 		transition: transform .15s;
 		transform: translateY(0);
 
 		&:hover,
 		&:focus {
-			color: #ffffff;
-			transform: translateY( -0.125rem );
+			transform: translateY( -0.25rem );
 		}
 	}
 
@@ -246,13 +250,6 @@
 	.intro-slide-link {
 		display: inline-flex;
 		gap: 0.5em;
-		transition: transform .15s;
-		transform: translateX(0);
-
-		&:hover,
-		&:focus {
-			transform: translateX( 0.125rem );
-		}
 
 		span {
 			display: inline-block;
@@ -262,6 +259,14 @@
 			display: inline-block;
 			fill: currentColor;
 			height: 1em;
+			transition: transform .15s;
+			transform: translateX(0);
+		}
+
+		&:hover {
+			svg {
+				transform: translateX( 0.125rem );
+			}
 		}
 	}
 }

@@ -1211,18 +1211,20 @@ figcaption {
 .intro-slide-content a {
   color: inherit;
 }
+.intro-slide-content a:hover, .intro-slide-content a:focus {
+  color: inherit;
+}
 .intro-slide-content .intro-slide-heading {
   font-size: clamp(3rem, 5.5vw, 4.25rem);
   font-weight: 450;
   letter-spacing: var(--ccd-heading-primary--letter-spacing, -0.015em);
   line-height: 1.2;
-  color: #ffffff;
+  color: inherit;
   transition: transform 0.15s;
   transform: translateY(0);
 }
 .intro-slide-content .intro-slide-heading:hover, .intro-slide-content .intro-slide-heading:focus {
-  color: #ffffff;
-  transform: translateY(-0.125rem);
+  transform: translateY(-0.25rem);
 }
 .intro-slide-content .intro-slide-text {
   margin: 0;
@@ -1239,11 +1241,6 @@ figcaption {
 .intro-slide-content .intro-slide-link {
   display: inline-flex;
   gap: 0.5em;
-  transition: transform 0.15s;
-  transform: translateX(0);
-}
-.intro-slide-content .intro-slide-link:hover, .intro-slide-content .intro-slide-link:focus {
-  transform: translateX(0.125rem);
 }
 .intro-slide-content .intro-slide-link span {
   display: inline-block;
@@ -1253,6 +1250,11 @@ figcaption {
   display: inline-block;
   fill: currentColor;
   height: 1em;
+  transition: transform 0.15s;
+  transform: translateX(0);
+}
+.intro-slide-content .intro-slide-link:hover svg {
+  transform: translateX(0.125rem);
 }
 
 .slick-arrow {
