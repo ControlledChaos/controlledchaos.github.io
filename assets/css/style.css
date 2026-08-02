@@ -1236,16 +1236,12 @@ figcaption {
 }
 .intro-slide-content .intro-slide-link span {
   display: inline-block;
+  line-height: 1;
 }
-.intro-slide-content .intro-slide-link .slide-link-icon svg {
+.intro-slide-content .intro-slide-link svg {
   display: inline-block;
   fill: currentColor;
   height: 1em;
-  transition: opacity 0.25s;
-  opacity: 0.5;
-}
-.intro-slide-content .intro-slide-link:hover .slide-link-icon svg {
-  opacity: 1;
 }
 
 .slick-arrow {
