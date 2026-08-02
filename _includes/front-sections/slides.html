@@ -6,12 +6,14 @@
 	<div id="intro-slides" class="intro-slides">
 	{%- for slide in slides -%}
 
-		{%- assign src = slide.image | prepend: "assets/img/" -%}
+		{%- assign src  = slide.image | prepend: "assets/img/" -%}
+		{%- assign icon = slide.icon | default: "arrow-right" | prepend: "svg/" | append: ".svg" -%}
+
 		<div class="intro-slide">
 			<img class="intro-slide-image" src='{{ src | relative_url }}' role="presentation" />
 			<div class="intro-slide-content">
 
-				<h3 class="intro-slide-heading">{{ slide.title | default: "You Forgot the Title" }}</h3>
+				<h3 class="intro-slide-heading"><a href="{{ slide.url | relative_url }}">{{ slide.title | default: "You Forgot the Title" }}</a></h3>
 
 				{%- if slide.subtitle and slide.subtitle != blank -%}
 				<p class="intro-slide-text">{{ slide.subtitle }}</p>
@@ -22,8 +24,12 @@
 				{%- endif -%}
 
 				{%- if forloop.index0 == 0 %}
-				<div class="sections-nav fp-nav-y fp-nav-down">
+				<div class="intro-slide-action sections-nav fp-nav-y fp-nav-down">
 					<button class="scroll-down" title='{{ intro.title | default: "Introduction" }}' data-tooltip>{%- include svg/angle-down.svg -%}</button>
+				</div>
+				{% else -%}
+				<div class="intro-slide-action">
+					<a href="{{ slide.url | relative_url }}">{{ slide.link | default: "Read More" }} {%- include icon -%}</a>
 				</div>
 				{% endif -%}
 
