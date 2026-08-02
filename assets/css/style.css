@@ -1220,11 +1220,6 @@ figcaption {
   letter-spacing: var(--ccd-heading-primary--letter-spacing, -0.015em);
   line-height: 1.2;
   color: inherit;
-  transition: transform 0.25s;
-  transform: translateY(0);
-}
-.intro-slide-content .intro-slide-heading:hover, .intro-slide-content .intro-slide-heading:focus {
-  transform: translateY(-0.175rem);
 }
 .intro-slide-content .intro-slide-text {
   margin: 0;
@@ -1237,6 +1232,13 @@ figcaption {
   width: 100%;
   display: flex;
   justify-content: center;
+}
+.intro-slide-content .intro-slide-action svg {
+  transition: transform 0.15s;
+  transform: translateY(0);
+}
+.intro-slide-content .intro-slide-action:hover svg {
+  transform: translateY(0.125rem);
 }
 .intro-slide-content .intro-slide-link {
   display: inline-flex;
