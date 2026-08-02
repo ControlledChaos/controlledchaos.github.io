@@ -6,14 +6,14 @@
 	<ul id="intro-slides" class="intro-slides">
 	{%- for slide in slides -%}
 
-		{%- assign src slide.image | prepend: "assets/img/" -%}
+		{%- assign src = slide.image | prepend: "assets/img/" -%}
 		<li class="intro-slide">
-			<img class="intro-slide-image" src='' role="presentation" />
+			<img class="intro-slide-image" src='{{ src | relative_url }}' role="presentation" />
 			<div class="intro-slide-content">
 				<h3 class="intro-slide-heading">{{ slide.title }}</h3>
 				<p class="intro-slide-text">{{ slide.subtitle }}</p>
 				<div class="intro-slide-action">
-					<a href=""></a>
+					<a href="{{ slide.url | relative_url }}"></a>
 				</div>
 			</div>
 		</li>
