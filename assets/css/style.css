@@ -1100,6 +1100,7 @@ figcaption {
   -o-object-position: center center;
      object-position: center center;
   height: 100%;
+  border: var(--ccd-box--border);
 }
 .front-intro-avatar figcaption {
   display: block;
