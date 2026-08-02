@@ -6,7 +6,7 @@
 				{%- unless page.url == "/" -%}
 				<a href="{{ site.github.url }}">
 				{%- endunless -%}
-					<img src="{{ '/assets/img/' | append: site.site_icon | relative_url }}" alt="CCDzine avatar" class="avatar" />
+					{% include svg/site-icon.svg -%}
 					<figcaption class="screen-reader-text">
 						<span>Controlled Chaos Design avatar. Not a logo!</span>
 					</figcaption>
