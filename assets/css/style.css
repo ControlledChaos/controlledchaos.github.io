@@ -792,7 +792,7 @@ figcaption {
   top: 0;
   left: 0;
   z-index: 5001;
-  transition: all 700ms;
+  transition: all 350ms;
 }
 .js .front-page .site-header.header-alt-tp {
   background-color: transparent;
