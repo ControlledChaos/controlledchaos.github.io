@@ -1237,14 +1237,14 @@ figcaption {
 .intro-slide-content .intro-slide-link span {
   display: inline-block;
 }
-.intro-slide-content .intro-slide-link .slide-link-icon {
+.intro-slide-content .intro-slide-link .slide-link-icon svg {
   display: inline-block;
   fill: currentColor;
   height: 1em;
   transition: opacity 0.25s;
   opacity: 0.5;
 }
-.intro-slide-content .intro-slide-link .slide-link-icon:hover {
+.intro-slide-content .intro-slide-link:hover .slide-link-icon svg {
   opacity: 1;
 }
 
