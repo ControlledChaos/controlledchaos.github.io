@@ -159,6 +159,7 @@
 .intro-slide {
 	position: relative;
 	overflow: hidden;
+	display: block !important; // Override Slick slider.
 
 	&:before {
 		content: '';

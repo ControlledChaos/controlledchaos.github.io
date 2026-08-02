@@ -1135,6 +1135,7 @@ figcaption {
 .intro-slide {
   position: relative;
   overflow: hidden;
+  display: block !important;
 }
 .intro-slide:before {
   content: "";
