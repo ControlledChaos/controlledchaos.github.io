@@ -1208,6 +1208,9 @@ figcaption {
   padding: var(--ccd-spacing--y) var(--ccd-spacing--x);
   color: #ffffff;
 }
+.intro-slide-content a {
+  color: inherit;
+}
 .intro-slide-content .intro-slide-heading {
   font-size: clamp(3rem, 5.5vw, 4.25rem);
   font-weight: 450;
