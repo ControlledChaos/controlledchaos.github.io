@@ -812,6 +812,12 @@ figcaption {
     flex-direction: column;
   }
 }
+.site-identity a {
+  color: inherit;
+}
+.site-identity a:hover, .site-identity a:focus {
+  color: inherit;
+}
 
 .site-avatar {
   margin: 0;
@@ -839,12 +845,6 @@ figcaption {
   .site-title {
     text-align: center;
   }
-}
-.site-title a {
-  color: inherit;
-}
-.site-title a:hover, .site-title a:focus {
-  color: inherit;
 }
 
 .site-description {

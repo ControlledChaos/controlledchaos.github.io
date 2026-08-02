@@ -53,6 +53,15 @@
 	@media screen and ( max-width: layout.$bp_med ) {
 		flex-direction: column;
 	}
+
+	a {
+		color: inherit;
+
+		&:hover,
+		&:focus {
+			color: inherit;
+		}
+	}
 }
 
 .site-avatar {
@@ -80,15 +89,6 @@
 
 	@media screen and ( max-width: layout.$bp_med ) {
 		text-align: center;
-	}
-
-	a {
-		color: inherit;
-
-		&:hover,
-		&:focus {
-			color: inherit;
-		}
 	}
 }
 
