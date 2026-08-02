@@ -1228,7 +1228,6 @@ figcaption {
   position: absolute;
   z-index: 1000;
   top: 50%;
-  width: 1.5rem;
   padding: 0;
   line-height: 1;
   border: none;
@@ -1240,7 +1239,7 @@ figcaption {
   opacity: 1;
 }
 .slick-arrow svg {
-  height: 1.5rem;
+  height: 2.5rem;
 }
 .slick-arrow.slick-prev {
   left: 2rem;

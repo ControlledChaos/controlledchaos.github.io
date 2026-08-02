@@ -232,7 +232,6 @@
 	position: absolute;
 	z-index: 1000;
 	top: 50%;
-	width: 1.5rem;
 	padding: 0;
 	line-height: 1;
 	border: none;
@@ -245,7 +244,7 @@
 	}
 
 	svg {
-		height: 1.5rem;
+		height: 2.5rem;
 	}
 
 	&.slick-prev {
