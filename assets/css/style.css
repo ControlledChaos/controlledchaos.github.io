@@ -1222,7 +1222,7 @@ figcaption {
   padding: 0;
   line-height: 1;
   border: none;
-  color: inherit;
+  color: #ffffff;
 }
 .slick-arrow.slick-prev {
   left: 2rem;
