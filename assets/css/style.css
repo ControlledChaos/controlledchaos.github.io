@@ -796,10 +796,12 @@ figcaption {
 }
 .js .front-page .site-header.header-alt-tp {
   background-color: transparent;
+  transition: all 350ms;
 }
 .js .front-page .site-header.header-alt-01 {
   background-color: #ffffff;
   color: var(--ccd-color--theme--primary);
+  transition: all 350ms;
 }
 
 .site-identity {
