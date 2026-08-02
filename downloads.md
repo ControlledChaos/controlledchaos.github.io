@@ -1,5 +1,5 @@
 ---
-permalink: /products/
+permalink: /downloads/
 layout: default
 page_type: WebPage
 title: Stuff I've Made
