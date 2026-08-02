@@ -2,6 +2,7 @@
 /// Site header styles
 ///
 
+@use '../modules/colors';
 @use '../modules/layout';
 
 .site-header {
@@ -155,6 +156,27 @@
 				&:after {
 					transform: scale(1);
 				}
+			}
+		}
+	}
+}
+
+// Alternate header classes.
+.header-alt-01 {
+	.site-title {
+		color: var( --ccd-color--theme--primary );
+	}
+	.site-menu {
+		color: var( --ccd-color--theme--primary );
+
+		li a {
+			color: var( --ccd-color--theme--primary );
+
+			&:before {
+				background-color: rgba( $color: colors.$theme_primary, $alpha: 0.75 );
+			}
+			&:after {
+				background-color: rgba( $color: colors.$theme_primary, $alpha: 0.25 );
 			}
 		}
 	}

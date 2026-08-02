@@ -909,6 +909,22 @@ figcaption {
   transform: scale(1);
 }
 
+.header-alt-01 .site-title {
+  color: var(--ccd-color--theme--primary);
+}
+.header-alt-01 .site-menu {
+  color: var(--ccd-color--theme--primary);
+}
+.header-alt-01 .site-menu li a {
+  color: var(--ccd-color--theme--primary);
+}
+.header-alt-01 .site-menu li a:before {
+  background-color: rgba(132, 111, 139, 0.75);
+}
+.header-alt-01 .site-menu li a:after {
+  background-color: rgba(132, 111, 139, 0.25);
+}
+
 .page-container {
   flex-grow: 1;
   container-type: inline-size;
