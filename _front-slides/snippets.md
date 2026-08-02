@@ -1,7 +1,8 @@
 ---
 order: 4
 active: true
-title: "Code Snippets"
+image: "snippets.jpg"
+title: "Snippets"
 subtitle: ""
 url: ""
 link: ""
