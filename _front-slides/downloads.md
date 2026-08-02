@@ -4,7 +4,7 @@ active: true
 image: "downloads.jpg"
 title: "Stuff I Have Made"
 subtitle: "Download anything you like, always for free."
-url: "downloads"
-link: "Have a Look"
+link_url: "downloads"
+link_text: "Have a Look"
 icon: ""
 ---

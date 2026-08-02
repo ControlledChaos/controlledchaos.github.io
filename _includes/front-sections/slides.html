@@ -13,7 +13,7 @@
 			<img class="intro-slide-image" src='{{ src | relative_url }}' role="presentation" />
 			<div class="intro-slide-content">
 
-				<h3 class="intro-slide-heading"><a href="{{ slide.url | absolute_url }}">{{ slide.title | default: "You Forgot the Title" }}</a></h3>
+				<h3 class="intro-slide-heading"><a href="{{ slide.link_url | relative_url }}">{{ slide.title | default: "You Forgot the Title" }}</a></h3>
 
 				{%- if slide.subtitle and slide.subtitle != blank -%}
 				<p class="intro-slide-text">{{ slide.subtitle }}</p>
@@ -29,7 +29,7 @@
 				</div>
 				{% else -%}
 				<div class="intro-slide-action">
-					<a href="{{ slide.url | absolute_url }}">{{ slide.link | default: "Read More" }} </a>
+					<a href="{{ slide.link_url | relative_url }}">{{ slide.link_text | default: "Read More" }} </a>
 				</div>
 				{% endif -%}
 

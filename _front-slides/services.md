@@ -4,7 +4,7 @@ active: true
 image: "services.jpg"
 title: "What I Can Do"
 subtitle: "If I can't do it, I usually figure it out."
-url: "services"
-link: "Learn More"
+link_url: "services"
+link_text: "Learn More"
 icon: ""
 ---
