@@ -30,6 +30,9 @@
 // Various jQuery scripts on document ready.
 jQuery(document).ready( function($) {
 
+	// Add header class for slider.
+	$( '.site-header' ).addClass( 'header-alt-tp' );
+
 	// FullPage navigation & presentation of sections.
 	$( '#front-page-sections' ).fullpage({
 		anchors     : [ 'slides', 'intro', 'projects', 'posts', 'footer' ],
@@ -53,11 +56,6 @@ jQuery(document).ready( function($) {
 			$( '.fp-watermark' ).remove();
 		},
 		afterRender : function() {
-
-			// Add header class for slider.
-			if ( origin.index == 0 ) {
-				$( '.site-header' ).addClass( 'header-alt-tp' );
-			}
 
 			// Start Slick slideshow.
 			$( '#intro-slides' ).slick({
