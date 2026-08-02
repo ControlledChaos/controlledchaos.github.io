@@ -158,8 +158,16 @@
 
 // Intro slides.
 .intro-slides {
-	list-style: none;
 	margin: 0;
+	height: 100%;
+
+	div {
+		height: 100%;
+	}
+}
+
+.slick-slide > div {
+	height: 100%;
 }
 
 .intro-slide {
@@ -184,6 +192,7 @@
 	display: block;
 	width: 100%;
 	height: 100%;
+	min-height: 100vh;
 	max-height: 100vh;
 	object-fit: cover;
 	object-position: center center;

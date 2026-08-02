@@ -3,11 +3,11 @@
 {%- assign slides  = site.front-slides | sort: "order" -%}
 
 <section id="section-slides" data-anchor="slides" class="front-page-section section-slides hide-if-no-js active">
-	<ul id="intro-slides" class="intro-slides">
+	<div id="intro-slides" class="intro-slides">
 	{%- for slide in slides -%}
 
 		{%- assign src = slide.image | prepend: "assets/img/" -%}
-		<li class="intro-slide">
+		<div class="intro-slide">
 			<img class="intro-slide-image" src='{{ src | relative_url }}' role="presentation" />
 			<div class="intro-slide-content">
 
@@ -28,7 +28,7 @@
 				{% endif -%}
 
 			</div>
-		</li>
+		</div>
 	{%- endfor -%}
-	</ul>
+	</div>
 </section>
