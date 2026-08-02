@@ -1025,6 +1025,10 @@ figcaption {
   filter: grayscale(30%);
 }
 
+.fp-viewing-slides .front-page-sections {
+  transform: none !important;
+}
+
 .no-js .front-page-section:first-of-type {
   display: none;
 }
