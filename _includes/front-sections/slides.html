@@ -21,9 +21,12 @@
 				{{ content }}
 				{%- endif -%}
 
+				{%- if forloop.index0 == 0 %}
 				<div class="sections-nav fp-nav-y fp-nav-down">
 					<button class="scroll-down" title='{{ intro.title | default: "Introduction" }}' data-tooltip>{%- include svg/angle-down.svg -%}</button>
 				</div>
+				{% endif -%}
+
 			</div>
 		</li>
 	{%- endfor -%}
