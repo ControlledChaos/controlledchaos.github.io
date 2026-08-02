@@ -11,7 +11,6 @@
 	padding: var( --ccd-site-header--padding, 2rem );
 	background-color: var( --ccd-site-header--bg-color, inherit );
 	color: var( --ccd-site-header--text-color, inherit );
-	transition: all .325s;
 
 	.general-wrap {
 		display: flex;
@@ -33,6 +32,7 @@
 		top: 0;
 		left: 0;
 		z-index: 5001;
+		transition: all 700ms; // Same as FullPageJS scrollingSpeed
 
 		&.header-alt-tp {
 			background-color: transparent;
