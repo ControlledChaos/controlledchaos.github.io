@@ -5,7 +5,18 @@
 <section id="section-slides" data-anchor="slides" class="page-header front-page-section active">
 	<ul id="intro-slides" class="intro-slides">
 	{%- for slide in slides -%}
-		<li>{{ slide.title }}</li>
+
+		{%- assign src slide.image | prepend: "assets/img/" -%}
+		<li class="intro-slide">
+			<img class="intro-slide-image" src='{{ src | relative_url }}' role="presentation" />
+			<div class="intro-slide-content">
+				<h3 class="intro-slide-heading">{{ slide.title }}</h3>
+				<p class="intro-slide-text">{{ slide.subtitle }}</p>
+				<div class="intro-slide-action">
+					<a href="{{ slide.url | relative_url }}"></a>
+				</div>
+			</div>
+		</li>
 	{%- endfor -%}
 	</ul>
 	<div class="sections-nav fp-nav-y fp-nav-down hide-if-no-js">
