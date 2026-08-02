@@ -793,6 +793,12 @@ figcaption {
   left: 0;
   z-index: 5001;
 }
+.js .front-page .site-header.header-alt-tp {
+  background-color: transparent;
+}
+.js .front-page .site-header.header-alt-01 {
+  background-color: #ffffff;
+}
 
 .site-identity {
   display: flex;
