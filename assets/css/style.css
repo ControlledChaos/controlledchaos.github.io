@@ -798,6 +798,7 @@ figcaption {
 }
 .js .front-page .site-header.header-alt-01 {
   background-color: #ffffff;
+  color: var(--ccd-color--theme--primary);
 }
 
 .site-identity {
