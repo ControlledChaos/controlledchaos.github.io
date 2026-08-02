@@ -3,7 +3,7 @@ order: 4
 active: true
 image: "snippets.jpg"
 title: "Grab Some Code"
-subtitle: "Selected bits of web code that I have saved"
+subtitle: "Selected bits of web code that I have saved."
 url: ""
 link: ""
 icon: ""
