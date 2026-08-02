@@ -702,6 +702,11 @@ h6 {
   }
 }
 
+hr {
+  margin: var(--ccd-spacing--x) 0;
+  border-top: var(--ccd-box--border);
+}
+
 pre, code, kbd, samp {
   font-family: var(--ccd-fonts--monospace-stack, "Courier New", Courier, monospace);
   letter-spacing: unset !important;
