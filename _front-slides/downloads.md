@@ -6,4 +6,5 @@ title: "Stuff I Have Made"
 subtitle: "Download anything you like, always for free."
 url: "downloads"
 link: "Have a Look"
+icon: ""
 ---
