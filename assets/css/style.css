@@ -1087,9 +1087,9 @@ figcaption {
 
 .custom-scroll .front-page-section {
   margin: 0;
-  padding-top: calc(var(--ccd-spacing--y, 2rem) * 3);
 }
 .custom-scroll .front-page-section:not(:first-of-type) {
+  padding-top: calc(var(--ccd-spacing--y, 2rem) * 3);
   border: none;
 }
 
@@ -1129,6 +1129,7 @@ figcaption {
 
 .intro-slides {
   list-style: none;
+  margin: 0;
 }
 
 .intro-slide {

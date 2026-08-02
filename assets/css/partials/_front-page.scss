@@ -104,9 +104,9 @@
 .custom-scroll {
 	.front-page-section {
 		margin: 0;
-		padding-top: calc( var( --ccd-spacing--y, 2rem ) * 3 );
 
 		&:not( :first-of-type ) {
+			padding-top: calc( var( --ccd-spacing--y, 2rem ) * 3 );
 			border: none;
 		}
 	}
@@ -153,6 +153,7 @@
 // Intro slides.
 .intro-slides {
 	list-style: none;
+	margin: 0;
 }
 
 .intro-slide {
