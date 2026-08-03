@@ -3,38 +3,41 @@
 ///
 
 // Owner module.
+.owner-avatar {
+	width: 80px;
+	min-width: 80px;
+
+	a {
+		display: block;
+		width: 80px;
+		height: 80px;
+	}
+	img {
+		display: block;
+		aspect-ratio: 1 / 1;
+		object-fit: cover;
+		object-position: center center;
+	}
+	figcaption {
+		display: block;
+		padding: 0.5rem;
+	}
+}
+
+.owner-info {
+	p:first-of-type {
+		margin: 0;
+	}
+}
+
+.owner-links {
+	list-style: none;
+}
+
 .module-footer {
 	.owner-module-wrap {
 		display: flex;
-		gap: 0.5rem;
+		gap: 1em;
 		padding: calc( var( --ccd-spacing--y ) / 2 ) calc( var( --ccd-spacing--x ) / 2 );
-	}
-
-	.owner-avatar {
-		width: 80px;
-		min-width: 80px;
-
-		a {
-			display: block;
-			width: 80px;
-			height: 80px;
-		}
-		img {
-			display: block;
-			aspect-ratio: 1 / 1;
-			object-fit: cover;
-			object-position: center center;
-		}
-		figcaption {
-			display: block;
-			padding: 0.5rem;
-		}
-	}
-
-	.owner-info {
-		> p,
-		> ul {
-			margin: 0;
-		}
 	}
 }

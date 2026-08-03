@@ -13,19 +13,19 @@
 	</figure>
 	<div class="owner-info">
 
-	{%- if module.content and module.content != blank -%}
-		{{ module.content }}
-	{%- endif -%}
+		{%- if module.content and module.content != blank -%}
+			{{ module.content }}
+		{%- endif -%}
 
-	{%- if links.size > 0 -%}
-	<ul class="owner-links">
+		{%- if links.size > 0 -%}
+		<ul class="owner-links">
 
-		{%- for link in links -%}
-		<li><a href="{{ link.url }}" target="_blank" rel="noopener noreferrer">{{ link.name }}</a></li>
-		{%- endfor -%}
+			{%- for link in links -%}
+			<li><a href="{{ link.url }}" target="_blank" rel="noopener noreferrer">{{ link.name }}</a></li>
+			{%- endfor -%}
 
-	</ul>
-	{%- endif -%}
+		</ul>
+		{%- endif -%}
 
 	</div>
 </div>
