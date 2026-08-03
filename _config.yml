@@ -41,7 +41,7 @@ collections:
     output: false
   modules:
     directory: _modules
-    output: false
+    output: true
   projects:
     directory: _projects/content
     permalink: /projects/:title/
