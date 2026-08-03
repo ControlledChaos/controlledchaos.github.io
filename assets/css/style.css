@@ -1579,6 +1579,7 @@ figcaption {
 .owner-module-wrap {
   display: flex;
   gap: 0.5rem;
+  padding: calc(var(--ccd-spacing--y) / 2) calc(var(--ccd-spacing--x) / 2);
 }
 
 .owner-avatar {

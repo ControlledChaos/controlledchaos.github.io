@@ -5,18 +5,16 @@
 
 <div class="owner-module-wrap">
 	<figure class="owner-avatar">
-		<a href="{{ src | relative_url }}" data-fancybox>
+		<a href="{{ src | relative_url }}" data-fancybox data-caption="{{ site.owner.avatar.caption }}">
 			<img src="{{ src | relative_url }}" alt="{{ site.owner.avatar.alt }}" class="avatar" />
 		</a>
-		<figcaption>{{ site.owner.avatar.caption }}</figcaption>
+		<figcaption class="screen-reader-text">{{ site.owner.avatar.caption }}</figcaption>
 	</figure>
 	<div class="owner-info">
 
-		{%- if module.content and module.content != blank -%}
-		<div class="module-content owner-content">
-			{{ module.content }}
-		</div>
-		{%- endif -%}
+	{%- if module.content and module.content != blank -%}
+		{{ module.content }}
+	{%- endif -%}
 
 	</div>
 </div>
