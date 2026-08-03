@@ -1,11 +1,13 @@
 {%- assign post = include.post %}
 {%- assign date_format = site.date_format | default: "%B %-d, %Y" -%}
 
+{%- assign image_dir = post.date | date: "posts/images/%Y/%m/" | append: post.slug | append: "/" -%}
 {%- if post.post_thumb -%}
-	{%- assign image_dir = post.date | date: "posts/images/%Y/%m/" | append: post.slug | append: "/" -%}
-	{%- assign thumb_src = image_dir | append: post.post_thumb -%}
+	{%- assign src = image_dir | append: post.post_thumb -%}
+{%- elsif post.post_image -%}
+	{%- assign src = image_dir | append: post.post_image -%}
 {%- else -%}
-	{%- assign thumb_src = "posts/images/default-thumb.jpg" -%}
+	{%- assign src = "posts/images/default-thumb.jpg" -%}
 {%- endif -%}
 
 <li>
@@ -13,7 +15,7 @@
 
 		<figure class="entry-image" role="presentation">
 			<a href="{{ post.url | absolute_url }}">
-				<img src="{{ thumb_src | absolute_url }}" class="post-image" width="180" height="180" />
+				<img src="{{ src | absolute_url }}" class="post-image" width="180" height="180" />
 			</a>
 		</figure>
 
