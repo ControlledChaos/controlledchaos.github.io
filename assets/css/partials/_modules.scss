@@ -2,6 +2,66 @@
 /// Modules (widgets) for sidebar and footer
 ///
 
+.module {
+
+	.module-content {
+		p {
+			font-size: 0.8125rem;
+
+			&:first-of-type {
+				margin-top: 0;
+			}
+		}
+	}
+}
+
+// Featured projects.
+.module-featured-projects {
+
+	.module-featured-list {
+		li {
+			margin-top: 0.625rem;
+		}
+	}
+
+	.module-featured-link {
+		font-size: 1.125rem;
+		font-weight: 650;
+		text-decoration: none;
+		line-height: 1.2;
+	}
+
+	.module-featured-subtitle {
+		display: block;
+		font-family: var( --ccd-fonts--secondary-stack );
+		font-size: 0.8125rem;
+	}
+}
+
+// Latest posts.
+.module-latest-posts {
+
+	.module-latest-list {
+		li {
+			margin-top: 0.625rem;
+		}
+	}
+
+	.module-latest-link {
+		font-size: 1.125rem;
+		font-weight: 650;
+		text-decoration: none;
+		line-height: 1.2;
+	}
+
+	.module-latest-date,
+	.module-latest-cats {
+		display: block;
+		font-family: var( --ccd-fonts--secondary-stack );
+		font-size: 0.8125rem;
+	}
+}
+
 // Owner module.
 .owner-avatar { // The `<figure>` element.
 	width: 80px;
