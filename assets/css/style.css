@@ -1140,6 +1140,7 @@ figcaption {
   display: flex;
   justify-content: flex-end;
   z-index: 10;
+  padding: 0 var(--ccd-spacing--x);
 }
 .sections-nav.fp-nav-up {
   padding-top: calc(var(--ccd-spacing--y, 2rem) / 2);
@@ -1159,7 +1160,7 @@ figcaption {
   opacity: 1;
 }
 .sections-nav svg {
-  height: 2.5rem;
+  height: 2.125rem;
 }
 
 .intro-slides {
