@@ -2,12 +2,26 @@
 /// Modules (widgets) for sidebar and footer
 ///
 
-.module {
+@use '../modules/layout';
 
+.modules-footer {
+	display: grid;
+	grid-template-columns: repeat( 3, 1fr );
+	gap: var( --ccd-spacing--y ) var( --ccd-spacing--x );
+
+	@media screen and ( max-width: layout.$bp_lg ) {
+		grid-template-columns: repeat( 2, 1fr );
+	}
+	@media screen and ( max-width: layout.$bp_sm ) {
+		grid-template-columns: repeat( 1, 1fr );
+	}
+}
+
+.module {
 	&.module-footer {
+		max-width: 320px;
 		padding: calc( var( --ccd-spacing--y ) / 2 ) calc( var( --ccd-spacing--x ) / 2 );
 	}
-
 	.module-content {
 		p {
 			font-size: 0.8125rem;
@@ -27,14 +41,12 @@
 			margin-top: 0.625rem;
 		}
 	}
-
 	.module-featured-link {
 		font-size: 1.125rem;
 		font-weight: 650;
 		text-decoration: none;
 		line-height: 1.2;
 	}
-
 	.module-featured-subtitle {
 		display: block;
 		font-family: var( --ccd-fonts--secondary-stack );
@@ -50,14 +62,12 @@
 			margin-top: 0.625rem;
 		}
 	}
-
 	.module-latest-link {
 		font-size: 1.125rem;
 		font-weight: 650;
 		text-decoration: none;
 		line-height: 1.2;
 	}
-
 	.module-latest-date,
 	.module-latest-cats {
 		display: block;
@@ -89,7 +99,6 @@
 }
 
 .owner-info {
-
 	p:first-of-type {
 		margin: 0;
 	}
@@ -104,9 +113,17 @@ p + ul {
 	margin-top: var( --ccd-e--ccd-element--margin-top );
 }
 
-.module-footer {
+.owner-module-wrap {
+	display: flex;
+	gap: calc( var( --ccd-spacing--x ) / 2 );
+	margin-top: calc( var( --ccd-spacing--y ) / 2 );
+}
+
+.module-aside {
 	.owner-module-wrap {
-		display: flex;
-		gap: 1em;
+		flex-direction: column;
+	}
+	.owner-avatar {
+		align-self: center;
 	}
 }
