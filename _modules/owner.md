@@ -1,5 +1,4 @@
 ---
-title: "Greg Sweet's Info"
+title: ""
 footer: true
 ---
-Donkey wrangler turned web geek.

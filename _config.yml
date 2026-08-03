@@ -30,12 +30,16 @@ owner:
     alt: "Greg Sweet's avatar depicting the Bob's Big Boy mascot"
     caption: "Artist's rendition of Greg"
   links:
-    - name: "GitHub"
-      url: "https://github.com/ControlledChaos"
-    - name: "Bludiot"
-      url: "https://github.com/Bludiot"
-    - name: "UpWork"
-      url: "https://www.upwork.com/freelancers/~0164ac5464a0ac7c89"
+    - name: "Email greg@ccdzin.com"
+      url:  "mailto:greg@ccdzin.com"
+    - name: "Phone 559-769-7600"
+      url:  "tel:15597697600"
+    - name: "My GitHub Profile"
+      url:  "https://github.com/ControlledChaos"
+    - name: "My Other GitHub Profile"
+      url:  "https://github.com/Bludiot"
+    - name: "My UpWork Profile"
+      url:  "https://www.upwork.com/freelancers/~0164ac5464a0ac7c89"
 
 # General
 body_class: "default-page"
