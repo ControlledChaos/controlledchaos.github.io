@@ -1,5 +1,6 @@
 {%- assign module = include.module -%}
-{%- assign src = site.owner.avatar.file | prepend: "assets/img/" -%}
+{%- assign links  = site.owner.links -%}
+{%- assign src    = site.owner.avatar.file | prepend: "assets/img/" -%}
 
 <h3>{{ module.title }}</h3>
 
@@ -14,6 +15,16 @@
 
 	{%- if module.content and module.content != blank -%}
 		{{ module.content }}
+	{%- endif -%}
+
+	{%- if links.size > 0 -%}
+	<ul class="owner-links">
+
+		{%- for link in links -%}
+		<li><a href="{{ link.url }}" target="_blank" rel="noopener noreferrer">{{ link.name }}</a></li>
+		{%- endfor -%}
+
+	</ul>
 	{%- endif -%}
 
 	</div>
