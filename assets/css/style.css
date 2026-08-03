@@ -1576,6 +1576,33 @@ figcaption {
   padding: 0;
 }
 
+.owner-module-wrap {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.owner-avatar {
+  width: 80px;
+  min-width: 80px;
+}
+.owner-avatar a {
+  display: block;
+  width: 80px;
+  height: 80px;
+}
+.owner-avatar img {
+  display: block;
+  aspect-ratio: 1/1;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center center;
+     object-position: center center;
+}
+.owner-avatar figcaption {
+  display: block;
+  padding: 0.5rem;
+}
+
 .page-sidebar {
   position: var(--ccd-sidebar--position);
   display: var(--ccd-sidebar--display, flex);
