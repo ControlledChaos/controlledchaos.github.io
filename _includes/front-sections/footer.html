@@ -1,4 +1,6 @@
-{% assign footer = include.section %}
+{%- assign footer = include.section -%}
+{%- assign modules = site.modules | sort: "order" -%}
+
 <section id="section-footer" data-anchor="footer" class="front-page-section site-footer" role="contentinfo">
 
 	<img class="section-bg-image" src='{{ "assets/img/bamboo.jpg" | relative_url }}' role="presentation" />
@@ -7,7 +9,24 @@
 		<button class="scroll-up" title='{{ posts.title | default: "Latest Posts" }}' data-tooltip>{%- include svg/angle-up.svg -%}</button>
 	</div>
 	<div id="site-info" class="section-wrap">
-		<div class="general-wrap">
+		<div class="general-wrap modules-footer">
+
+			{%- if site.modules.size > 0 -%}
+			{%- for module in modules -%}
+
+			{%- unless module.footer == true -%}
+				{%- continue -%}
+			{%- endunless -%}
+
+			{%- assign slug = module.path | remove: "_modules/" | remove: module.ext -%}
+
+			<div class="module module-footer module-{{ slug }}">
+				{%- include modules/{{ slug }}.html module = module -%}
+			</div>
+
+			{%- endfor -%}
+			{%- endif -%}
+
 		</div>
 	</div>
 	<p class="final-message">{{ "now" | date: "%Y" }} {{ site.final_message | default: "No copyright claims." }}</p>
