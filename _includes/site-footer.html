@@ -15,7 +15,7 @@
 			{%- assign slug = module.path | remove: "_modules/" | remove: module.ext -%}
 
 			<div class="module module-footer module-{{ slug }}">
-				{{ module.content }}
+				{%- include modules/{{ slug }}.html module = module -%}
 			</div>
 
 			{%- endfor -%}

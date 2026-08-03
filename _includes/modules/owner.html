@@ -1,0 +1,23 @@
+{%- assign module = include.module -%}
+{%- assign src = site.owner.avatar file | prepend: "assets/img/" -%}
+
+<div class="owner-module">
+
+	<h3>{{ module.title }}</h3>
+
+	<div class="owner-avatar">
+		<figure>
+			<img src="{{ src }}" alt="{{ site.owner.avatar.alt }}" />
+			<figcaption>{{ site.owner.avatar.caption }}</figcaption>
+		</figure>
+	</div>
+	<div class="owner-info">
+
+		{%- if module.content and module.content != blank -%}
+		<div class="module-content owner-content">
+			{{ module.content }}
+		</div>
+		{%- endif -%}
+
+	</div>
+</div>
