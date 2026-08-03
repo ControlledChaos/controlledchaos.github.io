@@ -4,6 +4,10 @@
 
 .module {
 
+	&.module-footer {
+		padding: calc( var( --ccd-spacing--y ) / 2 ) calc( var( --ccd-spacing--x ) / 2 );
+	}
+
 	.module-content {
 		p {
 			font-size: 0.8125rem;
@@ -104,6 +108,5 @@ p + ul {
 	.owner-module-wrap {
 		display: flex;
 		gap: 1em;
-		padding: calc( var( --ccd-spacing--y ) / 2 ) calc( var( --ccd-spacing--x ) / 2 );
 	}
 }

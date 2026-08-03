@@ -1577,6 +1577,9 @@ figcaption {
   padding: 0;
 }
 
+.module.module-footer {
+  padding: calc(var(--ccd-spacing--y) / 2) calc(var(--ccd-spacing--x) / 2);
+}
 .module .module-content p {
   font-size: 0.8125rem;
 }
@@ -1653,7 +1656,6 @@ p + ul {
 .module-footer .owner-module-wrap {
   display: flex;
   gap: 1em;
-  padding: calc(var(--ccd-spacing--y) / 2) calc(var(--ccd-spacing--x) / 2);
 }
 
 .page-sidebar {

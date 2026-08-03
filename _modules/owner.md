@@ -1,4 +1,4 @@
 ---
-title: "Personal Links"
+title: "Personal Info & Links"
 footer: true
 ---
