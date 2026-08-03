@@ -1040,6 +1040,7 @@ figcaption {
   margin-top: var(--ccd-spacing--y, 2rem);
 }
 .front-page-section .section-wrap {
+  position: relative;
   max-width: var(--ccd-wrap--general--max-width);
   padding: 0 var(--ccd-spacing--x, 2rem);
 }
