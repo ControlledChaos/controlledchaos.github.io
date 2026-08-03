@@ -9,6 +9,16 @@
 	{%- assign avatar_style = avatar_width | prepend: "style='min-width: " | append: "'" -%}
 
 	<div class="front-page-content section-wrap">
+		<header>
+			{%- if page.title -%}
+			<h2 id="{{ page.title | slugify }}" class="section-heading page-title">{{ page.title }}</h2>
+			{%- endif -%}
+
+			{%- if page.subtitle -%}
+			<p class="page-subtitle">{{ page.subtitle }}</p>
+			{%- endif -%}
+		</header>
+
 		<div class="layout columns responsive front-intro-columns">
 			<!-- Avatar from Jekyll variables in the site `index.html` file, defaults from Liquid variables in `posts.html` layout. -->
 			<figure class="captioned-image front-intro-avatar" {{ avatar_style }}>
@@ -18,14 +28,6 @@
 				<figcaption>{{ page.avatar_caption }}</figcaption>
 			</figure>
 			<div class="front-intro-content">
-				{%- if page.title -%}
-				<h2 id="{{ page.title | slugify }}" class="section-heading page-title">{{ page.title }}</h2>
-				{%- endif -%}
-
-				{%- if page.subtitle -%}
-				<p class="page-subtitle">{{ page.subtitle }}</p>
-				{%- endif -%}
-
 				{{ intro.content }}
 			</div>
 		</div>
