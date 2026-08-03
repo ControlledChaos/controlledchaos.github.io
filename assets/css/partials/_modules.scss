@@ -3,7 +3,7 @@
 ///
 
 // Owner module.
-.owner-avatar {
+.owner-avatar { // The `<figure>` element.
 	width: 80px;
 	min-width: 80px;
 
@@ -25,7 +25,12 @@
 }
 
 .owner-info {
+
 	p:first-of-type {
+		margin: 0;
+	}
+
+	p + ul {
 		margin: 0;
 	}
 }

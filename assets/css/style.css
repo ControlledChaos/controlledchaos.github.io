@@ -1602,6 +1602,9 @@ figcaption {
 .owner-info p:first-of-type {
   margin: 0;
 }
+.owner-info p + ul {
+  margin: 0;
+}
 
 .owner-links {
   list-style: none;

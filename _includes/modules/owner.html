@@ -2,7 +2,9 @@
 {%- assign links  = site.owner.links -%}
 {%- assign src    = site.owner.avatar.file | prepend: "assets/img/" -%}
 
+{%- if module.title -%}
 <h3>{{ module.title }}</h3>
+{%- endif -%}
 
 <div class="owner-module-wrap">
 	<figure class="owner-avatar">
