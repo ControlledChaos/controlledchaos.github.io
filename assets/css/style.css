@@ -1686,6 +1686,10 @@ p + ul {
   align-self: center;
 }
 
+.page-links-module-nav ul {
+  list-style: none;
+}
+
 .page-sidebar {
   position: var(--ccd-sidebar--position);
   display: var(--ccd-sidebar--display, flex);

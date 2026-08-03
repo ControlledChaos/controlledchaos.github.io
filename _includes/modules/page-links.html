@@ -1,3 +1,4 @@
+{%- assign module = include.module -%}
 {%- assign current_url = page.url | default: '/' %}
 {%- assign best_match_url = '' %}
 {%- assign best_match_len = 0 %}
@@ -38,6 +39,10 @@
 		{%- endif -%}
 	{%- endif -%}
 {%- endfor %}
+
+{%- if module.title -%}
+<h3>{{ module.title }}</h3>
+{%- endif -%}
 
 <nav class="page-links-module-nav" role="directory" itemscope itemtype="http://schema.org/SiteNavigationElement">
 	<ul>
