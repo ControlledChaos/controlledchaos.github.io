@@ -40,7 +40,7 @@ collections:
     directory: _front-slides
     output: false
   modules:
-    directory: _includes/_modules
+    directory: _includes/modules
     output: false
   projects:
     directory: _projects/content
