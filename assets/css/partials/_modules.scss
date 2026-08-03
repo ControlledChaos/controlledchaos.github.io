@@ -21,6 +21,10 @@
 	&.module-footer {
 		max-width: 320px;
 		padding: calc( var( --ccd-spacing--y ) / 2 ) calc( var( --ccd-spacing--x ) / 2 );
+
+		h3:first-of-type {
+			margin: 0;
+		}
 	}
 	.module-content {
 		p {

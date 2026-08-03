@@ -1597,6 +1597,9 @@ figcaption {
   max-width: 320px;
   padding: calc(var(--ccd-spacing--y) / 2) calc(var(--ccd-spacing--x) / 2);
 }
+.module.module-footer h3:first-of-type {
+  margin: 0;
+}
 .module .module-content p {
   font-size: 0.8125rem;
 }
