@@ -85,15 +85,19 @@
 
 .front-intro-avatar {
 	width: 200px;
-	min-width: 160px;
 	overflow: hidden;
+
+	a {
+		display: block;
+		width: 200px;
+		height: 200px;
+	}
 
 	img {
 		display: block;
 		aspect-ratio: 1 / 1;
 		object-fit: cover;
 		object-position: center center;
-		height: 100%;
 		border: var( --ccd-box--border );
 	}
 

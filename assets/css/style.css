@@ -1097,8 +1097,12 @@ figcaption {
 
 .front-intro-avatar {
   width: 200px;
-  min-width: 160px;
   overflow: hidden;
+}
+.front-intro-avatar a {
+  display: block;
+  width: 200px;
+  height: 200px;
 }
 .front-intro-avatar img {
   display: block;
@@ -1107,7 +1111,6 @@ figcaption {
      object-fit: cover;
   -o-object-position: center center;
      object-position: center center;
-  height: 100%;
   border: var(--ccd-box--border);
 }
 .front-intro-avatar figcaption {
