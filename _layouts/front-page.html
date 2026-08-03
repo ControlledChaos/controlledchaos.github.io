@@ -54,9 +54,6 @@ jQuery(document).ready( function($) {
 
 			// Remove "made with" credit.
 			$( '.fp-watermark' ).remove();
-
-			// Remove loading panel.
-			$( '.page-loading' ).delay( 500 ).fadeOut( 250 );
 		},
 		afterRender : function() {
 
@@ -108,6 +105,11 @@ jQuery(document).ready( function($) {
 		distance: 5,
 		theme: 'ccdzen'
 	});
+});
+
+// Remove loading panel.
+jQuery(window).on( 'load', function($) {
+	$( '.page-loading' ).delay( 500 ).fadeOut( 250 );
 });
 </script>
 
