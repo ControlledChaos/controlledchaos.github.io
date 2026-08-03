@@ -113,7 +113,7 @@
 	<!-- Standard meta tags -->
 	<meta name="url" content="{{ page.url | absolute_url }}" />
 	<meta name="identifier-URL" content="{{ site.url }}" />
-	<meta name="owner" content="{{ site.owner }}" />
+	<meta name="owner" content="{{ site.owner.name }}" />
 	<meta name="designer" content="Controlled Chaos Design" />
 	<meta name="subject" content="Personal portfolio, code sharing, blog" />
 	<meta name="keywords" content='{{ keywords }}' />
@@ -124,15 +124,15 @@
 
 	<!-- Schema meta tags -->
 	<meta itemprop="url" content="{{ page.url | absolute_url }}" />
-	<meta itemprop="owner" content="{{ site.owner }}" />
+	<meta itemprop="owner" content="{{ site.owner.name }}" />
 	<meta itemprop="name" content="{{ title }}" />
 	<meta itemprop="description" content="{{ meta_description }}" />
 	<meta itemprop="author" content="{{ meta_author }}" />
 	<meta itemprop="datePublished" content='{{ page.date | date: "%b %d, %Y" }}' />
 	<meta itemprop="image" content="{{ '/assets/img/' | append: meta_img | absolute_url }}" />
 
-	<meta itemprop="email" content="{{ site.email }}" />
-	<meta itemprop="telephone" content="{{ site.phone }}" />
+	<meta itemprop="email" content="{{ site.owner.email }}" />
+	<meta itemprop="telephone" content="{{ site.owner.phone }}" />
 	<meta itemprop="addressLocality" content="{{ site.locality }}" />
 	<meta itemprop="addressRegion" content="{{ site.region }}" />
 	<meta itemprop="postalCode" content="{{ site.postal }}" />
@@ -148,8 +148,8 @@
 	<meta property="og:description" content="{{ meta_description }}" />
 	<meta property="og:image" content="{{ '/assets/img/' | append: meta_img | absolute_url }}" />
 
-	<meta property="og:email" content="{{ site.email }}" />
-	<meta property="og:phone_number" content="{{ site.phone }}" />
+	<meta property="og:email" content="{{ site.owner.email }}" />
+	<meta property="og:phone_number" content="{{ site.owner.phone }}" />
 	<meta property="og:locality" content="{{ site.locality }}" />
 	<meta property="og:region" content="{{ site.region }}" />
 	<meta property="og:postal-code" content="{{ site.postal }}" />

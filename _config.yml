@@ -6,7 +6,6 @@ is_project_page: false
 remote_theme: theme-ccdzine
 organization: "Controlled Chaos Design"
 keywords: "website design, website development, website management, ClassicPress, ClassicPress themes, ClassicPress plugins, WordPress, WordPress themes, WordPress plugins, Advanced Custom Fields, Jekyll, Shopify, Liquid templates, HTML, HTML5, CSS, CSS3, SCSS, Sass, PHP, jQuery, SEO, Schema, SVG, image manipulation, Illustrator, Inkscape, PhotoShop, GIMP, Affinity, content writing, content management, fluent English, native English, United States"
-owner: "Greg Sweet"
 language: "en_US"
 title: "Controlled Chaos Design"
 description: "Custom website design and build. Free products to build your own."
@@ -24,6 +23,18 @@ site_thumb: "site-thumb.jpg"
 timezone: "America/Los_Angeles"
 markdown: kramdown
 permalink: pretty
+owner:
+  name: "Greg Sweet"
+  email: "greg@ccdzine.com"
+  phone: "1-559-769-7600"
+  avatar: "avatar-greg.jpg" # In assets/img
+  links:
+    - name: "GitHub"
+      url: "https://github.com/ControlledChaos"
+    - name: "Bludiot"
+      url: "https://github.com/Bludiot"
+    - name: "UpWork"
+      url: "https://www.upwork.com/freelancers/~0164ac5464a0ac7c89"
 
 # General
 body_class: "default-page"
