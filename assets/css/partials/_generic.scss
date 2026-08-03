@@ -123,7 +123,7 @@ $loading_animation: spinner 1.25s infinite linear;
 
 // General block text elements.
 h1, h2, h3, h4, h5, h6, p, ul, ol, blockquote, fieldset, table, pre {
-	margin: var( --ccd-element--margin, calc( var( --ccd-spacing--y ) / 2 ) 0 0 0 );
+	margin: var( --ccd-element--margin, var( --ccd-element--margin-top ) 0 0 0 );
 	padding: var( --ccd-element--padding );
 }
 

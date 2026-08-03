@@ -25,6 +25,7 @@
 	--ccd-box--border--dark: var( --ccd-box--border-style ) var( --ccd-box--border-width ) var( --ccd-box--border-color--dark );
 
 	// Body & general text.
+	--ccd-element--margin-top: calc( var( --ccd-spacing--y ) / 2 );
 	--ccd-body--font-family: #{typo.$stack_general};
 	--ccd-body--font-size: 1.0625rem;
 	--ccd-body--line-height: 1.525;
