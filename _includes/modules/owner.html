@@ -8,7 +8,7 @@
 
 <div class="owner-module-wrap">
 	<figure class="owner-avatar">
-		<a href="{{ src | relative_url }}" data-fancybox data-caption="{{ site.owner.avatar.caption }}">
+		<a href="{{ src | relative_url }}" title="{{ site.owner.avatar.caption }}" data-tooltip data-fancybox data-caption="{{ site.owner.avatar.caption }}">
 			<img src="{{ src | relative_url }}" alt="{{ site.owner.avatar.alt }}" class="avatar" />
 		</a>
 		<figcaption class="screen-reader-text">{{ site.owner.avatar.caption }}</figcaption>
