@@ -1602,12 +1602,14 @@ figcaption {
 .owner-info p:first-of-type {
   margin: 0;
 }
-.owner-info p + ul {
-  margin: 0;
-}
 
 .owner-links {
   list-style: none;
+  margin: 0;
+}
+
+p + ul {
+  margin-top: var(--ccd-e--ccd-element--margin-top);
 }
 
 .module-footer .owner-module-wrap {
