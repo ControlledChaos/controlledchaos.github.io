@@ -1,9 +1,26 @@
+{%- assign modules = site.modules | sort: "order" -%}
+
 <footer id="colophon" class="site-footer">
 	<img class="footer-bg-image" src='{{ "assets/img/bamboo.jpg" | relative_url }}' role="presentation" />
 	<div class="site-info">
 		<div class="general-wrap">
-			<h3>Contact Me</h3>
-			<p>Bacon ipsum dolor amet filet mignon rump ball tip flank burgdoggen picanha pastrami chuck jerky turkey andouille short ribs pig cupim.</p>
+
+			{%- if site.modules.size > 0 -%}
+			{%- for module in modules -%}
+
+			{%- unless module.footer == true -%}
+				{%- continue -%}
+			{%- endunless -%}
+
+			{%- assign slug = module.path | remove: "_modules/" | remove: module.ext -%}
+
+			<div class="module module-footer module-{{ slug }}">
+				{%- include modules/{{ slug }}.html module = module -%}
+			</div>
+
+			{%- endfor -%}
+			{%- endif -%}
+
 		</div>
 	</div>
 	<p class="final-message">{{ "now" | date: "%Y" }} {{ site.final_message | default: "No copyright claims." }}</p>
@@ -21,6 +38,7 @@ jQuery(document).ready( function($) {
 
 	// Responsive video embeds.
 	$( '.main-article' ).fitVids();
+
 	// Custom tooltips.
 	$( 'a[data-tooltip]' ).tooltipster({
 		distance: 5,
