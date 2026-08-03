@@ -1,4 +1,4 @@
 ---
 order: 4
-title: More Information
+title: "More Information"
 ---

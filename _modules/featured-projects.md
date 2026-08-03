@@ -1,5 +1,5 @@
 ---
-title: Featured Projects
+title: "Featured Projects"
 side: true
 order: 0
 ---
