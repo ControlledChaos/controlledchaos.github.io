@@ -58,6 +58,9 @@
 	&.front-intro-columns {
 		flex-direction: row-reverse;
 		align-items: center;
+		margin-top: var( --ccd-spacing--y );
+		padding-top: var( --ccd-spacing--y );
+		border-top: var( --ccd-box--border );
 
 		@media screen and ( max-width: layout.$bp_med ) {
 			flex-direction: column-reverse;
@@ -66,6 +69,12 @@
 
 		.front-intro-content {
 			flex-grow: 1;
+
+			p {
+				&:first-of-type {
+					margin: 0;
+				}
+			}
 		}
 	}
 }
@@ -81,6 +90,7 @@
 
 	img {
 		display: block;
+		aspect-ratio: 1 / 1;
 		object-fit: cover;
 		object-position: center center;
 		height: 100%;

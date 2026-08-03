@@ -1074,6 +1074,9 @@ figcaption {
 .columns.front-intro-columns {
   flex-direction: row-reverse;
   align-items: center;
+  margin-top: var(--ccd-spacing--y);
+  padding-top: var(--ccd-spacing--y);
+  border-top: var(--ccd-box--border);
 }
 @media screen and (max-width: 768px) {
   .columns.front-intro-columns {
@@ -1083,6 +1086,9 @@ figcaption {
 }
 .columns.front-intro-columns .front-intro-content {
   flex-grow: 1;
+}
+.columns.front-intro-columns .front-intro-content p:first-of-type {
+  margin: 0;
 }
 
 .front-page-content {
@@ -1096,6 +1102,7 @@ figcaption {
 }
 .front-intro-avatar img {
   display: block;
+  aspect-ratio: 1/1;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: center center;

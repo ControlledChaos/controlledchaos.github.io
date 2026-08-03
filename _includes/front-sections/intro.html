@@ -9,7 +9,7 @@
 	{%- assign avatar_style = avatar_width | prepend: "style='min-width: " | append: "'" -%}
 
 	<div class="front-page-content section-wrap">
-		<header>
+		<header class="front-intro-hearder">
 			{%- if page.title -%}
 			<h2 id="{{ page.title | slugify }}" class="section-heading page-title">{{ page.title }}</h2>
 			{%- endif -%}
