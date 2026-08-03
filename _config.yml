@@ -66,6 +66,7 @@ defaults:
     values:
       permalink: /posts/:title/
       layout: "post"
+      page_type: "BlogPosting"
       author: "Greg Sweet"
       comments: true
       post_image: false # Fallback in templates.
@@ -75,29 +76,31 @@ defaults:
       path: "" # empty string == all files in project.
       type: "pages"
     values:
-      layout: "page"
+      layout: "default"
+      page_type: "WebPage"
+      cover: "banner"
       page_image: false # Fallback in templates.
       page_thumb: false # Fallback in templates.
 
 # Primary navigation entries
 site_nav:
-  - name: Services
-    url: /services
-  - name: Projects
-    url: /projects
-  - name: Downloads
-    url: /downloads
-  - name: Posts
-    url: /posts
-  - name: Snippets
-    url: /snippets
+  - name: "Services"
+    url: "/services"
+  - name: "Projects"
+    url: "/projects"
+  - name: "Downloads"
+    url: "/downloads"
+  - name: "Posts"
+    url: "/posts"
+  - name: "Snippets"
+    url: "/snippets"
 
 # Blog pages
-blog_view: preview # preview, grid, or full
+blog_view: "preview" # preview, grid, or full
 blog_path: "/posts/"
 paginate_path: "/posts/page:num/"
 paginate: 9
-category_path: /category/
+category_path: "/category/"
 category_layout: category_index.html
 tag_page_layout: tags
 tag_page_dir: tags
