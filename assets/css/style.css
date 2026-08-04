@@ -1595,7 +1595,7 @@ figcaption {
 }
 
 .module.module-footer {
-  max-width: 320px;
+  max-width: 330px;
   padding: calc(var(--ccd-spacing--y) / 2) calc(var(--ccd-spacing--x) / 2);
 }
 .module.module-footer h3:first-of-type {
@@ -1689,6 +1689,11 @@ p + ul {
 
 .page-links-module-nav ul {
   list-style: none;
+  -moz-column-count: 2;
+       column-count: 2;
+  -moz-column-width: 160px;
+       column-width: 160px;
+  column-wrap: wrap;
 }
 
 .page-sidebar {

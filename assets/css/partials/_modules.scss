@@ -19,7 +19,7 @@
 
 .module {
 	&.module-footer {
-		max-width: 320px;
+		max-width: 330px;
 		padding: calc( var( --ccd-spacing--y ) / 2 ) calc( var( --ccd-spacing--x ) / 2 );
 
 		h3:first-of-type {
@@ -136,5 +136,8 @@ p + ul {
 .page-links-module-nav {
 	ul {
 		list-style: none;
+		column-count: 2;
+		column-width: 160px;
+		column-wrap: wrap;
 	}
 }
