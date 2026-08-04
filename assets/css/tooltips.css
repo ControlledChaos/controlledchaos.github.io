@@ -1,4 +1,3 @@
-/* This is the core CSS of Tooltipster */
 /* GENERAL STRUCTURE RULES (do not edit this section) */
 .tooltipster-base {
   /* this ensures that a constrained height set by functionPosition,
@@ -304,7 +303,7 @@ corresponds to the arrow we want to display */
 .tooltipster-sidetip.ccdzen .tooltipster-box {
   border-radius: 2px;
   border: none;
-  background: var(--ccd-color--theme--primary--dark);
+  background: #72577a;
 }
 
 .tooltipster-sidetip.ccdzen.tooltipster-top .tooltipster-box {
@@ -324,17 +323,17 @@ corresponds to the arrow we want to display */
 }
 
 .tooltipster-sidetip.ccdzen.tooltipster-bottom .tooltipster-arrow-border {
-  border-bottom-color: var(--ccd-color--theme--primary--dark);
+  border-bottom-color: #72577a;
 }
 
 .tooltipster-sidetip.ccdzen.tooltipster-left .tooltipster-arrow-border {
-  border-left-color: var(--ccd-color--theme--primary--dark);
+  border-left-color: #72577a;
 }
 
 .tooltipster-sidetip.ccdzen.tooltipster-right .tooltipster-arrow-border {
-  border-right-color: var(--ccd-color--theme--primary--dark);
+  border-right-color: #72577a;
 }
 
 .tooltipster-sidetip.ccdzen.tooltipster-top .tooltipster-arrow-border {
-  border-top-color: var(--ccd-color--theme--primary--dark);
+  border-top-color: #72577a;
 }
