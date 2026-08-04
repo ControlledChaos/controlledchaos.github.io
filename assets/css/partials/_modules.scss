@@ -5,21 +5,13 @@
 @use '../modules/layout';
 
 .modules-footer {
-	display: grid;
-	grid-template-columns: repeat( 3, 1fr );
-	gap: var( --ccd-spacing--y ) var( --ccd-spacing--x );
-
-	@media screen and ( max-width: layout.$bp_lg ) {
-		grid-template-columns: repeat( 2, 1fr );
-	}
-	@media screen and ( max-width: layout.$bp_sm ) {
-		grid-template-columns: repeat( 1, 1fr );
-	}
+	display: flex;
+	flex-wrap: wrap;
 }
 
 .module {
 	&.module-footer {
-		max-width: 330px;
+		min-width: 320px;
 		padding: calc( var( --ccd-spacing--y ) / 2 ) calc( var( --ccd-spacing--x ) / 2 );
 
 		h3:first-of-type {
