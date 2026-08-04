@@ -30,15 +30,15 @@ owner:
     alt: "Greg Sweet's avatar depicting the Bob's Big Boy mascot"
     caption: "Artist's rendition of Greg"
   links:
-    - name: "Email: greg@ccdzin.com"
-      url:  "mailto:greg@ccdzin.com"
+    - name: "Email: greg@ccdzine.com"
+      url:  "mailto:greg@ccdzine.com"
     - name: "Phone: (559) 769-7600"
       url:  "tel:15597697600"
-    - name: "Controlled Chaos GitHub"
+    - name: "GitHub Repositories"
       url:  "https://github.com/ControlledChaos"
-    - name: "Bludiot Products Website"
+    - name: "Bludiot Products"
       url:  "https://bludiot.github.io/"
-    - name: "Dormant CodePen Profile"
+    - name: "CodePen Profile"
       url:  "https://codepen.io/ControlledChaos/"
 
 # General
