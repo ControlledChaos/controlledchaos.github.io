@@ -138,6 +138,8 @@ page_links:
     url: "/snippets"
   - name: "Read Posts"
     url: "/posts"
+  - name: "Privacy Info"
+    url: "/privacy"
 
 # Footer content
 final_message: "CCDzine | No copyright. No synths!"
