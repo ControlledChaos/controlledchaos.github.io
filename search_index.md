@@ -1,12 +1,11 @@
 ---
 layout: default
-title: Search
+title: "Search"
 permalink: /search/
-show_in_menu: false
 ---
 
-<div id="search" data-baseurl="https://controlledchaos.github.io">
-  <input type="text" id="search-input" placeholder="Search articles..." autofocus>
+<div id="search" data-baseurl="{{ site.baseurl }}">
+  <input type="text" id="search-input" placeholder="Search articles...">
 </div>
 
 <script src="{{ '/assets/js/search.js' | relative_url }}"></script>
