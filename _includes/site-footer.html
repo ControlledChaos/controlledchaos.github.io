@@ -3,6 +3,9 @@
 <footer id="colophon" class="site-footer">
 	<img class="footer-bg-image" src='{{ "assets/img/bamboo.jpg" | relative_url }}' role="presentation" />
 	<div class="site-info">
+	<!-- HTML elements for search -->
+<input type="text" id="search-input" placeholder="Search blog posts..">
+<ul id="results-container"></ul>
 		<div class="general-wrap modules-footer">
 
 			{%- if site.modules.size > 0 -%}
@@ -46,6 +49,9 @@ jQuery(document).ready( function($) {
 	});
 });
 </script>
+
+<!-- Simple Search -->
+<script src="{{ '/assets/js/simple-jekyll-search.min.js' | relative_url }}"></script>
 
 <!-- Simple Analytics -->
 <script async src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
