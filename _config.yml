@@ -122,6 +122,23 @@ tag_page_layout: tags
 tag_page_dir: tags
 related_by: "tags or categories"
 
+# Page links module
+page_links:
+  - name: "Meet Greg"
+    url: "/about"
+  - name: "Contact Greg"
+    url: "/contact"
+  - name: "Skills & Services"
+    url: "/services"
+  - name: "View Projects"
+    url: "/projects"
+  - name: "Get Downloads"
+    url: "/downloads"
+  - name: "Get Snippets"
+    url: "/snippets"
+  - name: "Read Posts"
+    url: "/posts"
+
 # Footer content
 final_message: "CCDzine | No copyright. No synths!"
 
