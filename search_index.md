@@ -5,7 +5,7 @@ permalink: /search/
 show_in_menu: false
 ---
 
-<div id="search" data-baseurl="controlledchaos.github.io">
+<div id="search" data-baseurl="https://controlledchaos.github.io">
   <input type="text" id="search-input" placeholder="Search articles..." autofocus>
 </div>
 
