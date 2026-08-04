@@ -1,12 +1,15 @@
-{% assign intro = include.section %}
+{%- assign intro = include.section -%}
+{%- assign avatar_file    = page.avatar_image | site.owner.file -%}
+{%- assign avatar_alt     = page.avatar_alt | site.owner.alt -%}
+{%- assign avatar_caption = page.avatar_caption | site.owner.caption -%}
+{%- assign avatar_width   = page.avatar_width | default: "160px" -%}
+{%- assign avatar_style   = avatar_width | prepend: "style='min-width: " | append: "'" -%}
+
 <section id="section-intro" data-anchor="intro" class="front-page-section">
 
 	<div class="sections-nav fp-nav-y fp-nav-up hide-if-no-js">
 		<button class="scroll-up" title='{{ slides.title | default: "Slideshow" }}' data-tooltip>{%- include svg/angle-up.svg -%}</button>
 	</div>
-
-	{%- assign avatar_width = page.avatar_width | default: "160px" -%}
-	{%- assign avatar_style = avatar_width | prepend: "style='min-width: " | append: "'" -%}
 
 	<div class="front-page-content section-wrap">
 		<header class="front-intro-hearder">
@@ -22,10 +25,10 @@
 		<div class="layout columns responsive front-intro-columns">
 			<!-- Avatar from Jekyll variables in the site `index.html` file, defaults from Liquid variables in `posts.html` layout. -->
 			<figure class="captioned-image front-intro-avatar" {{ avatar_style }}>
-				<a href='{{ page.avatar_image | prepend: "assets/img/" | absolute_url }}' data-fancybox data-caption="{{ page.avatar_caption }}">
-					<img src='{{ page.avatar_image | prepend: "assets/img/" | absolute_url }}' alt="{{ page.avatar_alt }}" class="avatar" />
+				<a href='{{ avatar_file | prepend: "assets/img/" | absolute_url }}' data-fancybox data-caption="{{ avatar_caption }}">
+					<img src='{{ avatar_file | prepend: "assets/img/" | absolute_url }}' alt="{{ avatar_alt }}" class="avatar" />
 				</a>
-				<figcaption>{{ page.avatar_caption }}</figcaption>
+				<figcaption>{{ avatar_caption }}</figcaption>
 			</figure>
 			<div class="front-intro-content">
 				{{ intro.content }}
