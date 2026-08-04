@@ -5,26 +5,24 @@
 
 <body class="front-page">
 
-	{%- include site-header.html -%}
+{%- include site-header.html -%}
 
-	<div id="front-page-sections" class="page-container front-page-sections" itemscope="itemscope" itemtype="WebPage">
-		{{ content }}
-	</div>
-	<div class="page-loading">
-		<div class="loading-icon"></div>
-		<p class="loading-text">{{ site.loading_text | default: "Loading" }}</p>
-	</div>
-
-{%- assign js_ver = 'now' | date: "%Y-%m-%d-%H-%M" | prepend: "?v=" -%}
+<div id="front-page-sections" class="page-container front-page-sections" itemscope="itemscope" itemtype="WebPage">
+	{{ content }}
+</div>
+<div class="page-loading">
+	<div class="loading-icon"></div>
+	<p class="loading-text">{{ site.loading_text | default: "Loading" }}</p>
+</div>
 
 <!-- General theme scripts. -->
-<script src="{{ '/assets/js/lightbox.min.js' | append: js_ver | relative_url }}"></script>
-<script src="{{ '/assets/js/tooltips.min.js' | append: js_ver | relative_url }}"></script>
+<script src="{{ '/assets/js/lightbox.min.js' | relative_url }}"></script>
+<script src="{{ '/assets/js/tooltips.min.js' | relative_url }}"></script>
 
 <!-- Scripts specific to the front page. -->
-<script src="{{ '/assets/js/slider.min.js' | append: js_ver | relative_url }}"></script>
-<script src="{{ '/assets/js/fullpage.min.js' | append: js_ver | relative_url }}"></script>
-<script src="{{ '/assets/js/fullpage.extensions.min.js' | append: js_ver | relative_url }}"></script>
+<script src="{{ '/assets/js/slider.min.js' | relative_url }}"></script>
+<script src="{{ '/assets/js/fullpage.min.js' | relative_url }}"></script>
+<script src="{{ '/assets/js/fullpage.extensions.min.js' | relative_url }}"></script>
 <script>
 
 // Various jQuery scripts on document ready.
@@ -101,9 +99,8 @@ jQuery(document).ready( function($) {
 	});
 
 	// Custom Tooltipster tooltips for `title` attribute content.
-	$( 'a[data-tooltip]', 'button[data-tooltip]' ).tooltipster({
+	$( 'a[data-tooltip], button[data-tooltip]' ).tooltipster({
 		distance: 5,
-		animationDuration: 250,
 		delay: 150,
 		theme: 'ccdzen'
 	});

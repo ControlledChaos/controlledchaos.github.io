@@ -27,10 +27,9 @@
 </footer>
 
 <!-- Theme scripts. -->
-{%- assign js_ver = 'now' | date: "%Y-%m-%d-%H-%M" | prepend: "?v=" %}
-<script src="{{ '/assets/js/fitvids.min.js' | append: js_ver | relative_url }}"></script>
-<script src="{{ '/assets/js/lightbox.min.js' | append: js_ver | relative_url }}"></script>
-<script src="{{ '/assets/js/tooltips.min.js' | append: js_ver | relative_url }}"></script>
+<script src="{{ '/assets/js/fitvids.min.js' | relative_url }}"></script>
+<script src="{{ '/assets/js/lightbox.min.js' | relative_url }}"></script>
+<script src="{{ '/assets/js/tooltips.min.js' | relative_url }}"></script>
 <script>
 
 // Various jQuery scripts on document ready.
@@ -40,9 +39,8 @@ jQuery(document).ready( function($) {
 	$( '.main-article' ).fitVids();
 
 	// Custom tooltips.
-	$( 'a[data-tooltip]', 'button[data-tooltip]' ).tooltipster({
+	$( 'a[data-tooltip], button[data-tooltip]' ).tooltipster({
 		distance: 5,
-		animationDuration: 250,
 		delay: 150,
 		theme: 'ccdzen'
 	});
