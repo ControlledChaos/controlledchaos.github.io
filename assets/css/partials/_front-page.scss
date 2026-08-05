@@ -131,10 +131,15 @@
 		}
 	}
 
+	.front-page-section {
+		&:not( :first-of-type ) {
+			padding-top: calc( var( --ccd-spacing--y, 2rem ) * 3 );
+			border: none;
+		}
+	}
+
 	&:not( .fp-responsive ) {
 		.front-page-section {
-			margin: 0;
-
 			&:not( :first-of-type ) {
 				padding-top: calc( var( --ccd-spacing--y, 2rem ) * 3 );
 				border: none;
