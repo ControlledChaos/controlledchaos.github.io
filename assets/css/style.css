@@ -1141,6 +1141,9 @@ figcaption {
   padding-top: calc(var(--ccd-spacing--y, 2rem) * 3);
   border: none;
 }
+.custom-scroll:not(.fp-responsive) .site-footer {
+  margin-top: 0;
+}
 
 .fp-overflow {
   width: 100%;
