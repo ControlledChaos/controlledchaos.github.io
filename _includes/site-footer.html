@@ -35,6 +35,21 @@
 // Various jQuery scripts on document ready.
 jQuery(document).ready( function($) {
 
+	// Add "scrolled" class to the site header.
+	$(window).scroll( function () {
+
+		var scroll = $(window).scrollTop();
+		var size   = $(window).width();
+
+		if ( size > 960 ) {
+			if ( scroll >= 32 ) {
+				$( '.site-header' ).addClass( 'header-scrolled' );
+			} else {
+				$( '.site-header' ).removeClass( 'header-scrolled' );
+			}
+		}
+	});
+
 	// Responsive video embeds.
 	$( '.main-article' ).fitVids();
 
