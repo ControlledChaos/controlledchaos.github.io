@@ -10,6 +10,7 @@
 <div id="front-page-sections" class="page-container front-page-sections" itemscope="itemscope" itemtype="WebPage">
 	{{ content }}
 </div>
+{% include site-footer.html -%}
 <div class="page-loading">
 	<div class="loading-icon"></div>
 	<p class="loading-text">{{ site.loading_text | default: "Loading" }}</p>
