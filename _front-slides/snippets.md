@@ -1,5 +1,5 @@
 ---
-order: 5
+order: 6
 active: true
 image: "snippets.jpg"
 title: "Copy Snippets"
