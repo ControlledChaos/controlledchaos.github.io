@@ -411,6 +411,12 @@ b, strong, optgroup {
   --ccd-site-title--text-color: #ffffff;
   --ccd-page-title--font-size: 3.25rem;
   --ccd-page-title--font-weight: 500;
+  --ccd-front-intro--avatar--size: 200px;
+}
+@media screen and (max-width: 800px) {
+  :root {
+    --ccd-front-intro--avatar--size: 320px;
+  }
 }
 
 body {
@@ -1098,13 +1104,13 @@ figcaption {
 }
 
 .front-intro-avatar {
-  width: 200px;
+  width: var(--ccd-front-intro--avatar--size);
   overflow: hidden;
 }
 .front-intro-avatar a {
   display: block;
-  width: 200px;
-  height: 200px;
+  width: var(--ccd-front-intro--avatar--size);
+  height: var(--ccd-front-intro--avatar--size);
 }
 .front-intro-avatar img {
   display: block;
@@ -1120,9 +1126,6 @@ figcaption {
   padding: 0.5rem;
 }
 @media screen and (max-width: 800px) {
-  .front-intro-avatar {
-    width: 320px;
-  }
   .front-intro-avatar img {
     border-radius: unset;
   }

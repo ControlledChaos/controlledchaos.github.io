@@ -85,13 +85,13 @@
 }
 
 .front-intro-avatar {
-	width: 200px;
+	width: var( --ccd-front-intro--avatar--size );
 	overflow: hidden;
 
 	a {
 		display: block;
-		width: 200px;
-		height: 200px;
+		width: var( --ccd-front-intro--avatar--size );
+		height: var( --ccd-front-intro--avatar--size );
 	}
 
 	img {
@@ -108,8 +108,6 @@
 	}
 
 	@media screen and ( max-width: layout.$bp_med ) {
-		width: 320px;
-
 		img {
 			border-radius: unset;
 		}

@@ -72,4 +72,10 @@
 	// Page/Post content.
 	--ccd-page-title--font-size: 3.25rem;
 	--ccd-page-title--font-weight: 500;
+
+	// Front page.
+	--ccd-front-intro--avatar--size: 200px;
+	@media screen and ( max-width: layout.$bp_med ) {
+		--ccd-front-intro--avatar--size: 320px;
+	}
 }
