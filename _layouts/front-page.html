@@ -88,6 +88,13 @@ jQuery(document).ready( function($) {
 			if ( origin.index == 4 && direction =='up' ) {
 				$( '.site-header' ).removeClass( 'header-alt-01' );
 			}
+		},
+		afterResponsive: function( isResponsive ) {
+			if ( isResponsive ) {
+				$( '.sections-nav' ).hide();
+			} else {
+				$( '.sections-nav' ).show();
+			}
 		}
 	});
 
