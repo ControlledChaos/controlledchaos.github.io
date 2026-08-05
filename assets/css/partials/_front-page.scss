@@ -124,6 +124,13 @@
 
 // FullPageJS sections & scrolling.
 .custom-scroll {
+
+	&.fp-responsive {
+		.site-footer {
+			margin-top: var( --ccd-spacing--y, 2rem );
+		}
+	}
+
 	&:not( .fp-responsive ) {
 		.front-page-section {
 			margin: 0;
@@ -132,9 +139,6 @@
 				padding-top: calc( var( --ccd-spacing--y, 2rem ) * 3 );
 				border: none;
 			}
-		}
-		.site-footer {
-			margin-top: 0;
 		}
 	}
 }
