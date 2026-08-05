@@ -95,14 +95,10 @@ jQuery(document).ready( function($) {
 				$( '.front-page-section' ).addClass( 'doing-responsive' );
 
 				var scroll = $(window).scrollTop();
-				var size   = $(window).width();
-
-				if ( size > 800 ) {
-					if ( scroll >= 32 ) {
-						$( '.site-header' ).addClass( 'header-scrolled' );
-					} else {
-						$( '.site-header' ).removeClass( 'header-scrolled' );
-					}
+				if ( scroll >= 32 ) {
+					$( '.site-header' ).addClass( 'header-scrolled' );
+				} else {
+					$( '.site-header' ).removeClass( 'header-scrolled' );
 				}
 			} else {
 				$( '.sections-nav' ).show();
