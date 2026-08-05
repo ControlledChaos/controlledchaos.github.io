@@ -92,8 +92,10 @@ jQuery(document).ready( function($) {
 		afterResponsive: function( isResponsive ) {
 			if ( isResponsive ) {
 				$( '.sections-nav' ).hide();
+				$( '.front-page-section' ).addClass( 'doing-responsive' );
 			} else {
 				$( '.sections-nav' ).show();
+				$( '.front-page-section' ).removeClass( 'doing-responsive' );
 			}
 		}
 	});

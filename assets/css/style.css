@@ -1137,7 +1137,7 @@ figcaption {
 .custom-scroll .front-page-section {
   margin: 0;
 }
-.custom-scroll .front-page-section:not(:first-of-type) {
+.custom-scroll .front-page-section:not(:first-of-type), .custom-scroll .front-page-section:not(.doing-responsive) {
   padding-top: calc(var(--ccd-spacing--y, 2rem) * 3);
   border: none;
 }

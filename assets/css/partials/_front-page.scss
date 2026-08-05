@@ -127,7 +127,8 @@
 	.front-page-section {
 		margin: 0;
 
-		&:not( :first-of-type ) {
+		&:not( :first-of-type ),
+		&:not( .doing-responsive ) {
 			padding-top: calc( var( --ccd-spacing--y, 2rem ) * 3 );
 			border: none;
 		}
