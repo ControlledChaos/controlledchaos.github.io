@@ -124,12 +124,20 @@
 .custom-scroll {
 
 	&.fp-responsive {
+
+		.front-page-section {
+			&:first-of-type {
+				margin: 0;
+			}
+		}
+
 		.site-footer {
 			margin-top: var( --ccd-spacing--y, 2rem );
 		}
 	}
 
 	&:not( .fp-responsive ) {
+
 		.front-page-section {
 			margin: 0;
 

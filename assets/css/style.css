@@ -1137,6 +1137,9 @@ figcaption {
   font-weight: 550;
 }
 
+.custom-scroll.fp-responsive .front-page-section:first-of-type {
+  margin: 0;
+}
 .custom-scroll.fp-responsive .site-footer {
   margin-top: var(--ccd-spacing--y, 2rem);
 }
