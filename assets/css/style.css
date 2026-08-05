@@ -1134,10 +1134,10 @@ figcaption {
   font-weight: 550;
 }
 
-.custom-scroll:not(.doing-responsive) .front-page-section {
+.custom-scroll:not(.fp-responsive) .front-page-section {
   margin: 0;
 }
-.custom-scroll:not(.doing-responsive) .front-page-section:not(:first-of-type) {
+.custom-scroll:not(.fp-responsive) .front-page-section:not(:first-of-type) {
   padding-top: calc(var(--ccd-spacing--y, 2rem) * 3);
   border: none;
 }
