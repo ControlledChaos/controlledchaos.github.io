@@ -1,5 +1,5 @@
 ---
-order: 5
+order: 4
 active: true
 image: "downloads.jpg"
 title: "Download Products"
