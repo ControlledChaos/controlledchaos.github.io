@@ -1,6 +1,6 @@
 {%- assign fonts = "crimson-pro, crimson-pro-italic, red-hat-display, red-hat-display-italic, red-hat-text, red-hat-text-italic, red-hat-mono, red-hat-mono-italic" | split: ", " -%}
 
-{%- assign keywords = site.data.keywords.keywords -%}
+{%- assign keywords = site.data.keywords.keywords | split: ", " -%}
 {%- capture keywords -%}
 	{%- if page.keywords -%}
 		{{ page.keywords | append: ", " | append: keywords }}
