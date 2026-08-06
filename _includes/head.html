@@ -2,9 +2,9 @@
 
 {%- capture keywords -%}
 	{%- if page.keywords -%}
-		{{ page.keywords | append: ", " | append: data.keywords }}
+		{{ page.keywords | append: ", " | append: data.keywords.keywords }}
 	{%- else -%}
-		{{ data.keywords }}
+		{{ data.keywords.keywords }}
 	{%- endif -%}
 {%- endcapture -%}
 
