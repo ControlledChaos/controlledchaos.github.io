@@ -9,7 +9,9 @@
 {%- endcapture -%}
 
 {%- capture title -%}
-	{%- if page.title -%}
+	{%- if page.url == "/" -%}
+		{{ site.title }} | {{ site.description }}
+	{%- elsif page.title -%}
 		{{ page.title | strip_html | xml_escape  }} | {{ site.title | strip_html | xml_escape }}
 	{%- else -%}
 		{{ site.title | strip_html | xml_escape }}
