@@ -39,7 +39,7 @@
 <body class="{{ body_class }}">
 <a class="skip-link screen-reader-text" href="#main-content">Skip to content</a>
 	{% include site-header.html -%}
-	<div class="page-container" itemscope="itemscope" itemtype="{{ page_type }}">
+	<div class="page-container" itemscope="itemscope" itemtype="{{ page_type }}">{%- assign keywords = site.data.keywords.keywords -%}{{ keywords }}
 		<div id='{{ page.name | slugify | remove_last: "-md" }}' class="page-wrap">
 			<main id="main-content" class="page-main" role="main" itemscope itemprop="mainContentOfPage">
 				{{ content }}
