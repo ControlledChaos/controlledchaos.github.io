@@ -44,8 +44,7 @@ layout: common
 
 		{%- if page.category -%}
 		<div class="post-cats">
-			<p>Category:
-				{%- for cat in page.category -%}
+			<p>Category: {%- for cat in page.category -%}
 				<a href="{{ '/category' | absolute_url }}{{- cat | slugify -}}"> {{- cat -}} </a>
 				{%- endfor -%}
 			</p>
@@ -54,8 +53,7 @@ layout: common
 
 		{%- if page.tags.size > 0 -%}
 		<div class="post-tags">
-			<p>Tags:
-				{%- for tag in page.tags -%}
+			<p>Tags: {%- for tag in page.tags -%}
 				<a href="{{ '/tags' | relative_url }}#{{- tag -}}">{{- tag | capitalize -}}</a>
 				{%- endfor -%}
 			</p>

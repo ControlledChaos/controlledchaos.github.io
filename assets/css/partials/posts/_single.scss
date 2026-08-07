@@ -41,6 +41,10 @@
 	.post-footer {
 		grid-area: footer;
 		margin-top: 1em;
+
+		.post-tags {
+			margin: 0;
+		}
 	}
 
 	.post-cats-list,

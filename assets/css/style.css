@@ -1549,6 +1549,9 @@ figcaption {
   grid-area: footer;
   margin-top: 1em;
 }
+.post-page .post-footer .post-tags {
+  margin: 0;
+}
 .post-page .post-cats-list,
 .post-page .post-tags-list {
   display: inline-flex;
