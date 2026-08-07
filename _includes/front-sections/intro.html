@@ -7,10 +7,6 @@
 
 <section id="section-intro" data-anchor="intro" class="front-page-section fp-auto-height-responsive">
 
-	<div class="sections-nav fp-nav-y fp-nav-up hide-if-no-js">
-		<button class="scroll-up" title='{{ slides.title | default: "Slideshow" }}' data-tooltip>{%- include svg/angle-up.svg -%}</button>
-	</div>
-
 	<div class="front-page-content section-wrap">
 		<header class="front-intro-hearder">
 			{%- if page.title -%}
@@ -34,8 +30,5 @@
 				{{ intro.content }}
 			</div>
 		</div>
-	</div>
-	<div class="sections-nav fp-nav-y fp-nav-down hide-if-no-js">
-		<button class="scroll-down" title='{{ projects.title | default: "Featured Projects" }}' data-tooltip>{%- include svg/angle-down.svg -%}</button>
 	</div>
 </section>
