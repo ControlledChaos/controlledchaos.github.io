@@ -1,6 +1,8 @@
 {%- assign module = include.module -%}
 {%- assign links  = site.data.owner.owner.links -%}
 {%- assign src    = site.data.owner.owner.avatar.file | prepend: "assets/img/" -%}
+{%- assign alt = site.data.owner.owner.avatar.alt -%}
+{%- assign caption = site.data.owner.owner.avatar.caption -%}
 
 {%- if module.title -%}
 <h3>{{ module.title }}</h3>
@@ -8,10 +10,10 @@
 
 <div class="owner-module-wrap">
 	<figure class="owner-avatar">
-		<a href="{{ src | relative_url }}" title="{{ site.data.owner.owner.avatar.caption }}" data-tooltip data-fancybox data-caption="{{ site.owner.avatar.caption }}">
-			<img src="{{ src | relative_url }}" alt="{{ site.data.owner.owner.avatar.alt }}" class="avatar" />
+		<a href="{{ src | relative_url }}" title="{{ caption }}" data-tooltip data-fancybox data-caption="{{ caption }}">
+			<img src="{{ src | relative_url }}" alt="{{ alt }}" class="avatar" />
 		</a>
-		<figcaption class="screen-reader-text">{{ site.data.owner.owner.avatar.caption }}</figcaption>
+		<figcaption class="screen-reader-text">{{ caption }}</figcaption>
 	</figure>
 	<div class="owner-info">
 
