@@ -2,6 +2,7 @@
 title: "Here Goes Nothing"
 subtitle: "Gonna finally build a website for myself."
 post_image: "static.jpg"
+category: "CCDzine Website"
 tags: [ "websites", "portfolio", "stories" ]
 ---
 
