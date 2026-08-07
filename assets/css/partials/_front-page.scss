@@ -147,6 +147,28 @@
 			}
 		}
 	}
+
+	&.fp-viewing-slides {
+		#fp-nav {
+			transform: translateX( 9999px );
+		}
+	}
+
+	#fp-nav ul li a span,
+	.fp-slidesNav ul li a span {
+		width: 6px;
+		height: 6px;
+		background: var( --ccd-color--theme--primary );
+	}
+
+	#fp-nav ul li a.active span,
+	.fp-slidesNav ul li a.active span,
+	#fp-nav ul li:hover a.active span,
+	.fp-slidesNav ul li:hover a.active span {
+		width: 12px;
+		height: 12px;
+		margin: -5px 0 0 -5px;
+	}
 }
 
 .fp-overflow {
