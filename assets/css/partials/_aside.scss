@@ -35,7 +35,7 @@
 		color: var( --ccd-sidebar--text-color--dark, inherit );
 	}
 
-	@container page-wrap ( max-width: layout.$bp_med ) {
+	@container page-container ( max-width: layout.$bp_med ) {
 		display: var( --ccd-sidebar--bottom--display, var( --ccd-sidebar--display, grid ) );
 		grid-template-columns: var( --ccd-sidebar--bottom--grid-template-columns, var( --ccd-sidebar--grid-template-columns, repeat( 2, 1fr ) ) );
 		gap:  var( --ccd-sidebar--bottom--gap, var( --ccd-spacing--y, 2rem ) var( --ccd-spacing--x, 2rem ) );
@@ -62,7 +62,7 @@
 		}
 	}
 
-	@container page-wrap ( max-width: 640px ) {
+	@container page-container ( max-width: 640px ) {
 		display: var( --ccd-sidebar--bottom--tablet--display, var( --ccd-sidebar--bottom--display, var( --ccd-sidebar--display, block ) ) );
 	}
 

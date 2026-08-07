@@ -7,7 +7,7 @@
 .page-container {
 	flex-grow: 1;
 	container-type: inline-size;
-	container-name: page-wrap;
+	container-name: page-container;
 	display: var( --cfe-page-container--page--display, block );
 	position: var( --cfe-page-container--page--position );
 	overflow-x: var( --cfe-page-container--page--overflow-x );
@@ -21,7 +21,7 @@
 	margin: var( --cfe-page-container--page--margin, 0 auto );
 	padding: var( --cfe-page-container--page--padding );
 
-	@container page-wrap ( max-width: layout.$bp_med ) {
+	@container page-container ( max-width: layout.$bp_med ) {
 		flex-direction: column;
 	}
 }
@@ -40,7 +40,7 @@
 	justify-content: var( --cfe-page-wrap--justify-content );
 	gap: var( --cfe-page-wrap--gap, var( --cfe-spacing--vert, 2rem ) var( --cfe-spacing--horz, 2rem ) );
 
-	@container page-wrap ( max-width: layout.$bp_med ) {
+	@container page-container ( max-width: layout.$bp_med ) {
 		flex-direction: column;
 	}
 
