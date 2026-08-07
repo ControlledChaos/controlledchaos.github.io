@@ -1,7 +1,7 @@
 
 
 <ul class="post-gallery">
-{%- for file in site.static_files -%}{{ file.path }}
+{%- for file in site.static_files -%}{{ file.ext }}
 	{%- if file.ext == '.jpg' or file.ext == '.jpeg' or file.ext == '.JPG' or file.ext == '.JPEG' -%}
 
 		{%- assign file_parts = file.path | split: "/" -%}
