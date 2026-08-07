@@ -308,13 +308,15 @@
 .slick-arrow {
 	position: absolute;
 	z-index: 1000;
-	top: 50%;
+	top: 0;
+	bottom: 0;
+	width: 4rem;
 	padding: 0;
 	line-height: 1;
 	border: none;
 	color: #ffffff;
 	transition: opacity .25s;
-	opacity: 0.3625;
+	opacity: 0;
 
 	&:hover {
 		opacity: 1;
@@ -325,10 +327,10 @@
 	}
 
 	&.slick-prev {
-		left: 2rem;
+		left: 0;
 	}
 	&.slick-next {
-		right: 2rem;
+		right: 0;
 	}
 }
 
