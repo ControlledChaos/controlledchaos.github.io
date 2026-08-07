@@ -33,7 +33,7 @@
 {%- else -%}
 	{%- assign page_sidebar = site.page_sidebar -%}
 {%- endif -%}
-{%- assign keywords = site.data.keywords.keywords -%}
+{%- assign keywords = site.data.keywords.keywords | join: ", " -%}
 <!doctype html>
 <html xmlns:og="http://opengraphprotocol.org/schema/" class="no-js" lang="en_US" dir="ltr">
 {% include head.html -%}
