@@ -1,5 +1,6 @@
 ---
 order: 1
+avatar_width: "200px"
 ---
 Have you ever wanted to have a website built by a mule packer? Well today is your lucky day!
 
