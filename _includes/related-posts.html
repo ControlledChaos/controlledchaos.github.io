@@ -15,10 +15,7 @@
 
 {%- assign related_template = page.related_template | default: site.related_template | default: "post-card.html" -%}
 
-{%- comment %}<!-- Random related pages -->{% endcomment -%}
 {%- if related_by contains "random" -%}
-
-	{%- comment %}<!-- We might sample current page so select one more just in case -->{% endcomment -%}
 
 	{%- assign related_limit = related_limit | plus: 1 -%}
 	{%- if related_from == "posts" -%}
@@ -29,7 +26,6 @@
 
 	{%- assign related_limit = related_limit | minus: 1 -%}
 
-{%- comment %}<!-- Tag/category matching pages -->{% endcomment -%}
 {%- elsif related_by contains "categories" or related_by contains "tags" -%}
 
 	{%- assign related_posts = "" | split: " " -%}
@@ -84,47 +80,50 @@
 
 	{%- assign related_posts = related_posts | sample: related_limit -%}
 
-{%- comment %}<!-- Use site.related_posts for posts if found -->{% endcomment -%}
 {%- elsif site.related_posts.size > 0 -%}
 	{%- assign related_posts = site.related_posts -%}
 
-{%- comment %}<!-- Otherwise show recent posts if no site.related_posts -->{% endcomment -%}
-{%- else if related_by == "default" -%}
+{%- elsif related_by == "default" -%}
 	{%- assign related_posts = site.posts -%}
 {%- endif -%}
 
 {%- if related_limit > 0 and related_posts.size > 0 -%}
 
-<div class="content-loop-grid relateed-posts-grid">
+<section id="related-posts" class="post-section">
 
-{%- for post in related_posts limit:related_limit -%}
-	{%- if post.id == page.id -%}
-		{%- continue -%}
-	{%- endif -%}
+	<h2>Related Posts</h2>
 
-	{%- assign excerpt = post.subtitle | default: post.excerpt | truncatewords: 15, "…" -%}
+	<div class="content-loop-grid relateed-posts-grid">
 
-	{%- if post.post_image -%}
-		{%- assign image_dir = post.date | date: "posts/images/%Y/%m/" | append: post.slug | append: "/" -%}
-		{%- assign image_src = image_dir | append: post.post_image -%}
-	{%- else -%}
-		{%- assign image_src = "assets/img/site-image.jpg" -%}
-	{%- endif -%}
+	{%- for post in related_posts limit:related_limit -%}
+		{%- if post.id == page.id -%}
+			{%- continue -%}
+		{%- endif -%}
 
-	<article class="featured-post">
-		<a href="{{ post.url | relative_url }}">
-			<figure>
-				<img src="{{ image_src | relative_url }}" />
-				<figcaption>
-					<h3>{{ post.title }}</h3>
-					<p>{{ excerpt }}</p>
-				</figcaption>
-			</figure>
-		</a>
-	</article>
+		{%- assign excerpt = post.subtitle | default: post.excerpt | truncatewords: 15, "…" -%}
 
-{%- endfor -%}
+		{%- if post.post_image -%}
+			{%- assign image_dir = post.date | date: "posts/images/%Y/%m/" | append: post.slug | append: "/" -%}
+			{%- assign image_src = image_dir | append: post.post_image -%}
+		{%- else -%}
+			{%- assign image_src = "assets/img/site-image.jpg" -%}
+		{%- endif -%}
 
-</div>
+		<article class="featured-post">
+			<a href="{{ post.url | relative_url }}">
+				<figure>
+					<img src="{{ image_src | relative_url }}" />
+					<figcaption>
+						<h3>{{ post.title }}</h3>
+						<p>{{ excerpt }}</p>
+					</figcaption>
+				</figure>
+			</a>
+		</article>
+
+	{%- endfor -%}
+
+	</div>
+</section>
 
 {%- endif -%}
