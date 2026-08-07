@@ -1538,19 +1538,14 @@ figcaption {
   align-items: center;
   justify-content: center;
 }
-.post-page .post-cover img {
+.post-page .post-cover .post-image {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  display: block;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: center center;
-     object-position: center center;
 }
-.post-page .post-cover img:before {
+.post-page .post-cover .post-image:before {
   content: "";
   display: block;
   position: absolute;
@@ -1560,7 +1555,14 @@ figcaption {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.7);
 }
-.post-page .post-cover div {
+.post-page .post-cover img {
+  display: block;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center center;
+     object-position: center center;
+}
+.post-page .post-cover > div {
   position: relative;
   z-index: 100;
   display: flex;
