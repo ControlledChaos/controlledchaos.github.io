@@ -8,8 +8,6 @@
 		margin-top: var( --ccd-spacing--y );
 	}
 
-	.post-header {}
-
 	.post-title {
 		margin: 0;
 		line-height: 80%;
@@ -71,6 +69,8 @@
 	}
 
 	.post-footer {
+		margin-top: var( --ccd-spacing--y );
+
 		.post-cats,
 		.post-tags {
 			margin: 0;
@@ -86,6 +86,10 @@
 
 	.post-content {
 		margin-top: var( --ccd-spacing--y );
+
+		// Padding presumes first element has margin top of the same.
+		padding-top: calc( var( --ccd-spacing--y ) / 2 );
+		border-top: var( --ccd-box--border );
 	}
 
 	.post-nav-link {

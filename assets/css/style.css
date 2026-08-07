@@ -1577,6 +1577,9 @@ figcaption {
 .post-page .post-cover > div * {
   color: #ffffff !important;
 }
+.post-page .post-footer {
+  margin-top: var(--ccd-spacing--y);
+}
 .post-page .post-footer .post-cats,
 .post-page .post-footer .post-tags {
   margin: 0;
@@ -1589,6 +1592,8 @@ figcaption {
 }
 .post-page .post-content {
   margin-top: var(--ccd-spacing--y);
+  padding-top: calc(var(--ccd-spacing--y) / 2);
+  border-top: var(--ccd-box--border);
 }
 .post-page .post-nav-link {
   display: inline-flex;
