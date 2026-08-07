@@ -1588,10 +1588,7 @@ figcaption {
   gap: 0.5em;
 }
 .post-page .post-content {
-  grid-area: content;
   margin-top: var(--ccd-spacing--y);
-  padding-top: calc(var(--ccd-spacing--y) / 2);
-  border-top: var(--ccd-box--border);
 }
 .post-page .post-nav-link {
   display: inline-flex;
