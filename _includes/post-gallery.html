@@ -1,7 +1,10 @@
+
+
 <ul class="post-gallery">
 {%- for file in site.static_files -%}
 {%- if file.path contains include.folder -%}
 	{%- if file.ext == '.jpg' or file.ext == '.jpeg' or file.ext == '.JPG' or file.ext == '.JPEG' -%}
+	{{ file.path }}
 		{%- assign file_parts = file.path | split: "/" -%}
 		{%- assign filename = file_parts | last | replace: file.ext, "" -%}
 	<li>
