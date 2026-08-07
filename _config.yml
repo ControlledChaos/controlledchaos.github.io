@@ -1,11 +1,12 @@
 
+# Find more configuration in the `_data` directory.
+
 # Website settings
 url: "https://ccdzine.com"
 is_user_page: true
 is_project_page: false
 remote_theme: theme-ccdzine
 organization: "Controlled Chaos Design"
-keywords: "" # `<head>` uses array in `_data/keywords`
 language: "en_US"
 title: "Controlled Chaos Design"
 description: "Custom website design and build. Free products to build your own."
