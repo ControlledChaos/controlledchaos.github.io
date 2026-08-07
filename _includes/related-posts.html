@@ -95,7 +95,7 @@
 
 {%- if related_limit > 0 and related_posts.size > 0 -%}
 
-<div class="featured-posts-grid">
+<div class="content-loop-grid relateed-posts-grid">
 
 {%- for post in related_posts limit:related_limit -%}
 	{%- if post.id == page.id -%}
