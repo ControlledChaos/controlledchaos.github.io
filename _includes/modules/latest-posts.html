@@ -19,8 +19,7 @@
 		<a href="{{ post.url }}" class="module-latest-link">{{ post.title }}</a>
 		<time class="module-latest-date">{{ post.date | date: date_format }}</time>
 		{% for cat in post.category %}
-		<span class="inline-svg">{% include svg/folder.svg %}</span>
-		<span class="module-latest-cats">{{ cat }}</span>
+		<span class="inline-svg">{% include svg/folder.svg %}</span> <span class="module-latest-cats">{{ cat }}</span>
 		{%- endfor -%}
 	</li>
 {%- endfor -%}

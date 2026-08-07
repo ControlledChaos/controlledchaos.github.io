@@ -783,6 +783,7 @@ figcaption {
   display: inline-block;
 }
 .inline-svg svg {
+  display: inline-block;
   height: 1em;
 }
 

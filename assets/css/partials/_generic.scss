@@ -371,7 +371,9 @@ figcaption {
 
 .inline-svg {
 	display: inline-block;
+
 	svg {
+		display: inline-block;
 		height: 1em;
 	}
 }
