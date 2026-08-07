@@ -66,7 +66,7 @@
 
 			<div class="post-excerpt">
 				<p>{{- post.excerpt | strip_html | truncatewords: length, "…" -}}</p>
-				<p><a class="post-excerpt-link" href="{{ post.url | absolute_url }}" title="Read {{ post.title }}" data-tooltip>Read Post {% include svg/arrow-right.svg %}</a></p>
+				<p><a class="post-excerpt-link" href="{{ post.url | absolute_url }}" title="{{ post.title }}" data-tooltip>Read Post {% include svg/arrow-right.svg %}</a></p>
 			</div>
 		</div>
 	</article>
