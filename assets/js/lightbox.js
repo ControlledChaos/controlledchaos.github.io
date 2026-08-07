@@ -211,11 +211,11 @@
 
       // Arrows
       arrowLeft: '<button data-fancybox-prev class="fancybox-button fancybox-button--arrow_left" title="{{PREV}}">' +
-        '<div><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11.28 15.7l-1.34 1.37L5 12l4.94-5.07 1.34 1.38-2.68 2.72H19v1.94H8.6z"/></svg></div>' +
+        '<div><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><path d="M15.5 239c-9.4 9.4-9.4 24.6 0 33.9l160 160c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-143-143 143-143c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0L15.5 239z"/></svg></div>' +
         "</button>",
 
       arrowRight: '<button data-fancybox-next class="fancybox-button fancybox-button--arrow_right" title="{{NEXT}}">' +
-        '<div><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15.4 12.97l-2.68 2.72 1.34 1.38L19 12l-4.94-5.07-1.34 1.38 2.68 2.72H5v1.94z"/></svg></div>' +
+        '<div><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><path d="M241.5 239c9.4 9.4 9.4 24.6 0 33.9L81.5 433c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l143-143-143-143c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l160 160z"/></svg></div>' +
         "</button>",
 
       // This small close button will be appended to your html/inline/ajax content by default,
