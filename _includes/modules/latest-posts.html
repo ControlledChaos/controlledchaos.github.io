@@ -16,7 +16,7 @@
 <ul class="module-latest-list">
 {%- for post in posts limit: latest_limit -%}
 	<li class="module-latest-item">
-		<a href="{{ post.url }}" class="module-latest-link">{{ post.title }}</a>
+		<a href="{{ post.url }}" class="module-latest-link" title="{{ post.subtitle }}" data-tooltip>{{ post.title }}</a>
 		<time class="module-latest-date"><span class="inline-svg">{% include svg/clock.svg %}</span> {{ post.date | date: date_format }}</time>
 		{% for cat in post.category %}
 		<span class="module-latest-cats"><span class="inline-svg">{% include svg/folder.svg %}</span> {{ cat }}</span>
