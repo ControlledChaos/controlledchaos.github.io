@@ -393,6 +393,7 @@ corresponds to the arrow we want to display */
 
 // CCDzen theme.
 .tooltipster-sidetip.ccdzen .tooltipster-box {
+	max-width: 160px;
 	border-radius: 2px;
 	border: none;
 	background: colors.$theme_primary_dark;
