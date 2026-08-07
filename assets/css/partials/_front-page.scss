@@ -158,7 +158,7 @@
 	.fp-slidesNav ul li a span {
 		width: 6px;
 		height: 6px;
-		background: var( --ccd-color--theme--primary );
+		background: var( --ccd-color--theme--primary--dark );
 	}
 
 	#fp-nav ul li a.active span,
@@ -168,6 +168,13 @@
 		width: 12px;
 		height: 12px;
 		margin: -5px 0 0 -5px;
+	}
+
+	&.fp-viewing-footer {
+		#fp-nav ul li a span,
+		.fp-slidesNav ul li a span {
+			background: #ffffff;
+		}
 	}
 }
 
