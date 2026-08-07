@@ -62,11 +62,11 @@
 		}
 	}
 
-	@container page-container ( max-width: 640px ) {
+	@container page-container ( max-width: layout.$bp_sm ) {
 		display: var( --ccd-sidebar--bottom--tablet--display, var( --ccd-sidebar--bottom--display, var( --ccd-sidebar--display, block ) ) );
 	}
 
-	@media screen and ( max-width: 640px ) {
+	@media screen and ( max-width: layout.$bp_sm ) {
 		display: var( --ccd-sidebar--bottom--tablet--display, var( --ccd-sidebar--bottom--display, var( --ccd-sidebar--display, block ) ) );
 	}
 
@@ -148,6 +148,12 @@
 			margin-top: var( --ccd-spacing--y, 2rem );
 			padding-top: var( --ccd-spacing--y, 2rem );
 			border-top: var( --ccd-box--border );
+
+			@media screen and ( max-width: layout.$bp_med ) {
+				margin-top: 0;
+				padding-top: 0;
+				border-top: none;
+			}
 		}
 	}
 }

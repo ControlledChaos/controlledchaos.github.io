@@ -1830,7 +1830,7 @@ p + ul {
     color: var(--ccd-sidebar--bottom--text-color--dark, var(--ccd-sidebar--text-color--dark, inherit));
   }
 }
-@container page-container ( max-width: 640px ) {
+@container page-container ( max-width: layout.$bp_sm ) {
   .page-sidebar {
     display: var(--ccd-sidebar--bottom--tablet--display, var(--ccd-sidebar--bottom--display, var(--ccd-sidebar--display, block)));
   }
@@ -1920,6 +1920,13 @@ p + ul {
   margin-top: var(--ccd-spacing--y, 2rem);
   padding-top: var(--ccd-spacing--y, 2rem);
   border-top: var(--ccd-box--border);
+}
+@media screen and (max-width: 800px) {
+  .page-sidebar .module:not(:first-of-type) {
+    margin-top: 0;
+    padding-top: 0;
+    border-top: none;
+  }
 }
 
 .site-footer {
