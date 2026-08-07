@@ -18,43 +18,49 @@ layout: common
 
 <article class="main-article post-article">
 
-	{%- if page.title %}
-	<h2 class="page-title">{{ page.title }}</h2>
-	{% endif -%}
+	<header class="post-header">
+		{%- if page.title %}
+		<h2 class="page-title">{{ page.title }}</h2>
+		{% endif -%}
 
-	{%- if page.subtitle %}
-	<p class="page-subtitle">{{ page.subtitle }}</p>
-	{% endif -%}
+		{%- if page.subtitle %}
+		<p class="page-subtitle">{{ page.subtitle }}</p>
+		{% endif -%}
 
-	<figure class="post-image">
-		<a href="{{ image_src | absolute_url }}" data-fancybox>
-			<img src="{{ image_src | absolute_url }}" />
-		</a>
-	</figure>
+		<figure class="post-image">
+			<a href="{{ image_src | absolute_url }}" data-fancybox>
+				<img src="{{ image_src | absolute_url }}" />
+			</a>
+		</figure>
+	</header>
 
-	{{ content }}
-
-	{%- if page.category %}
-	<div class="post-cats">
-		<span class="post-cats-label">Category:</span>
-		<span class="post-cats-list">
-		{% for cat in page.category %}
-		<a href="{{ '/category' | absolute_url }}{{- cat | slugify -}}"> {{- cat -}} </a>
-		{%- endfor -%}
-		</span>
+	<div class="post-content">
+		{{ content }}
 	</div>
-	{%- endif %}
 
-	{%- if page.tags.size > 0 -%}
-	<div class="post-tags">
-		<span class="post-tags-label">Tags:</span>
-		<span class="post-tags-list">
-		{%- for tag in page.tags -%}
-		<a href="{{ '/tags' | relative_url }}#{{- tag -}}">{{- tag | capitalize -}}</a>
-		{%- endfor -%}
-		</span>
-	</div>
-	{%- endif -%}
+	<footer class="post-footer">
+		{%- if page.category %}
+		<div class="post-cats">
+			<span class="post-cats-label">Category:</span>
+			<span class="post-cats-list">
+			{% for cat in page.category %}
+			<a href="{{ '/category' | absolute_url }}{{- cat | slugify -}}"> {{- cat -}} </a>
+			{%- endfor -%}
+			</span>
+		</div>
+		{%- endif %}
+
+		{%- if page.tags.size > 0 -%}
+		<div class="post-tags">
+			<span class="post-tags-label">Tags:</span>
+			<span class="post-tags-list">
+			{%- for tag in page.tags -%}
+			<a href="{{ '/tags' | relative_url }}#{{- tag -}}">{{- tag | capitalize -}}</a>
+			{%- endfor -%}
+			</span>
+		</div>
+		{%- endif -%}
+	</footer>
 </article>
 
 {%- if page.post_gallery -%}
