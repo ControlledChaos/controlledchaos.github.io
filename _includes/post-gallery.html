@@ -1,11 +1,9 @@
-
-
 <ul class="post-gallery">
-{%- for file in site.static_files -%}{{ file.ext }}
-	{%- if file.ext == '.jpg' or file.ext == '.jpeg' or file.ext == '.JPG' or file.ext == '.JPEG' -%}
-
+{%- for file in site.static_files -%}
+{%- if file.path contains include.folder -%}
+	{%- if file.extname == '.jpg' or file.extname == '.jpeg' or file.extname == '.JPG' or file.extname == '.JPEG' -%}
 		{%- assign file_parts = file.path | split: "/" -%}
-		{%- assign filename = file_parts | last | replace: file.ext, "" -%}
+		{%- assign filename = file_parts | last | replace: file.extname, "" -%}
 	<li>
 		<figure>
 			<a href="{{ file.path | relative_url }}" title="{{ filename }}" data-fancybox="gallery-{{ page.slug }}">
@@ -15,5 +13,6 @@
 		</figure>
 	</li>
 	{%- endif -%}
+{%- endif -%}
 {%- endfor -%}
 </ul>
