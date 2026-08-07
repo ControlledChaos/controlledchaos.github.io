@@ -365,8 +365,8 @@ b, strong, optgroup {
 }
 
 :root {
-  --ccd-spacing--x: 2rem;
-  --ccd-spacing--y: 2rem;
+  --ccd-spacing--x: 3rem;
+  --ccd-spacing--y: 3rem;
   --ccd-wrap--general--max-width: 1280px;
   --ccd-wrap--general--margin: 0 auto;
   --ccd-wrap--general--padding: 0;
@@ -404,7 +404,7 @@ b, strong, optgroup {
   --ccd-body--line-height: 1.5;
   --ccd-overlay--bg-color: rgba(0, 0, 0, 0.575);
   --ccd-site-header--padding:
-  	calc( var( --ccd-spacing--y ) / 2 )
+  	calc( var( --ccd-spacing--y ) / 3 )
   	var( --ccd-spacing--x );
   --ccd-site-header--bg-color: #846f8b;
   --ccd-site-header--text-color: #ffffff;
