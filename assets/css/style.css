@@ -1522,7 +1522,7 @@ figcaption {
 .post-page .post-article {
   margin-top: var(--ccd-spacing--y);
   display: grid;
-  grid-template-areas: "header  cover cover" "footer  cover cover" "content content content";
+  grid-template-areas: "header cover cover" "footer cover cover" "...... cover cover" "content content content";
   gap: var(--ccd-spacing--y) var(--ccd-spacing--x);
 }
 .post-page .post-header {

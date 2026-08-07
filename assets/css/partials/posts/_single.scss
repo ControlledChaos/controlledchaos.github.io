@@ -8,8 +8,9 @@
 		margin-top: var( --ccd-spacing--y );
 		display: grid;
 		grid-template-areas:
-		"header  cover cover"
-		"footer  cover cover"
+		"header cover cover"
+		"footer cover cover"
+		"...... cover cover"
 		"content content content";
 		gap: var( --ccd-spacing--y ) var( --ccd-spacing--x );
 	}
