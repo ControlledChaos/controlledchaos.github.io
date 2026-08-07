@@ -1694,6 +1694,7 @@ figcaption {
 .modules-footer {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
 }
 
 .module.module-footer {
