@@ -1465,12 +1465,12 @@ figcaption {
 .entry-summary .post-tags-list a:not(:last-of-type):after {
   content: ",";
 }
-.entry-summary .post-excerpt svg {
+.entry-summary .post-excerpt-link {
+  font-size: 1.25em;
+}
+.entry-summary .post-excerpt-link svg {
   display: inline-block;
   height: 1.5em;
-}
-.entry-summary .post-excerpt .post-excerpt-link {
-  display: block;
 }
 
 .content-loop-grid {

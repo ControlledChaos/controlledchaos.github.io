@@ -84,13 +84,12 @@
 			}
 		}
 	}
-	.post-excerpt {
+	.post-excerpt-link {
+		font-size: 1.25em;
+
 		svg {
 			display: inline-block;
 			height: 1.5em;
-		}
-		.post-excerpt-link {
-			display: block;
 		}
 	}
 }

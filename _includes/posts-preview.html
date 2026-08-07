@@ -65,7 +65,8 @@
 			{%- assign word_count = post.excerpt | number_of_words -%}
 
 			<div class="post-excerpt">
-				<p>{{- post.excerpt | strip_html | truncatewords: length, "…" -}}<a class="post-excerpt-link" href="{{ post.url | absolute_url }}" title="Read {{ post.title }}" data-tooltip><span class="screen-reader-text">Read {{ post.title }}</span> {% include svg/arrow-right.svg %}</a></p>
+				<p>{{- post.excerpt | strip_html | truncatewords: length, "…" -}}</p>
+				<p><a class="post-excerpt-link" href="{{ post.url | absolute_url }}" title="Read {{ post.title }}" data-tooltip>Read Post {% include svg/arrow-right.svg %}</a></p>
 			</div>
 		</div>
 	</article>
