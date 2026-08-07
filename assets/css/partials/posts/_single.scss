@@ -10,7 +10,6 @@
 		grid-template-areas:
 		"header cover cover"
 		"footer cover cover"
-		"...... cover cover"
 		"content content content";
 		gap: var( --ccd-spacing--y ) var( --ccd-spacing--x );
 	}
