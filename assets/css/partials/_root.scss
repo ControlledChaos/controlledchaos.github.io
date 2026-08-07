@@ -65,7 +65,7 @@
 
 	// Site header.
 	--ccd-site-header--padding:
-		calc( var( --ccd-spacing--y ) / 3 )
+		calc( var( --ccd-spacing--y ) / 2 )
 		var( --ccd-spacing--x );
 	--ccd-site-header--bg-color: #{colors.$theme_primary};
 	--ccd-site-header--text-color: #{colors.$white};

@@ -16,7 +16,6 @@
 	height: 100%;
 	display: grid;
 	gap: 0 calc( var( --ccd-spacing--x ) * 0.75 );
-	grid-template-columns: 240px calc( 100% - 240px - 3rem );
 	grid-template-areas:
 		"thumb header  header"
 		"thumb summary summary";

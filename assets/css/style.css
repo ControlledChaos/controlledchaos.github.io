@@ -365,8 +365,8 @@ b, strong, optgroup {
 }
 
 :root {
-  --ccd-spacing--x: 3rem;
-  --ccd-spacing--y: 3rem;
+  --ccd-spacing--x: 2rem;
+  --ccd-spacing--y: 2rem;
   --ccd-wrap--general--max-width: 1280px;
   --ccd-wrap--general--margin: 0 auto;
   --ccd-wrap--general--padding: 0;
@@ -404,7 +404,7 @@ b, strong, optgroup {
   --ccd-body--line-height: 1.5;
   --ccd-overlay--bg-color: rgba(0, 0, 0, 0.575);
   --ccd-site-header--padding:
-  	calc( var( --ccd-spacing--y ) / 3 )
+  	calc( var( --ccd-spacing--y ) / 2 )
   	var( --ccd-spacing--x );
   --ccd-site-header--bg-color: #846f8b;
   --ccd-site-header--text-color: #ffffff;
@@ -1404,7 +1404,6 @@ figcaption {
   height: 100%;
   display: grid;
   gap: 0 calc(var(--ccd-spacing--x) * 0.75);
-  grid-template-columns: 240px calc(100% - 240px - 3rem);
   grid-template-areas: "thumb header  header" "thumb summary summary";
   margin-top: var(--ccd-spacing--x, 2rem);
   padding-top: var(--ccd-spacing--x, 2rem);
