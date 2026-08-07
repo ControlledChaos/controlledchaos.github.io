@@ -19,13 +19,16 @@ layout: common
 <article class="main-article post-article">
 
 	<header class="post-header">
-		{%- if page.title %}
-		<h2 class="page-title">{{ page.title }}</h2>
-		{% endif -%}
 
-		{%- if page.subtitle %}
-		<p class="page-subtitle">{{ page.subtitle }}</p>
-		{% endif -%}
+		<div class="post-headings">
+			{%- if page.title %}
+			<h2 class="page-title">{{ page.title }}</h2>
+			{% endif -%}
+
+			{%- if page.subtitle %}
+			<p class="page-subtitle">{{ page.subtitle }}</p>
+			{% endif -%}
+		</div>
 
 		<figure class="post-image">
 			<a href="{{ image_src | absolute_url }}" data-fancybox>
