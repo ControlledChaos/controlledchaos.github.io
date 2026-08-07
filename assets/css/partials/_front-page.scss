@@ -61,6 +61,7 @@
 		align-items: center;
 		margin-top: var( --ccd-spacing--y );
 		padding-top: var( --ccd-spacing--y );
+		padding-right: calc( var( --ccd-spacing--x ) / 2 );
 		border-top: var( --ccd-box--border );
 
 		@media screen and ( max-width: layout.$bp_med ) {
