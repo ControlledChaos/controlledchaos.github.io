@@ -6,17 +6,9 @@
 
 	.post-article {
 		margin-top: var( --ccd-spacing--y );
-		display: grid;
-		grid-template-areas:
-		"header cover cover"
-		"footer cover cover"
-		"content content content";
-		gap: var( --ccd-spacing--y ) var( --ccd-spacing--x );
 	}
 
-	.post-header {
-		grid-area: header;
-	}
+	.post-header {}
 
 	.post-title {
 		margin: 0;
@@ -29,7 +21,6 @@
 	}
 
 	.post-image {
-		grid-area: cover;
 		overflow: hidden;
 
 		img {
@@ -40,8 +31,6 @@
 	}
 
 	.post-footer {
-		grid-area: footer;
-
 		.post-cats,
 		.post-tags {
 			margin: 0;

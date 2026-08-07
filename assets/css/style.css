@@ -1521,12 +1521,6 @@ figcaption {
 
 .post-page .post-article {
   margin-top: var(--ccd-spacing--y);
-  display: grid;
-  grid-template-areas: "header cover cover" "footer cover cover" "content content content";
-  gap: var(--ccd-spacing--y) var(--ccd-spacing--x);
-}
-.post-page .post-header {
-  grid-area: header;
 }
 .post-page .post-title {
   margin: 0;
@@ -1537,7 +1531,6 @@ figcaption {
   line-height: 1.35;
 }
 .post-page .post-image {
-  grid-area: cover;
   overflow: hidden;
 }
 .post-page .post-image img {
@@ -1546,9 +1539,6 @@ figcaption {
      object-fit: cover;
   -o-object-position: center center;
      object-position: center center;
-}
-.post-page .post-footer {
-  grid-area: footer;
 }
 .post-page .post-footer .post-cats,
 .post-page .post-footer .post-tags {
