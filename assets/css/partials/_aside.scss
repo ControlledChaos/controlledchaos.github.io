@@ -79,7 +79,7 @@
 		font-weight: var( --ccd-sidebar--heading--font-weight, var( --ccd-heading-secondary--font-weight ) );
 		font-style: var( --ccd-sidebar--heading--font-style, var( --ccd-heading-secondary--font-style ) );
 		font-variant: var( --ccd-sidebar--heading--font-variant, var( --ccd-heading-secondary--font-variant ) );
-		line-height: var( --ccd-sidebar--heading--line-height, var( --ccd-heading-secondary--line-height ) );
+		line-height: var( --ccd-sidebar--heading--line-height, 80% );
 		letter-spacing: var( --ccd-sidebar--heading--letter-spacing, var( --ccd-heading-secondary--letter-spacing, -0.015em ) );
 		word-spacing: var( --ccd-sidebar--heading--word-spacing, var( --ccd-heading-secondary--word-spacing, -0.0325em ) );
 		text-decoration: var( --ccd-sidebar--heading--text-decoration, var( --ccd-heading-secondary--text-decoration ) );
@@ -146,7 +146,7 @@
 	.module {
 		&:not( :first-of-type ) {
 			margin-top: var( --ccd-spacing--y, 2rem );
-			padding-top: calc( var( --ccd-spacing--y, 2rem ) / 2 );
+			padding-top: var( --ccd-spacing--y, 2rem );
 			border-top: var( --ccd-box--border );
 		}
 	}
