@@ -301,7 +301,7 @@ corresponds to the arrow we want to display */
 }
 
 .tooltipster-sidetip.ccdzen .tooltipster-box {
-  max-width: 160px;
+  max-width: 180px;
   border-radius: 2px;
   border: none;
   background: #72577a;
