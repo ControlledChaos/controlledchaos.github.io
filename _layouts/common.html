@@ -40,7 +40,7 @@
 <body class="{{ body_class }}">
 <a class="skip-link screen-reader-text" href="#main-content">Skip to content</a>
 	{% include site-header.html -%}
-	{{ keywords | split: ", " }}
+	{{ keywords }}
 	<div class="page-container" itemscope="itemscope" itemtype="{{ page_type }}">
 		<div id='{{ page.name | slugify | remove_last: "-md" }}' class="page-wrap">
 			<main id="main-content" class="page-main" role="main" itemscope itemprop="mainContentOfPage">
