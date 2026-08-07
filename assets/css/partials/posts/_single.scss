@@ -5,6 +5,7 @@
 .post-page {
 
 	.post-article {
+		margin-top: var( --ccd-spacing--y );
 		display: grid;
 		grid-template-areas:
 		"header  cover cover"

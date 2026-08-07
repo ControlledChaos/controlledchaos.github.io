@@ -1001,6 +1001,7 @@ figcaption {
 }
 
 .page-title {
+  margin-top: var(--ccd-spacing--y);
   font-size: var(--ccd-page-title--font-size, var(--ccd-heading-primary--font-size, 2rem));
   font-weight: var(--ccd-page-title--font-weight, var(--ccd-heading-primary--font-weight, 700));
   letter-spacing: var(--ccd-page-title--letter-spacing, -0.0325em);
@@ -1519,6 +1520,7 @@ figcaption {
 }
 
 .post-page .post-article {
+  margin-top: var(--ccd-spacing--y);
   display: grid;
   grid-template-areas: "header  cover cover" "footer  cover cover" "content content content";
   gap: var(--ccd-spacing--y) var(--ccd-spacing--x);
