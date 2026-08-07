@@ -3,7 +3,21 @@
 ///
 
 .post-page {
+
+	.post-article {
+		display: grid;
+		grid-template-areas:
+		"header  cover cover"
+		"footer  cover cover"
+		"content content content";
+	}
+
+	.post-header {
+		grid-area: header;
+	}
+
 	.post-image {
+		grid-area: cover;
 		margin-top: var( --ccd-spacing--y, 2rem );
 		max-height: 600px;
 		overflow: hidden;
@@ -15,7 +29,8 @@
 		}
 	}
 
-	.post-tags {
+	.post-footer {
+		grid-area: footer;
 		margin-top: 1em;
 	}
 
@@ -24,6 +39,13 @@
 		display: inline-flex;
 		flex-wrap: wrap;
 		gap: 0.5em;
+	}
+
+	.post-content {
+		grid-area: content;
+		margin-top: var( --ccd-spacing--y );
+		padding-top: calc( var( --ccd-spacing--y ) / 2 );
+		border-top: var( --ccd-box--border );
 	}
 
 	.post-nav-link {

@@ -1518,7 +1518,15 @@ figcaption {
   }
 }
 
+.post-page .post-article {
+  display: grid;
+  grid-template-areas: "header  cover cover" "footer  cover cover" "content content content";
+}
+.post-page .post-header {
+  grid-area: header;
+}
 .post-page .post-image {
+  grid-area: cover;
   margin-top: var(--ccd-spacing--y, 2rem);
   max-height: 600px;
   overflow: hidden;
@@ -1530,7 +1538,8 @@ figcaption {
   -o-object-position: center center;
      object-position: center center;
 }
-.post-page .post-tags {
+.post-page .post-footer {
+  grid-area: footer;
   margin-top: 1em;
 }
 .post-page .post-cats-list,
@@ -1538,6 +1547,12 @@ figcaption {
   display: inline-flex;
   flex-wrap: wrap;
   gap: 0.5em;
+}
+.post-page .post-content {
+  grid-area: content;
+  margin-top: var(--ccd-spacing--y);
+  padding-top: calc(var(--ccd-spacing--y) / 2);
+  border-top: var(--ccd-box--border);
 }
 .post-page .post-nav-link {
   display: inline-flex;
