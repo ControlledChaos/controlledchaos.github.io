@@ -1415,6 +1415,7 @@ figcaption {
   grid-area: summary;
 }
 .entry-summary .post-meta {
+  margin-top: 0.5rem;
   font-family: var(--ccd-fonts--secondary-stack);
   font-size: 0.875em;
   line-height: 1.35;
