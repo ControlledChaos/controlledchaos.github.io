@@ -22,44 +22,44 @@ layout: common
 
 		<img src="{{ image_src | absolute_url }}" role="presentation" />
 
-		<header class="post-header">
+		<div>
+			<header class="post-header">
 
-			{%- if page.title -%}
-			<h2 class="page-title post-title">{{ page.title }}</h2>
-			{%- endif -%}
+				{%- if page.title -%}
+				<h2 class="page-title post-title">{{ page.title }}</h2>
+				{%- endif -%}
 
-			{%- if page.subtitle -%}
-			<p class="page-subtitle post-subtitle">{{ page.subtitle }}</p>
-			{%- endif -%}
+				{%- if page.subtitle -%}
+				<p class="page-subtitle post-subtitle">{{ page.subtitle }}</p>
+				{%- endif -%}
 
-		</header>
+			</header>
+			<footer class="post-footer">
 
-		<footer class="post-footer">
+				{%- if page.category -%}
+				<div class="post-cats">
+					<span class="post-cats-label">Category:</span>
+					<span class="post-cats-list">
+					{%- for cat in page.category -%}
+					<a href="{{ '/category' | absolute_url }}{{- cat | slugify -}}"> {{- cat -}} </a>
+					{%- endfor -%}
+					</span>
+				</div>
+				{%- endif %}
 
-			{%- if page.category -%}
-			<div class="post-cats">
-				<span class="post-cats-label">Category:</span>
-				<span class="post-cats-list">
-				{%- for cat in page.category -%}
-				<a href="{{ '/category' | absolute_url }}{{- cat | slugify -}}"> {{- cat -}} </a>
-				{%- endfor -%}
-				</span>
-			</div>
-			{%- endif %}
+				{%- if page.tags.size > 0 -%}
+				<div class="post-tags">
+					<span class="post-tags-label">Tags:</span>
+					<span class="post-tags-list">
+					{%- for tag in page.tags -%}
+					<a href="{{ '/tags' | relative_url }}#{{- tag -}}">{{- tag | capitalize -}}</a>
+					{%- endfor -%}
+					</span>
+				</div>
+				{%- endif -%}
 
-			{%- if page.tags.size > 0 -%}
-			<div class="post-tags">
-				<span class="post-tags-label">Tags:</span>
-				<span class="post-tags-list">
-				{%- for tag in page.tags -%}
-				<a href="{{ '/tags' | relative_url }}#{{- tag -}}">{{- tag | capitalize -}}</a>
-				{%- endfor -%}
-				</span>
-			</div>
-			{%- endif -%}
-
-		</footer>
-
+			</footer>
+		</div>
 	</section>
 
 	<div class="post-content">
