@@ -1521,11 +1521,13 @@ figcaption {
 .post-page .post-article {
   display: grid;
   grid-template-areas: "header  cover cover" "footer  cover cover" "content content content";
+  gap: var(--ccd-spacing--y) var(--ccd-spacing--x);
 }
 .post-page .post-header {
   grid-area: header;
 }
 .post-page .post-title {
+  margin: 0;
   line-height: 80%;
 }
 .post-page .post-subtitle {
@@ -1534,8 +1536,6 @@ figcaption {
 }
 .post-page .post-image {
   grid-area: cover;
-  margin-top: var(--ccd-spacing--y, 2rem);
-  max-height: 600px;
   overflow: hidden;
 }
 .post-page .post-image img {

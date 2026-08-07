@@ -41,27 +41,27 @@ layout: common
 	</div>
 
 	<footer class="post-footer">
-		{%- if page.category %}
+
+		{%- if page.category -%}
 		<div class="post-cats">
-			<span class="post-cats-label">Category:</span>
-			<span class="post-cats-list">
-			{% for cat in page.category %}
-			<a href="{{ '/category' | absolute_url }}{{- cat | slugify -}}"> {{- cat -}} </a>
-			{%- endfor -%}
-			</span>
+			<p>Category:
+				{%- for cat in page.category -%}
+				<a href="{{ '/category' | absolute_url }}{{- cat | slugify -}}"> {{- cat -}} </a>
+				{%- endfor -%}
+			</p>
 		</div>
 		{%- endif %}
 
 		{%- if page.tags.size > 0 -%}
 		<div class="post-tags">
-			<span class="post-tags-label">Tags:</span>
-			<span class="post-tags-list">
-			{%- for tag in page.tags -%}
-			<a href="{{ '/tags' | relative_url }}#{{- tag -}}">{{- tag | capitalize -}}</a>
-			{%- endfor -%}
-			</span>
+			<p>Tags:
+				{%- for tag in page.tags -%}
+				<a href="{{ '/tags' | relative_url }}#{{- tag -}}">{{- tag | capitalize -}}</a>
+				{%- endfor -%}
+			</p>
 		</div>
 		{%- endif -%}
+
 	</footer>
 </article>
 
