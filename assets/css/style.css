@@ -779,6 +779,13 @@ figcaption {
   text-align: center;
 }
 
+.inline-svg {
+  display: inline-block;
+}
+.inline-svg svg {
+  height: 1em;
+}
+
 .site-header {
   width: var(--ccd-site-header--width, 100%);
   margin: var(--ccd-site-header--margin, 0);
