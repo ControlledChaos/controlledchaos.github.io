@@ -1,0 +1,13 @@
+
+# Entries for the primary site navigation.
+site_nav:
+  - name: "Services"
+    url: "/services"
+  - name: "Projects"
+    url: "/projects"
+  - name: "Downloads"
+    url: "/downloads"
+  - name: "Posts"
+    url: "/posts"
+  - name: "Snippets"
+    url: "/snippets"

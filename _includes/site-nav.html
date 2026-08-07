@@ -1,7 +1,7 @@
 {%- assign current_url = page.url | default: '/' -%}
 {%- assign best_match_url = '' -%}
 {%- assign best_match_len = 0 -%}
-{%- assign site_nav = include.site-nav | default: site.site_nav | default: nil -%}
+{%- assign site_nav = include.site-nav | default: site.data.site_nav.site_nav | default: nil -%}
 {%- if site_nav == nil -%}
 	{%- assign site_nav = "" | split: " " -%}
 {%- endif -%}

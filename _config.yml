@@ -21,25 +21,6 @@ site_thumb: "site-thumb.jpg"
 timezone: "America/Los_Angeles"
 markdown: kramdown
 permalink: pretty
-owner:
-  name: "Greg Sweet"
-  email: "greg@ccdzine.com"
-  phone: "1-559-769-7600"
-  avatar:
-    file: "avatar-greg.jpg" # In assets/img
-    alt: "Greg Sweet's avatar depicting the Bob's Big Boy mascot"
-    caption: "Artist's rendition of Greg"
-  links:
-    - name: "Email: greg@ccdzine.com"
-      url:  "mailto:greg@ccdzine.com"
-    - name: "Phone: (559) 769-7600"
-      url:  "tel:15597697600"
-    - name: "GitHub Repositories"
-      url:  "https://github.com/ControlledChaos"
-    - name: "Bludiot Products"
-      url:  "https://bludiot.github.io/"
-    - name: "CodePen Profile"
-      url:  "https://codepen.io/ControlledChaos/"
 
 # General
 body_class: "default-page"
@@ -98,19 +79,6 @@ defaults:
       page_image: false # Fallback in templates.
       page_thumb: false # Fallback in templates.
 
-# Primary navigation entries
-site_nav:
-  - name: "Services"
-    url: "/services"
-  - name: "Projects"
-    url: "/projects"
-  - name: "Downloads"
-    url: "/downloads"
-  - name: "Posts"
-    url: "/posts"
-  - name: "Snippets"
-    url: "/snippets"
-
 # Blog pages
 blog_view: "preview" # preview, grid, or full
 blog_path: "/posts/"
@@ -121,25 +89,6 @@ category_layout: category_index.html
 tag_page_layout: tags
 tag_page_dir: tags
 related_by: "tags or categories"
-
-# Page links module
-page_links:
-  - name: "Meet Greg"
-    url: "/about"
-  - name: "Contact Greg"
-    url: "/contact"
-  - name: "Skills & Services"
-    url: "/services"
-  - name: "View Projects"
-    url: "/projects"
-  - name: "Get Downloads"
-    url: "/downloads"
-  - name: "Get Snippets"
-    url: "/snippets"
-  - name: "Read Posts"
-    url: "/posts"
-  - name: "Privacy Info"
-    url: "/privacy"
 
 # Footer content
 final_message: "CCDzine | No copyright. No synths!"

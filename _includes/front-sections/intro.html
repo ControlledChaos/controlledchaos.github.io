@@ -1,7 +1,7 @@
 {%- assign intro = include.section -%}
-{%- assign avatar_file    = page.avatar_image | default: site.owner.avatar.file -%}
-{%- assign avatar_alt     = page.avatar_alt | default: site.owner.avatar.alt -%}
-{%- assign avatar_caption = page.avatar_caption | default: site.owner.avatar.caption -%}
+{%- assign avatar_file    = page.avatar_image | default: site.data.owner.owner.avatar.file -%}
+{%- assign avatar_alt     = page.avatar_alt | default: site.data.owner.owner.avatar.alt -%}
+{%- assign avatar_caption = page.avatar_caption | default: site.data.owner.owner.avatar.caption -%}
 {%- assign avatar_width   = page.avatar_width | default: "160px" -%}
 {%- assign avatar_style   = avatar_width | prepend: "style='min-width: " | append: "'" -%}
 

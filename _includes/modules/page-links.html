@@ -2,7 +2,7 @@
 {%- assign current_url = page.url | default: '/' -%}
 {%- assign best_match_url = '' -%}
 {%- assign best_match_len = 0 -%}
-{%- assign page_links = site.page_links | default: nil -%}
+{%- assign page_links = site.data.page_links.page_links | default: nil -%}
 {%- if page_links == nil -%}
 	{%- assign page_links = "" | split: " " -%}
 {%- endif -%}
