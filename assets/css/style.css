@@ -1563,6 +1563,11 @@ figcaption {
 .post-page .post-cover div {
   position: relative;
   z-index: 100;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--ccd-spacing--y) var(--ccd-spacing--x);
   padding: var(--ccd-spacing--y) var(--ccd-spacing--x);
 }
 .post-page .post-footer .post-cats,
