@@ -20,22 +20,21 @@ layout: common
 
 	<header class="post-header">
 
-		<div class="post-headings">
-			{%- if page.title %}
-			<h2 class="page-title">{{ page.title }}</h2>
-			{% endif -%}
+		{%- if page.title %}
+		<h2 class="page-title post-title">{{ page.title }}</h2>
+		{% endif -%}
 
-			{%- if page.subtitle %}
-			<p class="page-subtitle">{{ page.subtitle }}</p>
-			{% endif -%}
-		</div>
+		{%- if page.subtitle %}
+		<p class="page-subtitle post-subtitle">{{ page.subtitle }}</p>
+		{% endif -%}
 
-		<figure class="post-image">
-			<a href="{{ image_src | absolute_url }}" data-fancybox>
-				<img src="{{ image_src | absolute_url }}" />
-			</a>
-		</figure>
 	</header>
+
+	<figure class="post-image">
+		<a href="{{ image_src | absolute_url }}" data-fancybox>
+			<img src="{{ image_src | absolute_url }}" />
+		</a>
+	</figure>
 
 	<div class="post-content">
 		{{ content }}

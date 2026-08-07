@@ -16,6 +16,15 @@
 		grid-area: header;
 	}
 
+	.post-title {
+		line-height: 80%;
+	}
+
+	.post-subtitle {
+		margin-top: 1rem;
+		line-height: 1.35;
+	}
+
 	.post-image {
 		grid-area: cover;
 		margin-top: var( --ccd-spacing--y, 2rem );
