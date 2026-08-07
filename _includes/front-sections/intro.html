@@ -1,9 +1,9 @@
-{%- assign intro = include.section -%}
-{%- assign avatar_file    = intro.avatar_image | default: site.data.owner.owner.avatar.file -%}
-{%- assign avatar_alt     = intro.avatar_alt | default: site.data.owner.owner.avatar.alt -%}
-{%- assign avatar_caption = intro.avatar_caption | default: site.data.owner.owner.avatar.caption -%}
-{%- assign avatar_width   = intro.avatar_width | default: "160px" -%}
-{%- assign avatar_style   = avatar_width | prepend: "style='min-width: " | append: "'" -%}
+{%- assign intro   = include.section -%}
+{%- assign file    = intro.avatar_image | default: site.data.owner.owner.avatar.file -%}
+{%- assign alt     = intro.avatar_alt | default: site.data.owner.owner.avatar.alt -%}
+{%- assign caption = intro.avatar_caption | default: site.data.owner.owner.avatar.caption -%}
+{%- assign width   = intro.avatar_width | default: "160px" -%}
+{%- assign style   = width | prepend: 'style="min-width: ' | append: '"' -%}
 
 <section id="section-intro" data-anchor="intro" class="front-page-section fp-auto-height-responsive">
 
@@ -19,12 +19,11 @@
 		</header>
 
 		<div class="layout columns responsive front-intro-columns">
-			<!-- Avatar from Jekyll variables in the site `index.html` file, defaults from Liquid variables in `posts.html` layout. -->
-			<figure class="captioned-image front-intro-avatar" {{ avatar_style }}>
-				<a href='{{ avatar_file | prepend: "assets/img/" | absolute_url }}' data-fancybox data-caption="{{ avatar_caption }}">
-					<img src='{{ avatar_file | prepend: "assets/img/" | absolute_url }}' alt="{{ avatar_alt }}" class="avatar" />
+			<figure class="captioned-image front-intro-avatar" {{ style }}>
+				<a href='{{ file | prepend: "assets/img/" | absolute_url }}' data-fancybox data-caption="{{ caption }}">
+					<img src='{{ file | prepend: "assets/img/" | absolute_url }}' alt="{{ alt }}" class="avatar" />
 				</a>
-				<figcaption>{{ avatar_caption }}</figcaption>
+				<figcaption>{{ caption }}</figcaption>
 			</figure>
 			<div class="front-intro-content">
 				{{ intro.content }}
