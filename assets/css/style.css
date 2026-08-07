@@ -1613,13 +1613,12 @@ figcaption {
 
 .post-gallery {
   list-style: none;
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 0.25rem;
 }
 .post-gallery figure {
-  width: 180px;
-  height: 180px;
+  height: 160px;
   overflow: hidden;
 }
 .post-gallery figcaption {
