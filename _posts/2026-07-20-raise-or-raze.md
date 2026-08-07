@@ -1,5 +1,5 @@
 ---
-title: "To Raise or Not to Raze"
+title: "To Raise or To Raze"
 subtitle: "Difficulties and advancements in building this website."
 post_image: "amish-barn.jpg"
 post_gallery: "Image Gallery"
