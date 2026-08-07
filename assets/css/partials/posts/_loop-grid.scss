@@ -10,7 +10,7 @@
 	grid-template-columns: repeat( 3, 1fr );
 	gap: 0.25rem;
 
-	@media screen and ( max-width: 640px ) {
+	@media screen and ( max-width: layout.$bp_sm ) {
 		grid-template-columns: repeat( 1, 1fr );
 	}
 
@@ -58,7 +58,7 @@
 			font-size: clamp( 1.125rem, 2.75vw, 1.5rem );
 			line-height: 1;
 
-			@media screen and ( max-width: 640px ) {
+			@media screen and ( max-width: layout.$bp_sm ) {
 				font-size: clamp( 1.125rem, 5vw, 1.5rem );
 			}
 		}
