@@ -1523,6 +1523,9 @@ figcaption {
 .post-page .post-article {
   margin-top: var(--ccd-spacing--y);
 }
+.post-page .post-header {
+  text-align: center;
+}
 .post-page .post-title {
   margin: 0;
   line-height: 80%;
