@@ -388,7 +388,7 @@ b, strong, optgroup {
   --ccd-display--font-family: Crimson Pro, Palatino Linotype, Palatino, Palladio, URW Palladio L, Book Antiqua, Baskerville, Bookman Old Style, Bitstream Charter, Nimbus Roman No9 L, Garamond, Apple Garamond, ITC Garamond Narrow, New Century Schoolbook, Century Schoolbook, Century Schoolbook L, Georgia, serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
   --ccd-display--font-weight: 600;
   --ccd-display--letter-spacing: normal;
-  --ccd-text-shadow: 0.05em 0.05em 0.05em rgba(0, 0, 0, 0.625);
+  --ccd-text-shadow: 0.05em 0.05em 0.05em rgba(0, 0, 0, 0.575);
   --ccd-link--text-color: #9fb653;
   --ccd-link--text-color--dark: #b0c572;
   --ccd-link--action--text-color: #b0c572;
@@ -402,6 +402,7 @@ b, strong, optgroup {
   --ccd-body--font-family: Red Hat Display, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen-Sans, Ubuntu, Cantarell, Helvetica Neue, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
   --ccd-body--font-size: 1rem;
   --ccd-body--line-height: 1.5;
+  --ccd-overlay--bg-color: rgba(0, 0, 0, 0.625);
   --ccd-site-header--padding:
   	calc( var( --ccd-spacing--y ) / 2 )
   	var( --ccd-spacing--x );
@@ -1220,7 +1221,7 @@ figcaption {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.625);
+  background-color: var(--ccd-overlay--bg-color);
 }
 
 .intro-slide-image {
@@ -1487,7 +1488,7 @@ figcaption {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: var(--ccd-overlay--bg-color);
   color: #ffffff;
 }
 .content-loop-grid .featured-post figure:hover img {
@@ -1537,6 +1538,7 @@ figcaption {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  min-height: 360px;
 }
 .post-page .post-cover .post-image {
   position: absolute;
@@ -1553,7 +1555,7 @@ figcaption {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: var(--ccd-overlay--bg-color);
 }
 .post-page .post-cover img {
   display: block;
@@ -1571,6 +1573,9 @@ figcaption {
   justify-content: center;
   gap: var(--ccd-spacing--y) var(--ccd-spacing--x);
   padding: var(--ccd-spacing--y) var(--ccd-spacing--x);
+}
+.post-page .post-cover > div * {
+  color: #ffffff !important;
 }
 .post-page .post-footer .post-cats,
 .post-page .post-footer .post-tags {

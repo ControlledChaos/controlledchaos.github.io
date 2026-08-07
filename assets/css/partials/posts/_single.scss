@@ -27,6 +27,7 @@
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
+		min-height: 360px;
 
 		.post-image {
 			position: absolute;
@@ -43,7 +44,7 @@
 				left: 0;
 				width: 100%;
 				height: 100%;
-				background-color: rgba( $color: black, $alpha: 0.7 );
+				background-color: var( --ccd-overlay--bg-color );
 			}
 		}
 
@@ -62,6 +63,10 @@
 			justify-content: center;
 			gap: var( --ccd-spacing--y ) var( --ccd-spacing--x );
 			padding: var( --ccd-spacing--y ) var( --ccd-spacing--x );
+
+			* {
+				color: #ffffff !important;
+			}
 		}
 	}
 
