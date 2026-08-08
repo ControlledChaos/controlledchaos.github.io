@@ -22,7 +22,7 @@
 			45deg,
 			colors.$theme_primary 0%,
 			colors.$theme_primary 40%,
-			color.adjust( $color: colors.$theme_primary_dark, $lightness: -5% ) 100%
+			color.adjust( $color: colors.$theme_primary_dark, $lightness: -7% ) 100%
 		);
 
 		@media screen and ( max-width: layout.$bp_med ) {
