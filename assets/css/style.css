@@ -1713,6 +1713,11 @@ figcaption {
   display: flex;
   flex-wrap: wrap;
 }
+@media screen and (max-width: 800px) {
+  .modules-footer {
+    flex-direction: column;
+  }
+}
 
 .module.module-footer {
   min-width: 320px;
