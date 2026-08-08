@@ -24,6 +24,7 @@
 	.site-info {
 		position: relative;
 		z-index: 10;
+		height: 100%;
 		padding:
 			var( --ccd-site-info--padding-y, calc( var( --ccd-spacing--y ) / 2 ) )
 			var( --ccd-site-info--padding-x, var( --ccd-spacing--x ) )

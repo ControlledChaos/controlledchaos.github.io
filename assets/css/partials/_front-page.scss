@@ -149,6 +149,7 @@
 		}
 	}
 
+	// Dots up/down navigation.
 	&.fp-viewing-slides {
 		#fp-nav {
 			transform: translateX( 9999px );
@@ -168,7 +169,6 @@
 	.fp-slidesNav ul li:hover a.active span {
 		width: 12px;
 		height: 12px;
-		margin: -5px 0 0 -5px;
 	}
 
 	&.fp-viewing-footer {
