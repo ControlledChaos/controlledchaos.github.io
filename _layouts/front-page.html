@@ -78,9 +78,11 @@ jQuery(document).ready( function($) {
 			// Conditional header classes.
 			if ( origin.index == 0 && direction =='down' ) {
 				$( '.site-header' ).removeClass( 'header-alt-tp' ).addClass( 'header-scrolled' );
+				$( '.header-wrap' ).removeClass( 'no-bg' )
 			}
 			if ( destination.index == 0 ) {
 				$( '.site-header' ).removeClass( 'header-scrolled' ).addClass( 'header-alt-tp' );
+				$( '.header-wrap' ).addClass( 'no-bg' );
 			}
 			if ( destination.index == 4 ) {
 				$( '.site-header' ).addClass( 'header-alt-01' );

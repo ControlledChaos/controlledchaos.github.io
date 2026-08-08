@@ -795,7 +795,7 @@ figcaption {
   background-color: var(--ccd-site-header--bg-color, inherit);
   color: var(--ccd-site-header--text-color, inherit);
 }
-.site-header .general-wrap {
+.site-header .header-wrap {
   padding: var(--ccd-site-header--padding, 2rem);
   display: flex;
   justify-content: space-between;
@@ -804,9 +804,12 @@ figcaption {
   background-image: linear-gradient(45deg, #846f8b 0%, #846f8b 40%, rgb(94.5272727273, 72.1392344498, 101.1607655502) 100%);
 }
 @media screen and (max-width: 800px) {
-  .site-header .general-wrap {
+  .site-header .header-wrap {
     flex-direction: column;
   }
+}
+.site-header .header-wrap.no-bg {
+  background-image: none;
 }
 
 .js .front-page .site-header {
@@ -824,6 +827,9 @@ figcaption {
 .js .front-page .site-header.header-alt-01 {
   background-color: #ffffff;
   color: var(--ccd-color--theme--primary);
+  transition: all 350ms;
+}
+.js .front-page .header-wrap {
   transition: all 350ms;
 }
 
