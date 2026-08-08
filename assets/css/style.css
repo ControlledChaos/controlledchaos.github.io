@@ -2015,7 +2015,6 @@ p + ul {
 }
 @media screen and (max-width: 800px) {
   .page-sidebar .module:not(:first-of-type) {
-    margin-top: 0;
     padding-top: 0;
     border-top: none;
   }

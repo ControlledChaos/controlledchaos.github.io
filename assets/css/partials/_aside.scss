@@ -150,7 +150,6 @@
 			border-top: var( --ccd-box--border );
 
 			@media screen and ( max-width: layout.$bp_med ) {
-				margin-top: 0;
 				padding-top: 0;
 				border-top: none;
 			}
