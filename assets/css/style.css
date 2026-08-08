@@ -1177,6 +1177,7 @@ figcaption {
 .custom-scroll .fp-slidesNav ul li:hover a.active span {
   width: 12px;
   height: 12px;
+  margin: -6px 0 0 -6px;
 }
 .custom-scroll.fp-viewing-footer #fp-nav ul li a span,
 .custom-scroll.fp-viewing-footer .fp-slidesNav ul li a span {
