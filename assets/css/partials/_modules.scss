@@ -9,7 +9,6 @@
 	margin: 0;
 	display: flex;
 	flex-wrap: wrap;
-	align-items: center;
 
 	@media screen and ( max-width: layout.$bp_med ) {
 		flex-direction: column;

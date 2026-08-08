@@ -1743,7 +1743,6 @@ figcaption {
   margin: 0;
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
 }
 @media screen and (max-width: 800px) {
   .modules-footer {
