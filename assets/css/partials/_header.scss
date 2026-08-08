@@ -21,7 +21,7 @@
 		justify-content: space-between;
 		align-items: center;
 		gap: calc( var( --ccd-spacing--y ) / 4 ) var( --ccd-spacing--x );
-		background-image: linear-gradient( to right, #846f8b 0%, #72577a 100% );
+		background-image: linear-gradient( to right, rgba( $color: colors.$theme_primary, $alpha: 0.7 ) 0%, rgba( $color: colors.$theme_primary_dark, $alpha: 0.7 ) 100% );
 
 		@media screen and ( max-width: layout.$bp_med ) {
 			flex-direction: column;
