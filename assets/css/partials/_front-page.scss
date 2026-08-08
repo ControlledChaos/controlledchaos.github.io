@@ -163,6 +163,11 @@
 		background: var( --ccd-color--theme--primary--dark );
 	}
 
+	#fp-nav ul li:hover a span,
+	.fp-slidesNav ul li:hover a span {
+		margin: -3px 0px 0px -3px;
+	}
+
 	#fp-nav ul li a.active span,
 	.fp-slidesNav ul li a.active span,
 	#fp-nav ul li:hover a.active span,

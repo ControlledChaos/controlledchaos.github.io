@@ -792,15 +792,20 @@ figcaption {
 .site-header {
   width: var(--ccd-site-header--width, 100%);
   margin: var(--ccd-site-header--margin, 0);
-  padding: var(--ccd-site-header--padding, 2rem);
   background-color: var(--ccd-site-header--bg-color, inherit);
+  background-image: url("assets/img/header-bg.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
   color: var(--ccd-site-header--text-color, inherit);
 }
 .site-header .general-wrap {
+  padding: var(--ccd-site-header--padding, 2rem);
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: calc(var(--ccd-spacing--y) / 4) var(--ccd-spacing--x);
+  background-image: linear-gradient(to right, #846f8b 0%, #72577a 100%);
 }
 @media screen and (max-width: 800px) {
   .site-header .general-wrap {
@@ -1170,6 +1175,10 @@ figcaption {
   width: 6px;
   height: 6px;
   background: var(--ccd-color--theme--primary--dark);
+}
+.custom-scroll #fp-nav ul li:hover a span,
+.custom-scroll .fp-slidesNav ul li:hover a span {
+  margin: -3px 0px 0px -3px;
 }
 .custom-scroll #fp-nav ul li a.active span,
 .custom-scroll .fp-slidesNav ul li a.active span,
