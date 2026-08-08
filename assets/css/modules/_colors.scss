@@ -37,7 +37,7 @@ $theme_secondary_dark:  #7c9419 !default;
 // Color types.
 $body_color:      $white !default;
 $body_color_dark: $near_black !default;
-$text_color:      color.adjust($color: $theme_primary_dark, $lightness: -5%) !default;
+$text_color:      color.adjust( $color: $theme_primary_dark, $lightness: -5% ) !default;
 $text_color_dark: $off_white !default;
 
 ///

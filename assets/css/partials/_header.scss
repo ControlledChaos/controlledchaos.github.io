@@ -2,6 +2,7 @@
 /// Site header styles
 ///
 
+@use 'sass:color';
 @use '../modules/colors';
 @use '../modules/layout';
 
@@ -17,7 +18,12 @@
 		justify-content: space-between;
 		align-items: center;
 		gap: calc( var( --ccd-spacing--y ) / 4 ) var( --ccd-spacing--x );
-		background-image: linear-gradient( 60deg, colors.$theme_primary_light 0%, colors.$theme_primary 40%, colors.$theme_primary_dark 100% );
+		background-image: linear-gradient(
+			60deg,
+			colors.$theme_primary_light 0%,
+			colors.$theme_primary 40%,
+			color.adjust( $color: colors.$theme_primary_dark, $lightness: -5% ) 100%
+		);
 
 		@media screen and ( max-width: layout.$bp_med ) {
 			flex-direction: column;
