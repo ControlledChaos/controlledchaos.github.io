@@ -793,10 +793,6 @@ figcaption {
   width: var(--ccd-site-header--width, 100%);
   margin: var(--ccd-site-header--margin, 0);
   background-color: var(--ccd-site-header--bg-color, inherit);
-  background-image: url("ccdzine.com/assets/img/header-bg.jpg");
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
   color: var(--ccd-site-header--text-color, inherit);
 }
 .site-header .general-wrap {
@@ -805,7 +801,7 @@ figcaption {
   justify-content: space-between;
   align-items: center;
   gap: calc(var(--ccd-spacing--y) / 4) var(--ccd-spacing--x);
-  background-image: linear-gradient(to right, rgba(132, 111, 139, 0.7) 0%, rgba(114, 87, 122, 0.7) 100%);
+  background-image: linear-gradient(to right, #846f8b 0%, #72577a 100%);
 }
 @media screen and (max-width: 800px) {
   .site-header .general-wrap {
