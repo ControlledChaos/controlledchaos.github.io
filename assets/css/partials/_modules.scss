@@ -75,13 +75,13 @@
 
 // Owner module.
 .owner-avatar { // The `<figure>` element.
-	width: 80px;
-	min-width: 80px;
+	width: var( --ccd-owner-avatar--size );
+	min-width: var( --ccd-owner-avatar--size );
 
 	a {
 		display: block;
-		width: 80px;
-		height: 80px;
+		width: var( --ccd-owner-avatar--size );
+		height: var( --ccd-owner-avatar--size );
 	}
 	img {
 		display: block;
@@ -114,6 +114,10 @@ p + ul {
 	display: flex;
 	gap: calc( var( --ccd-spacing--x ) / 2 );
 	margin-top: calc( var( --ccd-spacing--y ) / 2 );
+
+	@media screen and ( max-width: layout.$bp_med ) {
+		flex-direction: column;
+	}
 }
 
 .module-aside {

@@ -81,4 +81,10 @@
 	@media screen and ( max-width: layout.$bp_med ) {
 		--ccd-front-intro--avatar--size: 320px;
 	}
+
+	// Modules.
+	--ccd-owner-avatar--size: 80px;
+	@media screen and ( max-width: layout.$bp_med ) {
+		--ccd-owner-avatar--size: 160px;
+	}
 }

@@ -419,6 +419,14 @@ b, strong, optgroup {
     --ccd-front-intro--avatar--size: 320px;
   }
 }
+:root {
+  --ccd-owner-avatar--size: 80px;
+}
+@media screen and (max-width: 800px) {
+  :root {
+    --ccd-owner-avatar--size: 160px;
+  }
+}
 
 body {
   display: var(--ccd-body--display, flex);
@@ -1752,13 +1760,13 @@ figcaption {
 }
 
 .owner-avatar {
-  width: 80px;
-  min-width: 80px;
+  width: var(--ccd-owner-avatar--size);
+  min-width: var(--ccd-owner-avatar--size);
 }
 .owner-avatar a {
   display: block;
-  width: 80px;
-  height: 80px;
+  width: var(--ccd-owner-avatar--size);
+  height: var(--ccd-owner-avatar--size);
 }
 .owner-avatar img {
   display: block;
@@ -1790,6 +1798,11 @@ p + ul {
   display: flex;
   gap: calc(var(--ccd-spacing--x) / 2);
   margin-top: calc(var(--ccd-spacing--y) / 2);
+}
+@media screen and (max-width: 800px) {
+  .owner-module-wrap {
+    flex-direction: column;
+  }
 }
 
 .module-aside .owner-module-wrap {
