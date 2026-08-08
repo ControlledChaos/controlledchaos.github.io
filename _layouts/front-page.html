@@ -87,9 +87,11 @@ jQuery(document).ready( function($) {
 			}
 			if ( destination.index == 4 ) {
 				$( '.site-header' ).addClass( 'header-alt-01' );
+				$( '.header-wrap' ).addClass( 'header-alt-tp' );
 			}
 			if ( origin.index == 4 && direction =='up' ) {
 				$( '.site-header' ).removeClass( 'header-alt-01' );
+				$( '.header-wrap' ).removeClass( 'header-alt-tp' );
 			}
 		},
 		afterResponsive: function( isResponsive ) {
