@@ -28,8 +28,9 @@
 // Various jQuery scripts on document ready.
 jQuery(document).ready( function($) {
 
-	// Start with header class for slider.
+	// Start with header classes for slider.
 	$( '.site-header' ).addClass( 'header-alt-tp' );
+	$( '.header-wrap' ).addClass( 'header-alt-tp' );
 
 	// FullPage navigation & presentation of sections.
 	$( '#front-page-sections' ).fullpage({
@@ -78,11 +79,11 @@ jQuery(document).ready( function($) {
 			// Conditional header classes.
 			if ( origin.index == 0 && direction =='down' ) {
 				$( '.site-header' ).removeClass( 'header-alt-tp' ).addClass( 'header-scrolled' );
-				$( '.header-wrap' ).removeClass( 'no-bg' )
+				$( '.header-wrap' ).removeClass( 'header-alt-tp' )
 			}
 			if ( destination.index == 0 ) {
 				$( '.site-header' ).removeClass( 'header-scrolled' ).addClass( 'header-alt-tp' );
-				$( '.header-wrap' ).addClass( 'no-bg' );
+				$( '.header-wrap' ).addClass( 'header-alt-tp' );
 			}
 			if ( destination.index == 4 ) {
 				$( '.site-header' ).addClass( 'header-alt-01' );

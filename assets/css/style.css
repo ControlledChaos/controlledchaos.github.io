@@ -808,9 +808,6 @@ figcaption {
     flex-direction: column;
   }
 }
-.site-header .header-wrap.no-bg {
-  background-image: none;
-}
 
 .js .front-page .site-header {
   width: 100% !important;
@@ -829,7 +826,8 @@ figcaption {
   color: var(--ccd-color--theme--primary);
   transition: all 350ms;
 }
-.js .front-page .header-wrap {
+.js .front-page .header-wrap.header-alt-tp {
+  background-image: none;
   transition: all 350ms;
 }
 

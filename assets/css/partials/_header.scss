@@ -28,10 +28,6 @@
 		@media screen and ( max-width: layout.$bp_med ) {
 			flex-direction: column;
 		}
-
-		&.no-bg {
-			background-image: none;
-		}
 	}
 }
 
@@ -57,7 +53,10 @@
 		}
 	}
 	.header-wrap {
-		transition: all 350ms;
+		&.header-alt-tp {
+			background-image: none;
+			transition: all 350ms;
+		}
 	}
 }
 
