@@ -402,7 +402,7 @@ b, strong, optgroup {
   --ccd-body--font-family: Red Hat Display, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen-Sans, Ubuntu, Cantarell, Helvetica Neue, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
   --ccd-body--font-size: 1rem;
   --ccd-body--line-height: 1.5;
-  --ccd-overlay--bg-color: rgba(0, 0, 0, 0.575);
+  --ccd-overlay--bg-color: rgba(0, 0, 0, 0.5);
   --ccd-site-header--padding:
   	calc( var( --ccd-spacing--y ) / 2 )
   	var( --ccd-spacing--x );
