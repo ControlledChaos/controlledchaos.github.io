@@ -1420,6 +1420,7 @@ figcaption {
   max-width: 100%;
   height: 100%;
   display: grid;
+  grid-template-columns: 1fr 3fr;
   gap: 0 calc(var(--ccd-spacing--x) * 0.75);
   grid-template-areas: "thumb header  header" "thumb summary summary";
   margin-top: var(--ccd-spacing--x, 2rem);
