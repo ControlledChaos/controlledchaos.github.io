@@ -801,7 +801,7 @@ figcaption {
   justify-content: space-between;
   align-items: center;
   gap: calc(var(--ccd-spacing--y) / 4) var(--ccd-spacing--x);
-  background-image: linear-gradient(to right, #927b98 0%, #72577a 100%);
+  background-image: linear-gradient(60deg, #927b98 0%, #846f8b 40%, #72577a 100%);
 }
 @media screen and (max-width: 800px) {
   .site-header .general-wrap {
