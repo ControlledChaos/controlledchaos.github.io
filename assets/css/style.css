@@ -1074,6 +1074,9 @@ figcaption {
   max-width: var(--ccd-wrap--general--max-width);
   padding: 0 var(--ccd-spacing--x, 2rem);
 }
+.front-page-section .content-loop-grid {
+  max-width: calc(100% - var(--ccd-spacing--x) / 2);
+}
 .front-page-section .section-bg-image {
   display: block;
   position: absolute;
@@ -1520,6 +1523,7 @@ figcaption {
 }
 
 .content-loop-grid {
+  width: 100%;
   margin: calc(var(--ccd-spacing--x) / 2) 0;
   display: grid;
   grid-template-columns: repeat(3, 1fr);

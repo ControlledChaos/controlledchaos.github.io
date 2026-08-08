@@ -16,6 +16,10 @@
 		padding: 0 var( --ccd-spacing--x, 2rem );
 	}
 
+	.content-loop-grid {
+		max-width: calc( 100% - calc( var( --ccd-spacing--x ) / 2 ) );
+	}
+
 	.section-bg-image {
 		display: block;
 		position: absolute;
