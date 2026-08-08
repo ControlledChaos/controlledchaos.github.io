@@ -1709,7 +1709,9 @@ figcaption {
 }
 
 .modules-footer {
+  width: 100%;
   height: 100%;
+  margin: 0;
   display: flex;
   flex-wrap: wrap;
 }
@@ -1722,6 +1724,11 @@ figcaption {
 .module.module-footer {
   min-width: 320px;
   padding: calc(var(--ccd-spacing--y) / 2) calc(var(--ccd-spacing--x) / 2);
+}
+@media screen and (max-width: 800px) {
+  .module.module-footer {
+    max-width: 320px;
+  }
 }
 .module.module-footer h3:first-of-type {
   margin: 0;
