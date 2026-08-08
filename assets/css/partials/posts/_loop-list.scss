@@ -2,6 +2,7 @@
 /// Posts loop with list display
 ///
 
+@use '../../modules/layout';
 @use '../../modules/colors';
 
 .posts-list {
@@ -23,6 +24,12 @@
 	margin-top: var( --ccd-spacing--x, 2rem );
 	padding-top: var( --ccd-spacing--x, 2rem );
 	border-top: var( --ccd-box--border, none );
+
+	@media screen and ( max-width: layout.$bp_sm ) {
+		display: flex;
+		flex-direction: column;
+		gap: calc( var( --ccd-spacing--x ) / 1 ) 0;
+	}
 }
 
 .entry-image {
@@ -32,6 +39,13 @@
 	width: 240px;
 	height: 180px;
 	transform: translateY( 0.5rem );
+
+	@media screen and ( max-width: layout.$bp_sm ) {
+		order: 1;
+		width: unset;
+		height: unset;
+		transform: none;
+	}
 
 	img {
 		display: block;
@@ -45,6 +59,10 @@
 
 .entry-header {
 	grid-area: header;
+
+	@media screen and ( max-width: layout.$bp_sm ) {
+		order: 0;
+	}
 
 	.post-title {
 		margin: 0;
@@ -60,6 +78,10 @@
 
 .entry-summary {
 	grid-area: summary;
+
+	@media screen and ( max-width: layout.$bp_sm ) {
+		order: 2;
+	}
 
 	.post-meta {
 		margin-top: 0.5rem;
