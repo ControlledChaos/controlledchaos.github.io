@@ -12,6 +12,17 @@
 	// Layout general.
 	--ccd-spacing--x: #{layout.$spacing_x};
 	--ccd-spacing--y: #{layout.$spacing_y};
+	--ccd-spacing--x--half: calc( #{layout.$spacing_x} / 2 );
+	--ccd-spacing--y--half: calc( #{layout.$spacing_y} / 2 );
+	--ccd-spacing--x--third: calc( #{layout.$spacing_x} / 3 );
+	--ccd-spacing--y--third: calc( #{layout.$spacing_y} / 3 );
+	--ccd-spacing--x--quarter: calc( #{layout.$spacing_x} / 4 );
+	--ccd-spacing--y--quarter: calc( #{layout.$spacing_y} / 4 );
+	--ccd-spacing--x--plus-half: calc( #{layout.$spacing_x} * 1.5 );
+	--ccd-spacing--y--plus-half: calc( #{layout.$spacing_y} * 1.5 );
+	--ccd-spacing--x--double: calc( #{layout.$spacing_x} * 2 );
+	--ccd-spacing--y--double: calc( #{layout.$spacing_y} * 2 );
+
 	--ccd-wrap--general--max-width: 1280px;
 	--ccd-wrap--general--margin: 0 auto;
 	--ccd-wrap--general--padding: 0;

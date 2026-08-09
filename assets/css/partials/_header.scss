@@ -17,7 +17,7 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		gap: calc( var( --ccd-spacing--y ) / 4 ) var( --ccd-spacing--x );
+		gap: var( --ccd-spacing--y--quarter ) var( --ccd-spacing--x );
 		background-image: linear-gradient(
 			45deg,
 			colors.$theme_primary 0%,
@@ -63,7 +63,7 @@
 .site-identity {
 	display: flex;
 	align-items: center;
-	gap: calc( var( --ccd-spacing--y ) / 4 ) calc( var( --ccd-spacing--x ) / 2 );
+	gap: var( --ccd-spacing--y--quarter ) var( --ccd-spacing--x--half );
 
 	@media screen and ( max-width: layout.$bp_med ) {
 		flex-direction: column;

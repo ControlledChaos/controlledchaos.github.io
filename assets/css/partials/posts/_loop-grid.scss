@@ -6,7 +6,7 @@
 
 .content-loop-grid {
 	width: 100%;
-	margin: calc( var( --ccd-spacing--x ) / 2 ) 0;
+	margin: var( --ccd-spacing--x--half ) 0;
 	display: grid;
 	grid-template-columns: repeat( 3, 1fr );
 	gap: 0.25rem;

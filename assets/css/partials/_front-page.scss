@@ -17,7 +17,7 @@
 	}
 
 	.content-loop-grid {
-		max-width: calc( 100% - calc( var( --ccd-spacing--x ) / 2 ) );
+		max-width: calc( 100% - var( --ccd-spacing--x--half ) );
 	}
 
 	.section-bg-image {
@@ -65,7 +65,7 @@
 		align-items: center;
 		margin-top: var( --ccd-spacing--y );
 		padding-top: var( --ccd-spacing--y );
-		padding-right: calc( var( --ccd-spacing--x ) / 2 );
+		padding-right: var( --ccd-spacing--x--half );
 		border-top: var( --ccd-box--border );
 
 		@media screen and ( max-width: layout.$bp_med ) {
@@ -204,11 +204,11 @@
 	padding: 0 var( --ccd-spacing--x );
 
 	&.fp-nav-up {
-		padding-top: calc( var( --ccd-spacing--y, 2rem ) / 2 );
+		padding-top: var( --ccd-spacing--y--half );
 	}
 
 	&.fp-nav-down {
-		padding-bottom: calc( var( --ccd-spacing--y, 2rem ) / 2 );
+		padding-bottom: var( --ccd-spacing--y--half );
 	}
 
 	button {

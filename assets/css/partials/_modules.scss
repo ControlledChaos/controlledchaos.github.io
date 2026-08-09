@@ -19,7 +19,7 @@
 .module {
 	&.module-footer {
 		min-width: 320px;
-		padding: calc( var( --ccd-spacing--y ) / 2 ) calc( var( --ccd-spacing--x ) / 2 );
+		padding: var( --ccd-spacing--y--half ) var( --ccd-spacing--x--half );
 
 		@media screen and ( max-width: layout.$bp_med ) {
 			max-width: 320px;
@@ -122,8 +122,8 @@ p + ul {
 
 .owner-module-wrap {
 	display: flex;
-	gap: calc( var( --ccd-spacing--x ) / 2 );
-	margin-top: calc( var( --ccd-spacing--y ) / 2 );
+	gap: var( --ccd-spacing--x--half );
+	margin-top: var( --ccd-spacing--y--half );
 
 	@media screen and ( max-width: layout.$bp_med ) {
 		flex-direction: column;
