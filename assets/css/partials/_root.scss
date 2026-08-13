@@ -6,7 +6,7 @@
 @use '../modules/functions' as f;
 @use '../modules/colors' as c;
 @use '../modules/layout' as l;
-@use '../modules/font-stacks' as t;
+@use '../modules/font-stacks' as s;
 
 :host,
 :root {
@@ -30,10 +30,9 @@
 	--ccd-wrap--general--padding: 0;
 
 	// Font stacks.
-	--ccd-fonts--general-stack: #{t.$stack_general};
-	--ccd-fonts--secondary-stack: #{t.$stack_secondary};
-	--ccd-fonts--display-stack: #{t.$stack_display};
-	--ccd-fonts--monospace-stack: #{t.$stack_monospace};
+	@each $type, $stack in s.$stacks {
+		--ccd-fonts--#{$type}-stack: #{$stack};
+	}
 
 	// General colors.
 	@each $name, $color in c.$colors {
@@ -57,7 +56,7 @@
 
 	// Body & general text.
 	--ccd-element--margin-top: calc( var( --ccd-spacing--y ) / 2 );
-	--ccd-body--font-family: #{t.$stack_general};
+	--ccd-body--font-family: var( --ccd-fonts--general-stack );
 	--ccd-body--font-size: 1.0625rem;
 	--ccd-body--line-height: 1.525;
 	--ccd-body--letter-spacing: 0.025em;
@@ -67,7 +66,7 @@
 	--ccd-body--text-color: #{f.darken( c.$theme_one_dark, 5% )};
 	--ccd-body--text-color--dark: #{c.$off_white};
 
-	--ccd-display--font-family: #{t.$stack_display};
+	--ccd-display--font-family: var( --ccd-fonts--display-stack );
 	--ccd-display--font-weight: 600;
 	--ccd-display--letter-spacing: normal;
 
@@ -86,10 +85,6 @@
 	--ccd-heading-secondary--font-weight: 600;
 	--ccd-heading-primary--text-color: var( --ccd-color--one--dark );
 	--ccd-heading-secondary--text-color: var( --ccd-color--one--dark );
-
-	--ccd-body--font-family: #{t.$stack_general};
-	--ccd-body--font-size: 1rem;
-	--ccd-body--line-height: 1.5;
 
 	// Media.
 	--ccd-overlay--bg-color: #{rgba( $color: black, $alpha: 0.5 )};

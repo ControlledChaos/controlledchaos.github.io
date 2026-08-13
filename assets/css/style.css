@@ -390,7 +390,7 @@ b, strong, optgroup {
   --ccd-box--border: var( --ccd-box--border-style ) var( --ccd-box--border-width ) var( --ccd-box--border-color );
   --ccd-box--border--dark: var( --ccd-box--border-style ) var( --ccd-box--border-width ) var( --ccd-box--border-color--dark );
   --ccd-element--margin-top: calc( var( --ccd-spacing--y ) / 2 );
-  --ccd-body--font-family: "Red Hat Display", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen-Sans", "Ubuntu", "Cantarell", "Helvetica Neue", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --ccd-body--font-family: var( --ccd-fonts--general-stack );
   --ccd-body--font-size: 1.0625rem;
   --ccd-body--line-height: 1.525;
   --ccd-body--letter-spacing: 0.025em;
@@ -398,7 +398,7 @@ b, strong, optgroup {
   --ccd-body--bg-color--dark: #1e1e1e;
   --ccd-body--text-color: #6c5374;
   --ccd-body--text-color--dark: #e8e8e8;
-  --ccd-display--font-family: "Crimson Pro", "Palatino Linotype", "Palatino", "Palladio", "URW Palladio L", "Book Antiqua", "Baskerville", "Bookman Old Style", "Bitstream Charter", "Nimbus Roman No9 L", "Garamond", "Apple Garamond", "ITC Garamond Narrow", "New Century Schoolbook", "Century Schoolbook", "Century Schoolbook L", "Georgia", serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --ccd-display--font-family: var( --ccd-fonts--display-stack );
   --ccd-display--font-weight: 600;
   --ccd-display--letter-spacing: normal;
   --ccd-text-shadow: 0.05em 0.05em 0.05em rgba(0, 0, 0, 0.575);
@@ -412,9 +412,6 @@ b, strong, optgroup {
   --ccd-heading-secondary--font-weight: 600;
   --ccd-heading-primary--text-color: var( --ccd-color--one--dark );
   --ccd-heading-secondary--text-color: var( --ccd-color--one--dark );
-  --ccd-body--font-family: "Red Hat Display", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen-Sans", "Ubuntu", "Cantarell", "Helvetica Neue", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --ccd-body--font-size: 1rem;
-  --ccd-body--line-height: 1.5;
   --ccd-overlay--bg-color: rgba(0, 0, 0, 0.5);
   --ccd-site-header--padding:
   	calc( var( --ccd-spacing--y ) / 2 )
