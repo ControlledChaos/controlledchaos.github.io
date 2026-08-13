@@ -296,7 +296,7 @@ b, strong, optgroup {
   --ccd-color--theme--primary: #846f8b;
   --ccd-color--theme--primary--light: #927b98;
   --ccd-color--theme--primary--dark: #72577a;
-  --ccd-color--theme--secondary: #a6bb29;
+  --ccd-color--theme--secondary: #9cb034;
   --ccd-color--theme--secondary--light: #b0c572;
   --ccd-color--theme--secondary--dark: #7c9419;
 }
@@ -399,10 +399,10 @@ b, strong, optgroup {
   --ccd-display--font-weight: 600;
   --ccd-display--letter-spacing: normal;
   --ccd-text-shadow: 0.05em 0.05em 0.05em rgba(0, 0, 0, 0.575);
-  --ccd-link--text-color: #a6bb29;
+  --ccd-link--text-color: #9cb034;
   --ccd-link--text-color--dark: #b0c572;
   --ccd-link--action--text-color: #b0c572;
-  --ccd-link--action--text-color--dark: #a6bb29;
+  --ccd-link--action--text-color--dark: #9cb034;
   --ccd-heading-primary--font-size: 2.25rem;
   --ccd-heading-primary--font-weight: 500;
   --ccd-heading-secondary--font-size: 1.5rem;
