@@ -304,7 +304,7 @@ corresponds to the arrow we want to display */
   max-width: 180px;
   border-radius: 2px;
   border: none;
-  background: #72577a;
+  background: var(--ccd-color--one--dark);
 }
 
 .tooltipster-sidetip.ccdzen.tooltipster-top .tooltipster-box {
@@ -324,17 +324,17 @@ corresponds to the arrow we want to display */
 }
 
 .tooltipster-sidetip.ccdzen.tooltipster-bottom .tooltipster-arrow-border {
-  border-bottom-color: #72577a;
+  border-bottom-color: var(--ccd-color--one--dark);
 }
 
 .tooltipster-sidetip.ccdzen.tooltipster-left .tooltipster-arrow-border {
-  border-left-color: #72577a;
+  border-left-color: var(--ccd-color--one--dark);
 }
 
 .tooltipster-sidetip.ccdzen.tooltipster-right .tooltipster-arrow-border {
-  border-right-color: #72577a;
+  border-right-color: var(--ccd-color--one--dark);
 }
 
 .tooltipster-sidetip.ccdzen.tooltipster-top .tooltipster-arrow-border {
-  border-top-color: #72577a;
+  border-top-color: var(--ccd-color--one--dark);
 }

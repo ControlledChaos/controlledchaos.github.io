@@ -3,7 +3,7 @@
 ///
 
 @use '../modules/layout';
-@use '../modules/colors';
+@use '../modules/colors' as c;
 
 body {
 	display: var( --ccd-body--display, flex );
@@ -103,7 +103,7 @@ $loading_animation: spinner 1.25s infinite linear;
 		border:
 			var( --ccd-loading-icon--border-width, 2px )
 			var( --ccd-loading-icon--border-style, solid )
-			var( --ccd-loading-icon--border-color, rgba( $color: colors.$theme_primary_light, $alpha: 0.3 ) );
+			var( --ccd-loading-icon--border-color, rgba( $color: c.$theme_one_light, $alpha: 0.3 ) );
 		border-top:
 			var( --ccd-loading-icon--border-top-width, 2px )
 			var( --ccd-loading-icon--border-top-style, solid )
