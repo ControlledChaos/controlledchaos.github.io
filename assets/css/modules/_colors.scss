@@ -59,6 +59,27 @@ $theme_secondary:       #9cb034 !default;
 $theme_secondary_light: #b0c572 !default;
 $theme_secondary_dark:  #7c9419 !default;
 
+$theme_one_base:  #846f8b !default;
+$theme_one_light: #927b98 !default;
+$theme_one_dark:  #72577a !default;
+
+$theme_two_base:  #9cb034 !default;
+$theme_two_light: #b0c572 !default;
+$theme_two_dark:  #7c9419 !default;
+
+$theme: (
+	'one' : (
+		'base'  : $theme_one_base,
+		'light' : $theme_one_light,
+		'dark'  : $theme_one_dark
+	),
+	'two' : (
+		'base'  : $theme_two_base,
+		'light' : $theme_two_light,
+		'dark'  : $theme_two_dark
+	)
+) !default;
+
 // Color types.
 $body_color:      $white !default;
 $body_color_dark: $near_black !default;

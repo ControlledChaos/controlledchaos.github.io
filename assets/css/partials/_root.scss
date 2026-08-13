@@ -28,6 +28,18 @@
 	--ccd-wrap--general--margin: 0 auto;
 	--ccd-wrap--general--padding: 0;
 
+	// General colors.
+	@each $name, $color in c.$colors {
+		--ccd-color--#{$name}: #{$color};
+	}
+
+	// Theme colors.
+	@each $set, $list in c.$theme {
+		@each $name, $color in $list {
+			--ccd-color--#{$set}--#{$name}: #{$color};
+		}
+	}
+
 	// Borders.
 	--ccd-box--border-style: solid;
 	--ccd-box--border-width: 1px;

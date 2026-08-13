@@ -107,7 +107,7 @@ $loading_animation: spinner 1.25s infinite linear;
 		border-top:
 			var( --ccd-loading-icon--border-top-width, 2px )
 			var( --ccd-loading-icon--border-top-style, solid )
-			var( --ccd-loading-icon--border-top-color, var( --ccd-color--theme--primary--dark ) );
+			var( --ccd-loading-icon--border-top-color, var( --ccd-color--one--dark ) );
 		border-radius: var( --ccd-loading-icon--border-radius, 100% );
 		width: var( --ccd-loading-icon--width, var( --ccd-spacing--x, 2rem ) );
 		height: var( --ccd-loading-icon--height, var( --ccd-spacing--x, 2rem ) );
@@ -313,13 +313,13 @@ pre, code, kbd, samp {
 	font-size: var( --ccd-button--font-size, 1.125rem );
 	font-weight: var( --ccd-button--font-weight, 500 );
 	line-height: var( --ccd-button--line-height, 1 );
-	background-color: var( --ccd-button--bg-color, var( --ccd-color--theme--secondary ) );
+	background-color: var( --ccd-button--bg-color, var( --ccd-color--two ) );
 	color: var( --ccd-button--text-color, #ffffff );
 	transition: all 0.25s;
 
 	&:hover,
 	&:focus {
-		background-color: var( --ccd-button--bg-color--action, var( --ccd-color--theme--secondary--light ) );
+		background-color: var( --ccd-button--bg-color--action, var( --ccd-color--two--light ) );
 		color: var( --ccd-button--text-color--action, #ffffff );
 	}
 }

@@ -48,7 +48,7 @@
 
 		&.header-alt-01 {
 			background-color: #ffffff;
-			color: var( --ccd-color--theme--primary );
+			color: var( --ccd-color--one );
 			transition: all 350ms;
 		}
 	}
@@ -179,13 +179,13 @@
 // Alternate header classes.
 .header-alt-01 {
 	.site-title {
-		color: var( --ccd-color--theme--primary );
+		color: var( --ccd-color--one );
 	}
 	.site-menu {
-		color: var( --ccd-color--theme--primary );
+		color: var( --ccd-color--one );
 
 		li a {
-			color: var( --ccd-color--theme--primary );
+			color: var( --ccd-color--one );
 
 			&:before {
 				background-color: rgba( $color: colors.$theme_primary, $alpha: 0.75 );

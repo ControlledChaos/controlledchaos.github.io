@@ -280,28 +280,6 @@ b, strong, optgroup {
   opacity: 1;
 }
 
-:host,
-:root {
-  --ccd-color--off-white: #e8e8e8;
-  --ccd-color--gray--pale: #cccccc;
-  --ccd-color--gray--light: #888888;
-  --ccd-color--gray--medium: #555555;
-  --ccd-color--gray--dark: #333333;
-  --ccd-color--near-black: #1e1e1e;
-  --ccd-color--red: #dd0000;
-  --ccd-color--orange: #ee6600;
-  --ccd-color--yellow: #ffdd00;
-  --ccd-color--green: #00aa00;
-  --ccd-color--blue: #0044aa;
-  --ccd-color--violet: #551188;
-  --ccd-color--theme--primary: #846f8b;
-  --ccd-color--theme--primary--light: #927b98;
-  --ccd-color--theme--primary--dark: #72577a;
-  --ccd-color--theme--secondary: #9cb034;
-  --ccd-color--theme--secondary--light: #b0c572;
-  --ccd-color--theme--secondary--dark: #7c9419;
-}
-
 @font-face {
   font-family: "Crimson Pro";
   font-weight: 200 900;
@@ -383,6 +361,32 @@ b, strong, optgroup {
   --ccd-wrap--general--max-width: 1280px;
   --ccd-wrap--general--margin: 0 auto;
   --ccd-wrap--general--padding: 0;
+  --ccd-color--white: #ffffff;
+  --ccd-color--off-white: #e8e8e8;
+  --ccd-color--black: #000000;
+  --ccd-color--near-black: #1e1e1e;
+  --ccd-color--gray-dark: #333333;
+  --ccd-color--gray-medium: #555555;
+  --ccd-color--gray-light: #888888;
+  --ccd-color--gray-pale: #cccccc;
+  --ccd-color--red: #dd0000;
+  --ccd-color--orange: #ee6600;
+  --ccd-color--yellow: #ffdd00;
+  --ccd-color--green: #00aa00;
+  --ccd-color--blue: #0044aa;
+  --ccd-color--purple: #bb00aa;
+  --ccd-color--violet: #551188;
+  --ccd-color--error: #dd0000;
+  --ccd-color--danger: #dd0000;
+  --ccd-color--notify: #ee6600;
+  --ccd-color--warning: #ffdd00;
+  --ccd-color--success: #00aa00;
+  --ccd-color--one--base: #846f8b;
+  --ccd-color--one--light: #927b98;
+  --ccd-color--one--dark: #72577a;
+  --ccd-color--two--base: #9cb034;
+  --ccd-color--two--light: #b0c572;
+  --ccd-color--two--dark: #7c9419;
   --ccd-box--border-style: solid;
   --ccd-box--border-width: 1px;
   --ccd-box--border-color: #cccccc;
@@ -529,7 +533,7 @@ body {
 }
 .page-loading .loading-icon {
   border: var(--ccd-loading-icon--border-width, 2px) var(--ccd-loading-icon--border-style, solid) var(--ccd-loading-icon--border-color, rgba(146, 123, 152, 0.3));
-  border-top: var(--ccd-loading-icon--border-top-width, 2px) var(--ccd-loading-icon--border-top-style, solid) var(--ccd-loading-icon--border-top-color, var(--ccd-color--theme--primary--dark));
+  border-top: var(--ccd-loading-icon--border-top-width, 2px) var(--ccd-loading-icon--border-top-style, solid) var(--ccd-loading-icon--border-top-color, var(--ccd-color--one--dark));
   border-radius: var(--ccd-loading-icon--border-radius, 100%);
   width: var(--ccd-loading-icon--width, var(--ccd-spacing--x, 2rem));
   height: var(--ccd-loading-icon--height, var(--ccd-spacing--x, 2rem));
@@ -753,12 +757,12 @@ pre, code, kbd, samp {
   font-size: var(--ccd-button--font-size, 1.125rem);
   font-weight: var(--ccd-button--font-weight, 500);
   line-height: var(--ccd-button--line-height, 1);
-  background-color: var(--ccd-button--bg-color, var(--ccd-color--theme--secondary));
+  background-color: var(--ccd-button--bg-color, var(--ccd-color--two));
   color: var(--ccd-button--text-color, #ffffff);
   transition: all 0.25s;
 }
 .button:hover, .button:focus {
-  background-color: var(--ccd-button--bg-color--action, var(--ccd-color--theme--secondary--light));
+  background-color: var(--ccd-button--bg-color--action, var(--ccd-color--two--light));
   color: var(--ccd-button--text-color--action, #ffffff);
 }
 
@@ -847,7 +851,7 @@ figcaption {
 }
 .js .front-page .site-header.header-alt-01 {
   background-color: #ffffff;
-  color: var(--ccd-color--theme--primary);
+  color: var(--ccd-color--one);
   transition: all 350ms;
 }
 .js .front-page .header-wrap.header-alt-tp {
@@ -963,13 +967,13 @@ figcaption {
 }
 
 .header-alt-01 .site-title {
-  color: var(--ccd-color--theme--primary);
+  color: var(--ccd-color--one);
 }
 .header-alt-01 .site-menu {
-  color: var(--ccd-color--theme--primary);
+  color: var(--ccd-color--one);
 }
 .header-alt-01 .site-menu li a {
-  color: var(--ccd-color--theme--primary);
+  color: var(--ccd-color--one);
 }
 .header-alt-01 .site-menu li a:before {
   background-color: rgba(132, 111, 139, 0.75);
@@ -1044,7 +1048,7 @@ figcaption {
   font-size: var(--ccd-page-subtitle--font-size, 1.1875rem);
   font-weight: var(--ccd-page-subtitle--font-weight, 500);
   line-height: 1.2;
-  color: var(--ccd-color--theme--primary--dark);
+  color: var(--ccd-color--one--dark);
 }
 
 .page-content {
@@ -1201,7 +1205,7 @@ figcaption {
 .custom-scroll .fp-slidesNav ul li a span {
   width: 6px;
   height: 6px;
-  background: var(--ccd-color--theme--primary--dark);
+  background: var(--ccd-color--one--dark);
 }
 .custom-scroll #fp-nav ul li:hover a span,
 .custom-scroll .fp-slidesNav ul li:hover a span {
@@ -2043,7 +2047,7 @@ p + ul {
 .site-footer {
   position: relative;
   margin: var(--ccd-site-footer--margin, 0);
-  background-color: var(--ccd-site-footer--bg-color, var(--ccd-color--theme--secondary));
+  background-color: var(--ccd-site-footer--bg-color, var(--ccd-color--two));
   color: var(--ccd-site-footer--text-color, #ffffff);
 }
 .site-footer .footer-bg-image {
@@ -2081,5 +2085,5 @@ p + ul {
   font-size: var(--ccd-site-footer--message--font-size, 0.8125rem);
   font-weight: var(--ccd-site-footer--message--font-weight, 500);
   text-align: var(--ccd-site-footer--message--text-align, center);
-  background-color: var(--ccd-site-footer--message--bg-color, var(--ccd-color--theme--secondary));
+  background-color: var(--ccd-site-footer--message--bg-color, var(--ccd-color--two));
 }
