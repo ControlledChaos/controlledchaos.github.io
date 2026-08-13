@@ -750,7 +750,7 @@ pre, code, kbd, samp {
   font-size: var(--ccd-button--font-size, 1.125rem);
   font-weight: var(--ccd-button--font-weight, 500);
   line-height: var(--ccd-button--line-height, 1);
-  background-color: var(--ccd-button--bg-color, var(--ccd-color--two));
+  background-color: var(--ccd-button--bg-color, var(--ccd-color--two--base));
   color: var(--ccd-button--text-color, #ffffff);
   transition: all 0.25s;
 }
@@ -2040,7 +2040,7 @@ p + ul {
 .site-footer {
   position: relative;
   margin: var(--ccd-site-footer--margin, 0);
-  background-color: var(--ccd-site-footer--bg-color, var(--ccd-color--two));
+  background-color: var(--ccd-site-footer--bg-color, var(--ccd-color--two--base));
   color: var(--ccd-site-footer--text-color, #ffffff);
 }
 .site-footer .footer-bg-image {
@@ -2078,5 +2078,5 @@ p + ul {
   font-size: var(--ccd-site-footer--message--font-size, 0.8125rem);
   font-weight: var(--ccd-site-footer--message--font-weight, 500);
   text-align: var(--ccd-site-footer--message--text-align, center);
-  background-color: var(--ccd-site-footer--message--bg-color, var(--ccd-color--two));
+  background-color: var(--ccd-site-footer--message--bg-color, var(--ccd-color--two--base));
 }

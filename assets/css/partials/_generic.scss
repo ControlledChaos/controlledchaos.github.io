@@ -313,7 +313,7 @@ pre, code, kbd, samp {
 	font-size: var( --ccd-button--font-size, 1.125rem );
 	font-weight: var( --ccd-button--font-weight, 500 );
 	line-height: var( --ccd-button--line-height, 1 );
-	background-color: var( --ccd-button--bg-color, var( --ccd-color--two ) );
+	background-color: var( --ccd-button--bg-color, var( --ccd-color--two--base ) );
 	color: var( --ccd-button--text-color, #ffffff );
 	transition: all 0.25s;
 
