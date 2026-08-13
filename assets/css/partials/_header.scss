@@ -2,9 +2,9 @@
 /// Site header styles
 ///
 
-@use 'sass:color';
+@use '../modules/functions' as f;
 @use '../modules/colors' as c;
-@use '../modules/layout';
+@use '../modules/layout' as l;
 
 .site-header {
 	width: var( --ccd-site-header--width, 100% );
@@ -22,10 +22,10 @@
 			45deg,
 			c.$theme_one_base 0%,
 			c.$theme_one_base 40%,
-			color.adjust( $color: c.$theme_one_dark, $lightness: -7% ) 100%
+			#{f.darken( c.$theme_one_dark, 20% )} 100%
 		);
 
-		@media screen and ( max-width: layout.$bp_med ) {
+		@media screen and ( max-width: l.$bp_med ) {
 			flex-direction: column;
 		}
 	}
@@ -65,7 +65,7 @@
 	align-items: center;
 	gap: var( --ccd-spacing--y--quarter ) var( --ccd-spacing--x--half );
 
-	@media screen and ( max-width: layout.$bp_med ) {
+	@media screen and ( max-width: l.$bp_med ) {
 		flex-direction: column;
 	}
 
@@ -102,7 +102,7 @@
 	word-spacing: var( --ccd-site-title--word-spacing, var( --ccd-heading-primary--word-spacing, -0.0325em ) );
 	color: var( --ccd-site-title--text-color, inherit );
 
-	@media screen and ( max-width: layout.$bp_med ) {
+	@media screen and ( max-width: l.$bp_med ) {
 		text-align: center;
 	}
 }
@@ -127,7 +127,7 @@
 	gap: 0 0.75rem;
 	color: #ffffff;
 
-	@media screen and ( max-width: layout.$bp_med ) {
+	@media screen and ( max-width: l.$bp_med ) {
 		justify-content: center;
 	}
 
