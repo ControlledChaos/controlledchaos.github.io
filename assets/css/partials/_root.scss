@@ -3,9 +3,10 @@
 /// the :root pseudoelement
 ///
 
+@use '../modules/functions' as f;
 @use '../modules/colors' as c;
 @use '../modules/layout' as l;
-@use '../modules/typography' as t;
+@use '../modules/font-stacks' as t;
 
 :host,
 :root {
@@ -27,6 +28,12 @@
 	--ccd-wrap--general--max-width: 1280px;
 	--ccd-wrap--general--margin: 0 auto;
 	--ccd-wrap--general--padding: 0;
+
+	// Font stacks.
+	--ccd-fonts--general-stack: #{t.$stack_general};
+	--ccd-fonts--secondary-stack: #{t.$stack_secondary};
+	--ccd-fonts--display-stack: #{t.$stack_display};
+	--ccd-fonts--monospace-stack: #{t.$stack_monospace};
 
 	// General colors.
 	@each $name, $color in c.$colors {
@@ -55,10 +62,10 @@
 	--ccd-body--line-height: 1.525;
 	--ccd-body--letter-spacing: 0.025em;
 ;
-	--ccd-body--bg-color: #{c.$body_color};
-	--ccd-body--bg-color--dark: #{c.$body_color_dark};
-	--ccd-body--text-color: #{c.$text_color};
-	--ccd-body--text-color--dark: #{c.$text_color_dark};
+	--ccd-body--bg-color: #ffffff;
+	--ccd-body--bg-color--dark: #{c.$near_black};
+	--ccd-body--text-color: #{f.darken( c.$theme_one_dark, 5% )};
+	--ccd-body--text-color--dark: #{c.$off_white};
 
 	--ccd-display--font-family: #{t.$stack_display};
 	--ccd-display--font-weight: 600;

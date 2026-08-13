@@ -5,8 +5,10 @@
 // Browser reset.
 @use 'partials/reset';
 
+// Access font files
+@use 'partials/font-face';
+
 // Custom properties.
-@use 'partials/typography';
 @use 'partials/root';
 
 // Generic styles.

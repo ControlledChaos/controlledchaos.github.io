@@ -1,8 +1,6 @@
 ///
-/// Typography
+/// Access font files
 ///
-
-@use '../modules/typography' as typo;
 
 // Local fonts.
 @font-face {
@@ -60,13 +58,4 @@
 	font-style: italic;
 	font-display: swap;
 	src: url( ../fonts/red-hat-mono-italic.woff2 ) format( 'woff2' );
-}
-
-// Custom properties.
-:host,
-:root {
-	--ccd-fonts--general-stack: #{typo.$stack_general};
-	--ccd-fonts--secondary-stack: #{typo.$stack_secondary};
-	--ccd-fonts--display-stack: #{typo.$stack_display};
-	--ccd-fonts--monospace-stack: #{typo.$stack_monospace};
 }
