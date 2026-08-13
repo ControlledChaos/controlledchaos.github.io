@@ -280,6 +280,7 @@ b, strong, optgroup {
   opacity: 1;
 }
 
+:host,
 :root {
   --ccd-color--off-white: #e8e8e8;
   --ccd-color--gray--pale: #cccccc;
@@ -357,6 +358,7 @@ b, strong, optgroup {
   font-display: swap;
   src: url(../fonts/red-hat-mono-italic.woff2) format("woff2");
 }
+:host,
 :root {
   --ccd-fonts--general-stack: Red Hat Display, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen-Sans, Ubuntu, Cantarell, Helvetica Neue, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
   --ccd-fonts--secondary-stack: Red Hat Text, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen-Sans, Ubuntu, Cantarell, Helvetica Neue, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
@@ -364,6 +366,7 @@ b, strong, optgroup {
   --ccd-fonts--monospace-stack: Red Hat Mono, Source Code Pro, Roboto Mono, Fira Code, Liberation Mono, Inconsolata, Menlo, Monaco, Consolas, Cascadia Mono, Segoe UI Mono, Oxygen Mono, Ubuntu Monospace, Fira Mono, Droid Sans Mono, Courier New, Courier, ui-monospace, monospace, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
 }
 
+:host,
 :root {
   --ccd-spacing--x: 2rem;
   --ccd-spacing--y: 2rem;
@@ -393,7 +396,7 @@ b, strong, optgroup {
   --ccd-body--letter-spacing: 0.025em;
   --ccd-body--bg-color: #ffffff;
   --ccd-body--bg-color--dark: #1e1e1e;
-  --ccd-body--text-color: rgb(100.0909090909, 76.3851674641, 107.1148325359);
+  --ccd-body--text-color: #6c5374;
   --ccd-body--text-color--dark: #e8e8e8;
   --ccd-display--font-family: Crimson Pro, Palatino Linotype, Palatino, Palladio, URW Palladio L, Book Antiqua, Baskerville, Bookman Old Style, Bitstream Charter, Nimbus Roman No9 L, Garamond, Apple Garamond, ITC Garamond Narrow, New Century Schoolbook, Century Schoolbook, Century Schoolbook L, Georgia, serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
   --ccd-display--font-weight: 600;
@@ -425,14 +428,17 @@ b, strong, optgroup {
   --ccd-front-intro--avatar--size: 200px;
 }
 @media screen and (max-width: 800px) {
+  :host,
   :root {
     --ccd-front-intro--avatar--size: 320px;
   }
 }
+:host,
 :root {
   --ccd-owner-avatar--size: 80px;
 }
 @media screen and (max-width: 800px) {
+  :host,
   :root {
     --ccd-owner-avatar--size: 160px;
   }

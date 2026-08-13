@@ -3,28 +3,29 @@
 ///
 
 @use 'sass:color';
-@use '../modules/colors';
+@use '../modules/colors' as c;
 
+:host,
 :root {
-	--ccd-color--off-white:    #{colors.$off_white};
-	--ccd-color--gray--pale:   #{colors.$gray_pale};
-	--ccd-color--gray--light:  #{colors.$gray_light};
-	--ccd-color--gray--medium: #{colors.$gray_medium};
-	--ccd-color--gray--dark:   #{colors.$gray_dark};
-	--ccd-color--near-black:   #{colors.$near_black};
+	--ccd-color--off-white:    #{c.$off_white};
+	--ccd-color--gray--pale:   #{c.$gray_pale};
+	--ccd-color--gray--light:  #{c.$gray_light};
+	--ccd-color--gray--medium: #{c.$gray_medium};
+	--ccd-color--gray--dark:   #{c.$gray_dark};
+	--ccd-color--near-black:   #{c.$near_black};
 
-	--ccd-color--red:    #{colors.$red};
-	--ccd-color--orange: #{colors.$orange};
-	--ccd-color--yellow: #{colors.$yellow};
-	--ccd-color--green:  #{colors.$green};
-	--ccd-color--blue:   #{colors.$blue};
-	--ccd-color--violet: #{colors.$violet};
+	--ccd-color--red:    #{c.$red};
+	--ccd-color--orange: #{c.$orange};
+	--ccd-color--yellow: #{c.$yellow};
+	--ccd-color--green:  #{c.$green};
+	--ccd-color--blue:   #{c.$blue};
+	--ccd-color--violet: #{c.$violet};
 
-	--ccd-color--theme--primary: #{colors.$theme_primary};
-	--ccd-color--theme--primary--light: #{colors.$theme_primary_light};
-	--ccd-color--theme--primary--dark:  #{colors.$theme_primary_dark};
+	--ccd-color--theme--primary: #{c.$theme_primary};
+	--ccd-color--theme--primary--light: #{c.$theme_primary_light};
+	--ccd-color--theme--primary--dark:  #{c.$theme_primary_dark};
 
-	--ccd-color--theme--secondary: #{colors.$theme_secondary};
-	--ccd-color--theme--secondary--light: #{colors.$theme_secondary_light};
-	--ccd-color--theme--secondary--dark:  #{colors.$theme_secondary_dark};
+	--ccd-color--theme--secondary: #{c.$theme_secondary};
+	--ccd-color--theme--secondary--light: #{c.$theme_secondary_light};
+	--ccd-color--theme--secondary--dark:  #{c.$theme_secondary_dark};
 }

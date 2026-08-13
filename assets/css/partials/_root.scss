@@ -3,25 +3,26 @@
 /// the :root pseudoelement
 ///
 
-@use '../modules/colors';
-@use '../modules/layout';
-@use '../modules/typography' as typo;
+@use '../modules/colors' as c;
+@use '../modules/layout' as l;
+@use '../modules/typography' as t;
 
+:host,
 :root {
 
 	// Layout general.
-	--ccd-spacing--x: #{layout.$spacing_x};
-	--ccd-spacing--y: #{layout.$spacing_y};
-	--ccd-spacing--x--half: calc( #{layout.$spacing_x} / 2 );
-	--ccd-spacing--y--half: calc( #{layout.$spacing_y} / 2 );
-	--ccd-spacing--x--third: calc( #{layout.$spacing_x} / 3 );
-	--ccd-spacing--y--third: calc( #{layout.$spacing_y} / 3 );
-	--ccd-spacing--x--quarter: calc( #{layout.$spacing_x} / 4 );
-	--ccd-spacing--y--quarter: calc( #{layout.$spacing_y} / 4 );
-	--ccd-spacing--x--plus-half: calc( #{layout.$spacing_x} * 1.5 );
-	--ccd-spacing--y--plus-half: calc( #{layout.$spacing_y} * 1.5 );
-	--ccd-spacing--x--double: calc( #{layout.$spacing_x} * 2 );
-	--ccd-spacing--y--double: calc( #{layout.$spacing_y} * 2 );
+	--ccd-spacing--x: #{l.$spacing_x};
+	--ccd-spacing--y: #{l.$spacing_y};
+	--ccd-spacing--x--half: calc( #{l.$spacing_x} / 2 );
+	--ccd-spacing--y--half: calc( #{l.$spacing_y} / 2 );
+	--ccd-spacing--x--third: calc( #{l.$spacing_x} / 3 );
+	--ccd-spacing--y--third: calc( #{l.$spacing_y} / 3 );
+	--ccd-spacing--x--quarter: calc( #{l.$spacing_x} / 4 );
+	--ccd-spacing--y--quarter: calc( #{l.$spacing_y} / 4 );
+	--ccd-spacing--x--plus-half: calc( #{l.$spacing_x} * 1.5 );
+	--ccd-spacing--y--plus-half: calc( #{l.$spacing_y} * 1.5 );
+	--ccd-spacing--x--double: calc( #{l.$spacing_x} * 2 );
+	--ccd-spacing--y--double: calc( #{l.$spacing_y} * 2 );
 
 	--ccd-wrap--general--max-width: 1280px;
 	--ccd-wrap--general--margin: 0 auto;
@@ -30,44 +31,44 @@
 	// Borders.
 	--ccd-box--border-style: solid;
 	--ccd-box--border-width: 1px;
-	--ccd-box--border-color: #{colors.$gray_pale};
-	--ccd-box--border-color--dark: #{colors.$gray_medium};
+	--ccd-box--border-color: #{c.$gray_pale};
+	--ccd-box--border-color--dark: #{c.$gray_medium};
 	--ccd-box--border: var( --ccd-box--border-style ) var( --ccd-box--border-width ) var( --ccd-box--border-color );
 	--ccd-box--border--dark: var( --ccd-box--border-style ) var( --ccd-box--border-width ) var( --ccd-box--border-color--dark );
 
 	// Body & general text.
 	--ccd-element--margin-top: calc( var( --ccd-spacing--y ) / 2 );
-	--ccd-body--font-family: #{typo.$stack_general};
+	--ccd-body--font-family: #{t.$stack_general};
 	--ccd-body--font-size: 1.0625rem;
 	--ccd-body--line-height: 1.525;
 	--ccd-body--letter-spacing: 0.025em;
 ;
-	--ccd-body--bg-color: #{colors.$body_color};
-	--ccd-body--bg-color--dark: #{colors.$body_color_dark};
-	--ccd-body--text-color: #{colors.$text_color};
-	--ccd-body--text-color--dark: #{colors.$text_color_dark};
+	--ccd-body--bg-color: #{c.$body_color};
+	--ccd-body--bg-color--dark: #{c.$body_color_dark};
+	--ccd-body--text-color: #{c.$text_color};
+	--ccd-body--text-color--dark: #{c.$text_color_dark};
 
-	--ccd-display--font-family: #{typo.$stack_display};
+	--ccd-display--font-family: #{t.$stack_display};
 	--ccd-display--font-weight: 600;
 	--ccd-display--letter-spacing: normal;
 
 	--ccd-text-shadow: 0.05em 0.05em 0.05em #{rgba( $color: black, $alpha: 0.575 )};
 
 	// Links.
-	--ccd-link--text-color: #{colors.$theme_secondary};
-	--ccd-link--text-color--dark: #{colors.$theme_secondary_light};
-	--ccd-link--action--text-color: #{colors.$theme_secondary_light};
-	--ccd-link--action--text-color--dark: #{colors.$theme_secondary};
+	--ccd-link--text-color: #{c.$theme_secondary};
+	--ccd-link--text-color--dark: #{c.$theme_secondary_light};
+	--ccd-link--action--text-color: #{c.$theme_secondary_light};
+	--ccd-link--action--text-color--dark: #{c.$theme_secondary};
 
 	// Headings.
 	--ccd-heading-primary--font-size: 2.25rem;
 	--ccd-heading-primary--font-weight: 500;
 	--ccd-heading-secondary--font-size: 1.5rem;
 	--ccd-heading-secondary--font-weight: 600;
-	--ccd-heading-primary--text-color: #{colors.$theme_primary_dark};
-	--ccd-heading-secondary--text-color: #{colors.$theme_primary_dark};
+	--ccd-heading-primary--text-color: #{c.$theme_primary_dark};
+	--ccd-heading-secondary--text-color: #{c.$theme_primary_dark};
 
-	--ccd-body--font-family: #{typo.$stack_general};
+	--ccd-body--font-family: #{t.$stack_general};
 	--ccd-body--font-size: 1rem;
 	--ccd-body--line-height: 1.5;
 
@@ -78,10 +79,10 @@
 	--ccd-site-header--padding:
 		calc( var( --ccd-spacing--y ) / 2 )
 		var( --ccd-spacing--x );
-	--ccd-site-header--bg-color: #{colors.$theme_primary};
-	--ccd-site-header--text-color: #{colors.$white};
+	--ccd-site-header--bg-color: #{c.$theme_primary};
+	--ccd-site-header--text-color: #{c.$white};
 	--ccd-site-title--font-weight: 470;
-	--ccd-site-title--text-color: #{colors.$white};
+	--ccd-site-title--text-color: #{c.$white};
 
 	// Page/Post content.
 	--ccd-page-title--font-size: 3.25rem;
@@ -89,13 +90,13 @@
 
 	// Front page.
 	--ccd-front-intro--avatar--size: 200px;
-	@media screen and ( max-width: layout.$bp_med ) {
+	@media screen and ( max-width: l.$bp_med ) {
 		--ccd-front-intro--avatar--size: 320px;
 	}
 
 	// Modules.
 	--ccd-owner-avatar--size: 80px;
-	@media screen and ( max-width: layout.$bp_med ) {
+	@media screen and ( max-width: l.$bp_med ) {
 		--ccd-owner-avatar--size: 160px;
 	}
 }
