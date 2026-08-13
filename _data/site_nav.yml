@@ -1,5 +1,8 @@
 
 # Entries for the primary site navigation.
+#
+# Keeping it simple with a single level.
+#
 site_nav:
   - name: "Services"
     url: "/services"
