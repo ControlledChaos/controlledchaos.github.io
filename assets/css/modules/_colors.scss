@@ -3,6 +3,7 @@
 ///
 
 @use 'sass:color';
+@use 'functions' as f;
 
 // General colors.
 $white       : #ffffff !default;
@@ -19,18 +20,42 @@ $yellow      : #ffdd00 !default;
 $green       : #00aa00 !default;
 $blue        : #0044aa !default;
 $violet      : #551188 !default;
+$purple      : #bb00aa !default;
 $error       : $red    !default;
 $danger      : $red    !default;
 $notify      : $orange !default;
 $warning     : $yellow !default;
 $success     : $green  !default;
 
+$colors: (
+	'white'       : $white,
+	'off-white'   : $off_white,
+	'black'       : $black,
+	'near-black'  : $near_black,
+	'dark-gray'   : $gray_dark,
+	'medium-gray' : $gray_medium,
+	'light-gray'  : $gray_light,
+	'pale-gray'   : $gray_pale,
+	'red'         : $red,
+	'orange'      : $orange,
+	'yellow'      : $yellow,
+	'green'       : $green,
+	'blue'        : $blue,
+	'purple'      : $purple,
+	'violet'      : $violet,
+	'error'       : $error,
+	'danger'      : $danger,
+	'notify'      : $notify,
+	'warning'     : $warning,
+	'success'     : $success
+) !default;
+
 // Theme colors.
 $theme_primary:       #846f8b !default;
 $theme_primary_light: #927b98 !default;
 $theme_primary_dark:  #72577a !default;
 
-$theme_secondary:       #9fb653 !default;
+$theme_secondary:       #abc123 !default;
 $theme_secondary_light: #b0c572 !default;
 $theme_secondary_dark:  #7c9419 !default;
 
@@ -40,42 +65,4 @@ $body_color_dark: $near_black !default;
 $text_color:      color.adjust( $color: $theme_primary_dark, $lightness: -5% ) !default;
 $text_color_dark: $off_white !default;
 
-///
-/// Functions to fill SVG as background images.
-///
-/// These require the variables to be hex colors.
-///
-/// @example background-image: url( "data:image/svg+xml;utf8,<svg ...>
-///          <path fill='#{ colors.button_svg_color() }'...
-///
-@function svg_fill_any( $color ) {
-	@return '%23' + str-slice( $color, 2, -1 );
-}
 
-@function svg_fill_white() {
-	@return '%23' + str-slice( '#{$white}', 2, -1 );
-}
-
-@function svg_fill_primary() {
-	@return '%23' + str-slice( '#{$theme_primary}', 2, -1 );
-}
-
-@function svg_fill_primary_light() {
-	@return '%23' + str-slice( '#{$theme_primary_light}', 2, -1 );
-}
-
-@function svg_fill_primary_dark() {
-	@return '%23' + str-slice( '#{$theme_primary_dark}', 2, -1 );
-}
-
-@function svg_fill_secondary() {
-	@return '%23' + str-slice( '#{$theme_secondary}', 2, -1 );
-}
-
-@function svg_fill_secondary_light() {
-	@return '%23' + str-slice( '#{$theme_secondary_light}', 2, -1 );
-}
-
-@function svg_fill_secondary_dark() {
-	@return '%23' + str-slice( '#{$theme_secondary_dark}', 2, -1 );
-}
