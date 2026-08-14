@@ -101,9 +101,9 @@ jQuery(document).ready( function($) {
 
 				var scroll = $(window).scrollTop();
 				if ( scroll >= 32 ) {
-					$( '.site-header' ).addClass( 'header-scrolled' );
+					$( '.site-header' ).addClass( 'header-scrolled' ).removeClass( 'header-alt-tp' );
 				} else {
-					$( '.site-header' ).removeClass( 'header-scrolled' );
+					$( '.site-header' ).removeClass( 'header-alt-tp' ).addClass( 'header-scrolled' );
 				}
 			} else {
 				$( '.sections-nav' ).show();
