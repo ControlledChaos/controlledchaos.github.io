@@ -56,6 +56,26 @@ jQuery(document).ready( function($) {
 			// Start with header classes for slider.
 			$( '.site-header, .header-wrap' ).addClass( 'header-alt-tp' );
 
+			// Add/remove header classes by scroll position.
+			$(window).scroll( function() {
+				const scrollTop = $(this).scrollTop();
+				const scrollPx  = 48;
+				if ( scrollTop > scrollPx ) {
+					$( '.site-header, .header-wrap' ).removeClass( 'header-alt-tp' );
+
+					if ( destination.index == 4 ) {
+						$( '.site-header' ).addClass( 'header-alt-01' );
+						$( '.header-wrap' ).addClass( 'header-alt-tp' );
+					}
+					if ( origin.index == 4 && direction =='up' ) {
+						$( '.site-header' ).removeClass( 'header-alt-01' );
+						$( '.header-wrap' ).removeClass( 'header-alt-tp' );
+					}
+				} else {
+					$( '.site-header, .header-wrap' ).addClass( 'header-alt-tp' );
+				}
+			});
+
 			// Start Slick slideshow.
 			$( '#intro-slides' ).slick({
 				slidesToShow    : 1,
@@ -95,27 +115,6 @@ jQuery(document).ready( function($) {
 		},
 		afterResponsive: function( origin, destination, direction, isResponsive ) {
 			if ( isResponsive ) {
-
-				// Add/remove header classes by scroll position.
-				$(window).scroll( function() {
-					const scrollTop = $(this).scrollTop();
-					const scrollPx  = 48;
-					if ( scrollTop > scrollPx ) {
-						$( '.site-header, .header-wrap' ).removeClass( 'header-alt-tp' );
-
-						if ( destination.index == 4 ) {
-							$( '.site-header' ).addClass( 'header-alt-01' );
-							$( '.header-wrap' ).addClass( 'header-alt-tp' );
-						}
-						if ( origin.index == 4 && direction =='up' ) {
-							$( '.site-header' ).removeClass( 'header-alt-01' );
-							$( '.header-wrap' ).removeClass( 'header-alt-tp' );
-						}
-					} else {
-						$( '.site-header, .header-wrap' ).addClass( 'header-alt-tp' );
-					}
-				});
-
 				$( '.sections-nav' ).hide();
 				$( '.front-page-section' ).addClass( 'doing-responsive' );
 			} else {
