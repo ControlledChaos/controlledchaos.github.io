@@ -62,6 +62,9 @@ jQuery(document).ready( function($) {
 				const scrollPx  = 48;
 				if ( scrollTop > scrollPx ) {
 
+					// Add class to the body element.
+					var body = document.querySelector( 'body' );
+						body.classList.add( 'scrolled' );
 
 					if ( origin.index == 0 && direction =='down' ) {
 						// $( '.site-header, .header-wrap' ).removeClass( 'header-alt-tp' );
