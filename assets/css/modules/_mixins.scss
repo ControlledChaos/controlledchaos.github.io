@@ -1,0 +1,21 @@
+///
+/// SCSS mixins
+///
+
+@mixin flex-center {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	overflow: hidden;
+	padding: var( --ccd-spacing--y ) var( --ccd-spacing--x );
+}
+
+@mixin inline-flex-center {
+	display: inline-flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	overflow: hidden;
+	padding: var( --ccd-spacing--y ) var( --ccd-spacing--x );
+}
