@@ -29,14 +29,13 @@
 jQuery(document).ready( function($) {
 
 	// Start with header classes for slider.
-	$( '.site-header' ).addClass( 'header-alt-tp' );
-	$( '.header-wrap' ).addClass( 'header-alt-tp' );
+	$( '.site-header, .header-wrap' ).addClass( 'header-alt-tp' );
 
 	var scroll = $(window).scrollTop();
 	if ( scroll >= 32 ) {
-		$( '.site-header' ).addClass( 'header-scrolled' ).removeClass( 'header-alt-tp' );
+		$( '.site-header, .header-wrap' ).addClass( 'header-scrolled' ).removeClass( 'header-alt-tp' );
 	} else {
-		$( '.site-header' ).removeClass( 'header-alt-tp' ).addClass( 'header-scrolled' );
+		$( '.site-header, .header-wrap' ).addClass( 'header-alt-tp' ).removeClass( 'header-scrolled' );
 	}
 
 	// FullPage navigation & presentation of sections.
