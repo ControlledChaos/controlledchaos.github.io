@@ -32,7 +32,9 @@ jQuery(document).ready( function($) {
 	// $( '.site-header, .header-wrap' ).addClass( 'header-alt-tp' );
 
 	var scroll = $(window).scrollTop();
-	if ( scroll >= 32 ) {
+	if ( ! scroll ) {
+		$( '.site-header, .header-wrap' ).addClass( 'header-alt-tp' );
+	} else if ( scroll >= 32 ) {
 		$( '.site-header, .header-wrap' ).addClass( 'header-scrolled' ).removeClass( 'header-alt-tp' );
 	} else {
 		$( '.site-header, .header-wrap' ).addClass( 'header-alt-tp' ).removeClass( 'header-scrolled' );
