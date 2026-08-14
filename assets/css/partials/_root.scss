@@ -107,6 +107,12 @@
 	// Page/Post content.
 	--ccd-page-title--font-size: 3.25rem;
 	--ccd-page-title--font-weight: 500;
+	--ccd-page-title--line-height: 95%;
+	--ccd-page-subtitle--margin: 0;
+	@media screen and ( max-width: l.$bp_sm ) {
+		--ccd-page-subtitle--margin: 0.5em 0 0 0;
+	}
+
 
 	// Front page.
 	--ccd-front-intro--avatar--size: 200px;

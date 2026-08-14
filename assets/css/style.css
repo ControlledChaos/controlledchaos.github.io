@@ -477,6 +477,17 @@ b, strong, optgroup {
   --ccd-site-title--text-color: #ffffff;
   --ccd-page-title--font-size: 3.25rem;
   --ccd-page-title--font-weight: 500;
+  --ccd-page-title--line-height: 95%;
+  --ccd-page-subtitle--margin: 0;
+}
+@media screen and (max-width: 640px) {
+  :host,
+  :root {
+    --ccd-page-subtitle--margin: 0.5em 0 0 0;
+  }
+}
+:host,
+:root {
   --ccd-front-intro--avatar--size: 200px;
 }
 @media screen and (max-width: 800px) {
@@ -1087,11 +1098,11 @@ figcaption {
   font-size: var(--ccd-page-title--font-size, var(--ccd-heading-primary--font-size, 2rem));
   font-weight: var(--ccd-page-title--font-weight, var(--ccd-heading-primary--font-weight, 700));
   letter-spacing: var(--ccd-page-title--letter-spacing, -0.0325em);
-  line-height: 1.2;
+  line-height: var(--ccd-page-title--line-height, 1.2);
 }
 
 .page-subtitle {
-  margin: var(--ccd-page-subtitle--margin, 0);
+  margin: var(--ccd-page-subtitle--margin, 0.5em 0 0 0);
   font-family: var(--ccd-page-subtitle--font-family);
   font-size: var(--ccd-page-subtitle--font-size, 1.1875rem);
   font-weight: var(--ccd-page-subtitle--font-weight, 500);
@@ -1599,7 +1610,7 @@ figcaption {
 }
 @media screen and (max-width: 640px) {
   .content-loop-grid {
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 .content-loop-grid .featured-post figure {
@@ -1664,7 +1675,7 @@ figcaption {
   text-align: center;
 }
 .post-page .post-title {
-  margin: 0;
+  margin: 0.5em 0 0 0;
   line-height: 80%;
 }
 .post-page .post-subtitle {
