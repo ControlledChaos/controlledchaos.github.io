@@ -42,10 +42,10 @@ jQuery(document).ready( function($) {
         // Check if scroll position exceeds the threshold
         if (scrollPosition > scrollThreshold) {
             // Add 'scrolled' class if scrolled past threshold
-            $('.site-header, .header-wrap').addClass('header-alt-tp');
+            $('.site-header, .header-wrap').removeClass('header-alt-tp');
         } else {
             // Remove 'scrolled' class if back to top
-            $('.site-header, .header-wrap').removeClass('header-alt-tp');
+            $('.site-header, .header-wrap').addClass('header-alt-tp');
         }
     });
 
