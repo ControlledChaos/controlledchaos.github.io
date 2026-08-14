@@ -442,8 +442,14 @@ b, strong, optgroup {
   --ccd-box--border-width: 1px;
   --ccd-box--border-color: #cccccc;
   --ccd-box--border-color--dark: #555555;
-  --ccd-box--border: var( --ccd-box--border-style ) var( --ccd-box--border-width ) var( --ccd-box--border-color );
-  --ccd-box--border--dark: var( --ccd-box--border-style ) var( --ccd-box--border-width ) var( --ccd-box--border-color--dark );
+  --ccd-box--border:
+  	var( --ccd-box--border-style )
+  	var( --ccd-box--border-width )
+  	var( --ccd-box--border-color );
+  --ccd-box--border--dark:
+  	var( --ccd-box--border-style )
+  	var( --ccd-box--border-width )
+  	var( --ccd-box--border-color--dark );
   --ccd-element--margin-top: calc( var( --ccd-spacing--y ) / 2 );
   --ccd-body--font-family: var( --ccd-fonts--general-stack );
   --ccd-body--font-size: 1rem;

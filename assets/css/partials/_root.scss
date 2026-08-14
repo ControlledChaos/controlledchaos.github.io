@@ -57,8 +57,14 @@
 	--ccd-box--border-width: 1px;
 	--ccd-box--border-color: #{c.$gray_pale};
 	--ccd-box--border-color--dark: #{c.$gray_medium};
-	--ccd-box--border: var( --ccd-box--border-style ) var( --ccd-box--border-width ) var( --ccd-box--border-color );
-	--ccd-box--border--dark: var( --ccd-box--border-style ) var( --ccd-box--border-width ) var( --ccd-box--border-color--dark );
+	--ccd-box--border:
+		var( --ccd-box--border-style )
+		var( --ccd-box--border-width )
+		var( --ccd-box--border-color );
+	--ccd-box--border--dark:
+		var( --ccd-box--border-style )
+		var( --ccd-box--border-width )
+		var( --ccd-box--border-color--dark );
 
 	// Body & general text.
 	--ccd-element--margin-top: calc( var( --ccd-spacing--y ) / 2 );
@@ -100,9 +106,9 @@
 		calc( var( --ccd-spacing--y ) / 2 )
 		var( --ccd-spacing--x );
 	--ccd-site-header--bg-color: var( --ccd-color--one--base );
-	--ccd-site-header--text-color: #{c.$white};
+	--ccd-site-header--text-color: #ffffff;
 	--ccd-site-title--font-weight: 470;
-	--ccd-site-title--text-color: #{c.$white};
+	--ccd-site-title--text-color: #ffffff;
 
 	// Page/Post content.
 	--ccd-page-title--font-size: 3.25rem;
@@ -112,7 +118,6 @@
 	@media screen and ( max-width: l.$bp_sm ) {
 		--ccd-page-subtitle--margin: 0.5em 0 0 0;
 	}
-
 
 	// Front page.
 	--ccd-front-intro--avatar--size: 200px;
