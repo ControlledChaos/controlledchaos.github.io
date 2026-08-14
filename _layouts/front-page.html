@@ -51,7 +51,7 @@ jQuery(document).ready( function($) {
 			// Remove "made with" credit.
 			$( '.fp-watermark' ).remove();
 		},
-		afterRender : function() {
+		afterRender : function( origin, destination, direction ) {
 
 			// Start with header classes for slider.
 			$( '.site-header, .header-wrap' ).addClass( 'header-alt-tp' );
