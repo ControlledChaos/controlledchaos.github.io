@@ -98,6 +98,13 @@ jQuery(document).ready( function($) {
 			if ( isResponsive ) {
 				$( '.sections-nav' ).hide();
 				$( '.front-page-section' ).addClass( 'doing-responsive' );
+
+				var scroll = $(window).scrollTop();
+				if ( scroll >= 32 ) {
+					$( '.site-header' ).addClass( 'header-scrolled' );
+				} else {
+					$( '.site-header' ).removeClass( 'header-scrolled' );
+				}
 			} else {
 				$( '.sections-nav' ).show();
 				$( '.front-page-section' ).removeClass( 'doing-responsive' );
