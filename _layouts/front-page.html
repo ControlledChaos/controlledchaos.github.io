@@ -28,9 +28,6 @@
 // Various jQuery scripts on document ready.
 jQuery(document).ready( function($) {
 
-	// Start with header classes for slider.
-	$( '.site-header, .header-wrap' ).addClass( 'header-alt-tp' );
-
 	// FullPage navigation & presentation of sections.
 	$( '#front-page-sections' ).fullpage({
 		anchors     : [ 'slides', 'intro', 'projects', 'posts', 'footer' ],
@@ -56,6 +53,9 @@ jQuery(document).ready( function($) {
 		},
 		afterRender : function() {
 
+			// Start with header classes for slider.
+			$( '.site-header, .header-wrap' ).addClass( 'header-alt-tp' );
+
 			// Start Slick slideshow.
 			$( '#intro-slides' ).slick({
 				slidesToShow    : 1,
@@ -73,7 +73,7 @@ jQuery(document).ready( function($) {
 				nextArrow: '<button class="slick-next" aria-label="Next" type="button"><span class="screen-reader-text">Next </span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><path fill="currentColor" d="M241.5 239c9.4 9.4 9.4 24.6 0 33.9L81.5 433c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l143-143-143-143c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l160 160z"/></svg></button>'
 			});
 		},
-		onLeave : function( origin, destination, direction ) {
+		onLeave : function( origin, destination, direction, isResponsive ) {
 
 			// Conditional header classes.
 			if ( origin.index == 0 && direction =='down' ) {
@@ -99,7 +99,7 @@ jQuery(document).ready( function($) {
 				// Add/remove header classes by scroll position.
 				$(window).scroll( function() {
 					const scrollTop = $(this).scrollTop();
-					const scrollPx  = 80;
+					const scrollPx  = 48;
 					if ( scrollTop > scrollPx ) {
 						$( '.site-header, .header-wrap' ).removeClass( 'header-alt-tp' );
 
