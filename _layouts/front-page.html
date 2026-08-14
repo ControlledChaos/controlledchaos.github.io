@@ -93,19 +93,25 @@ jQuery(document).ready( function($) {
 				$( '.header-wrap' ).removeClass( 'header-alt-tp' );
 			}
 		},
-		afterResponsive: function( isResponsive ) {
+		afterResponsive: function( origin, destination, direction, isResponsive ) {
 			if ( isResponsive ) {
 
 				// Add/remove header classes by scroll position.
 				$(window).scroll( function() {
-
 					const scrollTop = $(this).scrollTop();
 					const scrollPx  = 80;
-
 					if ( scrollTop > scrollPx ) {
 						$( '.site-header, .header-wrap' ).removeClass( 'header-alt-tp' );
 					} else {
-						$( '.site-header, .header-wrap' ).addClass( 'header-alt-tp' );
+						if ( destination.index == 4 ) {
+							$( '.site-header' ).addClass( 'header-alt-01' );
+							$( '.header-wrap' ).addClass( 'header-alt-tp' );
+						} else if ( origin.index == 4 && direction =='up' ) {
+							$( '.site-header' ).removeClass( 'header-alt-01' );
+							$( '.header-wrap' ).removeClass( 'header-alt-tp' );
+						} else {
+							$( '.site-header, .header-wrap' ).addClass( 'header-alt-tp' );
+						}
 					}
 				});
 
