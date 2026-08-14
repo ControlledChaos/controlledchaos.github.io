@@ -921,6 +921,10 @@ figcaption {
   background-image: none;
   transition: all 350ms;
 }
+.js .front-page.fp-viewing-slides .site-header,
+.js .front-page.fp-viewing-slides .header-wrap {
+  background-color: transparent;
+}
 
 .site-identity {
   display: flex;
