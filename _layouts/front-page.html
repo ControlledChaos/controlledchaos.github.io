@@ -32,13 +32,6 @@ jQuery(document).ready( function($) {
 	$( '.site-header' ).addClass( 'header-alt-tp' );
 	$( '.header-wrap' ).addClass( 'header-alt-tp' );
 
-	var scroll = $(window).scrollTop();
-	if ( scroll >= 32 ) {
-		$( '.site-header' ).addClass( 'header-scrolled' );
-	} else {
-		$( '.site-header' ).removeClass( 'header-scrolled' );
-	}
-
 	// FullPage navigation & presentation of sections.
 	$( '#front-page-sections' ).fullpage({
 		anchors     : [ 'slides', 'intro', 'projects', 'posts', 'footer' ],
