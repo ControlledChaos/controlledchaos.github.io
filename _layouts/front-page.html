@@ -31,14 +31,23 @@ jQuery(document).ready( function($) {
 	// Start with header classes for slider.
 	// $( '.site-header, .header-wrap' ).addClass( 'header-alt-tp' );
 
-	var scroll = $(window).scrollTop();
-	if ( ! scroll ) {
-		$( '.site-header, .header-wrap' ).addClass( 'header-alt-tp' );
-	} else if ( scroll >= 32 ) {
-		$( '.site-header, .header-wrap' ).addClass( 'header-scrolled' ).removeClass( 'header-alt-tp' );
-	} else {
-		$( '.site-header, .header-wrap' ).addClass( 'header-alt-tp' ).removeClass( 'header-scrolled' );
-	}
+	// Detect scroll events on the window
+    $(window).scroll(function() {
+        // Get the vertical scroll position
+        const scrollPosition = $(this).scrollTop();
+
+        // Define the scroll threshold (e.g., 50px from the top)
+        const scrollThreshold = 50;
+
+        // Check if scroll position exceeds the threshold
+        if (scrollPosition > scrollThreshold) {
+            // Add 'scrolled' class if scrolled past threshold
+            $('.site-header, .header-wrap').addClass('header-alt-tp');
+        } else {
+            // Remove 'scrolled' class if back to top
+            $('.site-header, .header-wrap').removeClass('header-alt-tp');
+        }
+    });
 
 	// FullPage navigation & presentation of sections.
 	$( '#front-page-sections' ).fullpage({
