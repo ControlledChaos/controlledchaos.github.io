@@ -12,7 +12,7 @@
 	.section-wrap {
 		position: relative;
 		max-width: var( --ccd-wrap--general--max-width );
-		padding: 0 var( --ccd-spacing--x, 2rem );
+		margin: 0 var( --ccd-spacing--x, 2rem );
 	}
 
 	&:not( :first-of-type ),
