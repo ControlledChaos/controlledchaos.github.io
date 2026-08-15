@@ -514,8 +514,8 @@ b, strong, optgroup {
 }
 :host,
 :root {
-  --ccd-selection--bg-color: var( --ccd-color--two--light );
-  --ccd-selection--text-color: #503d55;
+  --ccd-selection--bg-color: #ced89a;
+  --ccd-selection--text-color: #423846;
 }
 @keyframes spinner {
   from {
