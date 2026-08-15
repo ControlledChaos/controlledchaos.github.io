@@ -77,6 +77,15 @@ defaults:
       cover: "banner"
       page_image: false # Fallback in templates.
       page_thumb: false # Fallback in templates.
+  - scope:
+      path: "" # empty string == all files in project.
+      type: "projects"
+    values:
+      layout: "project"
+      page_type: "WebPage"
+      cover: "banner"
+      page_image: false # Fallback in templates.
+      page_thumb: false # Fallback in templates.
 
 # Blog pages
 blog_view: "preview" # preview, grid, or full
