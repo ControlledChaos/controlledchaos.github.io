@@ -105,8 +105,8 @@ body {
 		border-radius: var( --ccd-loading-icon--border-radius, 100% );
 		width: var( --ccd-loading-icon--width, var( --ccd-spacing--x, 2rem ) );
 		height: var( --ccd-loading-icon--height, var( --ccd-spacing--x, 2rem ) );
-		-webkit-animation: spinner 1.5s infinite linear;
-				animation: spinner 1.5s infinite linear;
+		-webkit-animation: spinner 1.125s infinite linear;
+				animation: spinner 1.125s infinite linear;
 		background-color: var( --ccd-loading-icon--background-color, transparent );
 	}
 }

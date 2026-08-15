@@ -517,7 +517,7 @@ b, strong, optgroup {
     transform: rotate(0deg);
   }
   to {
-    transform: rotate(359deg);
+    transform: rotate(360deg);
   }
 }
 body {
@@ -601,7 +601,7 @@ body {
   border-radius: var(--ccd-loading-icon--border-radius, 100%);
   width: var(--ccd-loading-icon--width, var(--ccd-spacing--x, 2rem));
   height: var(--ccd-loading-icon--height, var(--ccd-spacing--x, 2rem));
-  animation: spinner 1.5s infinite linear;
+  animation: spinner 1.125s infinite linear;
   background-color: var(--ccd-loading-icon--background-color, transparent);
 }
 
