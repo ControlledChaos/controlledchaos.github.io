@@ -7,30 +7,27 @@
 <header id="masthead" class="{{ class }}" role="banner" itemscope="itemscope" itemtype="http://schema.org/Organization">
 	<div class="general-wrap header-wrap">
 		<div class="site-identity">
-
-			{%- unless page.url == "/" -%}
-			<a href="{{ site.github.url }}">
-			{%- endunless -%}
-
 			{%- if site.site_icon -%}
 			<figure class="site-avatar" role="presentation">
-				{% include svg/site-icon.svg -%}
-				<figcaption class="screen-reader-text">
-					<span>Controlled Chaos Design avatar. Not a logo!</span>
-				</figcaption>
+				{%- unless page.url == "/" -%}
+				<a href="{{ site.github.url }}">
+				{%- endunless -%}
+					{% include svg/site-icon.svg -%}
+					<figcaption class="screen-reader-text">
+						<span>Controlled Chaos Design avatar. Not a logo!</span>
+					</figcaption>
+				{%- unless page.url == "/" -%}
+				</a>
+				{%- endunless -%}
 			</figure>
 			{%- endif -%}
-
 			{%- if page.url == "/" -%}
 			<h1 class="site-title">{{ site.title }}</h1>
 			{%- else -%}
-			<p class="site-title">{{ site.title }}</p>
+			<p class="site-title">
+				<a href="{{ site.github.url }}">{{ site.title }}</a>
+			</p>
 			{%- endif -%}
-
-			{%- unless page.url == "/" -%}
-			</a>
-			{%- endunless -%}
-
 		</div>
 		{%- if site.data.site_nav.site_nav -%}
 		{% include site-nav.html -%}
