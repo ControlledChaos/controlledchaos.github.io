@@ -26,6 +26,15 @@
 		}
 	}
 
+	&#section-intro {
+		margin: 0;
+		padding-top: var( --ccd-spacing--y--plus-half, 3rem );
+
+		.page-title {
+			margin: 0;
+		}
+	}
+
 	.content-loop-grid {
 		max-width: calc( 100% - var( --ccd-spacing--x--half ) );
 	}
@@ -219,9 +228,13 @@
 			transform: translateX(0);
 		}
 		&.scroll-down {
+			svg {
+				height: 2rem;
+				transform: translateY(0);
+			}
 			&:hover {
 				svg {
-					transform: none;
+					transform: translateY( 0.25rem );
 				}
 			}
 		}
