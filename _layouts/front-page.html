@@ -32,6 +32,12 @@ jQuery(document).ready( function($) {
 		delay: 150,
 		theme: 'ccdzen'
 	});
+
+	$( '.scroll-down' ).click( function(e) {
+		e.preventDefault();
+		$( 'html, body' ).animate( { scrollTop : 0 }, 450 );
+		return false;
+	});
 });
 
 // Remove loading panel after assets/images are loaded.
