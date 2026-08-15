@@ -171,6 +171,7 @@
 	justify-content: center;
 	padding: var( --ccd-spacing--y ) var( --ccd-spacing--x );
 	color: #ffffff;
+	text-align: center;
 
 	a {
 		color: inherit;
@@ -185,12 +186,11 @@
 		font-size: clamp( 3rem, 5.5vw, 4.25rem );
 		font-weight: 450;
 		letter-spacing: var( --ccd-heading-primary--letter-spacing, -0.015em );
-		line-height: 1.2;
+		line-height: 1;
 		color: inherit;
 	}
 
 	.intro-slide-text {
-		margin: 0;
 		font-size: 1.1875rem;
 		font-weight: 500;
 		line-height: 1.2;
