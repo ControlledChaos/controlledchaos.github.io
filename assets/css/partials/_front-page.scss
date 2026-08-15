@@ -218,14 +218,13 @@
 			transition: transform .15s;
 			transform: translateX(0);
 		}
-
 		&.scroll-down {
-			svg {
-				height: 2rem;
-				transform: none;
+			&:hover {
+				svg {
+					transform: none;
+				}
 			}
 		}
-
 		&:hover {
 			svg {
 				transform: translateX( 0.25rem );

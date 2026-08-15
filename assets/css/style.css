@@ -1331,8 +1331,7 @@ figcaption {
   transition: transform 0.15s;
   transform: translateX(0);
 }
-.intro-slide-content .intro-slide-link.scroll-down svg {
-  height: 2rem;
+.intro-slide-content .intro-slide-link.scroll-down:hover svg {
   transform: none;
 }
 .intro-slide-content .intro-slide-link:hover svg {
