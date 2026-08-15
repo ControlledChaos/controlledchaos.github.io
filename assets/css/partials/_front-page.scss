@@ -12,6 +12,7 @@
 	&:not( :first-of-type ),
 	&.site-footer {
 		margin-top: var( --ccd-spacing--y, 2rem );
+		border-top: var( --ccd-box--border );
 	}
 
 	.section-wrap {

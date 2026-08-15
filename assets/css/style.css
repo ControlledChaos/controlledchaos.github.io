@@ -1145,6 +1145,7 @@ figcaption {
 }
 .front-page-section:not(:first-of-type), .front-page-section.site-footer {
   margin-top: var(--ccd-spacing--y, 2rem);
+  border-top: var(--ccd-box--border);
 }
 .front-page-section .section-wrap {
   position: relative;
