@@ -1333,6 +1333,7 @@ figcaption {
 }
 .intro-slide-content .intro-slide-link.scroll-down svg {
   height: 2rem;
+  transform: none;
 }
 .intro-slide-content .intro-slide-link:hover svg {
   transform: translateX(0.25rem);
