@@ -923,7 +923,7 @@ figcaption {
     flex-direction: column;
   }
 }
-.site-identity:hover .site-avatar img {
+.site-identity:hover .site-avatar svg {
   animation: spinner 1.5s 1 linear;
 }
 .site-identity a {
