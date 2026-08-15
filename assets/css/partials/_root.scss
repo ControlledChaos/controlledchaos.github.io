@@ -132,6 +132,6 @@
 	}
 
 	// Text selection.
-	--ccd-selection--bg-color: #{f.lighten( c.$theme_two_base, 50% )};
-	--ccd-selection--text-color: #{f.darken( c.$theme_one_base, 50% )};
+	--ccd-selection--bg-color: #{f.lighten( c.$theme_two_base, 40% )};
+	--ccd-selection--text-color: #{f.darken( c.$theme_one_base, 60% )};
 }

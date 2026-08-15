@@ -514,8 +514,8 @@ b, strong, optgroup {
 }
 :host,
 :root {
-  --ccd-selection--bg-color: #ced89a;
-  --ccd-selection--text-color: #423846;
+  --ccd-selection--bg-color: #c4d085;
+  --ccd-selection--text-color: #352c38;
 }
 @keyframes spinner {
   from {
