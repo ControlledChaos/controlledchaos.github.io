@@ -1149,7 +1149,7 @@ figcaption {
   margin: 0 var(--ccd-spacing--x, 2rem);
 }
 .front-page-section:not(:first-of-type), .front-page-section.site-footer {
-  margin-top: var(--ccd-spacing--y, 2rem);
+  margin-top: var(--ccd-spacing--y--plus-half, 3rem);
 }
 .front-page-section:not(:first-of-type):not(:nth-of-type(2)) .section-wrap, .front-page-section.site-footer:not(:nth-of-type(2)) .section-wrap {
   border-top: var(--ccd-box--border);
