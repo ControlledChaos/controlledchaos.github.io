@@ -21,123 +21,45 @@
 
 <!-- Scripts specific to the front page. -->
 <script src="{{ '/assets/js/slider.min.js' | relative_url }}"></script>
-<script src="{{ '/assets/js/fullpage.min.js' | relative_url }}"></script>
-<script src="{{ '/assets/js/fullpage.extensions.min.js' | relative_url }}"></script>
 <script>
 
 // Various jQuery scripts on document ready.
 jQuery(document).ready( function($) {
 
-	// FullPage navigation & presentation of sections.
-	$( '#front-page-sections' ).fullpage({
-		anchors     : [ 'slides', 'intro', 'projects', 'posts', 'footer' ],
-		lockAnchors : true,
-		navigation  : true,
-		showActiveTooltip  : false,
-		navigationTooltips : false,
-		dragAndMove     : true,
-		sectionSelector : '.front-page-section',
-		paddingTop      : 0,
-		paddingBottom   : 0,
-		scrollOverflow      : true,
-		scrollOverflowReset : true,
-		responsiveWidth     : 800,
-		afterLoad : function( origin, destination, direction ) {
+	// Start with header classes for slider.
+	$( '.site-header, .header-wrap' ).addClass( 'header-alt-tp' );
+
+	// Add/remove header classes by scroll position.
+	$(window).scroll( function() {
+		const scrollTop = $(this).scrollTop();
+		const scrollPx  = 80;
+		if ( scrollTop > scrollPx ) {
 
 			// Add class to the body element.
 			var body = document.querySelector( 'body' );
-				body.classList.add( 'custom-scroll' );
+				body.classList.add( 'scrolled' );
 
-			// Remove "made with" credit.
-			$( '.fp-watermark' ).remove();
-		},
-		afterRender : function( origin, destination, direction ) {
-
-			// Start with header classes for slider.
+			$( '.site-header, .header-wrap' ).removeClass( 'header-alt-tp' );
+		} else {
 			$( '.site-header, .header-wrap' ).addClass( 'header-alt-tp' );
-
-			// Add/remove header classes by scroll position.
-			$(window).scroll( function() {
-				const scrollTop = $(this).scrollTop();
-				const scrollPx  = 48;
-				if ( scrollTop > scrollPx ) {
-
-					// Add class to the body element.
-					var body = document.querySelector( 'body' );
-						body.classList.add( 'scrolled' );
-
-					if ( origin.index == 0 && direction =='down' ) {
-						// $( '.site-header, .header-wrap' ).removeClass( 'header-alt-tp' );
-					}
-					/*
-					if ( destination.index == 4 ) {
-						$( '.site-header' ).addClass( 'header-alt-01' );
-						$( '.header-wrap' ).addClass( 'header-alt-tp' );
-					}
-					if ( origin.index == 4 && direction =='up' ) {
-						$( '.site-header' ).removeClass( 'header-alt-01' );
-						$( '.header-wrap' ).removeClass( 'header-alt-tp' );
-					}
-					*/
-				} else {
-					// $( '.site-header, .header-wrap' ).addClass( 'header-alt-tp' );
-				}
-			});
-
-			// Start Slick slideshow.
-			$( '#intro-slides' ).slick({
-				slidesToShow    : 1,
-				slidesToScroll  : 1,
-				autoplay        : true,
-				autoplaySpeed   : 5500,
-				speed           : 750,
-				fade            : true,
-				easing          : 'easeInOut',
-				adaptiveHeight  : false,
-				pauseOnHover    : false,
-				dots            : false,
-				arrows          : true,
-				prevArrow: '<button class="slick-prev" aria-label="Previous" type="button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><path fill="currentColor" d="M15.5 239c-9.4 9.4-9.4 24.6 0 33.9l160 160c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-143-143 143-143c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0L15.5 239z"/></svg><span class="screen-reader-text"> Previous</span></button>',
-				nextArrow: '<button class="slick-next" aria-label="Next" type="button"><span class="screen-reader-text">Next </span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><path fill="currentColor" d="M241.5 239c9.4 9.4 9.4 24.6 0 33.9L81.5 433c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l143-143-143-143c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l160 160z"/></svg></button>'
-			});
-		},
-		onLeave : function( origin, destination, direction, isResponsive ) {
-
-			// Conditional header classes.
-			if ( origin.index == 0 && direction =='down' ) {
-				$( '.site-header' ).removeClass( 'header-alt-tp' ).addClass( 'header-scrolled' );
-				$( '.header-wrap' ).removeClass( 'header-alt-tp' )
-			}
-			if ( destination.index == 0 ) {
-				$( '.site-header' ).removeClass( 'header-scrolled' ).addClass( 'header-alt-tp' );
-				$( '.header-wrap' ).addClass( 'header-alt-tp' );
-			}
-			if ( destination.index == 4 ) {
-				$( '.site-header' ).addClass( 'header-alt-01' );
-				$( '.header-wrap' ).addClass( 'header-alt-tp' );
-			}
-			if ( origin.index == 4 && direction =='up' ) {
-				$( '.site-header' ).removeClass( 'header-alt-01' );
-				$( '.header-wrap' ).removeClass( 'header-alt-tp' );
-			}
-		},
-		afterResponsive: function( origin, destination, direction, isResponsive ) {
-			if ( isResponsive ) {
-				$( '.sections-nav' ).hide();
-				$( '.front-page-section' ).addClass( 'doing-responsive' );
-			} else {
-				$( '.sections-nav' ).show();
-				$( '.front-page-section' ).removeClass( 'doing-responsive' );
-			}
 		}
 	});
 
-	// FullPage section navigation buttons.
-	$( '.scroll-down' ).click( function() {
-		fullpage_api.moveSectionDown();
-	});
-	$( '.scroll-up' ).click( function() {
-		fullpage_api.moveSectionUp();
+	// Start Slick slideshow.
+	$( '#intro-slides' ).slick({
+		slidesToShow    : 1,
+		slidesToScroll  : 1,
+		autoplay        : true,
+		autoplaySpeed   : 5500,
+		speed           : 750,
+		fade            : true,
+		easing          : 'easeInOut',
+		adaptiveHeight  : false,
+		pauseOnHover    : false,
+		dots            : false,
+		arrows          : true,
+		prevArrow: '<button class="slick-prev" aria-label="Previous" type="button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><path fill="currentColor" d="M15.5 239c-9.4 9.4-9.4 24.6 0 33.9l160 160c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-143-143 143-143c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0L15.5 239z"/></svg><span class="screen-reader-text"> Previous</span></button>',
+		nextArrow: '<button class="slick-next" aria-label="Next" type="button"><span class="screen-reader-text">Next </span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><path fill="currentColor" d="M241.5 239c9.4 9.4 9.4 24.6 0 33.9L81.5 433c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l143-143-143-143c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l160 160z"/></svg></button>'
 	});
 
 	// Custom Tooltipster tooltips for `title` attribute content.
