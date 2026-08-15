@@ -26,25 +26,6 @@
 // Various jQuery scripts on document ready.
 jQuery(document).ready( function($) {
 
-	// Start with header class for slider.
-	$( '.site-header' ).removeClass( 'header-bg' ).addClass( 'header-bg-tp' );
-
-	// Add/remove header classes by scroll position.
-	$(window).scroll( function() {
-		const scrollTop = $(this).scrollTop();
-		const scrollPx  = 80;
-		if ( scrollTop > scrollPx ) {
-
-			// Add class to the body element.
-			var body = document.querySelector( 'body' );
-				body.classList.add( 'scrolled' );
-
-			$( '.site-header' ).removeClass( 'header-bg-tp' ).addClass( 'header-bg' );
-		} else {
-			$( '.site-header' ).removeClass( 'header-bg' ).addClass( 'header-bg-tp' );
-		}
-	});
-
 	// Start Slick slideshow.
 	$( '#intro-slides' ).slick({
 		slidesToShow    : 1,

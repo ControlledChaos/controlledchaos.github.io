@@ -9,6 +9,8 @@
 .site-header {
 	width: var( --ccd-site-header--width, 100% );
 	margin: var( --ccd-site-header--margin, 0 );
+	background-color: var( --ccd-site-header--bg-color, inherit );
+	color: var( --ccd-site-header--text-color, inherit );
 
 	.header-wrap {
 		padding: var( --ccd-site-header--padding, 2rem );
@@ -16,28 +18,20 @@
 		justify-content: space-between;
 		align-items: center;
 		gap: var( --ccd-spacing--y--quarter ) var( --ccd-spacing--x );
+		background-image: linear-gradient(
+			45deg,
+			c.$theme_one_base 0%,
+			c.$theme_one_base 40%,
+			#{f.darken( c.$theme_one_dark, 20% )} 100%
+		);
 
 		@media screen and ( max-width: l.$bp_med ) {
 			flex-direction: column;
 		}
 	}
 
-	&.header-bg {
-		background-color: var( --ccd-site-header--bg-color, inherit );
-		color: var( --ccd-site-header--text-color, inherit );
-
-		.header-wrap {
-			background-image: linear-gradient(
-				45deg,
-				c.$theme_one_base 0%,
-				c.$theme_one_base 40%,
-				#{f.darken( c.$theme_one_dark, 20% )} 100%
-			);
-		}
-	}
-
 	&.header-bg-tp {
-		background-image: none;
+		background: transparent;
 		transition: all 625ms;
 
 		.header-wrap {

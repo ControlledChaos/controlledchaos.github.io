@@ -1,4 +1,10 @@
-<header id="masthead" class="site-header header-bg" role="banner" itemscope="itemscope" itemtype="http://schema.org/Organization">
+{%- if page.layout == 'front-sections' -%}
+	{%- assign class = 'site-header header-bg' -%}
+{%- else -%}
+	{%- assign class = 'site-header' -%}
+{%- endif -%}
+
+<header id="masthead" class="{{ class }}" role="banner" itemscope="itemscope" itemtype="http://schema.org/Organization">
 	<div class="general-wrap header-wrap">
 		<div class="site-identity">
 			{%- if site.site_icon -%}
