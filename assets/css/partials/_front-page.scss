@@ -9,16 +9,21 @@
 	position: relative;
 	clear: both;
 
-	&:not( :first-of-type ),
-	&.site-footer {
-		margin-top: var( --ccd-spacing--y, 2rem );
-		border-top: var( --ccd-box--border );
-	}
-
 	.section-wrap {
 		position: relative;
 		max-width: var( --ccd-wrap--general--max-width );
 		padding: 0 var( --ccd-spacing--x, 2rem );
+	}
+
+	&:not( :first-of-type ),
+	&.site-footer {
+		margin-top: var( --ccd-spacing--y, 2rem );
+
+		&:not( :nth-of-type(2) ) {
+			.section-wrap {
+				border-top: var( --ccd-box--border );
+			}
+		}
 	}
 
 	.content-loop-grid {

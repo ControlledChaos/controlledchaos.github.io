@@ -1143,14 +1143,16 @@ figcaption {
   position: relative;
   clear: both;
 }
-.front-page-section:not(:first-of-type), .front-page-section.site-footer {
-  margin-top: var(--ccd-spacing--y, 2rem);
-  border-top: var(--ccd-box--border);
-}
 .front-page-section .section-wrap {
   position: relative;
   max-width: var(--ccd-wrap--general--max-width);
   padding: 0 var(--ccd-spacing--x, 2rem);
+}
+.front-page-section:not(:first-of-type), .front-page-section.site-footer {
+  margin-top: var(--ccd-spacing--y, 2rem);
+}
+.front-page-section:not(:first-of-type):not(:nth-of-type(2)) .section-wrap, .front-page-section.site-footer:not(:nth-of-type(2)) .section-wrap {
+  border-top: var(--ccd-box--border);
 }
 .front-page-section .content-loop-grid {
   max-width: calc(100% - var(--ccd-spacing--x--half));
