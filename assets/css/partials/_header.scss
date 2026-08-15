@@ -2,6 +2,7 @@
 /// Site header styles
 ///
 
+@use '../modules/keyframes';
 @use '../modules/functions' as f;
 @use '../modules/colors' as c;
 @use '../modules/layout' as l;
@@ -52,6 +53,13 @@
 
 	@media screen and ( max-width: l.$bp_med ) {
 		flex-direction: column;
+	}
+
+	&:hover {
+		.site-avatar img {
+			-webkit-animation: spinner 1.5s 1 linear;
+					animation: spinner 1.5s 1 linear;
+		}
 	}
 
 	a {

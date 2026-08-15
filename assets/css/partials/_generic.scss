@@ -2,6 +2,7 @@
 /// General styles
 ///
 
+@use '../modules/keyframes';
 @use '../modules/layout';
 @use '../modules/colors' as c;
 
@@ -78,13 +79,6 @@ body {
 	}
 }
 
-// Full-page "page loading" panel.
-@keyframes spinner{
-	from { transform: rotate( 0deg ) }
-	to { transform: rotate( 359deg ) }
-}
-$loading_animation: spinner 1.25s infinite linear;
-
 .page-loading {
 	position: fixed;
 	top: 0;
@@ -111,7 +105,8 @@ $loading_animation: spinner 1.25s infinite linear;
 		border-radius: var( --ccd-loading-icon--border-radius, 100% );
 		width: var( --ccd-loading-icon--width, var( --ccd-spacing--x, 2rem ) );
 		height: var( --ccd-loading-icon--height, var( --ccd-spacing--x, 2rem ) );
-		animation: var( --ccd-loading-icon--animation, $loading_animation );
+		-webkit-animation: spinner 1.5s 1 linear;
+				animation: spinner 1.5s 1 linear;
 		background-color: var( --ccd-loading-icon--background-color, transparent );
 	}
 }
