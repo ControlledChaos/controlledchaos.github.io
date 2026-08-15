@@ -1288,9 +1288,14 @@ figcaption {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: var(--ccd-spacing--y) var(--ccd-spacing--x);
+  padding: calc(var(--ccd-spacing--y) * 3) var(--ccd-spacing--x) var(--ccd-spacing--y) var(--ccd-spacing--x);
   color: #ffffff;
   text-align: center;
+}
+@media screen and (max-width: 800px) {
+  .intro-slide-content {
+    padding-top: calc(var(--ccd-spacing--y) * 5);
+  }
 }
 .intro-slide-content a {
   color: inherit;
