@@ -84,6 +84,10 @@
 
 	--ccd-text-shadow: 0.05em 0.05em 0.05em #{rgba( $color: black, $alpha: 0.575 )};
 
+	@media screen and ( max-width: l.$bp_sm ) {
+		--ccd-body--font-size: 1.25rem;
+	}
+
 	// Links.
 	--ccd-link--text-color: var( --ccd-color--two--base );
 	--ccd-link--text-color--dark: var( --ccd-color--two--light );
@@ -114,7 +118,7 @@
 	--ccd-page-title--font-size: 3.25rem;
 	--ccd-page-title--font-weight: 500;
 	--ccd-page-title--line-height: 95%;
-	--ccd-page-subtitle--margin: 0;
+	--ccd-page-subtitle--margin: var( --ccd-spacing--x--quarter ) 0 0 0;
 	@media screen and ( max-width: l.$bp_sm ) {
 		--ccd-page-subtitle--margin: 0.5em 0 0 0;
 	}

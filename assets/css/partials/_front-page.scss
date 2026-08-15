@@ -13,6 +13,10 @@
 		position: relative;
 		max-width: var( --ccd-wrap--general--max-width );
 		margin: 0 var( --ccd-spacing--x, 2rem );
+
+		@media screen and ( max-width: layout.$bp_med ) {
+			margin: 0 var( --ccd-spacing--x--half, 1rem );
+		}
 	}
 
 	&:not( :first-of-type ),
@@ -65,6 +69,7 @@
 		@media screen and ( max-width: layout.$bp_med ) {
 			flex-direction: column-reverse;
 			align-items: center;
+			padding-right: 0;
 		}
 
 		.front-intro-content {
@@ -84,20 +89,20 @@
 }
 
 .front-intro-avatar {
-	width: var( --ccd-front-intro--avatar--size );
+	width: 100%;
+	max-width: var( --ccd-front-intro--avatar--size );
 	overflow: hidden;
 
 	a {
 		display: block;
-		width: var( --ccd-front-intro--avatar--size );
-		height: var( --ccd-front-intro--avatar--size );
+		width: 100%;
+		max-width: var( --ccd-front-intro--avatar--size );
 	}
 
 	img {
 		display: block;
+		width: 100%;
 		aspect-ratio: 1 / 1;
-		object-fit: cover;
-		object-position: center center;
 		border: var( --ccd-box--border );
 	}
 

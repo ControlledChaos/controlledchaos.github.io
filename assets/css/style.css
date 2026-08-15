@@ -463,6 +463,15 @@ b, strong, optgroup {
   --ccd-display--font-weight: 600;
   --ccd-display--letter-spacing: normal;
   --ccd-text-shadow: 0.05em 0.05em 0.05em rgba(0, 0, 0, 0.575);
+}
+@media screen and (max-width: 640px) {
+  :host,
+  :root {
+    --ccd-body--font-size: 1.25rem;
+  }
+}
+:host,
+:root {
   --ccd-link--text-color: var( --ccd-color--two--base );
   --ccd-link--text-color--dark: var( --ccd-color--two--light );
   --ccd-link--action--text-color: var( --ccd-color--two--light );
@@ -484,7 +493,7 @@ b, strong, optgroup {
   --ccd-page-title--font-size: 3.25rem;
   --ccd-page-title--font-weight: 500;
   --ccd-page-title--line-height: 95%;
-  --ccd-page-subtitle--margin: 0;
+  --ccd-page-subtitle--margin: var( --ccd-spacing--x--quarter ) 0 0 0;
 }
 @media screen and (max-width: 640px) {
   :host,
@@ -1185,6 +1194,11 @@ figcaption {
   max-width: var(--ccd-wrap--general--max-width);
   margin: 0 var(--ccd-spacing--x, 2rem);
 }
+@media screen and (max-width: 800px) {
+  .front-page-section .section-wrap {
+    margin: 0 var(--ccd-spacing--x--half, 1rem);
+  }
+}
 .front-page-section:not(:first-of-type), .front-page-section.site-footer {
   margin-top: var(--ccd-spacing--y--plus-half, 3rem);
 }
@@ -1228,6 +1242,7 @@ figcaption {
   .columns.front-intro-columns {
     flex-direction: column-reverse;
     align-items: center;
+    padding-right: 0;
   }
 }
 .columns.front-intro-columns .front-intro-content {
@@ -1242,21 +1257,19 @@ figcaption {
 }
 
 .front-intro-avatar {
-  width: var(--ccd-front-intro--avatar--size);
+  width: 100%;
+  max-width: var(--ccd-front-intro--avatar--size);
   overflow: hidden;
 }
 .front-intro-avatar a {
   display: block;
-  width: var(--ccd-front-intro--avatar--size);
-  height: var(--ccd-front-intro--avatar--size);
+  width: 100%;
+  max-width: var(--ccd-front-intro--avatar--size);
 }
 .front-intro-avatar img {
   display: block;
+  width: 100%;
   aspect-ratio: 1/1;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: center center;
-     object-position: center center;
   border: var(--ccd-box--border);
 }
 .front-intro-avatar figcaption {
