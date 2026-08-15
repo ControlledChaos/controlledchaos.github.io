@@ -35,7 +35,9 @@ jQuery(document).ready( function($) {
 
 	$( '.scroll-down' ).click( function(e) {
 		e.preventDefault();
-		$( 'html, body' ).animate( { scrollTop : 0 }, 450 );
+
+		var id = $(this).attr( 'href' );
+		$( 'html, body' ).animate( { scrollTop : $(id).offset().top }, 450 );
 		return false;
 	});
 });
