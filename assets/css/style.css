@@ -924,7 +924,7 @@ figcaption {
   }
 }
 .site-identity:hover .site-avatar svg {
-  animation: spinner 0.75s 1 linear;
+  animation: spinner 0.625s 1 linear;
 }
 .site-identity a {
   color: inherit;
