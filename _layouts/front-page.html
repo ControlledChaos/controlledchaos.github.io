@@ -33,12 +33,13 @@ jQuery(document).ready( function($) {
 		theme: 'ccdzen'
 	});
 
-	$( '.scroll-down' ).click( function(e) {
+	// Smooth scroll to content
+	$( 'a[href^="#"]' ).click( function(e) {
+
 		e.preventDefault();
 
-		var id = $(this).attr( 'href' );
-		$( 'html, body' ).animate( { scrollTop : $(id).offset().top }, 450 );
-		return false;
+		var anchor = $(this).attr( 'href' );
+		$( 'html, body' ).animate( { scrollTop : $( anchor ).offset().top }, 500 );
 	});
 });
 
