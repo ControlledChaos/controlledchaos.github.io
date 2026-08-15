@@ -379,15 +379,11 @@ figcaption {
 	color: var( --ccd-selection--text-color );
 	background: var( --ccd-selection--bg-color );
 	text-shadow: none;
-
-	@media ( prefers-color-scheme: dark ) {}
 }
 ::-ms-selection {
 	color: var( --ccd-selection--text-color );
 	background: var( --ccd-selection--bg-color );
 	text-shadow: none;
-
-	@media ( prefers-color-scheme: dark ) {}
 }
 ::-webkit-selection {
 	color: var( --ccd-selection--text-color );

@@ -133,5 +133,5 @@
 
 	// Text selection.
 	--ccd-selection--bg-color: var( --ccd-color--two--light );
-	--ccd-selection--text-color: var( --ccd-color--one--dark );
+	--ccd-selection--text-color: #{f.darken( c.$theme_one_dark, 30% )};;
 }

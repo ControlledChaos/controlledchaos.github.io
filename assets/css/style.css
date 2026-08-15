@@ -515,7 +515,7 @@ b, strong, optgroup {
 :host,
 :root {
   --ccd-selection--bg-color: var( --ccd-color--two--light );
-  --ccd-selection--text-color: var( --ccd-color--one--dark );
+  --ccd-selection--text-color: #503d55;
 }
 @keyframes spinner {
   from {
@@ -891,11 +891,13 @@ figcaption {
   background: var(--ccd-selection--bg-color);
   text-shadow: none;
 }
+
 ::-ms-selection {
   color: var(--ccd-selection--text-color);
   background: var(--ccd-selection--bg-color);
   text-shadow: none;
 }
+
 ::-webkit-selection {
   color: var(--ccd-selection--text-color);
   background: var(--ccd-selection--bg-color);
