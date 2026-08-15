@@ -49,7 +49,7 @@
 .site-identity {
 	display: flex;
 	align-items: center;
-	gap: var( --ccd-spacing--y--quarter ) 0;
+	gap: var( --ccd-spacing--y--quarter ) var( --ccd-spacing--x--half );
 
 	@media screen and ( max-width: l.$bp_med ) {
 		flex-direction: column;
@@ -77,16 +77,11 @@
 	padding: 0;
 	display: inline-block;
 	width: var( --ccd-site-avatar--width, 48px );
-	padding: 0 var( --ccd-spacing--x--half ) 0 0;
 
 	img {
 		display: block;
 		max-height: var( --ccd-site-avatar--img--max-height, 48px );
 	}
-}
-
-.rtl .site-avatar {
-	padding: 0 0 0 var( --ccd-spacing--x--half );
 }
 
 .site-title {
