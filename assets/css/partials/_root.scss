@@ -130,4 +130,8 @@
 	@media screen and ( max-width: l.$bp_med ) {
 		--ccd-owner-avatar--size: 160px;
 	}
+
+	// Text selection.
+	--ccd-selection--bg-color: var( --ccd-color--two--light );
+	--ccd-selection--text-color: var( --ccd-color--one--dark );
 }

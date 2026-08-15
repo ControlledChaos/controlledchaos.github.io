@@ -512,6 +512,11 @@ b, strong, optgroup {
     --ccd-owner-avatar--size: 160px;
   }
 }
+:host,
+:root {
+  --ccd-selection--bg-color: var( --ccd-color--two--light );
+  --ccd-selection--text-color: var( --ccd-color--one--dark );
+}
 @keyframes spinner {
   from {
     transform: rotate(0deg);
@@ -879,6 +884,34 @@ figcaption {
   display: inline-block;
   vertical-align: middle;
   height: 1em;
+}
+
+::-o-selection {
+  color: var(--ccd-selection--text-color);
+  background: var(--ccd-selection--bg-color);
+  text-shadow: none;
+}
+::-ms-selection {
+  color: var(--ccd-selection--text-color);
+  background: var(--ccd-selection--bg-color);
+  text-shadow: none;
+}
+::-webkit-selection {
+  color: var(--ccd-selection--text-color);
+  background: var(--ccd-selection--bg-color);
+  text-shadow: none;
+}
+
+::-moz-selection {
+  color: var(--ccd-selection--text-color);
+  background: var(--ccd-selection--bg-color);
+  text-shadow: none;
+}
+
+::selection {
+  color: var(--ccd-selection--text-color);
+  background: var(--ccd-selection--bg-color);
+  text-shadow: none;
 }
 
 .site-header {
