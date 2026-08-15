@@ -1172,10 +1172,6 @@ figcaption {
   filter: grayscale(30%);
 }
 
-.fp-viewing-slides .front-page-sections {
-  transform: none !important;
-}
-
 .columns.front-intro-columns {
   flex-direction: row-reverse;
   align-items: center;
