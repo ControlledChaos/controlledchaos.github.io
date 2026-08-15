@@ -26,8 +26,8 @@
 // Various jQuery scripts on document ready.
 jQuery(document).ready( function($) {
 
-	// Start with header classes for slider.
-	$( '.site-header, .header-wrap' ).addClass( 'header-alt-tp' );
+	// Start with header class for slider.
+	$( '.site-header' ).removeClass( 'header-bg' ).addClass( 'header-bg-tp' );
 
 	// Add/remove header classes by scroll position.
 	$(window).scroll( function() {
@@ -39,9 +39,9 @@ jQuery(document).ready( function($) {
 			var body = document.querySelector( 'body' );
 				body.classList.add( 'scrolled' );
 
-			$( '.site-header, .header-wrap' ).removeClass( 'header-alt-tp' );
+			$( '.site-header' ).removeClass( 'header-bg-tp' ).addClass( 'header-bg' );
 		} else {
-			$( '.site-header, .header-wrap' ).addClass( 'header-alt-tp' );
+			$( '.site-header' ).removeClass( 'header-bg' ).addClass( 'header-bg-tp' );
 		}
 	});
 
