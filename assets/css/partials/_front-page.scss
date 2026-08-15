@@ -219,6 +219,12 @@
 			transform: translateX(0);
 		}
 
+		&.scroll-down {
+			svg {
+				height: 2rem;
+			}
+		}
+
 		&:hover {
 			svg {
 				transform: translateX( 0.25rem );
