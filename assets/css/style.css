@@ -902,6 +902,11 @@ figcaption {
   }
 }
 .site-header.header-bg-tp {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1000;
   background: transparent;
   transition: all 625ms;
 }
