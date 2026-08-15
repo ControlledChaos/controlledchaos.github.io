@@ -119,8 +119,11 @@
 	--ccd-page-title--font-weight: 500;
 	--ccd-page-title--line-height: 95%;
 	--ccd-page-subtitle--margin: var( --ccd-spacing--x--quarter ) 0 0 0;
+	--ccd-page-subtitle--line-height: 1.2;
+
 	@media screen and ( max-width: l.$bp_sm ) {
 		--ccd-page-subtitle--margin: 0.5em 0 0 0;
+		--ccd-page-subtitle--line-height: var( --ccd-body--line-height, 1.5 );
 	}
 
 	// Front page.

@@ -2,8 +2,8 @@
 /// Front page styles
 ///
 
-@use '../modules/colors';
-@use '../modules/layout';
+@use '../modules/colors' as c;
+@use '../modules/layout' as l;
 
 .front-page-section {
 	position: relative;
@@ -14,7 +14,7 @@
 		max-width: var( --ccd-wrap--general--max-width );
 		margin: 0 var( --ccd-spacing--x, 2rem );
 
-		@media screen and ( max-width: layout.$bp_med ) {
+		@media screen and ( max-width: l.$bp_med ) {
 			margin: 0 var( --ccd-spacing--x--half, 1rem );
 		}
 	}
@@ -66,7 +66,7 @@
 		padding-right: var( --ccd-spacing--x--half );
 		border-top: var( --ccd-box--border );
 
-		@media screen and ( max-width: layout.$bp_med ) {
+		@media screen and ( max-width: l.$bp_med ) {
 			flex-direction: column-reverse;
 			align-items: center;
 			padding-right: 0;
@@ -85,7 +85,7 @@
 }
 
 .front-page-content {
-	max-width: layout.$bp_lg;
+	max-width: l.$bp_lg;
 }
 
 .front-intro-avatar {
@@ -111,7 +111,7 @@
 		padding: 0.5rem;
 	}
 
-	@media screen and ( max-width: layout.$bp_med ) {
+	@media screen and ( max-width: l.$bp_med ) {
 		img {
 			border-radius: unset;
 		}
@@ -178,7 +178,7 @@
 	color: #ffffff;
 	text-align: center;
 
-	@media screen and ( max-width: layout.$bp_med ) {
+	@media screen and ( max-width: l.$bp_med ) {
 		padding-top: calc( var( --ccd-spacing--y ) * 5 );
 	}
 
@@ -305,8 +305,8 @@
 			text-indent: -9999em;
 			padding: 0;
 			border-radius: 50%;
-			border-color: var( --ccd-cover--title--text-color, var( --ccd-cover--text-color, colors.$white ) );
-			color: var( --ccd-cover--title--text-color, var( --ccd-cover--text-color, colors.$white ) );
+			border-color: var( --ccd-cover--title--text-color, var( --ccd-cover--text-color, c.$white ) );
+			color: var( --ccd-cover--title--text-color, var( --ccd-cover--text-color, c.$white ) );
 
 			&:after {
 				content: '';
@@ -314,13 +314,13 @@
 				width: 0.4rem;
 				height: 0.4rem;
 				border-radius: 50%;
-				background-color: var( --ccd-cover--title--text-color, var( --ccd-cover--text-color, colors.$white ) );
+				background-color: var( --ccd-cover--title--text-color, var( --ccd-cover--text-color, c.$white ) );
 				opacity: 0;
 				transition: opacity .15s;
 			}
 
 			&:hover {
-				color: var( --ccd-site-cover--title--link--action--text-color, var( --ccd-cover--text-color, colors.$white ) );
+				color: var( --ccd-site-cover--title--link--action--text-color, var( --ccd-cover--text-color, c.$white ) );
 
 				&:after {
 					opacity: 1;

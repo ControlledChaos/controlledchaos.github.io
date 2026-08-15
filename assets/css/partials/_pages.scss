@@ -66,7 +66,7 @@
 	font-family: var( --ccd-page-subtitle--font-family );
 	font-size: var( --ccd-page-subtitle--font-size, 1.1875rem );
 	font-weight: var( --ccd-page-subtitle--font-weight, 500 );
-	line-height: 1.2;
+	line-height: var( --ccd-page-subtitle--line-height, 1.2 );
 	color: var( --ccd-color--one--dark );
 }
 
