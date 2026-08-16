@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: common
 ---
 
 {%- capture blog_view -%}
@@ -12,11 +12,20 @@ layout: default
 	{%- endif -%}
 {%- endcapture -%}
 
-{%- if content != blank %}
-{{ content }}
-{%- endif %}
+{%- if page.title and page.url != "/" -%}
 
-<div class="posts-view-{{ blog_view }}">
+<header class="page-header">
+	<h1 id="{{ page.title | slugify }}" class="page-title">{{ page.title }}</h1>
+
+	{%- if page.subtitle -%}
+	<p class="page-subtitle">{{ page.subtitle }}</p>
+	{%- endif -%}
+
+</header>
+
+{%- endif -%}
+
+<div class="page-content posts-view-{{ blog_view }}">
 {%- for post in paginator.posts -%}
 	{%- include posts-{{ blog_view }}.html -%}
 {%- endfor -%}
