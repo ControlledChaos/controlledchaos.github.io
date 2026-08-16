@@ -2,7 +2,7 @@
 /// Modules (widgets) for sidebar and footer
 ///
 
-@use '../modules/layout';
+@use '../modules/layout' as l;
 
 .modules-footer {
 	width: 100%;
@@ -10,7 +10,7 @@
 	display: flex;
 	flex-wrap: wrap;
 
-	@media screen and ( max-width: layout.$bp_med ) {
+	@media screen and ( max-width: l.$bp_med ) {
 		flex-direction: column;
 		align-items: flex-start;
 	}
@@ -21,7 +21,7 @@
 		min-width: 320px;
 		padding: var( --ccd-spacing--y--half ) var( --ccd-spacing--x--half );
 
-		@media screen and ( max-width: layout.$bp_med ) {
+		@media screen and ( max-width: l.$bp_med ) {
 			max-width: 320px;
 		}
 
@@ -126,11 +126,19 @@
 		font-weight: 650;
 		text-decoration: none;
 		line-height: 1.2;
+
+		@media screen and ( max-width: l.$bp_sm ) {
+			font-size: 1.25rem;
+		}
 	}
 	.module-featured-subtitle {
 		display: block;
 		font-family: var( --ccd-fonts--secondary-stack );
 		font-size: 0.8125rem;
+
+		@media screen and ( max-width: l.$bp_sm ) {
+			font-size: 1rem;
+		}
 	}
 }
 
@@ -198,7 +206,7 @@ p + ul {
 	gap: var( --ccd-spacing--x--half );
 	margin-top: var( --ccd-spacing--y--half );
 
-	@media screen and ( max-width: layout.$bp_med ) {
+	@media screen and ( max-width: l.$bp_med ) {
 		flex-direction: column;
 	}
 }

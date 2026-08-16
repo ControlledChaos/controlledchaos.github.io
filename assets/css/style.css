@@ -495,7 +495,7 @@ b, strong, optgroup {
   --ccd-page-title--line-height: 95%;
   --ccd-page-subtitle--margin: var( --ccd-spacing--x--quarter ) 0 0 0;
   --ccd-page-subtitle--font-size: 1.25rem;
-  --ccd-page-subtitle--font-weight: 650;
+  --ccd-page-subtitle--font-weight: 600;
   --ccd-page-subtitle--line-height: 1.2;
 }
 @media screen and (max-width: 640px) {
@@ -823,8 +823,8 @@ h6 {
 }
 
 hr {
-  margin: var(--ccd-spacing--x) 0;
-  border-top: var(--ccd-box--border);
+  margin: var(--ccd-hr--margin, var(--ccd-spacing--x) 0);
+  border-top: var(--ccd-hr--border-top, var(--ccd-box--border));
 }
 
 pre, code, kbd, samp {
@@ -833,24 +833,29 @@ pre, code, kbd, samp {
 }
 
 .button {
-  display: inline-flex;
+  display: var(--ccd-button--display, inline-flex);
   align-items: center;
   justify-content: center;
-  padding: calc(var(--ccd-body--font-size, 1rem) / 2);
-  font-family: var(--ccd-fonts--display-stack);
+  padding: var(--ccd-button--padding, var(--ccd-spacing--y--quarter) var(--ccd-spacing--x--quarter));
+  font-family: var(--ccd-button--font-family, var(--ccd-fonts--display-stack));
   font-size: var(--ccd-button--font-size, 1.125rem);
   font-weight: var(--ccd-button--font-weight, 500);
   line-height: var(--ccd-button--line-height, 1);
   background-color: var(--ccd-button--bg-color, var(--ccd-color--two--base));
   color: var(--ccd-button--text-color, #ffffff);
-  transition: all 0.25s;
+  transition: var(--ccd-button--transition, all 0.25s ease-in-out);
 }
 .button:hover, .button:focus {
   background-color: var(--ccd-button--bg-color--action, var(--ccd-color--two--light));
   color: var(--ccd-button--text-color--action, #ffffff);
 }
+.button[disabled] {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
 
 .general-wrap {
+  width: var(--ccd-wrap--general--width);
   max-width: var(--ccd-wrap--general--max-width);
   margin: var(--ccd-wrap--general--margin);
   padding: var(--ccd-wrap--general--padding);
@@ -1923,10 +1928,20 @@ figcaption {
   text-decoration: none;
   line-height: 1.2;
 }
+@media screen and (max-width: 640px) {
+  .module-featured-projects .module-featured-link {
+    font-size: 1.25rem;
+  }
+}
 .module-featured-projects .module-featured-subtitle {
   display: block;
   font-family: var(--ccd-fonts--secondary-stack);
   font-size: 0.8125rem;
+}
+@media screen and (max-width: 640px) {
+  .module-featured-projects .module-featured-subtitle {
+    font-size: 1rem;
+  }
 }
 
 .module-latest-posts .module-latest-list li {
