@@ -145,10 +145,13 @@
 		--ccd-front-intro--avatar--size: 320px;
 	}
 
-	// Modules
+	// Aside/Modules
 	// ------------------------------------------------
+	--ccd-module--heading--font-size: 1.625rem;
 	--ccd-owner-avatar--size: 80px;
+
 	@media screen and ( max-width: l.$bp_med ) {
+		--ccd-module--heading--font-size: 2rem;
 		--ccd-owner-avatar--size: 160px;
 	}
 
