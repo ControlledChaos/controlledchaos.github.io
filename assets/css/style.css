@@ -413,13 +413,13 @@ b, strong, optgroup {
   --ccd-fonts--font-size--63: 3.9375rem;
   --ccd-fonts--font-size--64: 4rem;
   --ccd-color--white: #ffffff;
-  --ccd-color--off-white: #e8e8e8;
+  --ccd-color--off-white: #f1f1f0;
   --ccd-color--black: #000000;
   --ccd-color--near-black: #1e1e1e;
-  --ccd-color--gray-dark: #333333;
-  --ccd-color--gray-medium: #555555;
-  --ccd-color--gray-light: #888888;
-  --ccd-color--gray-pale: #cccccc;
+  --ccd-color--gray-dark: #414141;
+  --ccd-color--gray-medium: #686868;
+  --ccd-color--gray-light: #9f9f9f;
+  --ccd-color--gray-pale: #dedede;
   --ccd-color--red: #dd0000;
   --ccd-color--orange: #ee6600;
   --ccd-color--yellow: #ffdd00;
@@ -440,8 +440,8 @@ b, strong, optgroup {
   --ccd-color--two--dark: #7e8e2f;
   --ccd-box--border-style: solid;
   --ccd-box--border-width: 1px;
-  --ccd-box--border-color: #cccccc;
-  --ccd-box--border-color--dark: #555555;
+  --ccd-box--border-color: #dedede;
+  --ccd-box--border-color--dark: #686868;
   --ccd-box--border:
   	var( --ccd-box--border-style )
   	var( --ccd-box--border-width )
@@ -458,7 +458,7 @@ b, strong, optgroup {
   --ccd-body--bg-color: #ffffff;
   --ccd-body--bg-color--dark: #1e1e1e;
   --ccd-body--text-color: #645469;
-  --ccd-body--text-color--dark: #e8e8e8;
+  --ccd-body--text-color--dark: #f1f1f0;
   --ccd-display--font-family: var( --ccd-fonts--display-stack );
   --ccd-display--font-weight: 600;
   --ccd-display--letter-spacing: normal;
