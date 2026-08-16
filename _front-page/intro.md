@@ -1,9 +1,0 @@
----
-order: 1
-avatar_width: "200px"
----
-Have you ever wanted to have a website built by a mule packer? Well today is your lucky day!
-
-Hello, my name is Greg Sweet and I really did work with mules. Donkeys, mostly, and I led them through the forest with supplies on their backs. At night, living in a converted portion of the barn, I began to study how websites work. Thus began the Controlled Chaos empire.
-
-Have a look around this website to learn more. You can even see [the code](https://github.com/ControlledChaos/controlledchaos.github.io) that makes it tick.
