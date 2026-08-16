@@ -57,10 +57,51 @@ $theme_one_base:  #846f8b !default;
 $theme_one_light: #927b98 !default;
 $theme_one_dark:  #72577a !default;
 
-// $theme_two_base:  #9cb034 !default;
+$theme_one_tints_0: #846f8b;
+$theme_one_tints_10: #907d96;
+$theme_one_tints_20: #9c8ba2;
+$theme_one_tints_30: #a89aad;
+$theme_one_tints_40: #b5a8b9;
+$theme_one_tints_50: #c1b7c5;
+$theme_one_tints_60: #cdc5d0;
+$theme_one_tints_70: #dad3dc;
+$theme_one_tints_80: #e6e2e7;
+$theme_one_tints_90: #f2f0f3;
+$theme_one_shades-0: #846f8b;
+$theme_one_shades-10: #76637d;
+$theme_one_shades-20: #69586f;
+$theme_one_shades-30: #5c4d61;
+$theme_one_shades-40: #4f4253;
+$theme_one_shades-50: #423745;
+$theme_one_shades-60: #342c37;
+$theme_one_shades-70: #272129;
+$theme_one_shades-80: #1a161b;
+$theme_one_shades-90: #0d0b0d;
+
 $theme_two_base:  #a0b43c !default;
 $theme_two_light: #b6c85b !default;
 $theme_two_dark:  #7e8e2f !default;
+
+$theme_two_tints_0: #a0b43c;
+$theme_two_tints_10: #a9bb4f;
+$theme_two_tints_20: #b3c363;
+$theme_two_tints_30: #bcca76;
+$theme_two_tints_40: #c6d28a;
+$theme_two_tints_50: #cfd99d;
+$theme_two_tints_60: #d9e1b1;
+$theme_two_tints_70: #e2e8c4;
+$theme_two_tints_80: #ecf0d8;
+$theme_two_tints_90: #f5f7eb;
+$theme_two_shades-0: #a0b43c;
+$theme_two_shades-10: #90a236;
+$theme_two_shades-20: #809030;
+$theme_two_shades-30: #707d2a;
+$theme_two_shades-40: #606c24;
+$theme_two_shades-50: #505a1e;
+$theme_two_shades-60: #404818;
+$theme_two_shades-70: #303612;
+$theme_two_shades-80: #1f230b;
+$theme_two_shades-90: #0f1105;
 
 $theme: (
 	'one' : (
