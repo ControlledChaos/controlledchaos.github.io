@@ -6,7 +6,21 @@
 
 .repo-view-full {
 
-	.post-cover {
+	.entry-article {
+		margin-top: var( --ccd-spacing--y );
+	}
+	.entry-header {
+		text-align: center;
+	}
+	.entry-title {
+		margin: 0.5em 0 0 0;
+		line-height: 80%;
+	}
+	.entry-subtitle {
+		margin-top: 1rem;
+		line-height: 1.35;
+	}
+	.entry-cover {
 		position: relative;
 		overflow: hidden;
 		display: flex;
@@ -15,7 +29,7 @@
 		justify-content: center;
 		min-height: 360px;
 
-		.post-image {
+		.entry-image {
 			position: absolute;
 			top: 0;
 			left: 0;
@@ -33,7 +47,6 @@
 				background-color: var( --ccd-overlay--bg-color );
 			}
 		}
-
 		img {
 			display: block;
 			object-fit: cover;
@@ -58,20 +71,25 @@
 			}
 		}
 	}
-
-	.post-footer {
+	.entry-footer {
 		margin-top: var( --ccd-spacing--y );
 
-		.post-cats,
-		.post-tags {
+		.entry-cats,
+		.entry-tags {
 			margin: 0;
 		}
 	}
-
-	.post-cats-list,
-	.post-tags-list {
+	.entry-cats-list,
+	.entry-tags-list {
 		display: inline-flex;
 		flex-wrap: wrap;
 		gap: 0.5em;
+	}
+	.entry-content {
+		margin-top: var( --ccd-spacing--y );
+
+		// Padding presumes first element has margin top of the same.
+		padding-top: var( --ccd-spacing--y--half );
+		border-top: var( --ccd-box--border );
 	}
 }

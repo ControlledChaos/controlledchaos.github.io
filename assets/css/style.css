@@ -1484,7 +1484,21 @@ figcaption {
   opacity: 1;
 }
 
-.repo-view-full .post-cover {
+.repo-view-full .entry-article {
+  margin-top: var(--ccd-spacing--y);
+}
+.repo-view-full .entry-header {
+  text-align: center;
+}
+.repo-view-full .entry-title {
+  margin: 0.5em 0 0 0;
+  line-height: 80%;
+}
+.repo-view-full .entry-subtitle {
+  margin-top: 1rem;
+  line-height: 1.35;
+}
+.repo-view-full .entry-cover {
   position: relative;
   overflow: hidden;
   display: flex;
@@ -1493,14 +1507,14 @@ figcaption {
   justify-content: center;
   min-height: 360px;
 }
-.repo-view-full .post-cover .post-image {
+.repo-view-full .entry-cover .entry-image {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
 }
-.repo-view-full .post-cover .post-image:before {
+.repo-view-full .entry-cover .entry-image:before {
   content: "";
   display: block;
   position: absolute;
@@ -1510,7 +1524,7 @@ figcaption {
   height: 100%;
   background-color: var(--ccd-overlay--bg-color);
 }
-.repo-view-full .post-cover img {
+.repo-view-full .entry-cover img {
   display: block;
   -o-object-fit: cover;
      object-fit: cover;
@@ -1519,7 +1533,7 @@ figcaption {
   width: 100%;
   height: 100%;
 }
-.repo-view-full .post-cover > div {
+.repo-view-full .entry-cover > div {
   pointer-events: none;
   position: relative;
   z-index: 100;
@@ -1530,21 +1544,26 @@ figcaption {
   gap: var(--ccd-spacing--y) var(--ccd-spacing--x);
   padding: var(--ccd-spacing--y) var(--ccd-spacing--x);
 }
-.repo-view-full .post-cover > div * {
+.repo-view-full .entry-cover > div * {
   color: #ffffff !important;
 }
-.repo-view-full .post-footer {
+.repo-view-full .entry-footer {
   margin-top: var(--ccd-spacing--y);
 }
-.repo-view-full .post-footer .post-cats,
-.repo-view-full .post-footer .post-tags {
+.repo-view-full .entry-footer .entry-cats,
+.repo-view-full .entry-footer .entry-tags {
   margin: 0;
 }
-.repo-view-full .post-cats-list,
-.repo-view-full .post-tags-list {
+.repo-view-full .entry-cats-list,
+.repo-view-full .entry-tags-list {
   display: inline-flex;
   flex-wrap: wrap;
   gap: 0.5em;
+}
+.repo-view-full .entry-content {
+  margin-top: var(--ccd-spacing--y);
+  padding-top: var(--ccd-spacing--y--half);
+  border-top: var(--ccd-box--border);
 }
 
 .repo-view-list .posts-entry {
