@@ -12,10 +12,10 @@
 {%- endcapture -%}
 
 {%- if paginator.total_pages > 1 -%}
-<nav role="navigation" aria-label="Pagination" class="pagination-nav">
+<nav role="navigation" aria-label="Pagination" class="paged-nav paged-numeric">
 	<ul>
 		{%- if paginator.previous_page -%}
-		<li><a class="previous_page" rel="prev" href="{{ previous_page_path | relative_url }}" aria-disabled="false" title="Newer Posts" data-tooltip><span class="pagi-nav-icon">{{ prev_icon }}</span> <span class="screen-reader-text">Newer Posts</span></a></li>
+		<li><a class="previous_page" rel="prev" href="{{ previous_page_path | relative_url }}" aria-disabled="false" title="Previous Page" data-tooltip><span class="pagi-nav-icon">{{ prev_icon }}</span> <span class="screen-reader-text">Previous Page</span></a></li>
 		{%- endif -%}
 
 		{%- for paginator_nav_page in (1..paginator.total_pages) -%}
@@ -33,7 +33,7 @@
 		{%- endfor -%}
 
 		{%- if paginator.next_page -%}
-		<li><a class="next_page" rel="next" href="{{ next_page_path | relative_url }}" aria-disabled="false" title="Older Posts" data-tooltip><span class="screen-reader-text">Older Posts</span> <span class="pagi-nav-icon">{{ next_icon }}</span></a></li>
+		<li><a class="next_page" rel="next" href="{{ next_page_path | relative_url }}" aria-disabled="false" title="Next Page" data-tooltip><span class="screen-reader-text">Next Page</span> <span class="pagi-nav-icon">{{ next_icon }}</span></a></li>
 		{%- endif -%}
 	</ul>
 </nav>

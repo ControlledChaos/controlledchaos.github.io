@@ -1,0 +1,26 @@
+{%- assign paginate_path = include.paginate_path | default: site.paginate_path -%}
+{%- assign previous_page_path = include.previous_page_path | default: paginator.previous_page_path -%}
+{%- assign next_page_path = include.next_page_path | default: paginator.next_page_path -%}
+
+{%- assign prev_icon = "" -%}
+{%- capture prev_icon -%}
+	{% include svg/arrow-left.svg %}
+{%- endcapture -%}
+{%- assign next_icon = "" -%}
+{%- capture next_icon -%}
+	{% include svg/arrow-right.svg %}
+{%- endcapture -%}
+
+{%- if paginator.total_pages > 1 -%}
+<nav role="navigation" aria-label="Pagination" class="paged-nav paged-standard">
+	<ul>
+		{%- if paginator.previous_page -%}
+		<li><a class="previous_page" rel="prev" href="{{ previous_page_path | relative_url }}" aria-disabled="false"><span class="pagi-nav-icon">{{ prev_icon }}</span> Previous Page</a></li>
+		{%- endif -%}
+
+		{%- if paginator.next_page -%}
+		<li><a class="next_page" rel="next" href="{{ next_page_path | relative_url }}" aria-disabled="false">Next Page <span class="pagi-nav-icon">{{ next_icon }}</span></a></li>
+		{%- endif -%}
+	</ul>
+</nav>
+{%- endif -%}

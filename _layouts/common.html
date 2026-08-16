@@ -34,6 +34,8 @@
 	{%- assign page_sidebar = site.page_sidebar -%}
 {%- endif -%}
 
+{%- assign paged_style = site.paged_style | default: "numeric" -%}
+
 <!doctype html>
 <html xmlns:og="http://opengraphprotocol.org/schema/" class="no-js" lang="en_US" dir="ltr">
 
@@ -57,7 +59,7 @@
 		</div>
 	</div>
 
-	{%- include pagination.html -%}
+	{%- include paged-{{ paged_style }}.html -%}
 
 	{%- include site-footer.html -%}
 

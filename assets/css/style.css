@@ -1170,26 +1170,31 @@ figcaption {
   margin-top: 1rem;
 }
 
-.pagination-nav ul {
+.paged-nav ul {
   list-style: none;
   width: 100%;
   margin: 0;
   padding: var(--ccd-spacing--y, 2rem) var(--ccd-spacing--x, 2rem);
   display: flex;
-  justify-content: center;
   gap: 0 0.5em;
 }
-.pagination-nav ul svg {
+.paged-nav ul svg {
   display: inline-block;
   height: 1em;
   vertical-align: middle;
   vertical-align: center;
 }
-.pagination-nav ul .current-page {
+.paged-nav.paged-numeric {
+  justify-content: center;
+}
+.paged-nav.paged-numeric .current-page {
   cursor: default;
   font-weight: 625;
   text-decoration: underline;
   opacity: 0.7;
+}
+.paged-nav.paged-standard {
+  justify-content: space-between;
 }
 
 .rtl .pagi-nav-icon {

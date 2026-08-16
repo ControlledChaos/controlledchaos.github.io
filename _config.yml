@@ -92,6 +92,7 @@ blog_view: "full" # list, grid, or full
 blog_path: "/posts/"
 paginate_path: "/posts/page:num/"
 paginate: 1
+paged_style: "standard" # numeric or standard
 category_path: "/category/"
 category_layout: category_index.html
 tag_page_layout: tags
