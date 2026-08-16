@@ -9,6 +9,7 @@
 	margin: 0;
 	display: flex;
 	flex-wrap: wrap;
+	gap: var( --ccd-spacing--y--half, 1rem ) var( --ccd-spacing--x--half, 1rem );
 
 	@media screen and ( max-width: l.$bp_med ) {
 		flex-direction: column;
@@ -19,7 +20,6 @@
 .widget {
 	&.widget-footer {
 		min-width: 320px;
-		padding: var( --ccd-spacing--y--half ) var( --ccd-spacing--x--half );
 
 		@media screen and ( max-width: l.$bp_med ) {
 			max-width: 320px;

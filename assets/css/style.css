@@ -1807,6 +1807,7 @@ figcaption {
   margin: 0;
   display: flex;
   flex-wrap: wrap;
+  gap: var(--ccd-spacing--y--half, 1rem) var(--ccd-spacing--x--half, 1rem);
 }
 @media screen and (max-width: 800px) {
   .widgets-footer {
@@ -1817,7 +1818,6 @@ figcaption {
 
 .widget.widget-footer {
   min-width: 320px;
-  padding: var(--ccd-spacing--y--half) var(--ccd-spacing--x--half);
 }
 @media screen and (max-width: 800px) {
   .widget.widget-footer {
@@ -2120,6 +2120,8 @@ p + ul {
   filter: grayscale(30%);
 }
 .site-footer .site-info {
+  margin: 0 var(--ccd-spacing--x, 2rem);
+  padding: var(--ccd-spacing--y, 2rem) 0;
   position: relative;
   z-index: 10;
   display: flex;
