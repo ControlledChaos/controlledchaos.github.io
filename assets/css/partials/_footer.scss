@@ -24,13 +24,6 @@
 	.site-info {
 		position: relative;
 		z-index: 10;
-		width: 100%;
-		height: 100%;
-		padding:
-			var( --ccd-site-info--padding-y, var( --ccd-spacing--y--half ) )
-			var( --ccd-site-info--padding-x, var( --ccd-spacing--x ) )
-			var( --ccd-site-info--padding-y, var( --ccd-spacing--y ) )
-			var( --ccd-site-info--padding-x, var( --ccd-spacing--x ) );
 		display: flex;
 		flex-direction: column;
 		justify-content: center;

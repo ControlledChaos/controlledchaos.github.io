@@ -58,6 +58,7 @@
 		h3 {
 			font-size: clamp( 1.125rem, 2.75vw, 1.5rem );
 			line-height: 1;
+			word-break: keep-all;
 
 			@media screen and ( max-width: layout.$bp_sm ) {
 				font-size: clamp( 1.125rem, 5vw, 1.5rem );
