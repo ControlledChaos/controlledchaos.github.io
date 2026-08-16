@@ -1,12 +1,23 @@
 ---
 layout: default
 ---
+
+{%- capture blog_view -%}
+	{%- if site.blog_view == "grid" -%}
+		grid
+	{%- elsif site.blog_view == "list" -%}
+		list
+	{%- else -%}
+		full
+	{%- endif -%}
+{%- endcapture -%}
+
 {%- if content != blank %}
 {{ content }}
 {%- endif %}
 
-<ul class="posts-list" role="list">
+<div class="posts-view-{{ blog_view }}">
 {%- for post in paginator.posts -%}
-	{%- include posts-preview.html -%}
+	{%- include posts-{{ blog_view }}.html -%}
 {%- endfor -%}
-</ul>
+</div>
