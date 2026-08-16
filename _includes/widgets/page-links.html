@@ -1,4 +1,4 @@
-{%- assign module = include.module -%}
+{%- assign widget = include.widget -%}
 {%- assign current_url = page.url | default: '/' -%}
 {%- assign best_match_url = '' -%}
 {%- assign best_match_len = 0 -%}
@@ -40,11 +40,11 @@
 	{%- endif -%}
 {%- endfor -%}
 
-{%- if module.title -%}
-<h3>{{ module.title }}</h3>
+{%- if widget.title -%}
+<h3>{{ widget.title }}</h3>
 {%- endif -%}
 
-<nav class="page-links-module-nav" role="directory" itemscope itemtype="http://schema.org/SiteNavigationElement">
+<nav class="page-links-widget-nav" role="directory" itemscope itemtype="http://schema.org/SiteNavigationElement">
 	<ul>
 		{% for nav_item in page_links %}
 			{%- if nav_item.url == best_match_url -%}

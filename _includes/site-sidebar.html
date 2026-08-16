@@ -1,17 +1,17 @@
-{%- if site.modules.size > 0 -%}
-{%- assign modules = site.modules | sort: "order" -%}
+{%- if site.widgets.size > 0 -%}
+{%- assign widgets = site.widgets | sort: "order" -%}
 
 <aside class="page-sidebar">
-	{%- for module in modules -%}
+	{%- for widget in widgets -%}
 
-	{%- unless module.side == true -%}
+	{%- unless widget.side == true -%}
 		{%- continue -%}
 	{%- endunless -%}
 
-	{%- assign slug = module.path | remove: "_modules/" | remove: module.ext -%}
+	{%- assign slug = widget.path | remove: "_widgets/" | remove: widget.ext -%}
 
-	<div class="module module-aside module-{{ slug }}">
-		{%- include modules/{{ slug }}.html module = module -%}
+	<div class="widget widget-aside widget-{{ slug }}">
+		{%- include widgets/{{ slug }}.html widget = widget -%}
 	</div>
 
 	{%- endfor -%}

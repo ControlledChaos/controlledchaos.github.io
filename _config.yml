@@ -37,8 +37,8 @@ collections:
   front-slides:
     directory: _front-slides
     output: false
-  modules:
-    directory: _modules
+  widgets:
+    directory: _widgets
     output: false
   projects:
     directory: _projects/content

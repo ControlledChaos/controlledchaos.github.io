@@ -1,78 +1,78 @@
 ///
 /// General sidebar styles
 ///
-/// @see `_modules.scss` for styles within the modules.
+/// @see `_widgets.scss` for styles within the widgets.
 ///
 
 @use '../modules/layout';
 
 .page-sidebar {
-	position: var( --ccd-module--position );
-	display: var( --ccd-module--display, flex );
-	flex-direction: var( --ccd-module--flex-direction, column );
-	flex-wrap: var( --ccd-module--flex-wrap );
-	align-items: var( --ccd-module--align-items );
-	justify-content: var( --ccd-module--justify-content );
-	width: var( --ccd-module--width, 320px );
-	max-width: var( --ccd-module--max-width );
-	min-width: var( --ccd-module--min-width, 240px );
-	height: var( --ccd-module--height );
-	margin: var( --ccd-module--margin, var( --ccd-spacing--y, 2rem ) 0 0 0 );
-	padding: var( --ccd-module--padding );
-	font-family: var( --ccd-module--font-family, inherit );
-	font-size: var( --ccd-module--font-size, inherit );
-	font-weight: var( --ccd-module--font-weight, inherit );
-	font-style: var( --ccd-module--font-style, inherit );
-	font-variant: var( --ccd-module--font-variant, inherit );
-	line-height: var( --ccd-module--line-height, inherit );
-	letter-spacing: var( --ccd-module--letter-spacing, inherit );
-	word-spacing: var( --ccd-module--word-spacing, inherit );
-	text-decoration: var( --ccd-module--text-decoration, inherit );
-	text-transform: var( --ccd-module--text-transform, inherit );
-	background-color: var( --ccd-module--bg-color, inherit );
-	color: var( --ccd-module--text-color, inherit );
+	position: var( --ccd-widget--position );
+	display: var( --ccd-widget--display, flex );
+	flex-direction: var( --ccd-widget--flex-direction, column );
+	flex-wrap: var( --ccd-widget--flex-wrap );
+	align-items: var( --ccd-widget--align-items );
+	justify-content: var( --ccd-widget--justify-content );
+	width: var( --ccd-widget--width, 320px );
+	max-width: var( --ccd-widget--max-width );
+	min-width: var( --ccd-widget--min-width, 240px );
+	height: var( --ccd-widget--height );
+	margin: var( --ccd-widget--margin, var( --ccd-spacing--y, 2rem ) 0 0 0 );
+	padding: var( --ccd-widget--padding );
+	font-family: var( --ccd-widget--font-family, inherit );
+	font-size: var( --ccd-widget--font-size, inherit );
+	font-weight: var( --ccd-widget--font-weight, inherit );
+	font-style: var( --ccd-widget--font-style, inherit );
+	font-variant: var( --ccd-widget--font-variant, inherit );
+	line-height: var( --ccd-widget--line-height, inherit );
+	letter-spacing: var( --ccd-widget--letter-spacing, inherit );
+	word-spacing: var( --ccd-widget--word-spacing, inherit );
+	text-decoration: var( --ccd-widget--text-decoration, inherit );
+	text-transform: var( --ccd-widget--text-transform, inherit );
+	background-color: var( --ccd-widget--bg-color, inherit );
+	color: var( --ccd-widget--text-color, inherit );
 
 	@media ( prefers-color-scheme: dark ) {
-		background-color: var( --ccd-module--bg-color--dark, inherit );
-		color: var( --ccd-module--text-color--dark, inherit );
+		background-color: var( --ccd-widget--bg-color--dark, inherit );
+		color: var( --ccd-widget--text-color--dark, inherit );
 	}
 
 	@container page-container ( max-width: layout.$bp_med ) {
-		display: var( --ccd-module--bottom--display, var( --ccd-module--display, grid ) );
-		grid-template-columns: var( --ccd-module--bottom--grid-template-columns, var( --ccd-module--grid-template-columns, repeat( 2, 1fr ) ) );
-		gap:  var( --ccd-module--bottom--gap, var( --ccd-spacing--y, 2rem ) var( --ccd-spacing--x, 2rem ) );
-		width: var( --ccd-module--bottom--width, var( --ccd-module--width, 100% ) );
-		max-width: var( --ccd-module--bottom--max-width, var( --ccd-module--max-width ) );
+		display: var( --ccd-widget--bottom--display, var( --ccd-widget--display, grid ) );
+		grid-template-columns: var( --ccd-widget--bottom--grid-template-columns, var( --ccd-widget--grid-template-columns, repeat( 2, 1fr ) ) );
+		gap:  var( --ccd-widget--bottom--gap, var( --ccd-spacing--y, 2rem ) var( --ccd-spacing--x, 2rem ) );
+		width: var( --ccd-widget--bottom--width, var( --ccd-widget--width, 100% ) );
+		max-width: var( --ccd-widget--bottom--max-width, var( --ccd-widget--max-width ) );
 		margin: 0;
-		background-color: var( --ccd-module--bottom--bg-color, var( --ccd-module--bg-color, inherit ) );
-		color: var( --ccd-module--bottom--text-color, var( --ccd-module--text-color, inherit ) );
+		background-color: var( --ccd-widget--bottom--bg-color, var( --ccd-widget--bg-color, inherit ) );
+		color: var( --ccd-widget--bottom--text-color, var( --ccd-widget--text-color, inherit ) );
 	}
 
 	@media screen and ( max-width: layout.$bp_med ) {
-		display: var( --ccd-module--bottom--display, var( --ccd-module--display, grid ) );
-		grid-template-columns: var( --ccd-module--bottom--grid-template-columns, var( --ccd-module--grid-template-columns, repeat( 2, 1fr ) ) );
-		gap:  var( --ccd-module--bottom--gap, var( --ccd-spacing--y, 2rem ) var( --ccd-spacing--x, 2rem ) );
-		width: var( --ccd-module--bottom--width, var( --ccd-module--width, 100% ) );
-		max-width: var( --ccd-module--bottom--max-width, var( --ccd-module--max-width ) );
+		display: var( --ccd-widget--bottom--display, var( --ccd-widget--display, grid ) );
+		grid-template-columns: var( --ccd-widget--bottom--grid-template-columns, var( --ccd-widget--grid-template-columns, repeat( 2, 1fr ) ) );
+		gap:  var( --ccd-widget--bottom--gap, var( --ccd-spacing--y, 2rem ) var( --ccd-spacing--x, 2rem ) );
+		width: var( --ccd-widget--bottom--width, var( --ccd-widget--width, 100% ) );
+		max-width: var( --ccd-widget--bottom--max-width, var( --ccd-widget--max-width ) );
 		margin: 0;
-		background-color: var( --ccd-module--bottom--bg-color, var( --ccd-module--bg-color, inherit ) );
-		color: var( --ccd-module--bottom--text-color, var( --ccd-module--text-color, inherit ) );
+		background-color: var( --ccd-widget--bottom--bg-color, var( --ccd-widget--bg-color, inherit ) );
+		color: var( --ccd-widget--bottom--text-color, var( --ccd-widget--text-color, inherit ) );
 
 		@media ( prefers-color-scheme: dark ) {
-			background-color: var( --ccd-module--bottom--bg-color--dark, var( --ccd-module--bg-color--dark, inherit ) );
-			color: var( --ccd-module--bottom--text-color--dark, var( --ccd-module--text-color--dark, inherit ) );
+			background-color: var( --ccd-widget--bottom--bg-color--dark, var( --ccd-widget--bg-color--dark, inherit ) );
+			color: var( --ccd-widget--bottom--text-color--dark, var( --ccd-widget--text-color--dark, inherit ) );
 		}
 	}
 
 	@container page-container ( max-width: layout.$bp_sm ) {
-		display: var( --ccd-module--bottom--tablet--display, var( --ccd-module--bottom--display, var( --ccd-module--display, block ) ) );
+		display: var( --ccd-widget--bottom--tablet--display, var( --ccd-widget--bottom--display, var( --ccd-widget--display, block ) ) );
 	}
 
 	@media screen and ( max-width: layout.$bp_sm ) {
-		display: var( --ccd-module--bottom--tablet--display, var( --ccd-module--bottom--display, var( --ccd-module--display, block ) ) );
+		display: var( --ccd-widget--bottom--tablet--display, var( --ccd-widget--bottom--display, var( --ccd-widget--display, block ) ) );
 	}
 
-	.module {
+	.widget {
 		&:not( :first-of-type ) {
 			margin-top: var( --ccd-spacing--y, 2rem );
 			padding-top: var( --ccd-spacing--y, 2rem );

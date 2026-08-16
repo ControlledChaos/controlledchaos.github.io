@@ -1,14 +1,14 @@
-{%- assign module = include.module -%}
+{%- assign widget = include.widget -%}
 {%- assign links  = site.data.owner.owner.links -%}
 {%- assign src    = site.data.owner.owner.avatar.file | prepend: "assets/img/" -%}
 {%- assign alt = site.data.owner.owner.avatar.alt -%}
 {%- assign caption = site.data.owner.owner.avatar.caption -%}
 
-{%- if module.title -%}
-<h3>{{ module.title }}</h3>
+{%- if widget.title -%}
+<h3>{{ widget.title }}</h3>
 {%- endif -%}
 
-<div class="owner-module-wrap">
+<div class="owner-widget-wrap">
 	<figure class="owner-avatar">
 		<a href="{{ src | relative_url }}" title="{{ caption }}" data-tooltip data-fancybox data-caption="{{ caption }}">
 			<img src="{{ src | relative_url }}" alt="{{ alt }}" class="avatar" />
@@ -17,8 +17,8 @@
 	</figure>
 	<div class="owner-info">
 
-		{%- if module.content and module.content != blank -%}
-			{{ module.content }}
+		{%- if widget.content and widget.content != blank -%}
+			{{ widget.content }}
 		{%- endif -%}
 
 		{%- if links.size > 0 -%}

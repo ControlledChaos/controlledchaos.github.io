@@ -1,0 +1,30 @@
+{%- assign latest_limit = site.latest_limit | default: 5 -%}
+{%- assign posts = site.posts -%}
+{%- assign date_format = site.date_format | default: "%B %-d, %Y" -%}
+{%- assign widget = include.widget -%}
+
+{%- if widget.title and widget.title != blank -%}
+<h3>{{ widget.title }}</h3>
+{%- endif -%}
+
+{%- if widget.content and widget.content != blank -%}
+<div class="widget-content">{{ widget.content }}</div>
+{%- endif -%}
+
+{%- if posts.size > 0 -%}
+
+<ul class="widget-latest-list">
+{%- for post in posts limit: latest_limit -%}
+	<li class="widget-latest-item">
+		<a href="{{ post.url }}" class="widget-latest-link" title="{{ post.subtitle | default: 'Read Post' }}" data-tooltip>{{ post.title }}</a>
+		<time class="widget-latest-date"><span class="inline-svg">{% include svg/clock.svg %}</span> {{ post.date | date: date_format }}</time>
+		{% for cat in post.category %}
+		<span class="widget-latest-cats"><span class="inline-svg">{% include svg/folder.svg %}</span> {{ cat }}</span>
+		{%- endfor -%}
+	</li>
+{%- endfor -%}
+</ul>
+
+{%- else -%}
+<p>No posts found</p>
+{%- endif -%}

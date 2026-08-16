@@ -1,21 +1,21 @@
-{%- assign modules = site.modules | sort: "order" -%}
+{%- assign widgets = site.widgets | sort: "order" -%}
 
 <footer id="colophon" class="site-footer">
 	<img class="footer-bg-image" src='{{ "assets/img/bamboo.jpg" | relative_url }}' role="presentation" />
 	<div class="site-info">
-		<div class="general-wrap modules-footer">
+		<div class="general-wrap widgets-footer">
 
-			{%- if site.modules.size > 0 -%}
-			{%- for module in modules -%}
+			{%- if site.widgets.size > 0 -%}
+			{%- for widget in widgets -%}
 
-			{%- unless module.footer == true -%}
+			{%- unless widget.footer == true -%}
 				{%- continue -%}
 			{%- endunless -%}
 
-			{%- assign slug = module.path | remove: "_modules/" | remove: module.ext -%}
+			{%- assign slug = widget.path | remove: "_widgets/" | remove: widget.ext -%}
 
-			<div class="module module-footer module-{{ slug }}">
-				{%- include modules/{{ slug }}.html module = module -%}
+			<div class="widget widget-footer widget-{{ slug }}">
+				{%- include widgets/{{ slug }}.html widget = widget -%}
 			</div>
 
 			{%- endfor -%}

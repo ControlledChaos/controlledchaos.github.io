@@ -1,0 +1,32 @@
+{%- assign projects = site.projects | sort: "featured" -%}
+{%- assign widget   = include.widget -%}
+
+{%- if widget.title and widget.title != blank -%}
+<h3>{{ widget.title }}</h3>
+{%- endif -%}
+
+{%- if widget.content and widget.content != blank -%}
+<div class="widget-content">{{ widget.content }}</div>
+{%- endif -%}
+
+{%- if projects.size > 0 -%}
+
+<ul class="widget-featured-list">
+{%- for project in projects -%}
+
+	{%- unless project.featured and project.featured != blank -%}
+		{%- continue -%}
+	{%- endunless -%}
+
+	<li class="widget-featured-item">
+		<a href="{{ project.url }}" class="widget-featured-link">{{ project.title }}</a>
+		{%- if project.subtitle %}
+		<span class="widget-featured-subtitle">{{ project.subtitle }}</span>
+		{% endif -%}
+	</li>
+{%- endfor -%}
+</ul>
+
+{%- else -%}
+<p>No projects found</p>
+{%- endif -%}
