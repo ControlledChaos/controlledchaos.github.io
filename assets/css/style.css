@@ -1152,6 +1152,7 @@ figcaption {
   font-weight: var(--ccd-page-title--font-weight, var(--ccd-heading-primary--font-weight, 700));
   letter-spacing: var(--ccd-page-title--letter-spacing, -0.0325em);
   line-height: var(--ccd-page-title--line-height, 1.2);
+  color: var(--ccd-page-title--text-color, var(--ccd-heading-primary--text-color));
 }
 
 .page-subtitle {
@@ -1160,7 +1161,7 @@ figcaption {
   font-size: var(--ccd-page-subtitle--font-size);
   font-weight: var(--ccd-page-subtitle--font-weight, 600);
   line-height: var(--ccd-page-subtitle--line-height);
-  color: var(--ccd-color--one--dark);
+  color: var(--ccd-page-subtitle--text-color, var(--ccd-color--one--dark));
 }
 
 .page-content {
