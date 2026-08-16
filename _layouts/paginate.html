@@ -25,7 +25,7 @@ layout: common
 
 {%- endif -%}
 
-<div class="page-content repository {{ page.collection | default: 'posts' }}-repo posts-view-{{ blog_view }}">
+<div class="page-content repository {{ page.collection | default: 'posts' }}-repo repo-view-{{ blog_view }}">
 
 {%- for post in paginator.posts -%}
 	{%- include posts-{{ blog_view }}.html post = post -%}
