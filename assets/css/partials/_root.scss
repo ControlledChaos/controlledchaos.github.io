@@ -1,6 +1,5 @@
 ///
-/// CSS variables defined in
-/// the :root pseudoelement
+/// CSS properties (CSS variables)
 ///
 
 @use '../modules/functions' as f;
@@ -12,7 +11,8 @@
 :host,
 :root {
 
-	// Layout general.
+	// Layout general
+	// ------------------------------------------------
 	--ccd-spacing--x: #{l.$spacing_x};
 	--ccd-spacing--y: #{l.$spacing_y};
 	--ccd-spacing--x--half: calc( #{l.$spacing_x} / 2 );
@@ -30,29 +30,33 @@
 	--ccd-wrap--general--margin: 0 auto;
 	--ccd-wrap--general--padding: 0;
 
-	// Font stacks.
+	// Fonts
+	// ------------------------------------------------
+
+	// Font stacks
 	@each $type, $stack in s.$stacks {
 		--ccd-fonts--#{$type}-stack: #{$stack};
 	}
 
-	// Font sizes.
+	// Font sizes
 	@each $name, $size in t.$sizes {
 		--ccd-fonts--font-size--#{$name}: #{$size};
 	}
 
-	// General colors.
-	@each $name, $color in c.$colors {
+	// Colors
+	// ------------------------------------------------
+
+	@each $name, $color in c.$general {
 		--ccd-color--#{$name}: #{$color};
 	}
-
-	// Theme colors.
 	@each $set, $list in c.$theme {
 		@each $name, $color in $list {
 			--ccd-color--#{$set}--#{$name}: #{$color};
 		}
 	}
 
-	// Borders.
+	// Borders
+	// ------------------------------------------------
 	--ccd-box--border-style: solid;
 	--ccd-box--border-width: 1px;
 	--ccd-box--border-color: #{c.$gray_pale};
@@ -66,7 +70,8 @@
 		var( --ccd-box--border-width )
 		var( --ccd-box--border-color--dark );
 
-	// Body & general text.
+	// Body & general text
+	// ------------------------------------------------
 	--ccd-element--margin-top: calc( var( --ccd-spacing--y ) / 2 );
 	--ccd-body--font-family: var( --ccd-fonts--general-stack );
 	--ccd-body--font-size: 1rem;
@@ -88,13 +93,15 @@
 		--ccd-body--font-size: 1.25rem;
 	}
 
-	// Links.
+	// Links
+	// ------------------------------------------------
 	--ccd-link--text-color: var( --ccd-color--two--base );
 	--ccd-link--text-color--dark: var( --ccd-color--two--light );
 	--ccd-link--action--text-color: var( --ccd-color--two--light );
 	--ccd-link--action--text-color--dark: var( --ccd-color--two--base );
 
-	// Headings.
+	// Headings
+	// ------------------------------------------------
 	--ccd-heading-primary--font-size: 2.25rem;
 	--ccd-heading-primary--font-weight: 500;
 	--ccd-heading-secondary--font-size: 1.5rem;
@@ -102,10 +109,12 @@
 	--ccd-heading-primary--text-color: var( --ccd-color--one--dark );
 	--ccd-heading-secondary--text-color: var( --ccd-color--one--dark );
 
-	// Media.
+	// Media
+	// ------------------------------------------------
 	--ccd-overlay--bg-color: #{rgba( $color: black, $alpha: 0.5 )};
 
-	// Site header.
+	// Site header
+	// ------------------------------------------------
 	--ccd-site-header--padding:
 		calc( var( --ccd-spacing--y ) / 2 )
 		var( --ccd-spacing--x );
@@ -114,11 +123,14 @@
 	--ccd-site-title--font-weight: 470;
 	--ccd-site-title--text-color: #ffffff;
 
-	// Page/Post content.
+	// Page/Post content
+	// ------------------------------------------------
 	--ccd-page-title--font-size: 3.25rem;
 	--ccd-page-title--font-weight: 500;
 	--ccd-page-title--line-height: 95%;
 	--ccd-page-subtitle--margin: var( --ccd-spacing--x--quarter ) 0 0 0;
+	--ccd-page-subtitle--font-size: 1.25rem;
+	--ccd-page-subtitle--font-weight: 650;
 	--ccd-page-subtitle--line-height: 1.2;
 
 	@media screen and ( max-width: l.$bp_sm ) {
@@ -126,19 +138,22 @@
 		--ccd-page-subtitle--line-height: var( --ccd-body--line-height, 1.5 );
 	}
 
-	// Front page.
+	// Front page
+	// ------------------------------------------------
 	--ccd-front-intro--avatar--size: 200px;
 	@media screen and ( max-width: l.$bp_med ) {
 		--ccd-front-intro--avatar--size: 320px;
 	}
 
-	// Modules.
+	// Modules
+	// ------------------------------------------------
 	--ccd-owner-avatar--size: 80px;
 	@media screen and ( max-width: l.$bp_med ) {
 		--ccd-owner-avatar--size: 160px;
 	}
 
-	// Text selection.
+	// Text selection
+	// ------------------------------------------------
 	--ccd-selection--bg-color: #{f.lighten( c.$theme_two_base, 40% )};
 	--ccd-selection--text-color: #{f.darken( c.$theme_one_base, 60% )};
 }

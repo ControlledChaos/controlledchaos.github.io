@@ -1,11 +1,12 @@
 ///
-/// SCSS color variables
+/// SCSS color variables & maps
 ///
 
 @use 'sass:color';
 @use 'functions' as f;
 
-// General colors.
+// General colors
+// ------------------------------------------------
 $white       : #ffffff !default;
 $off_white   : #e8e8e8 !default;
 $black       : #000000 !default;
@@ -27,7 +28,7 @@ $notify      : $orange !default;
 $warning     : $yellow !default;
 $success     : $green  !default;
 
-$colors: (
+$general: (
 	'white'       : $white,
 	'off-white'   : $off_white,
 	'black'       : $black,
@@ -50,7 +51,8 @@ $colors: (
 	'success'     : $success
 ) !default;
 
-// Theme colors.
+// Theme colors
+// ------------------------------------------------
 $theme_one_base:  #846f8b !default;
 $theme_one_light: #927b98 !default;
 $theme_one_dark:  #72577a !default;

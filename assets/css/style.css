@@ -494,6 +494,8 @@ b, strong, optgroup {
   --ccd-page-title--font-weight: 500;
   --ccd-page-title--line-height: 95%;
   --ccd-page-subtitle--margin: var( --ccd-spacing--x--quarter ) 0 0 0;
+  --ccd-page-subtitle--font-size: 1.25rem;
+  --ccd-page-subtitle--font-weight: 650;
   --ccd-page-subtitle--line-height: 1.2;
 }
 @media screen and (max-width: 640px) {
@@ -1148,9 +1150,9 @@ figcaption {
 .page-subtitle {
   margin: var(--ccd-page-subtitle--margin, 0.5em 0 0 0);
   font-family: var(--ccd-page-subtitle--font-family);
-  font-size: var(--ccd-page-subtitle--font-size, 1.1875rem);
-  font-weight: var(--ccd-page-subtitle--font-weight, 500);
-  line-height: var(--ccd-page-subtitle--line-height, 1.2);
+  font-size: var(--ccd-page-subtitle--font-size);
+  font-weight: var(--ccd-page-subtitle--font-weight, 600);
+  line-height: var(--ccd-page-subtitle--line-height);
   color: var(--ccd-color--one--dark);
 }
 
