@@ -1520,6 +1520,7 @@ figcaption {
   height: 100%;
 }
 .repo-view-full .post-cover > div {
+  pointer-events: none;
   position: relative;
   z-index: 100;
   display: flex;

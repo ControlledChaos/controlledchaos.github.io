@@ -15,10 +15,11 @@
 
 <article class="main-article post-article">
 	<section class="post-cover">
-		<a href="{{ post.url | absolute_url }}">
 
 			<figure class="post-image">
-				<img src="{{ image_src | absolute_url }}" role="presentation" />
+				<a href="{{ post.url | absolute_url }}">
+					<img src="{{ image_src | absolute_url }}" role="presentation" />
+				</a>
 			</figure>
 
 			<div>
@@ -32,7 +33,6 @@
 					{%- endif -%}
 				</header>
 			</div>
-		</a>
 	</section>
 	<footer class="post-footer">
 
