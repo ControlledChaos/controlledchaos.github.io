@@ -1540,7 +1540,7 @@ figcaption {
 }
 .entry-header .post-title {
   margin: 0;
-  line-height: 1.2;
+  line-height: 95%;
 }
 .entry-header .post-subtitle {
   margin: 0;
