@@ -114,7 +114,7 @@
 }
 
 // Featured projects.
-.widget-featured-projects {
+.widget.widget-featured-projects {
 
 	.widget-featured-list {
 		li {
@@ -145,7 +145,7 @@
 }
 
 // Latest posts.
-.widget-latest-posts {
+.widget.widget-latest-posts {
 
 	.widget-latest-list {
 		li {
@@ -166,51 +166,69 @@
 	}
 }
 
-// Owner widget.
-.owner-avatar { // The `<figure>` element.
-	width: var( --ccd-owner-avatar--size );
-	min-width: var( --ccd-owner-avatar--size );
+// Owner info.
+.widget.widget-owner {
 
-	a {
-		display: block;
-		width: var( --ccd-owner-avatar--size );
-		height: var( --ccd-owner-avatar--size );
-	}
-	img {
-		display: block;
-		aspect-ratio: 1 / 1;
-		object-fit: cover;
-		object-position: center center;
-	}
-	figcaption {
-		display: block;
-		padding: 0.5rem;
-	}
-}
+	.owner-widget-wrap {
+		display: flex;
+		gap: var( --ccd-spacing--x--half );
+		margin-top: var( --ccd-spacing--y--half );
 
-.owner-info {
-	p:first-of-type {
+		@media screen and ( max-width: l.$bp_med ) {
+			flex-direction: column;
+		}
+	}
+	.owner-info {
+		p:first-of-type {
+			margin: 0;
+		}
+	}
+	.owner-links {
+		list-style: none;
 		margin: 0;
 	}
+	.owner-avatar { // The `<figure>` element.
+		width: var( --ccd-owner-avatar--size );
+		min-width: var( --ccd-owner-avatar--size );
+
+		a {
+			display: block;
+			width: var( --ccd-owner-avatar--size );
+			height: var( --ccd-owner-avatar--size );
+		}
+		img {
+			display: block;
+			aspect-ratio: 1 / 1;
+			object-fit: cover;
+			object-position: center center;
+		}
+		figcaption {
+			display: block;
+			padding: 0.5rem;
+		}
+	}
 }
 
-.owner-links {
-	list-style: none;
-	margin: 0;
+// Page links.
+.widget.widget-page-links {
+	.page-links-widget-nav {
+		ul {
+			list-style: none;
+		}
+	}
+	&.widget-footer {
+		.page-links-widget-nav {
+			ul {
+				column-count: 2;
+				column-width: 160px;
+				column-wrap: wrap;
+			}
+		}
+	}
 }
 
 p + ul {
 	margin-top: var( --ccd-e--ccd-element--margin-top );
-}
-
-.owner-widget-wrap {
-	display: flex;
-	gap: var( --ccd-spacing--x--half );
-	margin-top: var( --ccd-spacing--y--half );
-
-	@media screen and ( max-width: l.$bp_med ) {
-		flex-direction: column;
-	}
 }
 
 .widget-aside {
@@ -219,15 +237,5 @@ p + ul {
 	}
 	.owner-avatar {
 		align-self: center;
-	}
-}
-
-// Page links.
-.page-links-widget-nav {
-	ul {
-		list-style: none;
-		column-count: 2;
-		column-width: 160px;
-		column-wrap: wrap;
 	}
 }
