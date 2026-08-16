@@ -1656,6 +1656,10 @@ figcaption {
 .posts-repo.repo-view-full .entry-article {
   margin-top: var(--ccd-spacing--y);
 }
+.posts-repo.repo-view-full .entry-article:not(:first-of-type) {
+  padding-top: var(--ccd-spacing--y--plus-half);
+  border-top: var(--ccd-box--border);
+}
 .posts-repo.repo-view-full .entry-header {
   text-align: center;
 }

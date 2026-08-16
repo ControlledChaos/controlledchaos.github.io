@@ -6,6 +6,11 @@
 
 	.entry-article {
 		margin-top: var( --ccd-spacing--y );
+
+		&:not( :first-of-type ) {
+			padding-top: var( --ccd-spacing--y--plus-half );
+			border-top: var( --ccd-box--border );
+		}
 	}
 	.entry-header {
 		text-align: center;
