@@ -45,14 +45,14 @@
 	{%- include site-header.html -%}
 
 	<div class="page-container" itemscope="itemscope" itemtype="{{ page_type }}">
-		<div id='{{ page.name | slugify | remove_last: "-md" }}' class="page-wrap">
+		<div id='{{ page.slug }}' class="page-wrap">
 			<main id="main-content" class="page-main" role="main" itemscope itemprop="mainContentOfPage">
 				{{ content }}
 			</main>
 
-			{%- if page_sidebar -%}
+			{%- unless page_sidebar == false -%}
 			{%- include site-sidebar.html -%}
-			{%- endif -%}
+			{%- endunless -%}
 
 		</div>
 	</div>
