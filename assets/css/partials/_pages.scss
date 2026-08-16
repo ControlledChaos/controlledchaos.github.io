@@ -111,8 +111,16 @@
 		}
 	}
 	&.paged-standard {
+
 		ul {
 			justify-content: space-between;
+		}
+		.paged-item {
+			width: 100%;
+
+			&.paged-next {
+				text-align: right;
+			}
 		}
 	}
 }

@@ -1200,6 +1200,12 @@ figcaption {
 .paged-nav.paged-standard ul {
   justify-content: space-between;
 }
+.paged-nav.paged-standard .paged-item {
+  width: 100%;
+}
+.paged-nav.paged-standard .paged-item.paged-next {
+  text-align: right;
+}
 
 .rtl .pagi-nav-icon {
   transform: scaleX(-1);

@@ -15,11 +15,11 @@
 <nav role="navigation" aria-label="Pagination" class="paged-nav paged-standard">
 	<ul>
 		{%- if paginator.previous_page -%}
-		<li><a class="previous_page" rel="prev" href="{{ previous_page_path | relative_url }}" aria-disabled="false" title="Page {{ paginator.previous_page }}" data-tooltip><span class="pagi-nav-icon">{{ prev_icon }}</span> Previous Page</a></li>
+		<li class="paged-item paged-prev"><a rel="prev" href="{{ previous_page_path | relative_url }}" aria-disabled="false" title="Page {{ paginator.previous_page }}" data-tooltip><span class="pagi-nav-icon">{{ prev_icon }}</span> Previous Page</a></li>
 		{%- endif -%}
 
 		{%- if paginator.next_page -%}
-		<li><a class="next_page" rel="next" href="{{ next_page_path | relative_url }}" aria-disabled="false" title="Page {{ paginator.next_page }}" data-tooltip>Next Page <span class="pagi-nav-icon">{{ next_icon }}</span></a></li>
+		<li class="paged-item paged-next"><a rel="next" href="{{ next_page_path | relative_url }}" aria-disabled="false" title="Page {{ paginator.next_page }}" data-tooltip>Next Page <span class="pagi-nav-icon">{{ next_icon }}</span></a></li>
 		{%- endif -%}
 	</ul>
 </nav>
