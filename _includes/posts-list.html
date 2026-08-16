@@ -30,6 +30,7 @@
 		</p>
 		{%- endif -%}
 	</header>
+
 	<div class="entry-summary">
 		<footer class="post-meta">
 			<p class="post-date">
@@ -60,12 +61,13 @@
 			</p>
 			{%- endif %}
 		</footer>
+
 		{%- assign length = site.length | default: 35 -%}
 		{%- assign word_count = post.excerpt | number_of_words -%}
 
 		<div class="post-excerpt">
 			<p>{{- post.excerpt | strip_html | truncatewords: length, "…" -}}</p>
-			<p><a class="post-excerpt-link" href="{{ post.url | absolute_url }}" title="{{ post.title }}" data-tooltip>Read Post {% include svg/arrow-right.svg %}</a></p>
+			<p><a class="post-excerpt-link" href="{{ post.url | absolute_url }}" title="{{ post.title }}" data-tooltip>Read Post {%- include svg/arrow-right.svg -%}</a></p>
 		</div>
 	</div>
 </article>
