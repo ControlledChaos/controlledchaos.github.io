@@ -14,16 +14,15 @@
 {%- endcapture -%}
 
 <article class="main-article post-article">
-
 	<section class="post-cover">
 		<a href="{{ post.url | absolute_url }}">
+
 			<figure class="post-image">
 				<img src="{{ image_src | absolute_url }}" role="presentation" />
 			</figure>
 
 			<div>
 				<header class="post-header">
-
 					{%- if post.title -%}
 					<h2 class="page-title post-title">{{ post.title }}</h2>
 					{%- endif -%}
@@ -31,13 +30,10 @@
 					{%- if post.subtitle -%}
 					<p class="page-subtitle post-subtitle">{{ post.subtitle }}</p>
 					{%- endif -%}
-
 				</header>
-
 			</div>
 		</a>
 	</section>
-
 	<footer class="post-footer">
 
 		{%- if post.category -%}
@@ -61,13 +57,10 @@
 			</span>
 		</div>
 		{%- endif -%}
-
 	</footer>
-
 	<div class="post-content">
 		{{ post.content }}
 	</div>
 
 	<p><a class="post-excerpt-link" href="{{ post.url | absolute_url }}" title="{{ post.title }}" data-tooltip>Go to Post {%- include svg/arrow-right.svg -%}</a></p>
-
 </article>
