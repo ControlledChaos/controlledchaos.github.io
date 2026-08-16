@@ -1484,6 +1484,68 @@ figcaption {
   opacity: 1;
 }
 
+.repo-view-full .post-cover {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 360px;
+}
+.repo-view-full .post-cover .post-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.repo-view-full .post-cover .post-image:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--ccd-overlay--bg-color);
+}
+.repo-view-full .post-cover img {
+  display: block;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center center;
+     object-position: center center;
+  width: 100%;
+  height: 100%;
+}
+.repo-view-full .post-cover > div {
+  position: relative;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--ccd-spacing--y) var(--ccd-spacing--x);
+  padding: var(--ccd-spacing--y) var(--ccd-spacing--x);
+}
+.repo-view-full .post-cover > div * {
+  color: #ffffff !important;
+}
+.repo-view-full .post-footer {
+  margin-top: var(--ccd-spacing--y);
+}
+.repo-view-full .post-footer .post-cats,
+.repo-view-full .post-footer .post-tags {
+  margin: 0;
+}
+.repo-view-full .post-cats-list,
+.repo-view-full .post-tags-list {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 0.5em;
+}
+
 .repo-view-list .posts-entry {
   width: 100%;
   max-width: 100%;
