@@ -1174,9 +1174,12 @@ figcaption {
   list-style: none;
   width: 100%;
   margin: 0;
-  padding: var(--ccd-spacing--y, 2rem) var(--ccd-spacing--x, 2rem);
+  padding: var(--ccd-spacing--y, 2rem) 0;
   display: flex;
   gap: 0 0.5em;
+}
+.paged-nav ul a {
+  font-weight: 625;
 }
 .paged-nav ul svg {
   display: inline-block;
