@@ -435,9 +435,9 @@ b, strong, optgroup {
   --ccd-color--one--base: #846f8b;
   --ccd-color--one--light: #927b98;
   --ccd-color--one--dark: #72577a;
-  --ccd-color--two--base: #9cb034;
-  --ccd-color--two--light: #b0c572;
-  --ccd-color--two--dark: #7c9419;
+  --ccd-color--two--base: #a0b43c;
+  --ccd-color--two--light: #b6c85b;
+  --ccd-color--two--dark: #7e8e2f;
   --ccd-box--border-style: solid;
   --ccd-box--border-width: 1px;
   --ccd-box--border-color: #cccccc;
@@ -529,7 +529,7 @@ b, strong, optgroup {
 }
 :host,
 :root {
-  --ccd-selection--bg-color: #c4d085;
+  --ccd-selection--bg-color: #c6d28a;
   --ccd-selection--text-color: #352c38;
 }
 @keyframes spinner {
