@@ -1937,6 +1937,7 @@ figcaption {
   display: block;
   font-family: var(--ccd-fonts--secondary-stack);
   font-size: 0.8125rem;
+  line-height: 1.35;
 }
 @media screen and (max-width: 640px) {
   .module-featured-projects .module-featured-subtitle {
