@@ -97,7 +97,9 @@
 	}
 
 	&.paged-numeric {
-		justify-content: center;
+		ul {
+			justify-content: center;
+		}
 
 		.current-page {
 			cursor: default;
@@ -108,7 +110,9 @@
 	}
 
 	&.paged-standard {
-		justify-content: space-between;
+		ul {
+			justify-content: space-between;
+		}
 	}
 }
 

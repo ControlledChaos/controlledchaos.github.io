@@ -1184,7 +1184,7 @@ figcaption {
   vertical-align: middle;
   vertical-align: center;
 }
-.paged-nav.paged-numeric {
+.paged-nav.paged-numeric ul {
   justify-content: center;
 }
 .paged-nav.paged-numeric .current-page {
@@ -1193,7 +1193,7 @@ figcaption {
   text-decoration: underline;
   opacity: 0.7;
 }
-.paged-nav.paged-standard {
+.paged-nav.paged-standard ul {
   justify-content: space-between;
 }
 
