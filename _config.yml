@@ -88,7 +88,7 @@ defaults:
       page_thumb: false # Fallback in templates.
 
 # Blog pages
-blog_view: "list" # list, grid, or full
+blog_view: "full" # list, grid, or full
 blog_path: "/posts/"
 paginate_path: "/posts/page:num/"
 paginate: 9
