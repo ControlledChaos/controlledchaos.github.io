@@ -10,7 +10,7 @@
 	{%- assign src = "posts/images/default-thumb.jpg" -%}
 {%- endif -%}
 
-<article id='{{ post.name | slugify | remove_last: "-md" }}' class="posts-entry">
+<article id="{{ post.name | slugify | remove_last: '-md' }}" class="posts-entry">
 
 	<figure class="entry-image" role="presentation">
 		<a href="{{ post.url | absolute_url }}">
