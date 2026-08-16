@@ -18,7 +18,7 @@ Posts are the core pages for the blog feature.
   
   **Used in:**
   - `_includes/head.html`
-  - `_includes/posts-preview.html`
+  - `_includes/posts-list.html`
   - `_includes/posts-full.html`
   - `_includes/featured-posts-grid.html`
   - `_includes/related-posts.html`
@@ -37,7 +37,7 @@ Posts are the core pages for the blog feature.
   
   **Used in:**
   - `_includes/head.html`
-  - `_includes/posts-preview.html`
+  - `_includes/posts-list.html`
   - `_includes/posts-full.html`
   - `_includes/featured-posts-grid.html`
   - `_includes/related-posts.html`
