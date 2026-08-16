@@ -50,6 +50,8 @@
 		<div id='{{ page.slug }}' class="page-wrap">
 			<main id="main-content" class="page-main" role="main" itemscope itemprop="mainContentOfPage">
 				{{ content }}
+
+				{%- include paged-{{ paged_style }}.html -%}
 			</main>
 
 			{%- unless page_sidebar == false -%}
@@ -57,8 +59,6 @@
 			{%- endunless -%}
 
 		</div>
-
-		{%- include paged-{{ paged_style }}.html -%}
 	</div>
 
 	{%- include site-footer.html -%}
