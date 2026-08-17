@@ -26,6 +26,11 @@
 	<p class="final-message">{{ "now" | date: "%Y" }} {{ site.final_message | default: "No copyright claims." }}</p>
 </footer>
 
+<div class="page-loading">
+	<div class="loading-icon"></div>
+	<p class="loading-text">{{ site.loading_text | default: "Loading" }}</p>
+</div>
+
 <!-- Theme scripts. -->
 <script src="{{ '/assets/js/fitvids.min.js' | relative_url }}"></script>
 <script src="{{ '/assets/js/lightbox.min.js' | relative_url }}"></script>
@@ -64,3 +69,10 @@ jQuery(document).ready( function($) {
 
 <!-- Simple Analytics -->
 <script async src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
+
+<!-- Remove page loader -->
+<script>
+$(window).on( 'pageshow', function() {
+	$( '.page-loading' ).fadeOut( 250 );
+});
+</script>
