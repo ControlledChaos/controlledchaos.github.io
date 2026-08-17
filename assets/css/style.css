@@ -2134,7 +2134,7 @@ figcaption {
 }
 @media screen and (max-width: 640px) {
   .widget.widget-featured-projects .widget-featured-subtitle {
-    font-size: 1rem;
+    font-size: 1.125rem;
   }
 }
 
@@ -2147,11 +2147,22 @@ figcaption {
   text-decoration: none;
   line-height: 1.2;
 }
+@media screen and (max-width: 640px) {
+  .widget.widget-latest-posts .widget-latest-link {
+    font-size: 1.25rem;
+  }
+}
 .widget.widget-latest-posts .widget-latest-date,
 .widget.widget-latest-posts .widget-latest-cats {
   display: block;
   font-family: var(--ccd-fonts--secondary-stack);
   font-size: 0.8125rem;
+}
+@media screen and (max-width: 640px) {
+  .widget.widget-latest-posts .widget-latest-date,
+  .widget.widget-latest-posts .widget-latest-cats {
+    font-size: 1rem;
+  }
 }
 
 .widget.widget-owner .owner-widget-wrap {

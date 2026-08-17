@@ -146,7 +146,7 @@
 		line-height: 1.35;
 
 		@media screen and ( max-width: l.$bp_sm ) {
-			font-size: 1rem;
+			font-size: 1.125rem;
 
 		}
 	}
@@ -165,12 +165,22 @@
 		font-weight: 650;
 		text-decoration: none;
 		line-height: 1.2;
+
+		@media screen and ( max-width: l.$bp_sm ) {
+			font-size: 1.25rem;
+
+		}
 	}
 	.widget-latest-date,
 	.widget-latest-cats {
 		display: block;
 		font-family: var( --ccd-fonts--secondary-stack );
 		font-size: 0.8125rem;
+
+		@media screen and ( max-width: l.$bp_sm ) {
+			font-size: 1rem;
+
+		}
 	}
 }
 
