@@ -157,6 +157,13 @@
 		--ccd-owner-avatar--size: 160px;
 	}
 
+	// Footer
+	// ------------------------------------------------
+	--ccd-site-info--margin: 0 var( --ccd-spacing--x );
+	@media screen and ( max-width: l.$bp_sm ) {
+		--ccd-site-info--margin: 0 var( --ccd-spacing--x--half );
+	}
+
 	// Text selection
 	// ------------------------------------------------
 	--ccd-selection--bg-color: #{f.lighten( c.$theme_two_base, 40% )};

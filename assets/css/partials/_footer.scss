@@ -22,7 +22,7 @@
 	}
 
 	.site-info {
-		margin: 0 var( --ccd-spacing--x, 2rem );
+		margin: var( --ccd-site-info--margin, 0 var( --ccd-spacing--x, 2rem ) );
 		padding: var( --ccd-spacing--y, 2rem ) 0;
 		position: relative;
 		z-index: 10;

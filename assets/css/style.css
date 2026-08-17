@@ -531,6 +531,16 @@ b, strong, optgroup {
 }
 :host,
 :root {
+  --ccd-site-info--margin: 0 var( --ccd-spacing--x );
+}
+@media screen and (max-width: 640px) {
+  :host,
+  :root {
+    --ccd-site-info--margin: 0 var( --ccd-spacing--x--half );
+  }
+}
+:host,
+:root {
   --ccd-selection--bg-color: #c6d28a;
   --ccd-selection--text-color: #352c38;
 }
@@ -2270,7 +2280,7 @@ p + ul {
   filter: grayscale(30%);
 }
 .site-footer .site-info {
-  margin: 0 var(--ccd-spacing--x, 2rem);
+  margin: var(--ccd-site-info--margin, 0 var(--ccd-spacing--x, 2rem));
   padding: var(--ccd-spacing--y, 2rem) 0;
   position: relative;
   z-index: 10;
