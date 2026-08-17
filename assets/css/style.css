@@ -1633,6 +1633,9 @@ figcaption {
   font-weight: 450;
   color: var(--ccd-color--two--dark);
 }
+.posts-repo.repo-view-list .entry-summary .entry-footer .entry-footer-date {
+  font-weight: 450;
+}
 .posts-repo.repo-view-list .entry-summary .entry-link {
   font-weight: 625;
 }
@@ -1938,7 +1941,7 @@ figcaption {
   font-weight: 450;
   color: var(--ccd-color--two--dark);
 }
-.post-page .post-footer .entry-footer-date {
+.post-page .post-footer .post-footer-date {
   font-weight: 450;
 }
 .post-page .post-content {
