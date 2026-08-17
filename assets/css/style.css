@@ -1176,13 +1176,25 @@ figcaption {
   color: var(--ccd-page-subtitle--text-color, var(--ccd-color--one--dark));
 }
 
-.page-content {
+.page-content,
+.repository {
   margin-top: var(--cfe-spacing--vert, 2rem);
 }
-.page-content h1, .page-content h2, .page-content h3, .page-content h4, .page-content h5, .page-content h6, .page-content p, .page-content ul, .page-content ol, .page-content table {
+.page-content h1, .page-content h2, .page-content h3, .page-content h4, .page-content h5, .page-content h6, .page-content p, .page-content ul, .page-content ol, .page-content table,
+.repository h1,
+.repository h2,
+.repository h3,
+.repository h4,
+.repository h5,
+.repository h6,
+.repository p,
+.repository ul,
+.repository ol,
+.repository table {
   margin-top: 1rem;
 }
-.page-content a {
+.page-content a,
+.repository a {
   font-weight: 550;
   text-decoration: underline;
   text-decoration-color: currentcolor;
@@ -1790,6 +1802,12 @@ figcaption {
   padding-top: var(--ccd-spacing--y--half);
   border-top: var(--ccd-box--border);
 }
+.posts-repo.repo-view-full .entry-content a {
+  font-weight: 550;
+  text-decoration: underline;
+  text-decoration-color: currentcolor;
+  text-underline-offset: 0.25em;
+}
 .posts-repo.repo-view-full .entry-link {
   font-weight: 625;
 }
@@ -1899,6 +1917,12 @@ figcaption {
   margin-top: var(--ccd-spacing--y);
   padding-top: var(--ccd-spacing--y--half);
   border-top: var(--ccd-box--border);
+}
+.post-page .post-content a {
+  font-weight: 550;
+  text-decoration: underline;
+  text-decoration-color: currentcolor;
+  text-underline-offset: 0.25em;
 }
 .post-page .post-nav-link {
   display: inline-flex;

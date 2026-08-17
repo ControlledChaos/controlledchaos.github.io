@@ -112,6 +112,13 @@
 		// Padding presumes first element has margin top of the same.
 		padding-top: var( --ccd-spacing--y--half );
 		border-top: var( --ccd-box--border );
+
+		a {
+			font-weight: 550;
+			text-decoration: underline;
+			text-decoration-color: currentcolor;
+			text-underline-offset: 0.25em;
+		}
 	}
 	.post-nav-link {
 		display: inline-flex;
