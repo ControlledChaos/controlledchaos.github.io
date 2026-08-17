@@ -1764,7 +1764,7 @@ figcaption {
 .posts-repo.repo-view-full .entry-footer .entry-footer-links {
   display: inline-flex;
   flex-wrap: wrap;
-  gap: 0.5em;
+  gap: 0.125em 0.5em;
   line-height: 1.3;
 }
 .posts-repo.repo-view-full .entry-content {
@@ -1874,7 +1874,7 @@ figcaption {
 .post-page .post-footer .post-footer-links {
   display: inline-flex;
   flex-wrap: wrap;
-  gap: 0.5em;
+  gap: 0.125em 0.5em;
   line-height: 1.3;
 }
 .post-page .post-content {
