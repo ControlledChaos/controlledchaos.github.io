@@ -107,6 +107,11 @@
 			flex-wrap: wrap;
 			gap: 0.125em 0.5em;
 			line-height: 1.3;
+
+			a {
+				font-weight: 500;
+				color: var( --ccd-color--two--dark );
+			}
 		}
 	}
 	.entry-content {
