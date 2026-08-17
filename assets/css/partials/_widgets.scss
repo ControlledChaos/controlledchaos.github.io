@@ -23,6 +23,11 @@
 
 		@media screen and ( max-width: l.$bp_med ) {
 			max-width: 320px;
+			min-width: unset;
+		}
+
+		@media screen and ( max-width: l.$bp_sm ) {
+			margin-top: var( --ccd-spacing--y--half );
 		}
 
 		h3:first-of-type {

@@ -1983,6 +1983,12 @@ figcaption {
 @media screen and (max-width: 800px) {
   .widget.widget-footer {
     max-width: 320px;
+    min-width: unset;
+  }
+}
+@media screen and (max-width: 640px) {
+  .widget.widget-footer {
+    margin-top: var(--ccd-spacing--y--half);
   }
 }
 .widget.widget-footer h3:first-of-type {
