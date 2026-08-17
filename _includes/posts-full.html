@@ -16,23 +16,23 @@
 <article class="entry-article">
 	<section class="entry-cover">
 
-			<figure class="entry-image">
-				<a href="{{ post.url | absolute_url }}">
-					<img src="{{ image_src | absolute_url }}" role="presentation" />
-				</a>
-			</figure>
+		<figure class="entry-image">
+			<a href="{{ post.url | absolute_url }}">
+				<img src="{{ image_src | absolute_url }}" role="presentation" />
+			</a>
+		</figure>
 
-			<div>
-				<header class="entry-header">
-					{%- if post.title -%}
-					<h2 class="page-title entry-title">{{ post.title }}</h2>
-					{%- endif -%}
+		<div>
+			<header class="entry-header">
+				{%- if post.title -%}
+				<h2 class="page-title entry-title">{{ post.title }}</h2>
+				{%- endif -%}
 
-					{%- if post.subtitle -%}
-					<p class="page-subtitle entry-subtitle">{{ post.subtitle }}</p>
-					{%- endif -%}
-				</header>
-			</div>
+				{%- if post.subtitle -%}
+				<p class="page-subtitle entry-subtitle">{{ post.subtitle }}</p>
+				{%- endif -%}
+			</header>
+		</div>
 	</section>
 	<footer class="entry-footer">
 
@@ -41,9 +41,9 @@
 			<span class="entry-footer-icon entry-cats-icon" role="presentation">{%- include svg/folder.svg -%} </span>
 			<span class="entry-footer-label entry-cats-label">Categories:</span>
 			<span class="entry-footer-links entry-cats-links">
-			{%- for cat in post.category -%}
-			<a href="{{ '/category/' | absolute_url }}{{- cat | slugify -}}"> {{- cat -}} </a>
-			{%- endfor -%}
+				{%- for cat in post.category -%}
+				<a href="{{ '/category/' | absolute_url }}{{- cat | slugify -}}"> {{- cat -}} </a>
+				{%- endfor -%}
 			</span>
 		</div>
 		{%- endif %}
@@ -53,13 +53,14 @@
 			<span class="entry-footer-icon entry-tags-icon" role="presentation">{%- include svg/tag.svg -%} </span>
 			<span class="entry-footer-label entry-tags-label">Tags:</span>
 			<span class="entry-footer-links entry-tags-links">
-			{%- for tag in post.tags -%}
-			<a href="{{ '/tags/' | relative_url }}#{{- tag -}}">{{- tag | capitalize -}}</a>
-			{%- endfor -%}
+				{%- for tag in post.tags -%}
+				<a href="{{ '/tags/' | relative_url }}#{{- tag -}}">{{- tag | capitalize -}}</a>
+				{%- endfor -%}
 			</span>
 		</div>
 		{%- endif -%}
 	</footer>
+
 	<div class="entry-content">
 		{{ post.content }}
 	</div>
