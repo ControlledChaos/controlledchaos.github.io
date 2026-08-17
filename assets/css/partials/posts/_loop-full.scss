@@ -77,11 +77,12 @@
 	.entry-footer {
 		margin-top: var( --ccd-spacing--y );
 
-		.entry-cats,
-		.entry-tags {
+		.entry-footer-tax {
 			margin: 0;
+			display: inline-flex;
+			gap: 0.25em;
+			line-height: 1.3;
 		}
-
 		.entry-footer-label {
 			border: 0;
 			clip: rect( 1px, 1px, 1px, 1px );
@@ -94,7 +95,6 @@
 			width: 1px;
 			word-wrap: normal !important;
 		}
-
 		.entry-footer-icon {
 			svg {
 				height: 1.25em;
@@ -102,12 +102,12 @@
 				vertical-align: center;
 			}
 		}
-	}
-	.entry-cats-list,
-	.entry-tags-list {
-		display: inline-flex;
-		flex-wrap: wrap;
-		gap: 0.5em;
+		.entry-footer-links {
+			display: inline-flex;
+			flex-wrap: wrap;
+			gap: 0.5em;
+			line-height: 1.3;
+		}
 	}
 	.entry-content {
 		margin-top: var( --ccd-spacing--y );

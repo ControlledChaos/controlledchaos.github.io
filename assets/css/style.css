@@ -1738,9 +1738,11 @@ figcaption {
 .posts-repo.repo-view-full .entry-footer {
   margin-top: var(--ccd-spacing--y);
 }
-.posts-repo.repo-view-full .entry-footer .entry-cats,
-.posts-repo.repo-view-full .entry-footer .entry-tags {
+.posts-repo.repo-view-full .entry-footer .entry-footer-tax {
   margin: 0;
+  display: inline-flex;
+  gap: 0.25em;
+  line-height: 1.3;
 }
 .posts-repo.repo-view-full .entry-footer .entry-footer-label {
   border: 0;
@@ -1759,11 +1761,11 @@ figcaption {
   vertical-align: middle;
   vertical-align: center;
 }
-.posts-repo.repo-view-full .entry-cats-list,
-.posts-repo.repo-view-full .entry-tags-list {
+.posts-repo.repo-view-full .entry-footer .entry-footer-links {
   display: inline-flex;
   flex-wrap: wrap;
   gap: 0.5em;
+  line-height: 1.3;
 }
 .posts-repo.repo-view-full .entry-content {
   margin-top: var(--ccd-spacing--y);
@@ -1846,9 +1848,11 @@ figcaption {
 .post-page .post-footer {
   margin-top: var(--ccd-spacing--y);
 }
-.post-page .post-footer .post-cats,
-.post-page .post-footer .post-tags {
+.post-page .post-footer .post-footer-tax {
   margin: 0;
+  display: inline-flex;
+  gap: 0.25em;
+  line-height: 1.3;
 }
 .post-page .post-footer .post-footer-label {
   border: 0;
@@ -1867,11 +1871,11 @@ figcaption {
   vertical-align: middle;
   vertical-align: center;
 }
-.post-page .post-cats-list,
-.post-page .post-tags-list {
+.post-page .post-footer .post-footer-links {
   display: inline-flex;
   flex-wrap: wrap;
   gap: 0.5em;
+  line-height: 1.3;
 }
 .post-page .post-content {
   margin-top: var(--ccd-spacing--y);

@@ -73,11 +73,12 @@
 	.post-footer {
 		margin-top: var( --ccd-spacing--y );
 
-		.post-cats,
-		.post-tags {
+		.post-footer-tax {
 			margin: 0;
+			display: inline-flex;
+			gap: 0.25em;
+			line-height: 1.3;
 		}
-
 		.post-footer-label {
 			border: 0;
 			clip: rect( 1px, 1px, 1px, 1px );
@@ -98,12 +99,12 @@
 				vertical-align: center;
 			}
 		}
-	}
-	.post-cats-list,
-	.post-tags-list {
-		display: inline-flex;
-		flex-wrap: wrap;
-		gap: 0.5em;
+		.post-footer-links {
+			display: inline-flex;
+			flex-wrap: wrap;
+			gap: 0.5em;
+			line-height: 1.3;
+		}
 	}
 	.post-content {
 		margin-top: var( --ccd-spacing--y );
