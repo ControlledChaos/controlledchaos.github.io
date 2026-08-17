@@ -10,7 +10,5 @@ site_nav:
     url: "/projects"
   - name: "Downloads"
     url: "/downloads"
-  - name: "Snippets"
-    url: "/snippets"
   - name: "Posts"
     url: "/posts"

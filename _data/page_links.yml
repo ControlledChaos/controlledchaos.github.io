@@ -13,8 +13,6 @@ page_links:
     url: "/projects"
   - name: "Get Downloads"
     url: "/downloads"
-  - name: "Get Snippets"
-    url: "/snippets"
   - name: "Read Posts"
     url: "/posts"
   - name: "Privacy Info"
