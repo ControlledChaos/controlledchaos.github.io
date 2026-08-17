@@ -2,8 +2,6 @@
 /// Site footer styles
 ///
 
-@use '../modules/colors' as c;
-
 .site-footer {
 	position: relative;
 	margin: var( --ccd-site-footer--margin, 0 );
@@ -42,7 +40,7 @@
 
 			&:hover,
 			&:focus {
-				color: var( --ccd-site-footer--link--action--text-color, var( --ccd-site-footer--text-color, c.$off_white ) );
+				color: var( --ccd-site-footer--link--action--text-color, var( --ccd-site-footer--text-color, var( --ccd-color--gray-pale ) ) );
 			}
 		}
 	}

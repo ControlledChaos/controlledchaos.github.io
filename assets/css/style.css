@@ -2303,7 +2303,7 @@ p + ul {
   color: var(--ccd-site-footer--link--text-color, var(--ccd-site-footer--text-color, #ffffff));
 }
 .site-footer .site-info a:hover, .site-footer .site-info a:focus {
-  color: var(--ccd-site-footer--link--action--text-color, var(--ccd-site-footer--text-color, #f1f1f0));
+  color: var(--ccd-site-footer--link--action--text-color, var(--ccd-site-footer--text-color, var(--ccd-color--gray-pale)));
 }
 .site-footer .final-message {
   position: relative;
