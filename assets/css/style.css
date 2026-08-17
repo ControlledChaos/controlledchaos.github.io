@@ -1312,6 +1312,12 @@ figcaption {
 .front-page-content {
   max-width: 960px;
 }
+.front-page-content a {
+  font-weight: 550;
+  text-decoration: underline;
+  text-decoration-color: currentcolor;
+  text-underline-offset: 0.25em;
+}
 
 .front-intro-avatar {
   width: 100%;

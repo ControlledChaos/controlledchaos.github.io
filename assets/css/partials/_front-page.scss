@@ -86,6 +86,13 @@
 
 .front-page-content {
 	max-width: l.$bp_lg;
+
+	a {
+		font-weight: 550;
+		text-decoration: underline;
+		text-decoration-color: currentcolor;
+		text-underline-offset: 0.25em;
+	}
 }
 
 .front-intro-avatar {
