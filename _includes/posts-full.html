@@ -1,4 +1,7 @@
 {%- assign post = include.post %}
+
+{%- assign date_format = site.date_format | default: "%B %-d, %Y" -%}
+
 {%- if post.post_image -%}
 	{%- assign image_dir = post.date | date: "posts/images/%Y/%m/" | append: post.slug | append: "/" -%}
 	{%- assign image_src = image_dir | append: post.post_image -%}
