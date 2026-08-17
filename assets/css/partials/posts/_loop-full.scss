@@ -78,9 +78,9 @@
 		margin-top: var( --ccd-spacing--y );
 
 		.entry-footer-tax {
-			margin: 0;
-			display: inline-flex;
-			gap: 0.25em;
+			margin-top: 0.25rem;
+			display: flex;
+			gap: 0.5em 0.25em;
 			line-height: 1.3;
 		}
 		.entry-footer-label {

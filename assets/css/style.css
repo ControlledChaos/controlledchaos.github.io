@@ -1739,9 +1739,9 @@ figcaption {
   margin-top: var(--ccd-spacing--y);
 }
 .posts-repo.repo-view-full .entry-footer .entry-footer-tax {
-  margin: 0;
-  display: inline-flex;
-  gap: 0.25em;
+  margin-top: 0.25rem;
+  display: flex;
+  gap: 0.5em 0.25em;
   line-height: 1.3;
 }
 .posts-repo.repo-view-full .entry-footer .entry-footer-label {
@@ -1849,9 +1849,9 @@ figcaption {
   margin-top: var(--ccd-spacing--y);
 }
 .post-page .post-footer .post-footer-tax {
-  margin: 0;
-  display: inline-flex;
-  gap: 0.25em;
+  margin-top: 0.25rem;
+  display: flex;
+  gap: 0.5em 0.25em;
   line-height: 1.3;
 }
 .post-page .post-footer .post-footer-label {
