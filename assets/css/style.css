@@ -1742,6 +1742,23 @@ figcaption {
 .posts-repo.repo-view-full .entry-footer .entry-tags {
   margin: 0;
 }
+.posts-repo.repo-view-full .entry-footer .entry-cats-label,
+.posts-repo.repo-view-full .entry-footer .entry-tags-label {
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute !important;
+  width: 1px;
+  word-wrap: normal !important;
+}
+.posts-repo.repo-view-full .entry-footer .entry-cats-icon svg,
+.posts-repo.repo-view-full .entry-footer .entry-tags-icon svg {
+  height: 1em;
+}
 .posts-repo.repo-view-full .entry-cats-list,
 .posts-repo.repo-view-full .entry-tags-list {
   display: inline-flex;
@@ -1832,6 +1849,23 @@ figcaption {
 .post-page .post-footer .post-cats,
 .post-page .post-footer .post-tags {
   margin: 0;
+}
+.post-page .post-footer .entry-cats-label,
+.post-page .post-footer .entry-tags-label {
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute !important;
+  width: 1px;
+  word-wrap: normal !important;
+}
+.post-page .post-footer .entry-cats-icon svg,
+.post-page .post-footer .entry-tags-icon svg {
+  height: 1em;
 }
 .post-page .post-cats-list,
 .post-page .post-tags-list {

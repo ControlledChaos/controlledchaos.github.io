@@ -77,6 +77,27 @@
 		.post-tags {
 			margin: 0;
 		}
+
+		.entry-cats-label,
+		.entry-tags-label {
+			border: 0;
+			clip: rect( 1px, 1px, 1px, 1px );
+			clip-path: inset( 50% );
+			height: 1px;
+			margin: -1px;
+			overflow: hidden;
+			padding: 0;
+			position: absolute !important;
+			width: 1px;
+			word-wrap: normal !important;
+		}
+
+		.entry-cats-icon,
+		.entry-tags-icon {
+			svg {
+				height: 1em;
+			}
+		}
 	}
 	.post-cats-list,
 	.post-tags-list {
