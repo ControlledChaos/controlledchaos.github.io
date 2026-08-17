@@ -78,8 +78,7 @@
 			margin: 0;
 		}
 
-		.entry-cats-label,
-		.entry-tags-label {
+		.post-footer-label {
 			border: 0;
 			clip: rect( 1px, 1px, 1px, 1px );
 			clip-path: inset( 50% );
@@ -92,10 +91,11 @@
 			word-wrap: normal !important;
 		}
 
-		.entry-cats-icon,
-		.entry-tags-icon {
+		.post-footer-icon {
 			svg {
-				height: 1em;
+				height: 1.25em;
+				vertical-align: middle;
+				vertical-align: center;
 			}
 		}
 	}

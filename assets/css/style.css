@@ -1742,8 +1742,7 @@ figcaption {
 .posts-repo.repo-view-full .entry-footer .entry-tags {
   margin: 0;
 }
-.posts-repo.repo-view-full .entry-footer .entry-cats-label,
-.posts-repo.repo-view-full .entry-footer .entry-tags-label {
+.posts-repo.repo-view-full .entry-footer .entry-footer-label {
   border: 0;
   clip: rect(1px, 1px, 1px, 1px);
   clip-path: inset(50%);
@@ -1755,9 +1754,10 @@ figcaption {
   width: 1px;
   word-wrap: normal !important;
 }
-.posts-repo.repo-view-full .entry-footer .entry-cats-icon svg,
-.posts-repo.repo-view-full .entry-footer .entry-tags-icon svg {
-  height: 1em;
+.posts-repo.repo-view-full .entry-footer .entry-footer-icon svg {
+  height: 1.25em;
+  vertical-align: middle;
+  vertical-align: center;
 }
 .posts-repo.repo-view-full .entry-cats-list,
 .posts-repo.repo-view-full .entry-tags-list {
@@ -1850,8 +1850,7 @@ figcaption {
 .post-page .post-footer .post-tags {
   margin: 0;
 }
-.post-page .post-footer .entry-cats-label,
-.post-page .post-footer .entry-tags-label {
+.post-page .post-footer .post-footer-label {
   border: 0;
   clip: rect(1px, 1px, 1px, 1px);
   clip-path: inset(50%);
@@ -1863,9 +1862,10 @@ figcaption {
   width: 1px;
   word-wrap: normal !important;
 }
-.post-page .post-footer .entry-cats-icon svg,
-.post-page .post-footer .entry-tags-icon svg {
-  height: 1em;
+.post-page .post-footer .post-footer-icon svg {
+  height: 1.25em;
+  vertical-align: middle;
+  vertical-align: center;
 }
 .post-page .post-cats-list,
 .post-page .post-tags-list {
