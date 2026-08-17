@@ -36,6 +36,12 @@
 	</section>
 	<footer class="entry-footer">
 
+		<div class="entry-footer-date">
+			<span class="entry-footer-icon entry-date-icon" role="presentation">{%- include svg/clock.svg -%} </span>
+			<span class="entry-footer-label entry-date-label">Posted:</span>
+			<span class="entry-footer-date">{{ post.date | date: date_format }}</span>
+		</div>
+
 		{%- if post.category -%}
 		<div class="entry-footer-tax entry-footer-cats">
 			<span class="entry-footer-icon entry-cats-icon" role="presentation">{%- include svg/folder.svg -%} </span>

@@ -42,6 +42,12 @@ layout: common
 
 	<footer class="post-footer">
 
+		<div class="post-footer-date">
+			<span class="post-footer-icon post-date-icon" role="presentation">{%- include svg/clock.svg -%} </span>
+			<span class="post-footer-label post-date-label">Posted:</span>
+			<span class="post-footer-date">{{ post.date | date: date_format }}</span>
+		</div>
+
 		{%- if page.category -%}
 		<div class="post-footer-tax post-footer-cats">
 			<span class="post-footer-icon post-cats-icon" role="presentation">{%- include svg/folder.svg -%} </span>

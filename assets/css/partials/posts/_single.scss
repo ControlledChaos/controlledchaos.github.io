@@ -104,6 +104,14 @@
 			flex-wrap: wrap;
 			gap: 0.125em 0.5em;
 			line-height: 1.3;
+
+			a {
+				font-weight: 450;
+				color: var( --ccd-color--two--dark );
+			}
+		}
+		.entry-footer-date {
+			font-weight: 450;
 		}
 	}
 	.post-content {
