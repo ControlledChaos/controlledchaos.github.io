@@ -490,6 +490,7 @@ b, strong, optgroup {
   --ccd-site-header--text-color: #ffffff;
   --ccd-site-title--font-weight: 470;
   --ccd-site-title--text-color: #ffffff;
+  --cfe-page-wrap--padding: 0 var( --ccd-spacing--x );
   --ccd-page-title--font-size: 3.25rem;
   --ccd-page-title--font-weight: 500;
   --ccd-page-title--line-height: 95%;
@@ -501,6 +502,7 @@ b, strong, optgroup {
 @media screen and (max-width: 640px) {
   :host,
   :root {
+    --cfe-page-wrap--padding: 0 var( --ccd-spacing--x--half );
     --ccd-page-subtitle--margin: 0.5em 0 0 0;
     --ccd-page-subtitle--line-height: var( --ccd-body--line-height, 1.5 );
   }
