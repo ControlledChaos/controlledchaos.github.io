@@ -1193,8 +1193,8 @@ figcaption {
 .repository table {
   margin-top: 1rem;
 }
-.page-content a,
-.repository a {
+
+.page-content a {
   font-weight: 550;
   text-decoration: underline;
   text-decoration-color: currentcolor;
@@ -2002,8 +2002,13 @@ figcaption {
 }
 @media screen and (max-width: 800px) {
   .widgets-footer {
-    flex-direction: column;
-    align-items: flex-start;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 800px) {
+  .widgets-footer {
+    grid-template-columns: repeat(1, 1fr);
   }
 }
 
@@ -2292,6 +2297,11 @@ p + ul {
   .page-sidebar .widget:not(:first-of-type) {
     padding-top: 0;
     border-top: none;
+  }
+}
+@media screen and (max-width: 800px) {
+  .page-sidebar .widget {
+    margin: 0;
   }
 }
 

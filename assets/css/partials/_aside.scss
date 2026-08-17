@@ -83,5 +83,8 @@
 				border-top: none;
 			}
 		}
+		@media screen and ( max-width: layout.$bp_med ) {
+			margin: 0;
+		}
 	}
 }
