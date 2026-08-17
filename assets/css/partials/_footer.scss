@@ -2,6 +2,8 @@
 /// Site footer styles
 ///
 
+@use '../modules/colors' as c;
+
 .site-footer {
 	position: relative;
 	margin: var( --ccd-site-footer--margin, 0 );
@@ -29,9 +31,19 @@
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
+		color: var( --ccd-site-footer--text-color, #ffffff );
 
-		* {
+		h2,
+		h3 {
 			color: var( --ccd-site-footer--text-color, #ffffff );
+		}
+		a {
+			color: var( --ccd-site-footer--link--text-color, var( --ccd-site-footer--text-color, #ffffff ) );
+
+			&:hover,
+			&:focus {
+				color: var( --ccd-site-footer--link--action--text-color, var( --ccd-site-footer--text-color, c.$off_white ) );
+			}
 		}
 	}
 

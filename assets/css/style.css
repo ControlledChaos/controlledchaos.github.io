@@ -2049,8 +2049,8 @@ figcaption {
   font-weight: var(--ccd-widget--link--font-weight, var(--ccd-link--font-weight, inherit));
   font-style: var(--ccd-widget--link--font-style, var(--ccd-link--font-style, normal));
   font-variant: var(--ccd-widget--link--font-variant, var(--ccd-link--font-variant, normal));
-  -webkit-text-decoration: var(--ccd-widget--link--text-decoration, var(--ccd-link--text-decoration, underline));
-          text-decoration: var(--ccd-widget--link--text-decoration, var(--ccd-link--text-decoration, underline));
+  -webkit-text-decoration: var(--ccd-widget--link--text-decoration, var(--ccd-link--text-decoration, none));
+          text-decoration: var(--ccd-widget--link--text-decoration, var(--ccd-link--text-decoration, none));
   text-transform: var(--ccd-widget--link--text-transform, var(--ccd-link--text-transform, inherit));
   color: var(--ccd-widget--link--text-color, var(--ccd-link--text-color));
 }
@@ -2293,9 +2293,17 @@ p + ul {
   display: flex;
   flex-direction: column;
   justify-content: center;
-}
-.site-footer .site-info * {
   color: var(--ccd-site-footer--text-color, #ffffff);
+}
+.site-footer .site-info h2,
+.site-footer .site-info h3 {
+  color: var(--ccd-site-footer--text-color, #ffffff);
+}
+.site-footer .site-info a {
+  color: var(--ccd-site-footer--link--text-color, var(--ccd-site-footer--text-color, #ffffff));
+}
+.site-footer .site-info a:hover, .site-footer .site-info a:focus {
+  color: var(--ccd-site-footer--link--action--text-color, var(--ccd-site-footer--text-color, #f1f1f0));
 }
 .site-footer .final-message {
   position: relative;
