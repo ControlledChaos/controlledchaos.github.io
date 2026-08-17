@@ -188,8 +188,8 @@ h2 {
 	font-variant: var( --ccd-heading-primary--font-variant, inherit );
 	font-stretch: var( --ccd-heading-primary--font-stretch, normal );
 	line-height: var( --ccd-heading-primary--line-height, inherit );
-	letter-spacing: var( --ccd-heading-primary--letter-spacing, -0.015em );
-	word-spacing: var( --ccd-heading-primary--word-spacing, 0.05em );
+	letter-spacing: var( --ccd-heading-primary--letter-spacing, normal );
+	word-spacing: var( --ccd-heading-primary--word-spacing, normal );
 	text-decoration: var( --ccd-heading-primary--text-decoration );
 	text-transform: var( --ccd-heading-primary--text-transform );
 	color: var( --ccd-heading-primary--text-color, var( --ccd-body--text-color ) );
