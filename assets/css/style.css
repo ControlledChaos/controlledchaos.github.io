@@ -1554,7 +1554,7 @@ figcaption {
   overflow: hidden;
   width: 240px;
   height: 180px;
-  transform: translateY(0.5rem);
+  transform: translateY(0.25rem);
 }
 @media screen and (max-width: 640px) {
   .posts-repo.repo-view-list .entry-image {

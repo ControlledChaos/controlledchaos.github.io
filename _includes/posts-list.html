@@ -14,7 +14,7 @@
 
 	<figure class="entry-image" role="presentation">
 		<a href="{{ post.url | absolute_url }}">
-			<img src="{{ src | absolute_url }}" class="entry-image" />
+			<img src="{{ src | absolute_url }}" />
 		</a>
 	</figure>
 
@@ -54,6 +54,7 @@
 
 			{%- if post.tags.size > 0 -%}
 			<div class="entry-footer-tax entry-footer-tags">
+				<span class="entry-footer-icon entry-tags-icon" role="presentation">{%- include svg/tag.svg -%} </span>
 				<span class="entry-footer-label entry-tags-label">Tags:</span>
 				<span class="entry-footer-links entry-tags-links">
 					{% for tag in post.tags %}
