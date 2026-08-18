@@ -5,7 +5,7 @@ layout: default
 
 <div class="repository posts-repo repo-view-list">
 
-{%- for post in site.posts -%}
+{%- for post in paginator.posts -%}
 	{%- unless post.categories contains category -%}
 		{%- continue -%}
 	{%- endunless -%}
