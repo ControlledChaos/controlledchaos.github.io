@@ -1,8 +1,7 @@
 ---
 layout: default
 ---
-{%- assign cats = site.categories[page.category] -%}
-{{ cats | inspect }}
+{%- assign cats = site.categories[page.categories] -%}
 {%- for post in site.posts -%}
 	{%- unless cats contains post.categories -%}
 		{%- continue -%}
