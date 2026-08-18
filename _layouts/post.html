@@ -60,7 +60,7 @@ layout: common
 				{%- unless page.categories contains cat.slug -%}
 					{%- continue -%}
 				{%- endunless -%}
-			<a href="{{ '/category/' | absolute_url }}{{- cat.slug -}}">{{- cat.name -}}{%- if ! categories.last -%}, {%- endif -%}</a>
+			<a href="{{ '/category/' | absolute_url }}{{- cat.slug -}}">{{- cat.name -}}{%- if cat != categories.last -%}, {%- endif -%}</a>
 			{%- endfor -%}
 			</span>
 		</div>
