@@ -37,7 +37,7 @@ collections:
     output: true
     pagination:
       enabled: true
-    paginate: 1
+    paginate: 9
   front-page:
     directory: _front-page
     output: false
