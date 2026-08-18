@@ -56,7 +56,7 @@ layout: common
 			<span class="post-footer-label post-cats-label">Category:</span>
 			<span class="post-footer-links post-cats-links">
 			{%- for cat in page.categories -%}
-			<a href="{{ '/category/' | absolute_url }}{{- cat | slugify -}}"> {{- cat -}} </a>
+			<a href="{{ '/category/' | absolute_url }}{{- cat | upcase | remove: '-' -}}"> {{- cat -}} </a>
 			{%- endfor -%}
 			</span>
 		</div>
