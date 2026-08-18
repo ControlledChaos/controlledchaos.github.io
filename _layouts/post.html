@@ -57,7 +57,7 @@ layout: common
 			<span class="post-footer-label post-cats-label">Category:</span>
 			<span class="post-footer-links post-cats-links">
 			{%- for cat in categories -%}
-				{%- unless page.categories contains cat -%}
+				{%- unless page.categories contains cat.slug -%}
 					{%- continue -%}
 				{%- endunless -%}
 			<a href="{{ '/category/' | absolute_url }}{{- cat.slug -}}"> {{- cat.title -}} </a>
