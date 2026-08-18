@@ -1,5 +1,5 @@
 {%- assign post = include.post %}
-
+{%- assign categories  = site.category -%}
 {%- assign date_format = site.date_format | default: "%B %-d, %Y" -%}
 
 {%- if post.post_image -%}
@@ -50,9 +50,12 @@
 			<span class="entry-footer-icon entry-cats-icon" role="presentation">{%- include svg/folder.svg -%} </span>
 			<span class="entry-footer-label entry-cats-label">Categories:</span>
 			<span class="entry-footer-links entry-cats-links">
-				{%- for cat in post.categories -%}
-				<a href="{{ '/category/' | absolute_url }}{{- cat | slugify -}}"> {{- cat | capitalize | replace: "-", " " -}} </a>
-				{%- endfor -%}
+			{%- for cat in categories -%}
+				{%- unless page.categories contains cat.slug -%}
+					{%- continue -%}
+				{%- endunless -%}
+			<a href="{{ '/category/' | absolute_url }}{{- cat.slug -}}"> {{- cat.title -}} </a>
+			{%- endfor -%}
 			</span>
 		</div>
 		{%- endif %}

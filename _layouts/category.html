@@ -1,11 +1,15 @@
 ---
 layout: default
+title: Category: :title
 ---
 {%- assign category = page.category -%}
 
 {%- for post in site.posts -%}
+
 	{%- unless post.categories contains category -%}
 		{%- continue -%}
 	{%- endunless -%}
-	<h2>{{ post.title }}</h2>
+
+	{%- include posts-list.html post = post -%}
+
 {%- endfor -%}
