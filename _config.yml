@@ -35,6 +35,9 @@ collections:
     directory: _category
     permalink: /category/:title
     output: true
+    pagination:
+      enabled: true
+    paginate: 1
   front-page:
     directory: _front-page
     output: false
