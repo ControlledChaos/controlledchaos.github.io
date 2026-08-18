@@ -2,7 +2,7 @@
 title: "To Raise or To Raze"
 subtitle: "Difficulties and advancements in building this website."
 post_image: "amish-barn.jpg"
-category: "CCDzine-Website"
+category: "CCDzine Website"
 tags: [ "learning", "jekyll", "liquid", "GitHub" ]
 ---
 
