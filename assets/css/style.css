@@ -1196,7 +1196,7 @@ figcaption {
 }
 
 .page-content a {
-  font-weight: 550;
+  font-weight: 500;
   text-decoration: underline;
   text-decoration-color: currentcolor;
   text-underline-offset: 0.25em;
@@ -1313,7 +1313,7 @@ figcaption {
   max-width: 960px;
 }
 .front-page-content a {
-  font-weight: 550;
+  font-weight: 500;
   text-decoration: underline;
   text-decoration-color: currentcolor;
   text-underline-offset: 0.25em;
