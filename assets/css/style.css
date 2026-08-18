@@ -478,7 +478,7 @@ b, strong, optgroup {
   --ccd-link--action--text-color--dark: var( --ccd-color--two--base );
   --ccd-heading-primary--font-size: 2.25rem;
   --ccd-heading-primary--font-weight: 550;
-  --ccd-heading-primary--letter-spacing: -0.035em;
+  --ccd-heading-primary--letter-spacing: -0.025em;
   --ccd-heading-secondary--font-size: 1.5rem;
   --ccd-heading-secondary--font-weight: 600;
   --ccd-heading-primary--text-color: var( --ccd-color--one--dark );
@@ -2169,7 +2169,7 @@ figcaption {
 }
 .widget.widget-featured-projects .widget-featured-subtitle {
   display: block;
-  margin-top: var(--ccd-spacing--y--quarter);
+  margin-top: calc(var(--ccd-spacing--y--quarter) / 2);
   font-family: var(--ccd-fonts--secondary-stack);
   font-size: 0.875rem;
   line-height: 1.35;

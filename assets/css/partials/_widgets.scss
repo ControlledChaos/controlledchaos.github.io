@@ -141,7 +141,7 @@
 	}
 	.widget-featured-subtitle {
 		display: block;
-		margin-top: var( --ccd-spacing--y--quarter );
+		margin-top: calc( var( --ccd-spacing--y--quarter ) / 2 );
 		font-family: var( --ccd-fonts--secondary-stack );
 		font-size: 0.875rem;
 		line-height: 1.35;
