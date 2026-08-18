@@ -2,6 +2,9 @@
 layout: default
 ---
 {%- assign cats = site.categories[page.category] -%}
-{%- for post in cats -%}
+{%- for post in site.posts -%}
+	{%- unless cats contains post.categories -%}
+		{%- continue -%}
+	{%- endunless -%}
 	{{ post.title }}
 {%- endfor -%}
