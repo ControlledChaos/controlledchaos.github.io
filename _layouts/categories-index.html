@@ -2,7 +2,7 @@
 layout: default
 ---
 {%- assign cats = site.posts -%}
-{%- for post in {{ cats }} -%}
+{%- for post in cats -%}
 	{%- include posts-list.html post = post -%}
 {%- endfor -%}
 
