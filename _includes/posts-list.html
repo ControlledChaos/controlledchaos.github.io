@@ -47,7 +47,7 @@
 				<span class="entry-footer-label entry-cats-label">Categories:</span>
 				<span class="entry-footer-links entry-cats-links">
 					{% for cat in post.categories %}
-					<a href="{{ '/category/' | absolute_url }}{{- cat | slugify -}}"> {{- cat | capitalize | remove: '-' -}} </a>
+					<a href="{{ '/category/' | absolute_url }}{{- cat | slugify -}}"> {{- cat | capitalize | replace: "-", " " -}} </a>
 					{%- endfor -%}
 				</span>
 			</div>
