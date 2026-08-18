@@ -93,10 +93,6 @@ blog_path: "/posts/"
 paginate_path: "/posts/page:num/"
 paginate: 9
 paged_style: "numeric" # numeric or standard
-category_path: "category"
-category_layout: category_index.html
-tag_page_layout: tags
-tag_page_dir: tags
 related_by: "tags or categories"
 
 # Footer content
