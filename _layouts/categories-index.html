@@ -5,4 +5,5 @@ layout: default
 {%- for post in {{ cats }} -%}
 	{%- include posts-list.html post = post -%}
 {%- endfor -%}
-Hello.
+
+{{ cats | inspect }}
