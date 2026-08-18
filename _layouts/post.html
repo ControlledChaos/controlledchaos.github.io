@@ -3,7 +3,17 @@ layout: common
 ---
 
 {%- assign date_format = site.date_format | default: "%B %-d, %Y" -%}
-{%- assign categories  = site.category -%}
+{%- assign categories  = "" | split: "," -%}
+
+{%- for category in site.category -%}
+
+	{%- unless page.categories contains cat.slug -%}
+		{%- continue -%}
+	{%- endunless -%}
+
+	<!-- Push to array -->
+	{%- assign categories = categories | push: category -%}
+{% endfor %}
 
 {%- if page.post_image -%}
 	{%- assign image_dir = page.date | date: "posts/images/%Y/%m/" | append: page.slug | append: "/" -%}
@@ -56,11 +66,8 @@ layout: common
 			<span class="post-footer-icon post-cats-icon" role="presentation">{%- include svg/folder.svg -%} </span>
 			<span class="post-footer-label post-cats-label">Category:</span>
 			<span class="post-footer-links post-cats-links">
-			{%- for cat in categories | split: ", " -%}
-				{%- unless page.categories contains cat.slug -%}
-					{%- continue -%}
-				{%- endunless -%}
-			<a href="{{ '/category/' | absolute_url }}{{- cat.slug -}}">{{- cat.name -}}{%- unless forloop.last -%}, {%- endunless -%}</a>
+			{%- for cat in categories -%}
+				<a href="{{ '/category/' | absolute_url }}{{- cat.slug -}}">{{- cat.name -}}</a>{%- unless forloop.last -%}, {%- endunless -%}
 			{%- endfor -%}
 			</span>
 		</div>
