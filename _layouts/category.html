@@ -3,10 +3,10 @@ layout: default
 ---
 {%- assign category = page.category -%}
 {%- assign cats = site.categories.{{ category }} -%}
-{{ cats | inspect }}
+
 {%- for post in site.posts -%}
-	{%- unless cats contains post.categories -%}
+	{%- unless post.categories contains category -%}
 		{%- continue -%}
 	{%- endunless -%}
-	{{ post.categories | inspect }}
+	{{ post.title }}
 {%- endfor -%}
