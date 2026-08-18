@@ -6,8 +6,7 @@ layout: common
 {%- if page.title and page.url != "/" -%}
 
 <header class="page-header">
-	<h1 class="page-title">Category: <br />
-	<small>{{ page.title }}</small></h1>
+	<h1 class="page-title category-title"><span class="category-label">Category:</span> <span class="category-name">{{ page.title }}</span></h1>
 
 	{%- if page.subtitle -%}
 	<p class="page-subtitle">{{ page.subtitle }}</p>

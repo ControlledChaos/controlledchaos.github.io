@@ -60,6 +60,10 @@
 	letter-spacing: var( --ccd-page-title--letter-spacing, -0.0325em );
 	line-height: var( --ccd-page-title--line-height, 1.2 );
 	color: var( --ccd-page-title--text-color, var( --ccd-heading-primary--text-color ) );
+
+	&.category-title {
+		font-size: var( --ccd-category-title--font-size, 2.1875rem );
+	}
 }
 
 .page-subtitle {
