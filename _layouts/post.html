@@ -7,7 +7,7 @@ layout: common
 
 {%- for category in site.category -%}
 
-	{%- unless page.categories contains cat.slug -%}
+	{%- unless page.categories contains category.slug -%}
 		{%- continue -%}
 	{%- endunless -%}
 
