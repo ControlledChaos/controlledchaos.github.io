@@ -521,6 +521,7 @@ b, strong, optgroup {
 :host,
 :root {
   --ccd-widget--heading--font-size: 1.625rem;
+  --ccd-widget--heading--font-weight: 550;
   --ccd-owner-avatar--size: 80px;
 }
 @media screen and (max-width: 800px) {
