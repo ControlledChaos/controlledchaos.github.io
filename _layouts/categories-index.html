@@ -1,7 +1,7 @@
 ---
 layout: default
 ---
-{%- assign cat = "ccdzine-website" -%}
-{%- for post in site.categories.{{cat}} -%}
+{%- assign cats = site.categories.ccdzine-website -%}
+{%- for post in {{ cats }} -%}
 	{%- include posts-list.html post = post -%}
 {%- endfor -%}
