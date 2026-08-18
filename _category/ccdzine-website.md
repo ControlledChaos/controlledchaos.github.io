@@ -1,5 +1,5 @@
 ---
 layout: category
 title: "CCDzine Website"
-categories: "ccdzine-website"
+category: "ccdzine-website"
 ---

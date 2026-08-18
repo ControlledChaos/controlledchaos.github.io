@@ -1,5 +1,5 @@
 ---
 layout: category
 title: "GitHub"
-categories: "github"
+category: "github"
 ---

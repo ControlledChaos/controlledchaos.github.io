@@ -1,5 +1,5 @@
 ---
 layout: category
 title: "Stories"
-categories: "stories"
+category: "stories"
 ---

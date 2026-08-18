@@ -1,5 +1,5 @@
 ---
 layout: category
 title: "Portfolio"
-categories: "portfolio"
+category: "portfolio"
 ---
