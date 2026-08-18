@@ -1,6 +1,16 @@
 {%- assign post = include.post %}
-{%- assign categories  = site.category -%}
 {%- assign date_format = site.date_format | default: "%B %-d, %Y" -%}
+
+{%- assign categories  = "" | split: "," -%}
+{%- for category in site.category -%}
+
+	{%- unless page.categories contains category.slug -%}
+		{%- continue -%}
+	{%- endunless -%}
+
+	<!-- Push to array -->
+	{%- assign categories = categories | push: category -%}
+{% endfor %}
 
 {%- if post.post_image -%}
 	{%- assign image_dir = post.date | date: "posts/images/%Y/%m/" | append: post.slug | append: "/" -%}
@@ -54,7 +64,7 @@
 				{%- unless page.categories contains cat.slug -%}
 					{%- continue -%}
 				{%- endunless -%}
-			<a href="{{ '/category/' | absolute_url }}{{- cat.slug -}}"> {{- cat.name -}} </a>
+				<span><a href="{{- '/category/' | absolute_url -}}{{- cat.slug -}}">{{- cat.name -}}</a>{%- unless forloop.last -%}, {%- endunless -%}</span>
 			{%- endfor -%}
 			</span>
 		</div>
