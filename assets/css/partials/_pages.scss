@@ -63,6 +63,7 @@
 
 	&.taxonomy-name {
 		font-size: var( --ccd-category-title--font-size, 2.1875rem );
+		letter-spacing: var( --ccd-category-title--letter-spacing, -0.025em );
 	}
 }
 
