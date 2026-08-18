@@ -19,7 +19,7 @@ layout: common
 
 <div class="repository posts-repo repo-view-list">
 
-{%- for post in paginator.posts -%}
+{%- for post in site.posts -%}
 	{%- unless post.categories contains category -%}
 		{%- continue -%}
 	{%- endunless -%}
