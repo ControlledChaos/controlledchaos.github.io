@@ -32,7 +32,8 @@ footer_image: "bamboo.jpg"
 # Collections
 collections:
   categories:
-    permalink: /:collection/:categories:output_ext
+    directory: _categories
+    permalink: /categories/:title
     output: true
   front-page:
     directory: _front-page
