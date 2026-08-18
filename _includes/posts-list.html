@@ -4,7 +4,7 @@
 {%- assign categories  = "" | split: "," -%}
 {%- for category in site.category -%}
 
-	{%- unless page.categories contains category.slug -%}
+	{%- unless post.categories contains category.slug -%}
 		{%- continue -%}
 	{%- endunless -%}
 
@@ -57,7 +57,7 @@
 				<span class="entry-footer-label entry-cats-label">Categories:</span>
 				<span class="entry-footer-links entry-cats-links">
 				{%- for cat in categories -%}
-					{%- unless page.categories contains cat.slug -%}
+					{%- unless post.categories contains cat.slug -%}
 						{%- continue -%}
 					{%- endunless -%}
 					<span><a href="{{- '/category/' | absolute_url -}}{{- cat.slug -}}">{{- cat.name -}}</a>{%- unless forloop.last -%}, {%- endunless -%}</span>
