@@ -1,6 +1,6 @@
 ---
 permalink: /help/
-page_type: "ProfilePage"
+page_type: "FAQPage"
 title: "Product Issues and Help"
 subtitle: "Get help outside the scope of hiring me."
 description: "Submit issues with products or read a how-to page."
