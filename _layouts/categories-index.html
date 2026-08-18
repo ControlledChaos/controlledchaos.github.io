@@ -1,6 +1,7 @@
 ---
 layout: default
 ---
-{%- for post in paginator.posts -%}
+{%- assign cat = "CCDzine Website" -%}
+{%- for post in site.categories.{{cat}} -%}
 	{%- include posts-list.html post = post -%}
 {%- endfor -%}
