@@ -75,7 +75,7 @@ defaults:
       post_gallery: false # Heading to return true.
   - scope:
       path: "" # empty string == all files in project.
-      type: "categories"
+      type: "category"
     values:
       layout: "category"
       page_type: "CollectionPage"
