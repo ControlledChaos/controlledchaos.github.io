@@ -1,15 +1,16 @@
 ---
 layout: default
-title: Category: :title
 ---
 {%- assign category = page.category -%}
 
-{%- for post in site.posts -%}
+<div class="repository posts-repo repo-view-list">
 
+{%- for post in site.posts -%}
 	{%- unless post.categories contains category -%}
 		{%- continue -%}
 	{%- endunless -%}
 
 	{%- include posts-list.html post = post -%}
-
 {%- endfor -%}
+
+</div>
