@@ -3,13 +3,13 @@ layout: common
 ---
 {%- assign category = page.category -%}
 
-{%- if page.title and page.url != "/" -%}
+{%- if page.name -%}
 
 <header class="page-header">
-	<h1 class="page-title taxonomy-title"><span class="category-label">Category:</span> <span class="category-name">{{ page.title }}</span></h1>
+	<h1 class="page-title taxonomy-name"><span class="category-label">Category:</span> <span class="category-name">{{ page.name }}</span></h1>
 
-	{%- if page.subtitle -%}
-	<p class="page-subtitle taxonomy-subtitle">{{ page.subtitle }}</p>
+	{%- if page.description -%}
+	<p class="page-subtitle taxonomy-description">{{ page.description }}</p>
 	{%- endif -%}
 
 </header>

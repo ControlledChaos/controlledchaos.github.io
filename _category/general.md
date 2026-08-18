@@ -1,5 +1,5 @@
 ---
 layout: category
-title: "General"
+name: "General"
 category: "general"
 ---

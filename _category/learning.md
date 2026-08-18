@@ -1,5 +1,5 @@
 ---
 layout: category
-title: "Learning"
+name: "Learning"
 category: "learning"
 ---

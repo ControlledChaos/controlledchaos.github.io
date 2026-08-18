@@ -61,7 +61,7 @@
 	line-height: var( --ccd-page-title--line-height, 1.2 );
 	color: var( --ccd-page-title--text-color, var( --ccd-heading-primary--text-color ) );
 
-	&.taxonomy-title {
+	&.taxonomy-name {
 		font-size: var( --ccd-category-title--font-size, 2.1875rem );
 	}
 }
@@ -74,7 +74,7 @@
 	line-height: var( --ccd-page-subtitle--line-height );
 	color: var( --ccd-page-subtitle--text-color, var( --ccd-color--one--dark ) );
 
-	&.taxonomy-subtitle {
+	&.taxonomy-description {
 		font-size: var( --ccd-category-subtitle--font-size, 1.125rem );
 		font-weight: var( --ccd-category-subtitle--font-weight, 550 );
 	}

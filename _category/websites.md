@@ -1,5 +1,5 @@
 ---
 layout: category
-title: "Websites"
+name: "Websites"
 category: "websites"
 ---

@@ -1,5 +1,5 @@
 ---
 layout: category
-title: "Liquid"
+name: "Liquid"
 category: "liquid"
 ---

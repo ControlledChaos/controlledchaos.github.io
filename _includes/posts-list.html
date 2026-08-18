@@ -50,7 +50,7 @@
 					{%- unless page.categories contains cat.slug -%}
 						{%- continue -%}
 					{%- endunless -%}
-				<a href="{{ '/category/' | absolute_url }}{{- cat.slug -}}">{{- cat.title -}} </a>
+				<a href="{{ '/category/' | absolute_url }}{{- cat.slug -}}">{{- cat.name -}} </a>
 				{%- endfor -%}
 				</span>
 			</div>
