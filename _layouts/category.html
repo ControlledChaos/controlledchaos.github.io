@@ -1,7 +1,20 @@
 ---
-layout: default
+layout: common
 ---
 {%- assign category = page.category -%}
+
+{%- if page.title and page.url != "/" -%}
+
+<header class="page-header">
+	<h1 class="page-title">Category: {{ page.title }}</h1>
+
+	{%- if page.subtitle -%}
+	<p class="page-subtitle">{{ page.subtitle }}</p>
+	{%- endif -%}
+
+</header>
+
+{%- endif -%}
 
 <div class="repository posts-repo repo-view-list">
 
