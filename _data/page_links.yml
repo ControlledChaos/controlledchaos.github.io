@@ -15,5 +15,7 @@ page_links:
     url: "/downloads"
   - name: "Read Posts"
     url: "/posts"
+  - name: "Issues & Docs"
+    url: "/help"
   - name: "Privacy Info"
     url: "/privacy"

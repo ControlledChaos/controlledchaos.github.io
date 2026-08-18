@@ -12,3 +12,5 @@ site_nav:
     url: "/downloads"
   - name: "Posts"
     url: "/posts"
+  - name: "Contact"
+    url: "/contact"
