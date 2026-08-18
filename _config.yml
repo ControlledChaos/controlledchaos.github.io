@@ -31,6 +31,9 @@ footer_image: "bamboo.jpg"
 
 # Collections
 collections:
+  categories:
+    permalink: /:collection/:categories:output_ext
+    output: true
   front-page:
     directory: _front-page
     output: false
@@ -63,11 +66,21 @@ defaults:
       permalink: /posts/:title/
       layout: "post"
       page_type: "BlogPosting"
+      categories: "general"
       author: "Greg Sweet"
       comments: true
       post_image: false # Fallback in templates.
       post_thumb: false # Fallback in templates.
       post_gallery: false # Heading to return true.
+  - scope:
+      path: "" # empty string == all files in project.
+      type: "categories"
+    values:
+      layout: "category"
+      page_type: "CollectionPage"
+      cover: "banner"
+      page_image: false # Fallback in templates.
+      page_thumb: false # Fallback in templates.
   - scope:
       path: "" # empty string == all files in project.
       type: "pages"
@@ -103,6 +116,7 @@ plugins:
   - jekyll-feed
   - jekyll-paginate
   - jekyll-sitemap
+  - jekyll-include-cache
   - jekyll-target-blank
   - jekyll-gist
   - jekyll-toc
