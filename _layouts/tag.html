@@ -1,7 +1,7 @@
 ---
 layout: common
 ---
-{%- assign tag = page.tag -%}
+{%- assign tags = page.tags -%}
 
 {%- if page.name -%}
 
@@ -19,7 +19,7 @@ layout: common
 <div class="repository taxonomy-repo tags-repo repo-view-list">
 
 {%- for post in site.posts -%}
-	{%- unless post.tags contains tag -%}
+	{%- unless post.tags contains tags -%}
 		{%- continue -%}
 	{%- endunless -%}
 
