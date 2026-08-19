@@ -68,6 +68,10 @@
 			margin: 0;
 			font-size: 1.75rem;
 			line-height: 95%;
+
+			@media screen and ( max-width: layout.$bp_sm ) {
+				line-height: 1.2;
+			}
 		}
 		.entry-subtitle {
 			margin-top: 0.5rem;

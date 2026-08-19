@@ -2091,6 +2091,11 @@ figcaption {
   font-size: 1.75rem;
   line-height: 95%;
 }
+@media screen and (max-width: 640px) {
+  .categories-repo.repo-view-list .entry-header .entry-title {
+    line-height: 1.2;
+  }
+}
 .categories-repo.repo-view-list .entry-header .entry-subtitle {
   margin-top: 0.5rem;
   font-weight: 500;
