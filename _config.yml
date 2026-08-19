@@ -38,6 +38,13 @@ collections:
     pagination:
       enabled: true
     paginate: 9
+  tag:
+    directory: _tag
+    permalink: /:collection/:title
+    output: true
+    pagination:
+      enabled: true
+    paginate: 9
   front-page:
     directory: _front-page
     output: false
@@ -80,6 +87,15 @@ defaults:
       type: "category"
     values:
       layout: "category"
+      page_type: "CollectionPage"
+      cover: "banner"
+      page_image: false # Fallback in templates.
+      page_thumb: false # Fallback in templates.
+  - scope:
+      path: "" # empty string == all files in project.
+      type: "tag"
+    values:
+      layout: "tag"
       page_type: "CollectionPage"
       cover: "banner"
       page_image: false # Fallback in templates.

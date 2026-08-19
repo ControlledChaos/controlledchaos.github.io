@@ -1,0 +1,29 @@
+---
+layout: common
+---
+{%- assign tag = page.tag -%}
+
+{%- if page.name -%}
+
+<header class="page-header">
+	<h1 class="page-title taxonomy-title"><span class="taxonomy-label">Posts Tagged:</span> <span class="taxonomy-name">{{ page.name }}</span></h1>
+
+	{%- if page.description -%}
+	<p class="page-subtitle taxonomy-description">{{ page.description }}</p>
+	{%- endif -%}
+
+</header>
+
+{%- endif -%}
+
+<div class="repository taxonomy-repo tags-repo repo-view-list">
+
+{%- for post in site.posts -%}
+	{%- unless post.tags contains tag -%}
+		{%- continue -%}
+	{%- endunless -%}
+
+
+{%- endfor -%}
+
+</div>

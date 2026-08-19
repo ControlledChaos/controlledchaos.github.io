@@ -3,8 +3,8 @@ layout: common
 ---
 
 {%- assign date_format = site.date_format | default: "%B %-d, %Y" -%}
-{%- assign categories  = "" | split: "," -%}
 
+{%- assign categories  = "" | split: "," -%}
 {%- for category in site.category -%}
 
 	{%- unless page.categories contains category.slug -%}
@@ -13,6 +13,17 @@ layout: common
 
 	<!-- Push to array -->
 	{%- assign categories = categories | push: category -%}
+{% endfor %}
+
+{%- assign tags  = "" | split: "," -%}
+{%- for tag in site.tag -%}
+
+	{%- unless page.tags contains tag.slug -%}
+		{%- continue -%}
+	{%- endunless -%}
+
+	<!-- Push to array -->
+	{%- assign tags = tags | push: tag -%}
 {% endfor %}
 
 {%- if page.post_image -%}
@@ -78,8 +89,8 @@ layout: common
 			<span class="post-footer-icon post-tags-icon" role="presentation">{%- include svg/tag.svg -%} </span>
 			<span class="post-footer-label post-tags-label">Tags:</span>
 			<span class="post-footer-links post-tags-links">
-			{%- for tag in page.tags -%}
-			<a href="{{ '/tags/' | relative_url }}#{{- tag -}}">{{- tag | capitalize -}}</a>
+			{%- for tag in tags -%}
+				<span><a href="{{- '/tag/' | absolute_url -}}{{- tag.slug -}}">{{- tag.name -}}</a>{%- unless forloop.last -%}, {%- endunless -%}</span>
 			{%- endfor -%}
 			</span>
 		</div>
