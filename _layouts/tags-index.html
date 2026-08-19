@@ -1,6 +1,7 @@
 ---
 layout: default
 ---
-{%- for tag in site.tags | sort_natural | split: ", " -%}
+{%- assign tags = site.tags | sort_natural | split: ", " -%}
+{%- for tag in tags -%}
 	{{ tag[0] }}
 {%- endfor -%}
