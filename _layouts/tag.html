@@ -15,9 +15,9 @@ layout: common
 </header>
 
 {%- endif -%}
-
+{{ post.tags }}
 <div class="repository taxonomy-repo tags-repo repo-view-list">
-<ul>
+
 {%- for post in site.posts -%}
 	{%- unless post.tags contains tag -%}
 		{%- continue -%}
@@ -25,5 +25,5 @@ layout: common
 
 	{%- include tags-list.html post = post -%}
 {%- endfor -%}
-</ul>
+
 </div>
