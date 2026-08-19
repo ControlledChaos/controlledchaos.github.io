@@ -22,7 +22,7 @@ layout: common
 	{%- unless post.tags contains tags -%}
 		{%- continue -%}
 	{%- endunless -%}
-
+{{ post.title }}
 	{%- include tags-list.html post = post -%}
 {%- endfor -%}
 </ul>
