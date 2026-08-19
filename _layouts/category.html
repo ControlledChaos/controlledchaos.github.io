@@ -28,7 +28,8 @@ layout: common
 {%- endfor -%}
 
 {%- assign per_page = 2 -%}
-{%- assign rows = site.posts.size | divided_by: 2.0 | ceil -%}
+{%- assign float = per_page | append: ".0" -%}
+{%- assign rows = site.posts.size | divided_by: float | ceil -%}
 
 {%- for i in (1..rows) -%}
 
