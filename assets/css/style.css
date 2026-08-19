@@ -2041,17 +2041,12 @@ figcaption {
   width: 100%;
   max-width: 100%;
   height: 100%;
-  display: grid;
-  grid-template-columns: 1fr 3fr;
+  display: flex;
   gap: 0 calc(var(--ccd-spacing--x) * 0.75);
-  grid-template-areas: "thumb header  header" "thumb summary summary";
-  margin-top: var(--ccd-spacing--x, 2rem);
-  padding-top: var(--ccd-spacing--x, 2rem);
-  border-top: var(--ccd-box--border, none);
+  margin-top: var(--ccd-spacing--x--half, 1rem);
 }
 @media screen and (max-width: 640px) {
   .categories-repo.repo-view-list .entry-article {
-    display: flex;
     flex-direction: column;
     gap: calc(var(--ccd-spacing--x) / 1) 0;
   }
@@ -2082,9 +2077,6 @@ figcaption {
      object-position: center center;
   border: 0;
 }
-.categories-repo.repo-view-list .entry-header {
-  grid-area: header;
-}
 @media screen and (max-width: 640px) {
   .categories-repo.repo-view-list .entry-header {
     order: 0;
@@ -2092,12 +2084,12 @@ figcaption {
 }
 .categories-repo.repo-view-list .entry-header .entry-title {
   margin: 0;
+  font-family: 1.75rem;
   line-height: 95%;
 }
 .categories-repo.repo-view-list .entry-header .entry-subtitle {
   margin-top: 0.5rem;
-  font-size: 1.0625rem;
-  font-weight: 550;
+  font-weight: 500;
   line-height: 1.375;
 }
 
