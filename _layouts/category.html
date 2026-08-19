@@ -18,7 +18,14 @@ layout: common
 
 <div class="repository posts-repo repo-view-list">
 
-{%- for post in paginator.posts -%}
+{%- for post in site.posts limit: 1 -%}
+	{%- unless post.categories contains category -%}
+		{%- continue -%}
+	{%- endunless -%}
+
+	{%- include posts-list.html post = post -%}
+{%- endfor -%}
+{%- for post in site.posts limit: 1 offset: continue -%}
 	{%- unless post.categories contains category -%}
 		{%- continue -%}
 	{%- endunless -%}
