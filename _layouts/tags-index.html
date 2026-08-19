@@ -1,7 +1,7 @@
 ---
 layout: default
 ---
-{%- assign tags = site.tags | sort -%}
+{%- assign tags = site.tag | sort -%}
 {%- for tag in tags -%}
-	{{ tag[0] }}
+	{{ tag.name }}
 {%- endfor -%}
