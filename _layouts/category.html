@@ -16,7 +16,6 @@ layout: common
 
 {%- endif -%}
 
-
 <div class="repository posts-repo repo-view-list">
 
 {%- for post in site.posts -%}
@@ -24,29 +23,23 @@ layout: common
 		{%- continue -%}
 	{%- endunless -%}
 
-	{%- include posts-list.html post = post -%}
+	{%- include categories-list.html post = post -%}
 {%- endfor -%}
 
-{%- assign per_page = 2 -%}
+</div>
+
+{%- comment -%}
+{%- assign per_page = site.paginate -%}
 {%- assign float = per_page | append: ".0" -%}
 {%- assign rows = site.posts.size | divided_by: float | ceil -%}
 
 {%- for i in (1..rows) -%}
-
 	{%- assign offset = forloop.index0 | times: per_page -%}
-
-	<div>
 	{%- for post in site.posts limit: per_page offset: offset -%}
 
 		{%- unless post.categories contains category -%}
 			{%- continue -%}
 		{%- endunless -%}
-
-		{{ post.title }} {{ forloop.index }}
-
 	{%- endfor -%}
-	</div>
-
 {%- endfor -%}
-
-</div>
+{%- endcomment -%}
