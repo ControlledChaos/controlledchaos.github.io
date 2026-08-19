@@ -5,6 +5,19 @@
 @use '../modules/layout';
 @use '../modules/colors';
 
+.page-title {
+	&.taxonomy-title {
+		font-size: var( --ccd-category-title--font-size, 2.1875rem );
+		letter-spacing: var( --ccd-category-title--letter-spacing, -0.025em );
+
+		.taxonomy-name {
+			@media screen and ( max-width: layout.$bp_sm ) {
+				display: block;
+			}
+		}
+	}
+}
+
 .categories-repo.repo-view-list {
 
 	.entry-article {
@@ -21,8 +34,7 @@
 		}
 
 		@media screen and ( max-width: layout.$bp_sm ) {
-			flex-direction: column;
-			gap: calc( var( --ccd-spacing--x ) / 1 ) 0;
+			display: block;
 		}
 	}
 
@@ -33,9 +45,7 @@
 		height: 60px;
 
 		@media screen and ( max-width: layout.$bp_sm ) {
-			order: 1;
-			width: unset;
-			height: unset;
+			display: none;
 		}
 
 		img {
@@ -63,6 +73,10 @@
 			margin-top: 0.5rem;
 			font-weight: 500;
 			line-height: 1.375;
+
+			@media screen and ( max-width: layout.$bp_sm ) {
+				font-size: 1.125rem;
+			}
 		}
 	}
 }

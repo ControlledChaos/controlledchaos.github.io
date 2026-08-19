@@ -1168,10 +1168,6 @@ figcaption {
   line-height: var(--ccd-page-title--line-height, 1.2);
   color: var(--ccd-page-title--text-color, var(--ccd-heading-primary--text-color));
 }
-.page-title.taxonomy-name {
-  font-size: var(--ccd-category-title--font-size, 2.1875rem);
-  letter-spacing: var(--ccd-category-title--letter-spacing, -0.025em);
-}
 
 .page-subtitle {
   margin: var(--ccd-page-subtitle--margin, 0.5em 0 0 0);
@@ -2037,6 +2033,16 @@ figcaption {
   vertical-align: center;
 }
 
+.page-title.taxonomy-title {
+  font-size: var(--ccd-category-title--font-size, 2.1875rem);
+  letter-spacing: var(--ccd-category-title--letter-spacing, -0.025em);
+}
+@media screen and (max-width: 640px) {
+  .page-title.taxonomy-title .taxonomy-name {
+    display: block;
+  }
+}
+
 .categories-repo.repo-view-list .entry-article {
   width: 100%;
   max-width: 100%;
@@ -2051,8 +2057,7 @@ figcaption {
 }
 @media screen and (max-width: 640px) {
   .categories-repo.repo-view-list .entry-article {
-    flex-direction: column;
-    gap: calc(var(--ccd-spacing--x) / 1) 0;
+    display: block;
   }
 }
 .categories-repo.repo-view-list .entry-image {
@@ -2063,9 +2068,7 @@ figcaption {
 }
 @media screen and (max-width: 640px) {
   .categories-repo.repo-view-list .entry-image {
-    order: 1;
-    width: unset;
-    height: unset;
+    display: none;
   }
 }
 .categories-repo.repo-view-list .entry-image img {
@@ -2092,6 +2095,11 @@ figcaption {
   margin-top: 0.5rem;
   font-weight: 500;
   line-height: 1.375;
+}
+@media screen and (max-width: 640px) {
+  .categories-repo.repo-view-list .entry-header .entry-subtitle {
+    font-size: 1.125rem;
+  }
 }
 
 .projects-list {
