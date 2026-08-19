@@ -2043,35 +2043,35 @@ figcaption {
   }
 }
 
-.categories-repo.repo-view-list .entry-article {
+.taxonomy-repo.repo-view-list .entry-article {
   width: 100%;
   max-width: 100%;
   height: 100%;
   display: flex;
   gap: 0 calc(var(--ccd-spacing--x) * 0.75);
 }
-.categories-repo.repo-view-list .entry-article:not(:first-of-type) {
+.taxonomy-repo.repo-view-list .entry-article:not(:first-of-type) {
   margin-top: var(--ccd-spacing--x--half, 1rem);
   padding-top: var(--ccd-spacing--x--half, 1rem);
   border-top: var(--ccd-box--border);
 }
 @media screen and (max-width: 640px) {
-  .categories-repo.repo-view-list .entry-article {
+  .taxonomy-repo.repo-view-list .entry-article {
     display: block;
   }
 }
-.categories-repo.repo-view-list .entry-image {
+.taxonomy-repo.repo-view-list .entry-image {
   position: relative;
   overflow: hidden;
   width: 80px;
   height: 60px;
 }
 @media screen and (max-width: 640px) {
-  .categories-repo.repo-view-list .entry-image {
+  .taxonomy-repo.repo-view-list .entry-image {
     display: none;
   }
 }
-.categories-repo.repo-view-list .entry-image img {
+.taxonomy-repo.repo-view-list .entry-image img {
   display: block;
   width: 100%;
   height: 100%;
@@ -2082,27 +2082,27 @@ figcaption {
   border: 0;
 }
 @media screen and (max-width: 640px) {
-  .categories-repo.repo-view-list .entry-header {
+  .taxonomy-repo.repo-view-list .entry-header {
     order: 0;
   }
 }
-.categories-repo.repo-view-list .entry-header .entry-title {
+.taxonomy-repo.repo-view-list .entry-header .entry-title {
   margin: 0;
   font-size: 1.75rem;
   line-height: 95%;
 }
 @media screen and (max-width: 640px) {
-  .categories-repo.repo-view-list .entry-header .entry-title {
+  .taxonomy-repo.repo-view-list .entry-header .entry-title {
     line-height: 1.2;
   }
 }
-.categories-repo.repo-view-list .entry-header .entry-subtitle {
+.taxonomy-repo.repo-view-list .entry-header .entry-subtitle {
   margin-top: 0.5rem;
   font-weight: 500;
   line-height: 1.375;
 }
 @media screen and (max-width: 640px) {
-  .categories-repo.repo-view-list .entry-header .entry-subtitle {
+  .taxonomy-repo.repo-view-list .entry-header .entry-subtitle {
     font-size: 1.125rem;
   }
 }
