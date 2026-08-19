@@ -12,6 +12,17 @@
 	{%- assign categories = categories | push: category -%}
 {% endfor %}
 
+{%- assign tags  = "" | split: "," -%}
+{%- for category in site.category -%}
+
+	{%- unless post.tags contains category.slug -%}
+		{%- continue -%}
+	{%- endunless -%}
+
+	<!-- Push to array -->
+	{%- assign tags = tags | push: category -%}
+{% endfor %}
+
 {%- assign image_dir = post.date | date: "posts/images/%Y/%m/" | append: post.slug | append: "/" -%}
 {%- if post.post_thumb -%}
 	{%- assign src = image_dir | append: post.post_thumb -%}
@@ -51,7 +62,7 @@
 				<span class="entry-footer-date">{{ post.date | date: date_format }}</span>
 			</div>
 
-			{%- if post.categories -%}
+			{%- if post.categories.size > 0 -%}
 			<div class="entry-footer-tax entry-footer-cats">
 				<span class="entry-footer-icon entry-cats-icon" role="presentation">{%- include svg/folder.svg -%} </span>
 				<span class="entry-footer-label entry-cats-label">Categories:</span>
@@ -71,9 +82,12 @@
 				<span class="entry-footer-icon entry-tags-icon" role="presentation">{%- include svg/tag.svg -%} </span>
 				<span class="entry-footer-label entry-tags-label">Tags:</span>
 				<span class="entry-footer-links entry-tags-links">
-					{% for tag in post.tags %}
-					<a href="{{ '/tags' | absolute_url }}#{{- tag -}}"> {{- tag | capitalize -}} </a>
-					{%- endfor -%}
+				{% for tag in tags %}
+					{%- unless post.tags contains tag.slug -%}
+						{%- continue -%}
+					{%- endunless -%}
+					<span><a href="{{- '/tag/' | absolute_url -}}{{- tag.slug -}}">{{- tag.name -}}</a>{%- unless forloop.last -%}, {%- endunless -%}</span>
+				{%- endfor -%}
 				</span>
 			</div>
 			{%- endif -%}
