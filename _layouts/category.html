@@ -42,7 +42,7 @@ layout: common
 			{%- continue -%}
 		{%- endunless -%}
 
-		{{ post.title }} {{ offset }}
+		{{ post.title }} {{ forloop.index }}
 
 	{%- endfor -%}
 	</div>
