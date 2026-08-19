@@ -2,5 +2,16 @@
 
 <section id="section-services" data-anchor="services" class="front-page-section fp-auto-height-responsive">
 
-	<div class="section-wrap"></div>
+	<div class="section-wrap">
+
+		{%- if services.title and services.title != blank %}
+		<h2 class="section-heading">{{ services.title }}</h2>
+		{% endif -%}
+
+		<div class="front-page-content front-services-content">
+			{{ services.content -}}
+		</div>
+
+		{%- include featured-services-grid.html -%}
+	</div>
 </section>
