@@ -1,7 +1,7 @@
 ---
 layout: common
 ---
-{%- assign tags = page.tags -%}
+{%- assign tags = page.tags | split: ", " -%}
 
 {%- if page.name -%}
 
