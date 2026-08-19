@@ -49,7 +49,7 @@ collections:
     output: false
   projects:
     directory: _projects/content
-    permalink: /projects/:title/
+    permalink: /:collection/:title/
     layout: "project"
     output: true
     pagination:
@@ -57,7 +57,7 @@ collections:
     paginate: 3
   snippets:
     directory: _snippets
-    permalink: /snippets/:title/
+    permalink: /:collection/:title/
     layout: "snippet"
     output: true
 
@@ -67,7 +67,7 @@ defaults:
       path: "" # empty string == all files in project.
       type: "posts"
     values:
-      permalink: /posts/:title/
+      permalink: /:collection/:title/
       layout: "post"
       page_type: "BlogPosting"
       author: "Greg Sweet"
