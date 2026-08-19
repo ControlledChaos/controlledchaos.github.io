@@ -2,6 +2,9 @@
 layout: default
 ---
 {%- assign tags = site.tag | sort -%}
-{%- for tag in tags -%}
-	{{ tag.name }}
-{%- endfor -%}
+
+{%- if site.tags.size > 0 -%}
+	{%- for tag in tags -%}
+		{{ tag.name }}
+	{%- endfor -%}
+{%- endif -%}
