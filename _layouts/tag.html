@@ -18,7 +18,7 @@ layout: common
 
 <div class="repository taxonomy-repo tags-repo repo-view-list">
 <ul>
-{%- for post in site.posts -%}{{ post.tags }}
+{%- for post in site.posts -%}{{ post.tags | split: "," }}
 	{%- unless post.tags contains tags -%}
 		{%- continue -%}
 	{%- endunless -%}
