@@ -1,0 +1,23 @@
+# User interface text and labels
+
+# English (default)
+# -----------------
+en: &DEFAULT_EN
+  cat_label : "Category:"
+en_US:
+  <<: *DEFAULT_EN
+en_CA:
+  <<: *DEFAULT_EN
+en_GB:
+  <<: *DEFAULT_EN
+en_AU:
+  <<: *DEFAULT_EN
+
+# Spanish
+# -------
+es: &DEFAULT_ES
+  cat_label : "Categoría:"
+es_ES:
+  <<: *DEFAULT_ES
+es_CO:
+  <<: *DEFAULT_ES

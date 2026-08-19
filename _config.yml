@@ -8,6 +8,7 @@ is_project_page: false
 remote_theme: theme-ccdzine
 organization: "Controlled Chaos Design"
 language: "en_US"
+locale : "en_US"
 title: "Controlled Chaos Design"
 description: "Custom website design and build. Free products to build your own."
 author: "Controlled Chaos Design"
