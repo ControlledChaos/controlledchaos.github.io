@@ -17,13 +17,13 @@ layout: common
 {%- endif -%}
 
 <div class="repository taxonomy-repo tags-repo repo-view-list">
-
+<ul>
 {%- for post in site.posts -%}
 	{%- unless post.tags contains tags -%}
 		{%- continue -%}
 	{%- endunless -%}
 
-
+	{%- include tags-list.html post = post -%}
 {%- endfor -%}
-
+</ul>
 </div>
