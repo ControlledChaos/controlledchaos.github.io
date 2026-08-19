@@ -2,17 +2,8 @@
 layout: default
 ---
 {%- assign tags = site.tag | sort -%}
-
-<header>
-	<h1 class="page-title">{{ page.title }}</h1>
-
-	{%- if page.description -%}
-	<p class="page-subtitle taxonomy-description">{{ page.description }}</p>
-	{%- endif -%}
-</header>
-
 {%- if site.tags.size > 0 -%}
-<ul>
+<ul class="tags-index">
 	{%- for tag in tags -%}
 	<li>
 		<a href="{{- '/tag/' | absolute_url -}}{{- tag.slug -}}">{{ tag.name }}</a>

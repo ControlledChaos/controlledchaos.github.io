@@ -2043,6 +2043,10 @@ figcaption {
   }
 }
 
+.tags-index {
+  list-style: none;
+}
+
 .taxonomy-repo.repo-view-list .entry-article {
   width: 100%;
   max-width: 100%;
