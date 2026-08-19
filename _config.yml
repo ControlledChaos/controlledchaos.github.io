@@ -33,7 +33,7 @@ footer_image: "bamboo.jpg"
 collections:
   category:
     directory: _category
-    permalink: /category/:title/page:num/
+    permalink: /category/:title
     output: true
     pagination:
       enabled: true
