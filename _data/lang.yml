@@ -19,5 +19,7 @@ es: &DEFAULT_ES
   cat_label : "Categoría:"
 es_ES:
   <<: *DEFAULT_ES
+es_MX:
+  <<: *DEFAULT_ES
 es_CO:
   <<: *DEFAULT_ES
