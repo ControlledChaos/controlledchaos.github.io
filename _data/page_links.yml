@@ -9,7 +9,7 @@ page_links:
     url: "/contact"
   - name: "Design Services"
     url: "/services"
-  - name: "Product Development"
+  - name: "Development"
     url: "/development"
   - name: "View Projects"
     url: "/projects"
