@@ -14,7 +14,8 @@
 		transform: translateY( var( --ccd-box--border-width ) );
 	}
 	.nav-item {
-		padding: var( --ccd-spacing--y--quarter );
+		padding: 1em;
+		line-height: 1;
 		background-color: var( --ccd-color--off-white );
 		border: var( --ccd-box--border );
 
@@ -30,5 +31,6 @@
 	}
 	.tab-pane {
 		border-top: var( --ccd-box--border );
+		padding: var( --ccd-spacing--y ) 0;
 	}
 }

@@ -9,10 +9,13 @@ published: "July, 15, 2026"
 tabs:
   - tab: "Design"
     section: "design"
+    heading: "Website Design & Graphic Design"
   - tab: "Development"
     section: "development"
+    heading: "Website & Web Product Development"
   - tab: "Support"
     section: "support"
+    heading: "Website Maintenance & Content Management"
 ---
 Note:
 - Design
