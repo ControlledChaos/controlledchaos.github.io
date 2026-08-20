@@ -2,6 +2,7 @@
 layout: default
 ---
 {%- assign tabs = page.tabs -%}
+{%- assign slug = page.name | remove: page.ext -%}
 
 <div class='tabbed-content' data-toggle="tabslet" data-deeplinking="true" data-animation="true">
 
@@ -31,10 +32,10 @@ layout: default
 		{%- assign class = 'tab-pane' -%}
 	{%- endif -%}
 
-	{%- assign section = page.slug | append: '-' | append: tab.section -%}
+	{%- assign section = slug | append: '-' | append: tab.section -%}
 
 	<div id="{{ tab.section }}" class="tab-pane" role="tabpanel" aria-labelledby="{{ tab.section }}" style="display: none">
-		{{ page.title | inspect }}
+		{{ section | inspect }}
 	</div>
 
 	{%- endfor -%}
