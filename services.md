@@ -17,7 +17,3 @@ tabs:
     section: "support"
     heading: "Website Maintenance & Content Management"
 ---
-Note:
-- Design
-- Code
-- Support

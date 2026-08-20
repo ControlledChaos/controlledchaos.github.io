@@ -11,13 +11,7 @@ layout: default
 
 	{%- for tab in tabs -%}
 
-	{%- if forloop.first -%}
-		{%- assign class = 'nav-item active' -%}
-	{%- else -%}
-		{%- assign class = 'nav-item' -%}
-	{%- endif -%}
-
-		<li class="{{ class }}">
+		<li class="nav-item">
 			<a class="nav-link" role="tab" aria-controls="{{ tab.section }}" aria-selected="false" href="#{{ tab.section }}">{{ tab.tab }}</a>
 		</li>
 
@@ -26,12 +20,6 @@ layout: default
 	</ul>
 
 	{%- for tab in tabs -%}
-
-	{%- if forloop.first -%}
-		{%- assign class = 'tab-pane active' -%}
-	{%- else -%}
-		{%- assign class = 'tab-pane' -%}
-	{%- endif -%}
 
 	{%- assign section = slug | append: '-' | append: tab.section -%}
 
