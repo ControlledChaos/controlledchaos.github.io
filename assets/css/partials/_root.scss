@@ -91,6 +91,7 @@
 
 	// Headings.
 	--ccd-heading-primary--line-height: 1;
+	--ccd-heading-secondary--line-height: 1.2;
 
 	@media screen and ( max-width: l.$bp_sm ) {
 		--ccd-body--font-size: 1.25rem;

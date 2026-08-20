@@ -464,6 +464,7 @@ b, strong, optgroup {
   --ccd-display--letter-spacing: normal;
   --ccd-text-shadow: 0.05em 0.05em 0.05em rgba(0, 0, 0, 0.575);
   --ccd-heading-primary--line-height: 1;
+  --ccd-heading-secondary--line-height: 1.2;
 }
 @media screen and (max-width: 640px) {
   :host,
