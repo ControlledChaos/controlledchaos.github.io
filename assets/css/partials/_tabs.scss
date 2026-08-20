@@ -20,7 +20,6 @@
 		}
 	}
 	.nav-item {
-		padding: 1em;
 		line-height: 1;
 		background-color: var( --ccd-color--off-white );
 		border: var( --ccd-box--border );
@@ -31,8 +30,12 @@
 		}
 
 		a {
+			display: inline-block;
+			padding: var( --ccd-tabs--list--link, 0.825em 1em );
+			background-color: var( --ccd-color--off-white );
 			color: var( --ccd-body--text-color );
 			text-decoration: none;
+			cursor: pointer;
 		}
 	}
 	.tab-pane {
