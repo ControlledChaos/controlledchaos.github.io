@@ -2,9 +2,7 @@
 layout: default
 ---
 {%- assign tabs = page.tabs -%}
-{%- assign ext = page.ext -%}
-{%- assign slug = page.name | remove: ext -%}
-{{ ext | inspect }}
+{%- assign slug = page.name | remove: '.md' | remove: '.html' -%}
 <div class='tabbed-content' data-toggle="tabslet" data-deeplinking="true" data-animation="true">
 
 	<ul class="nav nav-tabs" id="nav-tabs" role="tablist">
