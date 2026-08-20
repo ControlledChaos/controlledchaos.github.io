@@ -1,8 +1,10 @@
 ---
 layout: default
 ---
+
 {%- assign tabs = page.tabs -%}
 {%- assign slug = page.name | remove: '.md' | remove: '.html' -%}
+
 <div class='tabbed-content' data-toggle="tabslet" data-deeplinking="true" data-animation="true">
 
 	<ul class="nav nav-tabs" id="nav-tabs" role="tablist">
@@ -34,7 +36,7 @@ layout: default
 	{%- assign section = slug | append: '-' | append: tab.section -%}
 
 	<div id="{{ tab.section }}" class="tab-pane" role="tabpanel" aria-labelledby="{{ tab.section }}" style="display: none">
-		{{ section | inspect }}
+		{%- include tabs/{{ section }}.html tab = tab -%}
 	</div>
 
 	{%- endfor -%}

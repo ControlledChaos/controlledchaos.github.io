@@ -1124,7 +1124,11 @@ figcaption {
 }
 .tabbed-content .nav-item.active {
   background-color: var(--ccd-body--bg-color);
-  border-bottom-color: var(--ccd-box--border-color);
+  border-bottom-color: var(--ccd-body--bg-color);
+}
+.tabbed-content .nav-item a {
+  color: var(--ccd-body--text-color);
+  text-decoration: none;
 }
 .tabbed-content .tab-pane {
   border-top: var(--ccd-box--border);

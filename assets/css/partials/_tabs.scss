@@ -20,7 +20,12 @@
 
 		&.active {
 			background-color: var( --ccd-body--bg-color );
-			border-bottom-color: var( --ccd-box--border-color );
+			border-bottom-color: var( --ccd-body--bg-color );
+		}
+
+		a {
+			color: var( --ccd-body--text-color );
+			text-decoration: none;
 		}
 	}
 	.tab-pane {
