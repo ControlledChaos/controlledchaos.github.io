@@ -19,7 +19,7 @@
 		{% endif -%}
 
 		<div class="front-page-content front-services-content">
-			{{ services.content -}}
+			{{ services.content | markdownify -}}
 		</div>
 
 		{%- if tabs != false -%}
