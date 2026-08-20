@@ -1108,6 +1108,28 @@ figcaption {
   background-color: rgba(132, 111, 139, 0.25);
 }
 
+.tabbed-content .nav-tabs {
+  position: relative;
+  z-index: 10;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: calc(var(--ccd-spacing--y--quarter) / 2) calc(var(--ccd-spacing--y--quarter) / 4);
+  transform: translateY(var(--ccd-box--border-width));
+}
+.tabbed-content .nav-item {
+  padding: var(--ccd-spacing--y--quarter);
+  background-color: var(--ccd-color--off-white);
+  border: var(--ccd-box--border);
+}
+.tabbed-content .nav-item.active {
+  background-color: var(--ccd-body--bg-color);
+  border-bottom-color: var(--ccd-box--border-color);
+}
+.tabbed-content .tab-pane {
+  border-top: var(--ccd-box--border);
+}
+
 .page-container {
   flex-grow: 1;
   container-type: inline-size;

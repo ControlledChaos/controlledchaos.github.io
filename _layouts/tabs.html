@@ -2,15 +2,20 @@
 layout: default
 ---
 {%- assign tabs = page.tabs -%}
-{{ tabs | inspect }}
 
-<div class='tab-content' data-toggle="tabslet" data-deeplinking="true" data-animation="true">
+<div class='tabbed-content' data-toggle="tabslet" data-deeplinking="true" data-animation="true">
 
 	<ul class="nav nav-tabs" id="nav-tabs" role="tablist">
 
 	{%- for tab in tabs -%}
 
-		<li class="nav-item">
+	{%- if forloop.first -%}
+		{%- assign class = 'nav-item active' -%}
+	{%- else -%}
+		{%- assign class = 'nav-item' -%}
+	{%- endif -%}
+
+		<li class="{{ class }}">
 			<a class="nav-link" role="tab" aria-controls="{{ tab.section }}" aria-selected="false" href="#{{ tab.section }}">{{ tab.tab }}</a>
 		</li>
 
@@ -20,8 +25,16 @@ layout: default
 
 	{%- for tab in tabs -%}
 
-	<div id="{{ tab.section }}" class="tab-pane" role="tabpanel" aria-labelledby="{{ tab.section }}">
-		{{ tab.tab }}
+	{%- if forloop.first -%}
+		{%- assign class = 'tab-pane active' -%}
+	{%- else -%}
+		{%- assign class = 'tab-pane' -%}
+	{%- endif -%}
+
+	{%- assign section = page.slug | append: '-' | append: tab.section -%}
+
+	<div id="{{ tab.section }}" class="tab-pane" role="tabpanel" aria-labelledby="{{ tab.section }}" style="display: none">
+		{%- include tabs/{{ section }}.html tab = tab -%}
 	</div>
 
 	{%- endfor -%}
