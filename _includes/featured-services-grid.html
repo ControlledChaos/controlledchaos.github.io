@@ -2,7 +2,7 @@
 {%- assign tabs = include.tabs -%}
 
 <div class="content-loop-grid featured-services-grid">
-{{ tabs | inspect }}
+{{ page | inspect }}
 	{% for tab in tabs %}
 	<article class="featured-service">
 		<a href="{{ page.permalink | append: '#' | append: tab.section }}">
