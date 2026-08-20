@@ -1117,6 +1117,11 @@ figcaption {
   gap: calc(var(--ccd-spacing--y--quarter) / 2) calc(var(--ccd-spacing--y--quarter) / 4);
   transform: translateY(var(--ccd-box--border-width));
 }
+@media screen and (max-width: 640px) {
+  .tabbed-content .nav-tabs {
+    display: none;
+  }
+}
 .tabbed-content .nav-item {
   padding: 1em;
   line-height: 1;
@@ -1134,6 +1139,11 @@ figcaption {
 .tabbed-content .tab-pane {
   border-top: var(--ccd-box--border);
   padding: var(--ccd-spacing--y) 0;
+}
+@media screen and (max-width: 640px) {
+  .tabbed-content .tab-pane {
+    display: block !important;
+  }
 }
 
 .page-container {
