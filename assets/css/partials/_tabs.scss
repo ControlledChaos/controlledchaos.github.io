@@ -2,6 +2,8 @@
 /// Tabbed content
 ///
 
+@use '../modules/functions' as f;
+@use '../modules/colors' as c;
 @use '../modules/layout' as l;
 
 .tabbed-content {
@@ -21,7 +23,7 @@
 	}
 	.nav-item {
 		line-height: 1;
-		background-color: var( --ccd-color--off-white );
+		background-color: f.lighten( c.$off_white, 15% );
 		border: var( --ccd-box--border );
 
 		&.active {

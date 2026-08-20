@@ -413,7 +413,7 @@ b, strong, optgroup {
   --ccd-fonts--font-size--63: 3.9375rem;
   --ccd-fonts--font-size--64: 4rem;
   --ccd-color--white: #ffffff;
-  --ccd-color--off-white: #f1f1f0;
+  --ccd-color--off-white: #f1f1f1;
   --ccd-color--black: #000000;
   --ccd-color--near-black: #1e1e1e;
   --ccd-color--gray-dark: #414141;
@@ -458,7 +458,7 @@ b, strong, optgroup {
   --ccd-body--bg-color: #ffffff;
   --ccd-body--bg-color--dark: #1e1e1e;
   --ccd-body--text-color: #645469;
-  --ccd-body--text-color--dark: #f1f1f0;
+  --ccd-body--text-color--dark: #f1f1f1;
   --ccd-display--font-family: var( --ccd-fonts--display-stack );
   --ccd-display--font-weight: 600;
   --ccd-display--letter-spacing: normal;
@@ -1126,7 +1126,7 @@ figcaption {
 }
 .tabbed-content .nav-item {
   line-height: 1;
-  background-color: var(--ccd-color--off-white);
+  background-color: "#f3f3f3";
   border: var(--ccd-box--border);
 }
 .tabbed-content .nav-item.active {
