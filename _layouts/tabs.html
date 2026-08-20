@@ -21,18 +21,11 @@ layout: default
 
 	{%- for tab in tabs -%}
 
-	{%- assign section = slug | append: '-' | append: tab.section -%}
-	{%- if tab.filetype == 'html' -%}
-		{%- assign ext = 'html' -%}
-	{%- else -%}
-		{%- assign ext = 'md' -%}
-	{%- endif -%}
-
 	<div id="{{ tab.section }}" class="tab-pane" role="tabpanel" aria-labelledby="{{ tab.section }}" style="display: none">
 
 		<h2>{{ tab.heading }}</h2>
 
-		{%- include tabs/{{ section }}.{{ ext }} tab = tab -%}
+		{%- include tabs/{{ section }}.html tab = tab -%}
 	</div>
 
 	{%- endfor -%}

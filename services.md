@@ -9,7 +9,6 @@ published: "July, 15, 2026"
 tabs:
   - tab: "Design"
     section: "design"
-    filetype: "html"
     heading: "Website and Graphic Design"
   - tab: "Development"
     section: "development"
