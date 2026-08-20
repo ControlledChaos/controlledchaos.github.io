@@ -22,6 +22,8 @@
 			{{ services.content -}}
 		</div>
 
+		{{ tabs | inspect }}
+
 		{%- if tabs != false -%}
 		{%- include featured-services-grid.html page=page tabs=tabs -%}
 		{%- endif -%}
