@@ -89,6 +89,9 @@
 
 	--ccd-text-shadow: 0.05em 0.05em 0.05em #{rgba( $color: black, $alpha: 0.575 )};
 
+	// Headings.
+	--ccd-heading-primary--line-height: 1;
+
 	@media screen and ( max-width: l.$bp_sm ) {
 		--ccd-body--font-size: 1.25rem;
 	}
