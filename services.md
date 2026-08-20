@@ -12,7 +12,7 @@ tabs:
   - tab: "Development"
     section: "development"
   - tab: "Support"
-    section: "section"
+    section: "support"
 ---
 Note:
 - Design

@@ -3,3 +3,27 @@ layout: default
 ---
 {%- assign tabs = page.tabs -%}
 {{ tabs | inspect }}
+
+<div class='tab-content' data-toggle="tabslet" data-deeplinking="true" data-animation="true">
+
+	<ul class="nav nav-tabs" id="nav-tabs" role="tablist">
+
+	{%- for tab in tabs -%}
+
+		<li class="nav-item">
+			<a class="nav-link" role="tab" aria-controls="{{ tab.section }}" aria-selected="false" href="#{{ tab.section }}">{{ tab.tab }}</a>
+		</li>
+
+	{%- endfor -%}
+
+	</ul>
+
+	{%- for tab in tabs -%}
+
+	<div id="{{ tab.section }}" class="tab-pane" role="tabpanel" aria-labelledby="{{ tab.section }}">
+		{{ tab.tab }}
+	</div>
+
+	{%- endfor -%}
+
+</div>
