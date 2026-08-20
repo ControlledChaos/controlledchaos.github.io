@@ -1144,6 +1144,12 @@ figcaption {
   .tabbed-content .tab-pane {
     display: block !important;
   }
+  .tabbed-content .tab-pane:first-of-type {
+    border: none;
+  }
+}
+.tabbed-content .tab-pane h2:first-of-type {
+  margin: 0;
 }
 
 .page-container {

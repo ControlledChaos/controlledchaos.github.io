@@ -41,6 +41,16 @@
 
 		@media screen and ( max-width: l.$bp_sm ) {
 			display: block !important;
+
+			&:first-of-type {
+				border: none;
+			}
+		}
+
+		h2 {
+			&:first-of-type {
+				margin: 0;
+			}
 		}
 	}
 }
