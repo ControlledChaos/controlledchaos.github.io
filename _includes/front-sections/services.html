@@ -1,15 +1,14 @@
-{% assign services = include.section %}
-{% assign services_page = site.pages | where: 'front', 'services' %}
+{%- assign services = include.section -%}
+{%- assign pages    = site.pages | where: 'front', 'services' -%}
+{%- assign page     = pages[0] -%}
 
 {%- capture tabs -%}
-	{%- if services_page[0].tabs -%}
-		{{ services_page[0].tabs }}
+	{%- if page.tabs -%}
+		{{ page.tabs }}
 	{%- else -%}
 		{{ false }}
 	{%- endif -%}
 {%- endcapture -%}
-
-{{ tabs | inspect }}
 
 <section id="section-services" data-anchor="services" class="front-page-section fp-auto-height-responsive">
 
@@ -23,6 +22,8 @@
 			{{ services.content -}}
 		</div>
 
-		{%- include featured-services-grid.html -%}
+		{%- if tabs != false -%}
+		{%- include featured-services-grid.html page = page tabs = tabs -%}
+		{%- endif -%}
 	</div>
 </section>

@@ -1,16 +1,20 @@
+{%- assign page = include.page -%}
+{%- assign tabs = include.tabs -%}
 
 <div class="content-loop-grid featured-services-grid">
 
+	{% for tab in tabs %}
 	<article class="featured-service">
-		<a href="">
+		<a href="{{ page.permalink | append: '#' | append: tab.section }}">
 			<figure>
-				<img src="" loading="lazy" />
+				<img src="{{ 'assets/img/' | append: tab.cover | absolute_url }}" loading="lazy" />
 				<figcaption>
-					<h3></h3>
-					<p></p>
+					<h3>{{ tab.title }}</h3>
+					<p>{{ tab.subtitle }}</p>
 				</figcaption>
 			</figure>
 		</a>
 	</article>
+	{% endfor %}
 
 </div>
