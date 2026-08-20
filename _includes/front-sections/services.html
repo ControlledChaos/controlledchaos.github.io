@@ -1,4 +1,15 @@
 {% assign services = include.section %}
+{% assign services_page = site.pages | where: 'front', 'services' %}
+
+{%- capture tabs -%}
+	{%- if services_page[0].tabs -%}
+		{{ page.tabs }}
+	{%- else -%}
+		{{ false }}
+	{%- endif -%}
+{%- endcapture -%}
+
+{{ tabs | inspect }}
 
 <section id="section-services" data-anchor="services" class="front-page-section fp-auto-height-responsive">
 

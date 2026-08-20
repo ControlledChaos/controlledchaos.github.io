@@ -6,6 +6,7 @@ title: "What I Can Do"
 subtitle: "Design, code, maintain, improve, and communicate."
 description: "My acquired skills, inherent abilities, and how I may help you."
 published: "July, 15, 2026"
+front: "services"
 tabs:
   - tab: "Design"
     section: "design"
