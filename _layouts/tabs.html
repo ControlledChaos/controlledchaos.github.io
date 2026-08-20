@@ -34,7 +34,7 @@ layout: default
 	{%- assign section = page.slug | append: '-' | append: tab.section -%}
 
 	<div id="{{ tab.section }}" class="tab-pane" role="tabpanel" aria-labelledby="{{ tab.section }}" style="display: none">
-		{%- include tabs/{{ section }}.html tab = tab -%}
+		{{ section | inspect }}
 	</div>
 
 	{%- endfor -%}
