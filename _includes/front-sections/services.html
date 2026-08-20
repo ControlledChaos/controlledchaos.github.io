@@ -1,10 +1,10 @@
-{%- assign services = include.section -%}
-{%- assign pages    = site.pages | where: 'front', 'services' -%}
-{%- assign page     = pages[0] -%}
+{%- assign section   = include.section -%}
+{%- assign get_pages = site.pages | where: 'front', 'services' -%}
+{%- assign services  = get_pages[0] -%}
 
 {%- capture tabs -%}
-	{%- if page.tabs -%}
-		{{ page.tabs }}
+	{%- if services.tabs -%}
+		{{ services.tabs }}
 	{%- else -%}
 		{{ false }}
 	{%- endif -%}
@@ -14,18 +14,18 @@
 
 	<div class="section-wrap">
 
-		{%- if services.title and services.title != blank %}
-		<h2 class="section-heading">{{ services.title }}</h2>
+		{%- if section.title and section.title != blank %}
+		<h2 class="section-heading">{{ section.title }}</h2>
 		{% endif -%}
 
 		<div class="front-page-content front-services-content">
-			{{ services.content -}}
+			{{ section.content -}}
 		</div>
 
 		{{ tabs | inspect }}
 
 		{%- if tabs != false -%}
-		{%- include featured-services-grid.html page=page tabs=tabs -%}
+		{%- include featured-services-grid.html page=services tabs=tabs -%}
 		{%- endif -%}
 	</div>
 </section>
