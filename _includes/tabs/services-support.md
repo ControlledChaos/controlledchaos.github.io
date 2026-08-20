@@ -1,1 +1,1 @@
-{%- assign tab = include.tab -%}
+Support Section
