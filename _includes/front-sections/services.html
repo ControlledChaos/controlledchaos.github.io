@@ -22,10 +22,8 @@
 			{{ section.content -}}
 		</div>
 
-		{{ tabs | inspect }}
-
 		{%- if tabs != false -%}
-		{%- include featured-services-grid.html page=services tabs=tabs -%}
+		{%- include featured-services-grid.html page=services -%}
 		{%- endif -%}
 	</div>
 </section>
