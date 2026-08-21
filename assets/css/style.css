@@ -1134,19 +1134,19 @@ figcaption {
   text-decoration: none;
   cursor: pointer;
 }
-.tabbed-content .tab-pane {
+.tabbed-content .tab-panel {
   border-top: var(--ccd-box--border);
   padding: var(--ccd-spacing--y) 0;
 }
 @media screen and (max-width: 640px) {
-  .tabbed-content .tab-pane {
+  .tabbed-content .tab-panel {
     display: block !important;
   }
-  .tabbed-content .tab-pane:first-of-type {
+  .tabbed-content .tab-panel:first-of-type {
     border: none;
   }
 }
-.tabbed-content .tab-pane h2:first-of-type {
+.tabbed-content .tab-panel h2:first-of-type {
   margin: 0;
 }
 
