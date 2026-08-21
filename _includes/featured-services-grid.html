@@ -3,7 +3,7 @@
 
 <div class="content-loop-grid featured-services-grid">
 
-	{% for tab in tabs %}
+	{% for tab in tabs | limit: 3 %}
 	<article class="featured-post">
 		<a href="{{ page.permalink | append: '#' | append: tab.section }}">
 			<figure>
