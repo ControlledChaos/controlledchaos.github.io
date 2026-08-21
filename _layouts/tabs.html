@@ -4,10 +4,17 @@ layout: default
 
 {%- assign tabs = page.tabs -%}
 {%- assign slug = page.name | remove: '.md' | remove: '.html' -%}
+{%- capture hash -%}
+	{%- if page.tabs_hash == false -%}
+		{{ false }}
+	{%- else -%}
+		{{ true }}
+	{%- endif -%}
+{%- endcapture -%}
 
 {{ content }}
 
-<div class='tabbed-content' data-toggle="tabslet" data-deeplinking="true" data-animation="true">
+<div class='tabbed-content' data-toggle="tabslet" data-deeplinking="{{ hash }}" data-animation="true">
 
 	<ul class="nav nav-tabs" id="nav-tabs" role="tablist">
 
