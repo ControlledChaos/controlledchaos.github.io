@@ -1,6 +1,6 @@
 {%- include visitor-notice.html -%}
 
-<div class="page-loading" style="display: none;">
+<div class="page-loading hide-if-no-js">
 	<div class="loading-icon">{%- include svg/site-icon.svg -%}</div>
 	<p class="loading-text">{{ site.loading_text | default: "Loading" }}</p>
 </div>
