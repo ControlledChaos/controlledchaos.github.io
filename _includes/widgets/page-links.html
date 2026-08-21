@@ -62,7 +62,7 @@
 			{%- else -%}
 				{%- assign atts = "" -%}
 			{%- endif -%}
-		<li><a href="{{ nav_item.url | relative_url }}" {{ aria }}>{{ nav_item.name }}</a></li>
+		<li><a href="{{ nav_item.url }}" {{ aria }}>{{ nav_item.name }}</a></li>
 		{% endfor %}
 	</ul>
 </nav>
