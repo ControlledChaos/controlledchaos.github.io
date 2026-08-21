@@ -25,6 +25,7 @@ tabs:
     cover: "support.jpg"
     title: "Complete Website Management"
     subtitle: "Services include software updates, content writing, post creation, and image editing."
+tabs_hash: false
 ---
 
 If you need a website and don’t know how to start, or if you want to completely overhaul an existing site then let’s talk about your project.
