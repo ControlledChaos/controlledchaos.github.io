@@ -13,7 +13,6 @@ tabs:
     cover: "design.jpg"
     title: "Website and Graphic Design"
     subtitle: "Full-scale website design, logos, graphics, color palettes, and more."
-    filetype: "md"
     grid:
       - title: ""
       - subtitle: ""

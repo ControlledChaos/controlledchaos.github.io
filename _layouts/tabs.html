@@ -24,18 +24,12 @@ layout: default
 	{%- for tab in tabs -%}
 
 	{% assign section = slug | append: '-' | append: tab.section %}
-	{%- if tab.filetype == "md" -%}
-		{%- assign ext = "md" -%}
-	{%- else -%}
-		{%- assign ext = "html" -%}
-	{%- endif -%}
-	{%- assign tab_content = include tabs/{{ section }}.{ext} tab = tab -%}
 
 	<div id="{{ tab.section }}" class="tab-pane" role="tabpanel" aria-labelledby="{{ tab.section }}" style="display: none">
 
 		<h2>{{ tab.title }}</h2>
 
-		{{ tab_content | markdownify }}
+		{% include tabs/{{ section }}.html tab = tab %}
 	</div>
 
 	{% endfor %}
