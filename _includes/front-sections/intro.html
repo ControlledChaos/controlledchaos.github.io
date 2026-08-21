@@ -20,7 +20,7 @@
 
 		<div class="layout columns responsive front-intro-columns">
 			<figure class="captioned-image front-intro-avatar" {{ style }}>
-				<a href='{{ file | prepend: "assets/img/" | absolute_url }}' data-fancybox data-caption="{{ caption }}" data-options='{ "buttons" : [ "zoom", "slideShow", "download", "thumbs", "close" ]}'>
+				<a href='{{ file | prepend: "assets/img/" | absolute_url }}' data-fancybox data-caption="{{ caption }}">
 					<img src='{{ file | prepend: "assets/img/" | absolute_url }}' alt="{{ alt }}" class="avatar" />
 				</a>
 				<figcaption>{{ caption }}</figcaption>
