@@ -21,6 +21,6 @@ page_links:
     url: "/posts"
   - name: "Issues & Docs"
     url: "/help"
-  - name: "Issues & Docs"
+  - name: "Visitor Notice"
     url: "#visitor-notice"
     atts: [ "data-fancybox" ]
