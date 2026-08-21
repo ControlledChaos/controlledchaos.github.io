@@ -54,6 +54,7 @@
 			{%- endif -%}
 
 			{%- if nav_item.atts -%}
+			{{ nav_item.atts | inspect }}
 				{%- for att in atts -%}
 
 				{%- endfor -%}
