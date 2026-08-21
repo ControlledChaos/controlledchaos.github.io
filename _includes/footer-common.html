@@ -1,0 +1,40 @@
+{%- include visitor-notice.html -%}
+
+<div class="page-loading" style="display: none;">
+	<div class="loading-icon">{%- include svg/site-icon.svg -%}</div>
+	<p class="loading-text">{{ site.loading_text | default: "Loading" }}</p>
+</div>
+
+<!-- General theme scripts. -->
+<script src="{{ '/assets/js/lightbox.min.js' | relative_url }}"></script>
+<script src="{{ '/assets/js/tooltips.min.js' | relative_url }}"></script>
+{%- if page.layout == 'tabs' -%}
+<script src="{{ '/assets/js/tabs.min.js' | relative_url }}"></script>
+{%- endif -%}
+
+<script>
+
+// Various jQuery scripts on document ready.
+jQuery(document).ready( function($) {
+
+	// Responsive video embeds.
+	$( '.main-article' ).fitVids();
+
+	// Custom Tooltipster tooltips for `title` attribute content.
+	$( 'a[data-tooltip], button[data-tooltip]' ).tooltipster({
+		distance: 5,
+		delay: 150,
+		theme: 'ccdzen'
+	});
+});
+</script>
+
+<!-- Remove page loader -->
+<script>
+$(window).on( 'pageshow', function() {
+	$( '.page-loading' ).fadeOut( 250 );
+});
+</script>
+
+<!-- Simple Analytics -->
+<script async src="https://scripts.simpleanalyticscdn.com/latest.js"></script>

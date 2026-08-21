@@ -11,30 +11,14 @@
 	{{ content }}
 </div>
 
-{%- include visitor-notice.html -%}
-
-<div class="page-loading">
-	<div class="loading-icon">{%- include svg/site-icon.svg -%}</div>
-	<p class="loading-text">{{ site.loading_text | default: "Loading" }}</p>
-</div>
-
-<!-- General theme scripts. -->
-<script src="{{ '/assets/js/lightbox.min.js' | relative_url }}"></script>
-<script src="{{ '/assets/js/tooltips.min.js' | relative_url }}"></script>
+{%- include footer-common.html -%}
 
 <!-- Scripts specific to the front page. -->
 <script src="{{ '/assets/js/slider.min.js' | relative_url }}"></script>
 <script>
 
-// Various jQuery scripts on document ready.
+// Scroll to content from the intro slide.
 jQuery(document).ready( function($) {
-
-	// Custom Tooltipster tooltips for `title` attribute content.
-	$( 'a[data-tooltip], button[data-tooltip]' ).tooltipster({
-		distance: 5,
-		delay: 150,
-		theme: 'ccdzen'
-	});
 
 	// Smooth scroll to content
 	$( '.scroll-down' ).click( function(e) {
@@ -47,9 +31,6 @@ jQuery(document).ready( function($) {
 });
 
 $(window).on( 'pageshow', function() {
-
-	// Remove loading panel after assets/images are loaded.
-	$( '.page-loading' ).fadeOut( 250 );
 
 	// Start Slick slideshow.
 	$( '#intro-slides' ).slick({
@@ -69,9 +50,6 @@ $(window).on( 'pageshow', function() {
 	});
 });
 </script>
-
-<!-- Simple Analytics -->
-<script async src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
 
 </body>
 </html>
