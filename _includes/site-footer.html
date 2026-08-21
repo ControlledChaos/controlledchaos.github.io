@@ -26,6 +26,8 @@
 	<p class="final-message">{{ "now" | date: "%Y" }} {{ site.final_message | default: "No copyright claims." }}</p>
 </footer>
 
+{%- include visitor-notice.html -%}
+
 <div class="page-loading">
 	<div class="loading-icon">{%- include svg/site-icon.svg -%}</div>
 	<p class="loading-text">{{ site.loading_text | default: "Loading" }}</p>

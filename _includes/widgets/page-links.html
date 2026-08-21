@@ -52,6 +52,15 @@
 			{%- else -%}
 				{%- assign aria = "" -%}
 			{%- endif -%}
+
+			{%- if nav_item.atts -%}
+				{%- for att in atts -%}
+
+				{%- endfor -%}
+				{%- assign atts = nav_item.atts | split: " " -%}
+			{%- else -%}
+				{%- assign atts = "" -%}
+			{%- endif -%}
 		<li><a href="{{ nav_item.url | relative_url }}" {{ aria }}>{{ nav_item.name }}</a></li>
 		{% endfor %}
 	</ul>
