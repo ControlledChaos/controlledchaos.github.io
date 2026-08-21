@@ -373,6 +373,16 @@ figcaption {
 	}
 }
 
+.fancybox-content {
+	padding: var( --ccd-spacing--y ) var( --ccd-spacing--x );
+
+	h3 {
+		&:first-of-type {
+			margin: 0;
+		}
+	}
+}
+
 // Text selection.
 ::-o-selection {
 	color: var( --ccd-selection--text-color );

@@ -919,6 +919,13 @@ figcaption {
   height: 1em;
 }
 
+.fancybox-content {
+  padding: var(--ccd-spacing--y) var(--ccd-spacing--x);
+}
+.fancybox-content h3:first-of-type {
+  margin: 0;
+}
+
 ::-o-selection {
   color: var(--ccd-selection--text-color);
   background: var(--ccd-selection--bg-color);
