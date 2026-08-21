@@ -54,15 +54,14 @@
 			{%- endif -%}
 
 			{%- if nav_item.atts -%}
-			{{ nav_item.atts | inspect }}
-				{%- for att in atts -%}
-
+				{%- assign atts = "" | split: " " -%}
+				{%- for att in nav_item.atts -%}
+					{%- assign atts = atts | push: att -%}
 				{%- endfor -%}
-				{%- assign atts = nav_item.atts | split: " " -%}
 			{%- else -%}
 				{%- assign atts = "" -%}
 			{%- endif -%}
-		<li><a href="{{ nav_item.url }}" {{ aria }}>{{ nav_item.name }}</a></li>
+		<li><a href="{{ nav_item.url }}" {{ aria }} {{ atts }}>{{ nav_item.name }}</a></li>
 		{% endfor %}
 	</ul>
 </nav>
