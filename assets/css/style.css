@@ -631,14 +631,11 @@ body {
   background-color: var(--ccd-body--bg-color);
   color: var(--ccd-body--text-color);
 }
-.page-loading .loading-icon {
-  border: var(--ccd-loading-icon--border-width, 2px) var(--ccd-loading-icon--border-style, solid) var(--ccd-loading-icon--border-color, rgba(146, 123, 152, 0.3));
-  border-top: var(--ccd-loading-icon--border-top-width, 2px) var(--ccd-loading-icon--border-top-style, solid) var(--ccd-loading-icon--border-top-color, var(--ccd-color--one--dark));
+.page-loading .loading-icon svg {
   border-radius: var(--ccd-loading-icon--border-radius, 100%);
   width: var(--ccd-loading-icon--width, var(--ccd-spacing--x, 2rem));
   height: var(--ccd-loading-icon--height, var(--ccd-spacing--x, 2rem));
   animation: spinner 1.125s infinite linear;
-  background-color: var(--ccd-loading-icon--background-color, transparent);
 }
 
 .no-js .page-loading {
