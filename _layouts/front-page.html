@@ -20,14 +20,6 @@
 // Scroll to content from the intro slide.
 jQuery(document).ready( function($) {
 
-	// Smooth scroll to content
-	$( '.scroll-down' ).click( function(e) {
-
-		e.preventDefault();
-
-		var anchor = $(this).attr( 'href' );
-		$( 'html, body' ).animate( { scrollTop : $( anchor ).offset().top }, 500 );
-	});
 });
 
 $(window).on( 'pageshow', function() {
