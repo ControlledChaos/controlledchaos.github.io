@@ -129,7 +129,7 @@ paged_style: "numeric" # numeric or standard
 related_by: "tags or categories"
 
 # Footer content
-final_message: "CCDzine | No copyright. No synths!<br />* Sponsored by Chicos Bail Bonds."
+final_message: "CCDzine | No copyright. No synths!<br /><small>* Sponsored by Chico's Bail Bonds.</small>"
 
 # Additional functionality
 plugins:
