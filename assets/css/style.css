@@ -1304,6 +1304,7 @@ figcaption {
   position: relative;
   max-width: var(--ccd-wrap--general--max-width);
   margin: 0 var(--ccd-spacing--x, 2rem);
+  padding: var(--ccd-spacing--y--half, 1rem) 0 0 0;
 }
 @media screen and (max-width: 800px) {
   .front-page-section .section-wrap {
