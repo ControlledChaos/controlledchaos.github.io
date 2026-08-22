@@ -20,12 +20,20 @@
 // Scroll to content from the intro slide.
 jQuery(document).ready( function($) {
 
+	// Smooth scroll to content
+	$( '.scroll-down' ).click( function(e) {
+
+		e.preventDefault();
+
+		var anchor = $(this).attr( 'href' );
+		$( 'html, body' ).animate( { scrollTop : $( anchor ).offset().top }, 500 );
+	});
 });
 
 $(window).on( 'pageshow', function() {
 
 	// Start Slick slideshow.
-	$( '#intro-slides' ).delay( 50000 ).slick({
+	$( '#intro-slides' ).slick({
 		slidesToShow    : 1,
 		slidesToScroll  : 1,
 		autoplay        : true,

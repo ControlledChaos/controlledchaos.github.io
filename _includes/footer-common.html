@@ -18,15 +18,6 @@
 // Various jQuery scripts on document ready.
 jQuery(document).ready( function($) {
 
-	// Smooth scroll to content
-	$( 'a[href^="#"]' ).click( function(e) {
-
-		e.preventDefault();
-
-		var anchor = $(this).attr( 'href' );
-		$( 'html, body' ).animate( { scrollTop : $( anchor ).offset().top }, 500 );
-	});
-
 	// Responsive video embeds.
 	$( '.main-article' ).fitVids();
 
