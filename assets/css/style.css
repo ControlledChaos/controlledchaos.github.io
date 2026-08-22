@@ -1026,6 +1026,7 @@ figcaption {
   letter-spacing: var(--ccd-site-title--letter-spacing, var(--ccd-heading-primary--letter-spacing, -0.015em));
   word-spacing: var(--ccd-site-title--word-spacing, var(--ccd-heading-primary--word-spacing, -0.0325em));
   color: var(--ccd-site-title--text-color, inherit);
+  cursor: default;
 }
 @media screen and (max-width: 800px) {
   .site-title {
