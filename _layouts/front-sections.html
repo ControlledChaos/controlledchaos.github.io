@@ -6,5 +6,6 @@ layout: front-page
 
 {%- for section in sections -%}
 	{%- assign slug = section.path | replace: "_front-page/", "front-sections/" | remove: section.ext -%}
+	{{ section }}
 	{%- include {{ slug }}.html section = section -%}
 {%- endfor -%}
