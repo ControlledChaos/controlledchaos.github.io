@@ -1,9 +1,7 @@
 ---
 layout: default
 ---
-{%- assign builtin = site.tags | sort -%}
-{%- assign tags    = site.tag | sort -%}
-{%- assign posts   = site.posts -%}
+{%- assign tags = site.tag | sort -%}
 
 {%- if tags.size > 0 -%}
 <ul class="taxonomy-index tags-index">
@@ -13,7 +11,7 @@ layout: default
 	<li class="taxonomy-index-item tags-index-item">
 
 		<a href="{{- '/tag/' | absolute_url -}}{{- tag.slug -}}" class="taxonomy-index-link tags-index-link">{{ tag.name }}</a>
-		{% for count in builtin %}
+		{% for count in site.tags %}
 			{%- if slug != count[0] -%}
 				{%- continue -%}
 			{%- endif -%}
