@@ -17,7 +17,16 @@ layout: default
 			{%- if slug != count[0] -%}
 				{%- continue -%}
 			{%- endif -%}
-			( {{ count[1].size }} posts )
+
+			{%- capture type -%}
+				{%- if count[1].size == 1 -%}
+					{{ post }}
+				{%- else -%}
+					{{ posts }}
+				{%- endif -%}
+			{%- endcapture -%}
+
+			( {{ count[1].size }} {{ type }} )
 		{% endfor %}
 
 		{%- if tag.description != blank -%}
