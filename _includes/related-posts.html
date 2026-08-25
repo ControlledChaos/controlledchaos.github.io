@@ -1,7 +1,7 @@
 
-{%- assign related_by = page.related_by | default: site.related_by | default: false -%}
+{%- assign related_by = page.related_by | default: site.related_by | default: "default" -%}
 
-{%- if related_by != false and related_by.first != true -%}
+{%- if related_by != "false" and related_by.first != true -%}
 	{%- assign related_by = related_by | split: " " -%}
 {%- endif -%}
 
@@ -13,7 +13,7 @@
 
 {%- assign related_tags = page.related_tags | default: site.related_tags | default: 1 -%}
 
-{%- if related_by contains "category" or related_by contains "tag" -%}
+{%- if related_by contains "default" or related_by contains "category" or related_by contains "tag" -%}
 
 	{%- assign related_posts = "" | split: " " -%}
 
@@ -27,7 +27,7 @@
 		{%- endif -%}
 
 		{%- assign related_category_count = 0 -%}
-		{%- if related_by contains "category" -%}
+		{%- if related_by contains "default" or related_by contains "category" -%}
 			{%- for cat in doc.categories -%}
 				{%- if page.categories contains cat -%}
 					{%- assign related_category_count = related_category_count | plus: 1 -%}
@@ -36,7 +36,7 @@
 		{%- endif -%}
 
 		{%- assign related_tag_count = 0 -%}
-		{%- if related_by contains "tag" -%}
+		{%- if related_by contains "default" or related_by contains "tag" -%}
 			{%- for tag in doc.tags -%}
 				{%- if page.tags contains tag -%}
 					{%- assign related_tag_count = related_tag_count | plus: 1 -%}
@@ -44,9 +44,9 @@
 			{%- endfor -%}
 		{%- endif -%}
 
-		{%- if related_by contains "category" and related_by contains "tag" -%}
+		{%- if related_by contains "default" or related_by contains "category" and related_by contains "tag" -%}
 
-			{%- if related_by contains "or" -%}
+			{%- if related_by contains "default" -%}
 				{%- if related_category_count >= related_categories or related_tag_count >= related_tags -%}
 					{%- assign related_posts = related_posts | push: doc -%}
 				{%- endif -%}
@@ -56,10 +56,10 @@
 				{%- endif -%}
 			{%- endif -%}
 
-		{%- elsif related_by contains "category" and related_category_count >= related_categories -%}
+		{%- elsif related_by contains "default" or related_by contains "category" and related_category_count >= related_categories -%}
 			{% assign related_posts = related_posts | push: doc %}
 
-		{%- elsif related_by contains "tag" and related_tag_count >= related_tags -%}
+		{%- elsif related_by contains "default" or related_by contains "tag" and related_tag_count >= related_tags -%}
 			{%- assign related_posts = related_posts | push: doc -%}
 
 		{%- endif -%}
@@ -75,7 +75,7 @@
 
 {%- assign related_message = page.related_message | default: site.related_message | default: "" -%}
 
-{%- if related_by != false and related_limit > 0 and related_posts.size > 0 -%}
+{%- if related_by != "false" and related_limit > 0 and related_posts.size > 0 -%}
 
 <section id="related-posts" class="post-section related-posts">
 
