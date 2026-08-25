@@ -3,12 +3,13 @@ layout: default
 ---
 {%- assign tags = site.tag | sort -%}
 {%- if tags.size > 0 -%}
-<ul class="tags-index">
+<ul class="taxonomy-index tags-index">
 	{%- for tag in tags -%}
-	<li>
-		<a href="{{- '/tag/' | absolute_url -}}{{- tag.slug -}}">{{ tag.name }}</a><br />
+	<li class="taxonomy-index-item tags-index-item">
+		<a href="{{- '/tag/' | absolute_url -}}{{- tag.slug -}}" class="taxonomy-index-link tags-index-link">{{ tag.name }}</a>
 		{%- if tag.description != blank -%}
-		{{ tag.description }}
+
+		<span class="taxonomy-index-description tags-index-description">{{ tag.description }}</span>
 		{%- endif -%}
 	</li>
 	{%- endfor -%}
