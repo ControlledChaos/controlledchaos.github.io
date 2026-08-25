@@ -8,7 +8,7 @@ is_project_page: false
 remote_theme: theme-ccdzine
 organization: "Controlled Chaos Design"
 language: "en_US"
-locale : "es_MX"
+locale : "en_US"
 title: "Controlled Chaos Design"
 description: "Custom website design and build. Free products to build your own."
 author: "Controlled Chaos Design"
@@ -129,7 +129,7 @@ paged_style: "numeric" # numeric or standard
 related_by: "tags or categories"
 
 # Footer content
-final_message: "CCDzine | No copyright. No synths!<br /><small>* Sponsored by Chico's Bail Bonds.</small>"
+final_message: "CCDzine* | No copyright. No synths!<br /><small>* Sponsored by Chico's Bail Bonds.</small>"
 
 # Additional functionality
 plugins:
