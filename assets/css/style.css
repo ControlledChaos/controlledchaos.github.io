@@ -2114,15 +2114,22 @@ figcaption {
 .taxonomy-index {
   list-style: none;
 }
-.taxonomy-index .taxonomy-index-item.tags-index-item {
-  margin: 1rem 0 0 0;
+.taxonomy-index .taxonomy-index-item {
+  margin: 0;
+  margin-top: 0.625rem;
 }
 .taxonomy-index .taxonomy-index-link {
+  font-size: 1.125rem;
+  font-weight: 650;
   text-decoration: none;
+  line-height: 1.2;
 }
 .taxonomy-index .taxonomy-index-description {
   display: block;
-  font-size: 0.85em;
+  margin-top: calc(var(--ccd-spacing--y--quarter) / 2);
+  font-family: var(--ccd-fonts--secondary-stack);
+  font-size: 0.875rem;
+  line-height: 1.35;
 }
 
 .taxonomy-repo.repo-view-list .entry-article {

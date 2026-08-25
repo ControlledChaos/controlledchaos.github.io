@@ -22,16 +22,21 @@
 	list-style: none;
 
 	.taxonomy-index-item {
-		&.tags-index-item {
-			margin: 1rem 0 0 0;
-		}
+		margin: 0;
+		margin-top: 0.625rem;
 	}
 	.taxonomy-index-link {
+		font-size: 1.125rem;
+		font-weight: 650;
 		text-decoration: none;
+		line-height: 1.2;
 	}
 	.taxonomy-index-description {
 		display: block;
-		font-size: 0.85em;
+		margin-top: calc( var( --ccd-spacing--y--quarter ) / 2 );
+		font-family: var( --ccd-fonts--secondary-stack );
+		font-size: .875rem;
+		line-height: 1.35;
 	}
 }
 
