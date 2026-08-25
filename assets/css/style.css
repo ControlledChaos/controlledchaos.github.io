@@ -1156,9 +1156,10 @@ figcaption {
   }
 }
 .tabbed-content .tab-panel .tab-title {
-  margin: var(--ccd-tabs--tab-title--margin, var(--ccd-spacing--y--quarter) 0 0 0);
+  margin: var(--ccd-tabs--tab-title--margin, 0);
 }
 .tabbed-content .tab-panel .tab-subtitle {
+  margin: var(--ccd-tabs--tab-title--margin, var(--ccd-spacing--y--quarter) 0 0 0);
   font-size: var(--ccd-tabs--tab-subtitle--font-size, 1.125rem);
   font-weight: var(--ccd-tabs--tab-subtitle--font-weight, 575);
 }
