@@ -1,9 +1,6 @@
 {%- include visitor-notice.html -%}
 
-<div class="page-loading hide-if-no-js">
-	<div class="loading-icon">{%- include svg/site-icon.svg -%}</div>
-	<p class="loading-text">{{ site.loading_text | default: "Loading" }}</p>
-</div>
+
 
 <!-- General theme scripts. -->
 <script src="{{ '/assets/js/fitvids.min.js' | relative_url }}"></script>
@@ -31,8 +28,4 @@ jQuery(document).ready( function($) {
 </script>
 
 <!-- Remove page loader -->
-<script>
-$(window).on( 'pageshow', function() {
-	$( '.page-loading' ).fadeOut( 250 );
-});
-</script>
+
