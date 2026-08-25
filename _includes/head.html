@@ -6,7 +6,9 @@
 	{%- if page.url == "/" -%}
 		{{ site.title }} | {{ site.description }}
 	{%- elsif page.collection == "category" -%}
-		{{ "Category" }}
+		{{ "Category: " | append: page.name }}
+	{%- elsif page.collection == "tag" -%}
+		{{ "Tag: " | append: page.name }}
 	{%- elsif page.title -%}
 		{{ page.title | strip_html | xml_escape  }} | {{ site.title | strip_html | xml_escape }}
 	{%- else -%}
