@@ -10,7 +10,7 @@ layout: default
 
 	<li class="taxonomy-index-item categories-index-item">
 
-		<a href="{{- '/cat/' | absolute_url -}}{{- cat.slug -}}" class="taxonomy-index-link categories-index-link">{{ cat.name }}</a>
+		<a href="{{- '/category/' | absolute_url -}}{{- cat.slug -}}" class="taxonomy-index-link categories-index-link">{{ cat.name }}</a>
 
 		{%- for count in site.categories -%}
 			{%- if slug != count[0] -%}
