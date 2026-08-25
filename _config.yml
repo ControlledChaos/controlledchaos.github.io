@@ -126,7 +126,12 @@ blog_path: "/posts/"
 paginate_path: "/posts/page:num/"
 paginate: 9
 paged_style: "numeric" # numeric or standard
-related_by: "tags or categories"
+
+# Related posts
+# String contains category, tag, or both.
+# False disables section.
+# Per page settings in post matter.
+related_by: "category tag"
 related_message: ""
 
 # Footer content
