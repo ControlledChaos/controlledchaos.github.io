@@ -20,6 +20,8 @@
 {%- capture meta_description -%}
 	{%- if page.subtitle -%}
 		{{ page.subtitle | strip_html | xml_escape }}
+	{%- elsif page.description -%}
+		{{ page.description | strip_html | xml_escape }}
 	{%- else -%}
 		{%- assign excerpt_length = site.excerpt_length | default: 30 -%}
 		{{ page.content | strip_html | xml_escape | truncatewords: excerpt_length, "…" | strip }}
