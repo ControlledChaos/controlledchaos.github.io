@@ -23,26 +23,28 @@
 		}
 	}
 	.nav-item {
-		line-height: 1;
+		line-height: var( --ccd-tabs--nav-item--line-height, 1 );
 		background-color: #{f.lighten( c.$off_white, 15% )};
-		border: var( --ccd-box--border );
+		border: var( --ccd-tabs--nav-item--border, var( --ccd-box--border ) );
 
 		&.active {
-			background-color: var( --ccd-body--bg-color );
-			border-bottom-color: var( --ccd-body--bg-color );
+			background-color: var( --ccd-tabs--nav-item--active--bg-color, var( --ccd-body--bg-color ) );
+
+			// Same as background.
+			border-bottom-color: var( --ccd-tabs--nav-item--active--bg-color, var( --ccd-body--bg-color ) );
 		}
 
 		a {
 			display: inline-block;
-			padding: var( --ccd-tabs--list--link, 0.825em 1em );
-			color: var( --ccd-body--text-color );
-			text-decoration: none;
+			padding: var( --ccd-tabs--nav-item--link--padding, 0.825em 1em );
+			color: var( --ccd-tabs--nav-item--link--text-color, var( --ccd-body--text-color ), inherit );
+			text-decoration: var( --ccd-tabs--nav-item--link--text-decoration, none );
 			cursor: pointer;
 		}
 	}
 	.tab-panel {
-		border-top: var( --ccd-box--border );
-		padding: var( --ccd-spacing--y ) 0;
+		border-top: var( --ccd-tabs--panel--border, var( --ccd-box--border ) );
+		padding: var( --ccd-tabs--panel--padding, var( --ccd-spacing--y ) 0 );
 
 		@media screen and ( max-width: l.$bp_sm ) {
 			display: block !important;
@@ -53,11 +55,11 @@
 		}
 
 		.tab-title {
-			margin: 0;
+			margin: var( --ccd-tabs--tab-title--margin, var( --ccd-spacing--y--quarter ) 0 0 0 );
 		}
 		.tab-subtitle {
-			font-size: 1.125rem;
-			font-weight: 575;
+			font-size: var( --ccd-tabs--tab-subtitle--font-size, 1.125rem );
+			font-weight: var( --ccd-tabs--tab-subtitle--font-weight, 575 );
 		}
 	}
 }
