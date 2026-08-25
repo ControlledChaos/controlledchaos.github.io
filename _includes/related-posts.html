@@ -1,6 +1,10 @@
 
 {%- assign related_by = page.related_by | default: site.related_by | default: false -%}
 
+{%- if related_by.first != true -%}
+	{%- assign related_by = related_by | split: " " -%}
+{%- endif -%}
+
 {%- assign related_limit = page.related_limit | default: site.related_limit | default: 3 -%}
 
 {%- assign related_from = page.related_from | default: site.related_from | default: posts -%}
@@ -71,7 +75,7 @@
 
 {%- assign related_message = page.related_message | default: site.related_message | default: "" -%}
 
-{%- if false != related_by and related_limit > 0 and related_posts.size > 0 -%}
+{%- if related_by != false and related_limit > 0 and related_posts.size > 0 -%}
 
 <section id="related-posts" class="post-section related-posts">
 
