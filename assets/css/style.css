@@ -2027,6 +2027,14 @@ figcaption {
   text-decoration-color: currentcolor;
   text-underline-offset: 0.25em;
 }
+.post-page .related-posts {
+  margin-top: var(--ccd-spacing--y);
+  padding-top: var(--ccd-spacing--y--half);
+  border-top: var(--ccd-box--border);
+}
+.post-page .related-subtitle {
+  margin-top: var(--ccd-spacing--y--quarter);
+}
 .post-page .post-nav-link {
   display: inline-flex;
   align-items: center;

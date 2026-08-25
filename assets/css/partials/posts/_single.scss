@@ -128,6 +128,14 @@
 			text-underline-offset: 0.25em;
 		}
 	}
+	.related-posts {
+		margin-top: var( --ccd-spacing--y );
+		padding-top: var( --ccd-spacing--y--half );
+		border-top: var( --ccd-box--border );
+	}
+	.related-subtitle {
+		margin-top: var( --ccd-spacing--y--quarter );
+	}
 	.post-nav-link {
 		display: inline-flex;
 		align-items: center;
