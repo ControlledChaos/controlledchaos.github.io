@@ -8,7 +8,8 @@ layout: default
 <ul class="taxonomy-index tags-index">
 	{%- for tag in tags -%}
 
-	{% assign count = tag.size %}
+	{% assign posts_in = site.tags.{{ tag }} %}
+	{% assign count = posts_in.size %}
 	<li class="taxonomy-index-item tags-index-item">
 		{{ count | append: " " }}
 		<a href="{{- '/tag/' | absolute_url -}}{{- tag.slug -}}" class="taxonomy-index-link tags-index-link">{{ tag.name }}</a>
