@@ -20,7 +20,7 @@ layout: default
 		{%- else -%}
 			{%- assign type = site.blog_plural | default: "posts" -%}
 		{%- endif -%}
-	{%- endfor -%}
+
 
 	<li class="taxonomy-index-item categories-index-item">
 
@@ -31,7 +31,7 @@ layout: default
 		{%- if cat.description != blank -%}
 		<span class="taxonomy-index-description categories-index-description">{{ cat.description }}</span>
 		{%- endif -%}
-	</li>
+	</li>{%- endfor -%}
 	{%- endfor -%}
 </ul>
 {%- endif -%}
