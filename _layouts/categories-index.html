@@ -17,15 +17,16 @@ layout: default
 				{%- continue -%}
 			{%- endif -%}
 
-			{%- if count[1].size == 1 -%}
+			{%- assign total = count[1].size -%}
+
+			{%- if total == 1 -%}
 				{%- assign type = site.blog_singular | default: "post" -%}
 			{%- else -%}
 				{%- assign type = site.blog_plural | default: "posts" -%}
 			{%- endif -%}
-
-		<span class="taxonomy-index-count categories-index-count"> ({{ count[1].size }} {{ type }})</span>
-
 		{%- endfor -%}
+
+		<span class="taxonomy-index-count categories-index-count"> ({{ total }} {{ type }})</span>
 
 		{%- if cat.description != blank -%}
 		<span class="taxonomy-index-description categories-index-description">{{ cat.description }}</span>
