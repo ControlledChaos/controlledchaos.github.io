@@ -2,11 +2,14 @@
 layout: default
 ---
 {%- assign tags = site.tag | sort -%}
-{%- if site.tags.size > 0 -%}
+{%- if tags.size > 0 -%}
 <ul class="tags-index">
 	{%- for tag in tags -%}
 	<li>
-		<a href="{{- '/tag/' | absolute_url -}}{{- tag.slug -}}">{{ tag.name }}</a>
+		<a href="{{- '/tag/' | absolute_url -}}{{- tag.slug -}}">{{ tag.name }}</a><br />
+		{%- if tag.description != blank -%}
+		{{ tag.description }}
+		{%- endif -%}
 	</li>
 	{%- endfor -%}
 </ul>

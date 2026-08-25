@@ -33,6 +33,7 @@ footer_image: "bamboo.jpg"
 # Collections
 collections:
   category:
+    layout: "category"
     directory: _category
     permalink: /:collection/:title
     output: true
@@ -40,6 +41,7 @@ collections:
       enabled: true
     paginate: 9
   tag:
+    layout: "tag"
     directory: _tag
     permalink: /:collection/:title
     output: true
