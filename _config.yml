@@ -137,6 +137,8 @@ defaults:
       page_thumb: false # Fallback in templates.
 
 # Blog pages
+blog_singular: "post"
+blog_plural: "posts"
 blog_view: "list" # list, grid, or full
 blog_path: "/posts/"
 paginate_path: "/posts/page:num/"
