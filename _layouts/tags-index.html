@@ -3,7 +3,7 @@ layout: default
 ---
 {%- assign tags  = site.tag | sort -%}
 {%- assign posts = site.posts -%}
-{{ site.tags | inspect }}
+{{ site.tags.jekyll | inspect }}
 {%- if tags.size > 0 -%}
 <ul class="taxonomy-index tags-index">
 	{%- for tag in tags -%}
