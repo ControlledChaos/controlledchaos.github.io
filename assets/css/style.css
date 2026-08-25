@@ -2131,6 +2131,9 @@ figcaption {
   font-size: 0.875rem;
   line-height: 1.35;
 }
+.taxonomy-index .taxonomy-index-count {
+  font-size: 0.875rem;
+}
 
 .taxonomy-repo.repo-view-list .entry-article {
   width: 100%;

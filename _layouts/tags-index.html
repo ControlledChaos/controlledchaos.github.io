@@ -11,8 +11,8 @@ layout: default
 	<li class="taxonomy-index-item tags-index-item">
 
 		<a href="{{- '/tag/' | absolute_url -}}{{- tag.slug -}}" class="taxonomy-index-link tags-index-link">{{ tag.name }}</a>
-		{% for count in site.tags %}
 
+		{%- for count in site.tags -%}
 			{%- if slug != count[0] -%}
 				{%- continue -%}
 			{%- endif -%}
@@ -23,8 +23,9 @@ layout: default
 				{%- assign type = site.blog_plural | default: "posts" -%}
 			{%- endif -%}
 
-			({{ count[1].size }} {{ type }})
-		{% endfor %}
+		<span class="taxonomy-index-count tags-index-count">({{ count[1].size }} {{ type }})</span>
+
+		{%- endfor -%}
 
 		{%- if tag.description != blank -%}
 		<span class="taxonomy-index-description tags-index-description">{{ tag.description }}</span>
