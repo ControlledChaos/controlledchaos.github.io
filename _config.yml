@@ -127,6 +127,7 @@ paginate_path: "/posts/page:num/"
 paginate: 9
 paged_style: "numeric" # numeric or standard
 related_by: "tags or categories"
+related_message: "Testing the related message."
 
 # Footer content
 final_message: "CCDzine* | No copyright. No synths!<br /><small>* Sponsored by Chico's Bail Bonds.</small>"
