@@ -30,7 +30,7 @@
 
 	{%- assign related_posts = "" | split: " " -%}
 
-	{%- for doc in site.documents -%}
+	{%- for doc in site.posts -%}
 		{%- if doc.id == page.id -%}
 			{% continue %}
 		{%- elsif related_from == "posts" and doc.collection != "posts" -%}
