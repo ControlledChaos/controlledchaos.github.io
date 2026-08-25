@@ -11,15 +11,16 @@ layout: default
 	{%- assign slug  = tag.slug -%}
 
 	<li class="taxonomy-index-item tags-index-item">
+
+		<a href="{{- '/tag/' | absolute_url -}}{{- tag.slug -}}" class="taxonomy-index-link tags-index-link">{{ tag.name }}</a>
 		{% for count in builtin %}
 			{%- if slug != count[0] -%}
 				{%- continue -%}
 			{%- endif -%}
-			{{ count[1].size }}
+			( {{ count[1].size }} posts )
 		{% endfor %}
-		<a href="{{- '/tag/' | absolute_url -}}{{- tag.slug -}}" class="taxonomy-index-link tags-index-link">{{ tag.name }}</a>
-		{%- if tag.description != blank -%}
 
+		{%- if tag.description != blank -%}
 		<span class="taxonomy-index-description tags-index-description">{{ tag.description }}</span>
 		{%- endif -%}
 	</li>
