@@ -10,10 +10,9 @@ layout: default
 
 		{% assign i = 0 %}
 		{%- for post in posts -%}
-			{%- unless post.tags contains tag -%}
-				{%- continue -%}
-			{%- endunless -%}
-			{% increment count %}
+			{%- if post.tags contains tag -%}
+				{% increment count %}
+			{%- endif -%}
 		{%- endfor -%}
 	<li class="taxonomy-index-item tags-index-item">
 		{{ count | append: " " }}
