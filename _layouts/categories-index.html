@@ -17,9 +17,9 @@ layout: default
 				{%- assign total = 0 -%}
 				{%- assign type = site.blog_plural | default: "posts" -%}
 				{%- continue -%}
+			{%- else -%}
+				{%- assign total = count[1].size -%}
 			{%- endif -%}
-
-			{%- assign total = count[1].size -%}
 
 			{%- if total == 1 -%}
 				{%- assign type = site.blog_singular | default: "post" -%}
