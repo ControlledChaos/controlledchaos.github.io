@@ -32,7 +32,7 @@ layout: default
 
 	{% assign section = slug | append: '-' | append: tab.section %}
 
-	<div id="{{ tab.section }}" class="tab-panel" role="tabpanel" aria-labelledby="{{ tab.section }}" style="display: none">
+	<div id="{{ tab.section }}" class="tab-panel" role="tabpanel" aria-labelledby="{{ tab.section }}">
 
 		<h2 class="tab-title">{{ tab.title }}</h2>
 		{% if tab.subtitle != blank %}
