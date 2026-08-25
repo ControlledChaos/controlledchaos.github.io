@@ -52,10 +52,12 @@
 			}
 		}
 
-		h2 {
-			&:first-of-type {
-				margin: 0;
-			}
+		.tab-title {
+			margin: 0;
+		}
+		.tab-subtitle {
+			font-size: 1.125rem;
+			font-weight: 575;
 		}
 	}
 }

@@ -34,7 +34,10 @@ layout: default
 
 	<div id="{{ tab.section }}" class="tab-panel" role="tabpanel" aria-labelledby="{{ tab.section }}" style="display: none">
 
-		<h2>{{ tab.title }}</h2>
+		<h2 class="tab-title">{{ tab.title }}</h2>
+		{% if tab.subtitle != blank %}
+		<p class="tab-subtitle">{{ tab.subtitle }}</p>
+		{% endif %}
 
 		{% include tabs/{{ section }}.html tab = tab %}
 	</div>

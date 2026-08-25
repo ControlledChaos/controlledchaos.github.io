@@ -1154,8 +1154,12 @@ figcaption {
     border: none;
   }
 }
-.tabbed-content .tab-panel h2:first-of-type {
+.tabbed-content .tab-panel .tab-title {
   margin: 0;
+}
+.tabbed-content .tab-panel .tab-subtitle {
+  font-size: 1.125rem;
+  font-weight: 575;
 }
 
 .page-container {
