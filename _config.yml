@@ -129,7 +129,7 @@ paged_style: "numeric" # numeric or standard
 
 # Related posts
 # String contains "category", "tag", or "default".
-# Disables section with "false".
+# Disable section with "false".
 # Per page settings in post matter.
 related_by: "default"
 related_message: ""
