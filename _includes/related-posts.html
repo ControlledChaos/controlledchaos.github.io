@@ -1,10 +1,6 @@
 
 {%- assign related_by = page.related_by | default: site.related_by | default: false -%}
 
-{%- if related_by.first != true -%}
-	{%- assign related_by = related_by | split: " " -%}
-{%- endif -%}
-
 {%- assign related_limit = page.related_limit | default: site.related_limit | default: 3 -%}
 
 {%- assign related_from = page.related_from | default: site.related_from | default: posts -%}
@@ -69,9 +65,6 @@
 
 {%- elsif site.related_posts.size > 0 -%}
 	{%- assign related_posts = site.related_posts -%}
-
-{%- elsif related_by == "default" -%}
-	{%- assign related_posts = site.posts -%}
 {%- endif -%}
 
 {%- assign related_heading = page.related_heading | default: site.related_heading | default: "Related Posts" -%}
