@@ -23,7 +23,7 @@ layout: default
 				{%- assign type = site.blog_plural | default: "posts" -%}
 			{%- endif -%}
 
-			( {{ count[1].size }} {{ type }} )
+			({{ count[1].size }} {{ type }})
 		{% endfor %}
 
 		{%- if tag.description != blank -%}
