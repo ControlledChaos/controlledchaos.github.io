@@ -2114,16 +2114,13 @@ figcaption {
 .taxonomy-index {
   list-style: none;
 }
-
-.taxonomy-index-item.tags-index-item {
+.taxonomy-index .taxonomy-index-item.tags-index-item {
   margin: 1rem 0 0 0;
 }
-
-.taxonomy-index-link {
+.taxonomy-index .taxonomy-index-link {
   text-decoration: none;
 }
-
-.taxonomy-index-description {
+.taxonomy-index .taxonomy-index-description {
   display: block;
   font-size: 0.85em;
 }

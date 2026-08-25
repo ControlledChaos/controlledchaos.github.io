@@ -20,18 +20,19 @@
 
 .taxonomy-index {
 	list-style: none;
-}
-.taxonomy-index-item {
-	&.tags-index-item {
-		margin: 1rem 0 0 0;
+
+	.taxonomy-index-item {
+		&.tags-index-item {
+			margin: 1rem 0 0 0;
+		}
 	}
-}
-.taxonomy-index-link {
-	text-decoration: none;
-}
-.taxonomy-index-description {
-	display: block;
-	font-size: 0.85em;
+	.taxonomy-index-link {
+		text-decoration: none;
+	}
+	.taxonomy-index-description {
+		display: block;
+		font-size: 0.85em;
+	}
 }
 
 .taxonomy-repo.repo-view-list {
