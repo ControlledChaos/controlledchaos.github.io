@@ -9,7 +9,7 @@ layout: default
 	{%- for tag in tags -%}
 	{%- assign slug = tag.slug -%}
 	<li class="taxonomy-index-item tags-index-item">
-		{{ site.tags.slug | size }}
+		{{ site.tags.name | size }}
 		<a href="{{- '/tag/' | absolute_url -}}{{- tag.slug -}}" class="taxonomy-index-link tags-index-link">{{ tag.name }}</a>
 		{%- if tag.description != blank -%}
 
