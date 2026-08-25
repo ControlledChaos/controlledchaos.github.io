@@ -31,18 +31,19 @@
 		text-decoration: none;
 		line-height: 1.2;
 	}
+	.taxonomy-index-count {
+		font-family: var( --ccd-fonts--secondary-stack );
+		font-size: .875rem;
+		line-height: 1.2;
+		vertical-align: middle;
+		vertical-align: center;
+	}
 	.taxonomy-index-description {
 		display: block;
 		margin-top: calc( var( --ccd-spacing--y--quarter ) / 2 );
 		font-family: var( --ccd-fonts--secondary-stack );
 		font-size: .875rem;
 		line-height: 1.35;
-	}
-	.taxonomy-index-count {
-		display: inline-block;
-		vertical-align: middle;
-		vertical-align: center;
-		font-size: .875rem;
 	}
 }
 

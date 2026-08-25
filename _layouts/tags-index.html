@@ -23,7 +23,7 @@ layout: default
 				{%- assign type = site.blog_plural | default: "posts" -%}
 			{%- endif -%}
 
-		<span class="taxonomy-index-count tags-index-count"> ({{ count[1].size }} {{ type }})</span>
+		<span class="taxonomy-index-count tags-index-count">({{ count[1].size }} {{ type }})</span>
 
 		{%- endfor -%}
 
