@@ -37,6 +37,8 @@ collections:
     directory: _category
     permalink: /:collection/:title
     output: true
+    singular: "category"
+    plural: "categories"
     pagination:
       enabled: true
     paginate: 9
@@ -45,23 +47,33 @@ collections:
     directory: _tag
     permalink: /:collection/:title
     output: true
+    singular: "tag"
+    plural: "tags"
     pagination:
       enabled: true
     paginate: 9
   front-page:
     directory: _front-page
     output: false
+    singular: "section"
+    plural: "sections"
   front-slides:
     directory: _front-slides
     output: false
+    singular: "slide"
+    plural: "slides"
   widgets:
     directory: _widgets
     output: false
+    singular: "widget"
+    plural: "widgets"
   projects:
     directory: _projects/content
     permalink: /:collection/:title/
     layout: "project"
     output: true
+    singular: "project"
+    plural: "projects"
     pagination:
       enabled: true
     paginate: 3
@@ -70,6 +82,8 @@ collections:
     permalink: /:collection/:title/
     layout: "snippet"
     output: true
+    singular: "snippet"
+    plural: "snippets"
 
 # Specific defaults
 defaults:
