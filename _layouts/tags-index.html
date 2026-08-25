@@ -11,7 +11,7 @@ layout: default
 	{%- assign count = site.tags.{{ slug }} -%}
 
 	<li class="taxonomy-index-item tags-index-item">
-		{{ count.size }}
+		{{ count | inspect }}
 		<a href="{{- '/tag/' | absolute_url -}}{{- tag.slug -}}" class="taxonomy-index-link tags-index-link">{{ tag.name }}</a>
 		{%- if tag.description != blank -%}
 
