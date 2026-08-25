@@ -1,0 +1,36 @@
+---
+layout: default
+---
+{%- assign categories = site.category | sort -%}
+
+{%- if categories.size > 0 -%}
+<ul class="taxonomy-index categories-index">
+	{%- for cat in categories -%}
+	{%- assign slug  = cat.slug -%}
+
+	<li class="taxonomy-index-item categories-index-item">
+
+		<a href="{{- '/cat/' | absolute_url -}}{{- cat.slug -}}" class="taxonomy-index-link categories-index-link">{{ cat.name }}</a>
+
+		{%- for count in site.categories -%}
+			{%- if slug != count[0] -%}
+				{%- continue -%}
+			{%- endif -%}
+
+			{%- if count[1].size == 1 -%}
+				{%- assign type = site.blog_singular | default: "post" -%}
+			{%- else -%}
+				{%- assign type = site.blog_plural | default: "posts" -%}
+			{%- endif -%}
+
+		<span class="taxonomy-index-count categories-index-count"> ({{ count[1].size }} {{ type }})</span>
+
+		{%- endfor -%}
+
+		{%- if cat.description != blank -%}
+		<span class="taxonomy-index-description categories-index-description">{{ cat.description }}</span>
+		{%- endif -%}
+	</li>
+	{%- endfor -%}
+</ul>
+{%- endif -%}
