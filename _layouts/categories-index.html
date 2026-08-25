@@ -21,17 +21,16 @@ layout: default
 			{%- assign type = site.blog_plural | default: "posts" -%}
 		{%- endif -%}
 
-		<li class="taxonomy-index-item categories-index-item">
+	<li class="taxonomy-index-item categories-index-item">
 
-			<a href="{{- '/category/' | absolute_url -}}{{- cat.slug -}}" class="taxonomy-index-link categories-index-link">{{ cat.name }}</a>
+		<a href="{{- '/category/' | absolute_url -}}{{- cat.slug -}}" class="taxonomy-index-link categories-index-link">{{ cat.name }}</a>
 
-			<span class="taxonomy-index-count categories-index-count"> ({{ total }} {{ type }})</span>
+		<span class="taxonomy-index-count categories-index-count"> ({{ total }} {{ type }})</span>
 
-			{%- if cat.description != blank -%}
-			<span class="taxonomy-index-description categories-index-description">{{ cat.description }}</span>
-			{%- endif -%}
-		</li>
-		{%- endfor -%}
-	{%- endfor -%}
+		{%- if cat.description != blank -%}
+		<span class="taxonomy-index-description categories-index-description">{{ cat.description }}</span>
+		{%- endif -%}
+	</li>
+	{%- endfor -%}{%- endfor -%}
 </ul>
 {%- endif -%}
