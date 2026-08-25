@@ -7,23 +7,16 @@
 
 {%- assign related_limit = page.related_limit | default: site.related_limit | default: 3 -%}
 
-{%- assign related_from = page.related_from | default: site.related_from | default: documents -%}
+{%- assign related_from = page.related_from | default: site.related_from | default: posts -%}
 
 {%- assign related_categories = page.related_categories | default: site.related_categories | default: 1 -%}
 
 {%- assign related_tags = page.related_tags | default: site.related_tags | default: 1 -%}
 
-{%- assign related_template = page.related_template | default: site.related_template | default: "post-card.html" -%}
-
 {%- if related_by contains "random" -%}
 
 	{%- assign related_limit = related_limit | plus: 1 -%}
-	{%- if related_from == "posts" -%}
-		{%- assign related_posts = site.posts | sample: related_limit -%}
-	{%- else -%}
-		{%- assign related_posts = site.documents | sample: related_limit -%}
-	{%- endif -%}
-
+	{%- assign related_posts = site.posts | sample: related_limit -%}
 	{%- assign related_limit = related_limit | minus: 1 -%}
 
 {%- elsif related_by contains "categories" or related_by contains "tags" -%}
@@ -87,15 +80,22 @@
 	{%- assign related_posts = site.posts -%}
 {%- endif -%}
 
+{%- assign related_heading = page.related_heading | default: site.related_heading | default: "Related Posts" -%}
+
+{%- assign related_message = page.related_message | default: site.related_message | default: "" -%}
+
 {%- if related_limit > 0 and related_posts.size > 0 -%}
 
 <section id="related-posts" class="post-section">
 
-	<h2>Related Posts</h2>
+	<h2 class="related-title">{{ related_heading }}</h2>
+	{% if related_message != blank %}
+	<p class="related-subtitle">{{ related_message }}</p>
+	{%- endif -%}
 
-	<div class="content-loop-grid relateed-posts-grid">
+	<div class="content-loop-grid related-posts-grid">
 
-	{%- for post in related_posts limit:related_limit -%}
+	{%- for post in related_posts limit: related_limit -%}
 		{%- if post.id == page.id -%}
 			{%- continue -%}
 		{%- endif -%}
