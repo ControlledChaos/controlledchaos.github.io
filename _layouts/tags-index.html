@@ -1,11 +1,22 @@
 ---
 layout: default
 ---
-{%- assign tags = site.tag | sort -%}
+{%- assign tags  = site.tag | sort -%}
+{%- assign posts = site.posts -%}
+
 {%- if tags.size > 0 -%}
 <ul class="taxonomy-index tags-index">
 	{%- for tag in tags -%}
+
+		{% assign i = 0 %}
+		{%- for post in posts -%}
+			{%- unless post.tags contains tag -%}
+				{%- continue -%}
+			{%- endunless -%}
+			{% increment count %}
+		{%- endfor -%}
 	<li class="taxonomy-index-item tags-index-item">
+		{{ count | append: " " }}
 		<a href="{{- '/tag/' | absolute_url -}}{{- tag.slug -}}" class="taxonomy-index-link tags-index-link">{{ tag.name }}</a>
 		{%- if tag.description != blank -%}
 
