@@ -4,6 +4,9 @@ layout: default
 {%- assign tags  = site.tag | sort -%}
 {%- assign posts = site.posts -%}
 
+{% assign sorted_tags = site.tags | sort %}
+	{% for tag in sorted_tags %}[{{ tag[0] }}](/tag/{{ tag[0] }}/) ({{tag[1].size }}) {% endfor %}
+
 {%- if tags.size > 0 -%}
 <ul class="taxonomy-index tags-index">
 	{%- for tag in tags -%}
