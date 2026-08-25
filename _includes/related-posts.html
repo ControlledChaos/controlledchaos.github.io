@@ -74,7 +74,7 @@
 {%- assign related_heading = page.related_heading | default: site.related_heading | default: "Related Posts" -%}
 
 {%- assign related_message = page.related_message | default: site.related_message | default: "" -%}
-
+{%- assign related_by = page.related_by -%}
 {%- if related_by != false and related_limit > 0 and related_posts.size > 0 -%}
 
 <section id="related-posts" class="post-section related-posts">
