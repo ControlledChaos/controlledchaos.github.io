@@ -130,7 +130,7 @@ related_by: "tags or categories"
 related_message: ""
 
 # Footer content
-final_message: "CCDzine* | No copyright. No synths!"
+final_message: "CCDzine | No copyright. No synths!"
 
 # Additional functionality
 plugins:
