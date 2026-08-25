@@ -12,17 +12,16 @@ layout: default
 
 		<a href="{{- '/tag/' | absolute_url -}}{{- tag.slug -}}" class="taxonomy-index-link tags-index-link">{{ tag.name }}</a>
 		{% for count in site.tags %}
+
 			{%- if slug != count[0] -%}
 				{%- continue -%}
 			{%- endif -%}
 
-			{%- capture type -%}
-				{%- if count[1].size == 1 -%}
-					{{ post }}
-				{%- else -%}
-					{{ posts }}
-				{%- endif -%}
-			{%- endcapture -%}
+			{%- if count[1].size == 1 -%}
+				{%- assign type = site.blog_singular | default: "post" -%}
+			{%- else -%}
+				{%- assign type = site.blog_plural | default: "posts" -%}
+			{%- endif -%}
 
 			( {{ count[1].size }} {{ type }} )
 		{% endfor %}
