@@ -6,25 +6,25 @@ layout: default
 {%- if categories.size > 0 -%}
 <ul class="taxonomy-index categories-index">
 	{%- for cat in categories -%}
-	{%- assign slug  = cat.slug -%}
+	{%- assign slug = cat.slug -%}
+
+	{%- for count in site.categories -%}
+		{%- if slug != count[0] or count[1].size == 0 -%}
+			{%- continue -%}
+		{%- endif -%}
+
+		{%- assign total = count[1].size -%}
+
+		{%- if total == 1 -%}
+			{%- assign type = site.blog_singular | default: "post" -%}
+		{%- else -%}
+			{%- assign type = site.blog_plural | default: "posts" -%}
+		{%- endif -%}
+	{%- endfor -%}
 
 	<li class="taxonomy-index-item categories-index-item">
 
 		<a href="{{- '/category/' | absolute_url -}}{{- cat.slug -}}" class="taxonomy-index-link categories-index-link">{{ cat.name }}</a>
-
-		{%- for count in site.categories -%}
-			{%- if slug != count[0] or count[1].size == 0 -%}
-				{%- continue -%}
-			{%- endif -%}
-
-			{%- assign total = count[1].size -%}
-
-			{%- if total == 1 -%}
-				{%- assign type = site.blog_singular | default: "post" -%}
-			{%- else -%}
-				{%- assign type = site.blog_plural | default: "posts" -%}
-			{%- endif -%}
-		{%- endfor -%}
 
 		<span class="taxonomy-index-count categories-index-count"> ({{ total }} {{ type }})</span>
 
