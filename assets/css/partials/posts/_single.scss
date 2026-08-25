@@ -130,8 +130,11 @@
 	}
 	.related-posts {
 		margin-top: var( --ccd-spacing--y );
-		padding-top: var( --ccd-spacing--y--half );
+		padding-top: var( --ccd-spacing--y );
 		border-top: var( --ccd-box--border );
+	}
+	.related-title {
+		margin: 0;
 	}
 	.related-subtitle {
 		margin-top: var( --ccd-spacing--y--quarter );

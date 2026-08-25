@@ -2029,8 +2029,11 @@ figcaption {
 }
 .post-page .related-posts {
   margin-top: var(--ccd-spacing--y);
-  padding-top: var(--ccd-spacing--y--half);
+  padding-top: var(--ccd-spacing--y);
   border-top: var(--ccd-box--border);
+}
+.post-page .related-title {
+  margin: 0;
 }
 .post-page .related-subtitle {
   margin-top: var(--ccd-spacing--y--quarter);
