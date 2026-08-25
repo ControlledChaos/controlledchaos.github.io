@@ -5,6 +5,8 @@
 {%- capture title -%}
 	{%- if page.url == "/" -%}
 		{{ site.title }} | {{ site.description }}
+	{%- elsif page.collection == "category" -%}
+		{{ "Category" }}
 	{%- elsif page.title -%}
 		{{ page.title | strip_html | xml_escape  }} | {{ site.title | strip_html | xml_escape }}
 	{%- else -%}
