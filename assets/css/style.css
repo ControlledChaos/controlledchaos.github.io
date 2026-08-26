@@ -2358,7 +2358,7 @@ figcaption {
 .widgets-footer .widget.widget-featured-projects {
   order: 3;
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 960px) {
   .widgets-footer .widget.widget-featured-projects {
     order: 2;
   }

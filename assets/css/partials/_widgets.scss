@@ -155,7 +155,7 @@
 .widgets-footer .widget.widget-featured-projects {
 	order: 3;
 
-	@media screen and ( max-width: l.$bp_med ) {
+	@media screen and ( max-width: l.$bp_lg ) {
 		order: 2;
 	}
 
