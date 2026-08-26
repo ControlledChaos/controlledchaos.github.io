@@ -1,5 +1,5 @@
-{%- assign latest_limit = site.latest_limit | default: 5 -%}
 {%- assign posts = site.posts -%}
+{%- assign limit = widget.limit | default: site.latest_widget_limit | default: 5 -%}
 {%- assign date_format = site.date_format | default: "%B %-d, %Y" -%}
 {%- assign widget = include.widget -%}
 
@@ -14,7 +14,7 @@
 {%- if posts.size > 0 -%}
 
 <ul class="widget-latest-list">
-{%- for post in posts limit: latest_limit -%}
+{%- for post in posts | limit: limit -%}
 	<li class="widget-latest-item">
 		<a href="{{ post.url }}" class="widget-latest-link" title="{{ post.subtitle | default: 'Read Post' }}" data-tooltip>{{ post.title }}</a>
 		<time class="widget-latest-date"><span class="inline-svg">{% include svg/clock.svg %}</span> {{ post.date | date: date_format }}</time>

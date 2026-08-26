@@ -154,6 +154,7 @@ related_message: ""
 
 # Widgets
 projects_widget_limit: 5
+latest_widget_limit: 5
 
 # Footer content
 final_message: "CCDzine | No copyright. No synths!"
