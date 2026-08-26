@@ -2357,8 +2357,8 @@ figcaption {
 
 .widgets-footer .widget.widget-featured-projects ul {
   list-style: none;
-  -moz-column-count: 2;
-       column-count: 2;
+  -moz-column-count: 1;
+       column-count: 1;
   -moz-column-width: 160px;
        column-width: 160px;
   column-wrap: wrap;
