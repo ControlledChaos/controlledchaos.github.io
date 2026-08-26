@@ -1,6 +1,6 @@
 {%- assign projects = site.projects | sort: "featured" -%}
 {%- assign widget = include.widget -%}
-{%- assign limit = widget.limit | default: site.projects_widget_limit | default: 5 -%}
+{%- assign limit = include.limit | default: widget.limit | default: site.projects_widget_limit | default: 5 -%}
 
 {%- if widget.title and widget.title != blank -%}
 <h3>{{ widget.title }}</h3>
