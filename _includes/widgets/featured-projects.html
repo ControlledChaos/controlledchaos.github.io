@@ -12,7 +12,7 @@
 {%- if projects.size > 0 -%}
 
 <ul class="widget-featured-list">
-{%- for project in projects -%}
+{%- for project in projects | limit: 5 -%}
 
 	{%- unless project.featured and project.featured != blank -%}
 		{%- continue -%}
