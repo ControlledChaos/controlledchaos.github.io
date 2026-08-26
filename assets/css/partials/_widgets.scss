@@ -153,6 +153,12 @@
 	}
 }
 .widgets-footer .widget.widget-featured-projects {
+	order: 3;
+
+	@media screen and ( max-width: l.$bp_med ) {
+		order: 2;
+	}
+
 	ul {
 		list-style: none;
 		column-count: 1;

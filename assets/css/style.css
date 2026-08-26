@@ -2355,6 +2355,14 @@ figcaption {
   }
 }
 
+.widgets-footer .widget.widget-featured-projects {
+  order: 3;
+}
+@media screen and (max-width: 800px) {
+  .widgets-footer .widget.widget-featured-projects {
+    order: 2;
+  }
+}
 .widgets-footer .widget.widget-featured-projects ul {
   list-style: none;
   -moz-column-count: 1;
