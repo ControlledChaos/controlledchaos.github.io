@@ -2,6 +2,6 @@
 title: "Featured Projects"
 side: true
 footer: true
-order: 0
+order: 1
 limit: 5
 ---

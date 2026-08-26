@@ -1,6 +1,6 @@
 ---
 title: "Latest Posts"
 side: true
-order: 1
+order: 2
 limit: 5
 ---
