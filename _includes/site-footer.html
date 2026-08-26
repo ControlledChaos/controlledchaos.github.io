@@ -15,7 +15,7 @@
 			{%- assign slug = widget.path | remove: "_widgets/" | remove: widget.ext -%}
 
 			<div class="widget widget-footer widget-{{ slug }}">
-				{%- include widgets/{{ slug }}.html widget = widget, limit = 6 -%}
+				{%- include widgets/{{ slug }}.html widget=widget, limit='6' -%}
 			</div>
 
 			{%- endfor -%}
