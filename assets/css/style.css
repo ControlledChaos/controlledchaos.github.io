@@ -2355,15 +2355,16 @@ figcaption {
   }
 }
 
-.widgets-footer .widget.widget-featured-projects .page-links-widget-nav ul {
+.widgets-footer .widget.widget-featured-projects ul {
   list-style: none;
-}
-.widgets-footer .widget.widget-featured-projects.widget-footer .page-links-widget-nav ul {
   -moz-column-count: 2;
        column-count: 2;
   -moz-column-width: 160px;
        column-width: 160px;
   column-wrap: wrap;
+}
+.widgets-footer .widget.widget-featured-projects .widget-featured-subtitle {
+  display: none;
 }
 
 .widget.widget-latest-posts .widget-latest-list li {

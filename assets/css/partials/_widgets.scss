@@ -153,19 +153,14 @@
 	}
 }
 .widgets-footer .widget.widget-featured-projects {
-	.page-links-widget-nav {
-		ul {
-			list-style: none;
-		}
+	ul {
+		list-style: none;
+		column-count: 2;
+		column-width: 160px;
+		column-wrap: wrap;
 	}
-	&.widget-footer {
-		.page-links-widget-nav {
-			ul {
-				column-count: 2;
-				column-width: 160px;
-				column-wrap: wrap;
-			}
-		}
+	.widget-featured-subtitle {
+		display: none;
 	}
 }
 
