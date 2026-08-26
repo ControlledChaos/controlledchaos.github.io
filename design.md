@@ -1,9 +1,9 @@
 ---
-permalink: /design/
+permalink: /web-design/
 page_type: "Service"
-title: "Design Services"
-subtitle: "Full-scale website design, logos, graphics, color palettes, and more."
-description: "Full-scale website design, logos, graphics, color palettes, and more."
+title: "Web Design Services"
+subtitle: "Full-scale website design, fonts schemes, color palettes, mobile layouts."
+description: "Full-scale website design, fonts schemes, color palettes, mobile layouts."
 category: "design"
 section: "design"
 ---
