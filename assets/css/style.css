@@ -2360,7 +2360,7 @@ figcaption {
 }
 @media screen and (max-width: 960px) {
   .widgets-footer .widget.widget-featured-projects {
-    order: 2;
+    order: unset;
   }
 }
 .widgets-footer .widget.widget-featured-projects ul {
