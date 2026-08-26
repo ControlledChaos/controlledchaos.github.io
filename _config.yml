@@ -152,6 +152,9 @@ paged_style: "numeric" # numeric or standard
 related_by: "default"
 related_message: ""
 
+# Widgets
+projects_widget_limit: 5
+
 # Footer content
 final_message: "CCDzine | No copyright. No synths!"
 
