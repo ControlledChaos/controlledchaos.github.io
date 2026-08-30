@@ -2,8 +2,8 @@
 order: 2
 active: true
 image: "projects.jpg"
-title: "What I Have Done"
-subtitle: "Some of the websites that I have made, and more."
+title: "Featured Projects"
+subtitle: "Some of the websites, web tools, and graphics that I have made."
 link_url: "projects"
-link_text: "Featured List"
+link_text: "Portfolio"
 ---

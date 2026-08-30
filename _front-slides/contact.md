@@ -3,7 +3,7 @@ order: 6
 active: true
 image: "contact.jpg"
 title: "Get In Touch"
-subtitle: "I still use the telephone for calls."
+subtitle: "Let's talk about how I can help."
 link_url: "contact"
-link_text: "Get My Info"
+link_text: "Contact Info"
 ---
