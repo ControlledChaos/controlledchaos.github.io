@@ -2,9 +2,9 @@
 layout: tabs
 permalink: /services/
 page_type: "AboutPage"
-title: "What I Can Do"
-subtitle: "Design, code, maintain, improve, and communicate."
-description: "My acquired skills, inherent abilities, and how I may help you."
+title: "Design & Development Services"
+subtitle: "Design, code, maintenance, and content creation."
+description: "Full-scale website design, graphics, color palettes, and more."
 published: "July, 15, 2026"
 front: "services"
 tabs:
@@ -18,7 +18,7 @@ tabs:
     section: "development"
     cover: "development.jpg"
     title: "Custom Website Development"
-    subtitle: "Help installing a WordPress theme & plugins to custom production to meet your needs."
+    subtitle: "From help installing a WordPress theme & plugins to custom code production."
   
   - tab: "Support"
     section: "support"
