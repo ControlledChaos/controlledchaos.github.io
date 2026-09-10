@@ -2,7 +2,7 @@
 layout: tabs
 permalink: /services/
 page_type: "AboutPage"
-title: "Design & Development Services"
+title: "Web Services"
 subtitle: "Design, code, maintenance, and content creation."
 description: "Full-scale website design, graphics, color palettes, and more."
 published: "July, 15, 2026"
