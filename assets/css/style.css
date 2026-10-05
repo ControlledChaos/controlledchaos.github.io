@@ -1255,6 +1255,11 @@ figcaption {
 .repository table {
   margin-top: 1rem;
 }
+.page-content ul, .page-content ol,
+.repository ul,
+.repository ol {
+  margin-left: 1em;
+}
 
 .page-content a {
   font-weight: 500;
