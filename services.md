@@ -4,7 +4,7 @@ permalink: /services/
 page_type: "AboutPage"
 title: "Web Services"
 subtitle: "Design, code, maintenance, and content creation."
-description: "Full-scale website design, graphics, color palettes, and more."
+description: "Full-scale website design, user interface, graphics, color palettes, and more."
 published: "July, 15, 2026"
 front: "services"
 tabs:
@@ -12,7 +12,7 @@ tabs:
     section: "design"
     cover: "design.jpg"
     title: "Website and Graphic Design"
-    subtitle: "Full-scale website design, graphics, color palettes, and more."
+    subtitle: "Full-scale website design, user interface, graphics, color palettes, and more."
   
   - tab: "Development"
     section: "development"
