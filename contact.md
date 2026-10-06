@@ -10,11 +10,16 @@ post_image: "contact.jpg"
 
 If you need a website and don't know how to start, or if you want to completely overhaul an existing site, then let's talk about your project.
 
+## Greg Sweet
+
 Please do not be shy in asking for help with a small task.
 
-## Greg Sweet
+### Talk about your project
 
 Email: [greg@ccdzine.com](mailto:greg@ccdzine.com)  
 Phone: [(559) 769-7600](tel:5597697600)  
+
+### Support for one of my projects
+
 [CCDzine GitHub](https://github.com/CCDzine-Builds)  
 [Baseless Projects](https://github.com/BaselessCMS)  
