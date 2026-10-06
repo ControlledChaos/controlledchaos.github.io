@@ -21,5 +21,5 @@ Phone: [(559) 769-7600](tel:5597697600)
 
 ### Support for one of my projects
 
-[CCDzine GitHub](https://github.com/CCDzine-Builds)  
+[CCDzine Projects](https://github.com/CCDzine-Builds)  
 [Baseless Projects](https://github.com/BaselessCMS)  
