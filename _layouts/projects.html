@@ -1,13 +1,13 @@
 ---
 layout: default
 pagination:
-  enabled: true
-  permalink: /projects/:name/
+enabled: true
+permalink: /projects/:name/
 ---
 {{ content }}
 
-<ul class="projects-list" role="list">
-{%- for project in site.projects -%}
-	{%- include projects-preview.html -%}
-{%- endfor -%}
-</ul>
+{%- if site.projects.size > 0 -%}
+	{%- include featured-projects-grid.html projects = site.projects -%}
+{%- else -%}
+	<p>No projects found.</p>
+{%- endif -%}
