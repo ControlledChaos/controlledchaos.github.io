@@ -14,7 +14,7 @@ Please do not be shy in asking for help with a small task.
 
 ## Greg Sweet
 
-Email: [greg@ccdzine.com](maito://greg@ccdzine.com)  
+Email: [greg@ccdzine.com](mailto:greg@ccdzine.com)  
 Phone: [(559) 769-7600](tel:5597697600)  
 [CCDzine GitHub](https://github.com/CCDzine-Builds)  
 [Baseless Projects](https://github.com/BaselessCMS)  
