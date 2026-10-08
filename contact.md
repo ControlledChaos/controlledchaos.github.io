@@ -16,7 +16,7 @@ Please do not be shy in asking for help with a small task.
 
 ### Talk about your project
 
-Phone is a cell number but I prefer a call to text message.
+Phone is a cell number but I prefer a call rather than a text message.
 
 Email: [greg@ccdzine.com](mailto:greg@ccdzine.com)  
 Phone: [(559) 769-7600](tel:5597697600)  
