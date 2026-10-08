@@ -77,13 +77,6 @@ collections:
     pagination:
       enabled: true
     paginate: 3
-  snippets:
-    directory: _snippets
-    permalink: /:collection/:title/
-    layout: "snippet"
-    output: true
-    singular: "snippet"
-    plural: "snippets"
 
 # Specific defaults
 defaults:
