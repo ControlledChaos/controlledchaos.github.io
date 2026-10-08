@@ -97,6 +97,17 @@
 	}
 }
 
+.product {
+	&.downloads-page {
+		margin-top: var( --cfe-spacing--vert, 2rem );
+		border-top: var( --ccd-box--border );
+
+		@media ( prefers-color-scheme: dark ) {
+			border-top: var( --ccd-box--border--dark );
+		}
+	}
+}
+
 .paged-nav {
 	ul {
 		list-style: none;
