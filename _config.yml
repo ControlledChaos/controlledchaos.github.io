@@ -150,7 +150,7 @@ projects_widget_limit: 5
 latest_widget_limit: 5
 
 # Footer content
-final_message: "CCDzine | No copyright. No synths!"
+final_message: "By CCDzine | No copyright. No synths!"
 
 # Additional functionality
 plugins:
