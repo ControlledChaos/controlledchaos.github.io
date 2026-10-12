@@ -11,6 +11,7 @@ layout: default
 		{{ true }}
 	{%- endif -%}
 {%- endcapture -%}
+{%- assign action = page.action -%}
 
 {{ content }}
 
@@ -43,5 +44,16 @@ layout: default
 	</div>
 
 	{% endfor %}
+
+	{%- if action -%}
+	{%- capture button -%}
+		{%- if action.wrap -%}
+			{{ 'Wrap' }}
+		{%- else -%}
+			{{ 'No Wrap' }}
+		{%- endif -%}
+	{%- endcapture -%}
+	{%- endif -%}
+	{{ button }}
 
 </div>
