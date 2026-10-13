@@ -27,7 +27,7 @@ tabs:
     subtitle: "Services include software updates, content writing, post creation, and image editing."
 action:
   text: "Call Now"
-  title: "(559) 769-7600"
-  url: "tel:15597697600"
+  title: ""
+  url: "/contact/"
   wrap: "h2"
 ---
