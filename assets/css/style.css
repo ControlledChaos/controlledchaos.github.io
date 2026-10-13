@@ -1271,6 +1271,8 @@ figcaption {
 
 .page-content a {
   font-weight: 500;
+}
+.page-content a:not(.button) {
   text-decoration: underline;
   text-decoration-color: currentcolor;
   text-underline-offset: 0.25em;
