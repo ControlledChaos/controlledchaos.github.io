@@ -46,14 +46,6 @@ layout: default
 	{% endfor %}
 
 	{%- if action -%}
-	{%- capture button -%}
-		{%- if action.wrap -%}
-			<{{ action.wrap }}>{{ action.wrap }}</{{ action.wrap }}>
-		{%- else -%}
-			{{ action.wrap }}
-		{%- endif -%}
-	{%- endcapture -%}
+	<h2><a href="{{ action.url }}" class="button">{{ action.text }}</a></h2>
 	{%- endif -%}
-	{{ button }}
-
 </div>

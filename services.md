@@ -27,7 +27,5 @@ tabs:
     subtitle: "Services include software updates, content writing, post creation, and image editing."
 action:
   text: "Call Now"
-  title: ""
   url: "/contact/"
-  wrap: "h2"
 ---
