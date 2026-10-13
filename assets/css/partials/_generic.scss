@@ -300,6 +300,7 @@ pre, code, kbd, samp {
 	font-family: var( --ccd-button--font-family, var( --ccd-fonts--display-stack ) );
 	font-size: var( --ccd-button--font-size, 1.125rem );
 	font-weight: var( --ccd-button--font-weight, 500 );
+	text-decoration: var( --ccd-button--text-decoration, none );
 	line-height: var( --ccd-button--line-height, 1 );
 	background-color: var( --ccd-button--bg-color, var( --ccd-color--two--base ) );
 	color: var( --ccd-button--text-color, #ffffff );
