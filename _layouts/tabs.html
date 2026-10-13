@@ -48,9 +48,7 @@ layout: default
 	{%- if action -%}
 	{%- capture button -%}
 		{%- if action.wrap -%}
-			{%- assign open  = action.wrap | prepend: '&lt;' | append: '&gt;' -%}
-			{%- assign close = action.wrap | prepend: '&lt;/' | append: '&gt;' -%}
-			{{ open }}{{ action.wrap }}{{ close }}
+			<{{ action.wrap }}>{{ action.wrap }}</{{ action.wrap }}>
 		{%- else -%}
 			{{ action.wrap }}
 		{%- endif -%}
