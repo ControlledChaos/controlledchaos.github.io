@@ -92,7 +92,7 @@
 	a {
 		font-weight: 500;
 
-		&:not( .button ) {
+		&:not( .button ):not( .nav-link ) {
 			text-decoration: underline;
 			text-decoration-color: currentcolor;
 			text-underline-offset: 0.25em;
