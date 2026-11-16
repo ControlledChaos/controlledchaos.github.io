@@ -7,7 +7,7 @@ link: "https://github.com/BaselessCMS/configureight-suite"
 featured: 0
 ---
 
-The Configure 8 Suite consists of plugins and themes that I developed for Bludit content management system. Each component is available separately and can be found on the [Downloads](https://ccdzine.com/downloads) page.
+The Configure 8 Suite consists of plugins and themes that I developed for Bludit content management system. Each component is available separately and can be found on the [Downloads](https://ccdzine.com/downloads/#bludit) page.
 
 In September 2024 I saw Bludit in a list of "static" content management systems (not requiring a database). So I installed it and started poking around the code. I found it to be intriguing but the themes and plugins that come with Bludit are, to put it politely, are not impressive.
 
