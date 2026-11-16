@@ -11,6 +11,7 @@
 {%- else -%}
 	{%- assign src = "posts/images/default-thumb.jpg" -%}
 {%- endif -%}
+{{ post.collection }}
 <article id="{{ post.slug }}" class="entry-article">
 
 	<figure class="entry-image" role="presentation">
