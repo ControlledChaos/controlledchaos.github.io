@@ -3,7 +3,7 @@ title: "Controlled Chaos"
 subtitle: "There is more to this website than may appear."
 categories: [ "websites" ]
 tags: [ "websites", "jekyll", "liquid", "github" ]
-link: "https://ccdzine.com/"
+link: "https://ccdzine.com"
 featured: 4
 ---
 

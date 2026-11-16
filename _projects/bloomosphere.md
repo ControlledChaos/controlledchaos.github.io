@@ -3,7 +3,7 @@ title: "Bloomosphere"
 subtitle: "Website for a Hollywood costume designer."
 categories: [ "websites" ]
 tags: [ "clients" ]
-link: "https://bloomosphere.com/"
+link: "https://bloomosphere.com"
 featured: 1
 ---
 
