@@ -1,6 +1,8 @@
 ---
 title: "Controlled Chaos"
 subtitle: "There is more to this website than may appear."
+categories: [ "websites" ]
+tags: [ "websites", "jekyll", "liquid", "github" ]
 featured: 4
 ---
 

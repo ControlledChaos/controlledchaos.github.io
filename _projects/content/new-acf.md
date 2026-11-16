@@ -1,6 +1,8 @@
 ---
 title: "A New Old ACF"
 subtitle: "Reworking and improving an older version of Advanced Custom Fields."
+categories: [ "product" ]
+tags: [ "wordpress", "plugins" ]
 featured: 6
 ---
 

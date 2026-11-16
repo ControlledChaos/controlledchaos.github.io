@@ -1,6 +1,8 @@
 ---
 title: "Site Core Tools"
 subtitle: "Boilerplates for building site-specific ClassicPress/WordPress plugins & themes."
+categories: [ "product" ]
+tags: [ "wordpress", "themes", "plugins" ]
 featured: 5
 ---
 

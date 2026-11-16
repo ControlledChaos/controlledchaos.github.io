@@ -1,6 +1,8 @@
 ---
 title: "Monica Mixes"
 subtitle: "Website for craft cocktail recipes."
+categories: [ "websites" ]
+tags: [ "clients", "wordpress", "themes", "plugins" ]
 featured: 2
 ---
 

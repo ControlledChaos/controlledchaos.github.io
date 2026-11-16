@@ -1,6 +1,8 @@
 ---
 title: "Totem Market"
 subtitle: "Website for a little country market & restaurant."
+categories: [ "websites" ]
+tags: [ "clients", "wordpress", "themes", "plugins" ]
 featured: 3
 ---
 
