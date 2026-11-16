@@ -7,7 +7,7 @@ link: "https://github.com/CCDzine-Builds/sitecore-suite"
 featured: 5
 ---
 
-The Site Core Suite consists of plugins and themes I developed for WordPress and ClassicPress. Each component is available separately and can be found on the [Downloads](https://ccdzine.com/downloads) page.
+The Site Core Suite consists of plugins and themes that I developed for the WordPress and ClassicPress content management systems. Each component is available separately and can be found on the [Downloads](https://ccdzine.com/downloads) page.
 
 Over the course of my career developing WordPress websites I found myself repeating a lot of code for each site. So I began developing a "starter" plugin which contains this code, thus requiring minor changes to make the starter specific to the site.
 
