@@ -56,6 +56,16 @@ layout: common
 
 	<footer class="project-footer">
 
+		{%- if page.link -%}
+		<div class="project-footer-link">
+			<span class="project-footer-icon project-link-icon" role="presentation">{%- include svg/link.svg -%} </span>
+			<span class="project-footer-label project-link-label">Link:</span>
+			<span class="project-footer-links project-link">
+			<a href="{{ page.link }}" target="_blank" rel="noopener noreferrer"></a>
+			</span>
+		</div>
+		{%- endif %}
+
 		{%- if page.categories -%}
 		<div class="project-footer-tax project-footer-cats">
 			<span class="project-footer-icon project-cats-icon" role="presentation">{%- include svg/folder.svg -%} </span>

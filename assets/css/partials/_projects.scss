@@ -77,6 +77,7 @@
 	.project-footer {
 		margin-top: var( --ccd-spacing--y );
 
+		.project-footer-link,
 		.project-footer-tax {
 			margin-top: 0.25rem;
 			display: flex;

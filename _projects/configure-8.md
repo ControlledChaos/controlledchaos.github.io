@@ -3,6 +3,7 @@ title: "Configure 8"
 subtitle: "Theme & suite of plugins for the Bludit CMS."
 categories: [ "product" ]
 tags: [ "bludit", "themes", "plugins" ]
+link: "https://github.com/BaselessCMS/configureight-suite"
 featured: 0
 ---
 

@@ -2305,6 +2305,7 @@ figcaption {
 .project-page .project-footer {
   margin-top: var(--ccd-spacing--y);
 }
+.project-page .project-footer .project-footer-link,
 .project-page .project-footer .project-footer-tax {
   margin-top: 0.25rem;
   display: flex;
