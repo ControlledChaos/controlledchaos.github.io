@@ -2234,21 +2234,21 @@ figcaption {
   padding: 0;
 }
 
-.project-page .post-article {
+.project-page .project-article {
   margin-top: var(--ccd-spacing--y);
 }
-.project-page .post-header {
+.project-page .project-header {
   text-align: center;
 }
-.project-page .post-title {
+.project-page .project-title {
   margin: 0.5em 0 0 0;
   line-height: 80%;
 }
-.project-page .post-subtitle {
+.project-page .project-subtitle {
   margin-top: 1rem;
   line-height: 1.35;
 }
-.project-page .post-cover {
+.project-page .project-cover {
   position: relative;
   overflow: hidden;
   display: flex;
@@ -2257,14 +2257,14 @@ figcaption {
   justify-content: center;
   min-height: 360px;
 }
-.project-page .post-cover .post-image {
+.project-page .project-cover .project-image {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
 }
-.project-page .post-cover .post-image:before {
+.project-page .project-cover .project-image:before {
   content: "";
   display: block;
   position: absolute;
@@ -2274,7 +2274,7 @@ figcaption {
   height: 100%;
   background-color: var(--ccd-overlay--bg-color);
 }
-.project-page .post-cover img {
+.project-page .project-cover img {
   display: block;
   -o-object-fit: cover;
      object-fit: cover;
@@ -2283,7 +2283,7 @@ figcaption {
   width: 100%;
   height: 100%;
 }
-.project-page .post-cover > div {
+.project-page .project-cover > div {
   position: relative;
   z-index: 100;
   display: flex;
@@ -2293,21 +2293,21 @@ figcaption {
   gap: var(--ccd-spacing--y) var(--ccd-spacing--x);
   padding: var(--ccd-spacing--y) var(--ccd-spacing--x);
 }
-.project-page .post-cover > div * {
+.project-page .project-cover > div * {
   color: #ffffff !important;
 }
-.project-page .post-content {
+.project-page .project-content {
   margin-top: var(--ccd-spacing--y);
   padding-top: var(--ccd-spacing--y--half);
   border-top: var(--ccd-box--border);
 }
-.project-page .post-content a {
+.project-page .project-content a {
   font-weight: 550;
   text-decoration: underline;
   text-decoration-color: currentcolor;
   text-underline-offset: 0.25em;
 }
-.project-page .post-nav-link {
+.project-page .project-nav-link {
   display: inline-flex;
   align-items: center;
   flex-wrap: nowrap;

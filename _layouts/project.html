@@ -13,53 +13,53 @@ layout: common
 
 <article class="main-article project-article">
 
-	<section class="post-cover">
-		<figure class="post-image">
+	<section class="project-cover">
+		<figure class="project-image">
 			<img src="{{ image_src | absolute_url }}" role="presentation" />
 		</figure>
 		<div>
-			<header class="post-header">
+			<header class="project-header">
 
 				{%- if page.title -%}
-				<h2 class="page-title post-title">{{ page.title }}</h2>
+				<h2 class="page-title project-title">{{ page.title }}</h2>
 				{%- endif -%}
 
 				{%- if page.subtitle -%}
-				<p class="page-subtitle post-subtitle">{{ page.subtitle }}</p>
+				<p class="page-subtitle project-subtitle">{{ page.subtitle }}</p>
 				{%- endif -%}
 
 			</header>
 		</div>
 	</section>
 
-	<div class="post-content">
+	<div class="project-content">
 		{{ content }}
 	</div>
 
 </article>
 
-{%- if page.post_gallery -%}
-<section id="post-gallery" class="post-section">
+{%- if page.project_gallery -%}
+<section id="project-gallery" class="project-section">
 
-	<h2>{{ page.post_gallery }}</h2>
+	<h2>{{ page.project_gallery }}</h2>
 
-	{%- include post-gallery.html folder = image_dir -%}
+	{%- include project-gallery.html folder = image_dir -%}
 
 </section>
 {%- endif -%}
 
-<section id="post-navigation" class="post-section">
+<section id="project-navigation" class="project-section">
 	<nav>
-		<ul class="post-navigation">
+		<ul class="project-navigation">
 			{%- if page.next.url %}
-			<li class="post-next">
-				<a class="post-nav-link post-next-link" href="{{ page.next.url | relative_url }}" data-toggle="tooltip" data-placement="top" title="{{page.next.title | strip_html | xml_escape}}"><span class="post-nav-icon">{{ next_icon }}</span> <span class="post-nav-text">Next Project</span></a>
+			<li class="project-next">
+				<a class="project-nav-link project-next-link" href="{{ page.next.url | relative_url }}" data-toggle="tooltip" data-placement="top" title="{{page.next.title | strip_html | xml_escape}}"><span class="project-nav-icon">{{ next_icon }}</span> <span class="project-nav-text">Next Project</span></a>
 			</li>
 			{%- endif %}
-			<li><a href="{{ site.posts_permalink | relative_url }}">All Projects</a></li>
+			<li><a href="{{ site.projects_permalink | relative_url }}">All Projects</a></li>
 			{%- if page.previous.url %}
-			<li class="post-prev">
-				<a class="post-nav-link post-prev-link" href="{{ page.previous.url | relative_url }}" data-toggle="tooltip" data-placement="top" title="{{page.previous.title | strip_html | xml_escape}}"><span class="post-nav-text">Previous Project</span> <span class="post-nav-icon">{{ prev_icon }}</span></a>
+			<li class="project-prev">
+				<a class="project-nav-link project-prev-link" href="{{ page.previous.url | relative_url }}" data-toggle="tooltip" data-placement="top" title="{{page.previous.title | strip_html | xml_escape}}"><span class="project-nav-text">Previous Project</span> <span class="project-nav-icon">{{ prev_icon }}</span></a>
 			</li>
 			{%- endif -%}
 		</ul>

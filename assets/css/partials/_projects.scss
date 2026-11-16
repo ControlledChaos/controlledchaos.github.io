@@ -10,21 +10,21 @@
 
 .project-page {
 
-	.post-article {
+	.project-article {
 		margin-top: var( --ccd-spacing--y );
 	}
-	.post-header {
+	.project-header {
 		text-align: center;
 	}
-	.post-title {
+	.project-title {
 		margin: 0.5em 0 0 0;
 		line-height: 80%;
 	}
-	.post-subtitle {
+	.project-subtitle {
 		margin-top: 1rem;
 		line-height: 1.35;
 	}
-	.post-cover {
+	.project-cover {
 		position: relative;
 		overflow: hidden;
 		display: flex;
@@ -33,7 +33,7 @@
 		justify-content: center;
 		min-height: 360px;
 
-		.post-image {
+		.project-image {
 			position: absolute;
 			top: 0;
 			left: 0;
@@ -74,7 +74,7 @@
 			}
 		}
 	}
-	.post-content {
+	.project-content {
 		margin-top: var( --ccd-spacing--y );
 
 		// Padding presumes first element has margin top of the same.
@@ -88,7 +88,7 @@
 			text-underline-offset: 0.25em;
 		}
 	}
-	.post-nav-link {
+	.project-nav-link {
 		display: inline-flex;
 		align-items: center;
 		flex-wrap: nowrap;
