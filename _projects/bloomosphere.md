@@ -2,7 +2,7 @@
 title: "Bloomosphere"
 subtitle: "Website for a Hollywood costume designer."
 categories: [ "websites" ]
-tags: [ "clients", "wordpress", "themes", "plugins" ]
+tags: [ "clients" ]
 featured: 1
 ---
 
