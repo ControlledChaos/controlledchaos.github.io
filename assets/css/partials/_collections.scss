@@ -3,3 +3,9 @@
 ///
 /// General styles for posts and custom collections.
 ///
+
+.page-navigation {
+	margin-top: var( --ccd-spacing--y );
+	padding-top: var( --ccd-spacing--y );
+	border-top: var( --ccd-box--border );
+}

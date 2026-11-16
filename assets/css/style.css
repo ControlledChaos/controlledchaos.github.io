@@ -1623,6 +1623,12 @@ figcaption {
   opacity: 1;
 }
 
+.page-navigation {
+  margin-top: var(--ccd-spacing--y);
+  padding-top: var(--ccd-spacing--y);
+  border-top: var(--ccd-box--border);
+}
+
 .posts-repo.repo-view-list .entry-article {
   width: 100%;
   max-width: 100%;
