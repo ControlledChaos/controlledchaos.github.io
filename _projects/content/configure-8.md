@@ -2,7 +2,7 @@
 title: "Configure 8"
 subtitle: "Theme & suite of plugins for the Bludit CMS."
 categories: [ "product" ]
-tags: [ "Bludit", "themes", "plugins" ]
+tags: [ "bludit", "themes", "plugins" ]
 featured: 0
 ---
 
