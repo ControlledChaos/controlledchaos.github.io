@@ -25,5 +25,12 @@ layout: common
 
 	{%- include tags-list.html post = post -%}
 {%- endfor -%}
+{%- for project in site.projects -%}
+	{%- unless project.tags contains tag -%}
+		{%- continue -%}
+	{%- endunless -%}
+
+	{%- include tags-list.html post = project -%}
+{%- endfor -%}
 
 </div>
