@@ -18,6 +18,13 @@ layout: common
 
 <div class="repository taxonomy-repo categories-repo repo-view-list">
 
+{%- for post in site.posts -%}
+	{%- unless post.categories contains category -%}
+		{%- continue -%}
+	{%- endunless -%}
+
+	{%- include categories-list.html post = post -%}
+{%- endfor -%}
 {%- for project in site.projects -%}
 	{%- unless project.categories contains category -%}
 		{%- continue -%}
