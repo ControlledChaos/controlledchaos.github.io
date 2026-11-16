@@ -1,5 +1,5 @@
 ---
-title: "Site Core Tools"
+title: "Site Core Suite"
 subtitle: "Boilerplates for building site-specific ClassicPress/WordPress plugins & themes."
 categories: [ "product" ]
 tags: [ "wordpress", "themes", "plugins" ]
@@ -7,4 +7,4 @@ link: "https://github.com/CCDzine-Builds/sitecore-suite"
 featured: 5
 ---
 
-Bacon ipsum dolor amet filet mignon rump ball tip flank burgdoggen picanha pastrami chuck jerky turkey andouille short ribs pig cupim. Rump burgdoggen chicken picanha flank biltong. Tail pork loin short ribs filet mignon, shank landjaeger tongue cow bacon shankle pork chop alcatra porchetta chislic beef ribs. Cow pork chop strip steak beef ribs, buffalo bacon hamburger pastrami. Doner flank capicola, bacon pig leberkas salami tongue sausage pork chop ham hock short loin jowl cow. Swine ground round ham shank tail porchetta beef sausage cow filet mignon.
+The Site Core Suite consists of plugins and themes I developed for WordPress and ClassicPress. Each component is available separately and can be found on the [Downloads](downloads) page.
