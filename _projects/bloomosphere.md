@@ -6,4 +6,8 @@ tags: [ "clients" ]
 featured: 1
 ---
 
-Bacon ipsum dolor amet filet mignon rump ball tip flank burgdoggen picanha pastrami chuck jerky turkey andouille short ribs pig cupim. Rump burgdoggen chicken picanha flank biltong. Tail pork loin short ribs filet mignon, shank landjaeger tongue cow bacon shankle pork chop alcatra porchetta chislic beef ribs. Cow pork chop strip steak beef ribs, buffalo bacon hamburger pastrami. Doner flank capicola, bacon pig leberkas salami tongue sausage pork chop ham hock short loin jowl cow. Swine ground round ham shank tail porchetta beef sausage cow filet mignon.
+The Bloomosphere website was built for my first real website client, one that was not a friend or an employer outside the web business. Annie Bloom is a costume designer for Hollywood movies, TV shows, commercials, and music videos.
+
+Her current website is a complete redesign of the first website that I made for her. It is built on the WordPress platform with a fully custom theme and site-specific plugin.
+
+The plugin was used without modification for the redesign. This is because I developed it from the beginning with the notion of changing themes in the future, if requested. Much of the theme code from the first iteration was recycled into the new theme since it was written to work with the site plugin. Redesign changes for the new theme were largely for layout and cosmetics.
