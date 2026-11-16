@@ -1,7 +1,7 @@
 {%- assign post = include.post %}
 
 {%- if post.collection == "project" -%}
-	{%- assign image_dir = "projects/" | append: post.slug | append: "/" -%}
+	{%- assign image_dir = "projects/images/" | append: post.slug | append: "/" -%}
 {%- else -%}
 	{%- assign image_dir = post.date | date: "posts/images/%Y/%m/" | append: post.slug | append: "/" -%}
 {%- endif -%}
