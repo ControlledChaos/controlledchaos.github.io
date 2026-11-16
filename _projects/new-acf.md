@@ -9,7 +9,7 @@ featured: 6
 
 There is a WordPress/ClassicPress plugin that I almost always use to build websites on those platforms. This plugin is called Advanced Custom Fields (ACF) and I have had a lifetime license for the "Pro" version since 2014.
 
-I still use ACF often however I have been working on my own "fork" —— a copy of code allowed under its original or inherited license. This I named Applied Content Forms. My copy of ACF comes from the Pro version, a practice that is legal under its license yet generally frowned upon amongst developers.
+I still use ACF often however I have been working on my own "fork" — a copy of code allowed under its original or inherited license. This I named Applied Content Forms. My copy of ACF comes from the Pro version, a practice that is legal under its license yet generally frowned upon amongst developers.
 
 The man who created ACF, and who gave me the lifetime license, eventually sold the plugin to a corporation, which has since sold it to another corporation. The version of ACF Pro that I forked is the last version released by the original developer. I am not taking money from anyone. Besides, my version is and always will be free.
 
