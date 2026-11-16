@@ -11,7 +11,7 @@
 {%- elsif post.post_image -%}
 	{%- assign src = image_dir | append: post.post_image -%}
 {%- else -%}
-	{%- assign src = "posts/images/default-thumb.jpg" -%}
+	{%- assign src = "projects/images/" | append: post.slug | append: "/cover.jpg" -%}
 {%- endif -%}
 
 <article id="{{ post.slug }}" class="entry-article">
