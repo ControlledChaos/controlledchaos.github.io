@@ -2,6 +2,28 @@
 layout: common
 ---
 
+{%- assign categories  = "" | split: "," -%}
+{%- for category in site.category -%}
+
+	{%- unless page.categories contains category.slug -%}
+		{%- continue -%}
+	{%- endunless -%}
+
+	<!-- Push to array -->
+	{%- assign categories = categories | push: category -%}
+{% endfor %}
+
+{%- assign tags  = "" | split: "," -%}
+{%- for tag in site.tag -%}
+
+	{%- unless page.tags contains tag.slug -%}
+		{%- continue -%}
+	{%- endunless -%}
+
+	<!-- Push to array -->
+	{%- assign tags = tags | push: tag -%}
+{% endfor %}
+
 {%- assign image_src = "projects/images/" | append: page.slug | append: "/cover.jpg" -%}
 
 {%- capture next_icon -%}
@@ -31,6 +53,34 @@ layout: common
 			</header>
 		</div>
 	</section>
+
+	<footer class="project-footer">
+
+		{%- if page.categories -%}
+		<div class="project-footer-tax project-footer-cats">
+			<span class="project-footer-icon project-cats-icon" role="presentation">{%- include svg/folder.svg -%} </span>
+			<span class="project-footer-label project-cats-label">Category:</span>
+			<span class="project-footer-links project-cats-links">
+			{%- for cat in categories -%}
+				<span><a href="{{- '/category/' | absolute_url -}}{{- cat.slug -}}">{{- cat.name -}}</a>{%- unless forloop.last -%}, {%- endunless -%}</span>
+			{%- endfor -%}
+			</span>
+		</div>
+		{%- endif %}
+
+		{%- if page.tags -%}
+		<div class="project-footer-tax project-footer-tags">
+			<span class="project-footer-icon project-tags-icon" role="presentation">{%- include svg/tag.svg -%} </span>
+			<span class="project-footer-label project-tags-label">Tags:</span>
+			<span class="project-footer-links project-tags-links">
+			{%- for tag in tags -%}
+				<span><a href="{{- '/tag/' | absolute_url -}}{{- tag.slug -}}">{{- tag.name -}}</a>{%- unless forloop.last -%}, {%- endunless -%}</span>
+			{%- endfor -%}
+			</span>
+		</div>
+		{%- endif -%}
+
+	</footer>
 
 	<div class="project-content">
 		{{ content }}

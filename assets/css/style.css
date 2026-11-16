@@ -2296,6 +2296,45 @@ figcaption {
 .project-page .project-cover > div * {
   color: #ffffff !important;
 }
+.project-page .project-footer {
+  margin-top: var(--ccd-spacing--y);
+}
+.project-page .project-footer .project-footer-tax {
+  margin-top: 0.25rem;
+  display: flex;
+  gap: 0.5em 0.25em;
+  line-height: 1.3;
+}
+.project-page .project-footer .project-footer-label {
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute !important;
+  width: 1px;
+  word-wrap: normal !important;
+}
+.project-page .project-footer .project-footer-icon svg {
+  height: 1.25em;
+  vertical-align: middle;
+  vertical-align: center;
+}
+.project-page .project-footer .project-footer-links {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 0.125em 0.5em;
+  line-height: 1.3;
+}
+.project-page .project-footer .project-footer-links a {
+  font-weight: 450;
+  color: var(--ccd-color--two--dark);
+}
+.project-page .project-footer .project-footer-date {
+  font-weight: 450;
+}
 .project-page .project-content {
   margin-top: var(--ccd-spacing--y);
   padding-top: var(--ccd-spacing--y--half);
@@ -2312,6 +2351,21 @@ figcaption {
   align-items: center;
   flex-wrap: nowrap;
   gap: 0 0.5em;
+}
+
+.project-navigation {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+}
+.project-navigation li {
+  font-weight: 600;
+}
+.project-navigation svg {
+  display: inline-block;
+  height: 1em;
+  vertical-align: middle;
+  vertical-align: center;
 }
 
 .widgets-footer {
