@@ -68,7 +68,7 @@ collections:
     singular: "widget"
     plural: "widgets"
   projects:
-    directory: _projects/content
+    directory: _projects
     permalink: /:collection/:title/
     layout: "project"
     output: true
