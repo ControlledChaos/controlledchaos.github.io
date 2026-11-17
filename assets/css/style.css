@@ -2379,6 +2379,11 @@ figcaption {
   vertical-align: middle;
   vertical-align: center;
 }
+@media screen and (max-width: 640px) {
+  .project-navigation .project-nav-text {
+    display: none;
+  }
+}
 
 .widgets-footer {
   width: 100%;

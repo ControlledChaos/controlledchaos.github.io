@@ -2,6 +2,8 @@
 /// Projects styles
 ///
 
+@use '../modules/layout' as l;
+
 .projects-list {
 	list-style: none;
 	margin: 0;
