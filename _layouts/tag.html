@@ -16,7 +16,7 @@ layout: common
 
 {%- endif -%}
 {{ post.tags }}
-<div class="repository taxonomy-repo tags-repo repo-view-list">
+<div class="loop-content taxonomy-loop tags-loop loop-view-list">
 
 {%- for post in site.posts -%}
 	{%- unless post.tags contains tag -%}

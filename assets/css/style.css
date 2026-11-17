@@ -1247,25 +1247,25 @@ figcaption {
 }
 
 .page-content,
-.repository {
+.loop-content {
   margin-top: var(--cfe-spacing--vert, 2rem);
 }
 .page-content h1, .page-content h2, .page-content h3, .page-content h4, .page-content h5, .page-content h6, .page-content p, .page-content ul, .page-content ol, .page-content table,
-.repository h1,
-.repository h2,
-.repository h3,
-.repository h4,
-.repository h5,
-.repository h6,
-.repository p,
-.repository ul,
-.repository ol,
-.repository table {
+.loop-content h1,
+.loop-content h2,
+.loop-content h3,
+.loop-content h4,
+.loop-content h5,
+.loop-content h6,
+.loop-content p,
+.loop-content ul,
+.loop-content ol,
+.loop-content table {
   margin-top: 1rem;
 }
 .page-content ul, .page-content ol,
-.repository ul,
-.repository ol {
+.loop-content ul,
+.loop-content ol {
   margin-left: 1em;
 }
 
