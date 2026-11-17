@@ -1359,6 +1359,11 @@ figcaption {
 .front-page-section .content-loop-grid {
   max-width: calc(100% - var(--ccd-spacing--x--half));
 }
+@media screen and (max-width: 640px) {
+  .front-page-section .content-loop-grid {
+    max-width: 100%;
+  }
+}
 .front-page-section .section-bg-image {
   display: block;
   position: absolute;

@@ -42,6 +42,10 @@
 
 	.content-loop-grid {
 		max-width: calc( 100% - var( --ccd-spacing--x--half ) );
+
+		@media screen and ( max-width: l.$bp_sm ) {
+			max-width: 100%;
+		}
 	}
 
 	.section-bg-image {
