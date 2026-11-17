@@ -2,7 +2,7 @@
 /// Single post page
 ///
 
-@use '../../modules/layout';
+@use '../../modules/layout' as l;
 
 .post-page {
 
@@ -161,15 +161,15 @@
 	grid-template-columns: repeat( 3, 1fr );
 	gap: 0.25rem;
 
-	@media screen and ( max-width: layout.$bp_sm ) {
-		grid-template-columns: repeat( 2, 1fr );
+	@media screen and ( max-width: l.$bp_sm ) {
+		grid-template-columns: repeat( 1, 1fr );
 	}
 
 	figure {
 		height: 160px;
 		overflow: hidden;
 
-		@media screen and ( max-width: layout.$bp_sm ) {
+		@media screen and ( max-width: l.$bp_sm ) {
 			height: 200px;
 		}
 	}
@@ -203,5 +203,11 @@
 		height: 1em;
 		vertical-align: middle;
 		vertical-align: center;
+	}
+
+	.post-nav-text {
+		@media screen and ( max-width: l.$bp_sm ) {
+			display: none;
+		}
 	}
 }
