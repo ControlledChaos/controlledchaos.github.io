@@ -155,4 +155,9 @@
 		vertical-align: middle;
 		vertical-align: center;
 	}
+	.project-nav-text {
+		@media screen and ( max-width: l.$bp_sm ) {
+			display: none;
+		}
+	}
 }
