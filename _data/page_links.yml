@@ -3,10 +3,6 @@
 # Page links widget
 #
 page_links:
-  - name: "Meet Greg"
-    url: "/about"
-  - name: "Contact Greg"
-    url: "/contact"
   - name: "Design Services"
     url: "/services"
   - name: "Development"
@@ -23,6 +19,10 @@ page_links:
     url: "/categories"
   - name: "Post Tags"
     url: "/tags"
+  - name: "Meet Greg"
+    url: "/about"
+  - name: "Contact Greg"
+    url: "/contact"
   - name: "Issues & Docs"
     url: "/help"
   - name: "Visitor Notice"
