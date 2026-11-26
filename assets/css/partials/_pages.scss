@@ -24,6 +24,10 @@
 	@container page-container ( max-width: layout.$bp_med ) {
 		flex-direction: column;
 	}
+
+	&.front-page-sections {
+		margin-top: 0;
+	}
 }
 
 .page-wrap {

@@ -496,6 +496,7 @@ b, strong, optgroup {
   --ccd-site-header--text-color: #ffffff;
   --ccd-site-title--font-weight: 470;
   --ccd-site-title--text-color: #ffffff;
+  --cfe-page-container--page--margin: 6rem;
   --cfe-page-wrap--padding: 0 var( --ccd-spacing--x );
   --ccd-page-title--font-size: 3.25rem;
   --ccd-page-title--font-weight: 500;
@@ -993,11 +994,6 @@ figcaption {
   }
 }
 .site-header.header-bg-tp {
-  width: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 5000;
   background: transparent;
   transition: all 625ms;
 }
@@ -1208,6 +1204,9 @@ figcaption {
   .page-container {
     flex-direction: column;
   }
+}
+.page-container.front-page-sections {
+  margin-top: 0;
 }
 
 .page-wrap {
