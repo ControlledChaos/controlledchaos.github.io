@@ -97,9 +97,6 @@
 		{%- assign length = site.length | default: 35 -%}
 		{%- assign word_count = post.excerpt | number_of_words -%}
 
-		<div class="entry-excerpt">
-			<p>{{- post.excerpt | strip_html | truncatewords: length, "…" -}}</p>
-			<p><a class="entry-link" href="{{ post.url | absolute_url }}" title="{{ post.title }}" data-tooltip>Read Post {%- include svg/arrow-right.svg -%}</a></p>
-		</div>
+		<p><a class="entry-link" href="{{ post.url | absolute_url }}" title="{{ post.title }}" data-tooltip>Read Post {%- include svg/arrow-right.svg -%}</a></p>
 	</div>
 </article>
