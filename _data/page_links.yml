@@ -3,12 +3,8 @@
 # Page links widget
 #
 page_links:
-  - name: "Design Services"
+  - name: "My Services"
     url: "/services"
-  - name: "Development"
-    url: "/development"
-  - name: "Site Support"
-    url: "/support"
   - name: "View Projects"
     url: "/projects"
   - name: "Get Downloads"
