@@ -27,6 +27,21 @@ jQuery(document).ready( function($) {
 		delay: 150,
 		theme: 'ccdzen'
 	});
+
+	// Add "scrolled" class to header wrap.
+	$(window).scroll( function () {
+
+		var scroll = $(window).scrollTop();
+		var size   = $(window).width();
+
+		if ( size > 960 ) {
+			if ( scroll >= 160 ) {
+				$( '.header-wrap' ).addClass( 'header-scrolled' );
+			} else {
+				$( '.header-wrap' ).removeClass( 'header-scrolled' );
+			}
+		}
+	});
 });
 </script>
 

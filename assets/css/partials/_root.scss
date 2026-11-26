@@ -123,6 +123,9 @@
 	--ccd-site-header--padding:
 		calc( var( --ccd-spacing--y ) / 2 )
 		var( --ccd-spacing--x );
+	--ccd-site-header--scrolled--padding:
+		calc( var( --ccd-spacing--y ) / 4 )
+		var( --ccd-spacing--x );
 	--ccd-site-header--bg-color: var( --ccd-color--one--base );
 	--ccd-site-header--text-color: #ffffff;
 	--ccd-site-title--font-weight: 470;

@@ -6,6 +6,11 @@
 @use '../modules/layout';
 @use '../modules/colors' as c;
 
+html {
+	// Scroll declared in CSS reset. Unset for sticky header.
+	overflow-y: unset;
+}
+
 body {
 	display: var( --ccd-body--display, flex );
 	flex-direction: var( --ccd-body--flex-direction, column );

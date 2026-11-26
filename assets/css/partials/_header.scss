@@ -8,6 +8,10 @@
 @use '../modules/layout' as l;
 
 .site-header {
+	position: sticky;
+	top: 0;
+	left: 0;
+	z-index: 5000;
 	width: var( --ccd-site-header--width, 100% );
 	margin: var( --ccd-site-header--margin, 0 );
 	background-color: var( --ccd-site-header--bg-color, inherit );
@@ -25,6 +29,10 @@
 			c.$theme_one_base 40%,
 			#{f.darken( c.$theme_one_dark, 20% )} 100%
 		);
+
+		&.header-scrolled {
+			padding: var( --ccd-site-header--scrolled--padding, 1rem 2rem );
+		}
 
 		@media screen and ( max-width: l.$bp_med ) {
 			flex-direction: column;
