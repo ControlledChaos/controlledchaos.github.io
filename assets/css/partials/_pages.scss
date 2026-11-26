@@ -2,7 +2,7 @@
 ///  Pages styles
 ///
 
-@use '../modules/layout';
+@use '../modules/layout' as l;
 
 .page-container {
 	flex-grow: 1;
@@ -21,8 +21,12 @@
 	margin: var( --cfe-page-container--page--margin, 0 auto );
 	padding: var( --cfe-page-container--page--padding );
 
-	@container page-container ( max-width: layout.$bp_med ) {
+	@container page-container ( max-width: l.$bp_med ) {
 		flex-direction: column;
+	}
+
+	@media screen and ( max-width: l.$bp_med ) {
+		margin: var( --cfe-page-container--page--margin--mobile, 0 auto );
 	}
 
 	&.front-page-sections {
@@ -44,11 +48,11 @@
 	justify-content: var( --cfe-page-wrap--justify-content );
 	gap: var( --cfe-page-wrap--gap, var( --cfe-spacing--vert, 2rem ) var( --cfe-spacing--horz, 2rem ) );
 
-	@container page-container ( max-width: layout.$bp_med ) {
+	@container page-container ( max-width: l.$bp_med ) {
 		flex-direction: column;
 	}
 
-	@media screen and ( max-width: layout.$bp_med ) {
+	@media screen and ( max-width: l.$bp_med ) {
 		flex-direction: column;
 	}
 }

@@ -497,6 +497,7 @@ b, strong, optgroup {
   --ccd-site-title--font-weight: 470;
   --ccd-site-title--text-color: #ffffff;
   --cfe-page-container--page--margin: 5rem 0 0 0;
+  --cfe-page-container--page--margin--mobile: 0;
   --cfe-page-wrap--padding: 0 var( --ccd-spacing--x );
   --ccd-page-title--font-size: 3.25rem;
   --ccd-page-title--font-weight: 500;
@@ -1218,9 +1219,14 @@ figcaption {
   margin: var(--cfe-page-container--page--margin, 0 auto);
   padding: var(--cfe-page-container--page--padding);
 }
-@container page-container ( max-width: layout.$bp_med ) {
+@container page-container ( max-width: l.$bp_med ) {
   .page-container {
     flex-direction: column;
+  }
+}
+@media screen and (max-width: 800px) {
+  .page-container {
+    margin: var(--cfe-page-container--page--margin--mobile, 0 auto);
   }
 }
 .page-container.front-page-sections {
@@ -1241,7 +1247,7 @@ figcaption {
   justify-content: var(--cfe-page-wrap--justify-content);
   gap: var(--cfe-page-wrap--gap, var(--cfe-spacing--vert, 2rem) var(--cfe-spacing--horz, 2rem));
 }
-@container page-container ( max-width: layout.$bp_med ) {
+@container page-container ( max-width: l.$bp_med ) {
   .page-wrap {
     flex-direction: column;
   }
