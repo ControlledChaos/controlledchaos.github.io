@@ -8,6 +8,10 @@
 
 	.post-article {
 		margin-top: var( --ccd-spacing--y );
+
+		@media screen and ( max-width: l.$bp_med ) {
+			margin-top: 0;
+		}
 	}
 	.post-header {
 		text-align: center;

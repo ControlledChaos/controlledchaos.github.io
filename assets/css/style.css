@@ -1864,6 +1864,11 @@ figcaption {
 .posts-loop.loop-view-full .entry-article {
   margin-top: var(--ccd-spacing--y);
 }
+@media screen and (max-width: 800px) {
+  .posts-loop.loop-view-full .entry-article {
+    margin-top: 0;
+  }
+}
 .posts-loop.loop-view-full .entry-article:not(:first-of-type) {
   padding-top: var(--ccd-spacing--y--plus-half);
   border-top: var(--ccd-box--border);
@@ -1991,6 +1996,11 @@ figcaption {
 
 .post-page .post-article {
   margin-top: var(--ccd-spacing--y);
+}
+@media screen and (max-width: 800px) {
+  .post-page .post-article {
+    margin-top: 0;
+  }
 }
 .post-page .post-header {
   text-align: center;
@@ -2290,6 +2300,11 @@ figcaption {
 
 .project-page .project-article {
   margin-top: var(--ccd-spacing--y);
+}
+@media screen and (max-width: 800px) {
+  .project-page .project-article {
+    margin-top: 0;
+  }
 }
 .project-page .project-header {
   text-align: center;

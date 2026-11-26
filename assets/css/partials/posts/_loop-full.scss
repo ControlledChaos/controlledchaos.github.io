@@ -2,10 +2,16 @@
 /// Posts loop with full posts
 ///
 
+@use '../../modules/layout' as l;
+
 .posts-loop.loop-view-full {
 
 	.entry-article {
 		margin-top: var( --ccd-spacing--y );
+
+		@media screen and ( max-width: l.$bp_med ) {
+			margin-top: 0;
+		}
 
 		&:not( :first-of-type ) {
 			padding-top: var( --ccd-spacing--y--plus-half );

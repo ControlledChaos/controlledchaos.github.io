@@ -14,6 +14,10 @@
 
 	.project-article {
 		margin-top: var( --ccd-spacing--y );
+
+		@media screen and ( max-width: l.$bp_med ) {
+			margin-top: 0;
+		}
 	}
 	.project-header {
 		text-align: center;
