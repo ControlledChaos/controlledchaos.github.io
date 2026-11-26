@@ -988,7 +988,7 @@ figcaption {
   align-items: center;
   gap: var(--ccd-spacing--y--quarter) var(--ccd-spacing--x);
   background-image: linear-gradient(45deg, #846f8b 0%, #846f8b 40%, #544659 100%);
-  transition: all 0.25s;
+  transition: all 625ms;
 }
 .site-header .header-wrap.header-scrolled {
   padding: var(--ccd-site-header--scrolled--padding, 1rem 2rem);
