@@ -4,8 +4,6 @@
 {%- if posts.size > 0 %}
 <div class="content-loop-grid featured-posts-grid">
 
-	{%- for post in posts | limit: limit -%}
-
 	{%- assign excerpt = post.subtitle | default: post.excerpt | truncatewords: 15, "…" -%}
 
 	{%- if post.post_image -%}
@@ -26,6 +24,5 @@
 			</figure>
 		</a>
 	</article>
-	{%- endfor %}
 </div>
 {%- endif -%}
