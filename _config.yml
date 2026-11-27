@@ -132,7 +132,7 @@ defaults:
 # Blog pages
 blog_singular: "post"
 blog_plural: "posts"
-blog_view: "grid" # list, grid, or full
+blog_view: "full" # list, grid, or full
 blog_path: "/posts/"
 paginate_path: "/posts/page:num/"
 paginate: 9
